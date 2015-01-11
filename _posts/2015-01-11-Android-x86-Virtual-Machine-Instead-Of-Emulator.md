@@ -17,11 +17,12 @@ Following the [Debug How To] (http://www.android-x86.org/documents/debug-howto) 
 As the article says, it was easiest to get it working with a bridged adapter.  Because I was using a virtualbox machine for both development and android x86, this made using NAT way more complicated then if just the Android x86 was the virtual machine.  
 
 ** Bridged Adapter Setup: **
+
 1. Get Android Virtual Machine IP
 	- Open Terminal (alt + F1)
-    - type netcfg 
-2. On the host machine (development machine)
+	- type netcfg 
+1. On the host machine (development machine)
 	- Open command prompt
-    - type adb kill-server
-    - type adb tcpip 5555
-    - type adb connect [Android Virtual Machine IP]:5555
+	- type adb kill-server
+	- type adb tcpip 5555
+    	- type adb connect [Android Virtual Machine IP]:5555
