@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 
 ## Using Android x86 Virtual machine instead of emulator
