@@ -4,8 +4,6 @@ title: Ionic Setup on OSx
 published: true
 ---
 
-##Ionic Setup for OSx
-
 If you are like me and just starting to work with the Ionic Framework and don’t already have a machine setup to do Android, iOS, Node, etc development then many of the guides out there leave out a number of steps that you need to do in order to get everything working.
 
 Even being a windows user I was able to pretty easily get Ionic working on a Mac.  The only difference between the Windows setup and the OSx setup is that you can only add iOS to Ionic on a Mac.  
@@ -85,5 +83,3 @@ Even being a windows user I was able to pretty easily get Ionic working on a Mac
 10. ionic platform add ios
 11. ionic build ios
 12. ionic emulate ios
-
-
