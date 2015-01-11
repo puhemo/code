@@ -1,10 +1,8 @@
 ---
 layout: post
-title: Ionic - How to setup on Windows
+title: "Ionic - How to setup on Windows"
 published: true
 ---
-
-## Ionic - How to setup on Windows
 
 If you are like me and just starting to work with the [Ionic Framework](http://www.ionicframework.com) and don't already have a machine setup to do Android, iOS, Node, etc development then many of the guides out there leave out a number of steps that you need to do in order to get everything working.  
 
@@ -75,7 +73,3 @@ It is really easy to get everything working though once you know the steps.  Sin
 8. if using Android x86 Virtual Machine you will need to enable remote debugging before you can run the app using my blog post @ [http://digitaldrummerj.github.io/Android-x86-Virtual-Machine-Instead-Of-Emulator/](http://digitaldrummerj.github.io/Android-x86-Virtual-Machine-Instead-Of-Emulator/)
 9. ionic run android --livereload
 	- NOTE: --livereload only works for Bridged VM and not for NAT
-		
-    
-    
-
