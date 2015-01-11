@@ -1,5 +1,7 @@
 ---
-published: false
+layout: post
+title: Ionic - How to setup on Windows
+published: true
 ---
 
 ## Ionic - How to setup on Windows
