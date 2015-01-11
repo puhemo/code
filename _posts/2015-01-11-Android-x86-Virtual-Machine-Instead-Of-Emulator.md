@@ -1,4 +1,6 @@
 ---
+layout: post
+title: Using Android x86 Virtual machine instead of emulator
 published: true
 ---
 
