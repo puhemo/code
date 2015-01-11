@@ -52,16 +52,28 @@ It is really easy to get everything working though once you know the steps.  Sin
 1. Open a command prompt (it won't work from a powershell command prompt)
 2. type Android
 	- This will launch the Android SDK Manager.  
-    	- Select the API 19 and check the SDK Platform and ARM EABI v8a System Image 
-        - Scroll to the bottom and select the Google USB Driver
-        - Click the install button.  This can take a bit of time.
+    - Select the API 19 and check the SDK Platform and ARM EABI v8a System Image 
+    - Scroll to the bottom and select the Google USB Driver
+    - Click the install button.  This can take a bit of time.
 3. If you are going to use the Android Enumator you will need to configure an Android Virtual Device (AVD).  To do this, with the Android SDK Manager open under the Tools menu select Manage AVD
 	- This will launch the Android Virtual Device (AVD) Manager
-    		- Click the Create Button and fill out all of the fields
-            
+    - Click the Create Button, fill out all of the fields, and click ok to create the AVD
+    - Select the newly created AVD and click the Start button.  If everything worked it should start up the emulator.
+             
 
 ### Verify that everything works
 
+1. Open a command prompt
+2. navigate the directory where you store you development projets (I use c:\projects)
+3. from c:\projects type: ionic start todo blank
+4. cd into c:\projects\todo  (directory was created by the ionic start command)
+5. type: ionic platform add android
+6. type: ionic build android
+7. if using emulator type: ionic emulate android --livereload
+8. if using Android x86 Virtual Machine you will need to enable remote debugging before you can run the app using my blog post @ [http://digitaldrummerj.github.io/Android-x86-Virtual-Machine-Instead-Of-Emulator/](http://digitaldrummerj.github.io/Android-x86-Virtual-Machine-Instead-Of-Emulator/)
+9. ionic run android --livereload
+	- NOTE: --livereload only works for Bridged VM and not for NAT
+		
     
     
 
