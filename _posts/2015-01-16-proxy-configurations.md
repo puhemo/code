@@ -21,10 +21,10 @@ All of these files start with a period and have no file extension.  Unfortunatel
  File Name:  .bowerrc.
 
 
-	  {
-     	 "proxy":"http://[Your Proxy]:[Proxy Port]",
-	      "https-proxy":"http://[Your Proxy]:[Proxy Port]"
-      }
+	{
+		"proxy":"http://[Your Proxy]:[Proxy Port]",
+		"https-proxy":"http://[Your Proxy]:[Proxy Port]"
+	}
       
 ## Git
  File Name: .gitconfig
@@ -42,3 +42,4 @@ All of these files start with a period and have no file extension.  Unfortunatel
 	proxy=http://[Your Proxy]:[Proxy Port]
 	https-proxy=http://[Your Proxy]:[Proxy Port]
     
+
