@@ -2,6 +2,8 @@
 published: true
 layout: post
 title: Npm, Bower, Git, and Bash Proxy Configurations
+tags: [setup, proxy, bower, git, npm]
+categories: [programming]
 ---
 
 When you are using npm, bower, and git when behind a proxy server you have to do a little bit of configuration.  Luckily it is super easy to do these configurations.  These instructions are for a windows machine.  All of the files below will need to be created in your user home directory c:\users\[Your User Name].
