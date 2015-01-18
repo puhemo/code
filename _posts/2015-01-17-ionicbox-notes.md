@@ -19,10 +19,12 @@ The first option is to setup an XWindows server on your Windows host but why not
 The second option is the preferred option which is to install the Ubuntu desktop and just use the Virtualbox GUI.  This also keeps everything native to VirtualBox and doesn't require you to install anything onto your windows machine.
 
 Full install including stuff like open office
+	
 	sudo apt-get install ubuntu-desktop
     
 Install just the desktop without all of the add-on software.
-    sudo apt-get install --no-install-recommends ubuntu-desktop
+
+	sudo apt-get install --no-install-recommends ubuntu-desktop
     
 
 After you get the UI installed, you will want to open the Settings -> User Accounts and change the ubuntu password since you will need it to install software.  
