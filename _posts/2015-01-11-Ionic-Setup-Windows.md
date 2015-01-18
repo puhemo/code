@@ -2,6 +2,8 @@
 layout: post
 title: "Ionic - How to setup on Windows"
 published: true
+tags: [ionic, angularjs]
+categories: [programming, mobile-development]
 ---
 
 If you are like me and just starting to work with the [Ionic Framework](http://www.ionicframework.com) and don't already have a machine setup to do Android, iOS, Node, etc development then many of the guides out there leave out a number of steps that you need to do in order to get everything working.  
