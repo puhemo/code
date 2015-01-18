@@ -34,6 +34,7 @@ The first thing I noticed was that the at IonicBox only boots to a command promp
      
          config.vm.hostname = "[Replace with what you want your Host Name to be]"
 
+
 - Find the virtualbox configuration section and replace it with the section below 
 - To bring the machine up run
 
@@ -48,12 +49,12 @@ The first thing I noticed was that the at IonicBox only boots to a command promp
        
 - To validate the configuration change run:
 
-        "c:\program files\oracle\virtualbox\VBoxManage" getextradataOn VM  "[Your VM Box NameOn VM ]"
-      enumerate
+        "c:\program files\oracle\virtualbox\VBoxManage" getextradataOn VM  "[Your VM Box NameOn VM ]" enumerate
 
 - It should include a line such as 
 
         Key: VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects, Value: 1
+
 
 - On Host Machine Run: vagrant up
 - On Host Machine Run: vagrant ssh
@@ -64,7 +65,9 @@ The first thing I noticed was that the at IonicBox only boots to a command promp
 - On Host Machine pen Web Browser on host machine and navigate to http://localhost:8100
 - if you want to hibernate the virtual machine, on the host machine in the VagrantFile directory for the VM run vagrant suspend
 - if you want to shutdown the virtual machine, on the host machine in the VagrantFile directory from the VM run
-         vagrant halt
+         
+        vagrant halt
+
 - if you are done with the IonicBox and wish to remove it, on the host machine in the VagrantFile directory run 
       
         vagrant destroy 
