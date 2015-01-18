@@ -29,7 +29,7 @@ After you get the UI installed, you will want to open the Settings -> User Accou
 
 ## Post GUI Install Steps
 
-Now you will want to install Google Chrome and JetBrains WebStorm.
+Now you will want to install Google Chrome, JetBrains WebStorm and configuration the Android SDK.
 
 ### Google Chrome
 
@@ -55,12 +55,11 @@ This will launch a UI to create the shortcut.  Fill out the values.
 
 In my case this didn't add a shortcut to the launch but when I clicked on the 1st button in the launcher to "Search Computer and Online Sources", typed in Webstorm, then it showed up and I was able to launch it.  Once it was launched, I could right-click on the icon in the launch bar and tell it to lock it to the launch bar.  
 
-### Add Terminal to Launcher
-You will also want to do another "Search Computer and Onlline Sources" and type terminal.  Once the Terminal is launched pin it to the desktop.  This will be helpful since a lot of commands are run in a terminal for Ionic and git.  
-
 ### Install Android Emulator and Configure it
 
 The Android emulator is also not setup.  You will want to open up a terminal and type android to launch the Android SDK Manager.  Make sure to download the ARM Image for API 19.  Unselect any other API that it wants to install.  Any upgrades for already installed Android software is ok.
 
 After this has completed, would will want to go under the Tools menu in the Android SDK Manager and select AVD Manager.  You will want to install at least one device to emulate.  It won't be long though before you get tired of the slowness of the emulator and move to testing in Chrome and one a device.
 
+### Bonus: Add Terminal to Launcher
+You will also want to do another "Search Computer and Onlline Sources" and type terminal.  Once the Terminal is launched pin it to the desktop.  This will be helpful since a lot of commands are run in a terminal for Ionic and git.  
