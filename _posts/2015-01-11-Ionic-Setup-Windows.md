@@ -2,7 +2,7 @@
 layout: post
 title: "Ionic - How to setup on Windows"
 published: true
-tags: [ionic, angularjs]
+tags: [ionic]
 categories: [programming, mobile-development]
 ---
 
