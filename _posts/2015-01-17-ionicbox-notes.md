@@ -65,6 +65,7 @@ The first thing I noticed was that the at IonicBox only boots to a command promp
 - On Host Machine pen Web Browser on host machine and navigate to http://localhost:8100
 - if you want to hibernate the virtual machine, on the host machine in the VagrantFile directory for the VM run
 
+
            vagrant suspend
            
            
