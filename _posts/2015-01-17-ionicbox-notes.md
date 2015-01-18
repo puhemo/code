@@ -2,7 +2,7 @@
 published: true
 title: Ionicbox Notes and things it missed
 layout: post
-tags: [ionic, angularjs]
+tags: [ionic]
 categories: [programming, mobile-development]
 ---
 
