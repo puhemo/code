@@ -1,12 +1,16 @@
 ---
-published: true
+published: false
 title: Ionicbox Notes and things it missed
 layout: post
 tags: [ionic]
 categories: [programming, mobile-development]
 ---
 
-I am getting ready to present on Ionic and decided that I needed to try out the IonicBox to see how it worked and if it did really make it easier to get up to speed. The first thing I noticed was that IonicBox only boots to a command prompt.   In this day and age, users don't want to just work from a command prompt or have to learn all of the linux commands or use vi as their editor.  There is no reason that you need to do all of this either as Ubuntu has a graphic UI.  There is 2 options:  1.) Setup an XWindows server 2.) Install the Ubuntu desktop (preferred option).  Even after you get up the UI, there is still some configuration work to do that I detail later on in this post.
+
+
+	I am getting ready to present on Ionic and decided that I needed to try out the IonicBox to see how it worked and if it did really make it easier to get up to speed. The first thing I noticed was that IonicBox only boots to a command prompt and there are no other instructions at [https://github.com/driftyco/ionic-box](https://github.com/driftyco/ionic-box).   
+
+In this day and age, users don't want to just work from a command prompt or have to learn all of the linux commands or use vi as their editor.  There is no reason that you need to do all of this either as Ubuntu has a graphic UI.  There is 2 options:  1.) Setup an XWindows server 2.) Install the Ubuntu desktop (preferred option).  Even after you get up the UI, there is still some configuration work to do that I detail later on in this post.
 
 ## Install a GUI
 
@@ -22,7 +26,7 @@ Full install including stuff like open office
 	
 	sudo apt-get install ubuntu-desktop
     
-Install just the desktop without all of the add-on software.
+Install just the desktop without all of the add-on software.  
 
 	sudo apt-get install --no-install-recommends ubuntu-desktop
     
@@ -38,6 +42,10 @@ Once the ubuntu-desktop successfully installs run:
 
 Now you will want to install Google Chrome, JetBrains WebStorm and configuration the Android SDK.
 
+### Installing Terminal
+
+IF you install Ubuntu Desktop without any of the recommended software then you will want to install Terminal so that you have command line access within the GUI.  To do this open the Ubuntu Software Center (3rd icon in the launcher) and search for Terminal.  Once you find it, click install and when prompted for authentication, give it the password that you set the ubuntu user.
+
 ### Google Chrome
 
 You will want to install Google Chrome to add in debugging. Get Google Chrome from [http://www.google.com/chrome/] (http://www.google.com/chrome/)
@@ -50,7 +58,7 @@ Get WebStorm from [https://www.jetbrains.com/webstorm/](https://www.jetbrains.co
 
 To install a shortcut into the launch run the following commands:
 	
-    sudo apt-get install --no-install-recommends gnome-panel
+	sudo apt-get install --no-install-recommends gnome-panel
 	sudo gnome-desktop-item-edit /usr/share/applications/ --create-new
 
 This will launch a UI to create the shortcut.  Fill out the values.
