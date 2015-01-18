@@ -1,80 +1,56 @@
 ---
 published: false
-title: Ionicbox Notes and things it missed
+title: Ionicbox and the missing instructions
 layout: post
 tags: [ionic]
 categories: [programming, mobile-development]
 ---
 
+Today, I decided to try out the [Ionicbox](https://github.com/driftyco/ionic-box) so that I could see what the experience was like and be able to better explain it to newbies.  Ionicbox is a a pre-configured virtual machine that has everything installed that you need to do development using the [Ionic Framework](http://www.ionicframework.com/).
+
+The first thing I noticed was that the at IonicBox only boots to a command prompt and there are no other instructions at [https://github.com/driftyco/ionic-box](https://github.com/driftyco/ionic-box) on how to use the virtual machine.  Luckily, my friend [Troy Miles](https://twitter.com/therockncoder) has the missing instructions on how to use Ionicbox  [http://therockncoder.blogspot.com/2014/10/getting-started-building-mobile-apps.html](http://therockncoder.blogspot.com/2014/10/getting-started-building-mobile-apps.html).  
+
+Quick Steps
+- Install [Virtualbox](http://www.virtualbox.org)
+- Install [Vagrant](http://www.vagrantup.com)
+- Open Command Prompt
+- Create a directory to hold the vagrant configuraton file for the IonicBox
+- Navigate to the created directory
+- run vagrant init drifty/ionic-android
+- In the directory a file called VagrantFile was created.  Open it in notepad or your favorite text editor
+- Add to forward the web server port: config.vm.network :forwarded_port, host: 8100, guest: 8100
+- Add to forward the live reload port: config.vm.network :forwarded_port, host: 35729, guest: 35729
+- Add folder from host to guest.  make sure c:\projects exists: config.vm.synced_folder "c:\\projects", "/home/vagrant/projects"
+- Add to give the machine a name besides the generated one: config.vm.hostname = "IonicBox"
+- Find the virtualbox configuration section and replace it with the section below 
 
 
-	I am getting ready to present on Ionic and decided that I needed to try out the IonicBox to see how it worked and if it did really make it easier to get up to speed. The first thing I noticed was that IonicBox only boots to a command prompt and there are no other instructions at [https://github.com/driftyco/ionic-box](https://github.com/driftyco/ionic-box).   
-
-In this day and age, users don't want to just work from a command prompt or have to learn all of the linux commands or use vi as their editor.  There is no reason that you need to do all of this either as Ubuntu has a graphic UI.  There is 2 options:  1.) Setup an XWindows server 2.) Install the Ubuntu desktop (preferred option).  Even after you get up the UI, there is still some configuration work to do that I detail later on in this post.
-
-## Install a GUI
-
-### First Option: Setup XWindows Server
-
-The first option is to setup an XWindows server on your Windows host but why not just use the VirtualBox GUI and the GUI that comes with Ubuntu.  If you do decided that you want to setup an XWindows Server on your Windows machine, here is some helpful instructions [http://forum.ionicframework.com/t/run-android-emulator-in-ionic-vigrant/9102](http://forum.ionicframework.com/t/run-android-emulator-in-ionic-vigrant/9102).  
-
-### Second Option: Install Ubuntu Desktop
-
-The second option is the preferred option which is to install the Ubuntu desktop and just use the Virtualbox GUI.  This also keeps everything native to VirtualBox and doesn't require you to install anything onto your windows machine.
-
-Full install including stuff like open office
+	# -*- mode: ruby -*-
+	# vi: set ft=ruby :
 	
-	sudo apt-get install ubuntu-desktop
-    
-Install just the desktop without all of the add-on software.  
-
-	sudo apt-get install --no-install-recommends ubuntu-desktop
-    
-You may get some failures connecting to the apt-get repository and download stuff.  If you do, then run sudo apt-get update followed by the sudo command you used above.
-
-
-Once the ubuntu-desktop successfully installs run:
-	sudo passed ubuntu 
-	sudo reboot
-	Login to the GUI with the vagrant account.
-
-## Post GUI Install Steps
-
-Now you will want to install Google Chrome, JetBrains WebStorm and configuration the Android SDK.
-
-### Installing Terminal
-
-IF you install Ubuntu Desktop without any of the recommended software then you will want to install Terminal so that you have command line access within the GUI.  To do this open the Ubuntu Software Center (3rd icon in the launcher) and search for Terminal.  Once you find it, click install and when prompted for authentication, give it the password that you set the ubuntu user.
-
-### Google Chrome
-
-You will want to install Google Chrome to add in debugging. Get Google Chrome from [http://www.google.com/chrome/] (http://www.google.com/chrome/)
-
-### Webstorm Install and Configuration
-
-Get WebStorm from [https://www.jetbrains.com/webstorm/](https://www.jetbrains.com/webstorm/)
-- To install Webstorm unzip it to a directory
-- Then run the ./bin/webstorm.sh file to launch WebStorm.
-
-To install a shortcut into the launch run the following commands:
+	Vagrant.configure(2) do |config|
+	config.vm.box = "drifty/ionic-android"
+	config.vm.hostname = "IonicBox"
+	config.vm.boot_timeout = 600
 	
-	sudo apt-get install --no-install-recommends gnome-panel
-	sudo gnome-desktop-item-edit /usr/share/applications/ --create-new
-
-This will launch a UI to create the shortcut.  Fill out the values.
-
-	Type: Application
-	Name: WebStorm
-	Command: /[Your WebStorm Directory]/bin/webstorm.sh
-	Comment: Any Comment
-
-In my case this didn't add a shortcut to the launch but when I clicked on the 1st button in the launcher to "Search Computer and Online Sources", typed in Webstorm, then it showed up and I was able to launch it.  Once it was launched, I could right-click on the icon in the launch bar and tell it to lock it to the launch bar.  
-
-### Install Android Emulator and Configure it
-
-The Android emulator is also not setup.  You will want to open up a terminal and type android to launch the Android SDK Manager.  Make sure to download the ARM Image for API 19.  Unselect any other API that it wants to install.  Any upgrades for already installed Android software is ok.
-
-After this has completed, would will want to go under the Tools menu in the Android SDK Manager and select AVD Manager.  You will want to install at least one device to emulate.  It won't be long though before you get tired of the slowness of the emulator and move to testing in Chrome and one a device.
-
-### Bonus: Add Terminal to Launcher
-You will also want to do another "Search Computer and Onlline Sources" and type terminal.  Once the Terminal is launched pin it to the desktop.  This will be helpful since a lot of commands are run in a terminal for Ionic and git.  
+	config.vm.network :forwarded_port, host: 8100, guest: 8100
+	config.vm.network :forwarded_port, host: 35729, guest: 35729
+	
+	config.vm.synced_folder "c:\\projects", "/home/vagrant/vagrant_projects"
+	
+	config.vm.provider "virtualbox" do |vb|
+		vb.gui = false
+		vb.customize ["modifyvm", :id, "--vram", "128"]
+		vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+		vb.customize ["modifyvm", :id, "--usb", "on"]
+		vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
+		vb.memory = 2048
+		vb.cpus = 2	 
+		
+		vb.name = "IonicBox Linux"
+	
+	end
+	end
+	
+	
+	
