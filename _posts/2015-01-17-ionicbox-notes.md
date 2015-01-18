@@ -18,10 +18,22 @@ The first thing I noticed was that the at IonicBox only boots to a command promp
 - Navigate to the created directory
 - run vagrant init drifty/ionic-android
 - In the directory a file called VagrantFile was created.  Open it in notepad or your favorite text editor
-- Add to forward the web server port: config.vm.network :forwarded_port, host: 8100, guest: 8100
-- Add to forward the live reload port: config.vm.network :forwarded_port, host: 35729, guest: 35729
-- Add folder from host to guest.  make sure c:\projects exists: config.vm.synced_folder "c:\\projects", "/home/vagrant/projects"
-- Add to give the machine a name besides the generated one: config.vm.hostname = "IonicBox"
+- Add to forward the web server port: 
+
+       config.vm.network :forwarded_port, host: 8100, guest: 8100
+     
+- Add to forward the live reload port: 
+
+       config.vm.network :forwarded_port, host: 35729, guest: 35729
+     
+- Add folder from host to guest.  make sure c:\projects exists: 
+
+         config.vm.synced_folder "c:\\projects", "/home/vagrant/projects"
+       
+- Add to give the machine a name besides the generated one: 
+     
+       config.vm.hostname = "IonicBox"
+
 - Find the virtualbox configuration section and replace it with the section below 
 
 ## Configuration File
