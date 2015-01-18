@@ -63,14 +63,20 @@ The first thing I noticed was that the at IonicBox only boots to a command promp
 - On VM Run: npm install
 - On VM Run: ionic serve
 - On Host Machine pen Web Browser on host machine and navigate to http://localhost:8100
-- if you want to hibernate the virtual machine, on the host machine in the VagrantFile directory for the VM run vagrant suspend
+- if you want to hibernate the virtual machine, on the host machine in the VagrantFile directory for the VM run
+
+           vagrant suspend
+           
+           
 - if you want to shutdown the virtual machine, on the host machine in the VagrantFile directory from the VM run
          
-        vagrant halt
+
+           vagrant halt
 
 - if you are done with the IonicBox and wish to remove it, on the host machine in the VagrantFile directory run 
+
       
-        vagrant destroy 
+           vagrant destroy 
 
  - Note that sometimes this leaves behind the directory that contained the Virtual Machine.  Before you can run vagrant up again, you will need to manually delete this directory.
 
