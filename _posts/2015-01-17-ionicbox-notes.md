@@ -1,8 +1,9 @@
 ---
-published: false
+published: true
 title: Ionicbox Notes and things it missed
 layout: post
-
+tags: [ionic, angularjs]
+categories: [programming, mobile-development]
 ---
 
 I am getting ready to present on Ionic and decided that I needed to try out the IonicBox to see how it worked and if it did really make it easier to get up to speed. The first thing I noticed was that IonicBox only boots to a command prompt.   In this day and age, users don't want to just work from a command prompt or have to learn all of the linux commands or use vi as their editor.  There is no reason that you need to do all of this either as Ubuntu has a graphic UI.  There is 2 options:  1.) Setup an XWindows server 2.) Install the Ubuntu desktop (preferred option).  
