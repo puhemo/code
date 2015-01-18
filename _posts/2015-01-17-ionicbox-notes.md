@@ -28,6 +28,8 @@ Install just the desktop without all of the add-on software.
     
 You may get some failures connecting to the apt-get repository and download stuff.  If you do, then run sudo apt-get update followed by the sudo command you used above.
 
+Once the ubuntu-desktop successfully installs run sudo reboot and it should boot into the GUI.  Login with the vagrant account.
+
 After you get the UI installed, you will want to open the Settings -> User Accounts and change the ubuntu password since you will need it to install software.  
 
 ## Post GUI Install Steps
