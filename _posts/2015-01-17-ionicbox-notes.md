@@ -34,6 +34,7 @@ The first thing I noticed was that the at IonicBox only boots to a command promp
      
        config.vm.hostname = "IonicBox"
 
+
 - Find the virtualbox configuration section and replace it with the section below 
 
 ## Configuration File
