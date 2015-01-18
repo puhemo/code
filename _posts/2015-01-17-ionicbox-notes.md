@@ -1,6 +1,6 @@
 ---
-published: false
-title: Ionicbox and the missing instructions
+published: true
+title: Ionicbox and how to use it
 layout: post
 tags: [ionic]
 categories: [programming, mobile-development]
@@ -8,9 +8,9 @@ categories: [programming, mobile-development]
 
 Today, I decided to try out the [Ionicbox](https://github.com/driftyco/ionic-box) so that I could see what the experience was like and be able to better explain it to newbies.  Ionicbox is a a pre-configured virtual machine that has everything installed that you need to do development using the [Ionic Framework](http://www.ionicframework.com/).
 
-The first thing I noticed was that the at IonicBox only boots to a command prompt and there are no other instructions at [https://github.com/driftyco/ionic-box](https://github.com/driftyco/ionic-box) on how to use the virtual machine.  Luckily, my friend [Troy Miles](https://twitter.com/therockncoder) has the missing instructions on how to use Ionicbox  [http://therockncoder.blogspot.com/2014/10/getting-started-building-mobile-apps.html](http://therockncoder.blogspot.com/2014/10/getting-started-building-mobile-apps.html).  
+The first thing I noticed was that the at IonicBox only boots to a command prompt and there are no other instructions at [https://github.com/driftyco/ionic-box](https://github.com/driftyco/ionic-box) on how to use the virtual machine.  Luckily, my friend [Troy Miles](https://twitter.com/therockncoder) has the missing instructions on how to use Ionicbox  [http://therockncoder.blogspot.com/2014/10/getting-started-building-mobile-apps.html](http://therockncoder.blogspot.com/2014/10/getting-started-building-mobile-apps.html).  Below are the quick steps.  For more details on the steps see Troy's blog post.
 
-Quick Steps
+## Quick Steps
 - Install [Virtualbox](http://www.virtualbox.org)
 - Install [Vagrant](http://www.vagrantup.com)
 - Open Command Prompt
@@ -46,5 +46,3 @@ Quick Steps
                  vb.name = "IonicBox Linux"
            end
      end
-	
-	
