@@ -24,10 +24,8 @@ Quick Steps
 - Add to give the machine a name besides the generated one: config.vm.hostname = "IonicBox"
 - Find the virtualbox configuration section and replace it with the section below 
 
-
-
-	# -*- mode: ruby -*-
-	# vi: set ft=ruby :
+     # -*- mode: ruby -*-
+     # vi: set ft=ruby :
 	Vagrant.configure(2) do |config|
   		config.vm.box = "drifty/ionic-android"
   		config.vm.hostname = "IonicBox"
