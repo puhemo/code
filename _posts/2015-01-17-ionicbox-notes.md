@@ -60,8 +60,12 @@ The first thing I noticed was that the at IonicBox only boots to a command promp
 - On Host Machine Run: vagrant ssh
 - On VM Run: cd vagrant_projects
 - On VM Run: ionic start blank boxdemo && cd boxdemo
+- On VM Run: mkdir ~/node_modules
+- On VM Run: cp ~/vagrant_projets/boxdemo/package.json ~/package.json
+- On VM Run: ls -s ~/node_modules node_modules
+- On VM Run: cd ~/
 - On VM Run: npm install
-- On VM Run: sudo npm install bower -g
+- On VM you may be also need to run: sudo npm install bower -g
 - On VM Run: ionic serve
 - On Host Machine pen Web Browser on host machine and navigate to http://localhost:8100
 - if you want to hibernate the virtual machine, on the host machine in the VagrantFile directory for the VM run
@@ -99,6 +103,7 @@ The first thing I noticed was that the at IonicBox only boots to a command promp
                  vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
                  vb.customize ["modifyvm", :id, "--usb", "on"]
                  vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
+                 vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects", "1"]
                  vb.memory = 2048
                  vb.cpus = 2	 
                  vb.name = "IonicBox Linux"
