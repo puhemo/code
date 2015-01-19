@@ -23,15 +23,24 @@ Make sure that you installed VirtualBox and Vagrant before proceeding.
 ### Installing
 
 1 Open Windows Explorer and create a directory where you want to hold all of your Vagrant configuration files
+
 2 Instead the directory created in step 1, create a directory called IonicBox
+
 3 In Windows Explorer, create the directory under the c drive called projects
+
 4 In Windows Explorer, do a shift+right click on the IonicBox directory and select Open Command Prompt 
+
 5 Run: vagrant init drifty/ionic-android
+
 6 Open notepad
+
 7 In notepad, open the VagrantFile created in the IonicBox directory. 
+
 8 select all of the text in the VagrantFile and remove it
+
 9 Copy the following text into the VagrantFile
 
+```
      # -*- mode: ruby -*-
      # vi: set ft=ruby :
      Vagrant.configure(2) do |config|
@@ -53,44 +62,45 @@ Make sure that you installed VirtualBox and Vagrant before proceeding.
                  vb.name = "IonicBox"
            end
      end
+```
 
 So what does all of those options in the VagrantFile mean?
 
 Ionic uses port 8100 for the web site and the live reload function use port 35729.  We forwarded these ports from IonicBox to the host machine so we can access the web server.  The following two lines do the port forwarding
-
+```
          config.vm.network :forwarded_port, host: 8100, guest: 8100
          config.vm.network :forwarded_port, host: 35729, guest: 35729
-     
+```     
 Next 
 - Add folder from host to guest.  make sure c:\projects exists: 
-
+```
          config.vm.synced_folder "c:\\projects", "/home/vagrant/projects"
-       
+```       
 - Add to give the machine a name besides the generated one: 
-     
+```     
          config.vm.hostname = "[Replace with what you want your Host Name to be]"
-
+```
 
 - Find the virtualbox configuration section and replace it with the section below 
 - To bring the machine up run
-
+```
         vagrant up
-
+```
 - Once the machine is created in VirtualBox and running, run vagrant ssh 
 - if everything went successful you should be logged in, now type exit to leave the ssh session
 - you should be back to a normal command prompt, type vagrant halt to shutdown the virtual machine
 - from the command prompt run:
-
+```
          "c:\program files\oracle\virtualbox\VBoxManage" setextradata "[Your VM Box Name] VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects 1
-       
+```       
 - To validate the configuration change run:
-
+```
         "c:\program files\oracle\virtualbox\VBoxManage" getextradataOn VM  "[Your VM Box NameOn VM ]" enumerate
-
+```
 - It should include a line such as 
-
+```
         Key: VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects, Value: 1
-
+```
 
 - On Host Machine Run: vagrant up
 - On Host Machine Run: vagrant ssh
@@ -106,20 +116,20 @@ Next
 - On Host Machine pen Web Browser on host machine and navigate to http://localhost:8100
 - if you want to hibernate the virtual machine, on the host machine in the VagrantFile directory for the VM run
 
-
+```
            vagrant suspend
-           
+```           
            
 - if you want to shutdown the virtual machine, on the host machine in the VagrantFile directory from the VM run
-         
+```      
 
            vagrant halt
-
+```
 - if you are done with the IonicBox and wish to remove it, on the host machine in the VagrantFile directory run 
-
+```
       
            vagrant destroy 
-
+```
  - Note that sometimes this leaves behind the directory that contained the Virtual Machine.  Before you can run vagrant up again, you will need to manually delete this directory.
 
 ## Configuration File
