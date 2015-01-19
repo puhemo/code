@@ -61,6 +61,7 @@ The first thing I noticed was that the at IonicBox only boots to a command promp
 - On VM Run: cd vagrant_projects
 - On VM Run: ionic start blank boxdemo && cd boxdemo
 - On VM Run: npm install
+- On VM Run: sudo npm install bower -g
 - On VM Run: ionic serve
 - On Host Machine pen Web Browser on host machine and navigate to http://localhost:8100
 - if you want to hibernate the virtual machine, on the host machine in the VagrantFile directory for the VM run
