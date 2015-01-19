@@ -51,7 +51,7 @@ Make sure that you installed VirtualBox and Vagrant before proceeding.
            config.vm.network :forwarded_port, host: 35729, guest: 35729
            config.vm.synced_folder "c:\\projects", "/home/vagrant/vagrant_projects"
            config.vm.provider "virtualbox" do |vb|
-                 vb.gui = false
+                 vb.gui = true
                  vb.customize ["modifyvm", :id, "--vram", "128"]
                  vb.customize ["modifyvm", :id, "--usb", "on"]
                  vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
@@ -80,7 +80,7 @@ The IonicBox is just a Linux shell with no GUI so you will want to use a feature
 
 Next we set up the VirtualBox options
 
--We don't need the VirtualBox GUI since we are going to SSH into the machine so we can turn it off with 
+-We don't need the VirtualBox GUI since we are going to SSH into the machine so we can turn it off with.  Set this to true the first time, just so you can see it
 ```
 vb.gui = false
 ```
@@ -94,7 +94,7 @@ vb.customize ["modifyvm", :id, "--usb", "on"]
 ```
 -Add a usb device filter for a Android Device
 ```
-                 vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
+vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
 ```
 - Turn on Symlinks to the synced_folder above.  This is needed if your Host Operating System is Windows in order node/npm to work correctly.  
 ```
@@ -121,6 +121,8 @@ vb.name = "IonicBox"
 ``` 
 vagrant up
 ```
+If you have the vb.gui = true in your VagrantFile, the first thing you will notice when you boot up the IonicBox is that it just comes to a command prompt and it leaves you wondering now what.  Luckily, this is exactly what we want and it is very easy to manage it.  The IonicBox basically just replaces the command prompt that we would normally use for all of the Ionic commands with a linux machine.  
+
 - To login to the machine, use the same command prompt as previous step and run
 ```
 vagrant ssh
@@ -137,70 +139,63 @@ On the IonicBox ssh connection:
 ```
      cd vagrant_projects
      ionic start tabs firstApp && cd firstApp
+     ionic serve --live-reload
 ```
 
-You now have a Ionic project in a directory called firstApp.
+You now have a Ionic project in a directory called firstApp and the web server is running.
 
-If you are using Windows as your host operating system you will need to setup a symbolic link for the node_modules folder sicne windows has a length limitation when using shared folders.
+Open up your web browser and navigate to [http://localhost:8100](http://localhost:8100)
 
+You can view all of the files that make up this project on your host machine under c:\projects\firstApp
 
-- On VM Run: mkdir ~/node_modules
-- On VM Run: cp ~/vagrant_projets/boxdemo/package.json ~/package.json
-- On VM Run: ls -s ~/node_modules node_modules
-- On VM Run: cd ~/
-- On VM Run: npm install
-- On VM you may be also need to run: sudo npm install bower -g
-- On VM Run: ionic serve
-- On Host Machine pen Web Browser on host machine and navigate to http://localhost:8100
-- if you want to hibernate the virtual machine, on the host machine in the VagrantFile directory for the VM run
+If you are NOT using Windows as your host operating system that we are done with configurations.  Unfortunately, if you are using Windows as your host operating system, we have one more step to get npm working correctly, so that you can download all of the dependencies for Ionic.
 
+We need to setup a symbolic link for the node_modules folder since windows has a length limitation when using shared folders.  A symbolic link is basically a point from one directory to another.  Windows has a diretory name length limitation that we encounter when host our files through a shared folder.  Since our npm dependencies (node_modules) folder doesn't need to be checked into source control, we can move it to a directory on the IonicBox and just point to that from within our Ionic projects.  
+
+On the IonicBox from the firstApp folder run the following commands:
+
+```
+mkdir ~/node_modules
+cp package.json ~/package.json
+ls -s ~/node_modules node_modules
+cd ~/
+npm install
+```
+
+You may also need to manually install bower 
+```
+sudo npm install bower -g
+```
+
+### I am done with IonicBox, now what?
+
+- Hibernate: from the IonicBox directory with the VagrantFile run
 ```
            vagrant suspend
 ```           
-           
-- if you want to shutdown the virtual machine, on the host machine in the VagrantFile directory from the VM run
+
+- Shutdown and Turn Off: from the IonicBox directory with the VagrantFile run
 ```      
 
            vagrant halt
 ```
-- if you are done with the IonicBox and wish to remove it, on the host machine in the VagrantFile directory run 
+- Delete the whole IonicBox Virtual Machine: from the IonicBox directory with the VagrantFile run
 ```
       
            vagrant destroy 
 ```
  - Note that sometimes this leaves behind the directory that contained the Virtual Machine.  Before you can run vagrant up again, you will need to manually delete this directory.
 
-## Configuration File
 
-     # -*- mode: ruby -*-
-     # vi: set ft=ruby :
-     Vagrant.configure(2) do |config|
-           config.vm.box = "drifty/ionic-android"
-           config.vm.hostname = "IonicBox"
-           config.vm.boot_timeout = 600
-           config.vm.network :forwarded_port, host: 8100, guest: 8100
-           config.vm.network :forwarded_port, host: 35729, guest: 35729
-           config.vm.synced_folder "c:\\projects", "/home/vagrant/vagrant_projects"
-           config.vm.provider "virtualbox" do |vb|
-                 vb.gui = false
-                 vb.customize ["modifyvm", :id, "--vram", "128"]
-                 vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
-                 vb.customize ["modifyvm", :id, "--usb", "on"]
-                 vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
-                 vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects", "1"]
-                 vb.memory = 2048
-                 vb.cpus = 2	 
-                 vb.name = "IonicBox Linux"
-           end
-     end
-
-
-The first thing I noticed was that the at IonicBox only boots to a command prompt and there are no other instructions at [https://github.com/driftyco/ionic-box](https://github.com/driftyco/ionic-box) on how to use the virtual machine.  Luckily, my friend [Troy Miles](https://twitter.com/therockncoder) has the missing instructions on how to use Ionicbox  [http://therockncoder.blogspot.com/2014/10/getting-started-building-mobile-apps.html](http://therockncoder.blogspot.com/2014/10/getting-started-building-mobile-apps.html).  Below are the quick steps.  For more details on the steps see Troy's blog post.
 
 
 ## Troubleshooting
 
-- you should be back to a normal command prompt, type vagrant halt to shutdown the virtual machine
+### Vagrant up complains about the shared folder symlink
+
+if you run into an error with vagrant up complaining about the virtual box symlink config, you can manually do the same command with VBoxManage and remove the line from the VagrantFile for the symlink.  Below are the steps
+
+- Make sure that the IonicBox is powered off.  
 - from the command prompt run:
 ```
          "c:\program files\oracle\virtualbox\VBoxManage" setextradata "[Your VM Box Name] VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects 1
@@ -212,4 +207,8 @@ The first thing I noticed was that the at IonicBox only boots to a command promp
 - It should include a line such as 
 ```
         Key: VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects, Value: 1
+```
+- Remove the following line from the VagrantFile
+```
+vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects", "1"]
 ```
