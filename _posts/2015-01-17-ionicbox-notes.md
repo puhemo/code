@@ -169,6 +169,8 @@ sudo npm install bower -g
 
 ### I am done with IonicBox, now what?
 
+- To exit vagrant ssh session, just type exit from the command prompt that is logged into the IonicBox.  This will put you back into the original command prompt.
+
 - Hibernate: from the IonicBox directory with the VagrantFile run
 ```
            vagrant suspend
