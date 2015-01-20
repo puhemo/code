@@ -40,7 +40,7 @@ Make sure that you installed VirtualBox and Vagrant before proceeding.
 
 9. Copy the following text into the VagrantFile
 
-```
+{% highlight ruby %}
      # -*- mode: ruby -*-
      # vi: set ft=ruby :
      Vagrant.configure(2) do |config|
@@ -61,7 +61,7 @@ Make sure that you installed VirtualBox and Vagrant before proceeding.
                  vb.name = "IonicBox" # This is the name in the VirtualBox Manager UI
            end
      end
-```
+{% endhighlight %}
 
 ### So what do  all of those options in the VagrantFile mean?
 
