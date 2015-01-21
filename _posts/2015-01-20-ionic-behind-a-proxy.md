@@ -1,5 +1,7 @@
 ---
-published: false
+published: true
+layout: post
+title: Using Ionic behind a proxy server
 ---
 
 I ran into an issue today when I tried to create a new Ionic project at work behind the firewall/proxy even with all of the configurations for npm, git, bower, and bash setup for the proxy as detailed at [http://digitaldrummerj.github.io/proxy-configurations/](http://digitaldrummerj.github.io/proxy-configurations/).
