@@ -1,0 +1,58 @@
+<img class="site-avatar" src="{{ site.avatar }}"/>
+<p class="lead blog-description">{{ site.description}}</p>
+<div class="blog-masthead">
+    <div class="container">
+        <nav class="blog-nav">
+            <a class="blog-nav-item" href="{{ site.baseurl }}/">Blog</a>
+            <a class="blog-nav-item" href="{{ site.baseurl}}/presentations">Presentations</a>
+            <a class="blog-nav-item" href="{{ site.baseurl}}/feed.xml">Feed</a>
+                <a class="blog-nav-item" href="{{ site.baseurl }}/about">About</a>
+        </nav>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="blog-header">
+
+        <h1 class="blog-title"><a href="#" class="site-avatar"><img src="{{ site.avatar }}"/></a>{{ site.name}}</h1>
+
+        <p class="lead blog-description">{{ site.description}}</p>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-8 blog-main">
+            <!-- {{ content }} -->
+        </div> <!-- blog main -->
+        <div class="col-sm-3 col-sm-offeset-1 blog-sidebar">
+            <div class="sidebar-module sidebar-module-insert">
+                <h4>About</h4>
+
+                <p>About Text<br/>Goes here</p>
+            </div>
+            <div class="sidebar-module">
+                <h4>Archives</h4>
+                <ol class="list-unstyled">
+                    <li><a href="#">March</a></li>
+                    <li><a href="#">April</a></li>
+                    <li><a href="#">May</a></li>
+                    <li><a href="#">June</a></li>
+                </ol>
+            </div>
+            <div class="sidebar-module">
+                {% include svg-icons.html %}
+            </div>
+
+        </div>
+        <!-- blog sidebar -->
+
+    </div>
+    <!-- row -->
+</div>     <!-- container -->
+
+{% include analytics.html %}
+
+
+<div class="blog-footer">
+    {% include svg-icons.html %}
+</div>

@@ -1,56 +1,87 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
+<head>
+    <meta charset="utf-8"/>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
-    <meta name="author" content="{{ site.name }}" />
+    <meta name="author" content="{{ site.name }}"/>
     <meta name="description" content="{{ site.description }}">
 
     <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css"/>
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}"
+          href="{{ site.baseurl }}/feed.xml"/>
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
+</head>
 
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-          
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-          
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
-    </div>
+<body class="line-darkbrown">
+<section class="containerOuter line-tan" id="topbar">
+    <section class="containerInner">
 
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
+        <h1><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+        <nav>
+            <ul>
+                <li><a href="{{ site.baseurl }}/">Blog</a></li>
+                <li><a href="{{ site.baseurl }}/about">About</a></li>
+                <li><a href="{{ site.baseurl}}/presentations">Presentations</a></li>
+                <li><a href="{{ site.baseurl}}/feed.xml">Feed</a></li>
+            </ul>
+        </nav>
+    </section>
+</section>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
+<section class="containerOuter  darkBrown searchBar">
+    <section class="containerInner">
+        <div class="searchBarNav">
+            <div id="search">
+                <input id="searchString" placeholder="Learn to Tweet, Be a Better Developer, etc."
+                       onkeypress="if (event.keyCode == 13) {doSearch(searchString.value);return false;}" type="text">
+                <input id="searchButton" name="googleSearchName" type="button" value="Search" language="javascript"
+                       onclick="doSearch(searchString.value);return false;">
+            </div>
+            <div id="archives">
+                browse by <a title="The complete archive of {{ site.name }}'s Blog"
+                             href="{{ site.baseurl}}">category</a> or <a
+                    title="{{ site.name }}'s blog posts in a friendly calendar format" href="{{ site.baseurl}}">date</a>
+            </div>
+        </div>
+    </section>
+</section>
+<main>
+    <article>
+        <section class="containerOuter blogHeader line-chocolate">
+            <section class="containerInnerNarrow">
+                <h2 class="blogTitle">Blog Title</h2>
+            </section>
+        </section>
 
-    {% include analytics.html %}
-  </body>
+        <section class="containerOuter burntSienna blogMetaInfo">
+            <section class="containerInnerNarrow">
+                <span class="blogMetaDate"> Date </span>
+            </section>
+        </section>
+
+        <section class="containerOuter blogBodyContainer">
+            <section class="containerInner blogBody">
+
+                Blog Body
+            </section>
+        </section>
+    </article>
+</main>
+<footer class="containerOuter line-darkbrown">
+    <section class="containerInner">
+        <div class="footer-container">
+            footer
+        </div>
+    </section>
+</footer>
+</body>
 </html>
