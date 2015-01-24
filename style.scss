@@ -110,7 +110,6 @@ a:visited { color: #c5752a; }
       margin: 0;
       color: $gray;
       font-size: 16px;
-      float: left;
       text-transform: none;
       font-weight: normal;
     }
@@ -444,7 +443,12 @@ input[type=text], input[type=password], textarea {
   }
   nav { float: none; width: 100%; text-align: center; }
   nav ul li a { font-size: 90%; }
-  #topbar h1	{ float: none; text-align: center; }
+  #topbar h1	{ float: none; text-align: center;
+
+  }
+  #topbar .site-avatar {
+    display: none;
+  }
   #search, #archives { float: none; clear: both; width: 100%; text-align: center;}
   #searchString { width: 240px; }
 
