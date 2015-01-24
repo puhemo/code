@@ -24,14 +24,17 @@
 <body class="line-darkbrown">
 <section class="containerOuter line-tan" id="topbar">
     <section class="containerInner">
+        <img class="site-avatar" src="{{ site.avatar }}"/>
 
         <h1><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+
+
         <nav>
             <ul>
-                <li><a href="{{ site.baseurl }}/">Blog</a></li>
-                <li><a href="{{ site.baseurl }}/about">About</a></li>
-                <li><a href="{{ site.baseurl}}/presentations">Presentations</a></li>
-                <li><a href="{{ site.baseurl}}/feed.xml">Feed</a></li>
+                <li><a href="{{ site.baseurl }}/" {% if page.active == "home" %} class="current" {% endif %}>Blog</a></li>
+                <li><a href="{{ site.baseurl }}/about" {% if page.active == "about" %} class="current" {% endif %}>About</a></li>
+                <li><a href="{{ site.baseurl}}/presentations" {% if page.active == "presentations" %} class="current" {% endif %}>Speaking</a></li>
+                <li><a href="{{ site.baseurl}}/feed.xml" {% if page.active == "feed" %} class="current" {% endif %}>Feed</a></li>
             </ul>
         </nav>
     </section>
