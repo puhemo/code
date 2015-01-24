@@ -23,11 +23,11 @@ html, body, p, table, tbody, td, tr, section, aside, figure, iframe, figcaption,
 section, header, footer, nav, aside, article, hgroup, figure, figcaption, aside { display: block; }
 
 body {
-  color: #333;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $darkGray;
+  font-family: $fontFamily;
   font-size: 100%;
   line-height: 1.4;
-  background-color: #fff;
+  background-color: $white;
 }
 
 p { margin-bottom: 1.5em; }
@@ -185,7 +185,7 @@ a.current, a.current:visited {
   background-color: #83382b;
   border: 1px solid #83382b;
   margin-left: 0;
-  color: #fff;
+  color: $white;
   -webkit-appearance: none;
   border-radius: 0;
 }
@@ -208,10 +208,10 @@ div#archives {
 .blogHeader .blogTitle {
   font-size: 250%;
   font-weight: bold;
-  color: #fff;
+  color: $white;
 }
 
-.blogHeader .blogTitle a, .blogHeader .blogTitle a:visited { color: #fff; }
+.blogHeader .blogTitle a, .blogHeader .blogTitle a:visited { color: $white; }
 
 .blogMetaInfo .containerInnerNarrow {
   color: #e0e0e0;
@@ -223,8 +223,29 @@ div#archives {
   color: #E2842C;
 }
 
+.blogMetaDate {
+  color: $white!important;
+  //background: #e2842c;
+  padding: 0.8em 0.8em;
+  margin: 0 0.8em;
+  display: inline-block;
+  position: relative;
+}
+
+.blogMetaDate:after {
+  content:"";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 20%;
+  bottom: -5px;
+  border-width:5px 5px 0 0;
+  border-style:solid;
+  border-color:#e2842c transparent;
+}
 .blogBodyContainer {
-  background-color: #fff;
+  background-color: $white;
   overflow: hidden!important;
 }
 .blogBody {
@@ -315,7 +336,7 @@ footer { }
 
 footer .containerInner {
   padding: 30px 0 30px 0;
-  color: #fff;
+  color: $white;
 }
 
 footer .bio {
@@ -365,6 +386,33 @@ footer .bio img {
   padding-left: 125px;
   padding-right: 125px;
   overflow: hidden;
+}
+
+.item-footer {
+  //background-color: #5b2d26;
+  //color: #c7c7c7;
+//  padding-left: 115px;
+}
+.commentLinkStyle {
+  color: $white!important;
+  background: #e2842c;
+  padding: 0.8em 0.8em;
+  margin: 0 0.8em;
+  display: inline-block;
+  position: relative;
+}
+
+.commentLinkStyle:after {
+  content:"";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 20%;
+  bottom: -5px;
+  border-width:5px 5px 0 0;
+  border-style:solid;
+  border-color:#e2842c transparent;
 }
 
 hr {

@@ -18,12 +18,18 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}"
           href="{{ site.baseurl }}/feed.xml"/>
 
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic' rel='stylesheet' type='text/css'>
+
+
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
     {% include googlesearch.html %}
 </head>
 
-<body class="line-darkbrown">
-<section class="containerOuter line-tan" id="topbar">
+<body>
+<section class="containerOuter" id="topbar">
     <section class="containerInner">
         <img class="site-avatar" src="{{ site.avatar }}"/>
 
@@ -60,33 +66,16 @@
     </section>
 </section>
 <main>
-    <article>
-        <section class="containerOuter blogHeader line-chocolate">
-            <section class="containerInnerNarrow">
-                <h2 class="blogTitle">Blog Title</h2>
-            </section>
-        </section>
-
-        <section class="containerOuter burntSienna blogMetaInfo">
-            <section class="containerInnerNarrow">
-                <span class="blogMetaDate"> Date </span>
-            </section>
-        </section>
-
-        <section class="containerOuter blogBodyContainer">
-            <section class="containerInner blogBody">
-
-                Blog Body
-            </section>
-        </section>
-    </article>
+{{ content }}
 </main>
-<footer class="containerOuter line-darkbrown">
+<footer class="containerOuter darkbrown">
     <section class="containerInner">
         <div class="footer-container">
-            footer
+            {% include svg-icons.html %}
         </div>
     </section>
 </footer>
+{% include analytics.html %}
+
 </body>
 </html>

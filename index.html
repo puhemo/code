@@ -2,18 +2,40 @@
 layout: default
 active: home
 ---
+{% for post in site.posts %}
 
-<div class="posts blog-post">
-  {% for post in site.posts %}
-    <article class="post blog-post">
-      
-      <h1 class="blog-post-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+<article>
+  <section class="containerOuter blogHeader chocolate">
+    <section class="containerInnerNarrow">
+      <h2 class="blogTitle"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+    </section>
+  </section>
 
-      <div class="entry">
-        {{ post.content | truncatewords:40}}
-      </div>
-      
+  <section class="containerOuter burntSienna blogMetaInfo">
+    <section class="containerInnerNarrow">
+      <span class="blogMetaDate"> {{ post.date | date: "%d %B %Y" }} </span>
+      <span>Posted In:
+        {% for tag in post.categories %}
+          {{tag }}
+          {% if  post.categories.size !=  1 and post.categories.last != tag %}
+            |
+        {%endif %}
+        {% endfor %}
+      </span>
+    </section>
+  </section>
+
+  <section class="containerOuter blogBodyContainer">
+    <section class="containerInner blogBody">
+      {{ post.content}}
+
+      <p>
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+      </p>
+    </section>
+
+
+
+  </section>
+</article>
+{% endfor %}
