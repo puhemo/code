@@ -370,7 +370,7 @@ footer .bio img {
 }
 
 .footer-container {
-  width: 219px;
+//  width: 219px;
   padding-left: 30px;
   border-right: 1px solid $footerBorder;
   float: left;
@@ -559,6 +559,13 @@ input[type=text], input[type=password], textarea {
     padding: 0.8em 0;
   }
 }
+
+.site-tag a {
+  display: inline-block;
+  margin-right: 12px;
+
+}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "_highlights";

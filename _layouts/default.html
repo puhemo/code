@@ -52,15 +52,15 @@
     <section class="containerInner">
         <div class="searchBarNav">
             <div id="search">
-                <input id="searchString" placeholder="Learn to Tweet, Be a Better Developer, etc."
+                <input id="searchString" placeholder="Learn Ionic, Be a Better Developer, etc."
                        onkeypress="if (event.keyCode == 13) {doSearch(searchString.value);return false;}" type="text">
                 <input id="searchButton" name="googleSearchName" type="button" value="Search" language="javascript"
                        onclick="doSearch(searchString.value);return false;">
             </div>
             <div id="archives">
-                browse by <a title="The complete archive of {{ site.name }}'s Blog"
-                             href="{{ site.baseurl}}">category</a> or <a
-                    title="{{ site.name }}'s blog posts in a friendly calendar format" href="{{ site.baseurl}}">date</a>
+                browse by <a title="The complete archive of {{ site.name }}'s Blog by category"
+                             href="{{ site.baseurl}}/categoryview">category</a> or <a
+                    title="The complete archive of {{ site.name }}'s Blog by month" href="{{ site.baseurl}}/monthview">date</a>
             </div>
         </div>
     </section>
@@ -68,9 +68,11 @@
 <main>
 {{ content }}
 </main>
+
+
 <footer class="containerOuter darkbrown">
     <section class="containerInner">
-        <div class="footer-container">
+        <div class="footer-container"><p>Disclaimer:  The opinions expressed herein are my own personal opinions and do not represent my employer's view in any way.</p>
             {% include svg-icons.html %}
         </div>
     </section>
