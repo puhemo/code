@@ -41,26 +41,26 @@ Make sure that you installed VirtualBox and Vagrant before proceeding.
 9. Copy the following text into the VagrantFile
 
 {% highlight  ruby %}
-          # -*- mode: ruby -*-
-     # vi: set ft=ruby :
-     Vagrant.configure(2) do |config|
-           config.vm.box = "drifty/ionic-android"
-           config.vm.hostname = "[Replace with what you want your Host Name to be]" # No Spaced Allowed
-           config.vm.boot_timeout = 600
-           config.vm.network :forwarded_port, host: 8100, guest: 8100
-           config.vm.network :forwarded_port, host: 35729, guest: 35729
-           config.vm.synced_folder "c:\\projects", "/home/vagrant/vagrant_projects"
-           config.vm.provider "virtualbox" do |vb|
-                 vb.gui = true
-                 vb.customize ["modifyvm", :id, "--vram", "128"]
-                 vb.customize ["modifyvm", :id, "--usb", "on"]
-                 vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
-                 vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects", "1"]
-                 vb.memory = 2048
-                 vb.cpus = 2	 
-                 vb.name = "IonicBox" # This is the name in the VirtualBox Manager UI
-           end
-     end
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Vagrant.configure(2) do |config|
+ config.vm.box = "drifty/ionic-android"
+ config.vm.hostname = "[Replace with what you want your Host Name to be]" # No Spaced Allowed
+ config.vm.boot_timeout = 600
+ config.vm.network :forwarded_port, host: 8100, guest: 8100
+ config.vm.network :forwarded_port, host: 35729, guest: 35729
+ config.vm.synced_folder "c:\\projects", "/home/vagrant/vagrant_projects"
+ config.vm.provider "virtualbox" do |vb|
+       vb.gui = true
+       vb.customize ["modifyvm", :id, "--vram", "128"]
+       vb.customize ["modifyvm", :id, "--usb", "on"]
+       vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
+       vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects", "1"]
+       vb.memory = 2048
+       vb.cpus = 2	 
+       vb.name = "IonicBox" # This is the name in the VirtualBox Manager UI
+ end
+end
 {% endhighlight %}
 
 ### So what do  all of those options in the VagrantFile mean?
