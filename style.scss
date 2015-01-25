@@ -58,15 +58,15 @@ h3 {
 
 a {
   text-decoration: none;
-  color: #e2842c;
+  color: $links;
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
   text-decoration: none;
 }
 
-a:hover { color: #fea14b; }
-a:visited { color: #c5752a; }
+a:hover { color: $linkHover }
+a:visited { color:  $linkVisited}
 
 // Specify the color of the selection
 ::-moz-selection {
@@ -97,7 +97,7 @@ a:visited { color: #c5752a; }
 
 #topbar {
   padding: 1.2em 0;
-  color: #575e5b;
+  color: $topBar;
 
   h1 {
     font-weight: 700;
@@ -130,11 +130,11 @@ a:visited { color: #c5752a; }
 
 
   h1 a:visited, nav ul li a, nav ul li a:visited {
-    color: #575e5b;
+    color: $topBar;
   }
 
   h1 a:hover, nav ul li a:hover {
-    color: #e2842c;
+    color: $links;
   }
 
   nav {
@@ -153,12 +153,13 @@ a:visited { color: #c5752a; }
 }
 
 a.current, a.current:visited {
-  color: #e2842c;
+  color: $links;
   font-weight: bold;
 }
 
 .searchBar {
-  background-color: $darkerGray;  color: #c6c6c6;
+  background-color: $darkerGray;
+  color: $searchBar;
   font-size: 80%;
   padding: 0.43em 0 0.57em;
 }
@@ -175,15 +176,15 @@ a.current, a.current:visited {
   box-shadow: 0 1px 2px rgba(0,0,0,0.2) inset;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 0.3em 0.6em;
-  background-color: #f6f5ea;
+  background-color: $searchStringBackground;
   margin-right: 0;
 }
 
 #searchButton {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 0.4em 0.6em;
-  background-color: #83382b;
-  border: 1px solid #83382b;
+  background-color: $searchButtonBackground;
+  border: 1px solid $searchStringBackground;
   margin-left: 0;
   color: $white;
   -webkit-appearance: none;
@@ -214,18 +215,18 @@ div#archives {
 .blogHeader .blogTitle a, .blogHeader .blogTitle a:visited { color: $white; }
 
 .blogMetaInfo .containerInnerNarrow {
-  color: #e0e0e0;
+  color: $bodyPre;
   font-size: 80%;
   overflow: hidden;
 }
 
 .blogMetaCategories a, .blogMetaCategories a:visited {
-  color: #E2842C;
+  color: $links;
 }
 
 .blogMetaDate {
   color: $white!important;
-  //background: #e2842c;
+  //background: $links;
   padding: 0.8em 0.8em;
   margin: 0 0.8em;
   display: inline-block;
@@ -242,15 +243,15 @@ div#archives {
   bottom: -5px;
   border-width:5px 5px 0 0;
   border-style:solid;
-  border-color:#e2842c transparent;
+  border-color:$links transparent;
 }
 .blogBodyContainer {
   background-color: $white;
   overflow: hidden!important;
 }
 .blogBody {
-  border-left: 1px solid #F8F1EB;
-  border-right: 1px solid #F8F1EB;
+  border-left: 1px solid $blogBody;
+  border-right: 1px solid $blogBody;
   width: 998px;
   padding-top: 2.5em;
   padding-bottom: 2.5em;
@@ -310,7 +311,7 @@ div#archives {
 }
 
 .blogBodyNarrow h2, .blogBodyNarrow h3, .blogBodyNarrow h4, .blogBodyNarrow h5 {
-  color: #333333;
+  color: $darkGray;
 }
 
 
@@ -322,8 +323,8 @@ div#archives {
   width: 750px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  background-color: #fcfcfc;
-  border: 1px dashed #e0e0e0;
+  background-color: $bodyPre;
+  border: 1px dashed $blogBodyPreBorder;
   overflow: auto;
   padding: 1em;
   /*	font-size: 85%; */
@@ -341,7 +342,7 @@ footer .containerInner {
 
 footer .bio {
   padding-bottom: 15px;
-  border-bottom: 1px solid #5a4d41;
+  border-bottom: 1px solid $footerBorder;
 }
 
 footer .bio img {
@@ -351,7 +352,7 @@ footer .bio img {
 .footer-container {
   width: 219px;
   padding-left: 30px;
-  border-right: 1px solid #5a4d41;
+  border-right: 1px solid $footerBorder;
   float: left;
   padding-bottom: 30px;
 }
@@ -364,10 +365,6 @@ footer .bio img {
   list-style: none;
 
 }
-
-.line-tan { background: transparent url('/images/bg-line-tan.png') repeat center top; }
-.line-darkbrown { background: transparent url('/images/bg-line-darkbrown.png') repeat center top; }
-.line-chocolate { background: transparent url('/images/bg-line-chocolate.png') repeat center top; }
 
 .containerOuter{
   width: 100%;
@@ -395,7 +392,7 @@ footer .bio img {
 }
 .commentLinkStyle {
   color: $white!important;
-  background: #e2842c;
+  background: $links;
   padding: 0.8em 0.8em;
   margin: 0 0.8em;
   display: inline-block;
@@ -412,16 +409,16 @@ footer .bio img {
   bottom: -5px;
   border-width:5px 5px 0 0;
   border-style:solid;
-  border-color:#e2842c transparent;
+  border-color:$links transparent;
 }
 
 hr {
-  border-color: #e2842c;
-  color: #e2842c;
+  border-color: $links;
+  color: $links;
 }
 
 input[type=text], input[type=password], textarea {
-  border: 1px solid #cfcfcf;
+  border: 1px solid $inputBorder;
   box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
   font-size: 100%;
   padding: 0.3em;
@@ -429,12 +426,12 @@ input[type=text], input[type=password], textarea {
   border-radius: 0;
 }
 
-.chocolate { background-color: #5b2d26; }
-.yellow { background-color: #fbba2c;}
-.burntSienna { background-color: #83382b;}
-.orange { background-color: #e2842c; }
-.darkbrown { background-color: #291f16; }
-.darkteal { background-color: #575e5b; }
+.chocolate { background-color: $chocolate; }
+.yellow { background-color: $yellow;}
+.burntSienna { background-color: $burntSienna;}
+.orange { background-color: $orange; }
+.darkbrown { background-color: $darkbrown; }
+.darkteal { background-color: $darkteal; }
 
 
 //

@@ -1,18 +1,36 @@
 ---
 layout: default
 ---
+<article>
+  <section class="containerOuter blogHeader chocolate">
+    <section class="containerInnerNarrow">
+      <h2 class="blogTitle">{{ page.title }}</h2>
+    </section>
+  </section>
 
-<article class="post">
-  <h1>{{ page.title }}</h1>
+  <section class="containerOuter burntSienna blogMetaInfo">
+    <section class="containerInnerNarrow">
+      <span class="blogMetaDate"> {{ page.date | date: "%B %e, %Y" }} </span>
+      <span>Posted In:
+        {% for tag in page.categories %}
+          {{tag }}
+          {% if  page.categories.size !=  1 and page.categories.last != tag %}
+            |
+        {%endif %}
+        {% endfor %}
+      </span>
+    </section>
+  </section>
 
-  <div class="entry">
-    {{ content }}
-  </div>
+  <section class="containerOuter blogBodyContainer">
+    <section class="containerInner blogBody">
+      {{ content }}
+    </section>
+  </section>
 
-  <div class="date">
-  <br />
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
-
-  {% include disqus.html disqus_identifier=page.disqus_identifier %}
+  <section class="containerOuter">
+    <section class="containerInner">
+      {% include disqus.html disqus_identifier=page.disqus_identifier %}
+    </section>
+  </section>
 </article>
