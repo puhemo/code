@@ -201,18 +201,23 @@ div#archives {
   line-height: 2;
 }
 
-.blogHeader { }
+.blogHeader {
+  .containerInner {
+    padding: 2em 0;
+  }
 
-.blogHeader .containerInner {
-  padding: 2em 0;
-}
-.blogHeader .blogTitle {
-  font-size: 250%;
-  font-weight: bold;
-  color: $white;
+  .blogTitle {
+    font-size: 250%;
+    font-weight: bold;
+    color: $white;
+
+    a, a:visited { color: $white; }
+  }
+
 }
 
-.blogHeader .blogTitle a, .blogHeader .blogTitle a:visited { color: $white; }
+
+
 
 .blogMetaInfo .containerInnerNarrow {
   color: $bodyPre;
@@ -258,6 +263,24 @@ div#archives {
   font-size: 95%;
   position: relative;
   overflow: visible!important;
+
+  table {
+    margin-left: 125px;
+  }
+
+  ul, ol { padding-left: 3em;  }
+  ul li, ol li { list-style-position: outside; margin-right: 20px; }
+
+  div.syntaxhighlighter {
+    width: 750px!important;
+    margin: 1em auto!important;
+    position: relative!important;
+    overflow: auto!important;
+    border: 1px dashed #e0e0e0!important;
+    padding: 1em!important;
+    font-size: 85%!important;
+  }
+
 }
 
 .blogBodyNarrow {
@@ -272,24 +295,6 @@ div#archives {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
-}
-
-.blogBody table {
-  margin-left: 125px;
-}
-
-
-.blogBody ul, .blogBody ol { padding-left: 3em;  }
-.blogBody ul li, .blogBody ol li { list-style-position: outside; margin-right: 20px; }
-
-.blogBody div.syntaxhighlighter {
-  width: 750px!important;
-  margin: 1em auto!important;
-  position: relative!important;
-  overflow: auto!important;
-  border: 1px dashed #e0e0e0!important;
-  padding: 1em!important;
-  font-size: 85%!important;
 }
 
 .blogBody figure, .blogBodyNarrow figure {
@@ -331,6 +336,21 @@ div#archives {
   font-size: 100%;
   margin: 1em auto;
 }
+
+.pageHeader {
+  .containerInner {
+    //padding: 2em 0;
+  }
+
+  .pageTitle {
+    font-size: 250%;
+    font-weight: bold;
+    color: $black;
+
+    a, a:visited { color: $white; }
+  }
+}
+
 
 
 footer { }

@@ -2,11 +2,17 @@
 layout: default
 ---
 
-<article class="page">
-  
-  <h1>{{ page.title }}</h1>
+<article>
+  <section class="containerOuter pageHeader">
+    <section class="containerInnerNarrow">
+      <h1 class="pageTitle">{{ page.title }}</h1>
+    </section>
+  </section>
 
-  <div class="entry">
-    {{ content }}
-  </div>
+  <section class="containerOuter blogBodyContainer">
+    <section class="containerInner blogBody">
+      {{ content }}
+    </section>
+  </section>
+
 </article>
