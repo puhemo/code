@@ -41,26 +41,26 @@ Make sure that you installed VirtualBox and Vagrant before proceeding.
 9. Copy the following text into the VagrantFile
 
 {% highlight  ruby %}
-          # -*- mode: ruby -*-
-     # vi: set ft=ruby :
-     Vagrant.configure(2) do |config|
-           config.vm.box = "drifty/ionic-android"
-           config.vm.hostname = "[Replace with what you want your Host Name to be]" # No Spaced Allowed
-           config.vm.boot_timeout = 600
-           config.vm.network :forwarded_port, host: 8100, guest: 8100
-           config.vm.network :forwarded_port, host: 35729, guest: 35729
-           config.vm.synced_folder "c:\\projects", "/home/vagrant/vagrant_projects"
-           config.vm.provider "virtualbox" do |vb|
-                 vb.gui = true
-                 vb.customize ["modifyvm", :id, "--vram", "128"]
-                 vb.customize ["modifyvm", :id, "--usb", "on"]
-                 vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
-                 vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects", "1"]
-                 vb.memory = 2048
-                 vb.cpus = 2	 
-                 vb.name = "IonicBox" # This is the name in the VirtualBox Manager UI
-           end
-     end
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Vagrant.configure(2) do |config|
+ config.vm.box = "drifty/ionic-android"
+ config.vm.hostname = "[Replace with what you want your Host Name to be]" # No Spaced Allowed
+ config.vm.boot_timeout = 600
+ config.vm.network :forwarded_port, host: 8100, guest: 8100
+ config.vm.network :forwarded_port, host: 35729, guest: 35729
+ config.vm.synced_folder "c:\\projects", "/home/vagrant/vagrant_projects"
+ config.vm.provider "virtualbox" do |vb|
+       vb.gui = true
+       vb.customize ["modifyvm", :id, "--vram", "128"]
+       vb.customize ["modifyvm", :id, "--usb", "on"]
+       vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
+       vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects", "1"]
+       vb.memory = 2048
+       vb.cpus = 2	 
+       vb.name = "IonicBox" # This is the name in the VirtualBox Manager UI
+ end
+end
 {% endhighlight %}
 
 ### So what do  all of those options in the VagrantFile mean?
@@ -69,78 +69,99 @@ In the configuration we configure the video and physical memory of the virtual m
 
 Ionic uses port 8100 for the web site and the live reload function use port 35729.  We forwarded these ports from IonicBox to the host machine so we can access the web server.  The following two lines do the port forwarding
 
-
+{% highlight  io %}
          config.vm.network :forwarded_port, host: 8100, guest: 8100
          config.vm.network :forwarded_port, host: 35729, guest: 35729
 
-
+{% endhighlight   %}
 
 The IonicBox is just a Linux shell with no GUI so you will want to use a feature in VirtualBox called Shared Folders to be able to edit the files from your host machine.  In our case we are using c:\projects on the host machine which is linked to ~/vagrant_projects on the IonicBox
 
+{% highlight  io %}
          config.vm.synced_folder "c:\\projects", "/home/vagrant/projects"
+{% endhighlight %}
 
 Next we set up the VirtualBox options
 
 -We don't need the VirtualBox GUI since we are going to SSH into the machine so we can turn it off with.  Set this to true the first time, just so you can see it
 
+{% highlight  io %}
       vb.gui = false
-
+{% endhighlight %}
 
 - We set the Video Ram to 128 megs
 
-
+{% highlight  io %}
       vb.customize ["modifyvm", :id, "--vram", "128"]
+{% endhighlight %}
 
 - Turn on the USB drivers so that we can connect an Android device
 
-
+{% highlight  io %}
       vb.customize ["modifyvm", :id, "--usb", "on"]
+{% endhighlight %}
+
 
 
 -Add a usb device filter for a Android Device
 
+{% highlight  io %}
       vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
+{% endhighlight %}
+
 
 
 - Turn on Symlinks to the synced_folder above.  This is needed if your Host Operating System is Windows in order node/npm to work correctly.  
 
-
+{% highlight  io %}
       vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects", "1"]
+{% endhighlight %}
+
 
 
 
 - Set the system memory for the virtual machine.  If you host machine is low on memory you can reduce this down.  You must have this much memory free when the virtual machine starts up
 
-
+{% highlight  io %}
       vb.memory = 2048
+{% endhighlight %}
+
       
       
 - Number of Physical CPUs to allocate.  My machine only has 2 physical CPUs.  You can allocate more or take it down to 1
 
-
+{% highlight  io %}
       vb.cpus = 2	 
+{% endhighlight %}
+
 
 
 - The name to use for the virtual machine in the VirtualBox Manager UI
 
-
+{% highlight  io %}
       vb.name = "IonicBox"
+{% endhighlight %}
+
 
 
 ### Starting up the IonicBox and Getting logged in
 
 - Open a command prompt and navigate to the IonicBox folder that contains the VagrantFile.  Run command below. This command will take a while the first time you run it since it has to download the vagrant box container which is about 1 gig in size.
 
-
+{% highlight  io %}
       vagrant up
+{% endhighlight %}
+
 
 
 If you have the vb.gui = true in your VagrantFile, the first thing you will notice when you boot up the IonicBox is that it just comes to a command prompt and it leaves you wondering now what.  Luckily, this is exactly what we want and it is very easy to manage it.  The IonicBox basically just replaces the command prompt that we would normally use for all of the Ionic commands with a linux machine.  
 
 - To login to the machine, use the same command prompt as previous step and run
 
-
+{% highlight  io %}
       vagrant ssh
+{% endhighlight %}
+
 
 
 - if everything went successful you should be logged in
@@ -153,10 +174,12 @@ Now lets create our first Ionic project.
 On the IonicBox ssh connection:
 
 
-
+{% highlight  io %}
      cd vagrant_projects
      ionic start tabs firstApp && cd firstApp
      ionic serve --live-reload
+{% endhighlight %}
+
 
 
 
@@ -173,19 +196,23 @@ We need to setup a symbolic link for the node_modules folder since windows has a
 On the IonicBox from the firstApp folder run the following commands:
 
 
-
+{% highlight  io %}
       mkdir ~/node_modules
       cp package.json ~/package.json
       ls -s ~/node_modules node_modules
       cd ~/
       npm install
+{% endhighlight %}
+
 
 
 You may also need to manually install bower 
 
 
-
+{% highlight  io %}
       sudo npm install bower -g
+{% endhighlight %}
+
 
 
 ### I am done with IonicBox, now what?
@@ -195,19 +222,26 @@ You may also need to manually install bower
 - Hibernate: from the IonicBox directory with the VagrantFile run
 
 
-           vagrant suspend
+{% highlight  io %}
+          vagrant suspend
+{% endhighlight %}
+
 
 
 
 - Shutdown and Turn Off: from the IonicBox directory with the VagrantFile run
 
-
+{% highlight  io %}
            vagrant halt
+{% endhighlight %}
+
 
 - Delete the whole IonicBox Virtual Machine: from the IonicBox directory with the VagrantFile run
 
-      
+{% highlight  io %}      
            vagrant destroy 
+{% endhighlight %}
+
 
 
  - Note that sometimes this leaves behind the directory that contained the Virtual Machine.  Before you can run vagrant up again, you will need to manually delete this directory.
@@ -224,25 +258,33 @@ if you run into an error with vagrant up complaining about the virtual box symli
 - Make sure that the IonicBox is powered off.  
 - from the command prompt run:
 
-
+{% highlight  io %}
          "c:\program files\oracle\virtualbox\VBoxManage" setextradata "[Your VM Box Name] VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects 1
+{% endhighlight %}
+
 
 
 - To validate the configuration change run:
 
-
+{% highlight  io %}
         "c:\program files\oracle\virtualbox\VBoxManage" getextradataOn VM  "[Your VM Box NameOn VM ]" enumerate
+{% endhighlight %}
+
 
 
 - It should include a line such as 
 
-
+{% highlight  io %}
         Key: VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects, Value: 1
+{% endhighlight %}
+
 
 
 - Remove the following line from the VagrantFile
 
-
+{% highlight  io %}
       vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects", "1"]
+{% endhighlight %}
+
 
 
