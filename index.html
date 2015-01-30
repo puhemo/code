@@ -30,7 +30,12 @@ active: home
       {{ post.content}}
 
       <p>
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+        {% if site.disqus %}
+        <a href="{{ site.baseurl }}{{ post.url }}#disqus" class="read-more">Comments</a>
+
+        {% else %}
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read more</a>
+        {%endif %}
       </p>
     </section>
 
