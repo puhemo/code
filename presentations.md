@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: speaking
 title: Speaking
 permalink: /speaking/
 active: speaking
@@ -17,13 +17,17 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
  If you see me at an event, please be sure to come up and say "Hi".  The best part of the events is hanging out with other developers.
 
 
+<p>&nbsp;</p>
+
 ## Upcoming Speaking Engagements
 
-### Las Vegas Code Camp - Las Vegas, Nv (February 21, 2015)
+<p>&nbsp;</p>
+
+<h3>Las Vegas Code Camp <span>- Las Vegas, Nv (February 21, 2015)</span></h3>
 
 - [Vagrant (new talk, slides will be posted before the event)](#vagrant)
 
-### SoCal Code Camp - Fullerton, Ca (March 7th & 8th, 2015)
+<h3>SoCal Code Camp <span>- Fullerton, Ca (March 7th & 8th, 2015)</span></h3>
 
 - [Chocolatey](#chocolatey)
 - [Vagrant (new talk, slides will be posted before the event)](#vagrant)
@@ -31,17 +35,17 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 - [Ionic Framework Part 1: Overview](#ionic)
 - Ionic Framework Part 2: Deep Dive (new, no slides yet)
 
-### Nebraska Code Camp - Lincoln, Ne (March 19th-21st, 2015)
+<h3>Nebraska Code Camp <span>- Lincoln, Ne (March 19th-21st, 2015)</span></h3>
 
 - [Developer Productivity in Visual Studio](#vsprod)
 
-### Codepalous - Louisville, Ky (April 27th-30th, 2015)
+<h3> Codepalous <span>- Louisville, Ky (April 27th-30th, 2015)</span></h3>
 
 - [Ionic Framework - How to Easily Build Hybrid Mobile Applications for Android and iOS (Half day workshop)](#ionic)
 - [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
 
 
-### Desert Code Camp - Chandler, Az (Spring 2015)
+<h3> Desert Code Camp <span>- Chandler, Az (Spring 2015)</span></h3>
 
 The code camp date hasn't been announced yet, but I will most likely be submitting these sessions.
 
@@ -49,130 +53,143 @@ The code camp date hasn't been announced yet, but I will most likely be submitti
 - Ionic Framework Part 2: Deep Dive (new, no slides yet)
 - [Vagrant (new talk, slides will be posted before the event)](#vagrant)
 
+<p>&nbsp;</p>
 
 ## Past Speaking Engagements
 
+<p>&nbsp;</p>
 
-### Arizona Software Community - Phoenix, Az (January 2015)
+<h3> Arizona Software Community <span>- Phoenix, Az (January 2015)</span></h3>
 
 - [Ionic Framework - How to Easily Build Hybrid Mobile Applications for Android and iOS](#ionic)
 
 
-### Northwest Valley .NET User Group - Phoenix, Az (November 2014)
+<h3> Northwest Valley .NET User Group <span>- Phoenix, Az (November 2014)</span></h3>
 
 - [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
 - [Chocolatey](#chocolatey)
 
 
-### So Cal Code Camp - Los Angeles, Ca (November 2014)
+<h3> So Cal Code Camp <span>- Los Angeles, Ca (November 2014)</span></h3>
 
 - [Developer Productivity in Visual Studio](#vsprod)
 - [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
 - [Chocolatey](#chocolatey)
 
 
-### Desert Code Camp - Chandler, Az (October 2014)
+<h3> Desert Code Camp <span>- Chandler, Az (October 2014)</span></h3>
 
 - [Developer Productivity in Visual Studio](#vsprod)
 - [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
 - [Chocolatey](#chocolatey)
 
-### Southeast Valley .Net User Group - Chandler, Az (September 2014)
+<h3> Southeast Valley .Net User Group <span>- Chandler, Az (September 2014)</span></h3>
 
 - [Developer Productivity in Visual Studio](#vsprod)
 
 
-### Southeast Valley .Net User Group - Chandler, Az (February 2014)
+<h3> Southeast Valley .Net User Group<span> - Chandler, Az (February 2014)</span></h3>
 
 - [Side Waffle](#sidewaffle)
 
-### Desert Code Camp - Chandler, Az (April 2014)
+<h3> Desert Code Camp <span>- Chandler, Az (April 2014)</span></h3>
 
 - [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
 - [Chocolatey](#chocolatey)
 
-### Southeast Valley .Net User Group - Chandler, Az (February 2014)
+<h3> Southeast Valley .Net User Group <span>- Chandler, Az (February 2014)</span></h3>
 
 - [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
 - [Chocolatey](#chocolatey)
 
+<p>&nbsp;</p>
 
+## Presentation Details
 
-## <a name="chocolatey"></a> Chocolatey - making the process of installing software on windows easy as pie
+<p>&nbsp;</p>
+
+### <a name="chocolatey"></a> Chocolatey - making the process of installing software on windows easy as pie
 
 Chocolatey is a machine package manager somewhat like apt-get for Linux but built for Windows. No more searching for the install download or trying to figure out 32/64 bit or wonder what options to pick. Chocolatey takes care of doing the install for you and you can even create scripts to install multiple packages. With Chocolatey you can bring up a new development machine with minimal effort. By the end of this session you will have all of the information you need to be both a consumer and create of Chocolatey packages.Chocolatey isn't just for system administrators. It is extremely useful for both developers and end-users as well.For developers, you can quickly bring up a new machine and get all of your software installed on it with minimal effort. It is also very easy to make Chocolatey packages for your software and distribute it to your users.For end-users, no longer will they need to search for where to download your software or how to install it. Chocolatey will do all of the work for them.
 
-[Presentation Slides](http://slides.com/digitaldrummerj/chocolatey-the-right-way-to-install-windows-software)
+Slides: [http://slides.com/digitaldrummerj/chocolatey-the-right-way-to-install-windows-software](http://slides.com/digitaldrummerj/chocolatey-the-right-way-to-install-windows-software)
 
-Demo
+Demo: [https://github.com/digitaldrummerj/ChocolateyTalk](https://github.com/digitaldrummerj/ChocolateyTalk)
 
-### Additional Resources
-[Chocolatey.org](http://www.chocolatey.org)
+#### Additional Resources
 
-****
+- Chocolatey Gallery: [http://www.chocolatey.org](http://www.chocolatey.org)
+- BoxStarter: [http://www.boxstarter.org](http://www.boxstarter.org)
 
-## <a name="ionic"></a>Ionic - Revolutionizing Hybrid Mobile Application Development
+
+
+### <a name="ionic"></a>Ionic - Revolutionizing Hybrid Mobile Application Development
 
 If you want to make mobile web applications that look, feel and perform like native application than you need to use the Ionic Framework. The Ionic Framework is focused on making hybrid web applications feel exactly like a native application. Ionic uses web technology that you already know and love such as Html 5, Angular JS, and CSS 3. The Ionic Framework comes out of the box with lots of well designed code and tools to quickly make beautiful and fluid apps for Android and iOS. Hybrid mobile web development will never be the same again. You will walk away from this session with everything you need to know to immediately start developing an application using Ionic and learn to love mobile development again.
 
-[Presentation Slides](http://www.slides.com/digitaldrummerj/ionic-framework)
+Slides: [http://www.slides.com/digitaldrummerj/ionic-framework](http://www.slides.com/digitaldrummerj/ionic-framework)
 
-Demo
+Demos: [https://github.com/digitaldrummerj/IonicFrameworkTalk](https://github.com/digitaldrummerj/IonicFrameworkTalk)
 
-### Additional Resources
-[ionicframework.com](http://www.ionicframework.com)
 
-****
+#### Additional Resources
 
-## <a name="nuget">Nuget is easier than you think and you should be using it as both a consumer and creator of packages</a>
+- Ionic Framework Home Page: [http://www.ionicframework.com](http://www.ionicframework.com)
+- Ionic View: [http://view.ionic.io/](http://view.ionic.io/)
+- Ionic Blog: [http://ionicframework.com/blog/](http://ionicframework.com/blog/)
+- Ionic Docs: [http://ionicframework.com/docs/](http://ionicframework.com/docs/)
+- Ionic Forum: [http://forum.ionicframework.com/](http://forum.ionicframework.com/)
+- Ionic Twitter: [http://www.twitter.com/ionicframework](http://www.twitter.com/ionicframework)
+- Ionic Creator: [https://creator.ionic.io/](https://creator.ionic.io/)
 
+### <a name="nuget"></a>Nuget is easier than you think and you should be using it as both a consumer and creator of packages</a>
 
 Nuget is a package manager for Visual Studio that allows you to easily share assets (dll, javascript, c#, etc files) and use them in your project.  Most Visual Studio developers have consumer nuget packages but few have created and shared nuget packages.  It is amazingly easy to create and publish a nuget package.  In less than 60 minutes I will show you how move from a consumer to a creator.  You will learn how to package up dll's, source code that needs to be inserted in a project, add/change configurations, publish a package and host your own nuget feed.
 
-[Presentation Slides](http://slides.com/digitaldrummerj/nuget)
+Slides: [http://slides.com/digitaldrummerj/nuget](http://slides.com/digitaldrummerj/nuget)
 
-Demo
+Demos: [https://github.com/digitaldrummerj/NugetTalk](https://github.com/digitaldrummerj/NugetTalk)
 
 ### Additional Resources
-[nuget.org](http://www.nuget.org)
 
-****
+- Nuget Gallery: [http://www.nuget.org](http://www.nuget.org)
+- Nuget Docs: [http://docs.nuget.org](http://docs.nuget.org)
+- Nuget.Server Package (Host your own feeds) [http://www.nuget.org/packages/NuGet.Server/](http://www.nuget.org/packages/NuGet.Server/)
+- Nuget Gallery Project: [https://github.com/NuGet/NuGetGallery](https://github.com/NuGet/NuGetGallery)
+- Branding the Nuget Gallery: [http://docs.nuget.org/contribute/branding-the-nuget-gallery](http://docs.nuget.org/contribute/branding-the-nuget-gallery)
+- Nuget Package Explorer: [http://npe.codeplex.com/](http://npe.codeplex.com/)
 
-## <a name="sidewaffle"></a>Side Waffle - The easiest way to build templates for Visual Studio
+### <a name="sidewaffle"></a>Side Waffle - The easiest way to build templates for Visual Studio
 
 The SideWaffle extension adds a bunch of useful Snippets, Project- and Item Templates to Visual Studio. The purpose is to make your daily work in Visual Studio a richer and more productive experience.
 
-[Presentation Slides](http://slides.com/digitaldrummerj/side-waffle)
+Slides: [http://slides.com/digitaldrummerj/side-waffle](http://slides.com/digitaldrummerj/side-waffle)
 
-Demo
+Demo: [https://github.com/digitaldrummerj/SideWaffleTalks](https://github.com/digitaldrummerj/SideWaffleTalks)
 
 ### Additional Resources
-[sidewaffle.com](http://www.sidewaffle.com)
+- [http://www.sidewaffle.com](http://www.sidewaffle.com)
 
-****
 
-## <a name="vagrant"></a>Vagrant - Create and Configure lightweight, reproducible, and portable dev environments.
+
+### <a name="vagrant"></a>Vagrant - Create and Configure lightweight, reproducible, and portable dev environments.
 
 Does this ever happen to you? The configuration takes forever to remember, document and configure. You can't seem to reproduce the configuration on another developers machine? Then vagrant my friend is for you.  Vagrant will change how you work.    You will forever say goodbye to the "works on my machine" excuse for the development environment for everyone on your team.
 
-Presentation Slides
+Slides:
 
-Demo
+Demo: [https://github.com/digitaldrummerj/VagrantTalk](https://github.com/digitaldrummerj/VagrantTalk)
 
 ### Additional Resources
-[vagrantup.com](http://www.vagrantup.com)
+- [vagrantup.com](http://www.vagrantup.com)
 
-****
-
-## <a name="vsprod"></a>How to maximize your productivity potential in Windows and Visual Studio with a few simple shortcuts and extensions
+### <a name="vsprod"></a>How to maximize your productivity potential in Windows and Visual Studio with a few simple shortcuts and extensions
 
 You will learn several tricks to becoming more productive in Windows and Visual Studio. We will explore some standard windows shortcuts, how to never use the start menu again to launch programs, how to create shortcuts to your commonly used web sites, some very useful Visual Studio extensions, and I will give you some shortcuts that I like to set in Visual Studio.
 
-[Presentation Slides](http://slides.com/digitaldrummerj/devprod)
+Slides: [http://slides.com/digitaldrummerj/devprod](http://slides.com/digitaldrummerj/devprod)
 
-Demo
+Demo:
 
 ### Additional Resources
-
-
-****
+- None
