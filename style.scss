@@ -7,6 +7,7 @@
 
 //@import "_reset";
 @import "_variables";
+@import "mixins";
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -564,6 +565,36 @@ input[type=text], input[type=password], textarea {
   display: inline-block;
   margin-right: 12px;
 
+}
+
+#index {
+  h3 {
+    //margin: 0;
+    padding-bottom: .5em;
+    @include font-rem(28);
+    border-bottom: 1px solid lighten($black,70);
+  }
+
+  article {
+    h2 {
+      margin-bottom: 4px;
+      @include font-rem(20);
+      &.link-post {
+        margin-bottom: 0px + $doc-line-height;
+        margin-bottom: 0rem + ($doc-line-height / $doc-font-size);
+      }
+      span {
+        @include font-rem(14);
+      }
+    }
+
+    p {
+      @include font-rem(14);
+    }
+    p+p {
+      text-indent: 0;
+    }
+  }
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS

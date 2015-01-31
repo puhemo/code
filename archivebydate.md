@@ -5,13 +5,36 @@ permalink: /monthview/
 active: archivebydate
 ---
 
+  <div id="index">
 {% for post in site.posts %}
+{% unless post.next %}
+<h3>{{ post.date | date: '%Y' }}</h3>
+{% else %}
+{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+{% if year != nyear %}
+{% if forloop.index != 1 %}</ul>{% endif %}
+  <h3>{{ post.date | date: '%Y' }}</h3>
+{% endif %}
+{% endunless %}
+
 {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
 {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
 {% if month != nmonth %}
 {% if forloop.index != 1 %}</ul>{% endif %}
-<h3>{{ post.date | date: '%B %Y' }}</h3><ul>
+<h2>{{ post.date | date: '%B %Y' }}</h2><ul>
 {% endif %}
-<li><a href="{{ post.url }}">{{ post.title }}</a> - <time>{{ post.date | date: "%e %B %Y" }}</time></li>
+
+<article>
+{% if post.link %}
+  <h2 class="link-post">
+    <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+    <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
+{% else %}
+  <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }} - <span>{{ post.date |  date: "%B %e" }}</span></a></h2>
+  <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+{% endif %}
+</article>
 
 {% endfor %}
+</div>
