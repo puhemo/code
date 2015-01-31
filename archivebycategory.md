@@ -3,6 +3,7 @@ layout: page
 title: Post by Category
 permalink: /categoryview/
 active: archivebycategory
+sitemap: false
 ---
 
 <div>

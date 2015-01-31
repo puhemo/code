@@ -1,51 +1,85 @@
 ---
 layout: page
-title: Presentations
-permalink: /presentations/
-active: presentations
+title: Speaking
+permalink: /speaking/
+active: speaking
+redirect_from: "/presentations/"
 ---
 
-## Upcoming
+I started really getting into speaking publicly in early 2014 after speaking at the [Southeast Valley .NET User Group](http://www.meetup.com/sevdnug/) in Chandler, Arizona.  I had suggested a couple of topics for future meetings that I wanted to learn about to the user group organizer, [Rob Richardson](http://www.robrich.org) and like a bullet he immediately shot back, "when would you like to present these topics?".  I wasn't quite prepared for that response but in retrospect if was the best response he could have given to me.  I had been an attendee of this user group for awhile but hadn't done a presentation there in years.  So after thinking about it for a few minutes I thought I got nothing to lose and asked for a few months to learn the topics.
 
-### Las Vegas Code Camp - Las Vegas, Nv (February 2015)
+Over the next couple of months I worked on learning the ins and outs of [Nuget](http://www.nuget.org) and [Chocolatey](http://www.chocolatey.org) as well watching tips and tricks on speaking from speakers I admired like [Scott Hanselman](http://www.hanselman.com/) and [John Papa](http://www.johnpapa.net/).  The presentations both went amazingly well with a lot of great feedback from audience and I was immediately hooked.  Since that initial presentations I have presented almost 20 sessions and counting.  I have a passion for coding and for teaching; speaking at developer community events allows me to combine these two.
+
+ If you'd like me to come to your event or user group, you can make a request through [INETA](http://ineta.org/Speakers/SearchCommunitySpeakers.aspx?SpeakerId=3bf95988-3e54-4757-b42b-7fc1407b36e1) or contact me directly.
+
+ If you've attended one of my sessions, please send me your feedback or suggestions.
+
+ If you see me at an event, please be sure to come up and say "Hi".  The best part of the events is hanging out with other developers.
+
+
+## Upcoming Speaking Engagements
+
+### Las Vegas Code Camp - Las Vegas, Nv (February 21, 2015)
 
 - [Vagrant (new talk, slides will be posted before the event)](#vagrant)
 
-### Nebraska Code Camp - Lincoln, Ne (March 2015)
+### SoCal Code Camp - Fullerton, Ca (March 7th & 8th, 2015)
 
-- [Visual Studio Productivity](#vsprod)
+- [Chocolatey](#chocolatey)
+- [Vagrant (new talk, slides will be posted before the event)](#vagrant)
+- [Developer Productivity in Visual Studio](#vsprod)
+- [Ionic Framework Part 1: Overview](#ionic)
+- Ionic Framework Part 2: Deep Dive (new, no slides yet)
+
+### Nebraska Code Camp - Lincoln, Ne (March 19th-21st, 2015)
+
+- [Developer Productivity in Visual Studio](#vsprod)
+
+### Codepalous - Louisville, Ky (April 27th-30th, 2015)
+
+- [Ionic Framework - How to Easily Build Hybrid Mobile Applications for Android and iOS (Half day workshop)](#ionic)
+- [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
 
 
-## Past
+### Desert Code Camp - Chandler, Az (Spring 2015)
+
+The code camp date hasn't been announced yet, but I will most likely be submitting these sessions.
+
+- [Ionic Framework Part 1: Overview](#ionic)
+- Ionic Framework Part 2: Deep Dive (new, no slides yet)
+- [Vagrant (new talk, slides will be posted before the event)](#vagrant)
+
+
+## Past Speaking Engagements
 
 
 ### Arizona Software Community - Phoenix, Az (January 2015)
 
-- [Ionic](#ionic)
+- [Ionic Framework - How to Easily Build Hybrid Mobile Applications for Android and iOS](#ionic)
 
 
 ### Northwest Valley .NET User Group - Phoenix, Az (November 2014)
 
-- [Nuget](#nuget)
+- [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
 - [Chocolatey](#chocolatey)
 
 
 ### So Cal Code Camp - Los Angeles, Ca (November 2014)
 
-- [Visual Studio Productivity](#vsprod)
-- [Nuget](#nuget)
+- [Developer Productivity in Visual Studio](#vsprod)
+- [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
 - [Chocolatey](#chocolatey)
 
 
 ### Desert Code Camp - Chandler, Az (October 2014)
 
-- [Visual Studio Productivity](#vsprod)
-- [Nuget](#nuget)
+- [Developer Productivity in Visual Studio](#vsprod)
+- [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
 - [Chocolatey](#chocolatey)
 
 ### Southeast Valley .Net User Group - Chandler, Az (September 2014)
 
-- [Visual Studio Productivity](#vsprod)
+- [Developer Productivity in Visual Studio](#vsprod)
 
 
 ### Southeast Valley .Net User Group - Chandler, Az (February 2014)
@@ -54,12 +88,12 @@ active: presentations
 
 ### Desert Code Camp - Chandler, Az (April 2014)
 
-- [Nuget](#nuget)
+- [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
 - [Chocolatey](#chocolatey)
 
 ### Southeast Valley .Net User Group - Chandler, Az (February 2014)
 
-- [Nuget](#nuget)
+- [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
 - [Chocolatey](#chocolatey)
 
 

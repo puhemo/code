@@ -3,9 +3,10 @@ layout: page
 title: Post by Tag Cloud
 permalink: /tagcloudview/
 active: archivebytagcloud
+sitemap: false
 ---
 
-<div>
+
 {% assign tags = site.categories | sort %}
 {% for tag in tags %}
  <span class="site-tag">
@@ -15,4 +16,5 @@ active: archivebytagcloud
     </a>
 </span>
 {% endfor %}
-</div>
+
+

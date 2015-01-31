@@ -41,8 +41,17 @@
             <ul>
                 <li><a href="{{ site.baseurl }}/" {% if page.active == "home" %} class="current" {% endif %}>Blog</a></li>
                 <li><a href="{{ site.baseurl }}/about" {% if page.active == "about" %} class="current" {% endif %}>About</a></li>
-                <li><a href="{{ site.baseurl}}/presentations" {% if page.active == "presentations" %} class="current" {% endif %}>Speaking</a></li>
-                <li><a href="{{ site.baseurl}}/feed.xml" {% if page.active == "feed" %} class="current" {% endif %}>Feed</a></li>
+                <li><a href="{{ site.baseurl}}/speaking" {% if page.active == "speaking" %} class="current" {% endif %}>Speaking</a></li>
+                <li>
+                    <a  {% if page.active == "feed" %} class="current" {% endif %}
+                    {% if site.footer-links.feedburner %}
+                        href="http://feeds.feedburner.com/digitaldrummerj/phdz"
+                    {% else if site.footer-links.rss %}
+                        href="{{ site.baseurl }}/feed.xml"
+                    {% endif %}
+                    >Feed</a>
+                </li>
+
             </ul>
         </nav>
     </section>

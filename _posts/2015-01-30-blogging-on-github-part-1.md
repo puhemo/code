@@ -17,24 +17,24 @@ The quickest and easiest way to get started with Jekyll is fork an existing Jeky
 The repository that I used and recommend to fork is the "Jekyll Now" repository at  [https://github.com/barryclark/jekyll-now](https://github.com/barryclark/jekyll-now).  The Jekyll based repository includes a lot of very useful features for a blog out of the box for you such as:  a nice looking theme, code syntax highlighter, social buttons (twitter, Facebook, Github, etc), Disqus blog commenting api, and Google analytics.
 
 ### Section 2: Forking the Repository
-Forking a repository in Github is extremely simple.  Go to [https://github.com/barryclark/jekyll-now](https://github.com/barryclark/jekyll-now) and click the ![](/images/github_fork_button.png) button.  Github will now create a fork of the repository for you into your account.
+Forking a repository in Github is extremely simple.  Go to [https://github.com/barryclark/jekyll-now](https://github.com/barryclark/jekyll-now) and click the ![]({{site.url}}/images/github_fork_button.png) button.  Github will now create a fork of the repository for you into your account.
 
 ### Section 3: Renaming the Repository
 
 Once you fork the repository, you will need to go into the settings for your new repository and rename it to [username].github.io.  Your blog will now be live within a few minutes at http://[username].github.io.  However, before you go look at the blog, you need to take a minute to configure a few items in the configuration file  _config.yml.
 
 #### Getting to settings
-![](/images/github_settings_button.png)
+![]({{site.url}}/images/github_settings_button.png)
 
 #### Renaming
 
 Finding the settings:
 
-![](/images/github_repo_rename.png)
+![]({{site.url}}/images/github_repo_rename.png)
 
 Update the name and click the Rename button
 
-![](/images/github_repo_rename_done.png)
+![]({{site.url}}/images/github_repo_rename_done.png)
 
 ### Section 4: Configuring the Repository
 
@@ -46,7 +46,7 @@ There is only 3 values that you are going to want to change:
 
 Optionally, you can also configure your social networks that show up in the footer of the site by filling in the various account names in the "footer-links" section of the _config.yml file.
 
-You can edit the _config.yml directly in Github.  Click on the file and then click the ![](/images/github_edit_button.png) icon.  Once you have completed your edits, click the green commit button at the bottom of the screen.
+You can edit the _config.yml directly in Github.  Click on the file and then click the ![]({{site.url}}/images/github_edit_button.png) icon.  Once you have completed your edits, click the green commit button at the bottom of the screen.
 
 
 ### Section 5: Viewing the Blog
@@ -57,12 +57,12 @@ In the next lesson, we will cover the how to create new blog post.
 
 ### Section 6:  Future lessons:
 
-* Blogging On Github - Part 2 Creating your first blog post
-* Blogging On Github - Part 3 Adding the ability for readers to comment on your post
-* Blogging On Github - Part 4 How to make change locally and push them to Github
-* Blogging On Github - Part 5 Creating additional pages
-* Blogging On Github - Part 6 Adding a page that list post by category
-* Blogging On Github - Part 7 Adding a page that list post by month
-* Blogging On Github - Part 8 Customizing the theme
-* Blogging On Github - Part 9 Adding a custom Google search
-* Blogging On Github - Part 10 Using your own domain name
+* Part 2 Creating your first blog post
+* Part 3 Adding the ability for readers to comment on your post
+* Part 4 How to make change locally and push them to Github
+* Part 5 Creating additional pages
+* Part 6 Adding a page that list post by category
+* Part 7 Adding a page that list post by month
+* Part 8 Customizing the theme
+* Part 9 Adding a custom Google search
+* Part 10 Using your own domain name
