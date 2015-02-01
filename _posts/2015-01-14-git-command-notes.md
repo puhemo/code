@@ -4,6 +4,7 @@ layout: post
 title: Git Command Notes
 tags: [git]
 categories: [git, source-control]
+redirect_from: "/git/"
 ---
 
 I am starting to finally learn the git command line instead of just using a UI so that I can actually understand what git is really doing.
