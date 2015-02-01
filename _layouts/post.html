@@ -2,15 +2,11 @@
 layout: default
 ---
 <article>
-  <section class="containerOuter blogHeader chocolate">
+  <section class="containerOuter blogHeader">
     <section class="containerInnerNarrow">
-      <h2 class="blogTitle">{{ page.title }}</h2>
-    </section>
-  </section>
-
-  <section class="containerOuter burntSienna blogMetaInfo">
-    <section class="containerInnerNarrow">
-      <span class="blogMetaDate"> {{ page.date | date: "%B %e, %Y" }} </span>
+      <h2 class="blogTitle">{{ page.title }}
+        <div class="blogMetaInfo">
+          <span class="blogMetaDate"> {{ page.date | date: "%B %e, %Y" }} </span>
       <span>Posted In:
         {% for tag in page.categories %}
           {{tag }}
@@ -19,6 +15,8 @@ layout: default
         {%endif %}
         {% endfor %}
       </span>
+        </div>
+      </h2>
     </section>
   </section>
 

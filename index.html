@@ -5,15 +5,11 @@ active: home
 {% for post in site.posts %}
 
 <article>
-  <section class="containerOuter blogHeader chocolate">
+  <section class="containerOuter blogHeader">
     <section class="containerInnerNarrow">
-      <h2 class="blogTitle"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-    </section>
-  </section>
-
-  <section class="containerOuter burntSienna blogMetaInfo">
-    <section class="containerInnerNarrow">
-      <span class="blogMetaDate"> {{ post.date | date: "%d %B %Y" }} </span>
+      <h2 class="blogTitle"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        <div class="blogMetaInfo">
+        <span class="blogMetaDate"> {{ post.date | date: "%B %e, %Y" }} </span>
       <span>Posted In:
         {% for tag in post.categories %}
           {{tag }}
@@ -22,21 +18,23 @@ active: home
         {%endif %}
         {% endfor %}
       </span>
+      </div>
+      </h2>
+
     </section>
   </section>
 
   <section class="containerOuter blogBodyContainer">
     <section class="containerInner blogBody">
-      {{ post.content}}
-
-      <p>
         {% if site.disqus %}
-        <a href="{{ site.baseurl }}{{ post.url }}#disqus" class="read-more">Comments</a>
+      {{ post.content }}
 
+        <p> <a href="{{ site.baseurl }}{{ post.url }}#disqus" class="read-more">Comments</a></p>
         {% else %}
-        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read more</a>
+      {{ post.content | truncatewords: 40}}
+        <p><a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read more</a></p>
         {%endif %}
-      </p>
+
     </section>
 
 

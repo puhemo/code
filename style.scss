@@ -66,7 +66,7 @@ a {
   text-decoration: none;
 }
 
-a:hover { color: $linkHover }
+a:hover { color: $linkHover; text-decoration: underline; }
 a:visited { color:  $linkVisited}
 
 // Specify the color of the selection
@@ -136,6 +136,7 @@ a:visited { color:  $linkVisited}
 
   h1 a:hover, nav ul li a:hover {
     color: $links;
+    text-decoration: none;
   }
 
   nav {
@@ -156,6 +157,7 @@ a:visited { color:  $linkVisited}
 a.current, a.current:visited {
   color: $links;
   font-weight: bold;
+
 }
 
 .searchBar {
@@ -210,92 +212,87 @@ div#archives {
   .blogTitle {
     font-size: 250%;
     font-weight: bold;
-    color: $white;
+    color: $black;
+    padding: 0;
+    border-bottom: 3px solid $chocolate;
+    a, a:visited { color: $black; }
+    a:hover { text-decoration: none; }
 
-    a, a:visited { color: $white; }
+    .blogMetaInfo  {
+      //color: $bodyPre;
+      overflow: hidden;
+      @include font-rem(14);
+      .blogMetaCategories a, .blogMetaCategories a:visited {
+        color: $links;
+      }
+
+      .blogMetaDate {
+        //color: $white!important;
+        //background: $links;
+        padding-top: 0.8em;//0.8em;
+        padding-bottom: 0.8em;
+        padding-right: 0.8em;
+        //margin: 0 0.8em;
+        display: inline-block;
+        position: relative;
+        :after {
+          content:"";
+          display: block;
+          position: absolute;
+          width: 0;
+          height: 0;
+          right: 20%;
+          bottom: -5px;
+          border-width:5px 5px 0 0;
+          border-style:solid;
+          border-color:$links transparent;
+        }
+      }
+    }
+
   }
 
 }
 
-
-
-
-.blogMetaInfo .containerInnerNarrow {
-  color: $bodyPre;
-  font-size: 80%;
-  overflow: hidden;
-}
-
-.blogMetaCategories a, .blogMetaCategories a:visited {
-  color: $links;
-}
-
-.blogMetaDate {
-  color: $white!important;
-  //background: $links;
-  padding: 0.8em 0.8em;
-  margin: 0 0.8em;
-  display: inline-block;
-  position: relative;
-}
-
-.blogMetaDate:after {
-  content:"";
-  display: block;
-  position: absolute;
-  width: 0;
-  height: 0;
-  right: 20%;
-  bottom: -5px;
-  border-width:5px 5px 0 0;
-  border-style:solid;
-  border-color:$links transparent;
-}
 .blogBodyContainer {
   background-color: $white;
   overflow: hidden!important;
-}
-.blogBody {
-  border-left: 1px solid $blogBody;
-  border-right: 1px solid $blogBody;
-  width: 998px;
-  padding-top: 2.5em;
-  padding-bottom: 2.5em;
-  font-size: 95%;
-  position: relative;
-  overflow: visible!important;
 
-  table {
-    margin-left: 125px;
+  .blogBody {
+    border-left: 1px solid $blogBody;
+    border-right: 1px solid $blogBody;
+    width: 998px;
+    //padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    font-size: 95%;
+    position: relative;
+    overflow: visible!important;
+
+    table {
+      margin-left: 125px;
+    }
+
+    ul, ol { padding-left: 3em;  }
+    ul li, ol li { list-style-position: outside; margin-right: 20px; }
+
+    div.syntaxhighlighter {
+      width: 750px!important;
+      margin: 1em auto!important;
+      position: relative!important;
+      overflow: auto!important;
+      border: 1px dashed #e0e0e0!important;
+      padding: 1em!important;
+      font-size: 85%!important;
+    }
+
+    p, blockquote, h1, h2, h3, h4, ul, ol, div.misc, div.syntaxhighlighter{
+      display: block;
+      width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1.5em;
+    }
   }
-
-  ul, ol { padding-left: 3em;  }
-  ul li, ol li { list-style-position: outside; margin-right: 20px; }
-
-  div.syntaxhighlighter {
-    width: 750px!important;
-    margin: 1em auto!important;
-    position: relative!important;
-    overflow: auto!important;
-    border: 1px dashed #e0e0e0!important;
-    padding: 1em!important;
-    font-size: 85%!important;
-  }
-
-}
-
-.blogBodyNarrow {
-  width: 659px;
-  padding: 30px;
-  border-right: 1px solid #F8F1EB;
-}
-
-.blogBody p, .blogBody blockquote, .blogBody h1, .blogBody h2, .blogBody h3, .blogBody h4, .blogBody ul, .blogBody ol, .blogBody div.misc, div.syntaxhighlighter{
-  display: block;
-  width: 750px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5em;
 }
 
 .blogBody figure, .blogBodyNarrow figure {
@@ -309,7 +306,11 @@ div#archives {
   margin-left: 0em;
 }
 
-
+.blogBodyNarrow {
+  width: 659px;
+  padding: 30px;
+  border-right: 1px solid #F8F1EB;
+}
 
 .blogBody figure img, .blogBodyNarrow figure img {
   max-width: 100%;
