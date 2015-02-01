@@ -12,17 +12,15 @@ layout: default
     <section class="containerOuter blogBodyContainer">
         <section class="containerInner blogBody" id="index">
 <article >
-{% for category in site.categories %}
-    {% for posts in category %}
-        {% for post in posts | sort: 'title' %}
-            {% if post.tags contains page.type %}
+{% unless page.content == '' %}
+<p>{{ page.content }}</p>
+{% endunless %}
+
+{% for post in (site.categories.[page.type] | sort: title)%}
     <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }} - <span>{{ post.date |  date: "%B %e" }}</span></a></h2>
     <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-            {% endif %}
-        {%endfor $}
-    {%endfor%}
-{%endfor%}
 
+{% endfor %}
 </article>
         </section>
     </section>
