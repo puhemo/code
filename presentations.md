@@ -150,7 +150,7 @@ Slides: [http://slides.com/digitaldrummerj/nuget](http://slides.com/digitaldrumm
 
 Demos: [https://github.com/digitaldrummerj/NugetTalk](https://github.com/digitaldrummerj/NugetTalk)
 
-### Additional Resources
+#### Additional Resources
 
 - Nuget Gallery: [http://www.nuget.org](http://www.nuget.org)
 - Nuget Docs: [http://docs.nuget.org](http://docs.nuget.org)
@@ -167,7 +167,7 @@ Slides: [http://slides.com/digitaldrummerj/side-waffle](http://slides.com/digita
 
 Demo: [https://github.com/digitaldrummerj/SideWaffleTalks](https://github.com/digitaldrummerj/SideWaffleTalks)
 
-### Additional Resources
+#### Additional Resources
 - [http://www.sidewaffle.com](http://www.sidewaffle.com)
 
 
@@ -180,7 +180,7 @@ Slides:
 
 Demo: [https://github.com/digitaldrummerj/VagrantTalk](https://github.com/digitaldrummerj/VagrantTalk)
 
-### Additional Resources
+#### Additional Resources
 - [vagrantup.com](http://www.vagrantup.com)
 
 ### <a name="vsprod"></a>How to maximize your productivity potential in Windows and Visual Studio with a few simple shortcuts and extensions
@@ -191,5 +191,5 @@ Slides: [http://slides.com/digitaldrummerj/devprod](http://slides.com/digitaldru
 
 Demo:
 
-### Additional Resources
+#### Additional Resources
 - None
