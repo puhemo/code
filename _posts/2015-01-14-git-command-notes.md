@@ -3,7 +3,7 @@ published: true
 layout: post
 title: Git Command Notes
 tags: [git]
-categories: [git, source-control]
+categories: [git, source-control, github]
 redirect_from: "/git/"
 ---
 

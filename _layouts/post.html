@@ -9,7 +9,11 @@ layout: default
           <span class="blogMetaDate"> {{ page.date | date: "%B %e, %Y" }} </span>
       <span>Posted In:
         {% for tag in page.categories %}
-          {{tag }}
+        <a href="{{site.url}}/category/{{ tag  }}/">
+          {{ tag | replace:'-', ' ' }}
+        </a>
+
+
           {% if  page.categories.size !=  1 and page.categories.last != tag %}
             |
         {%endif %}

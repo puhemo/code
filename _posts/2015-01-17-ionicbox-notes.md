@@ -3,7 +3,7 @@ published: true
 title: Ionicbox and how to use it
 layout: post
 tags: [ionic]
-categories: [programming, mobile-development]
+categories: [programming, mobile-development, ionic, vagrant, virtualbox]
 ---
 
 If you have looked at setting up the [Ionic Framework](http://www.ionicframework.com) or have it done it before, you know on much of a pain it can be, especially when something doesn't work.  Luckily, Ionic offers a free virtual machine called [Ionicbox](https://github.com/driftyco/ionic-box) that is already configured with all of the software that you need.  

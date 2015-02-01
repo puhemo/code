@@ -12,8 +12,11 @@ active: home
         <span class="blogMetaDate"> {{ post.date | date: "%B %e, %Y" }} </span>
       <span>Posted In:
         {% for tag in post.categories %}
-          {{tag }}
-          {% if  post.categories.size !=  1 and post.categories.last != tag %}
+
+              <a href="{{site.url}}/category/{{ tag | slugify }}/">
+                {{ tag | replace:'-', ' ' }}
+</a>
+                {% if  post.categories.size !=  1 and post.categories.last != tag %}
             |
         {%endif %}
         {% endfor %}

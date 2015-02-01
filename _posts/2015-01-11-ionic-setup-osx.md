@@ -3,7 +3,7 @@ layout: post
 title: Ionic Setup on OSx
 published: true
 tags: [ionic]
-categories: [programming, mobile-development]
+categories: [programming, mobile-development, ionic]
 ---
 
 If you are like me and just starting to work with the Ionic Framework and don’t already have a machine setup to do Android, iOS, Node, etc development then many of the guides out there leave out a number of steps that you need to do in order to get everything working.

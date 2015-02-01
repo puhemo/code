@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: Npm, Bower, Git, and Bash Proxy Configurations
-tags: [setup, proxy, bower, git, npm]
+tags: [setup, proxy, bower, git, npm, ionic]
 categories: [programming]
 ---
 
