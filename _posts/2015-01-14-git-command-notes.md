@@ -7,13 +7,18 @@ categories: [git, source-control]
 redirect_from: "/git/"
 ---
 
-I am starting to finally learn the git command line instead of just using a UI so that I can actually understand what git is really doing.
+I am finally making myself learn the git command line instead of just using a UI so that I can actually understand what git is really doing.  Plus I have started playing a lot with the IonicBox and running a Ubuntu vagrant controlled VM for this blog and both of those are just linux shell command prompt only machines.
 
-## Git Notes
+Below are my notes on various commands so that I can stop having to Google each time I forgot one of them.
 
-I am finally forcing myself to learn the git commands instead of just poking around using the GitHub for Windows UI.  Below are my notes on the commands.
 
-To cache credentials use:  git config --global credential.helper cache
+## Caching Credentials
+
+#### To cache credentials for 1 hour.  The timeout is in seconds.
+
+	git config --global credential.helper 'cache --timeout 3600'
+
+
 ## Basic Commands
 
 ### Getting code to local machine
@@ -47,6 +52,11 @@ In Git terms, this is called cloning a repository and the command to use is git 
 ### Adding files to the repository
 
 	git add [file name]
+
+### Adding all files in a directory except the ones in the .gitignore file
+
+	git add .
+
 
 ### Ignoring files
 
