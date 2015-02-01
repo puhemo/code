@@ -2,7 +2,8 @@
 layout: default
 active: home
 ---
-{% for post in site.posts %}
+
+{% for post in paginator.posts %}
 
 <article>
   <section class="containerOuter blogHeader">
@@ -30,7 +31,7 @@ active: home
   <section class="containerOuter blogBodyContainer">
     <section class="containerInner blogBody">
         {% if site.disqus %}
-      {{ post.content }}
+      {{ post.content |truncatewords: 20 }}
 
         <p> <a href="{{ site.baseurl }}{{ post.url }}#disqus" class="read-more">Comments</a></p>
         {% else %}
@@ -45,3 +46,23 @@ active: home
   </section>
 </article>
 {% endfor %}
+
+<section class="containerOuter blogBodyContainer">
+    <section class="containerInner blogBody">
+        {% if paginator.total_pages > 1 %}
+            <div class="paging">
+                {% if paginator.next_page %}
+                    <div class="paging-prev">
+                        <a rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;Older Post</a>
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+
+        {% if paginator.previous_page %}
+            <div class="paging-next">
+                <a rel="prev" href="{{ paginator.previous_page_path | replace: 'index.html', '/' | prepend: site.baseurl | replace: '//', '/' }}">Newer Posts&raquo;</a>
+            </div>
+        {% endif %}
+    </section>
+</section>

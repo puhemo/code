@@ -636,7 +636,21 @@ input[type=text], input[type=password], textarea {
       text-indent: 0;
     }
 }
+.paging-prev a, .paging-next a,  {
+  background-color: $orange;
+  color: $white;
+  font-size: 100%;
+  display: inline-block;
+  padding: 0.4em 0.6em;
+  margin-bottom: 1.5em;
+  border: none;
+  /* to make iphones work */
+  -webkit-appearance: none;
+  border-radius: 0;
+}
 
+.paging-prev { float: left; }
+.paging-next { float: right; }
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "_highlights";
