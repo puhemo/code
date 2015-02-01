@@ -636,21 +636,64 @@ input[type=text], input[type=password], textarea {
       text-indent: 0;
     }
 }
-.paging-prev a, .paging-next a,  {
-  background-color: $orange;
-  color: $white;
-  font-size: 100%;
-  display: inline-block;
-  padding: 0.4em 0.6em;
-  margin-bottom: 1.5em;
-  border: none;
-  /* to make iphones work */
-  -webkit-appearance: none;
-  border-radius: 0;
-}
 
-.paging-prev { float: left; }
-.paging-next { float: right; }
+
+.pager {
+  padding-left: 0;
+  margin:  0;
+  list-style: none;
+  text-align: center;
+
+  ul, ol {
+    padding-left: 0!important;
+    margin: 0;
+  }
+
+  li {
+    display: inline;
+  }
+
+  li>a, li>span {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: $white;
+    border: 1px solid #dddddd;
+    border-radius: 0;
+  }
+
+  li>a:hover, li>a:focus {
+    text-decoration: none;
+    background-color: #e6e6e6;
+  }
+
+  .next>a, .next>span {
+    float: right;
+  }
+
+  .previous>a, .previous>span {
+    float: left;
+  }
+
+  .paging-prev { float: left; }
+  .paging-next { float: right; }
+
+  .disabled>a, .disabled>a:hover, .disabled>a:focus, .disabled>span {
+    color: #999999;
+    background-color: $white;
+    cursor: not-allowed;
+  }
+  &:before,&:after{
+    content: " ";
+    display: table;
+  }
+
+  &:after{
+      clear: both;
+    }
+
+  }
+
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "_highlights";

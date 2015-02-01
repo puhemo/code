@@ -30,10 +30,13 @@ active: home
 
   <section class="containerOuter blogBodyContainer">
     <section class="containerInner blogBody">
-        {% if site.disqus %}
-      {{ post.content |truncatewords: 20 }}
+        {% if site.disquscommentcount %}
+            {{ post.content |truncatewords: 20 }}
+            <p> <a href="{{ site.baseurl }}{{ post.url }}#disqus" class="read-more">Comments</a> [<a href="{{ post.url }}#disqus_thread" class="read-more"></a>]</p>
 
-        <p> <a href="{{ site.baseurl }}{{ post.url }}#disqus" class="read-more">Comments</a></p>
+        {% else if site.disqus  %}
+            {{ post.content |truncatewords: 20 }}
+            <p> <a href="{{ site.baseurl }}{{ post.url }}#disqus" class="read-more">Comments</a></p>
         {% else %}
       {{ post.content | truncatewords: 40}}
         <p><a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read more</a></p>
@@ -49,20 +52,24 @@ active: home
 
 <section class="containerOuter blogBodyContainer">
     <section class="containerInner blogBody">
-        {% if paginator.total_pages > 1 %}
-            <div class="paging">
+        <div class="pager">
+        <ul>
+            {% if paginator.total_pages > 1 %}
+
                 {% if paginator.next_page %}
-                    <div class="paging-prev">
-                        <a rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;Older Post</a>
-                    </div>
+                    <li class="first">
+                        <a rel="prev" class="paging-prev" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;Older Post</a>
+                    </li>
                 {% endif %}
-            </div>
+
         {% endif %}
 
         {% if paginator.previous_page %}
-            <div class="paging-next">
-                <a rel="prev" href="{{ paginator.previous_page_path | replace: 'index.html', '/' | prepend: site.baseurl | replace: '//', '/' }}">Newer Posts&raquo;</a>
-            </div>
+            <li class="last">
+                <a rel="next" class="paging-next" href="{{ paginator.previous_page_path | replace: 'index.html', '/' | prepend: site.baseurl | replace: '//', '/' }}">Newer Posts&raquo;</a>
+            </li>
         {% endif %}
+        </ul>
+        </div>
     </section>
 </section>
