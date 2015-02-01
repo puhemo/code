@@ -49,7 +49,7 @@ url: #http://digitaldrummerj.me
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
 
-paginate: 3
+paginate: 5
 paginate_path: "/page/:num"
 
 #
