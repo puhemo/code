@@ -57,7 +57,7 @@ Vagrant.configure(2) do |config|
        vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
        vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects", "1"]
        vb.memory = 2048
-       vb.cpus = 2	 
+       vb.cpus = 2
        vb.name = "IonicBox" # This is the name in the VirtualBox Manager UI
  end
 end
