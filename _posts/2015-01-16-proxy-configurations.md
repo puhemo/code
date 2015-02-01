@@ -4,7 +4,11 @@ layout: post
 title: Npm, Bower, Git, and Bash Proxy Configurations
 tags: [setup, proxy, bower, git, npm, ionic]
 categories: [programming, proxy, nodejs, npm, bash, bower]
+date: 2015-02-01
+excerpt: "How to set proxy configurations for various tools"
 ---
+
+**Updated 2015-Feb-01**:  Added running source command for Bash and Ruby Gems section
 
 When you are using npm, bower, and git when behind a proxy server you have to do a little bit of configuration.  Luckily it is super easy to do these configurations.  These instructions are for a windows machine.  All of the files below will need to be created in your user home directory c:\users\[Your User Name].
 
