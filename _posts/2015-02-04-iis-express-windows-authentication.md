@@ -10,11 +10,11 @@ So I brought up a new machine and tried to run my ASP.NET web site in IIS Expres
  
 **Error**
 
-	The requested page cannot be accessed because the related configuration data for the page is invalid.
+The requested page cannot be accessed because the related configuration data for the page is invalid.
 
 **Details:** 
 
-	This configuration section cannot be used at this path. This happens when the section is locked at a parent level. Locking is either by default (overrideModeDefault="Deny"), or set explicitly by a location tag with overrideMode="Deny" or the legacy allowOverride="false".
+This configuration section cannot be used at this path. This happens when the section is locked at a parent level. Locking is either by default (overrideModeDefault="Deny"), or set explicitly by a location tag with overrideMode="Deny" or the legacy allowOverride="false".
 
 
 ### Solution
