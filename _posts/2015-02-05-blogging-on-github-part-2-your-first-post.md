@@ -1,9 +1,8 @@
 ---
-layout: post
-title: "Blogging on Github Part 2: Your First Post"
-published: true  
-categories:[github,blogging,jekyll]
-tags: [github,blogging,jekyll,series]
+published: true
+layout: post 
+title: Blogging on Github Part 2 - Your First Post
+categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
 ---
 
 ### Overview
