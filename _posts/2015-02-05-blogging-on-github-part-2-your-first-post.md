@@ -1,4 +1,4 @@
- ---
+---
 layout: post
 title: Blogging on Github Part 2: Your First Post published: false  
 categories:[github,blogging,jekyll]
