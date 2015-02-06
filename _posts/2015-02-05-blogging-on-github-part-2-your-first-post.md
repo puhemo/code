@@ -1,9 +1,11 @@
 ---
 layout: post
-title: Blogging on Github Part 2: Your First Post published: true  
+title: "Blogging on Github Part 2: Your First Post"
+published: true  
 categories:[github,blogging,jekyll]
 tags: [github,blogging,jekyll,series]
 ---
+
 ### Overview
 Welcome to part 2 of the series on blogging on  github.  In this post we will go through making your first blog post.
 
