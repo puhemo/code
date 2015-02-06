@@ -55,6 +55,14 @@ The code camp date hasn't been announced yet, but I will most likely be submitti
 
 <p>&nbsp;</p>
 
+<h3>Silicon Valley Code Camp <span>- Silicon Valley, Ca (Ocotber 3rd and 4th)</span></h3>
+
+The code camp date hasn't been announced yet, but I will most likely be submitting these sessions.
+
+- [Ionic Framework](#ionic)
+
+<p>&nbsp;</p>
+
 ## Past Speaking Engagements
 
 <p>&nbsp;</p>
