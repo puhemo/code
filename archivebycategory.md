@@ -5,11 +5,7 @@ permalink: /categoryview/
 active: archivebycategory
 sitemap: false
 ---
-<article>
-  <section class="containerOuter pageHeader">
-    <section class="containerInnerNarrow">
-
-
+<div>
 {% assign tags = site.categories | sort %}
 {% for tag in tags %}
  <span class="site-tag">
@@ -19,8 +15,7 @@ sitemap: false
 </span>
 {% endfor %}
 </section>
-</section>
-
+</div>
 
 <div id="index">
 
@@ -29,10 +24,10 @@ sitemap: false
 {% assign sorted_posts = site.posts | sort: 'title' %}
 {% for post in sorted_posts %}
 {%if post.categories contains tag[0]%}
-<article>
-  <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }} - <span>{{ post.date |  date: "%B %e" }}</span></a></h2>
+
+  <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }} <p class="date">{{ post.date |  date: "%B %e, %Y" }}</p></a></h2>
    <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-</article>
+
 {%endif%}
 {% endfor %}
 

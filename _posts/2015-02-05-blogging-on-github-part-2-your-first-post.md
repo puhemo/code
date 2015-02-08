@@ -5,13 +5,13 @@ title: Blogging on Github Part 2 - Your First Post
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
 date: 2015-02-05 20:45:35
 ---
-
-### Overview
 Welcome to part 2 of the series on blogging on  github.  In this post we will go through making your first blog post.
 
 [View Part 1 - Getting Started](http://digitaldrummerj.me/blogging-on-github-part-1/)
 
 **Length:** 10 minutes 
+
+### Overview
 
 We will go through all of the steps to create a new post, add metadata such as title/categories/tags/date, and then make it live on the site.  
 

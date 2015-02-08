@@ -26,16 +26,16 @@ sitemap: false
 <h2>{{ post.date | date: '%B %Y' }}</h2><ul>
 {% endif %}
 
-<article>
+
 {% if post.link %}
   <h2 class="link-post">
     <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
 {% else %}
-  <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }} - <span>{{ post.date |  date: "%B %e" }}</span></a></h2>
+  <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}<p class="date">{{ post.date |  date: "%B %e, %Y" }}</p></a></h2>
   <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
 {% endif %}
-</article>
+
 
 {% endfor %}
 </div>

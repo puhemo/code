@@ -16,7 +16,7 @@ active: home
 			<div class="tags">
 				Tagged:
 				{% for category in post.categories %}
-				<span><i class="fa fa-tag"></i>{{ category }}</span>
+				<span><a href="{{site.url}}/category/{{ category  }}/"><i class="fa fa-tag"></i> {{ category | replace:'-', ' ' }} </a></span>
 				{% endfor %}
 			</div>
 		{% endif %}

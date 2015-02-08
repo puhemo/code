@@ -68,6 +68,9 @@ sass:
   sass_dir: _sass
   style: :expanded # You might prefer to minify using :compressed
 
+##comment this if you want full width posts with no sidebar
+#sidebar: off
+
 # Use the following plug-ins
 gems:
   - jemoji # Emoji please!

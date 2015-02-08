@@ -1,6 +1,10 @@
 <header>
-  <h1 class="site-title"><a href="/">{{ site.name }}</a></h1>
-  <nav class="main-nav">
+    <div id="topbar">
+
+    <h1 class="site-title"> <img class="site-avatar" src="{{ site.avatar }}"/><a href="{{site.baseurl }}">{{ site.name }}</a><p class="blog-description">{{ site.description}}</p></h1>
+    </div>
+
+      <nav class="main-nav">
     <a href="#" class="opener show-on-mobiles">...</a>
     <div class="clear-opener show-on-mobiles"></div>
     <div class="grid">
@@ -36,6 +40,4 @@
             </div>
         </div>
     </div>
-    </div>
-
 </header>
