@@ -8,6 +8,8 @@ date: 2015-01-30 20:45:35
 
 Welcome to the first lesson of a multi part series on blogging using Github.  Github has an awesome free option for hosting a blog for you and you can get a blog up and running in 10 minutes or less.  This series will cover everything that you to know to host, manage and customized a Github blog.
 
+[View Part 2 Creating your first blog post](http://digitaldrummerj.me/blogging-on-github-part-2-your-first-post/)
+
 **Lesson Length:** 10 minutes
 
 ### Section 1: Introduction
@@ -54,11 +56,11 @@ You can edit the _config.yml directly in Github.  Click on the file and then cli
 
 Now you are ready to view your new blog.  Open a browser and navigate to http://[username].github.io, replacing [username] with your actual username.
 
-In the next lesson, we will cover the how to create new blog post.
+See you In the next lesson, where we create  your first  blog post.
 
 ### Section 6:  Future lessons:
 
-* Part 2 Creating your first blog post
+* [Part 2 Creating your first blog post](http://digitaldrummerj.me/blogging-on-github-part-2-your-first-post/)
 * Part 3 Adding the ability for readers to comment on your post
 * Part 4 How to make change locally and push them to Github
 * Part 5 Creating additional pages
