@@ -12,19 +12,32 @@ Welcome to part 3 of our series on blogging with github.  In this lesson you wil
 
 You may be thinking that commenting isn't really that important but it is a key feature for you to be able to interact with your readers.  Users want to have conversations about your blog post and it is a good way for you to learn from them as well.  
 
-Out of the box Jekyll does not have the a commenting engine but luckily it is really easy to add one.  The one we are going to use is Disqus and it is free. 
+Out of the box Jekyll does not have the a commenting engine but luckily it is really easy to add one.  The one we are going to use is Disqus.  It is full featured and  it is free. 
 
 ### Section 1:  How to add comments
 
-1. Open another browser window and navigate to [https://disqus.com](https://disqus.com).
-2. 
+1. Open another browser window and navigate to [https://disqus.com/websites/](https://disqus.com/websites/)
+2. Sign up for a free account.
 
+### Section 2: Configuring Disque
 
-### Section 2: Signing up for Disque
 
 ### Section 3: Configuring Your Blog
 
+1. Open a web browser and navigate to your [username].github.io repository. 
+2. Click on the _config.yml file to navigate to it 
+3. Click on the ![github_edit_button.png](github_edit_button.png) icon to edit the file
+4. Look for the text disqus: and put in your disqus name like below. 
+
+	disqus: digitaldrummerj
+	
+3. Scroll to the bottom of the screen and click on the commit button.
+
 ###  Section 4: Testing it out 
+
+Open up a web browser and navigate to your blog and click on the title for the blog post that we published in our last lessoson.
+
+Scoll to the bottom of the post and you should see a section to add a comment.
 
 ### Section 5:  Future lessons:
 
