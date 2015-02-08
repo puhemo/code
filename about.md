@@ -3,6 +3,10 @@ layout: page
 title: About Me
 permalink: /about/
 active: about
+sitemap:
+    priority: 1.0
+    changefreq: weekly
+    lastmod: 2015-02-01T16:31:30+05:30
 ---
 
 My name is Justin James.  I'm a programmer, agile enthusiast, and speaker. I work in Chandler, Arizona for Intel but **this blog, its content, and opinions are my own.** I blog about technology, agile practices, code, and the web.  I'm excited about web development, community, sharing knowledge, and agile practices.

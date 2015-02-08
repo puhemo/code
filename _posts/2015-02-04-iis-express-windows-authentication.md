@@ -3,7 +3,8 @@ layout: post
 title: Turning on Windows Authentication in IIS Express
 categories: ['iis','asp.net']
 tags: ['authentication', 'iis', 'asp.net', 'iis express']
-published: true 
+published: true
+date: 2015-02-04 20:45:35
 ---
 
 So I brought up a new machine and tried to run my ASP.NET web site in IIS Express that uses Windows Authentication and was greeted with the following error: 

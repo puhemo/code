@@ -4,6 +4,10 @@ title: Speaking
 permalink: /speaking/
 active: speaking
 redirect_from: "/presentations/"
+sitemap:
+    priority: 1.0
+    changefreq: weekly
+    lastmod: 2015-02-05T16:31:30+05:30
 ---
 
 I started really getting into speaking publicly in early 2014 after speaking at the [Southeast Valley .NET User Group](http://www.meetup.com/sevdnug/) in Chandler, Arizona.  I had suggested a couple of topics for future meetings that I wanted to learn about to the user group organizer, [Rob Richardson](http://www.robrich.org) and like a bullet he immediately shot back, "when would you like to present these topics?".  I wasn't quite prepared for that response but in retrospect if was the best response he could have given to me.  I had been an attendee of this user group for awhile but hadn't done a presentation there in years.  So after thinking about it for a few minutes I thought I got nothing to lose and asked for a few months to learn the topics.
@@ -142,7 +146,7 @@ Demos: [https://github.com/digitaldrummerj/IonicFrameworkTalk](https://github.co
 - Ionic Twitter: [http://www.twitter.com/ionicframework](http://www.twitter.com/ionicframework)
 - Ionic Creator: [https://creator.ionic.io/](https://creator.ionic.io/)
 
-### <a name="nuget"></a>Nuget is easier than you think and you should be using it as both a consumer and creator of packages</a>
+### <a name="nuget"></a>Nuget is easier than you think and you should be using it as both a consumer and creator of packages
 
 Nuget is a package manager for Visual Studio that allows you to easily share assets (dll, javascript, c#, etc files) and use them in your project.  Most Visual Studio developers have consumer nuget packages but few have created and shared nuget packages.  It is amazingly easy to create and publish a nuget package.  In less than 60 minutes I will show you how move from a consumer to a creator.  You will learn how to package up dll's, source code that needs to be inserted in a project, add/change configurations, publish a package and host your own nuget feed.
 

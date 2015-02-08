@@ -5,6 +5,7 @@ title: Git Command Notes
 tags: [git]
 categories: ['git', 'source-control', 'github']
 redirect_from: "/git/"
+date: 2015-01-14 20:45:35
 ---
 
 I am finally making myself learn the git command line instead of just using a UI so that I can actually understand what git is really doing.  Plus I have started playing a lot with the IonicBox and running a Ubuntu vagrant controlled VM for this blog and both of those are just linux shell command prompt only machines.

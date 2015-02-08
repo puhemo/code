@@ -4,7 +4,7 @@ layout: post
 title: Npm, Bower, Git, and Bash Proxy Configurations
 tags: [setup, proxy, bower, git, npm, ionic]
 categories: [programming, proxy, nodejs, npm, bash, bower]
-date: 2015-02-01
+date: 2015-02-01 20:45:35
 excerpt: "How to set proxy configurations for various tools"
 ---
 

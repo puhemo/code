@@ -1,38 +1,67 @@
 ---
 layout: default
 ---
+<div id="home" class="grid post">
+<div class="unit whole">
 <article>
-  <section class="containerOuter blogHeader">
-    <section class="containerInnerNarrow">
-      <h2 class="blogTitle">{{ page.title }}
-        <div class="blogMetaInfo">
-          <span class="blogMetaDate"> {{ page.date | date: "%B %e, %Y" }} </span>
-      <span>Posted In:
-        {% for tag in page.categories %}
-        <a href="{{site.url}}/category/{{ tag  }}/">
-          {{ tag | replace:'-', ' ' }}
-        </a>
+	<header>
+		<h1>{{ page.title }}</h1>
+		<p class="meta">
+			<time class="timeago postlist-meta" datetime="{{ page.date | date: "%Y-%m-%d" }}"><i class="fa fa-calendar"></i>{{ page.date | date: "%B %-d, %Y" }}</time>
+			<a class="sharer facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;"><i class="fa fa-facebook"></i></a>
+			{% if site.twitter %}
+				<a class="sharer twitter" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href+'&via={{ site.twitter }}','_blank','height=300,width=600');return false;"><i class="fa fa-twitter"></i></a>
+			{% else %}
+				<a class="sharer twitter" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href,'_blank','height=300,width=600');return false;"><i class="fa fa-twitter"></i></a>
+			{% endif %}
+		</p>
+	</header>
+	<section>
+		{% if page.tags and page.tags.size > 0 %}
+			<div class="tags">
+				Tagged:
+				{% for tag in page.tags %}
+				<span><i class="fa fa-tag"></i>{{ tag }}</span>
+				{% endfor %}
+			</div>
+		{% endif %}
+		{{ content }}
+	</section>
+	{% if site.disqus %}
+	<footer>
+		<p><a href="#" id="showComments">Comments</a></p>
+		<div id="disqus_thread"></div>
+	</footer>
+	<script>
+		(function(){
+			var hidden = true;
+			var disqus_shortname = '';
+			var cmtBtn = document.getElementById("showComments");
+			var dt = document.getElementById("disqus_thread");
 
-
-          {% if  page.categories.size !=  1 and page.categories.last != tag %}
-            |
-        {%endif %}
-        {% endfor %}
-      </span>
-        </div>
-      </h2>
-    </section>
-  </section>
-
-  <section class="containerOuter blogBodyContainer">
-    <section class="containerInner blogBody">
-      {{ content }}
-    </section>
-  </section>
-
-  <section class="containerOuter">
-    <section class="containerInner">
-      {% include disqus.html disqus_identifier=page.disqus_identifier %}
-    </section>
-  </section>
+			cmtBtn.addEventListener("click", function(e){
+				e.preventDefault();
+				if(disqus_shortname === ''){
+					disqus_shortname = '{{ site.disqus }}';
+					dt.innerHTML = 'Loading comments...';
+					(function() {
+			            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			        })();
+				}
+				if(hidden){
+					dt.setAttribute('style','display:block');
+					this.innerHTML = 'Hide Comments';
+				}else{
+					dt.setAttribute('style','display:none');
+					this.innerHTML = 'Comments';
+				}
+				hidden = !hidden;
+			});
+		})();
+	</script>
+	{% endif %}
 </article>
+</div>
+</div>

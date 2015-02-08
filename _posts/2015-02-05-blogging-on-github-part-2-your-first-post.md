@@ -3,6 +3,7 @@ published: true
 layout: post 
 title: Blogging on Github Part 2 - Your First Post
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
+date: 2015-02-05 20:45:35
 ---
 
 ### Overview
@@ -42,7 +43,8 @@ Below are common metadata you will want to fill out.
 #### Sample Front Matter:
 	---
 	layout: post
-	title: Blogging on Github Part 2: Your First Post 	published: false  
+	title: Blogging on Github Part 2: Your First Post
+	published: false
 	date: 2015-02-01
 	categories:[github,blogging,jekyll]
 	tags: [github,blogging,jekyll,series]
@@ -67,10 +69,15 @@ A #  starting  a line indicates to makebitba header and the number # indicates  
 **examples**
 
 #  h1
+
 ## h2
+
 ### h3
+
 #### h4
+
 ##### h5
+
 ###### h6
 
 
@@ -98,9 +105,9 @@ For numbered list start with a 1 or the number you want to start with.
 
 surround  the text you to build with 2 ** and then put 2 more after the text  to end the bold.
 
-	** sample bold ** 
+	**sample bold**
 
-**sample bold **
+**sample bold**
 
 ##### Links
 
@@ -119,10 +126,10 @@ There are 2 ways:
 
 1. use the highlighter markup
 	
-	{% highlight c# %}
-	// some c# code....
-	var a = "bad variable name"
-	{% endhighlight %}
+{% highlight c# %}
+// some c# code....
+var a = "bad variable name"
+{% endhighlight %}
 
 #####  Further Reading on Markdown
 

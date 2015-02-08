@@ -1,75 +1,35 @@
 ---
-layout: default
+layout: home
+title: Home
+sitemap:
+priority: 1.0
+changefreq: weekly
+lastmod: 2014-07-07T16:57:30+05:30
 active: home
 ---
-
 {% for post in paginator.posts %}
-
-<article>
-  <section class="containerOuter blogHeader">
-    <section class="containerInnerNarrow">
-      <h2 class="blogTitle"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        <div class="blogMetaInfo">
-        <span class="blogMetaDate"> {{ post.date | date: "%B %e, %Y" }} </span>
-      <span>Posted In:
-        {% for tag in post.categories %}
-
-              <a href="{{site.url}}/category/{{ tag | slugify }}/">
-                {{ tag | replace:'-', ' ' }}
-</a>
-                {% if  post.categories.size !=  1 and post.categories.last != tag %}
-            |
-        {%endif %}
-        {% endfor %}
-      </span>
-      </div>
-      </h2>
-
-    </section>
-  </section>
-
-  <section class="containerOuter blogBodyContainer">
-    <section class="containerInner blogBody">
-        {% if site.disquscommentcount %}
-            {{ post.content  }}
-            <p> <a href="{{ site.baseurl }}{{ post.url }}#disqus" class="read-more">Comments</a> [<a href="{{ post.url }}#disqus_thread" class="read-more"></a>]</p>
-
-        {% else if site.disqus  %}
-            {{ post.content  }}
-            <p> <a href="{{ site.baseurl }}{{ post.url }}#disqus" class="read-more">Comments</a></p>
-        {% else %}
-      {{ post.content | truncatewords: 40}}
-        <p><a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read more</a></p>
-        {%endif %}
-
-    </section>
-
-
-
-  </section>
-</article>
+<div class="unit whole single-post-excerpt">
+	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+	<div class="meta-info">
+		<span class="meta"><time class="timeago postlist-meta" datetime="{{ post.date | date: "%Y-%m-%d" }}"><i class="fa fa-calendar"></i>{{ post.date | date: "%B %-d, %Y" }}</time></span>
+		{% if post.categories and post.categories.size > 0 %}
+			<div class="tags">
+				Tagged:
+				{% for category in post.categories %}
+				<span><i class="fa fa-tag"></i>{{ category }}</span>
+				{% endfor %}
+			</div>
+		{% endif %}
+	</div>
+	<p class="description">{{ post.content }}</p>
+</div>
 {% endfor %}
-
-<section class="containerOuter blogBodyContainer">
-    <section class="containerInner blogBody">
-        <div class="pager">
-        <ul>
-            {% if paginator.total_pages > 1 %}
-
-                {% if paginator.next_page %}
-                    <li class="first">
-                        <a rel="prev" class="paging-prev" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;Older Post</a>
-                    </li>
-                {% endif %}
-
-        {% endif %}
-
-        {% if paginator.previous_page %}
-            <li class="last">
-                <a rel="next" class="paging-next" href="{{ paginator.previous_page_path | replace: 'index.html', '/' | prepend: site.baseurl | replace: '//', '/' }}">Newer Posts&raquo;</a>
-            </li>
-        {% endif %}
-        </ul>
-        </div>
-    </section>
-</section>
+<div class="unit whole paginator">
+	{% if paginator.previous_page %}
+	<a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+	{% endif %}
+	<span>Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+	{% if paginator.next_page %}
+	<a href="{{ paginator.next_page_path }}" class="next">Next</a>
+	{% endif %}
+</div>

@@ -1,1 +1,8 @@
-Sitemap: http://digitaldrummerj.me/sitemap.xml
+---
+---
+# www.robotstxt.org/
+
+# Allow crawling of all content
+User-agent: *
+Disallow:
+Sitemap: {{ site.base_url }}/sitemap.xml

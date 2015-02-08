@@ -3,6 +3,7 @@ published: true
 layout: post 
 title: Blogging On Github - Part 1 Getting Started
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
+date: 2015-01-30 20:45:35
 ---
 
 Welcome to the first lesson of a multi part series on blogging using Github.  Github has an awesome free option for hosting a blog for you and you can get a blog up and running in 10 minutes or less.  This series will cover everything that you to know to host, manage and customized a Github blog.
