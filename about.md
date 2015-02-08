@@ -11,7 +11,7 @@ sitemap:
 
 My name is Justin James.  I'm a programmer, agile enthusiast, and speaker. I work in Chandler, Arizona for Intel but **this blog, its content, and opinions are my own.** I blog about technology, agile practices, code, and the web.  I'm excited about web development, community, sharing knowledge, and agile practices.
 
-{% if site.footer-links.rss or site.footer-links.feedburner %}I would love it if you would <a  {% if site.footer-links.feedburner %} href="http://feeds.feedburner.com/digitaldrummerj/phdz" {% else if site.footer-links.rss %} href="{{ site.baseurl }}/feed.xml" {% endif %}>{% include svg-icons/rss.html %} subscribe to my blog's RSS Feed.</a> {% endif %} {% if site.footer-links.twitter %}   I'm also on<a href="http://twitter.com/{{ site.footer-links.twitter }}">{% include svg-icons/twitter.html %} Twitter </a>{% endif %}
+{% if site.footer-links.rss or site.footer-links.feedburner %}I would love it if you would <a  {% if site.footer-links.feedburner %} href="http://feeds.feedburner.com/digitaldrummerj/phdz" {% else if site.footer-links.rss %} href="{{ site.url }}/feed.xml" {% endif %}>{% include svg-icons/rss.html %} subscribe to my blog's RSS Feed.</a> {% endif %} {% if site.footer-links.twitter %}   I'm also on<a href="http://twitter.com/{{ site.footer-links.twitter }}">{% include svg-icons/twitter.html %} Twitter </a>{% endif %}
 
 
 ## Speaking

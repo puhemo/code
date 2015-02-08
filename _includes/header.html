@@ -1,7 +1,7 @@
 <header>
     <div id="topbar">
 
-    <h1 class="site-title"> <img class="site-avatar" src="{{ site.avatar }}"/><a href="{{site.baseurl }}">{{ site.name }}</a><p class="blog-description">{{ site.description}}</p></h1>
+    <h1 class="site-title"> <img class="site-avatar" src="{{ site.avatar }}"/><a href="{{site.url }}">{{ site.name }}</a><p class="blog-description">{{ site.description}}</p></h1>
     </div>
 
       <nav class="main-nav">
@@ -9,15 +9,15 @@
     <div class="clear-opener show-on-mobiles"></div>
     <div class="grid">
       <ul>
-          <li><a href="{{ site.baseurl }}/" {% if page.active == "home" %} class="current" {% endif %}>Blog</a></li>
-          <li><a href="{{ site.baseurl }}/about" {% if page.active == "about" %} class="current" {% endif %}>About</a></li>
-          <li><a href="{{ site.baseurl}}/speaking" {% if page.active == "speaking" %} class="current" {% endif %}>Speaking</a></li>
+          <li><a href="{{ site.url }}/" {% if page.active == "home" %} class="current" {% endif %}>Blog</a></li>
+          <li><a href="{{ site.url }}/about" {% if page.active == "about" %} class="current" {% endif %}>About</a></li>
+          <li><a href="{{ site.url}}/speaking" {% if page.active == "speaking" %} class="current" {% endif %}>Speaking</a></li>
           <li>
               <a  {% if page.active == "feed" %} class="current" {% endif %}
               {% if site.footer-links.feedburner %}
               href="http://feeds.feedburner.com/digitaldrummerj/phdz"
               {% else if site.footer-links.rss %}
-              href="{{ site.baseurl }}/feed.xml"
+              href="{{ site.url }}/feed.xml"
               {% endif %}
               >Feed</a>
           </li>
@@ -35,8 +35,8 @@
             </div>
             <div id="archives">
                 browse by <a title="The complete archive of {{ site.name }}'s Blog by category"
-                             href="{{ site.baseurl}}/categoryview">category</a> or <a
-                    title="The complete archive of {{ site.name }}'s Blog by month" href="{{ site.baseurl}}/monthview">date</a>
+                             href="{{ site.url}}/categoryview">category</a> or <a
+                    title="The complete archive of {{ site.name }}'s Blog by month" href="{{ site.url}}/monthview">date</a>
             </div>
         </div>
     </div>
