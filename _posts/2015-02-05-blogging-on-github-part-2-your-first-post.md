@@ -172,6 +172,10 @@ Github will take care of the conversion from markdown to an html page.  This sho
 
 If it doesn't show up then check your email that you registered on github with to see if there was a jekyll compile error email.  
 
+At   this point your first blog post is published.  
+
+See you in the next lesson, where we will discuss how to add the ability to comment on blog post.  
+ 
 ### Section 6:  Future lessons
 
 * [Part 1 Getting Started](http://digitaldrummerj.me/blogging-on-github-part-1/)
