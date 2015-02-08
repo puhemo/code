@@ -25,9 +25,14 @@ The filename is in the format of year-month-day-title-separated-by-dashes.md.
 	
 Go ahead and create your file now. 
 
+1. To create a file open a web browser and navigate to your [username.github.io repository. 
+2. Go into the _post directory and click the + icon to add a new file.
+3. Name the file yyyy-mm-dd-my-first-post.md where yyyy = 4digit year,  mm = 2 digit month, and dd = 2 digit day of montmonth.
+4. Head to the next section and fill out the metadata about the post (ie: title, date, is published, categories, etc)
+
 ### Section 2: Creating metadata 
 
-Now we need to define some information about our blog post.  Since Jekyll doesn't have any kind of database behind it, all of the information such as title, is published,  categories, publish date, etc are stored at the top of the file in what is called Front Matter.  
+Now we need to define some information about our blog post.  All of the information such as title, is published,  categories, publish date, etc are stored at the top of the file in what is called Front Matter.  
 
 To define the front matter section you have a line with 3 dashes in it and then repeat this same line to signal the end of the front matter section. 
 
@@ -43,19 +48,21 @@ Below are common metadata you will want to fill out.
 #### Sample Front Matter:
 	---
 	layout: post
-	title: Blogging on Github Part 2: Your First Post
+	title: Your First Post
 	published: false
 	date: 2015-02-01
-	categories:[github,blogging,jekyll]
-	tags: [github,blogging,jekyll,series]
+	categories:[blogging]
+	tags: [blogging]
 	---
+	
+	Now on to creating actual content in your post.
 	
 ### Section 3:  Creating content 
 
-Now on to creating the content of the post.  
-
-The content of the post will be written in markdown and be directly below the front matter section .
-
+The content of the post will be written in markdown and will be directly below the front matter section .
+ 
+ Below are common markdown tags that you will want to use.  headers, lists, bold, bullets, links and code highlighting.
+ 
 **Common Markdown Tags**
 
 #####Headers  
@@ -131,15 +138,24 @@ There are 2 ways:
 var a = "bad variable name"
 {% endhighlight %}
 
+#####  Highlighting text without the code highlighting 
+
+Start the line with a tab and it will automatically do it for you.  
+
+	you will get text like this if you start the line with a tab.
+	
 #####  Further Reading on Markdown
 
 Github documentation on their markdown:  [https://help.github.com/articles/github-flavored-markdown/](https://help.github.com/articles/github-flavored-markdown/).
 
 ### Section 4:  Saving as draft
 
-Saving as a draft in super simple.  You just need to set the front matter published tag equal to false.
+most of the time you are not going to write and publish the blog post in one sitting but you need to save your work without it showing up in the website.  This is called saving a draft and it is super simple to do.  By setting the front matter published tag to false it will tell jekyll to not publish it. 
 
+	---
+	.. other front matter tags 
 	published: false
+	---
 	
 You can also create a drafts folder and save the file in the but if you do that then you will need to move the file to the _post folder when you are ready to publish.
 
@@ -147,7 +163,10 @@ You can also create a drafts folder and save the file in the but if you do that 
 
 Publishing a post is as simple as changing the front matter published to true and committing the change to the github repository.  
 
+	---
+	.. other front matter tags 
 	published: true
+	---
 
 Github will take care of the conversion from markdown to an html page.  This should happen automatically within a minute and show up on the blog home page at the top.  
 
