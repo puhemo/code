@@ -86,6 +86,8 @@ To add it to the menu:
 6. The change are done, we just need to commit them to the repository by scrolling to the bottom of the page and clicking on the commit button.  
 7. Now navigate to your blog and the page link should show in the main menu.  Click  on the link and make sure it takes you to the page. 
 
+In the next lesson we will build on this one by adding in a page to show the blog post by category.   
+
 ### Section 6:  Future lessons
 
 *  [Part 1 Getting Started](http://digitaldrummerj.me/blogging-on-github-part-1/)
