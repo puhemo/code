@@ -62,9 +62,9 @@ Unfortunately, out of the box Jekyll does not have this  ability.   Luckily, it 
 
 	disqus: digitaldrummerj
 	
-3. Scroll to the bottom of the screen and click on the commit button.  You should put in a comment as well so that you know what changed with the file.
+5. Scroll to the bottom of the screen and click on the commit button.  You should put in a comment as well so that you know what changed with the file.
 
-![Github_Save_Changes.png]({{site.url}}/images/Github_save_Changes.png)
+![Github_Save_Changes.png]({{site.url}}/images/Github_Save_Changes.png)
 
 
 ###  Section 3: Testing it out
