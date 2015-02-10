@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94e40c09-c659-4ae2-a6a3-b12e0510b423" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2015-01-30-blogging-on-github-part-1.md" afterPath="$PROJECT_DIR$/_posts/2015-01-30-blogging-on-github-part-1.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2015-02-05-blogging-on-github-part-2-your-first-post.md" afterPath="$PROJECT_DIR$/_posts/2015-02-05-blogging-on-github-part-2-your-first-post.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2015-02-07-blogging-on-github-part-3-adding-comments.md" afterPath="$PROJECT_DIR$/_posts/2015-02-07-blogging-on-github-part-3-adding-comments.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/_markdown.scss" afterPath="$PROJECT_DIR$/_sass/_markdown.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/header.html" afterPath="$PROJECT_DIR$/_includes/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.scss" afterPath="$PROJECT_DIR$/css/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\projects\digitaldrummerj.github.io\_posts\2015-02-11-blogging-on-github-part-4-creating-additional-pages.md" afterPath="$PROJECT_DIR$/_drafts/2015-02-11-blogging-on-github-part-4-creating-additional-pages.md" />
     </list>
     <ignored path="digitaldrummerj.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,10 +46,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2015-02-07-blogging-on-github-part-3-adding-comments.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2015-02-07-blogging-on-github-part-3-adding-comments.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2015-02-07-blogging-on-github-part-3-adding-comments.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11969532" vertical-offset="0" max-vertical-offset="2442">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2442">
               <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
               <folding />
             </state>
@@ -99,6 +91,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-7.053571" vertical-offset="573" max-vertical-offset="15422">
               <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3492927" vertical-offset="713" max-vertical-offset="1936">
+              <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -150,7 +152,6 @@
         <option value="$PROJECT_DIR$/_posts/2014-3-3-Hello-World.md" />
         <option value="$PROJECT_DIR$/_includes/svg-icons.html" />
         <option value="$PROJECT_DIR$/_sass/_markdown.scss" />
-        <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_posts/2015-02-11-blogging-on-github-part-4-creating-additional-pages.md" />
         <option value="$PROJECT_DIR$/_posts/2015-01-30-blogging-on-github-part-1.md" />
         <option value="$PROJECT_DIR$/_posts/2015-02-05-blogging-on-github-part-2-your-first-post.md" />
@@ -158,6 +159,7 @@
         <option value="$PROJECT_DIR$/_includes/header.html" />
         <option value="$PROJECT_DIR$/css/style.scss" />
         <option value="$PROJECT_DIR$/_posts/2015-02-07-blogging-on-github-part-3-adding-comments.md" />
+        <option value="$PROJECT_DIR$/_config.yml" />
       </list>
     </option>
   </component>
@@ -700,14 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25353646" vertical-offset="713" max-vertical-offset="1936">
-          <caret line="43" column="69" selection-start-line="43" selection-start-column="69" selection-end-line="44" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_sass/_markdown.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19441211" vertical-offset="1549" max-vertical-offset="3080">
@@ -774,8 +768,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2015-02-07-blogging-on-github-part-3-adding-comments.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11969532" vertical-offset="0" max-vertical-offset="2442">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2442">
           <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3492927" vertical-offset="713" max-vertical-offset="1936">
+          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
           <folding />
         </state>
       </provider>

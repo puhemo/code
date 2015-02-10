@@ -45,7 +45,7 @@ google_analytics: UA-58457343-1
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add this to the url as well "/repository-name"
-url: #http://digitaldrummerj.me
+url: http://digitaldrummerj.me
 
 paginate: 5
 paginate_path: "/page/:num"
