@@ -21,7 +21,13 @@ active: home
 			</div>
 		{% endif %}
 	</div>
+
 	<p class="description">{{ post.content }}</p>
+    {% if site.disquscommentcount %}
+    <p> <a href="{{ site.url }}{{ post.url }}#disqus" class="read-more">Add/View Comments</a> [<a href="{{ post.url }}#disqus_thread" class="read-more"></a>]</p>
+    {% else if site.disqus  %}
+    <p> <a href="{{ site.url }}{{ post.url }}#disqus" class="read-more">Add/View Comments</a></p>
+    {% endif %}
 </div>
 {% endfor %}
 <div class="unit whole paginator">
