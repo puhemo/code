@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post 
 title: Blogging On Github - Part 4 Adding Additional Pages 
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
@@ -8,13 +8,13 @@ date: 2015-02-11
 
 Welcome to part 4 of the series on blogging on  github.  In his lesson we will go through how to add additional pages such as the speaking page on this blog.
  
- **Lesson Length**: 10 minutes 
+**Lesson Length**: 10 minutes
  
- **Previous Articles
+**Other Lessons in the Series**
 
-* [View Part 1 Getting Started](http://digitaldrummerj.me/blogging-on-github-part-1/)
-* [View Part 2 Creating your first blog post](http://digitaldrummerj.me/blogging-on-github-part-2-your-first-post/)
-* View Part 3 Adding comments to post 
+* [View Part 1 Getting Started]({{site.url}}/blogging-on-github-part-1/)
+* [View Part 2 Creating your first blog post]({{site.url}}/blogging-on-github-part-2-your-first-post/)
+* [View Part 3 Adding the ability for readers to comment on your post]({{site.url}}/blogging-on-github-part-3-adding-comments/)
 
 ### Overview 
 
@@ -90,13 +90,13 @@ In the next lesson we will build on this one by adding in a page to show the blo
 
 ### Section 6:  Future lessons
 
-*  [Part 1 Getting Started](http://digitaldrummerj.me/blogging-on-github-part-1/)
-* [Part 2 Creating your first blog post](http://digitaldrummerj.me/blogging-on-github-part-2-your-first-post/)
-* Part 3 Adding the ability for readers to comment on your post
-* Part 4 How to make change locally and push them to Github
-* Part 5 Creating additional pages
-* Part 6 Adding a page that list post by category
-* Part 7 Adding a page that list post by month
-* Part 8 Customizing the theme
-* Part 9 Adding a custom Google search
-* Part 10 Using your own domain name
+* [Part 1 Getting Started]({{site.url}}/blogging-on-github-part-1/)
+* [Part 2 Creating your first blog post]({{site.url}}/blogging-on-github-part-2-your-first-post/)
+* [Part 3 Adding the ability for readers to comment on your post]({{site.url}}/blogging-on-github-part-3-adding-comments/)
+* Part 4 Creating additional pages (this lesson)
+* Part 5 Adding a page that list post by category
+* Part 6 Adding a page that list post by month
+* Part 7 Customizing the theme
+* Part 8 Adding a custom Google search
+* Part 9 Using your own domain name
+* Part 10 How to make change locally and push them to Github

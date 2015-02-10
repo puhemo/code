@@ -37,6 +37,11 @@ a {
     font-size: 3em;
     margin: 0;
     padding: .1em 0;
+    font-weight: normal;
+
+    a {
+      vertical-align: super;
+    }
 
     .site-avatar {
 
@@ -336,7 +341,7 @@ article {
       text-align: justify;
     }
     img {
-      display: block;
+      //display: block;
       margin: 0 auto;
     }
   }

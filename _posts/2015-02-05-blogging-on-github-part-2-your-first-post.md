@@ -7,9 +7,12 @@ date: 2015-02-05 20:45:35
 ---
 Welcome to part 2 of the series on blogging on  github.  In this post we will go through making your first blog post.
 
-[View Part 1 - Getting Started](http://digitaldrummerj.me/blogging-on-github-part-1/)
+**Lesson Length:** 10 minutes
 
-**Length:** 10 minutes 
+**Other Lessons in the Series**
+
+* [View Part 1 Getting Started]({{site.url}}/blogging-on-github-part-1/)
+* [View Part 3 Adding the ability for readers to comment on your post]({{site.url}}/blogging-on-github-part-3-adding-comments/)
 
 ### Overview
 
@@ -178,13 +181,13 @@ See you in the next lesson, where we will discuss how to add the ability to comm
  
 ### Section 6:  Future lessons
 
-* [Part 1 Getting Started](http://digitaldrummerj.me/blogging-on-github-part-1/)
-* Part 2 Creating your first blog post
-* Part 3 Adding the ability for readers to comment on your post
-* Part 4 How to make change locally and push them to Github
-* Part 5 Creating additional pages
-* Part 6 Adding a page that list post by category
-* Part 7 Adding a page that list post by month
-* Part 8 Customizing the theme
-* Part 9 Adding a custom Google search
-* Part 10 Using your own domain name
+* [Part 1 Getting Started]({{site.url}}/blogging-on-github-part-1/)
+* Part 2 Creating your first blog post (this lesson)
+* [Part 3 Adding the ability for readers to comment on your post]({{site.url}}/blogging-on-github-part-3-adding-comments/)
+* Part 4 Creating additional pages
+* Part 5 Adding a page that list post by category
+* Part 6 Adding a page that list post by month
+* Part 7 Customizing the theme
+* Part 8 Adding a custom Google search
+* Part 9 Using your own domain name
+* Part 10 How to make change locally and push them to Github
