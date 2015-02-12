@@ -5,6 +5,4 @@ sitemap: false
 permalink: /portfolio/
 ---
 
-## My Portfolio 
-
 This is a placeholder page that will eventually have information about my portfolio.
