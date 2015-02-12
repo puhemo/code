@@ -6,7 +6,7 @@ categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
 date: 2015-02-11  
 ---
 
-Welcome to part 4 of the series on blogging on  github.  In his lesson we will go through how to add additional pages such as the speaking page on this blog.
+Welcome to part 4 of the series on Blogging on  Github.  In this lesson we will go through how to add additional page such as the [speaking]( {{ site.url}}/speaking) page on this blog.
  
 **Lesson Length**: 10 minutes
  
@@ -18,7 +18,7 @@ Welcome to part 4 of the series on blogging on  github.  In his lesson we will g
 
 ### Overview 
 
-As your blog grows you are going to want to add additional information besides  just blog post.  If you start speaking at events or want to show off your portfolio, you are going to want these as separate pages.  These pages  most  likely will have there own look and feel as well.
+As your blog grows you are going to want to add additional information besides  just blog post.  If you start speaking at events or want to show off your portfolio or blog post by category/date, you are going to want these as separate pages.  These pages  most  likely will have there own look and feel as well.  
 
 ### Section 1: Creating the file for the page 
 
@@ -31,7 +31,7 @@ If you have been following along with the other part in this series,  the step s
 
 ### Section 2: Choosing a layout 
 
-To tell the jekyll engine what the layout of the page should be, you need to add front matter. 
+To tell the jekyll engine what the layout of the page should be, you need to add the front matter layout tag. 
 
 From  [ Part 2 Creating your first blog post](http://digitaldrummerj.me/blogging-on-github-part-2-your-first-post/), you will remember that the front matter is the metadata about blog post but it is used in jekyll  for any page as well.  All of the front matter tags are the same as a blog post.
 
@@ -53,7 +53,7 @@ The content is written in markdown just like blog post are.   In  [ Part 2 Creat
 
 For now just add some simple markdown like below:
 
-	## 	My First Page 
+	## 	My Portfolio 
 	
 	This is a placeholder page that will eventually have information about my portfolio.  
 
@@ -64,6 +64,8 @@ After you have added the above text, scroll to the bottom of the page and click 
 To  view the page navigate to http://[username].github.io/portfolio
 
 You should see something like this with your site header and color scheme.
+
+![first page]({{ site.url}}/images/github_first-page.png)
 
 Right now the page is published but not linked to from anywhere.
 
@@ -83,7 +85,7 @@ To add it to the menu:
 	
           <li><a href="{{ site.url }}/portfolio">Portfolio </a></li>
           
-6. The change are done, we just need to commit them to the repository by scrolling to the bottom of the page and clicking on the commit button.  
+6. We need to commit the file to the repository by scrolling to the bottom of the page and clicking on the commit button.  
 7. Now navigate to your blog and the page link should show in the main menu.  Click  on the link and make sure it takes you to the page. 
 
 In the next lesson we will build on this one by adding in a page to show the blog post by category.   
