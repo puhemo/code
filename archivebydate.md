@@ -28,11 +28,11 @@ sitemap: false
 
 
 {% if post.link %}
-  <h2 class="link-post">
+  <h3 class="link-post">
     <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
+    <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h3>
 {% else %}
-  <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}<p class="date">{{ post.date |  date: "%B %e, %Y" }}</p></a></h2>
+  <h3><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}<p class="date">{{ post.date |  date: "%B %e, %Y" }}</p></a></h3>
   <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
 {% endif %}
 
