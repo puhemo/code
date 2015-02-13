@@ -14,7 +14,6 @@ sitemap: false
     </a>
 </span>
 {% endfor %}
-</section>
 </div>
 
 <div id="index">
