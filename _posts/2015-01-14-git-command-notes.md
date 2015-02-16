@@ -39,8 +39,33 @@ In Git terms, this is called cloning a repository and the command to use is git 
 
 	git remote -v
 
-### See what files have changed
+### Change the Remote Origin Url
 
+    git remote set-url origin [https or ssh url]
+
+### Generate SSH Keys
+
+    **Adding  Key**
+    ls -al ~/.ssh
+    ssh-keygen -t rsa -C "your_email@example.com"
+    ssh-agent -s or eval(ssh-agent) or eval $(ssh-agent)
+    ssh-add ~/.ssh/id_rsa
+    clip < ~/.ssh/id_rsa.pub
+    Go to github settings for your account
+    Click on SSH Keys
+    Click Add Key
+    Give it a name and paste in the key
+    Put in your github password
+    Click confirm
+
+    **To test**
+    ssh -T git@github.com
+    Should get a response like: Hi username! You've successfully authenticated, but GitHub does not  provide shell access.
+
+
+    Full details at [https://help.github.com/articles/generating-ssh-keys/](https://help.github.com/articles/generating-ssh-keys/)
+
+### See what files have changed
 
 	Long Form: git status  
 	Short Form: git status -s
