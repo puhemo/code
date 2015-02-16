@@ -29,12 +29,12 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 <h3>Las Vegas Code Camp <span>- Las Vegas, Nv (February 21, 2015)</span></h3>
 
-- [Vagrant (new talk, slides will be posted before the event)](#vagrant)
+- [Vagrant](#vagrant)
 
 <h3>SoCal Code Camp <span>- Fullerton, Ca (March 7th & 8th, 2015)</span></h3>
 
 - [Chocolatey](#chocolatey)
-- [Vagrant (new talk, slides will be posted before the event)](#vagrant)
+- [Vagrant](#vagrant)
 - [Developer Productivity in Visual Studio](#vsprod)
 - [Ionic Framework Part 1: Overview](#ionic)
 - Ionic Framework Part 2: Deep Dive (new, no slides yet)
@@ -55,7 +55,7 @@ The code camp date hasn't been announced yet, but I will most likely be submitti
 
 - [Ionic Framework Part 1: Overview](#ionic)
 - Ionic Framework Part 2: Deep Dive (new, no slides yet)
-- [Vagrant (new talk, slides will be posted before the event)](#vagrant)
+- [Vagrant](#vagrant)
 
 <p>&nbsp;</p>
 
@@ -182,11 +182,11 @@ Demo: [https://github.com/digitaldrummerj/SideWaffleTalks](https://github.com/di
 
 
 
-### <a name="vagrant"></a>Vagrant - Create and Configure lightweight, reproducible, and portable dev environments.
+### <a name="vagrant"></a>Vagrant - Devops Yourself: Fast-Track Your Dev Environment Setup.
 
 Does this ever happen to you? The configuration takes forever to remember, document and configure. You can't seem to reproduce the configuration on another developers machine? Then vagrant my friend is for you.  Vagrant will change how you work.    You will forever say goodbye to the "works on my machine" excuse for the development environment for everyone on your team.
 
-Slides:
+Slides: [http://www.slides.com/digitaldrummerj/devopsyourself](http://www.slides.com/digitaldrummerj/devopsyourself)
 
 Demo: [https://github.com/digitaldrummerj/VagrantTalk](https://github.com/digitaldrummerj/VagrantTalk)
 
