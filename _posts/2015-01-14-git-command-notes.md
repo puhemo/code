@@ -45,7 +45,8 @@ In Git terms, this is called cloning a repository and the command to use is git 
 
 ### Generate SSH Keys
 
-    **Adding  Key**
+**Adding  Key**
+
     ls -al ~/.ssh
     ssh-keygen -t rsa -C "your_email@example.com"
     ssh-agent -s or eval(ssh-agent) or eval $(ssh-agent)
@@ -58,12 +59,14 @@ In Git terms, this is called cloning a repository and the command to use is git 
     Put in your github password
     Click confirm
 
-    **To test**
+**To test**
+
     ssh -T git@github.com
-    Should get a response like: Hi username! You've successfully authenticated, but GitHub does not  provide shell access.
+
+Should get a response like: Hi username! You've successfully authenticated, but GitHub does not  provide shell access.
 
 
-    Full details at [https://help.github.com/articles/generating-ssh-keys/](https://help.github.com/articles/generating-ssh-keys/)
+Full details at [https://help.github.com/articles/generating-ssh-keys/](https://help.github.com/articles/generating-ssh-keys/)
 
 ### See what files have changed
 
