@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ionic Setup on OSx
+title: Ionic - Setup on OSx
 published: true
 tags: [ionic]
 categories: [programming, mobile-development, ionic]

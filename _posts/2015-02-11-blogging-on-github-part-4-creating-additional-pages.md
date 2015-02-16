@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post 
-title: Blogging On Github - Part 4 Adding Additional Pages 
+title: 'Blogging On Github - Part 4 Adding Additional Pages'
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
 date: 2015-02-11  
 ---
@@ -124,11 +124,14 @@ To add it to the menu:
 
     ![Github menu includes portfolio link]({{site.url}}/images/github_part4_menu_with_portfolio_in_browser.png)
 
+### Conclusion
+
+
 With just a few steps, you were able to add a new page into your blog's web site.  You can either continue to build out the portfolio page with the markdown needed to show off your portfolio or you can remove it from the menu until you are ready to do build it out.
 
 In the next lesson we will build on this lesson by adding in a page to show the blog post by category.
 
-### Section 6:  Future lessons
+### Series Lessons
 
 * [Part 1 Getting Started]({{site.url}}/blogging-on-github-part-1/)
 * [Part 2 Creating your first blog post]({{site.url}}/blogging-on-github-part-2-your-first-post/)
@@ -140,3 +143,4 @@ In the next lesson we will build on this lesson by adding in a page to show the 
 * Part 8 Adding a custom Google search
 * Part 9 Using your own domain name
 * Part 10 How to make change locally and push them to Github
+* Part 11 Pro Tips

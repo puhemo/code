@@ -1,6 +1,6 @@
 ---
 published: true
-title: Ionicbox and how to use it
+title: Ionic - The Ionicbox and How To Use It
 layout: post
 tags: [ionic]
 categories: [programming, mobile-development, ionic, vagrant, virtualbox]

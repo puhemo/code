@@ -1,21 +1,24 @@
 ---
-published: true
+
 layout: post 
-title: Blogging On Github - Part 1 Getting Started
+title: 'Blogging On Github - Part 1 Getting Started'
+date: 2015-01-30
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
-date: 2015-01-30 20:45:35
+published: true
+redirect_from: "/blogging-on-github-part-1/"
 ---
 
 Welcome to the first lesson of a multi part series on blogging using Github.  Github has an awesome free option for hosting a blog for you and you can get a blog up and running in 10 minutes or less.  This series will cover everything that you to know to host, manage and customized a Github blog.
 
 **Lesson Length:** 10 minutes
 
-* [View Part 1 Getting Started]({{site.url}}/blogging-on-github-part-1/)
 * [View Part 2 Creating your first blog post]({{site.url}}/blogging-on-github-part-2-your-first-post/)
 * [View Part 3 Adding the ability for readers to comment on your post]({{site.url}}/blogging-on-github-part-3-adding-comments//)
+* [View Part 4 Creating additional pages]({{ site.url }}/blogging-on-github-part-4-creating-additional-pages/)
 
 
-### Section 1: Introduction
+### Section 1: Overview
+
 Github uses the Jekyll engine which turns markdown into static Html pages.  The advantage of this is that performance is better since you are just serving up html and you don't have to worry about hosting a database somewhere .
 
 The quickest and easiest way to get started with Jekyll is fork an existing Jekyll repository.  Forking in Git means creating a copy of the repository into your account.
@@ -59,17 +62,22 @@ You can edit the _config.yml directly in Github.  Click on the file and then cli
 
 Now you are ready to view your new blog.  Open a browser and navigate to http://[username].github.io, replacing [username] with your actual username.
 
-See you In the next lesson, where we create  your first  blog post.
+### Conclusion
 
-### Section 6:  Future lessons:
+In just a few simple steps, you were able to get your blog up and running.  Through out the series of lessons, you will learn how to manage your blog, create new pages, customize the theme, and host it with a custom domain name.
+
+In the next lesson, where we create your first blog post.
+
+### Other Lessons
 
 * Part 1 Getting Started (this lesson)
 * [Part 2 Creating your first blog post]({{site.url}}/blogging-on-github-part-2-your-first-post/)
 * [Part 3 Adding the ability for readers to comment on your post]({{site.url}}/blogging-on-github-part-3-adding-comments/)
-* Part 4 Creating additional pages
+* [Part 4 Creating additional pages]({{ site.url }}/blogging-on-github-part-4-creating-additional-pages/)
 * Part 5 Adding a page that list post by category
 * Part 6 Adding a page that list post by month
 * Part 7 Customizing the theme
 * Part 8 Adding a custom Google search
 * Part 9 Using your own domain name
 * Part 10 How to make change locally and push them to Github
+* Part 11 Pro Tips

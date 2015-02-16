@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using Android x86 Virtual machine instead of emulator
+title: Ionic - Using Android x86 Virtual Machine Instead of Emulator
 published: true
 tags: [ionic, android, virtualbox]
 categories: [programming, mobile-development, android, ionic]

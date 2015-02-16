@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: Using Ionic behind a proxy server
+title: Ionic - Using behind a proxy server
 categories: [proxy, ionic]
 date: 2015-01-20 20:45:35
 ---

@@ -5,8 +5,9 @@ permalink: /categoryview/
 active: archivebycategory
 sitemap: false
 ---
-<div>
 {% assign tags = site.categories | sort %}
+{% assign sorted_posts = site.posts | sort: 'title' %}
+<div>
 {% for tag in tags %}
  <span class="site-tag">
     <a href="#{{ tag | first | slugify }}">
@@ -20,7 +21,7 @@ sitemap: false
 
 {% for tag in tags %}
 <a name="{{ tag[0] }}"></a><h2>{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }}) </h2>
-{% assign sorted_posts = site.posts | sort: 'title' %}
+
 {% for post in sorted_posts %}
 {%if post.categories contains tag[0]%}
 
