@@ -4,17 +4,12 @@ title: 'Blogging On Github - Part 2 Your First Post'
 published: true
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
 date: 2015-02-05
-redirect_from: "/blogging-on-github-part-2-your-first-post/"
 ---
 Welcome to part 2 of the series on blogging on  github.  In this post we will go through making your first blog post.
 
 **Lesson Length:** 10 minutes
 
-**Other Lessons in the Series**
-
-* [View Part 1 Getting Started]({{site.url}}/blogging-on-github-part-1/)
-* [View Part 3 Adding the ability for readers to comment on your post]({{site.url}}/blogging-on-github-part-3-adding-comments/)
-* [View Part 4 Creating additional pages]({{ site.url }}/blogging-on-github-part-4-creating-additional-pages/)
+{% include githubseries_top.html %}
 
 ### Overview
 
@@ -184,16 +179,4 @@ This lesson is one of the key lessons as you need to kow how to create new blog 
 
 See you in the next lesson, where we will discuss how to add the ability to comment on blog post.  
  
-### Series Lessons
-
-* [Part 1 Getting Started]({{site.url}}/blogging-on-github-part-1/)
-* Part 2 Creating your first blog post (this lesson)
-* [Part 3 Adding the ability for readers to comment on your post]({{site.url}}/blogging-on-github-part-3-adding-comments/)
-* [Part 4 Creating additional pages]({{ site.url }}/blogging-on-github-part-4-creating-additional-pages/)
-* Part 5 Adding a page that list post by category
-* Part 6 Adding a page that list post by month
-* Part 7 Customizing the theme
-* Part 8 Adding a custom Google search
-* Part 9 Using your own domain name
-* Part 10 How to make change locally and push them to Github
-* Part 11 Pro Tips
+{% include githubseries_bottom.html %}

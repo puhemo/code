@@ -12,10 +12,7 @@ Welcome to the first lesson of a multi part series on blogging using Github.  Gi
 
 **Lesson Length:** 10 minutes
 
-* [View Part 2 Creating your first blog post]({{site.url}}/blogging-on-github-part-2-your-first-post/)
-* [View Part 3 Adding the ability for readers to comment on your post]({{site.url}}/blogging-on-github-part-3-adding-comments//)
-* [View Part 4 Creating additional pages]({{ site.url }}/blogging-on-github-part-4-creating-additional-pages/)
-
+{% include githubseries_top.html %}
 
 ### Section 1: Overview
 
@@ -68,16 +65,4 @@ In just a few simple steps, you were able to get your blog up and running.  Thro
 
 In the next lesson, where we create your first blog post.
 
-### Other Lessons
-
-* Part 1 Getting Started (this lesson)
-* [Part 2 Creating your first blog post]({{site.url}}/blogging-on-github-part-2-your-first-post/)
-* [Part 3 Adding the ability for readers to comment on your post]({{site.url}}/blogging-on-github-part-3-adding-comments/)
-* [Part 4 Creating additional pages]({{ site.url }}/blogging-on-github-part-4-creating-additional-pages/)
-* Part 5 Adding a page that list post by category
-* Part 6 Adding a page that list post by month
-* Part 7 Customizing the theme
-* Part 8 Adding a custom Google search
-* Part 9 Using your own domain name
-* Part 10 How to make change locally and push them to Github
-* Part 11 Pro Tips
+{% include githubseries_bottom.html %}

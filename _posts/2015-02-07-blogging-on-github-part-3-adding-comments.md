@@ -9,11 +9,7 @@ Welcome to part 3 of our series on blogging with github.  In this lesson you wil
 
 **Lesson Length:** 20 minutes
 
-**Other Lessons in the Series**
-
-* [View Part 1 Getting Started]({{site.url}}/blogging-on-github-part-1/)
-* [View Part 2 Creating your first blog post]({{site.url}}/blogging-on-github-part-2-your-first-post/)
-* [View Part 4 Creating additional pages]({{ site.url }}/blogging-on-github-part-4-creating-additional-pages/)
+{% include githubseries_top.html %}
 
 ### Overview
 
@@ -76,16 +72,4 @@ Having comments is an essential part of any blog to open up the communication wi
 
 In the next lesson, where you will learn how to create additional pages that are not blog post such as portfolio or about pages.
 
-### Other Lessons
-
-* [Part 1 Getting Started]({{site.url}}/blogging-on-github-part-1/)
-* [Part 2 Creating your first blog post]({{site.url}}/blogging-on-github-part-2-your-first-post/)
-* Part 3 Adding the ability for readers to comment on your post (this lesson)
-* [Part 4 Creating additional pages]({{ site.url }}/blogging-on-github-part-4-creating-additional-pages/)
-* Part 5 Adding a page that list post by category
-* Part 6 Adding a page that list post by month
-* Part 7 Customizing the theme
-* Part 8 Adding a custom Google search
-* Part 9 Using your own domain name
-* Part 10 How to make change locally and push them to Github
-* Part 11 Pro Tips
+{% include githubseries_bottom.html %}

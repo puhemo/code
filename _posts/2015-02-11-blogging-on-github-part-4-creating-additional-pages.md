@@ -10,11 +10,7 @@ Welcome to part 4 of the series on Blogging on  Github.  In this lesson we will 
  
 **Lesson Length**: 15 minutes
  
-**Other Lessons in the Series**
-
-* [View Part 1 Getting Started]({{site.url}}/blogging-on-github-part-1/)
-* [View Part 2 Creating your first blog post]({{site.url}}/blogging-on-github-part-2-your-first-post/)
-* [View Part 3 Adding the ability for readers to comment on your post]({{site.url}}/blogging-on-github-part-3-adding-comments/)
+{% include githubseries_top.html %}
 
 ### Overview 
 
@@ -131,16 +127,4 @@ With just a few steps, you were able to add a new page into your blog's web site
 
 In the next lesson we will build on this lesson by adding in a page to show the blog post by category.
 
-### Series Lessons
-
-* [Part 1 Getting Started]({{site.url}}/blogging-on-github-part-1/)
-* [Part 2 Creating your first blog post]({{site.url}}/blogging-on-github-part-2-your-first-post/)
-* [Part 3 Adding the ability for readers to comment on your post]({{site.url}}/blogging-on-github-part-3-adding-comments/)
-* Part 4 Creating additional pages (this lesson)
-* Part 5 Adding a page that list post by category
-* Part 6 Adding a page that list post by month
-* Part 7 Customizing the theme
-* Part 8 Adding a custom Google search
-* Part 9 Using your own domain name
-* Part 10 How to make change locally and push them to Github
-* Part 11 Pro Tips
+{% include githubseries_bottom.html %}

@@ -10,12 +10,7 @@ Welcome to part 5 of the series on blogging on github.  In this lesson we will g
  
 **Lesson Length**:  15 minutes
 
-**Other Lessons in the Series**
-
-* [View Part 1 Getting Started]({{site.url}}/blogging-on-github-part-1/)
-* [View Part 2 Creating your first blog post]({{site.url}}/blogging-on-github-part-2-your-first-post/)
-* [View Part 3 Adding the ability for readers to comment on your post]({{site.url}}/blogging-on-github-part-3-adding-comments/)
-* [View Part 4 Creating additional pages](http://digitaldrummerj.me/blogging-on-github-part-4-creating-additional-pages/)
+{% include githubseries_top.html %}
 
 ### Overview
 
@@ -139,16 +134,4 @@ Unlike the portfolio page that we created in the last lesson, this time we are n
 
 With just a few simple steps, you were added the post by category page and put it in the header.  In the next lesson we will add in a new page for browsing blog post by year and month.
 
-### Series Lessons
-
-* [Part 1 Getting Started]({{site.url}}/blogging-on-github-part-1/)
-* [Part 2 Creating your first blog post]({{site.url}}/blogging-on-github-part-2-your-first-post/)
-* [Part 3 Adding the ability for readers to comment on your post]({{site.url}}/blogging-on-github-part-3-adding-comments/)
-* [Part 4 Creating additional pages](http://digitaldrummerj.me/blogging-on-github-part-4-creating-additional-pages/)
-* Part 5 Adding a page that list post by category (this lesson)
-* Part 6 Adding a page that list post by month
-* Part 7 Customizing the theme
-* Part 8 Adding a custom Google search
-* Part 9 Using your own domain name
-* Part 10 How to make change locally and push them to Github
-* Part 11 Pro Tips
+{% include githubseries_bottom.html %}
