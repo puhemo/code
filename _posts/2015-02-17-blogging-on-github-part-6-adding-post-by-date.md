@@ -72,10 +72,10 @@ After the front matter, add the following code to display the post by Year and M
 
     {% if post.link %}
       <h3 class="link-post">
-        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        <a href="{{ site.url }}{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
         <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h3>
     {% else %}
-      <h3><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}<p class="date">{{ post.date |  date: "%B %e, %Y" }}</p></a></h3>
+      <h3><a href="{{ site.url }}{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">{{ post.title }}<p class="date">{{ post.date |  date: "%B %e, %Y" }}</p></a></h3>
       <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
     {% endif %}
 
@@ -84,7 +84,7 @@ After the front matter, add the following code to display the post by Year and M
     </div>
     {% endraw %}
 
-###  Section 4: Viewing the Category Page
+###  Section 4: Viewing the Post by Date Page
 
 1. After you have added the above text, scroll to the bottom of the page, add your commit note, and    click the commit button.
 
@@ -98,7 +98,7 @@ After the front matter, add the following code to display the post by Year and M
 
 1. Right now the page is published but not linked to from anywhere.  In the next section we will add it to the header section of the page.
 
-### Section 5: Adding Month View into Header
+### Section 5: Adding browse by date into Header
 
 We are going to add the "show by date" link into the header section next to the link to view by category that we added in the [previous lesson]({{ site.url}}/blogging-on-github-part-5-adding-a-category-page/). 
 
@@ -113,7 +113,7 @@ We are going to add the "show by date" link into the header section next to the 
     {% raw %}
         or <a title="The complete archive of
             {{ site.name }}'s Blog by month"
-            href="{{ site.url}}/monthview">date</a>
+            href="{{ site.url}}{{site.baseurl}}/monthview">date</a>
       
      {% endraw %}
 

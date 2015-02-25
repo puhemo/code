@@ -74,7 +74,7 @@ Next you need to add the code to display the list of blog post by category and s
         {% for post in sorted_posts %}
         {%if post.categories contains category[0]%}
 
-          <h3><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }} <p class="date">{{ post.date |  date: "%B %e, %Y" }}</p></a></h3>
+          <h3><a href="{{ site.url }}{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">{{ post.title }} <p class="date">{{ post.date |  date: "%B %e, %Y" }}</p></a></h3>
            <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
 
         {%endif%}
@@ -83,7 +83,6 @@ Next you need to add the code to display the list of blog post by category and s
         {% endfor %}
         </div>
     {% endraw %}
-
 
 
 ###  Section 5: Viewing the Category Page
@@ -97,6 +96,10 @@ Next you need to add the code to display the list of blog post by category and s
 1. Your page should look like the following but with your avatar, site name and description in the header of the page.
 
     ![category view screenshot]({{ site.url}}/images/github_part_5_archivebycategory_in_browser.png)
+
+1. You will notice that the "You're up and running" post does not show up on the categories page.  This is because there is no categories front matter tag for that blog post.  Go ahead and open 2014-3-3-Hello-World.md and add the categories front matter tag.
+
+        categories: ['welcome']
 
 1. Right now the page is published but not linked to from anywhere.  In the next section we will add it to the header section of the page.
 
@@ -116,7 +119,7 @@ Unlike the portfolio page that we created in the last lesson, this time we are n
           <div class="container" >
                 <div id="archives">
                     browse by <a title="The complete archive of {{ site.name }}'s Blog by category"
-                                 href="{{ site.url}}/categoryview">category</a>
+                                 href="{{ site.url}}{{site.baseurl}}/categoryview">category</a>
                 </div>
             </div>
           </div>
