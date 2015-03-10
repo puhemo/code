@@ -195,7 +195,7 @@ Demo: [https://github.com/digitaldrummerj/VagrantTalk](https://github.com/digita
 
 You will learn several tricks to becoming more productive in Windows and Visual Studio. We will explore some standard windows shortcuts, how to never use the start menu again to launch programs, how to create shortcuts to your commonly used web sites, some very useful Visual Studio extensions, and I will give you some shortcuts that I like to set in Visual Studio.
 
-Slides: [http://slides.com/digitaldrummerj/devprod](http://slides.com/digitaldrummerj/devprod)
+Slides: [http://slides.com/digitaldrummerj/devprod](http://slides.com/digitaldrummerj/developerproductivity)
 
 Demo:
 
