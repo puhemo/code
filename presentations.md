@@ -120,7 +120,7 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 Chocolatey is a machine package manager somewhat like apt-get for Linux but built for Windows. No more searching for the install download or trying to figure out 32/64 bit or wonder what options to pick. Chocolatey takes care of doing the install for you and you can even create scripts to install multiple packages. With Chocolatey you can bring up a new development machine with minimal effort. By the end of this session you will have all of the information you need to be both a consumer and create of Chocolatey packages.Chocolatey isn't just for system administrators. It is extremely useful for both developers and end-users as well.For developers, you can quickly bring up a new machine and get all of your software installed on it with minimal effort. It is also very easy to make Chocolatey packages for your software and distribute it to your users.For end-users, no longer will they need to search for where to download your software or how to install it. Chocolatey will do all of the work for them.
 
-Slides: [http://slides.com/digitaldrummerj/chocolatey/)[http://slides.com/digitaldrummerj/chocolatey/]
+Slides: [http://slides.com/digitaldrummerj/chocolatey/][http://slides.com/digitaldrummerj/chocolatey/]
 
 Demo: [https://github.com/digitaldrummerj/ChocolateyTalk](https://github.com/digitaldrummerj/ChocolateyTalk)
 
