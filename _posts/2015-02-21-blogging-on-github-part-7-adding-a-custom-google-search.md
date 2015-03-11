@@ -74,7 +74,7 @@ If you have been following along with the other lessons in the series, this shou
                     <form role="search" method="get" action="{{site.baseurl}}/search/">
                         <input id="searchString" name="searchString"
                                placeholder="Be a Better Developer, etc." type="text">
-                        <input id="searchButton" name="googleSearchName" type="button" value="Search">
+                        <input id="searchButton" name="googleSearchName" type="submit" value="Search">
                     </form>
                 </div>
      {% endraw %}
