@@ -177,7 +177,7 @@ On the IonicBox ssh connection:
 
 {% highlight  io %}
      cd vagrant_projects
-     ionic start tabs firstApp && cd firstApp
+     ionic start firstApp tabs && cd firstApp
      ionic serve --live-reload
 {% endhighlight %}
 
