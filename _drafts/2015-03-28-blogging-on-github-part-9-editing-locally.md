@@ -40,6 +40,10 @@ gem install nokigiri -v 1.6.6.2
 Xcode command line tools
 
 
+bundle exec jekyll serve
+
+[http://localhost:4000](http://localhost:4000)
+
 ### Section 2: Getting your Blog onto your computer
 
 
