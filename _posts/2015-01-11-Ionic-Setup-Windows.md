@@ -36,13 +36,15 @@ It is really easy to get everything working though once you know the steps.  Sin
 
 1. Install Chocolatey from [http://www.chocolatey.org](http://www.chocolatey.org).  Command is on the front-page of the site.
 
+{% highlight  powershell %}
 
-	Command Prompt: @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
-         
-     or 
-         
-	Powershell Command Prompt: iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
-	
+        Command Prompt: @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+
+         or
+
+        Powershell Command Prompt: iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
+{% endhighlight %}
+
     
 2. Install the BoxStarter Chocolatey package after install chocolatey, the command is cinst BoxStarter
 3. Close the cmd prompt or powershell prompt that you opened to install Chocolatey and BoxStarter
