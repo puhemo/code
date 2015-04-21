@@ -58,7 +58,7 @@ Install-BoxStarterPackage -PackageName  https://gist.githubusercontent.com/digit
 
 {% endhighlight %}
 
-	- **NOTE:** If you want to install any of the optional software you will need to fork the gist file and remove the # in front of the line for the package you want to install.
+- **NOTE:** If you want to install any of the optional software you will need to fork the gist file and remove the # in front of the line for the package you want to install.
     
 ### Post Install Steps
 
