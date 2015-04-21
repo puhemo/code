@@ -29,7 +29,7 @@ Even being a windows user I was able to pretty easily get Ionic working on a Mac
 - Genymotion (optional)
 
 ### Install Steps
-1. Install homebrew  and node js via http://www.johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/
+1. Install homebrew  and node js via [http://www.johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/](http://www.johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/)
 2. NPM packages 
 	- npm install -g cordova
 	- npm install -g ionic
@@ -39,7 +39,7 @@ Even being a windows user I was able to pretty easily get Ionic working on a Mac
 	- After install from the terminal create ~/.bash_profile if it doesn't already exist.  You can use touch ~/.bash_profile to create the file.
     - Open up either vi or nano and add the following line:    
     
-		Add export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_72.jdk/Contents/Home
+		    Add export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_72.jdk/Contents/Home
 
 4. Android Studio
 	- Download from [http://developer.android.com/sdk/index.html#Other](http://developer.android.com/sdk/index.html#Other)
@@ -48,14 +48,15 @@ Even being a windows user I was able to pretty easily get Ionic working on a Mac
     - Unzip to /users/[Your Username]/Development/ into a apache-ant-1.9.4
     - Open ~/.bash_profile and add the following line:
     
-    export ANT_HOME=/users/jpjames/Development/apache-ant-1.9.4
+            export ANT_HOME=/users/jpjames/Development/apache-ant-1.9.4
     
 6. Android SDK 
 	* Download from [http://developer.android.com/sdk/index.html#Other](http://developer.android.com/sdk/index.html#Other_
     - Unzip to /users/[Your username]/Development
 	- Open ~/.bash_profile and add the following line:
 	
-    Add export PATH=${PATH}:/users/[Your UserName]/Development/android-sdk-mac_x86/tools:/users/[Your Username]/Development/android-sdk-mac_x86/platform-tools:${ANT_HOME}/bin
+            Add export PATH=${PATH}:/users/[Your UserName]/Development/android-sdk-mac_x86/tools:/users/[Your Username]/Development/android-sdk-mac_x86/platform-tools:${ANT_HOME}/bin
+            
 7. Download correct Android API 
 	- in terminal type source ~/.bash_profile to load the ~/.bash_profile changes.
     - type android from terminal.  If everything is working correct it will open up the Android SDK Manager.
