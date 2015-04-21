@@ -36,13 +36,14 @@ It is really easy to get everything working though once you know the steps.  Sin
 
 1. Install Chocolatey from [http://www.chocolatey.org](http://www.chocolatey.org).  Command is on the front-page of the site.
 
-{% highlight  powershell %}
+{% highlight  text %}
 
-        Command Prompt: @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+Command Prompt: @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
 
-         or
+or
 
-        Powershell Command Prompt: iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
+Powershell Command Prompt: iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
+
 {% endhighlight %}
 
     
