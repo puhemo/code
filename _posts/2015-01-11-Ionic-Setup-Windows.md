@@ -50,7 +50,14 @@ Powershell Command Prompt: iex ((new-object net.webclient).DownloadString('https
 2. Install the BoxStarter Chocolatey package after install chocolatey, the command is cinst BoxStarter
 3. Close the cmd prompt or powershell prompt that you opened to install Chocolatey and BoxStarter
 4. On the desktop there should be a BoxStarter Shell icon, double-click on that to run it.  If the icon is not on the desktop, then open up a command prompt and type BoxStarterShell.
-5. Run the following command to install this Gist:  Install-BoxStarterPackage -PackageName  https://gist.githubusercontent.com/digitaldrummerj/3fe2eb057004b6742b89/raw/c042aecff396d9b26d4061f45544bff80ff321e8/IonicSetup  -DisableReboots
+5. Run the following command to install this Gist:
+
+{% highlight  text %}
+
+Install-BoxStarterPackage -PackageName  https://gist.githubusercontent.com/digitaldrummerj/3fe2eb057004b6742b89/raw/c042aecff396d9b26d4061f45544bff80ff321e8/IonicSetup  -DisableReboots
+
+{% endhighlight %}
+
 	- **NOTE:** If you want to install any of the optional software you will need to fork the gist file and remove the # in front of the line for the package you want to install.
     
 ### Post Install Steps
