@@ -71,15 +71,15 @@ In the configuration we configure the video and physical memory of the virtual m
 Ionic uses port 8100 for the web site and the live reload function use port 35729.  We forwarded these ports from IonicBox to the host machine so we can access the web server.  The following two lines do the port forwarding
 
 {% highlight  io %}
-         config.vm.network :forwarded_port, host: 8100, guest: 8100
-         config.vm.network :forwarded_port, host: 35729, guest: 35729
+config.vm.network :forwarded_port, host: 8100, guest: 8100
+config.vm.network :forwarded_port, host: 35729, guest: 35729
 
 {% endhighlight   %}
 
 The IonicBox is just a Linux shell with no GUI so you will want to use a feature in VirtualBox called Shared Folders to be able to edit the files from your host machine.  In our case we are using c:\projects on the host machine which is linked to ~/vagrant_projects on the IonicBox
 
 {% highlight  io %}
-         config.vm.synced_folder "c:\\projects", "/home/vagrant/projects"
+config.vm.synced_folder "c:\\projects", "/home/vagrant/projects"
 {% endhighlight %}
 
 Next we set up the VirtualBox options
@@ -87,19 +87,19 @@ Next we set up the VirtualBox options
 -We don't need the VirtualBox GUI since we are going to SSH into the machine so we can turn it off with.  Set this to true the first time, just so you can see it
 
 {% highlight  io %}
-      vb.gui = false
+vb.gui = false
 {% endhighlight %}
 
 - We set the Video Ram to 128 megs
 
 {% highlight  io %}
-      vb.customize ["modifyvm", :id, "--vram", "128"]
+vb.customize ["modifyvm", :id, "--vram", "128"]
 {% endhighlight %}
 
 - Turn on the USB drivers so that we can connect an Android device
 
 {% highlight  io %}
-      vb.customize ["modifyvm", :id, "--usb", "on"]
+vb.customize ["modifyvm", :id, "--usb", "on"]
 {% endhighlight %}
 
 
@@ -107,7 +107,7 @@ Next we set up the VirtualBox options
 -Add a usb device filter for a Android Device
 
 {% highlight  io %}
-      vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
+vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
 {% endhighlight %}
 
 
@@ -115,7 +115,7 @@ Next we set up the VirtualBox options
 - Turn on Symlinks to the synced_folder above.  This is needed if your Host Operating System is Windows in order node/npm to work correctly.  
 
 {% highlight  io %}
-      vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects", "1"]
+vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects", "1"]
 {% endhighlight %}
 
 
@@ -124,7 +124,7 @@ Next we set up the VirtualBox options
 - Set the system memory for the virtual machine.  If you host machine is low on memory you can reduce this down.  You must have this much memory free when the virtual machine starts up
 
 {% highlight  io %}
-      vb.memory = 2048
+vb.memory = 2048
 {% endhighlight %}
 
       
@@ -132,7 +132,7 @@ Next we set up the VirtualBox options
 - Number of Physical CPUs to allocate.  My machine only has 2 physical CPUs.  You can allocate more or take it down to 1
 
 {% highlight  io %}
-      vb.cpus = 2	 
+vb.cpus = 2
 {% endhighlight %}
 
 
@@ -140,7 +140,7 @@ Next we set up the VirtualBox options
 - The name to use for the virtual machine in the VirtualBox Manager UI
 
 {% highlight  io %}
-      vb.name = "IonicBox"
+vb.name = "IonicBox"
 {% endhighlight %}
 
 
@@ -150,7 +150,7 @@ Next we set up the VirtualBox options
 - Open a command prompt and navigate to the IonicBox folder that contains the VagrantFile.  Run command below. This command will take a while the first time you run it since it has to download the vagrant box container which is about 1 gig in size.
 
 {% highlight  io %}
-      vagrant up
+vagrant up
 {% endhighlight %}
 
 
@@ -160,7 +160,7 @@ If you have the vb.gui = true in your VagrantFile, the first thing you will noti
 - To login to the machine, use the same command prompt as previous step and run
 
 {% highlight  io %}
-      vagrant ssh
+vagrant ssh
 {% endhighlight %}
 
 
@@ -176,13 +176,10 @@ On the IonicBox ssh connection:
 
 
 {% highlight  io %}
-     cd vagrant_projects
-     ionic start firstApp tabs && cd firstApp
-     ionic serve --live-reload
+cd vagrant_projects
+ionic start firstApp tabs && cd firstApp
+ionic serve
 {% endhighlight %}
-
-
-
 
 You now have a Ionic project in a directory called firstApp and the web server is running.
 
@@ -192,26 +189,24 @@ You can view all of the files that make up this project on your host machine und
 
 If you are NOT using Windows as your host operating system that we are done with configurations.  Unfortunately, if you are using Windows as your host operating system, we have one more step to get npm working correctly, so that you can download all of the dependencies for Ionic.
 
-We need to setup a symbolic link for the node_modules folder since windows has a length limitation when using shared folders.  A symbolic link is basically a point from one directory to another.  Windows has a diretory name length limitation that we encounter when host our files through a shared folder.  Since our npm dependencies (node_modules) folder doesn't need to be checked into source control, we can move it to a directory on the IonicBox and just point to that from within our Ionic projects.  
+<font color="red">WARNING: This may not fix the issue with node and long file names.</font>
+
+We need to setup a symbolic link for the node modules folder since windows has a length limitation when using shared folders.  A symbolic link is basically a point from one directory to another.  Windows has a directory name length limitation that we encounter when host our files through a shared folder.  Since our npm dependencies (node modules) folder doesn't need to be checked into source control, we can move it to a directory on the IonicBox and just point to that from within our Ionic projects.
 
 On the IonicBox from the firstApp folder run the following commands:
 
-
 {% highlight  io %}
-      mkdir ~/node_modules
-      cp package.json ~/package.json
-      ls -s ~/node_modules node_modules
-      cd ~/
-      npm install
+mkdir ~/node_modules
+cp package.json ~/package.json
+ls -s ~/node_modules node_modules
+cd ~/
+npm install
 {% endhighlight %}
-
-
 
 You may also need to manually install bower 
 
-
 {% highlight  io %}
-      sudo npm install bower -g
+sudo npm install bower -g
 {% endhighlight %}
 
 
@@ -224,7 +219,7 @@ You may also need to manually install bower
 
 
 {% highlight  io %}
-          vagrant suspend
+vagrant suspend
 {% endhighlight %}
 
 
@@ -233,14 +228,14 @@ You may also need to manually install bower
 - Shutdown and Turn Off: from the IonicBox directory with the VagrantFile run
 
 {% highlight  io %}
-           vagrant halt
+vagrant halt
 {% endhighlight %}
 
 
 - Delete the whole IonicBox Virtual Machine: from the IonicBox directory with the VagrantFile run
 
 {% highlight  io %}      
-           vagrant destroy 
+vagrant destroy
 {% endhighlight %}
 
 
@@ -260,7 +255,7 @@ if you run into an error with vagrant up complaining about the virtual box symli
 - from the command prompt run:
 
 {% highlight  io %}
-         "c:\program files\oracle\virtualbox\VBoxManage" setextradata "[Your VM Box Name] VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects 1
+"c:\program files\oracle\virtualbox\VBoxManage" setextradata "[Your VM Box Name] VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects 1
 {% endhighlight %}
 
 
@@ -268,7 +263,7 @@ if you run into an error with vagrant up complaining about the virtual box symli
 - To validate the configuration change run:
 
 {% highlight  io %}
-        "c:\program files\oracle\virtualbox\VBoxManage" getextradataOn VM  "[Your VM Box NameOn VM ]" enumerate
+"c:\program files\oracle\virtualbox\VBoxManage" getextradataOn VM  "[Your VM Box NameOn VM ]" enumerate
 {% endhighlight %}
 
 
@@ -276,7 +271,7 @@ if you run into an error with vagrant up complaining about the virtual box symli
 - It should include a line such as 
 
 {% highlight  io %}
-        Key: VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects, Value: 1
+Key: VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects, Value: 1
 {% endhighlight %}
 
 
@@ -284,7 +279,7 @@ if you run into an error with vagrant up complaining about the virtual box symli
 - Remove the following line from the VagrantFile
 
 {% highlight  io %}
-      vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects", "1"]
+vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects", "1"]
 {% endhighlight %}
 
 
