@@ -11,6 +11,8 @@ If you are like me and just starting to work with the [Ionic Framework](http://w
 
 It is really easy to get everything working though once you know the steps.  Since I am a Windows user and love to automate work that is easily repeatable, I used  [Chocolatey](http://www.chocolatey.org) and [Boxstarter](http://www.boxstarter.org) to automate the setup for the Ionic Framework.
 
+On Windows, you will only be able to setup Android development.  Apple requires a Mac in order to do iOS development.
+
 ### Software to be installed
 
 - [NodeJS](https://chocolatey.org/packages/nodejs.install)
@@ -20,37 +22,31 @@ It is really easy to get everything working though once you know the steps.  Sin
 - [Android SDK](https://chocolatey.org/packages/android-sdk)
 - [Android Studio](https://chocolatey.org/packages/AndroidStudio)
 - [Google Chrome](https://chocolatey.org/packages/GoogleChrome)
-- Cordova using npm
-- gulp using npm
-- ionic 
-- Ruby (optional)
-- Sass (optional)
-- Webstorm (optional)
-- Github for Windows (optional)
-- Visual Studio Community Edition (optional)
-- Genymotion (optional)
+- Npm Modules: cordova, gulp and ionic
+- [Genymotion](https://www.genymotion.com/)
+- [Webstorm](https://www.jetbrains.com/webstorm/) (optional)
 
 
 ### How to install software
 
-
-1. Install Chocolatey from [http://www.chocolatey.org](http://www.chocolatey.org).  Command is on the front-page of the site.
+1. Install Chocolatey from [http://www.chocolatey.org](http://www.chocolatey.org).  Command is on the front-page of the site or below.  Open an administrative command prompt to run the command.  To open an administrative command prompt on Windows 8, go to the start menu, type cmd and then ctrl+shift+click on the cmd search result.
 
 {% highlight  text %}
 
 Command Prompt: @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
 
-or
+{% endhighlight %}
 
-Powershell Command Prompt: iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
+1. Install the [BoxStarter](http://boxstarter.org) Chocolatey package
+{% highlight  text %}
+
+cinst BoxStarter
 
 {% endhighlight %}
 
-    
-2. Install the BoxStarter Chocolatey package after install chocolatey, the command is cinst BoxStarter
-3. Close the cmd prompt or powershell prompt that you opened to install Chocolatey and BoxStarter
-4. On the desktop there should be a BoxStarter Shell icon, double-click on that to run it.  If the icon is not on the desktop, then open up a command prompt and type BoxStarterShell.
-5. Run the following command to install this Gist:
+1. Close the command prompt that you opened to install Chocolatey and BoxStarter
+1. On the desktop there should be a BoxStarter Shell icon, double-click on that to run it.  If the icon is not on the desktop, then open up a command prompt and type BoxStarterShell.
+1. I have setup a gist file that has all of the Chocolatey commands to run to install the rest of the software and configure it.  Run the gist file from the Boxstarter Shell:
 
 {% highlight  text %}
 
@@ -63,26 +59,52 @@ Install-BoxStarterPackage -PackageName  https://gist.githubusercontent.com/digit
 ### Post Install Steps
 
 1. Open a command prompt (it won't work from a powershell command prompt)
-2. type Android
+1. type Android
 	- This will launch the Android SDK Manager.  
     - Select the API 19 and check the SDK Platform and ARM EABI v8a System Image 
     - Scroll to the bottom and select the Google USB Driver
     - Click the install button.  This can take a bit of time.
-3. If you are going to use the Android Enumator you will need to configure an Android Virtual Device (AVD).  To do this, with the Android SDK Manager open under the Tools menu select Manage AVD
+1. If you are going to use the Android Emulator you will need to configure an Android Virtual Device (AVD).  To do this, with the Android SDK Manager open under the Tools menu select Manage AVD
 	- This will launch the Android Virtual Device (AVD) Manager
     - Click the Create Button, fill out all of the fields, and click ok to create the AVD
     - Select the newly created AVD and click the Start button.  If everything worked it should start up the emulator.
-             
+1. Configure Genymotion Setup
+    *  After Genymotion is installed, open up the Genymotion UI and click on the Add Button.
+    * Then click the Sign in button and follow the login instructions to login with the account that you create as part of the Genymotion download.
+    * After you are logged in, select from the Android Version drop down 4.4.4
+    * From the Device model drop down select a device type
+    * Then select a device from the available list
+    * Click the Next button.
+    * Click the Next button and wait for the device to download
+    * Click the Finish button.
 
 ### Verify that everything works
 
 1. Open a command prompt
-2. navigate the directory where you store you development projets (I use c:\projects)
-3. from c:\projects type: ionic start todo blank
-4. cd into c:\projects\todo  (directory was created by the ionic start command)
-5. type: ionic platform add android
-6. type: ionic build android
-7. if using emulator type: ionic emulate android --livereload
-8. if using Android x86 Virtual Machine you will need to enable remote debugging before you can run the app using my blog post @ [http://digitaldrummerj.github.io/Android-x86-Virtual-Machine-Instead-Of-Emulator/](http://digitaldrummerj.github.io/Android-x86-Virtual-Machine-Instead-Of-Emulator/)
-9. ionic run android --livereload
-	- NOTE: --livereload only works for Bridged VM and not for NAT
+1. Navigate the directory where you store you development projects (I use c:\projects)
+1. From c:\projects type: ionic start todo blank
+1. cd into c:\projects\todo  (directory was created by the ionic start command)
+1. Run the command:
+
+{% highlight  text %}
+ionic platform add android
+{% endhighlight %}
+
+1. Run the command:
+
+{% highlight  text %}
+ionic build android
+{% endhighlight %}
+
+1. If using emulator run the command:
+    * Note: The Genymotion emulator is seen as a device and not an emulator.
+
+{% highlight  text %}
+ionic emulate android
+{% endhighlight %}
+
+1. If running on a device run the command:
+    * For Android, if using the Genymotion emulator, make sure to start the Genymotion device you downloaded before running the command below.  You can start the device by selecting the device that you downloaded and clicking the start button.
+{% highlight  text %}
+ionic run android
+{% endhighlight %}

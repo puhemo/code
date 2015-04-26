@@ -19,22 +19,23 @@ Even being a windows user I was able to pretty easily get Ionic working on a Mac
 - [Android SDK](https://chocolatey.org/packages/android-sdk)
 - [Android Studio](https://chocolatey.org/packages/AndroidStudio)
 - [Google Chrome](https://chocolatey.org/packages/GoogleChrome)
-- Cordova using npm
-- gulp using npm
-- ionic 
-- Ruby (optional)
-- Sass (optional)
-- Webstorm (optional)
+- Npm Modules: cordova, gulp and ionic
+- [Genymotion](https://www.genymotion.com/) (Android emulator replacement)
+- [Webstorm](https://www.jetbrains.com/webstorm/) (optional)
 - Github for OSx (optional)
-- Genymotion (optional)
+- XCode
 
-### Install Steps
-1. Install homebrew  and node js via [http://www.johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/](http://www.johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/)
-2. NPM packages 
+### General Install Steps
+1. Install homebrew and node js via [http://www.johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/](http://www.johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/)
+1. NPM packages
 	- npm install -g cordova
 	- npm install -g ionic
-    - npm install -g bower
-3. JDK 7
+    - npm install -g gulp
+1. Google Chrome
+    	- Download from [https://www.google.com/chrome/browser/desktop/](https://www.google.com/chrome/browser/desktop/)
+
+###Android Setup Steps
+1. JDK 7
 	- Download from [http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
 	- After install from the terminal create ~/.bash_profile if it doesn't already exist.  You can use touch ~/.bash_profile to create the file.
     - Open up either vi or nano and add the following line:    
@@ -43,52 +44,87 @@ Even being a windows user I was able to pretty easily get Ionic working on a Mac
 Add export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_72.jdk/Contents/Home
 {% endhighlight %}
 
-4. Android Studio
+1. Android Studio
 	- Download from [http://developer.android.com/sdk/index.html#Other](http://developer.android.com/sdk/index.html#Other)
-5. Ant
+1. Ant
 	- Download from [http://ant.apache.org/bindownload.cgi](http://ant.apache.org/bindownload.cgi)
     - Unzip to /users/[Your Username]/Development/ into a apache-ant-1.9.4
     - Open ~/.bash_profile and add the following line:
+
 {% highlight  text %}
 export ANT_HOME=/users/jpjames/Development/apache-ant-1.9.4
 {% endhighlight %}
 
-6. Android SDK 
+1. Android SDK
 	* Download from [http://developer.android.com/sdk/index.html#Other](http://developer.android.com/sdk/index.html#Other_
     - Unzip to /users/[Your username]/Development
 	- Open ~/.bash_profile and add the following line:
+
 {% highlight  text %}
 Add export PATH=${PATH}:/users/[Your UserName]/Development/android-sdk-mac_x86/tools:/users/[Your Username]/Development/android-sdk-mac_x86/platform-tools:${ANT_HOME}/bin
 {% endhighlight %}
 
-
-7. Download correct Android API
+1. Download correct Android API
 	- in terminal type source ~/.bash_profile to load the ~/.bash_profile changes.
     - type android from terminal.  If everything is working correct it will open up the Android SDK Manager.
 	- Install API 19  with SDK Platforms and Arm Image checked
 	- Install the Google USB Driver 
-8. Configure Android Emulator
+1. Configure Android Emulator
 	* In terminal type android avd.  If everything is working correct it will open up the Android AVD Manager.
 	* Click the create button and add at least 1 device to emulate
-9. Google Chrome
-	- Download from [https://www.google.com/chrome/browser/desktop/](https://www.google.com/chrome/browser/desktop/)
+1. Configure Genymotion Setup
+    *  After Genymotion is installed, open up the Genymotion UI and click on the Add Button.
+    * Then click the Sign in button and follow the login instructions to login with the account that you create as part of the Genymotion download.
+    * After you are logged in, select from the Android Version drop down 4.4.4
+    * From the Device model drop down select a device type
+    * Then select a device from the available list
+    * Click the Next button.
+    * Click the Next button and wait for the device to download
+    * Click the Finish button.
+
+###iOS Setup Steps
 10. Install Xcode from app store.  This will take awhile since it is ~2 gigs in size.
 	- Once install is completed, open xcode and accept the license
 11. Install the IOS Simulator that Ionic will use.
-	* npm install -g ios-sim
-   
-### Verify that everything works
+
+{% highlight  text %}
+npm install -g ios-sim
+{% endhighlight %}
+
+### Verifying that everything works
+
 
 1. Open terminal
-2. navigate the directory where you store you development projets (I use /users/[Your Username]/projects)
-3. type: ionic start todo blank
-4. cd into ~/projects/todo  (directory was created by the ionic start command)
-5. type: ionic platform add android
-6. type: ionic build android
-7. if using emulator type: ionic emulate android --livereload
-8. if using Android x86 Virtual Machine you will need to enable remote debugging before you can run the app using my blog post @ [http://digitaldrummerj.github.io/Android-x86-Virtual-Machine-Instead-Of-Emulator/](http://digitaldrummerj.github.io/Android-x86-Virtual-Machine-Instead-Of-Emulator/)
-9. ionic run android --livereload
-	- NOTE: --livereload only works for Bridged VM and not for NAT
-10. ionic platform add ios
-11. ionic build ios
-12. ionic emulate ios
+1. Navigate the directory where you store you development projects (I use /users/[Your Username]/projects)
+1. From c:\projects type: ionic start todo blank
+1. cd into c:\projects\todo  (directory was created by the ionic start command)
+1. Run the commands:
+
+{% highlight  text %}
+ionic platform add android
+ionic platform add ios
+{% endhighlight %}
+
+1. Run the command:
+
+{% highlight  text %}
+ionic build android
+ionic build ios
+{% endhighlight %}
+
+1. If using emulator run the command:
+    * Note: The Genymotion emulator is seen as a device and not an emulator.
+
+{% highlight  text %}
+ionic emulate android
+ionic emulate ios
+{% endhighlight %}
+
+1. If running on a device run the command:
+    * For Android, if using the Genymotion emulator, make sure to start the Genymotion device you downloaded before running the command below.  You can start the device by selecting the device that you downloaded and clicking the start button.
+    * For iOS: In order to run on an iOS device you must go through the Apple provisioning process.
+
+{% highlight  text %}
+ionic run android
+ionic run ios
+{% endhighlight %}
