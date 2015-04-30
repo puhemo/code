@@ -44,6 +44,33 @@ The --save-dev will add gulp-inject as a development dependency in the package.j
 
 ##Creating the gulpfile.js
 
+var gulp = require('gulp');
+var gutil = require('gulp-util');
+var concat = require('gulp-concat');
+var minifyCss = require('gulp-minify-css');
+var rename = require('gulp-rename');
+var sh = require('shelljs');
+var inject = require('gulp-inject');
+
+var paths = {
+  javascript: ['./www/**/*.js', '!./www/js/app.js', '!./www/lib/**'],
+  css: ['./www/**/*.css', '!./www/css/ionic.app*.css', '!./www/lib/**']
+};
+
+gulp.task('default', ['index']);
+
+gulp.task('watch', function() {
+  gulp.watch([paths.javascript, paths.css], ['index']);
+});
+
+
+gulp.task('index', function(){
+    return gulp.src('./www/index.html')
+        .pipe(inject(gulp.src(paths.javascript, {read: false}), {relative: true}))
+        .pipe(inject(gulp.src(paths.css, {read: false}), {relative: true}))
+        .pipe(gulp.dest('./www'));
+})
+
 
 ##Adding Inject Task to gulpfile.js
 
