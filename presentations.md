@@ -31,9 +31,16 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 <p>&nbsp;</p>
 
-<h3>Silicon Valley Code Camp <span>- Silicon Valley, Ca (Ocotber 3rd and 4th)</span></h3>
+<h3>San Diego Code Camp <span>- San Diego, California (June 27th-28th, 2015)</span></h3>
 
-- [Ionic Framework](#ionic)
+- Note: Call for Speakers not open yet but I will be there.
+
+<p>&nbsp;</p>
+
+
+<h3>Silicon Valley Code Camp <span>- Silicon Valley, Ca (Ocotber 3rd-4th, 2015)</span></h3>
+
+- [Ionic Framework Overview](#ionic)
 
 <p>&nbsp;</p>
 
