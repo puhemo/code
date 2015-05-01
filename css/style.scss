@@ -1,14 +1,14 @@
 ---
 ---
 
-@import 'normalize';
-@import 'gridism';
-@import 'markdown';
+//@import 'normalize';
+//@import 'gridism';
+//@import 'markdown';
 @import 'variables';
 //@import 'buttons';
 @import 'anims';
 //@import 'monokai';
-@import 'mixins';
+//@import 'mixins';
 
 html, body {
   background-color: #eee;
@@ -535,6 +535,12 @@ hr {
 }
 
 @media screen and (max-width: 568px) {
+  code.language-text {
+    word-wrap: normal !important;
+    white-space: inherit !important;
+  }
+
+
   .site-avatar {
     display: none;
   }
@@ -684,6 +690,11 @@ hr {
 @media only screen and (max-width: 400px) {
   .about img {
     max-width: 100%;
+  }
+
+  code.language-text {
+    word-wrap: normal !important;
+    white-space: inherit !important;
   }
 }
 
