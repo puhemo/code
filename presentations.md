@@ -25,20 +25,6 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 ## Upcoming Speaking Engagements
 
-<p>&nbsp;</p>
-
-<h3>Nebraska Code Camp <span>- Lincoln, Ne (March 19th-21st, 2015)</span></h3>
-
-- [Chocolatey](#chocolatey)
-- [Developer Productivity in Visual Studio](#vsprod)
-
-<h3> Codepalous <span>- Louisville, Ky (April 27th-30th, 2015)</span></h3>
-
-- [Ionic Framework - How to Easily Build Hybrid Mobile Applications for Android and iOS (Half day workshop)](#ionic)
-- [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
-
-<p>&nbsp;</p>
-
 <h3>NDC Oslo <span>- Oslo, Norway (June 15th-19th, 2015)</span></h3>
 
 - [Vagrant](#vagrant) and [Chocolatey](#chocolatey) combined into a single talk. 
@@ -53,9 +39,20 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 ## Past Speaking Engagements
 
-<h3>Las Vegas Code Camp <span>- Las Vegas, Nv (February 21, 2015)</span></h3>
+<h3> Codepalous <span>- Louisville, Ky (April 27th-30th, 2015)</span></h3>
 
-- [Vagrant](#vagrant)
+- [Ionic Framework Workshop - Overview and Labs](#ionic)
+- [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
+
+<p>&nbsp;</p>
+
+
+<h3>Nebraska Code Camp <span>- Lincoln, Ne (March 19th-21st, 2015)</span></h3>
+
+- [Chocolatey](#chocolatey)
+- [Developer Productivity in Visual Studio](#vsprod)
+
+<p>&nbsp;</p>
 
 <h3>SoCal Code Camp <span>- Fullerton, Ca (March 7th & 8th, 2015)</span></h3>
 
@@ -66,6 +63,10 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 - Ionic Framework Part 2: Deep Dive (all demo no slides)
 
 <p>&nbsp;</p>
+<h3>Las Vegas Code Camp <span>- Las Vegas, Nv (February 21, 2015)</span></h3>
+
+- [Ionic Framework - How to Easily Build Hybrid Mobile Applications for Android and iOS (Half day workshop)](#ionic)
+- [Vagrant](#vagrant)
 
 <h3> Arizona Software Community <span>- Phoenix, Az (January 2015)</span></h3>
 
@@ -139,6 +140,7 @@ Slides: [http://www.slides.com/digitaldrummerj/ionic-framework](http://www.slide
 
 Demos: [https://github.com/digitaldrummerj/IonicFrameworkTalk](https://github.com/digitaldrummerj/IonicFrameworkTalk)
 
+Workshop Labs: [http://github.com/ionicworkshop](http://github.com/ionicworkshops)
 
 #### Additional Resources
 
