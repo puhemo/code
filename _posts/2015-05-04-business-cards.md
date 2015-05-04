@@ -3,7 +3,7 @@ published: true
 layout: post
 title: 'Purchasing Business Cards'
 categories: ['how-to']
-date: 2015-05-03
+date: 2015-05-03 03:00 pm
 ---
 
 If you are planning on going to any professional networking events, user groups, or speaking at events, you should have business cards with you.  Many times people think, I only need to have business cards if I am looking for a job.  This is far from the truth.  You should have business cards so that you can connect with the people that you have met.  People tend to meet lots of people at events and without a business card, it is difficult for people to remember who you are.  It is also a good way for people to be able to follow up with you.
