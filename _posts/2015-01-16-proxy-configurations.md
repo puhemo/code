@@ -9,6 +9,7 @@ excerpt: "How to set proxy configurations for various tools"
 ---
 
 **Updated 2015-Feb-01**:  Added running source command for Bash and Ruby Gems section
+**Updated 2015-May-07**:  Added the Ionic Start command
 
 When you are using npm, bower, and git when behind a proxy server you have to do a little bit of configuration.  Luckily it is super easy to do these configurations.  These instructions are for a windows machine.  All of the files below will need to be created in your user home directory c:\users\[Your User Name].
 
@@ -63,4 +64,10 @@ If you need to manually set it
 
 	export http://[Your Proxy]:[Proxy Port]
 	sudo gem install [your gem name]
+
+##Ionic Start Command
+
+In order to run the ionic start command behind a proxy, you need start the command out with the Proxy information.
+
+	PROXY=http://[Your Proxy]:[Proxy Port] ionic start [App Name] [Template Name]
 

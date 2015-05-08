@@ -56,10 +56,12 @@ Vagrant.configure(2) do |config|
        vb.customize ["modifyvm", :id, "--vram", "128"]
        vb.customize ["modifyvm", :id, "--usb", "on"]
        vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
-       vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects", "1"]
        vb.memory = 2048
        vb.cpus = 2
        vb.name = "IonicBox"
+       
+       # Need This If On Windows
+       vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
  end
 end
 {% endhighlight %}
@@ -112,10 +114,10 @@ vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--
 
 
 
-- Turn on Symlinks to the synced_folder above.  This is needed if your Host Operating System is Windows in order node/npm to work correctly.  
+- On Windows, You need to turn on Symlinks to the synced_folders.  This is needed if your Host Operating System is Windows in order node/npm to work correctly.  
 
 {% highlight  io %}
-vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects", "1"]
+vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
 {% endhighlight %}
 
 
@@ -147,12 +149,15 @@ vb.name = "IonicBox"
 
 ### Starting up the IonicBox and Getting logged in
 
-- Open a command prompt and navigate to the IonicBox folder that contains the VagrantFile.  Run command below. This command will take a while the first time you run it since it has to download the vagrant box container which is about 1 gig in size.
+1. Open a command prompt and navigate to the IonicBox folder that contains the VagrantFile.
+      * If on Windows, open the command prompt as an Administrator. 
+      * To open the command prompt as an administrator in Windows 8 go to the Start Menu Screen, type cmd, then ctrl+shift+click or ctrl+shift+enter   
+  
+1. Run command below. This command will take a while the first time you run it since it has to download the vagrant box container which is about 1 gig in size.
 
 {% highlight  io %}
 vagrant up
 {% endhighlight %}
-
 
 
 If you have the vb.gui = true in your VagrantFile, the first thing you will notice when you boot up the IonicBox is that it just comes to a command prompt and it leaves you wondering now what.  Luckily, this is exactly what we want and it is very easy to manage it.  The IonicBox basically just replaces the command prompt that we would normally use for all of the Ionic commands with a linux machine.  
@@ -176,7 +181,7 @@ On the IonicBox ssh connection:
 
 
 {% highlight  io %}
-cd vagrant_projects
+cd projects
 ionic start firstApp tabs && cd firstApp
 ionic serve
 {% endhighlight %}
@@ -196,10 +201,8 @@ We need to setup a symbolic link for the node modules folder since windows has a
 On the IonicBox from the firstApp folder run the following commands:
 
 {% highlight  io %}
-mkdir ~/node_modules
-cp package.json ~/package.json
-ls -s ~/node_modules node_modules
-cd ~/
+mkdir ~/node_modules_[Your Project]
+ln -s ~/node_modules_[Your Project] node_modules
 npm install
 {% endhighlight %}
 
@@ -241,46 +244,3 @@ vagrant destroy
 
 
  - Note that sometimes this leaves behind the directory that contained the Virtual Machine.  Before you can run vagrant up again, you will need to manually delete this directory.
-
-
-
-
-## Troubleshooting
-
-### Vagrant up complains about the shared folder symlink
-
-if you run into an error with vagrant up complaining about the virtual box symlink config, you can manually do the same command with VBoxManage and remove the line from the VagrantFile for the symlink.  Below are the steps
-
-- Make sure that the IonicBox is powered off.  
-- from the command prompt run:
-
-{% highlight  io %}
-"c:\program files\oracle\virtualbox\VBoxManage" setextradata "[Your VM Box Name] VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects 1
-{% endhighlight %}
-
-
-
-- To validate the configuration change run:
-
-{% highlight  io %}
-"c:\program files\oracle\virtualbox\VBoxManage" getextradataOn VM  "[Your VM Box NameOn VM ]" enumerate
-{% endhighlight %}
-
-
-
-- It should include a line such as 
-
-{% highlight  io %}
-Key: VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects, Value: 1
-{% endhighlight %}
-
-
-
-- Remove the following line from the VagrantFile
-
-{% highlight  io %}
-vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/home_vagrant_vagrant_projects", "1"]
-{% endhighlight %}
-
-
-
