@@ -10,6 +10,7 @@ excerpt: "How to set proxy configurations for various tools"
 
 **Updated 2015-Feb-01**:  Added running source command for Bash and Ruby Gems section
 **Updated 2015-May-07**:  Added the Ionic Start command
+**Updated 2015-May-08**:  Added the Android SDK 
 
 When you are using npm, bower, and git when behind a proxy server you have to do a little bit of configuration.  Luckily it is super easy to do these configurations.  These instructions are for a windows machine.  All of the files below will need to be created in your user home directory c:\users\[Your User Name].
 
@@ -71,3 +72,9 @@ In order to run the ionic start command behind a proxy, you need start the comma
 
 	PROXY=http://[Your Proxy]:[Proxy Port] ionic start [App Name] [Template Name]
 
+##Android SDK
+
+The android SDK uses ~/.android/androidtool.cfg file to define the proxy information.  If the file does not exist, go ahead and create it.
+
+	http.proxyPort=[Your Proxy]
+	http.proxyHost=[Proxy Port]
