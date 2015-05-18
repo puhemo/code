@@ -13,3 +13,7 @@ sitemap: false
 * Add date if you need a date other than the file name
 * View it in the browser to make sure it looks right.
 * ping google and bing with site map updates 
+
+http://www.google.com/webmasters/sitemaps/ping?sitemap=http://digitaldrummerj.me/sitemap.xml
+
+http://www.bing.com/webmaster/ping.aspx?siteMap=http://digitaldrummerj.me/sitemap.xml
