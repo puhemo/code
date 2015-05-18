@@ -3,8 +3,10 @@ layout: post
 title: Javascript Debugging Made Easier with Sourcemaps
 published: true
 categories: ['programming', 'mobile-development', 'How-To', 'ionic', 'gulp']
-date: 2015-05-18
+date: 2015-05-18 2:57 pm
 ---
+
+Updated: Add clean task that uses rimraf to delete the bundle.min.js file if it already exist.  Without this it would just append to the existing bundle.min.js file.
 
 When you release your web site to production, you should minify and concatenate your javascript files.  You will have much better performance by doing this but unfortunately debugging becomes difficult with the minified code as it shortens all of the variable and method names.  Luckily there is a simple solution to tell the browser developer tools to use the original javascript files when debugging the code, called source maps. 
 
@@ -21,6 +23,7 @@ To generate the sourcemaps we are going to gulp with the gulp-concat, gulp-uglif
         $ npm install --save gulp-concat
         $ npm install --save-dev gulp-uglify  
         $ npm install --save-dev gulp-sourcemaps
+        $ npm install --save-dev rimraf
 
 1. Create a file called gulpfile.js if you don't already have one.
 1. Add the required gulp modules to the gulpfile.js.
@@ -30,6 +33,7 @@ To generate the sourcemaps we are going to gulp with the gulp-concat, gulp-uglif
         var concat = require('gulp-concat');
         var uglify = require('gulp-uglify');
         var sourcemaps = require('gulp-sourcemaps');
+        var rimraf = require('rimraf');
 
 1. Create the input paths variable to hold what files we should minify/concatenate.  I keep my files in the www folder.  The ! in the 2nd input path means to exclude this path.  I typically keep my vendor skips like angular, ionic, jquery, etc in the lib folder, so I don't want to minify those scripts again.
 
@@ -43,15 +47,23 @@ To generate the sourcemaps we are going to gulp with the gulp-concat, gulp-uglif
             'javascript': './www/js'
           };
 
-1. Now we need to create the actual gulp task that does the minification and source map creation.  This tasks takes  the inputPaths.javscript files, combines them, minifies them, creates the source maps and save it all as a file called bundle.min.js
+1. Now we need to create the actual gulp task that does the minification and source map creation.  This tasks takes  the inputPaths.javscript files, combines them, minifies them, creates the source maps and save it all as a file called bundle.min.js.  By default the gulp.dest call will append the minified text to the bundle.min.js instead of overwriting it.  Instead we need to call the clean task task first which will delete the minified file if it already exist.
 
-          gulp.task('build-js', function() {
+          var minifiedJsFileName = 'bundle.min.js';
+          
+          gulp.task('build-js', ['clean'], function() {
             return gulp.src(inputPaths.javascript)
               .pipe(sourcemaps.init())
-              .pipe(concat('bundle.min.js'))
+              .pipe(concat(minifiedJsFileName))
               .pipe(uglify())
               .pipe(sourcemaps.write())
               .pipe(gulp.dest(outputPaths.javascript));
+          });
+
+1. Create the clean task
+
+          gulp.task("clean", function (cb) {
+            rimraf(outputPaths.javascript + '/' + minifiedJsFileName, cb);
           });
 
 1. Once the task is created, we want to setup a gulp watch to regenerate the file when any of the javascript changes.
