@@ -43,6 +43,14 @@ In Git terms, this is called cloning a repository and the command to use is git 
 
     git remote set-url origin [https or ssh url]
 
+### Get Latest Changes but don't merge
+
+	git fetch
+	
+### Get Latest Changes and Merge
+
+	git pull
+	
 ### Generate SSH Keys
 
 **Adding  Key**
@@ -72,6 +80,7 @@ Full details at [https://help.github.com/articles/generating-ssh-keys/](https://
 
 	Long Form: git status  
 	Short Form: git status -s
+	Show Files: git status -u or to always show git config status.showuntrackedfile=yes 
 
 
 ### Turning a directory into a repository on the local machine
@@ -86,12 +95,23 @@ Full details at [https://help.github.com/articles/generating-ssh-keys/](https://
 
 	git add .
 
+### Reverting a file that has changes not been added or staged 
+
+	git checkout [file name]
+	
+### Unadding a file that has been added and not committed but leave file
+
+	git reset
+	
+### Unadding a file that has been added and not committed but delete file
+
+	git reset --hard
 
 ### Ignoring files
 
 - create .gitignore file 
 - starter files available at [https://github.com/github/gitignore](https://github.com/github/gitignore)
-
+- Create a .gitignore file for any number of languages at [http://gitignore.io](http://gitignore.io) 
   
 ### Committing files to the local repository
 
@@ -109,6 +129,7 @@ Full details at [https://help.github.com/articles/generating-ssh-keys/](https://
   
 	git push
   
+### Merge 
 ## Storing work that you want to keep but not commit
   
 ### Storing the work
@@ -129,6 +150,10 @@ Full details at [https://help.github.com/articles/generating-ssh-keys/](https://
   
 ## Branching
   
+### See Available Branch Including Remote Branches
+
+	git branch -v
+	
 ### Creating a Branch
   
 	git branch [Branch Name]
@@ -137,6 +162,10 @@ Full details at [https://help.github.com/articles/generating-ssh-keys/](https://
   
 	git checkout [Branch Name]
   
+### Switch to last branch you were on
+
+	git checkout -
+	
 ### Merging a branch into the master (HEAD)
   
 	First make sure you are on the master branch: git checkout master
