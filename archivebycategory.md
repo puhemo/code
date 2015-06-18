@@ -9,14 +9,12 @@ sitemap: false
 {% assign sorted_posts = site.posts | sort: 'title' %}
 <div>
 {% for tag in tags %}
- <span class="site-tag">
-    <a href="#{{ tag | first | slugify }}">
-            {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
-    </a>
-</span>
+    <a class="category" href="#{{ tag | first | slugify }}">
+            {{ tag[0] | replace:'-', ' ' }}({{ tag | last | size }})
+    </a> &nbsp;
 {% endfor %}
 </div>
-
+<p>&nbsp;</p>
 <div id="index">
 
 {% for tag in tags %}
