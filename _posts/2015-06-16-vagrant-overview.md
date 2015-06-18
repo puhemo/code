@@ -3,7 +3,7 @@ published: true
 layout: post
 title: 'Vagrant - Easy Virtual Machine Management'
 categories: ['How-To', 'vagrant']
-date: 2015-06-18
+date: 2015-06-18 00:00
 ---
 
 {% include vagrantseries_top.html %}
@@ -12,9 +12,10 @@ date: 2015-06-18
 
 Vagrant allows you to create and manage lightweight reproducible virtual machines.   
 
-Essentially,  all of the configurations to create and configure a virtual machine are kept separate from the virtual machine.  This allows you to delete the virtual machine and then re-create it with all of the same configurations at any point.   
+Essentially, all of the configurations to create and configure a virtual machine are kept separate from the virtual machine.  This allows you to delete the virtual machine and then re-create it with all of the same configurations at any point.   
 
-No longer do you have to be afraid to delete a virtual machine for a project that isn't active.  You can also give the Vagrant configuration to a co-worker or move it to another machine and be assured that everything will get setup correctly when you create the virtual machine on the new machine.  
+No longer do you have to be afraid to delete a virtual machine for a project that isn't active.  You can also give the Vagrant configuration to a co-worker or move it to another machine and be assured that everything will get setup correctly when you create the virtual machine on the new machine.
+  
 Before, we can see Vagrant in action, we first need to install a little bit of software onto your machine.
 
 ##Getting Started
@@ -22,6 +23,7 @@ Before, we can see Vagrant in action, we first need to install a little bit of s
 In this section, we will install all of the software needed to be able to Vagrant.  
 
 There are 3 pieces of software that we need:
+
 1. Chocolatey
 1. Virtualbox
 1. Vagrant
@@ -29,12 +31,13 @@ There are 3 pieces of software that we need:
 ###Chocolatey
 
 Chocolatey is a Windows software install manager.  It solves several common issues with software installed:
-	* Where do I find the installer for software?
-	* How do I find the 64 bit vs 32 bit version?
-	* What default options should I select?
-	* Where should  I install the software to?
-	* etc
-	* etc
+
+* Where do I find the installer for software?
+* How do I find the 64 bit vs 32 bit version?
+* What default options should I select?
+* Where should  I install the software to?
+* etc
+* etc
 
 To install Chocolatey, open an administrative command prompt and  run the command below or get the command right on the home for Chocolatey at  [http://chocolatey.org](http://chocolatey.org)  .
 
@@ -48,7 +51,7 @@ To install a package, you would run the command:
 
 	choco install [package name]
 	
-You can find the package names on the Chocolatey Gallery at [http://chocolatey.org](http://chocolatey.org].  
+You can find the package names on the Chocolatey Gallery at [http://chocolatey.org](http://chocolatey.org).  
 
 Next we are going to install Virtualbox using Chocolatey.
 
@@ -59,6 +62,7 @@ For this tutorial, I am using Virtualbox as the virtual machine provider.  You c
 If you already have Virtualbox installed, you can skip this step.  
 
 Open an administrative command prompt and run the following Chocolatey command.  
+
 	choco install virtualbox.extensionpack
 	
 The command above will also instal Virtualbox as it is listed as a dependency for the virtualbox.extensionpack package.
@@ -77,8 +81,8 @@ Vagrant create a file called VagrantFile for each virtual machine,  The VagrantF
 
 Vagrant starts with a base box which nothing more than the a portable skelton for building virtual machine.  There are 2 types of boxes for Vagrant.
 
-1. Pre-Build:  meaning that everything that you need is installed on the box.  You just create the vagrant machine and are ready to start developing.
-1. Base OS: just the OS is installed and as part of the  creation of the vagrant machine, you install all of the needed software.
+1. **Pre-Build:**  meaning that everything that you need is installed on the box.  You just create the vagrant machine and are ready to start developing.
+1. **Base OS:** just the OS is installed and as part of the  creation of the vagrant machine, you install all of the needed software.
 
 For this tutorial, we are going to use the Base OS box and build out the box with all of the software we need.
 
@@ -96,7 +100,7 @@ For this tutorial, we are going to use the box "opentable/win-8.1-enterprise-amd
 
 	vagrant init "opentable/win-8.1-enterprise-amd64-nocm"
 	
-Additional boxes can be from the cloud at [ https://atlas.hashicorp.com/boxes/search]( https://atlas.hashicorp.com/boxes/search)
+Additional boxes can be from the cloud at [https://atlas.hashicorp.com/boxes/search]( https://atlas.hashicorp.com/boxes/search)
 
 ###Configuring the VagrantFile
 
@@ -150,6 +154,7 @@ Now we are ready to start up the machine and start using it.
 	* The first time you run this command using a new base box, it will take a bit as it has to download the box from the cloud.  
 
 Now that the machine is started up, there are some additional Vagrant commands that you will need to know to be able to hibernate, reboot, shutdown, and delete the virtual machine
+
 ##Vagrant Commands
 
 The commands below all need to run from the command line from within the MyFirstMachine folder.
@@ -183,5 +188,7 @@ The commands below all need to run from the command line from within the MyFirst
 You have just create and started up your first Vagrant managed Virtual machine.  This is only the beginning of what you can do with Vagrant.  In future lessons in this series we will install software and configure the OS as part of the vagrant up command, we will create multiple machine with a single vagrant command, create azure virtual machines, and create own own base boxes.
 
 The next lesson, will cover the start of provisioning.  We will install Chocolatey as part of the vagrant up command.
+
+Next Lesson: [Provisioning Introduction]({{site.url}}/vagrant-provisioning-intro)
 
 {% include vagrantseries_bottom.html %}

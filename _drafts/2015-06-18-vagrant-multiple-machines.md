@@ -1,11 +1,21 @@
 ---
 published: true
 layout: post
-title: 'Vagrant - Multi-Machines from External File'
+title: 'Vagrant - Multiple Machines'
 categories: ['How-To', 'vagrant']
-date: 2015-3-28
+date: 2015-06-18 06:00
 ---
 
+{% include vagrantseries_top.html %}
+
+Previous Lesson: [Network Options]({{site.url}}/vagrant-networking-options)
+
+Outline:
+* Overview
+* ??
+* Next Steps
+
+##NOTES:
 
 ###Machine Status
 
@@ -41,3 +51,7 @@ Use regular expression to bring up machines that match a string in the virtual m
 
 	vagrant up /ie8/
 
+
+Next Lesson: [Azure Virtual Machines]({{site.url}}/vagrant-azure-machines)
+
+{% include vagrantseries_bottom.html %}
