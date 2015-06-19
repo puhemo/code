@@ -5,10 +5,11 @@ title: 'Vagrant - Install Boxstarter'
 categories: ['How-To', 'vagrant']
 date: 2015-06-18 03:00
 ---
-
-{% include vagrantseries_top.html %}
+Welcome to the Vagrant lesson on installing Boxstarter as part of the Vagrant provisioning process.
 
 Previous Lesson: [Provisioning with Chocolatey]({{site.url}}/vagrant-provisioning-with-chocolatey)
+
+{% include vagrantseries_top.html %}
 
 ## What does Boxstarter give you?
 

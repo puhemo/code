@@ -3,8 +3,9 @@ published: true
 layout: post
 title: 'Vagrant - Easy Virtual Machine Management'
 categories: ['How-To', 'vagrant']
-date: 2015-06-18 00:00
+date: 2015-06-15 00:00
 ---
+Welcome to an overview of Vagrant and creating of your first Vagrant machine.  
 
 {% include vagrantseries_top.html %}
 

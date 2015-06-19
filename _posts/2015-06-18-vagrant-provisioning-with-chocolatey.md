@@ -3,12 +3,14 @@ published: true
 layout: post
 title: 'Vagrant - Provisioning With Chocolatey'
 categories: ['How-To', 'vagrant']
-date: 2015-06-18 02:00
+date: 2015-06-17 02:00
 ---
+Welcome to the Vagrant lesson on installing Chocolatey as part of the Vagrant provisioning process.
+
+Previous Lesson: [Provisioning Introduction]({{site.url}}/vagrant-provisioning-intro)
 
 {% include vagrantseries_top.html %}
 
-Previous Lesson: [Provisioning Introduction]({{site.url}}/vagrant-provisioning-intro)
 
 ##Overview
 
