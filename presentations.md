@@ -25,26 +25,31 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 ## Upcoming Speaking Engagements
 
-<h3>NDC Oslo <span>- Oslo, Norway (June 15th-19th, 2015)</span></h3>
-
-- [Vagrant](#vagrant) and [Chocolatey](#chocolatey) combined into a single talk. 
-
-<p>&nbsp;</p>
-
 <h3>San Diego Code Camp <span>- San Diego, California (June 27th-28th, 2015)</span></h3>
 
-- Note: Call for Speakers not open yet but I will be there.
+- [Use Your Existing Web Skills to Create Native Mobile Apps with the Ionic Framework ](#ionic)
+- [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
+- [DevOps Yourself:  Fast Track Your Windows Dev Environment Setup.](#vagrant)
+- [Gulp for the .Net Developer](#gulp)
 
 <p>&nbsp;</p>
 
 
 <h3>Silicon Valley Code Camp <span>- Silicon Valley, Ca (Ocotber 3rd-4th, 2015)</span></h3>
 
+
 - [Ionic Framework Overview](#ionic)
 
 <p>&nbsp;</p>
 
 ## Past Speaking Engagements
+
+
+<h3>NDC Oslo <span>- Oslo, Norway (June 15th-19th, 2015)</span></h3>
+
+- [DevOps Yourself:  Fast Track Your Windows Dev Environment Setup.](#vagrant)  
+
+<p>&nbsp;</p>
 
 <h3> Codepalous <span>- Louisville, Ky (April 27th-30th, 2015)</span></h3>
 
@@ -138,12 +143,20 @@ Demo: [https://github.com/digitaldrummerj/ChocolateyTalk](https://github.com/dig
 - BoxStarter: [http://www.boxstarter.org](http://www.boxstarter.org)
 
 
+###<a name="gulp"></a>Gulp for the .Net Developer
+
+With the release of Visual Studio 2015 Gulp has become a standard part of the workflow for .Net developers.  Gulp has a lot of functionality available such as minification, injecting script tags into html, running js hint, creating source maps, generating css from sass files, plus much more.  In this session, you will learn the basics of gulp,  how it integrates into Visual Studio, and how to create your own gulpfile to automate common tasks. You will walk away with a starter gulp file to get you on your way to fully utilizing gulp.
+
+Slides and Source Code: [https://github.com/digitaldrummerj/GulpTalk](https://github.com/digitaldrummerj/GulpTalk)
+
+####Additional Resources
+- [Gulp Home Page](http://gulpjs.com)
 
 ### <a name="ionic"></a>Ionic - Revolutionizing Hybrid Mobile Application Development
 
 If you want to make mobile web applications that look, feel and perform like native application than you need to use the Ionic Framework. The Ionic Framework is focused on making hybrid web applications feel exactly like a native application. Ionic uses web technology that you already know and love such as Html 5, Angular JS, and CSS 3. The Ionic Framework comes out of the box with lots of well designed code and tools to quickly make beautiful and fluid apps for Android and iOS. Hybrid mobile web development will never be the same again. You will walk away from this session with everything you need to know to immediately start developing an application using Ionic and learn to love mobile development again.
 
-Slides: [http://www.slides.com/digitaldrummerj/ionic-framework](http://www.slides.com/digitaldrummerj/ionic-framework)
+Slides: [http://www.slides.com/digitaldrummerj/ionic](http://www.slides.com/digitaldrummerj/ionic)
 
 Demos: [https://github.com/digitaldrummerj/IonicFrameworkTalk](https://github.com/digitaldrummerj/IonicFrameworkTalk)
 
@@ -193,12 +206,16 @@ Demo: [https://github.com/digitaldrummerj/SideWaffleTalks](https://github.com/di
 
 Does this ever happen to you? The configuration takes forever to remember, document and configure. You can't seem to reproduce the configuration on another developers machine? Then vagrant my friend is for you.  Vagrant will change how you work.    You will forever say goodbye to the "works on my machine" excuse for the development environment for everyone on your team.
 
-Slides: [http://www.slides.com/digitaldrummerj/devopsyourself](http://www.slides.com/digitaldrummerj/devopsyourself)
+Vagrant Only Slides: [http://www.slides.com/digitaldrummerj/devopsyourself](http://www.slides.com/digitaldrummerj/devopsyourself)
 
-Demo: [https://github.com/digitaldrummerj/VagrantTalk](https://github.com/digitaldrummerj/VagrantTalk)
+Vagrant and Chocolatey Slides: [http://slides.com/digitaldrummerj/devopsyourself-ndcoslo/](http://slides.com/digitaldrummerj/devopsyourself-ndcoslo/)
+
+Examples: [https://github.com/digitaldrummerj/VagrantTalk](https://github.com/digitaldrummerj/VagrantTalk)
 
 #### Additional Resources
 - [vagrantup.com](http://www.vagrantup.com)
+- [Chocolatey Gallery (chocolatey.org)](http://chocolatey.org)
+- [Boxstarter.org](http://boxstarter.org)
 
 ### <a name="vsprod"></a>How to maximize your productivity potential in Windows and Visual Studio with a few simple shortcuts and extensions
 
