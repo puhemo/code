@@ -10,7 +10,7 @@ sitemap:
     lastmod: 2015-02-05T16:31:30+05:30
 ---
 
-I started really getting into speaking publicly in early 2014 after speaking at the [Southeast Valley .NET User Group](http://www.meetup.com/sevdnug/) in Chandler, Arizona.  I had suggested a couple of topics for future meetings that I wanted to learn about to the user group organizer, [Rob Richardson](http://www.robrich.org) and like a bullet he immediately shot back, "when would you like to present these topics?".  I wasn't quite prepared for that response but in retrospect if was the best response he could have given to me.  I had been an attendee of this user group for awhile but hadn't done a presentation there in years.  So after thinking about it for a few minutes I thought I got nothing to lose and asked for a few months to learn the topics.
+I started really getting into speaking publicly in early 2014 after speaking at the [Southeast Valley .NET User Group](http://www.meetup.com/sevdnug/) in Chandler, Arizona.  I had suggested a couple of topics for future meetings that I wanted to learn about to the user group organizer, [Rob Richardson](http://www.robrich.org) and like a bullet he immediately shot back, "when would you like to present these topics?".  I wasn't quite prepared for that response but in retrospect it was the best response he could have given to me.  I had been an attendee of this user group for awhile but hadn't done a presentation there in a few years.  So after thinking about it for a few minutes I thought I got nothing to lose and asked for a few months to learn the topics.
 
 Over the next couple of months I worked on learning the ins and outs of [Nuget](http://www.nuget.org) and [Chocolatey](http://www.chocolatey.org) as well watching tips and tricks on speaking from speakers I admired like [Scott Hanselman](http://www.hanselman.com/) and [John Papa](http://www.johnpapa.net/).  The presentations both went amazingly well with a lot of great feedback from audience and I was immediately hooked.  Since that initial presentations I have presented almost 20 sessions and counting.  I have a passion for coding and for teaching; speaking at developer community events allows me to combine these two.
 
@@ -25,15 +25,26 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 ## Upcoming Speaking Engagements
 
-<h3>San Diego Code Camp <span>- San Diego, California (June 27th-28th, 2015)</span></h3>
+<h3>Northwest Valley .NET User Group <span>- Glendale, Az (July 22, 2015)</span></h3>
 
-- [Use Your Existing Web Skills to Create Native Mobile Apps with the Ionic Framework ](#ionic)
-- [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
-- [DevOps Yourself:  Fast Track Your Windows Dev Environment Setup.](#vagrant)
-- [Gulp for the .Net Developer](#gulp)
+- [http://nwvdnug.org/](http://nwvdnug.org/)
+- [Ionic Framework Overview](#ionic)
 
 <p>&nbsp;</p>
 
+<h3>Southeast Valley .NET User Group <span>- Chandler, Az (July 23, 2015)</span></h3>
+
+- [http://www.meetup.com/sevdnug/](http://www.meetup.com/sevdnug/)
+- [Ionic Framework Overview](#ionic)
+
+<p>&nbsp;</p>
+
+<h3>Las Vegas .NET User Group <span>- Las Vegas, Nv (July 30, 2015)</span></h3>
+
+- [http://www.dotnetgroup.org/](http://www.dotnetgroup.org/) or [https://www.facebook.com/dotnetgroupdotorg](https://www.facebook.com/dotnetgroupdotorg)
+- [Developer Productivity in Visual Studio 2015](#vsprod)
+
+<p>&nbsp;</p>
 
 <h3>Silicon Valley Code Camp <span>- Silicon Valley, Ca (Ocotber 3rd-4th, 2015)</span></h3>
 
@@ -43,6 +54,15 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 <p>&nbsp;</p>
 
 ## Past Speaking Engagements
+
+<h3>San Diego Code Camp <span>- San Diego, California (June 27th-28th, 2015)</span></h3>
+
+- [Use Your Existing Web Skills to Create Native Mobile Apps with the Ionic Framework ](#ionic)
+- [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
+- [DevOps Yourself:  Fast Track Your Windows Dev Environment Setup.](#vagrant)
+- [Gulp for the .Net Developer](#gulp)
+
+<p>&nbsp;</p>
 
 
 <h3>NDC Oslo <span>- Oslo, Norway (June 15th-19th, 2015)</span></h3>
