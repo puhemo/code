@@ -8,7 +8,7 @@ date: 2015-06-18 05:00
 
 {% include vagrantseries_top.html %}
 
-Previous Lesson: [Installing All of the Your Software]({{site.url}}/vagrant-installing-your-software)
+Previous Lesson: [Installing All of the Your Software]({{site.url}}/vagrant-behind-proxy-server)
 
 Outline:
 * Overview
