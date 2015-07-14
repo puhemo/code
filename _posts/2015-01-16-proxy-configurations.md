@@ -19,7 +19,33 @@ When you are using npm, bower, and git when behind a proxy server you have to do
 
 All of these files start with a period and have no file extension.  Unfortunately you can create these in Windows Explorer and it doesn't support starting a file with a period.  You can create them though in notepad or your text editor of choice.  Just make sure a file extension doesn't get added to the file.
 
-## Bash Shell
+##Windows Command Prompt
+
+###Current Session
+
+	set http_proxy=[Your Proxy]:[Proxy Port]
+	set https_proxy=[Your Proxy]:[Proxy Port]
+
+###Unset Current Session
+
+	set http_proxy=
+	set https_proxy=
+
+###Globally
+
+	setx http_proxy=[Your Proxy]:[Proxy Port]
+	setx https_proxy=[Your Proxy]:[Proxy Port]
+
+Need to close and re-open command prompt for settings to take effect
+
+###Unset Globally
+
+	setx http_proxy=""
+	setx https_proxy=""
+
+Need to close and re-open command prompt for settings to take effect
+
+##Bash Shell
  File Name: .bash_profile or .bashrc
 
 
@@ -46,20 +72,19 @@ Note:   After updated the .bash_profile or .bashrc, you should run one of the fo
       
 ## Git
 
-Set Proxy:
+###Set Proxy:
 
 	git config --add http.proxy http://[Your Proxy]:[Proxy Port]
 	git config --add https.proxy http://[Your Proxy]:[Proxy Port]
 
-Unset Proxy:
+###Unset Proxy:
 
 	git config --unset http.proxy
 	git config --unset https.proxy
 
 
 
-Manually Update .gitconfig
-
+###Manually Update .gitconfig
 
 	[http]
 		proxy = http://[Your Proxy]:[Proxy Port]
@@ -67,7 +92,23 @@ Manually Update .gitconfig
 		proxy = http://[Your Proxy]:[Proxy Port]
 
 ## NPM
- File Name: .npmrc
+
+###Set Proxy:
+	npm config set https-proxy http://[Your Proxy]:[Proxy Port]
+	npm config set proxy http://[Your Proxy]:[Proxy Port]
+
+###Unset Proxy:
+
+	npm config delete https-proxy
+	npm config delete proxy
+
+###Get Proxy:
+
+	npm config get https-proxy
+	npm config get proxy
+
+
+###Manually Update .npmrc
 
 
 	proxy=http://[Your Proxy]:[Proxy Port]
