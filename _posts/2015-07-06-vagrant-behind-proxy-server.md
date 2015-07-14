@@ -3,7 +3,7 @@ published: true
 layout: post
 title: 'Vagrant - Behind A Proxy Server'
 categories: ['How-To', 'vagrant']
-date: 2015-07-08 05:00
+date: 2015-07-13 22:00
 ---
 
 {% include vagrantseries_top.html %}
@@ -85,6 +85,7 @@ To configure global add the code snippet below to VagrantFile at .vagrant.d/Vagr
 
 ##Next Steps
 
-Next Lesson: [Multiple Machines]({{site.url}}/vagrant-multiple-machines)
+Now you have everything you need to configure Vagrant to work from behind a proxy server.  In the next lesson we will cover the different networking options for Vagrant.    
+
 
 {% include vagrantseries_bottom.html %}
