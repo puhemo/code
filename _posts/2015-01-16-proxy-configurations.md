@@ -28,7 +28,7 @@ All of these files start with a period and have no file extension.  Unfortunatel
 	export npm_config_proxy=[Your Proxy]:[Proxy Port]
 	export npm_config_https_proxy=[Your Proxy]:[Proxy Port]
 
-Note:   After updated the .bash_profile or .bashrc, you should run one of teh following commands to make the configuration active for the current session.
+Note:   After updated the .bash_profile or .bashrc, you should run one of the following commands to make the configuration active for the current session.
 
 	source ~/.bashrc
 	or
@@ -45,7 +45,20 @@ Note:   After updated the .bash_profile or .bashrc, you should run one of teh fo
 	}
       
 ## Git
- File Name: .gitconfig
+
+Set Proxy:
+
+	git config --add http.proxy http://[Your Proxy]:[Proxy Port]
+	git config --add https.proxy http://[Your Proxy]:[Proxy Port]
+
+Unset Proxy:
+
+	git config --unset http.proxy
+	git config --unset https.proxy
+
+
+
+Manually Update .gitconfig
 
 
 	[http]

@@ -202,3 +202,24 @@ Full details at [https://help.github.com/articles/generating-ssh-keys/](https://
 
 ### Deleting Remote Branch
 	git push origin --delete [branch name]
+
+##Proxy Settings
+
+See Post [{{site.url}}/proxy-configurations/]({{site.url}}/proxy-configurations/) on configuring your proxy settings with Git
+
+##Configurations
+
+###Listing of Configurations:
+
+	git config -l
+	git config -l --global
+	git config -l --system
+	git config -l --local
+
+###Set Configuration
+
+	git config --add [variable name] [value]
+
+###Unset Configuration
+
+	git config --unset [variable name]
