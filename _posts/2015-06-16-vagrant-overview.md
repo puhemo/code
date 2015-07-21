@@ -72,7 +72,7 @@ The command above will also instal Virtualbox as it is listed as a dependency fo
 
 To install Vagrant, from the administrative command prompt, run the following Chocolatey command.
 
-	choco install vagant
+	choco install vagrant
 
 We are now ready to create our first virtual machine using Vagrant.
 	
