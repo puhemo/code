@@ -25,12 +25,6 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 ## Upcoming Speaking Engagements
 
-<h3>Northwest Valley .NET User Group <span>- Glendale, Az (July 22, 2015)</span></h3>
-
-- [http://nwvdnug.org/](http://nwvdnug.org/)
-- [Ionic Framework Overview](#ionic)
-
-<p>&nbsp;</p>
 
 <h3>Southeast Valley .NET User Group <span>- Chandler, Az (July 23, 2015)</span></h3>
 
@@ -54,6 +48,14 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 <p>&nbsp;</p>
 
 ## Past Speaking Engagements
+
+<h3>Northwest Valley .NET User Group <span>- Glendale, Az (July 22, 2015)</span></h3>
+
+- [http://nwvdnug.org/](http://nwvdnug.org/)
+- [Ionic Framework Overview](#ionic)
+
+<p>&nbsp;</p>
+
 
 <h3>San Diego Code Camp <span>- San Diego, California (June 27th-28th, 2015)</span></h3>
 
@@ -176,7 +178,7 @@ Slides and Source Code: [https://github.com/digitaldrummerj/GulpTalk](https://gi
 
 If you want to make mobile web applications that look, feel and perform like native application than you need to use the Ionic Framework. The Ionic Framework is focused on making hybrid web applications feel exactly like a native application. Ionic uses web technology that you already know and love such as Html 5, Angular JS, and CSS 3. The Ionic Framework comes out of the box with lots of well designed code and tools to quickly make beautiful and fluid apps for Android and iOS. Hybrid mobile web development will never be the same again. You will walk away from this session with everything you need to know to immediately start developing an application using Ionic and learn to love mobile development again.
 
-Slides: [http://www.slides.com/digitaldrummerj/ionic](http://www.slides.com/digitaldrummerj/ionic)
+Slides: [http://www.slides.com/digitaldrummerj/ionic](http://www.slides.com/digitaldrummerj/ionic-July-2015)
 
 Demos: [https://github.com/digitaldrummerj/IonicFrameworkTalk](https://github.com/digitaldrummerj/IonicFrameworkTalk)
 
@@ -191,6 +193,26 @@ Workshop Labs: [http://github.com/ionicworkshop](http://github.com/ionicworkshop
 - Ionic Forum: [http://forum.ionicframework.com/](http://forum.ionicframework.com/)
 - Ionic Twitter: [http://www.twitter.com/ionicframework](http://www.twitter.com/ionicframework)
 - Ionic Creator: [https://creator.ionic.io/](https://creator.ionic.io/)
+
+[Ionicons - 600+ free icons](http://Ionicons.com/)
+
+[Must Have Plugins For Ionic](http://www.gajotres.net/must-have-plugins-for-ionic-framework/)
+
+[List of Comprehensive Starter Templates](http://www.gajotres.net/a-comprehensive-list-of-ionic-starter-apps/)
+
+[Horizontal List Scroll Demo](http://codepen.io/drewrygh/pen/jEJGLx)
+
+[Swipeable Cards](http://devdactic.com/swipeable-cards-ionic/)
+
+[Using Twitter Api with Ionic](http://devdactic.com/twitter-rest-api-angularjs/)
+
+[Shrinking Headers](http://devdactic.com/shrinking-headers-with-ionic/)
+
+[Ionic cheatsheet](http://devdactic.com/ionic-cheatsheet/)
+
+[Monitor Battery Status](https://blog.nraboy.com/2015/07/monitor-device-battery-status-using-ionic-framework/)
+
+
 
 ### <a name="nuget"></a>Nuget is easier than you think and you should be using it as both a consumer and creator of packages
 
