@@ -178,7 +178,7 @@ Slides and Source Code: [https://github.com/digitaldrummerj/GulpTalk](https://gi
 
 If you want to make mobile web applications that look, feel and perform like native application than you need to use the Ionic Framework. The Ionic Framework is focused on making hybrid web applications feel exactly like a native application. Ionic uses web technology that you already know and love such as Html 5, Angular JS, and CSS 3. The Ionic Framework comes out of the box with lots of well designed code and tools to quickly make beautiful and fluid apps for Android and iOS. Hybrid mobile web development will never be the same again. You will walk away from this session with everything you need to know to immediately start developing an application using Ionic and learn to love mobile development again.
 
-Slides: [http://www.slides.com/digitaldrummerj/ionic](http://www.slides.com/digitaldrummerj/ionic-july-2015)
+Slides: [http://www.slides.com/digitaldrummerj/ionic-july-2015](http://www.slides.com/digitaldrummerj/ionic-july-2015)
 
 Demos: [https://github.com/digitaldrummerj/IonicFrameworkTalk](https://github.com/digitaldrummerj/IonicFrameworkTalk)
 
