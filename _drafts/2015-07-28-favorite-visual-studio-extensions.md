@@ -1,6 +1,17 @@
+---
+published: true
+layout: post
+title: 'Favorite Visual Studio Extensions'
+categories: ['productivity', 'programming', 'visual studio']
+date: 2015-07-28 06:00
+---
 
-* resharper 
-* Web essentials 
+* Resharper 
+* Web essentials
+* GhostDoc
+    * Auto generate Xml doc comments 
+    * default shortcut: ctrl+shift+d
+     
 * I hate regions 
        * auto expand regions when file opens
        * make the region text smaller and blend more into background so that it stays out of the way
@@ -16,7 +27,14 @@
      * start new instance with debugging
      * sync zoom levels between pages
      * stop build on first error
-* startup switcher
+* Switch Startup Project
       * easily configure different startup project configurations and be able to switch between them or a single project.
-
+* Layout O Rama
+* VS Commands
+* Task Runner Explorer
+* File Nesting
+* Add New File
+* Package Intellisense
+* Open Cmd
+* ?? More Mads from Slides
 
