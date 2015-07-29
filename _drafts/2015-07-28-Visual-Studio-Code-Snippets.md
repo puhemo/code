@@ -10,13 +10,36 @@ There are a bunch of built-in Visual Studio code snippets that will generate cod
 
 ###Loops
 
+* do
+* while
+* for
+* foreach
+
 ###Conditionals
+
+* if
+* else
+* switch
 
 ###Error Trapping
 
+* try
+* tryf
+* exception
+
 ###Properties
+
+* prop
+* propfull
+* propg
 
 ###Misc
 
-###More Snippets
+* ctor
+* enum
+* struct
+* #region
+
+
+The full list of snippets is available at [http://tinyurl.com/vscodesnippets](http://tinyurl.com/vscodesnippets)
 

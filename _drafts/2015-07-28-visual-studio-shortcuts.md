@@ -1,46 +1,130 @@
 ---
 published: true
 layout: post
-title: 'Favorite Windows Programs'
+title: 'Favorite Visual Studio Shortcuts'
 categories: ['productivity', 'programming', 'visual studio']
 date: 2015-07-28 06:00
 ---
 
 Here is a list of  Visual Studio Community Edition shortcuts that I use.  
 
-##Building Solution
+###Building Solution
 
-* Build Solution: Ctrl+Shift+B
-* Run Code Analysis on Solution: Alt+F11
+<table class="exampleTable">
+<tr>
+	<th>Name</th>
+	<th>Shortcut</th>
+</tr>
+<tr>
+		<td>Build Solution</td>
+	<td>Ctrl+Shift+B</td>
+</tr>
+<tr class="alt">
 
-##Building Current Project
+	<td>Run Code Analysis on Solution</td>
+	<td>Alt+F11</td>
+</tr>
+</table>
+
+###Building Current Project
 
 There is no default shortcut for building the current project or running code analysis on it.  You can go  under the Build menu and select to build just the current project but this is a manual step that requires you to navigate through the menus.  
 
-To build the current project, I set the keyboard shortcut Ctrl + \ for Build.BuildSelection.  To set this up navigate to the Keyboard options in Visual Studio (Tools -> Options -> Keyboard or Ctrl + Q, type Keyboard, and hit Enter) and set the shortcut for Build.BuildSelection.  This will build the project that the currently open file belongs to.
+**Build Current Project**
 
-To run code analysis on the current project, I set the keyboard shortcut Ctrl+Alt+\ for Build.RunCodeAnalysisonSelection.  To set this up navigate to the Keyboard options in Visual Studio (Tools -> Options -> Keyboard or Ctrl + Q, type Keyboard, and hit Enter) and set the shortcut for Build.RunCodeAnalysisonSelection.  This will run the code analysis for the project that the currently open file belongs to.
+To build the current project for the open file, I set the keyboard shortcut Ctrl + \ .
+
+1. Tools -> Options -> Keyboard or Ctrl + Q, type Keyboard, and hit Enter
+2. Set shortcut for Build.BuildSelection.
+3. Open a file and Ctrl+\ should now build that project  
+
+**Run Code Analysis on Current Project**
+
+To run code analysis on the current project, I set the keyboard shortcut Ctrl+Alt+\
+
+1. Tools -> Options -> Keyboard or Ctrl + Q, type Keyboard, and hit Enter
+1. Set shortcut for Build.RunCodeAnalysisonSelection.  
+1. Open a file and Ctrl+Alt+\ to run the the code analysis for the project
 
 ###Debugging
 
-* Start Debugging: F5
-* Start without Debugging: Ctrl+F5
-* Toggle Breakpoint On/Off for line: F9
-* Run to Cursor and then stop like there is a breakpoint on that line: Ctrl+F10
-* Step Through the Code Line by Line: F11
-* Modify the Watch Text display:  [http://tinyurl.com/vsdebugattrib](http://tinyurl.com/vsdebugattrib)
+<table class="exampleTable">
+<tr>
+	<th>Name</th>
+	<th>Shortcut</th>
+</tr>
+<tr>
+		<td>Start Debugging</td>
+	<td>F5</td>
+</tr>
+<tr class="alt">
+
+	<td>Start without Debugging</td>
+	<td>Ctrl+F5</td>
+</tr>
+<tr>
+	<td>Toggle Breakpoint On/Off for line</td>
+	<td>F9</td>
+</tr>
+<tr class="alt">
+	<td>Run to Cursor and then stop like there is a breakpoint on that line</td>
+	<td>Ctrl+F10</td>
+</tr>
+<tr>
+	<td>Step Through the Code Line by Line</td>
+	<td>F11</td>
+</tr>
+<tr class="alt">
+	<td>Modify what the debugger displays for an object</td>
+	<td><a href="http://tinyurl.com/vsdebugattrib">http://tinyurl.com/vsdebugattrib</a></td>
+</tr>
+
+</table>
 
 ###Searching
 
-* Quick Search: Ctrl+Q
-* Find in Files: Ctrl+Shift+F
-* Next Search Result Line from Find in Files Results: F8
-* Previous Search Result Line from Find in Files Results: Shift+F8
- 
+<table class="exampleTable">
+<tr>
+	<th>Name</th>
+	<th>Shortcut</th>
+</tr>
+<tr>
+	<td>Quick Search</td>
+	<td>Ctrl+Q</td>
+</tr>
+<tr class="alt">
+	<td>Find in Files</td>
+	<td>Ctrl+Shift+F</td>
+</tr>
+<tr>
+	<td>Next Search Result</td>
+	<td>F8</td>
+</tr>
+<tr class="alt">
+	<td>Previous Search Result</td>
+	<td>Shift+F8</td>
+</tr>
+
+</table>
+
 ###Navigation
 
-* Go To Definition: F12.  If you have the [Productivity Power Tools](http://tinyurl.com/vsprodpower) extension, you can Ctrl+Click
-* Close All Documents: Alt+W,L
+<table class="exampleTable">
+<tr>
+	<th>Name</th>
+	<th>Shortcut</th>
+</tr>
+<tr >
+	<td>Go To Definition</td>
+	<td>F12 <br />Ctrl+Click with <a href="http://tinyurl.com/vsprodpower">Productivity Power Tools</a></td>
+</tr>
+<tr class="alt">
+	<td>Close All Documents</td>
+	<td>Alt+W,L</td>
+</tr>
+
+</table>
+
 
 ###Visual Studio Windows Layout
 
@@ -57,18 +141,50 @@ If you have Resharper there are several additional options that you get for sear
 
 Note: Assumes Visual Studio keyboard layout for Resharper
 
-* Go to Everything - Ctrl + T
-* Go to File - Ctrl + Shift + T
-* Go to Member in File - Alt + \
-* Find Current File In Solution Explorer: Alt + Shift + L
+<table class="exampleTable">
+<tr>
+	<th>Name</th>
+	<th>Shortcut</th>
+</tr>
+<tr>
+	<td>Go to Everything</td>
+	<td>Ctrl + T</td>
+</tr>
+<tr class="alt">
+	<td>Go to File</td>
+	<td>Ctrl + Shift + T</td>
+</tr>
+<tr>
+	<td>Go to Member in File</td>
+	<td>Alt + \</td>
+</tr>
+<tr class="alt">
+	<td>Find Current File In Solution Explorer</td>
+	<td>Alt + Shift + L</td>
+</tr>
 
+</table>
 
 ###Format Document
 
-* Format Document: Ctrl+K,D
-* Resharper Format Document: Ctrl+E,F (assumes Visual Studio keyboard layout for Resharper)
 
+<table class="exampleTable">
+<tr>
+	<th>Name</th>
+	<th>Shortcut</th>
+</tr>
+<tr>
+	<td>Format Document</td>
+	<td>Ctrl+K,D</td>
+</tr>
+<tr class="alt">
+	<td>Resharper Format Document</td>
+	<td>Ctrl+E,F
+	<br />Note: Assumes Visual Studio keyboard layout
+	</td>
+</tr>
 
+</table>
 ###Additional Shortcuts
 
 There are a lot more shortcuts that are set in Visual Studio.  I have only covered the ones that I use the most.  To see the full list, visit [http://visualstudioshortcuts.com](http://visualstudioshortcuts.com).
