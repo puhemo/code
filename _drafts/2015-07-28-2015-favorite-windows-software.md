@@ -30,7 +30,7 @@ Developer productivity is not just about maximizing your speed in editor.  It al
 
 ###Utilities
 
-* [Chocolatey](http://chocolatey.org) - Install Windows software the easy way.  Take the guess work out of where to download software and how to get it installed.  
+* [Chocolatey](http://chocolatey.org) - Install Windows software the easy way.  Take the guess work out of where to download software and how to get it installed. 
 * [Dropbox](http://dropbox.com) - sync directories and files between machines.  Can either sync all or selectively sync file.    
 * [Greenshot](http://getgreenshot.org) - free utility to take and edit screenshots.  has a basic built-in editor, can copy to clipboard or open an office product (Word, Excel, PowerPoint, outlook) if installed.  
 * [Launchy](http://www.launchy.net) - Forget about the start menu.  Launch programs with a few keystrokes.  Setup shortcuts for common web sites you use. 

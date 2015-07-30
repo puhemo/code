@@ -30,9 +30,7 @@ Here is a list of  Visual Studio Community Edition shortcuts that I use.
 
 There is no default shortcut for building the current project or running code analysis on it.  You can go  under the Build menu and select to build just the current project but this is a manual step that requires you to navigate through the menus.  
 
-**Build Current Project**
-
-To build the current project for the open file, I set the keyboard shortcut Ctrl + \ .
+To accomplish this, I set the keyboard shortcut Ctrl + \ .
 
 1. Tools -> Options -> Keyboard or Ctrl + Q, type Keyboard, and hit Enter
 2. Set shortcut for Build.BuildSelection.
@@ -40,7 +38,9 @@ To build the current project for the open file, I set the keyboard shortcut Ctrl
 
 **Run Code Analysis on Current Project**
 
-To run code analysis on the current project, I set the keyboard shortcut Ctrl+Alt+\
+You can also run code analysis on the current project like you can on the whole solution.  
+
+To accomplish this, I set the keyboard shortcut Ctrl+Alt+\
 
 1. Tools -> Options -> Keyboard or Ctrl + Q, type Keyboard, and hit Enter
 1. Set shortcut for Build.RunCodeAnalysisonSelection.  
