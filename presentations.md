@@ -25,14 +25,6 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 ## Upcoming Speaking Engagements
 
-
-<h3>Southeast Valley .NET User Group <span>- Chandler, Az (July 23, 2015)</span></h3>
-
-- [http://www.meetup.com/sevdnug/](http://www.meetup.com/sevdnug/)
-- [Ionic Framework Overview](#ionic)
-
-<p>&nbsp;</p>
-
 <h3>Las Vegas .NET User Group <span>- Las Vegas, Nv (July 30, 2015)</span></h3>
 
 - [http://www.dotnetgroup.org/](http://www.dotnetgroup.org/) or [https://www.facebook.com/dotnetgroupdotorg](https://www.facebook.com/dotnetgroupdotorg)
@@ -48,6 +40,14 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 <p>&nbsp;</p>
 
 ## Past Speaking Engagements
+
+<h3>Southeast Valley .NET User Group <span>- Chandler, Az (July 23, 2015)</span></h3>
+
+- [http://www.meetup.com/sevdnug/](http://www.meetup.com/sevdnug/)
+- [Ionic Framework Overview](#ionic)
+
+<p>&nbsp;</p>
+
 
 <h3>Northwest Valley .NET User Group <span>- Glendale, Az (July 22, 2015)</span></h3>
 
@@ -265,7 +265,10 @@ You will learn several tricks to becoming more productive in Windows and Visual 
 
 Slides: [http://slides.com/digitaldrummerj/developerproductivity](http://slides.com/digitaldrummerj/developerproductivity)
 
-Demo:
+Demo: [https://github.com/digitaldrummerj/DeveloperProductivityTalk](https://github.com/digitaldrummerj/DeveloperProductivityTalk)
+
 
 #### Additional Resources
-- None
+- [19 Must Know VS Keyboard Shortcuts Part 1](http://www.codeproject.com/Articles/1010023/Must-Know-Visual-Studio-Keyboard-Shortcuts-Part)
+- [19 Must Know VS Keyboard Shortcuts Part 2](http://www.codeproject.com/Articles/1010022/Must-Know-Visual-Studio-Keyboard-Shortcuts-Part)
+- [Default VS Shortcuts](http://visualstudioshortcuts.com/2015/)
