@@ -4,6 +4,7 @@ layout: post
 title: 'Blogging On Github - Part 8 Using a Custom Domain'
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
 date: 2015-3-12
+series: blogging-on-github
 ---
 
 Welcome to part 8 of the series on Blogging on Github.  In this lesson, we are going to setup a custom domain for your blog.

@@ -1,15 +1,14 @@
 ---
 published: true
 layout: post
-title: 'Vagrant - Provisioning With Chocolatey'
+title: 'Vagrant Part 3 - Provisioning With Chocolatey'
 categories: ['How-To', 'vagrant']
 date: 2015-06-17 02:00
+series: vagrant-getting-started-series
 ---
 Welcome to the Vagrant lesson on installing Chocolatey as part of the Vagrant provisioning process.
 
-Previous Lesson: [Provisioning Introduction]({{site.url}}/vagrant-provisioning-intro)
-
-{% include vagrantseries_top.html %}
+{% include series.html %}
 
 
 ##Overview
@@ -45,6 +44,4 @@ As we saw in the [Easy Virtual Machine Management]({{site.url}}/vagrant-overview
 
 We now have Chocolatey installed on the virtual machine and are ready to start installing software.  The next lesson will install Boxstarter and then you will bulk install all of our software.   
 
-Next Lesson: [Installing BoxStarter]({{site.url}}/vagrant-installing-boxstarter)
-
-{% include vagrantseries_bottom.html %}
+{% include series.html %}

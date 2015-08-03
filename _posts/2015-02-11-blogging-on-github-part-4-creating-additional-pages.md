@@ -4,6 +4,7 @@ layout: post
 title: 'Blogging On Github - Part 4 Adding Additional Pages'
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
 date: 2015-02-11  
+series: blogging-on-github
 ---
 
 Welcome to part 4 of the series on Blogging on  Github.  In this lesson we will go through how to add an additional page such as the [speaking]( {{ site.url}}/speaking) page on this blog.

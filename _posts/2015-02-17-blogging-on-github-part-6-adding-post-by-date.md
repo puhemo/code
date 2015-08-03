@@ -4,6 +4,7 @@ title: 'Blogging On Github - Part 6 Adding Post by Date Page'
 date: 2015-02-18
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
 published: true
+series: blogging-on-github
 ---
 
 Welcome to part 6 of the series on Blogging on Github.  In this lesson we will go through creating a page to show blog post by date.

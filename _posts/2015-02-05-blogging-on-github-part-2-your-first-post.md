@@ -4,6 +4,7 @@ title: 'Blogging On Github - Part 2 Your First Post'
 published: true
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
 date: 2015-02-05
+series: blogging-on-github
 ---
 Welcome to part 2 of the series on blogging on  github.  In this post we will go through making your first blog post.
 

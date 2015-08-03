@@ -1,15 +1,14 @@
 ---
 published: true
 layout: post
-title: 'Vagrant - Install Boxstarter'
+title: 'Vagrant Part 4 - Install Boxstarter'
 categories: ['How-To', 'vagrant']
 date: 2015-06-18 03:00
+series: vagrant-getting-started-series
 ---
 Welcome to the Vagrant lesson on installing Boxstarter as part of the Vagrant provisioning process.
 
-Previous Lesson: [Provisioning with Chocolatey]({{site.url}}/vagrant-provisioning-with-chocolatey)
-
-{% include vagrantseries_top.html %}
+{% include series.html %}
 
 ## What does Boxstarter give you?
 
@@ -52,6 +51,4 @@ However, there are a few things we need to do in order for this to work without 
 
 So far in the provisioning process, we have had Vagrant install both Chocolatey and Boxstarter.  In the next lesson, we will use Boxstarter to bulk install our software and configure Windows.
 
-Next Lesson: [Installing All of the Your Software]({{site.url}}/vagrant-installing-your-software)
-
-{% include vagrantseries_bottom.html %}
+{% include series.html %}

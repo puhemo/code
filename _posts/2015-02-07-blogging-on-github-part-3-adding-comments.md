@@ -4,6 +4,7 @@ title: 'Blogging On Github - Part 3 Adding Commenting to Post'
 date: 2015-02-09
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
 published: true
+series: blogging-on-github
 ---
 Welcome to part 3 of our series on blogging with github.  In this lesson you will learn how to add the ability for users to comment on your blog post.
 

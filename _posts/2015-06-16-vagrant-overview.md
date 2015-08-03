@@ -1,13 +1,15 @@
 ---
 published: true
 layout: post
-title: 'Vagrant - Easy Virtual Machine Management'
+title: 'Vagrant Part 1 - Easy Virtual Machine Management'
 categories: ['How-To', 'vagrant']
 date: 2015-06-15 00:00
+series: vagrant-getting-started-series
 ---
 Welcome to an overview of Vagrant and creating of your first Vagrant machine.  
 
-{% include vagrantseries_top.html %}
+{% include series.html %}
+
 
 ##What is Vagrant?
 
@@ -190,6 +192,4 @@ You have just create and started up your first Vagrant managed Virtual machine. 
 
 The next lesson, will cover the start of provisioning.  We will install Chocolatey as part of the vagrant up command.
 
-Next Lesson: [Provisioning Introduction]({{site.url}}/vagrant-provisioning-intro)
-
-{% include vagrantseries_bottom.html %}
+{% include series.html %}

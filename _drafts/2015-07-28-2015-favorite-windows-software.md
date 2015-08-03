@@ -3,10 +3,10 @@ published: true
 layout: post
 title: 'Favorite Windows Programs'
 categories: ['productivity', 'programming', 'windows']
-date: 2015-07-28 06:00
+date: 2015-07-31 13:30:00
 ---
 
-Developer productivity is not just about maximizing your speed in editor.  It also includes additional software to help you be more productive.    
+Developer productivity is not just about maximizing your speed in editor.  It also includes additional software to help you be more productive.    Below is some of my favorite Windows software that I use.
 
 ###Password Management
 

@@ -1,15 +1,14 @@
 ---
 published: true
 layout: post
-title: 'Vagrant - Installing Your Software'
+title: 'Vagrant Part 5 - Installing Your Software'
 categories: ['How-To', 'vagrant']
 date: 2015-06-19 04:00
+series: vagrant-getting-started-series
 ---
 Welcome to the Vagrant lesson on how to use Boxstarter to configure Windows and install software as part of the Vagrant provisioning process.
 
-Previous Lesson: [Installing BoxStarter]({{site.url}}/vagrant-installing-boxstarter)
-
-{% include vagrantseries_top.html %}
+{% include series.html %}
 
 ##Overview
 
@@ -134,6 +133,4 @@ After you do vagrant up and all of the provisioners runs, you will see the RunBo
 
 The next lesson will cover the different networking options that vagrant supports.  By default Vagrant sets up the virtual machine with a NAT network so that you can only get to the machine from the host.  You an however setup both a public and private network.  We will dive into how to do this.
 
-(Expected Publish Date: June 24th) Next Lesson: [Network Options]({{site.url}}/vagrant-networking-options)
-
-{% include vagrantseries_bottom.html %}
+{% include series.html %}

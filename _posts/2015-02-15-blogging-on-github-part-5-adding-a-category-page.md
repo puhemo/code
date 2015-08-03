@@ -4,6 +4,7 @@ title: 'Blogging On Github - Part 5 Adding Category Page'
 date: 2015-02-15
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
 published: true
+series: blogging-on-github
 ---
 
 Welcome to part 5 of the series on blogging on github.  In this lesson we will go through creating a page to show blog post by category.

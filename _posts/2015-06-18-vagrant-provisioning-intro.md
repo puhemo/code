@@ -1,15 +1,14 @@
 ---
 published: true
 layout: post
-title: 'Vagrant - Provisioning Introduction'
+title: 'Vagrant Part 2 - Provisioning Introduction'
 categories: ['How-To', 'vagrant']
 date: 2015-06-16 01:00
+series: vagrant-getting-started-series
 ---
 Welcome to the Vagrant lesson on what Vagrant provisioning is.  
 
-Previous Lesson: [Vagrant - Easy Virtual Machine Management]({{site.url}}/vagrant-overview//)
-
-{% include vagrantseries_top.html %}
+{% include series.html %}
 
 ## What is Vagrant Provisioning?
 
@@ -48,6 +47,4 @@ The file provider, copies a file from your machine to the virtual machine but do
 
 Now that we understand what provisioning is, in the next couple of lessons we are going to expand on the provisioning to have it install Chocolatey, Boxstarter, and then all of our software using Chocolatey/BoxStarter.
 
-Next Lesson: [Provisioning with Chocolatey]({{site.url}}/vagrant-provisioning-with-chocolatey)
-
-{% include vagrantseries_bottom.html %}
+{% include series.html %}

@@ -4,6 +4,7 @@ layout: post
 title: 'Blogging On Github - Part 7 Adding a custom Google search'
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
 date: 2015-02-24
+series: blogging-on-github
 ---
 
 Welcome to part 7 of the series on Blogging on Github.  In this lesson, we are going to add the ability to search your blog using google.
