@@ -11,7 +11,7 @@ Welcome to part 8 of the series on Blogging on Github.  In this lesson, we are g
 
 **Length**: 30 minutes
 
-{% include githubseries_top.html %}
+{% include series.html %}
 
 ### Overview
 
@@ -102,4 +102,4 @@ Now users will be able to get to your blog with the domain name that you just co
 
 In our next lesson, I will show you how to edit your blog post and files locally instead of using the Github web site.  This will allow you to make changes without having to publish them to the world just to test them.  You will also be able to see what a draft blog post will look like so that you can get it all looking the way you want it to before making it live to the world.
 
-{% include githubseries_bottom.html %}
+{% include series.html %}

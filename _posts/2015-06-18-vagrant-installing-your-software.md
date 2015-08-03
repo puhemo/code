@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: 'Vagrant Part 5 - Installing Your Software'
-categories: ['How-To', 'vagrant']
+categories: ['How-To', 'vagrant', 'chocolatey']
 date: 2015-06-19 04:00
 series: vagrant-getting-started-series
 ---

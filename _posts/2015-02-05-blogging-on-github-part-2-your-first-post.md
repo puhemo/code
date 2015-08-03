@@ -10,7 +10,7 @@ Welcome to part 2 of the series on blogging on  github.  In this post we will go
 
 **Lesson Length:** 10 minutes
 
-{% include githubseries_top.html %}
+{% include series.html %}
 
 ### Overview
 
@@ -180,4 +180,4 @@ This lesson is one of the key lessons as you need to kow how to create new blog 
 
 See you in the next lesson, where we will discuss how to add the ability to comment on blog post.  
  
-{% include githubseries_bottom.html %}
+{% include series.html %}

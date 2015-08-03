@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: 'Vagrant Part 4 - Install Boxstarter'
-categories: ['How-To', 'vagrant']
+categories: ['How-To', 'vagrant', 'chocolatey']
 date: 2015-06-18 03:00
 series: vagrant-getting-started-series
 ---

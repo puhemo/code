@@ -4,7 +4,9 @@ layout: post
 title: 'Favorite Visual Studio Shortcuts'
 categories: ['productivity', 'programming', 'visual studio']
 date: 2015-07-28 06:00
+series: developer-productivity
 ---
+{% include series.html %}
 
 Here is a list of  Visual Studio Community Edition shortcuts that I use.  
 
@@ -188,3 +190,5 @@ Note: Assumes Visual Studio keyboard layout for Resharper
 ###Additional Shortcuts
 
 There are a lot more shortcuts that are set in Visual Studio.  I have only covered the ones that I use the most.  To see the full list, visit [http://visualstudioshortcuts.com](http://visualstudioshortcuts.com).
+
+{% include series.html %}

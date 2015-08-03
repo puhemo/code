@@ -11,7 +11,7 @@ Welcome to part 4 of the series on Blogging on  Github.  In this lesson we will 
  
 **Lesson Length**: 15 minutes
  
-{% include githubseries_top.html %}
+{% include series.html %}
 
 ### Overview 
 
@@ -128,4 +128,4 @@ With just a few steps, you were able to add a new page into your blog's web site
 
 In the next lesson we will build on this lesson by adding in a page to show the blog post by category.
 
-{% include githubseries_bottom.html %}
+{% include series.html %}

@@ -10,7 +10,7 @@ Welcome to part 3 of our series on blogging with github.  In this lesson you wil
 
 **Lesson Length:** 20 minutes
 
-{% include githubseries_top.html %}
+{% include series.html %}
 
 ### Overview
 
@@ -73,4 +73,4 @@ Having comments is an essential part of any blog to open up the communication wi
 
 In the next lesson, where you will learn how to create additional pages that are not blog post such as portfolio or about pages.
 
-{% include githubseries_bottom.html %}
+{% include series.html %}

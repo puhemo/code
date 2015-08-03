@@ -11,7 +11,7 @@ Welcome to part 7 of the series on Blogging on Github.  In this lesson, we are g
 
 **Length**: 30 minutes
 
-{% include githubseries_top.html %}
+{% include series.html %}
 
 ### Overview
 
@@ -236,4 +236,4 @@ You now have the ability for Google to index and search your blog.  This will ma
 
 In our next lesson, I will show you how to host your http://[username].github.io blog with a custom domain name like I am doing with http://digitaldrummerj.me
 
-{% include githubseries_bottom.html %}
+{% include series.html %}

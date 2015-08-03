@@ -4,7 +4,10 @@ layout: post
 title: 'Favorite Windows Programs'
 categories: ['productivity', 'programming', 'windows']
 date: 2015-07-31 13:30:00
+series: developer-productivity
 ---
+
+{% include series.html %}
 
 Developer productivity is not just about maximizing your speed in editor.  It also includes additional software to help you be more productive.    Below is some of my favorite Windows software that I use.
 
@@ -35,3 +38,5 @@ Developer productivity is not just about maximizing your speed in editor.  It al
 * [Greenshot](http://getgreenshot.org) - free utility to take and edit screenshots.  has a basic built-in editor, can copy to clipboard or open an office product (Word, Excel, PowerPoint, outlook) if installed.  
 * [Launchy](http://www.launchy.net) - Forget about the start menu.  Launch programs with a few keystrokes.  Setup shortcuts for common web sites you use. 
 * [Vagrant](http://vagrantup.com) - Easily create lightweight and reproducible virtual machines.  If you are using virtual machines on your Windows machine, let Vagrant manage the configurations of it.  No longer will it only work on your machine.  I have a blog series on using Vagrant and Chocolatey together at [http://digitaldrummerj.me/vagrant-overview/](http://digitaldrummerj.me/vagrant-overview/)  
+
+{% include series.html %}

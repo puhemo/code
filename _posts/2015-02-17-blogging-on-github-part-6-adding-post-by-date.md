@@ -11,7 +11,7 @@ Welcome to part 6 of the series on Blogging on Github.  In this lesson we will g
  
 **Lesson Length**:  15 minutes
 
-{% include githubseries_top.html %}
+{% include series.html %}
 
 ### Overview
 
@@ -133,4 +133,4 @@ We are going to add the "show by date" link into the header section next to the 
 With just a few simple steps, you were able to add the post by month page and put it in the header.  In the next lesson we will discuss how the blog theme works and how to modify it.
 
 
-{% include githubseries_bottom.html %}
+{% include series.html %}

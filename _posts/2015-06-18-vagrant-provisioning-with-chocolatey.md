@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: 'Vagrant Part 3 - Provisioning With Chocolatey'
-categories: ['How-To', 'vagrant']
+categories: ['How-To', 'vagrant', 'chocolatey']
 date: 2015-06-17 02:00
 series: vagrant-getting-started-series
 ---

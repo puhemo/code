@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: 'Vagrant Part 6 - Behind A Proxy Server'
-categories: ['How-To', 'vagrant']
+categories: ['How-To', 'vagrant', 'chocolatey']
 date: 2015-07-13 22:00
 series: vagrant-getting-started-series
 ---

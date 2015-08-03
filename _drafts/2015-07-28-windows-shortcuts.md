@@ -4,7 +4,10 @@ layout: post
 title: 'Favorite Windows Shortcuts'
 categories: ['productivity', 'windows']
 date: 2015-07-28 06:00
+series: developer-productivity
 ---
+
+{% include series.html %}
 
 Below are some general productivity tips for Windows shortcuts that I use.  These are all built directly into Windows.
 
@@ -48,3 +51,5 @@ Example:
  
  Windows explorer has the favorites links section that you can drag folders onto.  This is a great place to put common used folder and the folders for current solutions that you are working on.  
  Note that adding or removing folders from the Favorites list does not have any affect on the actual folder, it only removes it from the Favorites list.
+ 
+ {% include series.html %}

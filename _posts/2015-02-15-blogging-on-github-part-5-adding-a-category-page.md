@@ -11,7 +11,7 @@ Welcome to part 5 of the series on blogging on github.  In this lesson we will g
  
 **Lesson Length**:  15 minutes
 
-{% include githubseries_top.html %}
+{% include series.html %}
 
 ### Overview
 
@@ -138,4 +138,4 @@ Unlike the portfolio page that we created in the last lesson, this time we are n
 
 With just a few simple steps, you were added the post by category page and put it in the header.  In the next lesson we will add in a new page for browsing blog post by year and month.
 
-{% include githubseries_bottom.html %}
+{% include series.html %}

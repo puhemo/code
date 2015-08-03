@@ -13,7 +13,7 @@ Welcome to the first lesson of a multi part series on blogging using Github.  Gi
 
 **Lesson Length:** 10 minutes
 
-{% include githubseries_top.html %}
+{% include series.html %}
 
 ### Section 1: Overview
 
@@ -66,4 +66,4 @@ In just a few simple steps, you were able to get your blog up and running.  Thro
 
 In the next lesson, where we create your first blog post.
 
-{% include githubseries_bottom.html %}
+{% include series.html %}

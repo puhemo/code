@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: 'Vagrant Part 2 - Provisioning Introduction'
-categories: ['How-To', 'vagrant']
+categories: ['How-To', 'vagrant', 'chocolatey']
 date: 2015-06-16 01:00
 series: vagrant-getting-started-series
 ---
