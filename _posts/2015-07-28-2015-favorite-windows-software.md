@@ -3,7 +3,7 @@ published: true
 layout: post
 title: 'Favorite Windows Programs'
 categories: ['productivity', 'programming', 'windows']
-date: 2015-07-31 13:30:00
+date: 2015-08-04 08:00:00
 series: developer-productivity
 ---
 
