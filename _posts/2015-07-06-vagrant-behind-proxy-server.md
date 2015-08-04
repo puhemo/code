@@ -31,6 +31,12 @@ The typical proxy environment variables are http_proxy and https_proxy.  You can
 	setx http_proxy=http://yourproxyserver:port
 	setx https_proxy=https://yourproxyserver:port
  
+####View Proxy Settings
+
+If the commands below just echo out the text instead of the actual proxy server, it means that the proxy server is not set.
+
+	echo %http_proxy%
+	echo %https_proxy%
 
 ####Removing Proxy Setting
 

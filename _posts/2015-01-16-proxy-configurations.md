@@ -2,10 +2,8 @@
 published: true
 layout: post
 title: Npm, Bower, Git, and Bash Proxy Configurations
-tags: [setup, proxy, bower, git, npm, ionic]
-categories: [programming, proxy, nodejs, npm, bash, bower]
-date: 2015-02-01 20:45:35
-excerpt: "How to set proxy configurations for various tools"
+categories: ['programming', 'proxy', 'nodejs', 'npm', 'bash', 'bower', 'ionic']
+date: 2015-08-03 20:00:00
 ---
 
 ##Updates:
@@ -13,41 +11,71 @@ excerpt: "How to set proxy configurations for various tools"
 * **Updated 2015-Feb-01**:  Added running source command for Bash and Ruby Gems section
 * **Updated 2015-May-07**:  Added the Ionic Start command
 * **Updated 2015-May-08**:  Added the Android SDK 
+* **Updated 2015-Aug-03**: Added command lines to set proxy
 
+When you are using npm, bower, and git behind a proxy server you have to do a little bit of configuration.  Luckily it is super easy to do these configurations.  Almost all of the programs have command line commands to set and unset the proxy server.  
 
-When you are using npm, bower, and git when behind a proxy server you have to do a little bit of configuration.  Luckily it is super easy to do these configurations.  These instructions are for a windows machine.  All of the files below will need to be created in your user home directory c:\users\[Your User Name].
-
-All of these files start with a period and have no file extension.  Unfortunately you can create these in Windows Explorer and it doesn't support starting a file with a period.  You can create them though in notepad or your text editor of choice.  Just make sure a file extension doesn't get added to the file.
-
+----
 ##Windows Command Prompt
 
-###Current Session
+####Current Command Prompt Only
 
 	set http_proxy=[Your Proxy]:[Proxy Port]
 	set https_proxy=[Your Proxy]:[Proxy Port]
 
-###Unset Current Session
+####Unset Current Session
 
 	set http_proxy=
 	set https_proxy=
 
-###Globally
+####Globally as a System Environment Variable
 
-	setx http_proxy=[Your Proxy]:[Proxy Port]
+Run from an administrative command prompt
+
+	setx http_proxy=[Your Proxy]:[Proxy Port] /M
+	setx https_proxy=[Your Proxy]:[Proxy Port] /M
+
+You will need to close and re-open command prompt for settings to take effect
+
+####Globally as a User Environment Variable
+
+Run from a non-administrative command prompt
+
+	setx http_proxy=[Your Proxy]:[Proxy Port] 
 	setx https_proxy=[Your Proxy]:[Proxy Port]
+
+You will need to close and re-open command prompt for settings to take effect
+
+####Unset Globally System Environment Variable
+
+Run from an administrative command prompt
+
+	setx http_proxy="" /M
+	setx https_proxy="" /M
 
 Need to close and re-open command prompt for settings to take effect
 
-###Unset Globally
+####Unset Globally User Environment Variable
 
-	setx http_proxy=""
+Run from a non-administrative command prompt
+
+	setx http_proxy="" 
 	setx https_proxy=""
 
 Need to close and re-open command prompt for settings to take effect
 
-##Bash Shell
- File Name: .bash_profile or .bashrc
 
+####View Proxy Settings
+
+If the commands below just echo out the text instead of the actual proxy server, it means that the proxy server is not set.
+
+	echo %http_proxy%
+	echo %https_proxy%
+
+----
+##Bash Shell
+
+File Name: .bash_profile or .bashrc
 
 	export http_proxy=[Your Proxy]:[Proxy Port]
 	export https_proxy=[Your Proxy]:[Proxy Port]
@@ -60,78 +88,124 @@ Note:   After updated the .bash_profile or .bashrc, you should run one of the fo
 	or
 	source ~/.bash_profile
 
-
+----
 ## Bower
- File Name:  .bowerrc.
 
+There is no command line that I found for configuration bower.  Instead you can create a .bowerrc file in the users home directory.  
+
+On Windows:  %userprofile% directory.
+
+On Linux: ~/  
+
+####Creating .bowerrc file on Windows
+
+Windows unfortunately does not like files without extensions but using notepad you can create a file without an extension.  
+
+1. Open Notepad
+1. Navigate to the %UserProfile% directory
+1. Ctrl + S to save the file
+1. Change the "Save as Type" to "All Files (*.*)
+1. Now you can edit the file in your text editor of choice
+
+  
+####Proxy Setting in .bowerrc.
 
 	{
 		"proxy":"http://[Your Proxy]:[Proxy Port]",
 		"https-proxy":"http://[Your Proxy]:[Proxy Port]"
 	}
-      
-## Git
+     
+---- 
+##Git
 
-###Set Proxy:
+####Set Proxy:
 
 	git config --add http.proxy http://[Your Proxy]:[Proxy Port]
 	git config --add https.proxy http://[Your Proxy]:[Proxy Port]
 
-###Unset Proxy:
+####Unset Proxy:
 
 	git config --unset http.proxy
 	git config --unset https.proxy
 
+####View Configuration
 
+**Just Proxy Configs**
 
-###Manually Update .gitconfig
+	git config --get http.proxy
+	git config --get https.proxy
+
+**All Configs**
+
+	git config --list
+	
+####Manually Update .gitconfig (not recommended)
 
 	[http]
 		proxy = http://[Your Proxy]:[Proxy Port]
 	[https]
 		proxy = http://[Your Proxy]:[Proxy Port]
 
+----
 ## NPM
 
-###Set Proxy:
+####Set Proxy:
 	npm config set https-proxy http://[Your Proxy]:[Proxy Port]
 	npm config set proxy http://[Your Proxy]:[Proxy Port]
 
-###Unset Proxy:
+####Unset Proxy:
 
 	npm config delete https-proxy
 	npm config delete proxy
 
-###Get Proxy:
+####View Proxy Configurations:
 
 	npm config get https-proxy
 	npm config get proxy
 
 
-###Manually Update .npmrc
+####Manually Update .npmrc (not recommended)
 
 
 	proxy=http://[Your Proxy]:[Proxy Port]
 	https-proxy=http://[Your Proxy]:[Proxy Port]
     
+----	
 ## Ruby Gem Install
+
 
 If you have set the proxy in the .bash_profile or .bashrc, then Ruby should pick it up.
 
 If you need to manually set it
 
+####Linux
 	export http://[Your Proxy]:[Proxy Port]
 	sudo gem install [your gem name]
 
+####Windows 
+
+	setx http_proxy "[Your Proxy Server]:[Proxy Port]" /M
+	gem install [your gem name]
+
+----	
 ##Ionic Start Command
 
 In order to run the ionic start command behind a proxy, you need start the command out with the Proxy information.
 
+####Linux
 	PROXY=http://[Your Proxy]:[Proxy Port] ionic start [App Name] [Template Name]
 
+####Windows
+
+	setx http_proxy "[Your Proxy Server]:[Proxy Port]" /M
+	ionic start [App Name] [Template Name]
+
+----	
 ##Android SDK
+	
 
 The android SDK uses ~/.android/androidtool.cfg file to define the proxy information.  If the file does not exist, go ahead and create it.
 
 	http.proxyPort=[Your Proxy]
 	http.proxyHost=[Proxy Port]
+	
