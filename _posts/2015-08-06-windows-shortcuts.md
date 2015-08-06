@@ -3,13 +3,23 @@ published: true
 layout: post
 title: 'Favorite Windows Shortcuts'
 categories: ['productivity', 'windows']
-date: 2015-07-28 06:00
+date: 2015-08-06 06:00
 series: developer-productivity
 ---
 
 {% include series.html %}
 
-Below are some general productivity tips for Windows shortcuts that I use.  These are all built directly into Windows.
+So many times I watch Windows users spending lots of time doing task that should just take a few seconds but instead are taking several minutes because they are taking the long way around to get the task completed.  
+
+Here are some examples that I see people doing and below I will show you how to get them done the easiest way possible.
+ 
+1. Getting 2 programs side by side half screened
+1. Navigating in Windows Explorer to find the Visual Studio solution or project directory 
+1. Open programs as an administrator 
+1. Just opening up task manager.  
+
+   
+**Note:**  All of these shortcuts are built directly into Windows. 
 
 
 ###Moving Program between half screen, full screen and monitors
@@ -44,12 +54,18 @@ Example:
 
 ###Quickly Opening Task Manager
  
- Ctrl+Shift+Esc will pull up the task manager.  
+ Ctrl+Shift+Esc 
  
  
 ###Windows Explorer Favorites
  
- Windows explorer has the favorites links section that you can drag folders onto.  This is a great place to put common used folder and the folders for current solutions that you are working on.  
- Note that adding or removing folders from the Favorites list does not have any affect on the actual folder, it only removes it from the Favorites list.
+ Windows explorer has the favorites links section that you can drag folders onto.
+ 
+ This is a great place to put commonly used folders such as the folders for current project that you are working on.
+   
+ **Note:** That adding or removing folders from the Favorites list does not have any affect on the actual folder, it only removes it from the Favorites list.
+ 
+ 
+ 
  
  {% include series.html %}
