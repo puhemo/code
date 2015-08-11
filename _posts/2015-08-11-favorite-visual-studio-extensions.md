@@ -3,7 +3,7 @@ published: true
 layout: post
 title: 'Favorite Visual Studio Extensions'
 categories: ['productivity', 'programming', 'visual studio']
-date: 2015-07-28 06:00
+date: 2015-08-11 06:00
 series: developer-productivity
 ---
 {% include series.html %}
