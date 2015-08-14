@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: post
 title: 'Visual Studio - Create Class from Json/Xml'
 categories: ['productivity', 'programming', 'visual studio']

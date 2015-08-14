@@ -4,7 +4,7 @@ title: 'Blogging On Github - Part 11 - Creating Post Series'
 series: blogging-on-github 
 date: 2015-08-25 06:00
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
-published: true
+published: false
 
 ---
 

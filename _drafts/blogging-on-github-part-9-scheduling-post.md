@@ -4,7 +4,7 @@ title: 'Blogging On Github - Part 9 - Scheduling Post'
 series: blogging-on-github 
 date:2015-08-18 06:00
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
-published: true
+published: false
 ---
 
 Welcome to part 9 of the series on blogging on  github.  In his lesson we will go through how to use Zapier to schedule blog post.  
@@ -19,14 +19,11 @@ Since Jekyll just generates a static web site there is no out of the box option 
 
 So if Jekyll doesn't provide this functionality and we want everything to be done directly on Github then how are we going to accomplish this?  This is where is [Zapier](http::/zapier.com) comes into play.
 
- [Zapier](http::/zapier.com) allows you to say when X happens then do Y.   So for our needs we are going to tell  [Zapier](http::/zapier.com) monitor our github repository for commits with certain messages, create a Google calendar request, then when calendar request comes due create an instant merge pull request to make the post show.   
+ [Zapier](http::/zapier.com) allows you to say when X happens then do Y.   So for our needs we are going to tell [Zapier](http::/zapier.com) to monitor our github repository for commits with certain messages, create a Google calendar request, then when calendar request comes due create an instant merge Github pull request to publish the blog post.   
 
-Sign up for  [Zapier](http::/zapier.com) is free.  
+Sign up for  [Zapier](http::/zapier.com) is free.   
 
-!!!!give sign up instructions  
-!!!!confirm email 
-
-Now that have your Zapier account we are ready to get to the real work of setting up that Zaps. 
+Now that you have your Zapier account you are ready to get to the real work of setting up that Zaps. 
 
 The first step is to create a branch for your blog repository in Github called scheduled. 
 
@@ -45,7 +42,7 @@ Remember that we are going to create 2 zaps.  The first zap will create a Google
 
 As a starting point you for creating the Google Calendar request, I have shared my Zap.  Click here to use it.
 
-!!!!give share url
+[http://zpr.io/qdZv](http://zpr.io/qdZv)
  
 
 walk through how to set it up
@@ -58,9 +55,11 @@ walk through how to set it up
 * select repo
 * 
 
-##create instant merge pull request from calendar 
+##Merging to Master Branch 
 
-share template 
+We are going to create another Zap to create an instant merge pull request when the Google calendar request comes due.   
+
+
 walk through updating the template
 
 * instant merge
@@ -76,6 +75,11 @@ Test it out
 
 dashboard 
 history
+
+###Additional Resources
+
+[http://blog.east5th.co/2014/12/29/scheduling-posts-with-jekyll-github-pages-and-zapier/](http://blog.east5th.co/2014/12/29/scheduling-posts-with-jekyll-github-pages-and-zapier/)
+
 
 In the next lesson we will learn how to also use [Zapier](http://Zapier.com) to send a tweet  that you have a new blog post.   
 
