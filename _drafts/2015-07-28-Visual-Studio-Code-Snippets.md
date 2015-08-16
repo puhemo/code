@@ -13,34 +13,155 @@ There are a bunch of built-in Visual Studio code snippets that will generate cod
 ###Loops
 
 * do
+
+	do
+	{		
+	} while (b);
+	
 * while
+
+	while (true)
+	{				
+	}
+	
 * for
+
+	for (int i = 0; i < UPPER; i++)
+	{				
+	}
+	
 * foreach
 
+	foreach (var VARIABLE in COLLECTION)
+	{		
+	}
+	
 ###Conditionals
 
 * if
+
+	if (b)
+	{
+				
+	}
+	
 * else
+
+	else
+	{
+				
+	}
+	
 * switch
+
+	switch (@enum)
+	{
+					
+	}
 
 ###Error Trapping
 
 * try
+
+	try
+	{
+
+	}
+	catch (Exception)
+	{
+		
+		throw;
+	}
 * tryf
+
+	try
+	{
+
+	}
+	finally
+	{
+		
+	}
+	
 * exception
 
+	[Serializable]
+	public class MyException : Exception
+	{
+		//
+		// For guidelines regarding the creation of new exception types, see
+		//    http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpgenref/html/cpconerrorraisinghandlingguidelines.asp
+		// and
+		//    http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dncscol/html/csharp07192001.asp
+		//
+
+		public MyException()
+		{
+		}
+
+		public MyException(string message) : base(message)
+		{
+		}
+
+		public MyException(string message, Exception inner) : base(message, inner)
+		{
+		}
+
+		protected MyException(
+			SerializationInfo info,
+			StreamingContext context) : base(info, context)
+		{
+		}
+	}
 ###Properties
 
 * prop
+
+	public TYPE Type { get; set; }
+	
 * propfull
+
+	private int myVar;
+
+	public int MyProperty
+	{
+		get { return myVar; }
+		set { myVar = value; }
+	}
+	
 * propg
+
+	public int I { get; private set; }
 
 ###Misc
 
 * ctor
+	public class Misc
+	{
+		public Misc()
+		{
+			
+		}
+	}
+	
 * enum
+
+	enum MyEnum
+	{
+		
+	}
+	
 * struct
+
+	struct MyStruct
+	{
+			
+	}
+	
 * #region
+
+	#region MyRegion
+	#endregion
 
 
 The full list of snippets is available at [http://tinyurl.com/vscodesnippets](http://tinyurl.com/vscodesnippets)
