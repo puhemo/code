@@ -3,7 +3,7 @@ published: true
 layout: post
 title: 'Visual Studio Code Snippets'
 categories: ['productivity', 'programming', 'visual studio']
-date: 2015-07-28 06:00
+date: 2015-08-18 06:00
 series: developer-productivity
 ---
 {% include series.html %}
@@ -88,9 +88,9 @@ To use these snippets type they keyword and then press the tab key.
 		{
 			//
 			// For guidelines regarding the creation of new exception types, see
-			//    http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpgenref/html/cpconerrorraisinghandlingguidelines.asp
+			// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpgenref/html/cpconerrorraisinghandlingguidelines.asp
 			// and
-			//    http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dncscol/html/csharp07192001.asp
+			// http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dncscol/html/csharp07192001.asp
 			public MyException()
 			{
 			}
@@ -159,7 +159,10 @@ To use these snippets type they keyword and then press the tab key.
 		#endregion
 
 
-The full list of snippets is available at [http://tinyurl.com/vscodesnippets](http://tinyurl.com/vscodesnippets)
+There are several more code snippets that are available at [http://tinyurl.com/vscodesnippets](http://tinyurl.com/vscodesnippets).  
 
+With these few code snippets you will be amazed at how much less code you end up writing by hand.  Ever little bit helps to make you more productive and efficient as a developer.  
+
+Let me know what you favorite snippets are or ones that you have created.
 
 {% include series.html %}
