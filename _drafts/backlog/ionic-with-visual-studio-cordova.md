@@ -1,3 +1,11 @@
+---
+layout: post
+title: Ionic using Visual Studio 
+published: false
+tags: [ionic]
+categories: [programming, mobile-development, ionic]
+date: 2015-01-11 20:45:35
+---
 
 don't use vs tabs template. 
 use ionic start and import into visual studio
