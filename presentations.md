@@ -42,7 +42,7 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 <h3>Silicon Valley Code Camp <span>- Silicon Valley, Ca (Ocotber 3rd-4th, 2015)</span></h3>
 
-- [Web Site: http://siliconvalley-codecamp.com](siliconvalley-codecamp.com)
+- [http://siliconvalley-codecamp.com](siliconvalley-codecamp.com)
 - [Ionic Framework Overview](#ionic)
 - [DevOps Yourself:  Fast Track Your Development Environment Setup](#vagrant)
 
@@ -50,7 +50,7 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 <h3>So Cal Code Camp <span>- Los Angeles, Ca (November 14th-15th, 2015)</span></h3>
 
-- [Web Site: http://www.socalcodecamp.com/](http://www.socalcodecamp.com/)
+- [http://www.socalcodecamp.com/](http://www.socalcodecamp.com/)
 - Topics still in planning phase.
 
 <p>&nbsp;</p>
