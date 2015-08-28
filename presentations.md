@@ -7,39 +7,62 @@ redirect_from: "/presentations/"
 sitemap:
     priority: 1.0
     changefreq: weekly
-    lastmod: 2015-02-05T16:31:30+05:30
+    lastmod: 2015-08-28T16:31:30+05:30
 ---
+
+
+I have a passion for coding and for teaching; speaking at developer community events allows me to combine these two.  I love to share my knowledge in order to get you to your end goal quicker.  
+
+If you'd like me to come to your event or user group, [email](mailto:digitaldrummerj@gmail.com) or [tweet](http://twitter.com/digitaldrummerj) at me.
+
+If you've attended one of my sessions, please send me your feedback or suggestions.
+
+If you see me at an event, please be sure to come up and say "Hi".  The best part of the events is hanging out with other developers.
+
+###Background
 
 I started really getting into speaking publicly in early 2014 after speaking at the [Southeast Valley .NET User Group](http://www.meetup.com/sevdnug/) in Chandler, Arizona.  I had suggested a couple of topics for future meetings that I wanted to learn about to the user group organizer, [Rob Richardson](http://www.robrich.org) and like a bullet he immediately shot back, "when would you like to present these topics?".  I wasn't quite prepared for that response but in retrospect it was the best response he could have given to me.  I had been an attendee of this user group for awhile but hadn't done a presentation there in a few years.  So after thinking about it for a few minutes I thought I got nothing to lose and asked for a few months to learn the topics.
 
-Over the next couple of months I worked on learning the ins and outs of [Nuget](http://www.nuget.org) and [Chocolatey](http://www.chocolatey.org) as well watching tips and tricks on speaking from speakers I admired like [Scott Hanselman](http://www.hanselman.com/) and [John Papa](http://www.johnpapa.net/).  The presentations both went amazingly well with a lot of great feedback from audience and I was immediately hooked.  Since that initial presentations I have presented almost 20 sessions and counting.  I have a passion for coding and for teaching; speaking at developer community events allows me to combine these two.
-
- If you'd like me to come to your event or user group, you can make a request through [INETA](http://ineta.org/Speakers/SearchCommunitySpeakers.aspx?SpeakerId=3bf95988-3e54-4757-b42b-7fc1407b36e1) or contact me directly.
-
- If you've attended one of my sessions, please send me your feedback or suggestions.
-
- If you see me at an event, please be sure to come up and say "Hi".  The best part of the events is hanging out with other developers.
-
+Over the next couple of months I worked on learning the ins and outs of [Nuget](http://www.nuget.org) and [Chocolatey](http://www.chocolatey.org) as well watching tips and tricks on speaking from speakers I admired like [Scott Hanselman](http://www.hanselman.com/) and [John Papa](http://www.johnpapa.net/).  The presentations both went amazingly well with a lot of great feedback from audience and I was immediately hooked.  Since that initial presentations I have presented well over 20 sessions and counting across the United States and Europe.  
+ 
 
 <p>&nbsp;</p>
 
 ## Upcoming Speaking Engagements
+
+<h3>Iterate Phoenix 2015 The Devops Conference <span>- Chandler, Az (September 1st, 2015)</span></h3>
+
+- [http://iteratephx.co](http://iteratephx.co)
+- [DevOps Yourself:  Fast Track Your Development Environment Setup](#vagrant)
+
+<h3>Phoenix Mobile Festival <span>- Chandler, Az (September 19th, 2015)</span></h3>
+
+- [http://phxmobifestival.com](http://phxmobifestival.com)
+- [Use Your Existing Web Skills to Create Native Mobile Applications](#ionic)
+
+<h3>Silicon Valley Code Camp <span>- Silicon Valley, Ca (Ocotber 3rd-4th, 2015)</span></h3>
+
+- [Web Site: http://siliconvalley-codecamp.com](siliconvalley-codecamp.com)
+- [Ionic Framework Overview](#ionic)
+- [DevOps Yourself:  Fast Track Your Development Environment Setup](#vagrant)
+
+
+
+<h3>So Cal Code Camp <span>- Los Angeles, Ca (November 14th-15th, 2015)</span></h3>
+
+- [Web Site: http://www.socalcodecamp.com/](http://www.socalcodecamp.com/)
+- Topics still in planning phase.
+
+<p>&nbsp;</p>
+
+## Past Speaking Engagements
 
 <h3>Las Vegas .NET User Group <span>- Las Vegas, Nv (July 30, 2015)</span></h3>
 
 - [http://www.dotnetgroup.org/](http://www.dotnetgroup.org/) or [https://www.facebook.com/dotnetgroupdotorg](https://www.facebook.com/dotnetgroupdotorg)
 - [Developer Productivity in Visual Studio 2015](#vsprod)
 
-<p>&nbsp;</p>
 
-<h3>Silicon Valley Code Camp <span>- Silicon Valley, Ca (Ocotber 3rd-4th, 2015)</span></h3>
-
-
-- [Ionic Framework Overview](#ionic)
-
-<p>&nbsp;</p>
-
-## Past Speaking Engagements
 
 <h3>Southeast Valley .NET User Group <span>- Chandler, Az (July 23, 2015)</span></h3>
 
