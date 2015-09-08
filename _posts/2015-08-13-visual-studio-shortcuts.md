@@ -5,6 +5,7 @@ title: 'Favorite Visual Studio Shortcuts'
 categories: ['productivity', 'programming', 'visual studio']
 date: 2015-08-13 06:00
 series: developer-productivity
+excerpt: Here is a list of  Visual Studio Community Edition shortcuts that I use.
 ---
 {% include series.html %}
 

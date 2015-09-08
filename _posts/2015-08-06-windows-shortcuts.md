@@ -5,6 +5,10 @@ title: 'Favorite Windows Shortcuts'
 categories: ['productivity', 'windows']
 date: 2015-08-06 06:00
 series: developer-productivity
+excerpt: "So many times I watch Windows users spending lots of time doing task that should just take a few seconds but instead are taking several minutes because they are taking the long way around to get the task completed.  
+
+Here are some examples that I see people doing and below I will show you how to get them done the easiest way possible."
+
 ---
 
 {% include series.html %}
