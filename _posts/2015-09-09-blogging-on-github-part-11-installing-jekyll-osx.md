@@ -1,14 +1,14 @@
 ---
 published: true
 layout: post
-title: 'Blogging On Github - Part 10.1 -  Installing Jekyll On OSx'
+title: 'Blogging On Github - Part 12 -  Installing Jekyll On OSx'
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
 date: 2015-09-09 17:15
 series: blogging-on-github 
 
 ---
 
-Welcome to part 10.1 of the series on Blogging on Github.  
+Welcome to part 12 of the series on Blogging on Github.  
 
 In this lesson, we are going to setup your MAC (OSx) computer to be able to edit your blog on your computer.
 

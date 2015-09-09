@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Blogging On Github - Part 12 - Creating an Article Series'
+title: 'Blogging On Github - Part 13 - Creating an Article Series'
 series: blogging-on-github 
 date: 2015-09-15 06:00
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
