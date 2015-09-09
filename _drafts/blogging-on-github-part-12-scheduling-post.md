@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 'Blogging On Github - Part 9 - Scheduling Post'
+title: 'Blogging On Github - Part 12 - Scheduling Post'
 series: blogging-on-github 
 date: 2015-08-20 06:00
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
 published: false
 ---
 
-Welcome to part 9 of the series on blogging on  github.  In his lesson we will go through how to use Zapier to schedule blog post.  
+Welcome to part 12 of the series on blogging on  github.  In his lesson we will go through how to use Zapier to schedule blog post.  
  
 **Lesson Length**:  20 minutes
  

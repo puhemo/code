@@ -25,21 +25,27 @@ Unfortunately, out of the box Jekyll does not have this  ability.   Luckily, it 
 1. Open another browser window and navigate to [https://disqus.com/admin/signup/?utm_source=New-Site](https://disqus.com/admin/signup/?utm_source=New-Site)
 
 2. Fill out the information request and click the Finish button.  Note: That you can not change the short name value once it is created.  You can have multiple sites under the same account though with different short name values.
+
 ![DisqusRegisterSite.png]({{site.url}}/images/DisqusRegisterSite.png)
 
 3. You will be greeted with a "Choose Your Platform" screen like the follow.  Don't worry about any of these options as we are not going to use them.
+
 ![DisqusChooseAPlatform.png]({{site.url}}/images/DisqusChooseAPlatform.png)
 
 4. Click on the General link on the left side of the links above the "Choose Your Platform" title.
+
 ![DisqusGeneralSettingMenuHighlight.png]({{site.url}}/images/DisqusGeneralSettingMenuHighlight.png)
 
 5. Scroll down to the Site Identity and make sure that the values are correct.  The WebSite Name will appear on your blog when the comments show, so make sure it is what you want it to say.  Take note of your shortname as you will need it in the next section when we config your blog to show Disqus.
+
 ![DisqusGeneralSettingSiteIdentity.png]({{site.url}}/images/DisqusGeneralSettingSiteIdentity.png)
 
 6. Scroll down to the next section which should be Community Rules and match the settings to the image below.  To prevent comment spam I always set comments to have to be approved before showing on the site.  The volume on the site will be low enough for now that you will be able to easily manage approving the comments.
+
 ![DisqusGeneralSettingCommunityRules.png]({{site.url}}/images/DisqusGeneralSettingCommunityRules.png)
 
 7. Scroll down to the next section which should be Social Platform Intergration and add your twitter account if you have one.  This will ensure that when people share comments on your blog that it includes you in the post.
+
 ![DisqusGeneralSettingSocialIntegration.png]({{site.url}}/images/DisqusGeneralSettingSocialIntegration.png)
 
 8.  Click the Save Button

@@ -12,7 +12,7 @@ Welcome to the Vagrant lesson on installing Boxstarter as part of the Vagrant pr
 
 ## What does Boxstarter give you?
 
-Boxstarter gives you the ability to bulk install Chocolatey packages plus several helper functiosn for Windows configuration options.  
+Boxstarter gives you the ability to bulk install Chocolatey packages plus several helper functions for Windows configuration options.  
 
 When you bulk install using Boxstarter, it will detect any reboots that are triggered by MSI installers, reboot the machine and then run the Boxstarter script again.
 

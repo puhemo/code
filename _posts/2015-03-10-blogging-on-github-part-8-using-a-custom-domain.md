@@ -100,6 +100,6 @@ The first step in this process is to get a domain name.  The easiest way to do t
 
 Now users will be able to get to your blog with the domain name that you just configure.  Even if the user tries to go to the http://[username].github.io it will redirect them to your domain name.
 
-In our next lesson, I will show you how to edit your blog post and files locally instead of using the Github web site.  This will allow you to make changes without having to publish them to the world just to test them.  You will also be able to see what a draft blog post will look like so that you can get it all looking the way you want it to before making it live to the world.
-
+In our next lesson, I will show you how to install jekyll so that you can edit your blog post and files locally instead of using the Github web site.  This will allow you to make changes without having to publish them to the world just to test them.    
+ 
 {% include series.html %}
