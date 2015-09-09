@@ -1,8 +1,8 @@
 ---
 layout: post
 series: blogging-on-github
-title: 'Blogging On Github - Part  10 Automatically Tweet New Post'
-date: 2015-08-20 06:00
+title: 'Blogging On Github - Part  15 Automatically Tweet New Post'
+date: 2015-09-24 06:00
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
 published: false
 ---

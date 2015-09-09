@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: 'Blogging On Github - Part 9 -  Installing Jekyll On Windows'
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
@@ -8,7 +8,9 @@ series: blogging-on-github
 
 ---
 
-Welcome to part 9 of the series on Blogging on Github.  In this lesson, we are going to setup your Windows computer to be able to edit your blog on your computer.
+Welcome to part 9 of the series on Blogging on Github.  
+
+In this lesson, we are going to setup your Windows computer to be able to edit your blog on your computer.
 
 **Length**: 60 minutes
 
@@ -124,31 +126,34 @@ Now that we have everything installed for jekyll it is time to test it out.
 		jekyll serve 
 
 1. If it build successfully you will see something like this
-
-![Jekyll Serve Success]({{site.url}}/images/BloggingOnGitHub/10/jekyllserve.png)
+	
+	
+	![Jekyll Serve Success]({{site.url}}/images/BloggingOnGitHub/10/jekyllserve.png)
 
 1. Now if you open up your browser and navigate to http://localhost:4000 you will see you blog.
 
+###Section 3.1: Setting Up Dev _config.yml
 However, by default your _config.yml file will be set for production which will cause any place that you have referenced the site.url to not working on your local machine.  You don't want to change your _config.yml file though for development since you will accidentally check it in at some point and break your blog.  Instead we can tell jekyll to use multiple configuration files.  When you load multiple files it will load them in order and then override any settings from a previously loaded config.
 
 1. Create a new file in the root of your repo called _configdev.yml
 1. In the _configdev.yml add the following lines to set the url, turn off disqus/google analytics and google search.  
 
-	# then add this to the url as well "/repository-name"
-	url: http://localhost:4000
-	disqus:
-	disquscommentcount: 
-	google_analytics: 
-	google_search: 
+		# then add this to the url as well "/repository-name"
+		url: http://localhost:4000
+		disqus:
+		disquscommentcount: 
+		google_analytics: 
+		google_search: 
+	
+1. If your jekyll serve is still running do a ctrl+c to stop it.
+1. Now run the following command to tell jekyll the config yml files to load
  
- 1. If your jekyll serve is still running do a ctrl+c to stop it.
- 1. Now run the following command to tell jekyll the config yml files to load
- 
- 	jekyll serve --config _config.yml,_configdev.yml
+ 		jekyll serve --config _config.yml,_configdev.yml
 	 
-1. 	If it build successfully you will see something like this
+1. 	If it build successfully you will see something like this	
 
-![Jekyll Serve Success]({{site.url}}/images/BloggingOnGitHub/10/jekyllserve_multipleconfigs.png)
+
+	![Jekyll Serve Success]({{site.url}}/images/BloggingOnGitHub/10/jekyllserve_multipleconfigs.png)
  
 1. Now if you open up your browser and navigate to http://localhost:4000 you will see you blog and any place that reference site.url will be working..
 

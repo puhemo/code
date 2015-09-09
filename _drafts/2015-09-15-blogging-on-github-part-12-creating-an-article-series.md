@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 'Blogging On Github - Part 11 - Creating an Article Series'
+title: 'Blogging On Github - Part 12 - Creating an Article Series'
 series: blogging-on-github 
 date: 2015-09-15 06:00
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
 published: true
 ---
 
-Welcome to part 11 of the series on Blogging on Github.  
+Welcome to part 12 of the series on Blogging on Github.  
 
 In this lesson, we are going to go through how to create the series listing like you see for this blog series.  
 
@@ -40,18 +40,18 @@ Note: I assume that you have alrady cloned your jekyll repo to your machine.  Th
 	* The article number for this post in the idx variable.  
 	* We will loop through the post and increment the count if the Front Matter series tag match the current page's series tag.     		
 
-		{%  raw %}
-				{% assign count = '0' %}
-				{% assign idx = '0' %}
-				{% for post in site.posts reversed %}
-					{% if post.series == page.series %}
-						{% capture count %}{{ count | plus: '1' }}{% endcapture %}
-						{% if post.url == page.url %}
-							{% capture idx %}{{count}}{% endcapture %}
-						{% endif %}
+{%  raw %}
+			{% assign count = '0' %}
+			{% assign idx = '0' %}
+			{% for post in site.posts reversed %}
+				{% if post.series == page.series %}
+					{% capture count %}{{ count | plus: '1' }}{% endcapture %}
+					{% if post.url == page.url %}
+						{% capture idx %}{{count}}{% endcapture %}
 					{% endif %}
-				{% endfor %}
-		{% endraw %}
+				{% endif %}
+			{% endfor %}
+{% endraw %}
 		
 1. 	Now we need to output the actual html code.  
 	* Note: We are using the panel css from bootstrap.  If you have bootstrap you are good, if not we will add just the panel css in the next section.
@@ -60,7 +60,9 @@ Note: I assume that you have alrady cloned your jekyll repo to your machine.  Th
 		
 		{%  raw %}		
 				<div class="panel seriesNote">
-					<p>This article is <strong>Part {{ idx }}</strong> in a <strong>{{ count }}-Part</strong> Series.</p>
+					<p>
+					This article is <strong>Part {{ idx }}</strong> in a <strong>{{ count }}-Part</strong> Series.
+					</p>
 					<ul>
 					{% assign count = '0' %}
 					{% for post in site.posts reversed %}
@@ -78,7 +80,7 @@ Note: I assume that you have alrady cloned your jekyll repo to your machine.  Th
 					</ul>
 				</div>
 		{% endraw %}
-		
+			
 1.  In the next section, we will add the series listing onto a couple of post so you can see them in action
 
 ### Section 2: Add Series Tag to Post
@@ -215,10 +217,6 @@ Now if you do an article series, you can easily have a professional looking seri
 
 In the next lesson, I will show you how to get the code highlighting working when your code includes liquid syntax such as we did in the code examples in this article.
 
-Other articles to expect in the future:
 
-* How to Schedule Your Blog Post
-* How to Automatically Tweet When a New Article is Added To Your RSS Feed 
-* Installed Jekyll on OSx and Linux
 
 {% include series.html %}

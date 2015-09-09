@@ -8,7 +8,9 @@ series: blogging-on-github
 
 ---
 
-Welcome to part 9 of the series on Blogging on Github.  In this lesson, we are going to setup your Windows computer to be able to edit your blog on your computer.
+Welcome to part 9 of the series on Blogging on Github.  
+
+In this lesson, we are going to setup your Windows computer to be able to edit your blog on your computer.
 
 **Length**: 60 minutes
 

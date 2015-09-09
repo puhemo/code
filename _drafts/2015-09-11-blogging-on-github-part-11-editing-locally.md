@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: 'Blogging On Github - Part 11 -  Editing Locally'
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
@@ -8,7 +8,9 @@ series: blogging-on-github
 
 ---
 
-Welcome to part 11 of the series on Blogging on Github.  In this lesson, now that we have jekyll installed locally we are going to set it up so that we can do draft post that we can check into our repo but not have them show up on the production site.
+Welcome to part 11 of the series on Blogging on Github.  
+
+In this lesson, we are going to set it up so that we can do draft post that we can check into our repo but not have them show up on the production site.
 
 **Length**: 10 minutes
 
@@ -18,7 +20,7 @@ Welcome to part 11 of the series on Blogging on Github.  In this lesson, now tha
 
 In the last couple of articles, we installed jekyll locally but we didn't talk about editing existing blog post or adding in new ones.  There will be times where you will start a blog post but not have time to finish it all in one sitting.  You could just create all of the files in the post directory and set the publish flag to false but over time it will become harder and harder to tell which articles have actually been published.  
 
-Instead, jekyll supports having draft post that by default don't show even if the publish flag is set to true unless you tell jekyll to run with drafts.  On Github, jekyll runs without the drafts flag so you don't have to worry about drafts accidentally showing up.  
+Thankfully, jekyll supports having draft posts that by default don't show even if the publish flag is set to true unless you tell jekyll to run with drafts.  On Github, jekyll runs without the drafts flag so you don't have to worry about drafts accidentally showing up.  
 
 
 ### Section 1: Creating a draft
@@ -55,7 +57,7 @@ With the drafts argument, it does respect the publish front matter, so if you do
 
 Now you can do all of your editing locally and check the drafts into your git repo without having to fear they will accidentally get published before they are ready.
 
-In our next lesson, I will show you how to create draft blog post that will only show on your local machine so that you don't have to either clutter up your post directory with drafts or worry about accidentally publishing an unfinished article.
+In our next lesson, I will show you how to create the series listing like you see below and how to be able to easily create a blog article series
 
 
 {% include series.html %}
