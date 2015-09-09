@@ -1,16 +1,16 @@
 ---
 published: true
 layout: post
-title: 'Blogging On Github - Part 10 -  Installing Jekyll On OSx and Linux'
+title: 'Blogging On Github - Part 10.1 -  Installing Jekyll On OSx'
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
-date: 2015-09-09 06:00
+date: 2015-09-09 16:00
 series: blogging-on-github 
 
 ---
 
-Welcome to part 9 of the series on Blogging on Github.  
+Welcome to part 10.1 of the series on Blogging on Github.  
 
-In this lesson, we are going to setup your Windows computer to be able to edit your blog on your computer.
+In this lesson, we are going to setup your MAC (OSx) computer to be able to edit your blog on your computer.
 
 **Length**: 60 minutes
 
@@ -22,68 +22,41 @@ Up to this point we have been using the Github web site to edit all of our files
 
 Instead, it is better if you can test out all of your changes and review your blog post before letting the world see them.  It will also let you have draft post where you can see them locally but on github they will not be visible.
 
-Note that Jekyll is not officially supported on Windows but it does work and I have not had any issues with it.
+### Section 1: Installing Software
 
-### Section 1: installing Software
+We need to install XCode command line tools, nodejs and python pip.
 
-We need to install nodejs, ruby 2.x, python pip, and git.
 
-####Section 1.1: Ubuntu
+####Section 1.1: Installing NodeJs
 
-If you are on Ubuntu, you need to go through this section.  
+Head over to [nodejs.org](https://nodejs.org) and download the NodeJs Installer and run it.  Take all of the defaults.
 
-####Section 1.1.1: Installing NodeJs
+####Section 1.2: Installing XCode Command Line Tools
 
-First we are going to install NodeJS using the Node.js Version Manager (NVM) using these [commands](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server)
+Unfortunately to get the XCode command line tools, you first need to install XCode.
 
-	# Note the new setup script name for Node.js v0.12
-	curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
+1. Go the App Store
+1. Search for XCode 
+1. Hit the Install Button
+
+
+Once XCode is installed, open up a terminal windows (Application -> Other -> Terminal) and run the following command:
+
+	xcode-select --install
 	
-	# Then install with:
-	sudo apt-get install -y nodejs
+This will bring up a windows asking you to install the command line tools package that we need and just click the Install button.
 	
-	node -v
-	
-####Section 1.1.2: Installing Ruby
+####Section 1.3: Installing Pygments Code Highlighter
 
-Ubuntu Trusty 14.04 unfortunately comes with Ruby 1.9.x and we need 2.x.  There is also a bug in the ubuntu packages where the Ruby 2.0 install is actually the 1.9.3 branch.
+		pip install Pygments
 
-So we are going to use [ruby-install](https://github.com/postmodern/ruby-install#readme) to get the latest version of Ruby installed
+####Section 1.4: Install Ruby Gems
 
-	wget -O ruby-install-0.5.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.5.0.tar.gz
-	tar -xzvf ruby-install-0.5.0.tar.gz
-	cd ruby-install-0.5.0/
-	sudo make install
-	
-	
-	wget -O chruby-0.3.9.tar.gz https://github.com/postmodern/chruby/archive/v0.3.9.tar.gz
-	tar -xzvf chruby-0.3.9.tar.gz
-	cd chruby-0.3.9/
-	sudo make install
-
-	source /usr/local/share/chruby/chruby.sh
-	source /usr/local/share/chruby/auto.sh
-	
-	source ~/.bashrc
-	
-	sudo gem update --system 
-	
+	sudo gem update --system 	
 	sudo gem install bundler
-	
-####Section 1.1.3: Python
-
-	sudo apt-get install python-pip -y
-	
-	
-####Section 1.1.4: Installing Git
-
-	sudo apt-get install git -y	
 
 
-###Section 2: Install OSX Software
-
-
-### Section 3: Getting your Blog onto your computer
+### Section 2: Getting your Blog onto your computer
 
 In this section, you will clone the blog repo from github and install jekyll.
 
@@ -106,20 +79,20 @@ In this section, you will clone the blog repo from github and install jekyll.
 
 		cd jekyllforblogseries
 	
-1. Make sure that you have a GemFile with no file extension in the root of your repo with the following contents
+1. Make sure that you have a GemFile with no file extension in the root of your repo with the following contents.  Warning that Github Pages supports very few jekyll plugins.  The jekyll-redirect-from is one of them.
 
 		source 'https://rubygems.org'
 		gem 'github-pages'
 		gem 'jekyll-redirect-from'
 
-1. Run the command to install the github-pages gem which has all of the required modules to make jekyll work and the jekyll redirect from plugin.  It is one of the few plugins that Github pages supports and allows you to move pages around and have them automatically redirect so that people with bookmarks can still find a moved page.   
+1. From the jekyllforblogseries directory or your blogs directory, run the following command to install gems listed in the Gemfile.   
 
 		bundle install
 
 
 Now we have jekyll installed.  Time to test it out
 
-### Section 4: Testing Your Blog Works on Your Computer
+### Section 3: Testing Your Blog Works on Your Computer
 
 Now that we have everything installed for jekyll it is time to test it out.  
 
@@ -138,12 +111,12 @@ However, by default your _config.yml file will be set for production which will 
 1. Create a new file in the root of your repo called _configdev.yml
 1. In the _configdev.yml add the following lines to set the url, turn off disqus/google analytics and google search.  
 
-	# then add this to the url as well "/repository-name"
-	url: http://localhost:4000
-	disqus:
-	disquscommentcount: 
-	google_analytics: 
-	google_search: 
+		# then add this to the url as well "/repository-name"
+		url: http://localhost:4000
+		disqus:
+		disquscommentcount: 
+		google_analytics: 
+		google_search: 
  
  1. If your jekyll serve is still running do a ctrl+c to stop it.
  1. Now run the following command to tell jekyll the config yml files to load
@@ -164,33 +137,3 @@ Now you are ready to do all of your editing locally and  test it out before the 
 In our next lesson, I will show you how to create draft blog post that will only show on your local machine so that you don't have to either clutter up your post directory with drafts or worry about accidentally publishing an unfinished article.
 
 {% include series.html %}
-
-
-
-Old Notes:
-
-
-###
-* Ruby
-* Bundle Installer
-* Git
-
-ruby —version
-sudo gem install bundler
-must have Xcode install
-xcode-select —install (required for nokigiri)
-cd into Blog
-create Gemfile
-
-bundle install
-if fails read error message, and install any missing components
-bundle install
-gem install nokigiri -v 1.6.6.2
-
-Xcode command line tools
-
-
-bundle exec jekyll serve
-
-
-1. If there were no errors, you are now ready to install jekyll.
