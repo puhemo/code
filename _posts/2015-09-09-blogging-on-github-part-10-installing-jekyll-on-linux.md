@@ -3,7 +3,7 @@ published: true
 layout: post
 title: 'Blogging On Github - Part 10 -  Installing Jekyll On Linux'
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
-date: 2015-09-09 15:00
+date: 2015-09-09 16:15
 series: blogging-on-github 
 
 ---
