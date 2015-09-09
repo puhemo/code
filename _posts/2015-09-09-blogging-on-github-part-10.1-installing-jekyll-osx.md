@@ -3,7 +3,7 @@ published: true
 layout: post
 title: 'Blogging On Github - Part 10.1 -  Installing Jekyll On OSx'
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
-date: 2015-09-09 16:00
+date: 2015-09-09 17:15
 series: blogging-on-github 
 
 ---
