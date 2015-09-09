@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: post
 title: 'Blogging On Github - Part 10 -  Installing Jekyll On OSx and Linux'
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
@@ -26,55 +26,69 @@ Note that Jekyll is not officially supported on Windows but it does work and I h
 
 ### Section 1: installing Software
 
-I am a big fan of Chocolatey and luckily a good majority of the software that we need had a chocolatey package so I wrote a gist file that we will install using Boxstarter.
+We need to install nodejs, ruby 2.x, python pip, and git.
 
-###Section 1.1: Ubuntu
+####Section 1.1: Ubuntu
 
-####Installing NodeJs
+If you are on Ubuntu, you need to go through this section.  
+
+####Section 1.1.1: Installing NodeJs
 
 First we are going to install NodeJS using the Node.js Version Manager (NVM) using these [commands](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server)
 
-	sudo apt-get update
-	sudo apt-get install build-essential libssl-dev
-	curl https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh
-	source ~/.profile
+	# Note the new setup script name for Node.js v0.12
+	curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
 	
-	nvm install 0.12.7 # See All Versions nvm ls-remote
+	# Then install with:
+	sudo apt-get install -y nodejs
+	
 	node -v
 	
+####Section 1.1.2: Installing Ruby
 
-* Ruby
-* Bundle Installer
-* Git
+Ubuntu Trusty 14.04 unfortunately comes with Ruby 1.9.x and we need 2.x.  There is also a bug in the ubuntu packages where the Ruby 2.0 install is actually the 1.9.3 branch.
 
-ruby —version
-sudo gem install bundler
-must have Xcode install
-xcode-select —install (required for nokigiri)
-cd into Blog
-create Gemfile
+So we are going to use [ruby-install](https://github.com/postmodern/ruby-install#readme) to get the latest version of Ruby installed
 
-bundle install
-if fails read error message, and install any missing components
-bundle install
-gem install nokigiri -v 1.6.6.2
+	wget -O ruby-install-0.5.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.5.0.tar.gz
+	tar -xzvf ruby-install-0.5.0.tar.gz
+	cd ruby-install-0.5.0/
+	sudo make install
+	
+	
+	wget -O chruby-0.3.9.tar.gz https://github.com/postmodern/chruby/archive/v0.3.9.tar.gz
+	tar -xzvf chruby-0.3.9.tar.gz
+	cd chruby-0.3.9/
+	sudo make install
 
-Xcode command line tools
+	source /usr/local/share/chruby/chruby.sh
+	source /usr/local/share/chruby/auto.sh
+	
+	source ~/.bashrc
+	
+	sudo gem update --system 
+	
+	sudo gem install bundler
+	
+####Section 1.1.3: Python
+
+	sudo apt-get install python-pip -y
+	
+	
+####Section 1.1.4: Installing Git
+
+	sudo apt-get install git -y	
 
 
-bundle exec jekyll serve
+###Section 2: Install OSX Software
 
 
-1. If there were no errors, you are now ready to install jekyll.
-
-
-
-### Section 2: Getting your Blog onto your computer
+### Section 3: Getting your Blog onto your computer
 
 In this section, you will clone the blog repo from github and install jekyll.
 
-1. Open a command prompt 
-1. Create the directory c:\projects
+1. Open a terminal 
+1. Create the directory ~/projects
 
 		
 		mkdir ~/projects
@@ -86,7 +100,7 @@ In this section, you will clone the blog repo from github and install jekyll.
 		  
 1. Clone your github blog repo to your local machine with the "git clone [Repo Name]" command.  Below is the example if you were to clone the jekyll repo for this blog series.
 
-		git clone https://github.com/digitaldrummerj/jekyllforblogseries.git 
+		git clone https://github.com/digitaldrummerj/jekyllforblogseries.git  
 
 1. cd into the repo that you just cloned
 
@@ -105,7 +119,7 @@ In this section, you will clone the blog repo from github and install jekyll.
 
 Now we have jekyll installed.  Time to test it out
 
-### Section 3: Testing Your Blog Works on Your Computer
+### Section 4: Testing Your Blog Works on Your Computer
 
 Now that we have everything installed for jekyll it is time to test it out.  
 
@@ -150,3 +164,33 @@ Now you are ready to do all of your editing locally and  test it out before the 
 In our next lesson, I will show you how to create draft blog post that will only show on your local machine so that you don't have to either clutter up your post directory with drafts or worry about accidentally publishing an unfinished article.
 
 {% include series.html %}
+
+
+
+Old Notes:
+
+
+###
+* Ruby
+* Bundle Installer
+* Git
+
+ruby —version
+sudo gem install bundler
+must have Xcode install
+xcode-select —install (required for nokigiri)
+cd into Blog
+create Gemfile
+
+bundle install
+if fails read error message, and install any missing components
+bundle install
+gem install nokigiri -v 1.6.6.2
+
+Xcode command line tools
+
+
+bundle exec jekyll serve
+
+
+1. If there were no errors, you are now ready to install jekyll.
