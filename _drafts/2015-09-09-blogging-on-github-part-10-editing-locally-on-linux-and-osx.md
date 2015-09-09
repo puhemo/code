@@ -28,6 +28,21 @@ Note that Jekyll is not officially supported on Windows but it does work and I h
 
 I am a big fan of Chocolatey and luckily a good majority of the software that we need had a chocolatey package so I wrote a gist file that we will install using Boxstarter.
 
+###Section 1.1: Ubuntu
+
+####Installing NodeJs
+
+First we are going to install NodeJS using the Node.js Version Manager (NVM) using these [commands](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server)
+
+	sudo apt-get update
+	sudo apt-get install build-essential libssl-dev
+	curl https://raw.githubusercontent.com/creationix/nvm/v0.16.1/install.sh | sh
+	source ~/.profile
+	
+	nvm install 0.12.7 # See All Versions nvm ls-remote
+	node -v
+	
+
 * Ruby
 * Bundle Installer
 * Git
