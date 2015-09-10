@@ -72,10 +72,10 @@ Now that you have Boxstarter installed, you will notice on your desktop a new ic
 
 
 1. Run the Boxstarter Shell
-1. Run the following command to install the gist file commands. You can view the contents of the gist file [here](https://gist.githubusercontent.com/digitaldrummerj/f290a11d16e98beabd8b/raw/42f39e278d34c2e233d3b9992bb7d80a60c63ee0/jekyll)
+1. Run the following command to install the gist file commands. You can view the contents of the gist file [here](https://gist.githubusercontent.com/digitaldrummerj/f290a11d16e98beabd8b/raw/de3d6d551a0f881e0e66cf6c8ec2cc49c35525e0/jekyll)
 
-		Install-BoxStarterPackage -PackageName https://gist.githubusercontent.com/digitaldrummerj/f290a11d16e98beabd8b/raw/42f39e278d34c2e233d3b9992bb7d80a60c63ee0/jekyll		
-
+		Install-BoxStarterPackage -PackageName https://gist.githubusercontent.com/digitaldrummerj/f290a11d16e98beabd8b/raw/de3d6d551a0f881e0e66cf6c8ec2cc49c35525e0/jekyll
+		
 1. If there were no errors, you are now ready to install jekyll.
 
 
