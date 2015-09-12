@@ -1,14 +1,14 @@
 ---
 published: true
 layout: post
-title: 'Blogging On Github - Part 11 -  Editing Locally'
+title: 'Blogging On Github - Part 12 -  Editing Locally'
 categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
 date: 2015-09-11 06:00
 series: blogging-on-github 
 
 ---
 
-Welcome to part 11 of the series on Blogging on Github.  
+Welcome to part 12 of the series on Blogging on Github.  
 
 In this lesson, we are going to set it up so that we can do draft post that we can check into our repo but not have them show up on the production site.
 
@@ -61,3 +61,4 @@ In our next lesson, I will show you how to create the series listing like you se
 
 
 {% include series.html %}
+ 
