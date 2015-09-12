@@ -114,7 +114,10 @@ In this section, you will clone the blog repo from github and install jekyll.
 
 		bundle install
 
+1. The last thing we need to do is update the github-pages dependencies to be able to use the latest pygments.rb gem as the version included with the github-pages gem is not compatible with Windows
 
+		bundle update github-pages
+		
 Now we have jekyll installed.  Time to test it out
 
 ### Section 3: Testing Your Blog Works on Your Computer
