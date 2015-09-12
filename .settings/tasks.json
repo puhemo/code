@@ -1,4 +1,4 @@
-{
+/*{
 	"command": "jekyll serve--config _config.yml,_configdev.yml --drafts",
 	"isShellCommand": true,
 	"showOutput": "always",
@@ -6,4 +6,4 @@
 //				"serve","--config _config.yml,_configdev.yml",
 //				"--drafts"
 	]
-}
+}*/

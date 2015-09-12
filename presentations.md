@@ -30,36 +30,41 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 ## Upcoming Speaking Engagements
 
-<h3>Iterate Phoenix 2015 The Devops Conference <span>- Chandler, Az (September 1st, 2015)</span></h3>
-
-- [http://iteratephx.co](http://iteratephx.co)
-- [DevOps Yourself:  Fast Track Your Development Environment Setup](#vagrant)
-
 <h3>Phoenix Mobile Festival <span>- Chandler, Az (September 19th, 2015)</span></h3>
 
-- [http://phxmobifestival.com](http://phxmobifestival.com)
 - [Use Your Existing Web Skills to Create Native Mobile Applications](#ionic)
+- [Conference Home Page](http://phxmobifestival.com)
 
 <h3>Silicon Valley Code Camp <span>- Silicon Valley, Ca (Ocotber 3rd-4th, 2015)</span></h3>
 
-- [http://siliconvalley-codecamp.com](siliconvalley-codecamp.com)
 - [Ionic Framework Overview](#ionic)
 - [DevOps Yourself:  Fast Track Your Development Environment Setup](#vagrant)
-
+- [Code Camp Home Page](http://siliconvalley-codecamp.com)
 
 
 <h3>So Cal Code Camp <span>- Los Angeles, Ca (November 14th-15th, 2015)</span></h3>
 
-- [http://www.socalcodecamp.com/](http://www.socalcodecamp.com/)
+- [Code Camp Home Page](http://www.socalcodecamp.com/)
 - Topics still in planning phase.
 
 <p>&nbsp;</p>
 
 ## Past Speaking Engagements
 
+<h3>Phoenix Versioning User Group <span>- Tempe, Az (September 9th, 2015)</span></h3>
+
+- [User Group Home Page](http://www.meetup.com/phoenix-versioning
+- [Why You Need a Blog and How to Create a Successful One](#blogging)
+
+<h3>Iterate Phoenix 2015 The Devops Conference <span>- Chandler, Az (September 1st, 2015)</span></h3>
+
+- [Conference Home page](http://iteratephx.co)
+- [DevOps Yourself:  Fast Track Your Development Environment Setup](#vagrant)
+
+
 <h3>Las Vegas .NET User Group <span>- Las Vegas, Nv (July 30, 2015)</span></h3>
 
-- [http://www.dotnetgroup.org/](http://www.dotnetgroup.org/) or [https://www.facebook.com/dotnetgroupdotorg](https://www.facebook.com/dotnetgroupdotorg)
+- [User Group Home Page](http://www.dotnetgroup.org/) or [https://www.facebook.com/dotnetgroupdotorg](https://www.facebook.com/dotnetgroupdotorg)
 - [Developer Productivity in Visual Studio 2015](#vsprod)
 
 
@@ -171,6 +176,13 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 <p>&nbsp;</p>
 
 ## Presentation Details
+<p>&nbsp;</p>
+
+### <a name="blogging"></a> Why You A Blog and How to Create a Successful One
+
+Blogging can greatly help you advance your career.  Don't wait until you need a blog to create one.  This talk gives you all of the tools that you need to create a blog that is updated regularly. 
+
+Slides: [http://slides.com/digitaldrummerj/blogging/](http://slides.com/digitaldrummerj/blogging/)
 
 <p>&nbsp;</p>
 
