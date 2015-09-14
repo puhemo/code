@@ -50,7 +50,7 @@ cinst BoxStarter
 
 {% highlight  text %}
 
-Install-BoxStarterPackage -PackageName  https://gist.githubusercontent.com/digitaldrummerj/3fe2eb057004b6742b89/raw/c042aecff396d9b26d4061f45544bff80ff321e8/IonicSetup  -DisableReboots
+Install-BoxStarterPackage -PackageName  https://gist.githubusercontent.com/digitaldrummerj/3fe2eb057004b6742b89/raw/567279852d486a341f834bc4900f1f51e552152f/IonicSetup
 
 {% endhighlight %}
 
