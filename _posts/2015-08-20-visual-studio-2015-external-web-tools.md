@@ -3,7 +3,7 @@ layout: post
 title: 'Visual Studio 2015 - External Web Tools'
 
 date: 2015-08-20 06:00
-categories: ['visual studio', 'programming', 'npm', nodejs', 'how-to', 'bower', 'git']
+categories: ['visual studio', 'programming', 'npm', 'nodejs', 'how-to', 'bower', 'git']
 published: true
 ---
 
