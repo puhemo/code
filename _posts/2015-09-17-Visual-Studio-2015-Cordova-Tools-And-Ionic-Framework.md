@@ -163,6 +163,33 @@ Here is a list of different installed/re-installs/uninstalls that I did:
 * Upgraded TypeScript for Visual Studio since the Visual Studio installer said there was a new version out
 
 
+###Working Steps
+
+To create the project I first created the Ionic project using the Ionic CLI and then created a Cordova project in Visual Studio based on the Ionic CLI project that was created.
+
+1. Open Command Line
+1. Navigate to c:\projects
+1. Run ionic start Demo blank
+1. cd into c:\projects\Demo
+1. run npm config delete loglevel
+1. run pjup to update all of the npm package.  Say Y to everything except the run npm install
+1. run ionic setup sass
+1. run rm -rf node_modules 
+1. Open Visual Studio
+1. Go File -> New -> Project From Existing Code
+1. Select Cordova as the project type and click Next
+1. Click the browse button, navigate to the c:\projects\Demo folder, and click the Select Folder button
+1. Name the project Demo
+1. Click the Finish button
+1. Let Visual Studio do an npm package restore
+1. Ignore the gulp-sass error popup as this appears to be task runner explorer related and will go away after the npm package restore
+1. Run the gulp default task to generate the sass file using the Task Runner Explorer
+1. Open the taco.json file and update the version to 5.3.1
+1. Delete the www\lib\angular-ui-router\api directory
+1. Build the Visual Studio project
+1. Deploy it to a Device/Emulator
+
+
 
 ###Conclusion
 
