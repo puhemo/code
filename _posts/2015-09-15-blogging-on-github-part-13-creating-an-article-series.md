@@ -7,7 +7,7 @@ categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
 published: true
 ---
 
-Welcome to part 12 of the series on Blogging on Github.  
+Welcome to part 13 of the series on Blogging on Github.  
 
 In this lesson, we are going to go through how to create the series listing like you see for this blog series.  
 
