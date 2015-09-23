@@ -84,7 +84,7 @@ In order to use the Pygments code syntax highlighter, we need to install python 
 	sudo apt-get install python-pip -y
 	
 	
-###Section 1.4: Installing Git
+####Section 1.4: Installing Git
 
 	sudo apt-get install git -y	
 

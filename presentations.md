@@ -1,5 +1,5 @@
 ---
-layout: speaking
+layout: page
 title: Speaking
 permalink: /speaking/
 active: speaking
@@ -35,7 +35,6 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 - [Use Your Existing Web Skills to Create Native Mobile Applications](#ionic)
 - [Meeting details](http://www.meetup.com/Ionic-AZ/events/225449985/)
 
-
 <h3>Silicon Valley Code Camp <span>- Silicon Valley, Ca (Ocotber 3rd-4th, 2015)</span></h3>
 
 - [Ionic Framework Overview](#ionic)
@@ -57,35 +56,33 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 - [Use Your Existing Web Skills to Create Native Mobile Applications](#ionic)
 - [Conference Home Page](http://phxmobifestival.com)
 
-
-<h3>Ionic-AZ Meetup <span>Scottsdale, Az (September 29th)</span></h3>
-
-- [Use Your Existing Web Skills to Create Native Mobile Applications](#ionic)
-- [Meeting details](http://www.meetup.com/Ionic-AZ/events/225449985/)
-
+<p>&nbsp;</p>
 
 <h3>Phoenix Versioning User Group <span>- Tempe, Az (September 9th, 2015)</span></h3>
 
 - [User Group Home Page](http://www.meetup.com/phoenix-versioning)
 - [Why You Need a Blog and How to Create a Successful One](#blogging)
 
+<p>&nbsp;</p>
+
 <h3>Iterate Phoenix 2015 The Devops Conference <span>- Chandler, Az (September 1st, 2015)</span></h3>
 
 - [Conference Home page](http://iteratephx.co)
 - [DevOps Yourself:  Fast Track Your Development Environment Setup](#vagrant)
 
+<p>&nbsp;</p>
 
 <h3>Las Vegas .NET User Group <span>- Las Vegas, Nv (July 30, 2015)</span></h3>
 
 - [User Group Home Page](http://www.dotnetgroup.org/) or [https://www.facebook.com/dotnetgroupdotorg](https://www.facebook.com/dotnetgroupdotorg)
 - [Developer Productivity in Visual Studio 2015](#vsprod)
 
-
+<p>&nbsp;</p>
 
 <h3>Southeast Valley .NET User Group <span>- Chandler, Az (July 23, 2015)</span></h3>
 
 - [http://www.meetup.com/sevdnug/](http://www.meetup.com/sevdnug/)
-- [Ionic Framework Overview](#ionic)
+- [Ionic Framework Overview with the Visual Studio 2015 Cordova Tools](#ionic)
 
 <p>&nbsp;</p>
 
@@ -93,7 +90,7 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 <h3>Northwest Valley .NET User Group <span>- Glendale, Az (July 22, 2015)</span></h3>
 
 - [http://nwvdnug.org/](http://nwvdnug.org/)
-- [Ionic Framework Overview](#ionic)
+- [Ionic Framework Overview with the Visual Studio 2015 Cordova Tools](#ionic)
 
 <p>&nbsp;</p>
 
@@ -140,7 +137,7 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 <p>&nbsp;</p>
 <h3>Las Vegas Code Camp <span>- Las Vegas, Nv (February 21, 2015)</span></h3>
 
-- [Ionic Framework - How to Easily Build Hybrid Mobile Applications for Android and iOS (Half day workshop)](#ionic)
+- [Ionic Framework - How to Easily Build Hybrid Mobile Applications for Android and iOS](#ionic)
 - [Vagrant](#vagrant)
 
 <h3> Arizona Software Community <span>- Phoenix, Az (January 2015)</span></h3>
@@ -172,7 +169,7 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 - [Developer Productivity in Visual Studio](#vsprod)
 
 
-<h3> Southeast Valley .Net User Group<span> - Chandler, Az (February 2014)</span></h3>
+<h3> Southeast Valley .Net User Group<span> - Chandler, Az (May 2014)</span></h3>
 
 - [Side Waffle](#sidewaffle)
 
@@ -241,24 +238,15 @@ Workshop Labs: [http://github.com/ionicworkshop](http://github.com/ionicworkshop
 - Ionic Forum: [http://forum.ionicframework.com/](http://forum.ionicframework.com/)
 - Ionic Twitter: [http://www.twitter.com/ionicframework](http://www.twitter.com/ionicframework)
 - Ionic Creator: [https://creator.ionic.io/](https://creator.ionic.io/)
-
-[Ionicons - 600+ free icons](http://Ionicons.com/)
-
-[Must Have Plugins For Ionic](http://www.gajotres.net/must-have-plugins-for-ionic-framework/)
-
-[List of Comprehensive Starter Templates](http://www.gajotres.net/a-comprehensive-list-of-ionic-starter-apps/)
-
-[Horizontal List Scroll Demo](http://codepen.io/drewrygh/pen/jEJGLx)
-
-[Swipeable Cards](http://devdactic.com/swipeable-cards-ionic/)
-
-[Using Twitter Api with Ionic](http://devdactic.com/twitter-rest-api-angularjs/)
-
-[Shrinking Headers](http://devdactic.com/shrinking-headers-with-ionic/)
-
-[Ionic cheatsheet](http://devdactic.com/ionic-cheatsheet/)
-
-[Monitor Battery Status](https://blog.nraboy.com/2015/07/monitor-device-battery-status-using-ionic-framework/)
+- [Ionicons - 600+ free icons](http://Ionicons.com/)
+- [Must Have Plugins For Ionic](http://www.gajotres.net/must-have-plugins-for-ionic-framework/)
+- [List of Comprehensive Starter Templates](http://www.gajotres.net/a-comprehensive-list-of-ionic-starter-apps/)
+- [Horizontal List Scroll Demo](http://codepen.io/drewrygh/pen/jEJGLx)
+- [Swipeable Cards](http://devdactic.com/swipeable-cards-ionic/)
+- [Using Twitter Api with Ionic](http://devdactic.com/twitter-rest-api-angularjs/)
+- [Shrinking Headers](http://devdactic.com/shrinking-headers-with-ionic/)
+- [Ionic cheatsheet](http://devdactic.com/ionic-cheatsheet/)
+- [Monitor Battery Status](https://blog.nraboy.com/2015/07/monitor-device-battery-status-using-ionic-framework/)
 
 
 
@@ -319,4 +307,4 @@ Demo: [https://github.com/digitaldrummerj/DeveloperProductivityTalk](https://git
 #### Additional Resources
 - [19 Must Know VS Keyboard Shortcuts Part 1](http://www.codeproject.com/Articles/1010023/Must-Know-Visual-Studio-Keyboard-Shortcuts-Part)
 - [19 Must Know VS Keyboard Shortcuts Part 2](http://www.codeproject.com/Articles/1010022/Must-Know-Visual-Studio-Keyboard-Shortcuts-Part)
-- [Default VS Shortcuts](http://visualstudioshortcuts.com/2015/)I
+- [Default VS Shortcuts](http://visualstudioshortcuts.com/2015/)
