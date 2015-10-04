@@ -3,7 +3,7 @@ author: "Justin James"
 description: "A web developer and speaker from Arizona"
 subheading: "A web developer and speaker from Arizona"
 more: "read more"
-url: "http://digitaldrummerj-jekyll.github.io" #"http://digitaldrummerj.me"
+url: "http://digitaldrummerj.me" #"http://digitaldrummerj.me"
 baseurl: #"/" # comment out if in root directory
 
 avatar: https://avatars3.githubusercontent.com/u/708423?v=3&s=460
