@@ -2,12 +2,13 @@
 published: true
 layout: post
 title: 'Visual Studio Code Snippets'
-categories: ['productivity', 'programming', 'visual studio']
+categories: ['productivity', 'visual studio']
 date: 2015-08-18 06:00
 series: developer-productivity
-excerpt: "There are a bunch of built-in Visual Studio code snippets that will generate code for you with a short keyword and then a tab key press.  These shortcuts will make you more efficient when writing code such as creating properties, loops, exceptions, etc.
-
-Below I have listed the code snippets  that I most frequently use and what the output from them looks like."
+excerpt: | 
+    There are a bunch of built-in Visual Studio code snippets that will generate code for you with a short keyword and then a tab key press.  These shortcuts will make you more efficient when writing code such as creating properties, loops, exceptions, etc.
+    
+    Below I have listed the code snippets  that I most frequently use and what the output from them looks like.
 ---
 {% include series.html %}
 
@@ -17,7 +18,7 @@ Below I have listed the code snippets  that I most frequently use and what the o
 
 To use these snippets type they keyword and then press the tab key. 
 
-###Loops
+##Loops
 
 * do
 
@@ -43,7 +44,7 @@ To use these snippets type they keyword and then press the tab key.
 		{
 		}
 	
-###Conditionals
+##Conditionals
 
 * if
 
@@ -63,7 +64,7 @@ To use these snippets type they keyword and then press the tab key.
 		{
 		}
 
-###Error Trapping
+##Error Trapping
 
 * try
 
@@ -113,7 +114,7 @@ To use these snippets type they keyword and then press the tab key.
 			}
 		}
 		
-###Properties
+##Properties
 
 * prop
 
@@ -133,7 +134,7 @@ To use these snippets type they keyword and then press the tab key.
 
 		public int I { get; private set; }
 
-###Misc
+##Misc
 
 * ctor
 	
@@ -156,7 +157,7 @@ To use these snippets type they keyword and then press the tab key.
 		{
 		}
 	
-*#region
+* &num;region
 
 		#region MyRegion
 		#endregion

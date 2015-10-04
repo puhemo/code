@@ -2,14 +2,15 @@
 published: true
 title: Ionic - The Ionicbox and How To Use It
 layout: post
-tags: [ionic]
-categories: [programming, mobile-development, ionic, vagrant, virtualbox]
+categories: [ionic, vagrant, virtualbox]
 date: 2015-01-17 20:45:35
+excerpt: | 
+      If you have looked at setting up the [Ionic Framework](http://www.ionicframework.com) or have it done it before, you know on much of a pain it can be, especially when something doesn't work.  Luckily, Ionic offers a free virtual machine called [Ionicbox](https://github.com/driftyco/ionic-box) that is already configured with all of the software that you need.  
 ---
 
 If you have looked at setting up the [Ionic Framework](http://www.ionicframework.com) or have it done it before, you know on much of a pain it can be, especially when something doesn't work.  Luckily, Ionic offers a free virtual machine called [Ionicbox](https://github.com/driftyco/ionic-box) that is already configured with all of the software that you need.  
 
-### Prerequisites:
+## Prerequisites:
 
 Before you can use [Ionicbox](https://github.com/driftyco/ionic-box) you need to install [VirtualBox](http://www.virtualbox.org) and [Vagrant](http://www.vagrantup.com).  If you are on Windows and using [Chocolatey](http://www.chocolatey.org), you can install both using  cinst virtualbox and cinst vagrant.
 
@@ -17,11 +18,11 @@ Before you can use [Ionicbox](https://github.com/driftyco/ionic-box) you need to
 
 [Vagrant](http://www.vagrantup.com) is an easy way to manage virtual machines.  A full explaination is out of scope for this article.  
 
-### Ionic Box
+## Ionic Box
 
 Make sure that you installed VirtualBox and Vagrant before proceeding.  
 
-### Installing
+## Installing
 
 1. Open Windows Explorer and create a directory where you want to hold all of your Vagrant configuration files
 
@@ -66,7 +67,7 @@ Vagrant.configure(2) do |config|
 end
 {% endhighlight %}
 
-### So what do  all of those options in the VagrantFile mean?
+## So what do  all of those options in the VagrantFile mean?
 
 In the configuration we configure the video and physical memory of the virtual machine.  Since IonicBox is just a shell without a GUI, it doesn't need a lot of resources, so we only give it 2 gigs of memory.  Now if your host system doesn't have a lot of memory, you will need to dial this down.  
 
@@ -147,7 +148,7 @@ vb.name = "IonicBox"
 
 
 
-### Starting up the IonicBox and Getting logged in
+## Starting up the IonicBox and Getting logged in
 
 1. Open a command prompt and navigate to the IonicBox folder that contains the VagrantFile.
       * If on Windows, open the command prompt as an Administrator. 
@@ -173,7 +174,7 @@ vagrant ssh
 - if everything went successful you should be logged in
 
 
-### Testing the IonicBox
+## Testing the IonicBox
 
 Now lets create our first Ionic project.  
 
@@ -214,7 +215,7 @@ sudo npm install bower -g
 
 
 
-### I am done with IonicBox, now what?
+## I am done with IonicBox, now what?
 
 - To exit vagrant ssh session, just type exit from the command prompt that is logged into the IonicBox.  This will put you back into the original command prompt.
 

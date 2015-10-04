@@ -2,10 +2,21 @@
 layout: post
 title: 'Blogging On Github - Part 5 Adding Category Page'
 date: 2015-02-15
-categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
+categories: ['Blogging', 'Github', 'Jekyll']
 published: true
 series: blogging-on-github
+excerpt: | 
+    Welcome to part 5 of the series on blogging on github.  In this lesson we will go through creating a page to show blog post by category.
+    
+    **Lesson Length**:  15 minutes
+        
+    ## Overview
+    
+    A typical blog has a way for your readers to view posts by either category or date, so that they can look at your archives without having to go through the blog post one by one.  Unfortunately, the Jekyll-Now repository that we cloned your blog from, does not have these pages.  Luckily, these pages are really easy to create.
+    
+
 ---
+{% assign imagedir = "/images/BloggingOnGitHub/" | prepend: site.baseurl | prepend: site.url %}
 
 Welcome to part 5 of the series on blogging on github.  In this lesson we will go through creating a page to show blog post by category.
  
@@ -13,11 +24,11 @@ Welcome to part 5 of the series on blogging on github.  In this lesson we will g
 
 {% include series.html %}
 
-### Overview
+## Overview
 
 A typical blog has a way for your readers to view posts by either category or date, so that they can look at your archives without having to go through the blog post one by one.  Unfortunately, the Jekyll-Now repository that we cloned your blog from, does not have these pages.  Luckily, these pages are really easy to create.
 
-### Section 1: Creating the Category Page
+## Section 1: Creating the Category Page
 
 If you have been following along with the other lessons in the series, this should be familiar to you.
 
@@ -25,14 +36,14 @@ If you have been following along with the other lessons in the series, this shou
 
 1. Click on the + button to add a new file
 
-    ![Github Plus Button]({{site.url}}/images/github_add_button.png)
+    ![Github Plus Button]({{"github_add_button.png" | prepend: imagedir}})
 
 1.  Name the file archivebycategory.md
 
-    ![Github Name the New File archivebycategory.md]({{site.url}}/images/github_part_5_archivebycategory_file_name.png)
+    ![Github Name the New File archivebycategory.md]({{"github_part_5_archivebycategory_file_name.png" | prepend: imagedir}})
 
 
-### Section 2: Adding the Metadata
+## Section 2: Adding the Metadata
 
 Add the following front matter to the top of the archivebycategory.md file.
 
@@ -45,7 +56,7 @@ Add the following front matter to the top of the archivebycategory.md file.
         ---
     {% endraw %}
 
-### Section 3: Category List
+## Section 3: Category List
 
 After the front matter, add the following code to display the categories and the number of post per category.  Each category will link to further down in the page where is will show the post for that category.
 
@@ -62,7 +73,7 @@ After the front matter, add the following code to display the categories and the
         </div>
     {% endraw %}
 
-### Section 4: Blog Post by Category
+## Section 4: Blog Post by Category
 
 Next you need to add the code to display the list of blog post by category and sorted by title
 
@@ -86,17 +97,17 @@ Next you need to add the code to display the list of blog post by category and s
     {% endraw %}
 
 
-###  Section 5: Viewing the Category Page
+##  Section 5: Viewing the Category Page
 
 1. After you have added the above text, scroll to the bottom of the page, add your commit note, and    click the commit button.
 
-    ![Github Commit archivebycategory.md]({{site.url}}/images/github_part_5_commit_archivebycategory.png)
+    ![Github Commit archivebycategory.md]({{"github_part_5_commit_archivebycategory.png" | prepend: imagedir}})
 
 1. To  view the category page, navigate to http://[username].github.io/categoryview
 
 1. Your page should look like the following but with your avatar, site name and description in the header of the page.
 
-    ![category view screenshot]({{ site.url}}/images/github_part_5_archivebycategory_in_browser.png)
+    ![category view screenshot]({{ "github_part_5_archivebycategory_in_browser.png" | prepend: imagedir}})
 
 1. You will notice that the "You're up and running" post does not show up on the categories page.  This is because there is no categories front matter tag for that blog post.  Go ahead and open 2014-3-3-Hello-World.md and add the categories front matter tag.
 
@@ -104,7 +115,7 @@ Next you need to add the code to display the list of blog post by category and s
 
 1. Right now the page is published but not linked to from anywhere.  In the next section we will add it to the header section of the page.
 
-### Section 6: Adding Category View into Header
+## Section 6: Adding Category View into Header
 
 Unlike the portfolio page that we created in the last lesson, this time we are not going to add the category page into the menu.  Instead we are going to create a row below the header with a link to the page.
 
@@ -112,7 +123,7 @@ Unlike the portfolio page that we created in the last lesson, this time we are n
 
 1. Click on the default.html file to open it.
 
-1. Click on the ![github_edit_button.png]({{site.url}}/images/github_edit_button.png) icon to edit the file.
+1. Click on the ![github_edit_button.png]({{"github_edit_button.png" | prepend: imagedir}}) icon to edit the file.
 
 1. Right after the &lt;/header&gt; tag, add the following html snippet
 
@@ -128,13 +139,13 @@ Unlike the portfolio page that we created in the last lesson, this time we are n
 
 1. Scroll down to the bottom, add the commit comment, and click on the commit change button.
 
-    ![Commit default.html changes]({{site.url}}/images/github_part_5_commit_default.png)
+    ![Commit default.html changes]({{"github_part_5_commit_default.png" | prepend: imagedir}})
 
 1. Now go view your blog's home page at http://[username].github.io/.  You should now see the "browse by category" link in the header.
 
-    ![Blog's Home Page with Browse By Category Link in Header]({{site.url}}/images/github_part_5_browse_by_category_in_header.png)
+    ![Blog's Home Page with Browse By Category Link in Header]({{"github_part_5_browse_by_category_in_header.png" | prepend: imagedir}})
 
-### Conclusion
+## Conclusion
 
 With just a few simple steps, you were added the post by category page and put it in the header.  In the next lesson we will add in a new page for browsing blog post by year and month.
 

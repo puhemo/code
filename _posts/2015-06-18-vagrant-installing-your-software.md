@@ -2,9 +2,15 @@
 published: true
 layout: post
 title: 'Vagrant Part 5 - Installing Your Software'
-categories: ['How-To', 'vagrant', 'chocolatey']
+categories: ['virtualbox', 'vagrant', 'chocolatey']
 date: 2015-06-19 04:00
 series: vagrant-getting-started-series
+excerpt: | 
+    Welcome to the Vagrant lesson on how to use Boxstarter to configure Windows and install software as part of the Vagrant provisioning process.
+
+    We have all of the needed software in place to start configuring and installing software onto our virtual machine.
+    
+    In this lesson, we will create an file with all of the install and configuration commands that will be executed with Boxstarter. 
 ---
 Welcome to the Vagrant lesson on how to use Boxstarter to configure Windows and install software as part of the Vagrant provisioning process.
 
@@ -31,7 +37,7 @@ Even though Boxstarter is a Chocolatey package, you can install and configure mo
 	
 			@powershell -NoProfile -ExecutionPolicy Bypass -Command "Install-BoxStarterPackage -PackageName %temp%\\BoxstarterGist.txt"  
 
-###Populating the BoxstarterGist.txt file
+##Populating the BoxstarterGist.txt file
 
 We are going to do several things in the BoxstarterGist.txt file:  
 
@@ -44,7 +50,7 @@ These are all examples of things that you can do.  At the end of the day it is j
 
 Open up the BoxstarterGist.txt file in your favorite text editor and proceed to the configuration sections.  I have the sections in the order that I like to install/configure but you can have them in any order in the BoxstarterGist.txt file.
   
-####Windows Configurations
+###Windows Configurations
 
 This section is the Windows configuration options that we want to set.  The full Windows configuration documentation for Boxstarter is available at [http://boxstarter.org/WinConfig](http://boxstarter.org/WinConfig).
 
@@ -64,7 +70,7 @@ This section is the Windows configuration options that we want to set.  The full
 
 		Set-TaskbarOptions -Size Small -Lock
 
-####Chocolatey Installs
+###Chocolatey Installs
 
 Now it is time to install all of our Chocolatey Packages.
 
@@ -91,7 +97,7 @@ Last thing we are going to do is pin a couple of items that we installs to the t
 
 	Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles(x86)}\Google\Chrome\Application\chrome.exe"
 	
-####npm installs
+###npm installs
 
 I play around with npm a lot and don't like the spinner when running an npm command, so I turn that off and set the log level that I like.  I then install the Ionic framework and Cordova npm packages.   
 
@@ -101,7 +107,7 @@ I play around with npm a lot and don't like the spinner when running an npm comm
 	npm install -g ionic
 	npm install -g cordova
 
-####git clone repositories
+###git clone repositories
 
 The last thing that I do as part of the BoxStarterGist.txt file is to create c:\projects which is where I store my project source code at and pull it down from Github.
 

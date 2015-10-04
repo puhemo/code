@@ -2,9 +2,18 @@
 published: true
 layout: post
 title: 'Vagrant Part 1 - Easy Virtual Machine Management'
-categories: ['How-To', 'vagrant']
+categories: ['vagrant', 'virtualbox']
 date: 2015-06-15 00:00
 series: vagrant-getting-started-series
+excerpt: |
+    Welcome to an overview of Vagrant and creating of your first Vagrant machine.  
+
+    Vagrant allows you to create and manage lightweight reproducible virtual machines.       
+    Essentially, all of the configurations to create and configure a virtual machine are kept separate from the virtual machine.  This allows you to delete the virtual machine and then re-create it with all of the same configurations at any point.   
+    
+    No longer do you have to be afraid to delete a virtual machine for a project that isn't active.  You can also give the Vagrant configuration to a co-worker or move it to another machine and be assured that everything will get setup correctly when you create the virtual machine on the new machine.
+    
+    Before, we can see Vagrant in action, we first need to install a little bit of software onto your machine.
 ---
 Welcome to an overview of Vagrant and creating of your first Vagrant machine.  
 
@@ -31,7 +40,7 @@ There are 3 pieces of software that we need:
 1. Virtualbox
 1. Vagrant
 
-###Chocolatey
+##Chocolatey
 
 Chocolatey is a Windows software install manager.  It solves several common issues with software installed:
 
@@ -58,7 +67,7 @@ You can find the package names on the Chocolatey Gallery at [http://chocolatey.o
 
 Next we are going to install Virtualbox using Chocolatey.
 
-###Virtualbox
+##Virtualbox
 
 For this tutorial, I am using Virtualbox as the virtual machine provider.  You could also use Hyper-V (free)  or VMWare (paid).  If you are using Hyper-V already, you can not use Virtualbox at the same as they conflict with each other.
 
@@ -70,7 +79,7 @@ Open an administrative command prompt and run the following Chocolatey command.
 	
 The command above will also instal Virtualbox as it is listed as a dependency for the virtualbox.extensionpack package.
 
-###Vagrant
+##Vagrant
 
 To install Vagrant, from the administrative command prompt, run the following Chocolatey command.
 
@@ -89,66 +98,64 @@ Vagrant starts with a base box which nothing more than the a portable skelton fo
 
 For this tutorial, we are going to use the Base OS box and build out the box with all of the software we need.
 
-###Creating VagrantFile 
+##Creating VagrantFile 
  
 The first step is to create a directory to hold the VagrantFile.  I use c:\VagrantBoxes to hold all of the my Vagrant machines configurations.
 
-Within c:\VagrantBoxes, create a directory called MyFirstMachine.
+1. Within c:\VagrantBoxes, create a directory called MyFirstMachine.
 
-Open up a command prompt and navigate to the MyFirstMachine directory that you just created.
+1. Open up a command prompt and navigate to the MyFirstMachine directory that you just created.
  
-To initalize the Vagrant box, you need to run the vagrant init command.   This command will initialize the directory to hold Vagrant information and creates the VagrantFile.
+1. To initalize the Vagrant box, you need to run the vagrant init command.   This command will initialize the directory to hold Vagrant information and creates the VagrantFile.
 
-For this tutorial, we are going to use the box "opentable/win-8.1-enterprise-amd64-nocm".  The command below will initalize the MyFirstMachine directory.
+1. For this tutorial, we are going to use the box "opentable/win-8.1-enterprise-amd64-nocm".  The command below will initalize the MyFirstMachine directory.
 
 	vagrant init "opentable/win-8.1-enterprise-amd64-nocm"
 	
 Additional boxes can be from the cloud at [https://atlas.hashicorp.com/boxes/search]( https://atlas.hashicorp.com/boxes/search)
 
-###Configuring the VagrantFile
+##Configuring the VagrantFile
 
 In the MyFirstMachine directory there is now a file called VagrantFile.  Open this file up in your favorite text editor.  
 
 Within the VagrantFile, there is a basic configuration already setup and a lot of very useful comments that explain the different possible configurations.
 
-####Vagrant general configurations
+###Vagrant general configurations
 
-* config.vm.box is the name of the Vagrant base box to use to start up the machine with.  If this base box does not already exist on your machine it will attempt to download it from the Vagrant cloud.  
+1. config.vm.box is the name of the Vagrant base box to use to start up the machine with.  If this base box does not already exist on your machine it will attempt to download it from the Vagrant cloud.  
 
 		config.vm.box = "opentable/win-8.1-enterprise-amd64-nocm"
 
-* Configure the actual machine name of the virtual machine
+1. Configure the actual machine name of the virtual machine
 	
 		config.vm.hostname = "MyFirstMachine"	
 
-* How long Vagrant will keep trying to connect to the virtual machine before it assume something went wrong and times out.
+1. How long Vagrant will keep trying to connect to the virtual machine before it assume something went wrong and times out.
 	
 		config.vm.boot_timeout = 600
 	
-* How to commumicate with the machine.  The two options are SSH and WinRM.  Typically SSH is used for Linux and WinRM for Windows machines.
+1. How to commumicate with the machine.  The two options are SSH and WinRM.  Typically SSH is used for Linux and WinRM for Windows machines.
 	
 		config.vm.communicator = "winrm"
 
-####Virtualbox Configurations
+###Virtualbox Configurations
 
 In the configuration below, it will configure the virtual machine with: 
 
 * 4 gigs of RAM
 * Set it to use 2 CPUs
 * Make the video ram 128 megs
-* Set the clipboard as bidirectional meaning you can copy and paste from host machine to virtual machine as well as from virtual machine to host machine.
+* Set the clipboard as bidirectional so you can copy and paste from the host machine to virtual machine as well as from the virtual machine to host machine.
 * Name the machine in the Virtualbox Manager UI.
- 
- 
+
 		config.vm.provider "virtualbox" do |vb|
-	          vb.memory = "4096"
-	          vb.cpus = 2
-	          vb.customize ["modifyvm", :id, "--vram", "128"]
-	          vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
-	          vb.name = "My First Machine"   
-	     end     
-	 
-	 
+				vb.memory = "4096"
+				vb.cpus = 2
+				vb.customize ["modifyvm", :id, "--vram", "128"]
+				vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+				vb.name = "My First Machine"   
+			end     
+
 Now we are ready to start up the machine and start using it. 
 
 1. Open a command prompt.

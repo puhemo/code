@@ -3,9 +3,20 @@ layout: post
 title: 'Blogging On Github - Part 13 - Creating an Article Series'
 series: blogging-on-github 
 date: 2015-09-15 06:00
-categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
+categories: ['Blogging', 'Github', 'Jekyll']
 published: true
+excerpt: |
+     Welcome to part 13 of the series on Blogging on Github.  
+
+     In this lesson, we are going to go through how to create the series listing like you see for this blog series.  
+
+     **Length**: 10 minutes
+
+     ### Overview
+
+     Sometimes a blog post gets too big and you need to split it into multiple articles or you want to do a series like this one that builds upon each other but you don't want to have to manage a listing of all of the post in the series.  Instead you can easily create a liquid template that does all of the work for you.  
 ---
+{% assign imagedir = "/images/BloggingOnGitHub/" | prepend: site.baseurl | prepend: site.url %}
 
 Welcome to part 13 of the series on Blogging on Github.  
 
@@ -105,12 +116,12 @@ Note: I assume that you have alrady cloned your jekyll repo to your machine.  Th
 
 If you do not have the bootstrap css include in your blog, then you will notice that the series listing does not stand out at all.  
 
-![Series Listing with No Css]({{site.url}}/images/BloggingOnGitHub/9/ScreenshotOfSeriesWithNoCss.png)
+![Series Listing with No Css]({{"ScreenshotOfSeriesWithNoCss.png" | prepend: imagedir}})
 
 
 In the next section we will add the missing panel css to make it look more like this.
 
- ![Series Listing with Css]({{site.url}}/images/BloggingOnGitHub/9/ScreenshotOfSeriesWithCss.png)
+ ![Series Listing with Css]({{"ScreenshotOfSeriesWithCss.png" | prepend: imagedir}})
 
 
 ### Section 3: Adding CSS

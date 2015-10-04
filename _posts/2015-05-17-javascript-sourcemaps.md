@@ -2,9 +2,17 @@
 layout: post
 title: Javascript Debugging Made Easier with Sourcemaps
 published: true
-categories: ['programming', 'mobile-development', 'How-To', 'ionic', 'gulp']
+categories: ['debugging', 'chrome', 'gulp']
 date: 2015-05-18 2:57 pm
+excerpt: | 
+  When you release your web site to production, you should minify and concatenate your javascript files.  You will have much better performance by doing this but unfortunately debugging becomes difficult with the minified code as it shortens all of the variable and method names.  Luckily there is a simple solution to tell the browser developer tools to use the original javascript files when debugging the code, called source maps. 
+  
+  Sourcemaps bacically are a way to map the combined/minified file back to the original file. As part of the minification process you generate a source map which holds the information about your original files.  The developer tools will then parse the source map and make it appear as though you're running unminified and uncombined files.
+
+  To generate the sourcemaps we are going to gulp with the gulp-concat, gulp-uglify, and gulp-sourcemaps modules.   If you are not familiar with gulp, it is basically a javascript build system that allows you to write code to automate tasks.  
+
 ---
+{% assign imagedir = "/images/ChromeDevTools/" | prepend: site.baseurl | prepend: site.url %}
 
 Updated: Add clean task that uses rimraf to delete the bundle.min.js file if it already exist.  Without this it would just append to the existing bundle.min.js file.
 
@@ -94,22 +102,22 @@ Now that we have the source maps generated, we have to tell the Chrome Developer
 1. Open Google Chrome.
 1. Open the Developer Tools.
 
-    ![Open Chrome Developer Tools]({{site.url}}/images/ChromeDevTools-Open.png)
+    ![Open Chrome Developer Tools]({{"ChromeDevTools-Open.png" | prepend: imagedir}})
     
 1.  Click on the Setting Cog.
 
-    ![Open Settings]({{site.url}}/images/ChromeDevTools-SettingsCog.png)
+    ![Open Settings]({{"ChromeDevTools-SettingsCog.png" | prepend: imagedir}})
 
 1. Scroll down in the General Settings under you see the Sources section and ensure that the "Enable JavaScript source maps" is checked.
 
-    ![Enable Javascript Source Maps]({{site.url}}/images/ChromeDevTools-JavascriptSourcemapsEnabled.png)
+    ![Enable Javascript Source Maps]({{"ChromeDevTools-JavascriptSourcemapsEnabled.png" | prepend: imagedir}})
   
 1. Click on the X in the upper right of the Settings windows to close it.
 1. Now view your web site in the browser to make sure everything is still working.  
     * Note: If you are using Angular, you have to make sure that you use the minification safe syntax for the dependency injection.  See the next section for examples.
     * Note 2: If you are using the Ionic Framework, the default templates (blank, tabs, sidemenu) do not use the Angular minification safe syntax.  You will need to modify the template after you generate your application.
     
-###Angular Minification Safe Syntax
+##Angular Minification Safe Syntax
 
 If you are using the AngularJs framework it does a lot of dependency injection.  Out of the box, if you just pass in your arguments to the different functions, it is not minification safe.  There are a couple of easy ways to make it minification safe with a minimal amount of code changes.
 

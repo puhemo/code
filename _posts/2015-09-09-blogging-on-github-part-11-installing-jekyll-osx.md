@@ -2,11 +2,23 @@
 published: true
 layout: post
 title: 'Blogging On Github - Part 11 -  Installing Jekyll On OSx'
-categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
+categories: ['Blogging', 'Github', 'Jekyll']
 date: 2015-09-09 17:15
 series: blogging-on-github 
-
+excerpt: |
+    Welcome to part 11 of the series on Blogging on Github.  
+    
+    In this lesson, we are going to setup your MAC (OSx) computer to be able to edit your blog on your computer.
+    
+    **Length**: 60 minutes
+       
+    ## Overview
+    
+    Up to this point we have been using the Github web site to edit all of our files but the downside to this is that any chances you want to make show up live in your blog before you have had a chance to test them.  
+    
+    Instead, it is better if you can test out all of your changes and review your blog post before letting the world see them.  It will also let you have draft post where you can see them locally but on github they will not be visible.
 ---
+{% assign imagedir = "/images/BloggingOnGitHub/" | prepend: site.baseurl | prepend: site.url %}
 
 Welcome to part 11 of the series on Blogging on Github.  
 
@@ -16,22 +28,22 @@ In this lesson, we are going to setup your MAC (OSx) computer to be able to edit
 
 {% include series.html %}
 
-### Overview
+## Overview
 
 Up to this point we have been using the Github web site to edit all of our files but the downside to this is that any chances you want to make show up live in your blog before you have had a chance to test them.  
 
 Instead, it is better if you can test out all of your changes and review your blog post before letting the world see them.  It will also let you have draft post where you can see them locally but on github they will not be visible.
 
-### Section 1: Installing Software
+## Section 1: Installing Software
 
 We need to install XCode command line tools, nodejs and python pip.
 
 
-####Section 1.1: Installing NodeJs
+###Section 1.1: Installing NodeJs
 
 Head over to [nodejs.org](https://nodejs.org) and download the NodeJs Installer and run it.  Take all of the defaults.
 
-####Section 1.2: Installing XCode Command Line Tools
+###Section 1.2: Installing XCode Command Line Tools
 
 Unfortunately to get the XCode command line tools, you first need to install XCode.
 
@@ -46,17 +58,17 @@ Once XCode is installed, open up a terminal windows (Application -> Other -> Ter
 	
 This will bring up a windows asking you to install the command line tools package that we need and just click the Install button.
 	
-####Section 1.3: Installing Pygments Code Highlighter
+###Section 1.3: Installing Pygments Code Highlighter
 
 		pip install Pygments
 
-####Section 1.4: Install Ruby Gems
+###Section 1.4: Install Ruby Gems
 
 	sudo gem update --system 	
 	sudo gem install bundler
 
 
-### Section 2: Getting your Blog onto your computer
+## Section 2: Getting your Blog onto your computer
 
 In this section, you will clone the blog repo from github and install jekyll.
 
@@ -92,7 +104,7 @@ In this section, you will clone the blog repo from github and install jekyll.
 
 Now we have jekyll installed.  Time to test it out
 
-### Section 3: Testing Your Blog Works on Your Computer
+## Section 3: Testing Your Blog Works on Your Computer
 
 Now that we have everything installed for jekyll it is time to test it out.  
 
@@ -102,7 +114,8 @@ Now that we have everything installed for jekyll it is time to test it out.
 
 1. If it build successfully you will see something like this
 
-![Jekyll Serve Success]({{site.url}}/images/BloggingOnGitHub/10/jekyllserve.png)
+	![Jekyll Serve Success]({{"jekyllserve.png" | prepend: imagedir }})
+
 
 1. Now if you open up your browser and navigate to http://localhost:4000 you will see you blog.
 
@@ -118,19 +131,19 @@ However, by default your _config.yml file will be set for production which will 
 		google_analytics: 
 		google_search: 
  
- 1. If your jekyll serve is still running do a ctrl+c to stop it.
- 1. Now run the following command to tell jekyll the config yml files to load
+1. If your jekyll serve is still running do a ctrl+c to stop it.
+1. Now run the following command to tell jekyll the config yml files to load
  
- 	jekyll serve --config _config.yml,_configdev.yml
+		jekyll serve --config _config.yml,_configdev.yml
 	 
 1. 	If it build successfully you will see something like this
 
-![Jekyll Serve Success]({{site.url}}/images/BloggingOnGitHub/10/jekyllserve_multipleconfigs.png)
+	![Jekyll Serve Success]({{"jekyllserve_multipleconfigs.png" | prepend: imagedir }})
  
 1. Now if you open up your browser and navigate to http://localhost:4000 you will see you blog and any place that reference site.url will be working..
 
 
-### Conclusion
+## Conclusion
 
 Now you are ready to do all of your editing locally and  test it out before the world gets to see it. 
 

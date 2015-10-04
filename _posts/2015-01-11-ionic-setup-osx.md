@@ -2,16 +2,19 @@
 layout: post
 title: Ionic - Setup on OSx
 published: true
-tags: [ionic]
-categories: [programming, mobile-development, ionic]
+categories: [ionic]
 date: 2015-01-11 20:45:35
+excerpt: | 
+    If you are like me and just starting to work with the Ionic Framework and don’t already have a machine setup to do Android, iOS, Node, etc development then many of the guides out there leave out a number of steps that you need to do in order to get everything working.
+    
+    Even being a windows user I was able to pretty easily get Ionic working on a Mac.  The only difference between the Windows setup and the OSx setup is that you can only add iOS to Ionic on a Mac.  
 ---
 
 If you are like me and just starting to work with the Ionic Framework and don’t already have a machine setup to do Android, iOS, Node, etc development then many of the guides out there leave out a number of steps that you need to do in order to get everything working.
 
 Even being a windows user I was able to pretty easily get Ionic working on a Mac.  The only difference between the Windows setup and the OSx setup is that you can only add iOS to Ionic on a Mac.  
 
-### Software to be installed
+## Software to be installed
 
 - [NodeJS](https://nodejs.org)
 - [Ant](https://chocolatey.org/packages/ant)
@@ -25,7 +28,7 @@ Even being a windows user I was able to pretty easily get Ionic working on a Mac
 - Github for OSx (optional)
 - XCode
 
-### General Install Steps
+## General Install Steps
 1. Install homebrew and node js via [http://www.johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/](http://www.johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/)
 1. NPM packages
 	- npm install -g cordova
@@ -34,7 +37,7 @@ Even being a windows user I was able to pretty easily get Ionic working on a Mac
 1. Google Chrome
     	- Download from [https://www.google.com/chrome/browser/desktop/](https://www.google.com/chrome/browser/desktop/)
 
-###Android Setup Steps
+##Android Setup Steps
 1. JDK 7
 	- Download from [http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
 	- After install from the terminal create ~/.bash_profile if it doesn't already exist.  You can use touch ~/.bash_profile to create the file.
@@ -82,7 +85,7 @@ Add export PATH=${PATH}:/users/[Your UserName]/Development/android-sdk-mac_x86/t
     * Click the Next button and wait for the device to download
     * Click the Finish button.
 
-###iOS Setup Steps
+##iOS Setup Steps
 10. Install Xcode from app store.  This will take awhile since it is ~2 gigs in size.
 	- Once install is completed, open xcode and accept the license
 11. Install the IOS Simulator that Ionic will use.
@@ -91,7 +94,7 @@ Add export PATH=${PATH}:/users/[Your UserName]/Development/android-sdk-mac_x86/t
 npm install -g ios-sim
 {% endhighlight %}
 
-### Verifying that everything works
+## Verifying that everything works
 
 
 1. Open terminal

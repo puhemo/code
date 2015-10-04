@@ -2,9 +2,19 @@
 published: true
 layout: post
 title: 'Vagrant Part 2 - Provisioning Introduction'
-categories: ['How-To', 'vagrant', 'chocolatey']
+categories: ['virtualbox', 'vagrant', 'chocolatey']
 date: 2015-06-16 01:00
 series: vagrant-getting-started-series
+excerpt: |
+    Welcome to the Vagrant lesson on what Vagrant provisioning is.
+    
+    Provisioners allow you to automatically install software and alter configurations during the Vagrant up process.
+    
+    This is useful since boxes typically aren't built perfectly for your use case. Granted you could just login to the box and install all of the software by hand.  However, by using the provisioning it automates the process, make it repeatable, and requires no human interaction.
+    
+    This means that you can run vagrant destory, then vagrant up and have a fully configured environment. This makes provisioning super powerful.    
+    
+    Vagrant gives you multiple options for provisioning the machine, from simple command line scripts to more complex configuration management systems such as chef and puppet. 
 ---
 Welcome to the Vagrant lesson on what Vagrant provisioning is.  
 

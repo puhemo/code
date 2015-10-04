@@ -2,9 +2,14 @@
 published: true
 layout: post
 title: 'Vagrant Part 3 - Provisioning With Chocolatey'
-categories: ['How-To', 'vagrant', 'chocolatey']
+categories: ['virtualbox', 'vagrant', 'chocolatey']
 date: 2015-06-17 02:00
 series: vagrant-getting-started-series
+excerpt: |
+    Welcome to the Vagrant lesson on installing Chocolatey as part of the Vagrant provisioning process.
+    
+    The first thing we are going to do as part our provisioning is to install Chocolatey onto the virtual machine. 
+
 ---
 Welcome to the Vagrant lesson on installing Chocolatey as part of the Vagrant provisioning process.
 
@@ -15,11 +20,11 @@ Welcome to the Vagrant lesson on installing Chocolatey as part of the Vagrant pr
 
 The first thing we are going to do as part our provisioning is to install Chocolatey onto the virtual machine. 
 
-As we saw in the [Easy Virtual Machine Management]({{site.url}}/vagrant-overview/) post, having Chocolatey on a machine allows you to easily install all of our software in an automated and repeatable fashion.
+As we saw in the [Easy Virtual Machine Management]({{"/vagrant-overview" | prepend: site.baseurl | prepend: site.url }}) post, having Chocolatey on a machine allows you to easily install all of our software in an automated and repeatable fashion.
 
 ##How to install as part of Vagrant provision?
 
-1. Open Windows Explorer and navigate to the MyFirstMachine directory that we created in the [Easy Virtual Machine Management]({{site.url}}/vagrant-overview/) post.
+1. Open Windows Explorer and navigate to the MyFirstMachine directory that we created in the [Easy Virtual Machine Management]({{ "/vagrant-overview" | prepend: site.baseurl | prepend: site.url }}) post.
 1. Create a directory called shell
 1. In the shell directory, create a file called main.cmd
 1. Open the main.cmd in your text editor and add the following line:

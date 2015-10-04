@@ -1,12 +1,20 @@
 ---
 layout: post
 title: 'Getting Visual Studio Cordova Tooling Working with the Ionic Framework'
-categories: ['Ionic', 'Visual Studio']
+categories: ['ionic', 'visual studio']
 published: true
 date: 2015-09-17 17:15
+excerpt: | 
+     I am doing an [Ionic Framework](http://www.ionicframework.com) presentation and I wanted to use the Visual Studio 2015 Cordova Tooling.  
+ 
+     I have done this presentation twice in the past couple of months using my Intel Nuc machine with the Visual Studio 2015 RTM Cordova tooling but it is kind of pain to do this since the Nuc is a desktop machine and doesn't have a monitor so I have to look at the projector screen or being a laptop to use as well. Setting up 2 machines in 15 minutes as well is a pain and hoping that the remoting from the laptop to the Nuc is stable just asking for trouble even with a travel router that I have.  
+ 
+     So I decided I would just get my laptop working with my demos since I already had Visual Studio 2015 installed and had everything I needed for Ionic already working.     
+
+     I thought this shouldn't take that long but unfortunately I ran into a bunch of issues.  Luckily I have managed to fix all of the issue and can move on with the prep work for my presentation.
 ---
 
-This weekend I am doing an [Ionic Framework](http://www.ionicframework.com) presentation and I wanted to use the Visual Studio 2015 Cordova Tooling.  
+I am doing an [Ionic Framework](http://www.ionicframework.com) presentation and I wanted to use the Visual Studio 2015 Cordova Tooling.  
 
 I have done this presentation twice in the past couple of months using my Intel Nuc machine with the Visual Studio 2015 RTM Cordova tooling but it is kind of pain to do this since the Nuc is a desktop machine and doesn't have a monitor so I have to look at the projector screen or being a laptop to use as well. Setting up 2 machines in 15 minutes as well is a pain and hoping that the remoting from the laptop to the Nuc is stable just asking for trouble even with a travel router that I have.  
 

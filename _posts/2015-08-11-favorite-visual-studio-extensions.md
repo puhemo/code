@@ -2,10 +2,10 @@
 published: true
 layout: post
 title: 'Favorite Visual Studio Extensions'
-categories: ['productivity', 'programming', 'visual studio']
+categories: ['productivity', 'visual studio']
 date: 2015-08-11 06:00
 series: developer-productivity
-excerpt: In the Visual Studio Extension Gallery there are hundreds of extensions that are available. The extensions add additional functionality to Visual Studio. Below are the extensions that I typically have installed.
+excerpt: In the Visual Studio Extension Gallery there are hundreds of extensions that are available. The extensions add additional functionality to Visual Studio. Here are the extensions that I typically have installed.
 
 ---
 {% include series.html %}
@@ -178,7 +178,7 @@ This is the one extension that I cannot live without.  It makes Visual Studio a 
   
 [http://jetbrains.com/resharper](http://jetbrains.com/resharper)
 
-###Features:
+##Features:
 
 **Navigation**
 

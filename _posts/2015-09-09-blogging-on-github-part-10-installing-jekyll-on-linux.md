@@ -2,11 +2,23 @@
 published: true
 layout: post
 title: 'Blogging On Github - Part 10 -  Installing Jekyll On Linux'
-categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
+categories: ['Blogging', 'Github', 'Jekyll']
 date: 2015-09-09 16:15
 series: blogging-on-github 
-
+excerpt: |
+    Welcome to part 10 of the series on Blogging on Github.  
+    
+    In this lesson, we are going to setup your Ubuntu Linux computer to be able to edit your blog on your computer.
+    
+    **Length**: 60 minutes
+        
+    ## Overview
+    
+    Up to this point we have been using the Github web site to edit all of our files but the downside to this is that any chances you want to make show up live in your blog before you have had a chance to test them.  
+    
+    Instead, it is better if you can test out all of your changes and review your blog post before letting the world see them.  It will also let you have draft post where you can see them locally but on github they will not be visible.
 ---
+{% assign imagedir = "/images/BloggingOnGitHub/" | prepend: site.baseurl | prepend: site.url %}
 
 Welcome to part 10 of the series on Blogging on Github.  
 
@@ -16,17 +28,17 @@ In this lesson, we are going to setup your Ubuntu Linux computer to be able to e
 
 {% include series.html %}
 
-### Overview
+## Overview
 
 Up to this point we have been using the Github web site to edit all of our files but the downside to this is that any chances you want to make show up live in your blog before you have had a chance to test them.  
 
 Instead, it is better if you can test out all of your changes and review your blog post before letting the world see them.  It will also let you have draft post where you can see them locally but on github they will not be visible.
 
-### Section 1: installing Software
+## Section 1: installing Software
 
 We need to install nodejs, ruby 2.x, python pip, and git.
 
-####Section 1.1: Installing NodeJs
+###Section 1.1: Installing NodeJs
 
 First we are going to install NodeJS using the command below
 
@@ -38,7 +50,7 @@ First we are going to install NodeJS using the command below
 	
 	node -v
 	
-####Section 1.2: Installing Ruby
+###Section 1.2: Installing Ruby
 
 Ubuntu Trusty 14.04 unfortunately comes with Ruby 1.9.x and we need 2.x.  There is also a bug in the ubuntu packages where the Ruby 2.0 install is actually the 1.9.3 branch.
 
@@ -77,19 +89,19 @@ Ubuntu Trusty 14.04 unfortunately comes with Ruby 1.9.x and we need 2.x.  There 
 		sudo gem install bundler
 	
 	
-####Section 1.3: Python
+###Section 1.3: Python
 
 In order to use the Pygments code syntax highlighter, we need to install python pip
 
 	sudo apt-get install python-pip -y
 	
 	
-####Section 1.4: Installing Git
+###Section 1.4: Installing Git
 
 	sudo apt-get install git -y	
 
 
-### Section 2: Getting your Blog onto your computer
+## Section 2: Getting your Blog onto your computer
 
 In this section, you will clone the blog repo from github and install jekyll.
 
@@ -125,17 +137,17 @@ In this section, you will clone the blog repo from github and install jekyll.
 
 Now we have jekyll installed.  Time to test it out
 
-### Section 3: Testing Your Blog Works on Your Computer
+## Section 3: Testing Your Blog Works on Your Computer
 
 Now that we have everything installed for jekyll it is time to test it out.  
 
 1. From a command prompt in your blog repo directory run the following command to tell jekyll to build and run the web site locally
- 
+
 		jekyll serve 
 
 1. If it build successfully you will see something like this
 
-![Jekyll Serve Success]({{site.url}}/images/BloggingOnGitHub/10/jekyllserve.png)
+	![Jekyll Serve Success]({{"jekyllserve.png" | prepend: imagedir}})
 
 1. Now if you open up your browser and navigate to http://localhost:4000 you will see you blog.
 
@@ -150,20 +162,20 @@ However, by default your _config.yml file will be set for production which will 
 			disquscommentcount: 
 			google_analytics: 
 			google_search: 
- 
- 1. If your jekyll serve is still running do a ctrl+c to stop it.
- 1. Now run the following command to tell jekyll the config yml files to load
- 
- 	jekyll serve --config _config.yml,_configdev.yml
-	 
-1. 	If it build successfully you will see something like this
 
-![Jekyll Serve Success]({{site.url}}/images/BloggingOnGitHub/10/jekyllserve_multipleconfigs.png)
- 
+1. If your jekyll serve is still running do a ctrl+c to stop it.
+1. Now run the following command to tell jekyll the config yml files to load
+
+	 	jekyll serve --config _config.yml,_configdev.yml
+
+1. 	If it build successfully you will see something like this
+	
+	![Jekyll Serve Success]({{"jekyllserve_multipleconfigs.png" | prepend: imagedir}})
+
 1. Now if you open up your browser and navigate to http://localhost:4000 you will see you blog and any place that reference site.url will be working..
 
 
-### Conclusion
+## Conclusion
 
 Now you are ready to do all of your editing locally and  test it out before the world gets to see it. 
 

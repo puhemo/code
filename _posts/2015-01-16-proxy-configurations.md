@@ -2,9 +2,14 @@
 published: true
 layout: post
 title: Npm, Bower, Git, and Bash Proxy Configurations
-categories: ['programming', 'proxy', 'nodejs', 'npm', 'bash', 'bower', 'ionic']
+categories: ['proxy', 'nodejs', 'npm', 'bash', 'bower', 'ionic']
 date: 2015-08-03 20:00:00
+excerpt: | 
+    When you are using npm, bower, and git behind a proxy server you have to do a little bit of configuration.  Luckily it is super easy to do these configurations.  Almost all of the programs have command line commands to set and unset the proxy server.  
+
 ---
+
+When you are using npm, bower, and git behind a proxy server you have to do a little bit of configuration.  Luckily it is super easy to do these configurations.  Almost all of the programs have command line commands to set and unset the proxy server.  
 
 ##Updates:
 
@@ -13,22 +18,20 @@ date: 2015-08-03 20:00:00
 * **Updated 2015-May-08**:  Added the Android SDK 
 * **Updated 2015-Aug-03**: Added command lines to set proxy
 
-When you are using npm, bower, and git behind a proxy server you have to do a little bit of configuration.  Luckily it is super easy to do these configurations.  Almost all of the programs have command line commands to set and unset the proxy server.  
 
-----
 ##Windows Command Prompt
 
-####Current Command Prompt Only
+###Current Command Prompt Only
 
 	set http_proxy=[Your Proxy]:[Proxy Port]
 	set https_proxy=[Your Proxy]:[Proxy Port]
 
-####Unset Current Session
+###Unset Current Session
 
 	set http_proxy=
 	set https_proxy=
 
-####Globally as a System Environment Variable
+###Globally as a System Environment Variable
 
 Run from an administrative command prompt
 
@@ -37,7 +40,7 @@ Run from an administrative command prompt
 
 You will need to close and re-open command prompt for settings to take effect
 
-####Globally as a User Environment Variable
+###Globally as a User Environment Variable
 
 Run from a non-administrative command prompt
 
@@ -46,7 +49,7 @@ Run from a non-administrative command prompt
 
 You will need to close and re-open command prompt for settings to take effect
 
-####Unset Globally System Environment Variable
+###Unset Globally System Environment Variable
 
 Run from an administrative command prompt
 
@@ -55,7 +58,7 @@ Run from an administrative command prompt
 
 Need to close and re-open command prompt for settings to take effect
 
-####Unset Globally User Environment Variable
+###Unset Globally User Environment Variable
 
 Run from a non-administrative command prompt
 
@@ -65,7 +68,7 @@ Run from a non-administrative command prompt
 Need to close and re-open command prompt for settings to take effect
 
 
-####View Proxy Settings
+###View Proxy Settings
 
 If the commands below just echo out the text instead of the actual proxy server, it means that the proxy server is not set.
 
@@ -91,24 +94,26 @@ Note:   After updated the .bash_profile or .bashrc, you should run one of the fo
 ----
 ## Bower
 
-There is no command line that I found for configuration bower.  Instead you can create a .bowerrc file in the users home directory.  
+There is no command line that I found for configuring bower.  Instead you need to create a .bowerrc file in the users home directory.  
 
 On Windows:  %userprofile% directory.
 
 On Linux: ~/  
 
-####Creating .bowerrc file on Windows
+###Creating .bowerrc file on Windows
 
-Windows unfortunately does not like files without extensions but using notepad you can create a file without an extension.  
+Windows Explorer unfortunately does not  allow you to create files without extensions but using notepad you can create a file without an extension.  
 
 1. Open Notepad
-1. Navigate to the %UserProfile% directory
 1. Ctrl + S to save the file
+1. Navigate to the %UserProfile% directory
 1. Change the "Save as Type" to "All Files (*.*)
+1. Name the file .bowerrc 
+1. Click the Save button
 1. Now you can edit the file in your text editor of choice
 
   
-####Proxy Setting in .bowerrc.
+###Proxy Setting in .bowerrc.
 
 	{
 		"proxy":"http://[Your Proxy]:[Proxy Port]",
@@ -118,17 +123,19 @@ Windows unfortunately does not like files without extensions but using notepad y
 ---- 
 ##Git
 
-####Set Proxy:
+You can also set the proxy settings below to be system wide with the --system switch.
+
+###Set Proxy:
 
 	git config --add http.proxy http://[Your Proxy]:[Proxy Port]
 	git config --add https.proxy http://[Your Proxy]:[Proxy Port]
 
-####Unset Proxy:
+###Unset Proxy:
 
 	git config --unset http.proxy
 	git config --unset https.proxy
 
-####View Configuration
+###View Configuration
 
 **Just Proxy Configs**
 
@@ -139,7 +146,7 @@ Windows unfortunately does not like files without extensions but using notepad y
 
 	git config --list
 	
-####Manually Update .gitconfig (not recommended)
+###Manually Update .gitconfig (not recommended)
 
 	[http]
 		proxy = http://[Your Proxy]:[Proxy Port]
@@ -149,22 +156,22 @@ Windows unfortunately does not like files without extensions but using notepad y
 ----
 ## NPM
 
-####Set Proxy:
+###Set Proxy:
 	npm config set https-proxy http://[Your Proxy]:[Proxy Port]
 	npm config set proxy http://[Your Proxy]:[Proxy Port]
 
-####Unset Proxy:
+###Unset Proxy:
 
 	npm config delete https-proxy
 	npm config delete proxy
 
-####View Proxy Configurations:
+###View Proxy Configurations:
 
 	npm config get https-proxy
 	npm config get proxy
 
 
-####Manually Update .npmrc (not recommended)
+###Manually Update .npmrc (not recommended)
 
 
 	proxy=http://[Your Proxy]:[Proxy Port]
@@ -178,11 +185,11 @@ If you have set the proxy in the .bash_profile or .bashrc, then Ruby should pick
 
 If you need to manually set it
 
-####Linux
+###Linux
 	export http://[Your Proxy]:[Proxy Port]
 	sudo gem install [your gem name]
 
-####Windows 
+###Windows 
 
 	setx http_proxy "[Your Proxy Server]:[Proxy Port]" /M
 	gem install [your gem name]
@@ -192,10 +199,10 @@ If you need to manually set it
 
 In order to run the ionic start command behind a proxy, you need start the command out with the Proxy information.
 
-####Linux
+###Linux
 	PROXY=http://[Your Proxy]:[Proxy Port] ionic start [App Name] [Template Name]
 
-####Windows
+###Windows
 
 	setx http_proxy "[Your Proxy Server]:[Proxy Port]" /M
 	ionic start [App Name] [Template Name]

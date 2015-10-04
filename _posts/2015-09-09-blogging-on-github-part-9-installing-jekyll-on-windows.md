@@ -2,11 +2,25 @@
 published: true
 layout: post
 title: 'Blogging On Github - Part 9 -  Installing Jekyll On Windows'
-categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
+categories: ['Blogging', 'Github', 'Jekyll']
 date: 2015-09-09 06:00
 series: blogging-on-github 
-
+excerpt: |
+    Welcome to part 9 of the series on Blogging on Github.  
+    
+    In this lesson, we are going to setup your Windows computer to be able to edit your blog on your computer.
+    
+    **Length**: 60 minutes
+    
+    ## Overview
+    
+    Up to this point we have been using the Github web site to edit all of our files but the downside to this is that any chances you want to make show up live in your blog before you have had a chance to test them.  
+    
+    Instead, it is better if you can test out all of your changes and review your blog post before letting the world see them.  It will also let you have draft post where you can see them locally but on github they will not be visible.
+    
+    Note that Jekyll is not officially supported on Windows but it does work and I have not had any issues with it.
 ---
+{% assign imagedir = "/images/BloggingOnGitHub/" | prepend: site.baseurl | prepend: site.url %}
 
 Welcome to part 9 of the series on Blogging on Github.  
 
@@ -16,7 +30,7 @@ In this lesson, we are going to setup your Windows computer to be able to edit y
 
 {% include series.html %}
 
-### Overview
+## Overview
 
 Up to this point we have been using the Github web site to edit all of our files but the downside to this is that any chances you want to make show up live in your blog before you have had a chance to test them.  
 
@@ -24,11 +38,11 @@ Instead, it is better if you can test out all of your changes and review your bl
 
 Note that Jekyll is not officially supported on Windows but it does work and I have not had any issues with it.
 
-### Section 1: installing Software
+## Section 1: installing Software
 
 I am a big fan of Chocolatey and luckily a good majority of the software that we need had a chocolatey package so I wrote a gist file that we will install using Boxstarter.
 
-####Section 1.1: Installing Chocolatey
+###Section 1.1: Installing Chocolatey
 
 If you are not familiar with Chocolatey, check it out at [http://chocolatey.org](http://chocolatey.org).
 
@@ -41,7 +55,7 @@ If you are not familiar with Chocolatey, check it out at [http://chocolatey.org]
 
 Next we are going to install Boxstarter.
 
-####Section 1.2: Installing Boxstarer
+###Section 1.2: Installing Boxstarer
 
 Boxstarter gives you the ability to bulk install Chocolatey packages plus several helper functions for Windows configuration options.
 
@@ -62,13 +76,13 @@ Run the following commands to install Boxstarter
 		choco install BoxStarter
 		chocolatey feature disable -n=allowGlobalConfirmation	
 		
-####Section 1.3: Installing the rest of the software
+###Section 1.3: Installing the rest of the software
 
 We are going to be installing Ruby, Ruby DevKit, and Python using Chocolatey and Boxstarter.
 
 Now that you have Boxstarter installed, you will notice on your desktop a new icon called Boxstarter Shell.  
 
-![Boxstarter Shell Icon]({{site.url}}/images/BloggingOnGitHub/10/BoxStarterShellIcon.png)
+![Boxstarter Shell Icon]({{"BoxStarterShellIcon.png" | prepend: imagedir}})
 
 
 1. Run the Boxstarter Shell
@@ -80,7 +94,7 @@ Now that you have Boxstarter installed, you will notice on your desktop a new ic
 
 
 
-### Section 2: Getting your Blog onto your computer
+## Section 2: Getting your Blog onto your computer
 
 In this section, you will clone the blog repo from github and install jekyll.
 
@@ -120,7 +134,7 @@ In this section, you will clone the blog repo from github and install jekyll.
 		
 Now we have jekyll installed.  Time to test it out
 
-### Section 3: Testing Your Blog Works on Your Computer
+## Section 3: Testing Your Blog Works on Your Computer
 
 Now that we have everything installed for jekyll it is time to test it out.  
 
@@ -131,11 +145,11 @@ Now that we have everything installed for jekyll it is time to test it out.
 1. If it build successfully you will see something like this
 	
 	
-	![Jekyll Serve Success]({{site.url}}/images/BloggingOnGitHub/10/jekyllserve.png)
+	![Jekyll Serve Success]({{"jekyllserve.png" | prepend: imagedir}})
 
 1. Now if you open up your browser and navigate to http://localhost:4000 you will see you blog.
 
-###Section 3.1: Setting Up Dev _config.yml
+##Section 3.1: Setting Up Dev _config.yml
 However, by default your _config.yml file will be set for production which will cause any place that you have referenced the site.url to not working on your local machine.  You don't want to change your _config.yml file though for development since you will accidentally check it in at some point and break your blog.  Instead we can tell jekyll to use multiple configuration files.  When you load multiple files it will load them in order and then override any settings from a previously loaded config.
 
 1. Create a new file in the root of your repo called _configdev.yml
@@ -156,12 +170,12 @@ However, by default your _config.yml file will be set for production which will 
 1. 	If it build successfully you will see something like this	
 
 
-	![Jekyll Serve Success]({{site.url}}/images/BloggingOnGitHub/10/jekyllserve_multipleconfigs.png)
+	![Jekyll Serve Success]({{"jekyllserve_multipleconfigs.png" | prepend: imagedir}})
  
 1. Now if you open up your browser and navigate to http://localhost:4000 you will see you blog and any place that reference site.url will be working..
 
 
-### Conclusion
+## Conclusion
 
 Now you are ready to do all of your editing locally and  test it out before the world gets to see it. 
 

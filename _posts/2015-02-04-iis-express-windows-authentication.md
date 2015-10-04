@@ -1,10 +1,19 @@
 ---
 layout: post
 title: IIS Express - Turning on Windows Authentication
-categories: ['iis','asp.net']
-tags: ['authentication', 'iis', 'asp.net', 'iis express']
+categories: ['iis']
 published: true
 date: 2015-02-04 20:45:35
+excerpt: | 
+    So I brought up a new machine and tried to run my ASP.NET web site in IIS Express that uses Windows Authentication and was greeted with the following error: 
+    
+    **Error**
+    
+    The requested page cannot be accessed because the related configuration data for the page is invalid.
+    
+    **Details:** 
+    
+    This configuration section cannot be used at this path. This happens when the section is locked at a parent level. Locking is either by default (overrideModeDefault="Deny"), or set explicitly by a location tag with overrideMode="Deny" or the legacy allowOverride="false".
 ---
 
 So I brought up a new machine and tried to run my ASP.NET web site in IIS Express that uses Windows Authentication and was greeted with the following error: 
@@ -18,7 +27,7 @@ The requested page cannot be accessed because the related configuration data for
 This configuration section cannot be used at this path. This happens when the section is locked at a parent level. Locking is either by default (overrideModeDefault="Deny"), or set explicitly by a location tag with overrideMode="Deny" or the legacy allowOverride="false".
 
 
-### Solution
+## Solution
 
 Every time I bring up a new machine I always forget to update the IIS Express setting to fix this error and have to do a google search to figure out where the IIS Express configuration is stored.  So I figured I should finally document the fix for it.
 

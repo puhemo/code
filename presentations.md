@@ -30,11 +30,6 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 ## Upcoming Speaking Engagements
 
-<h3>Ionic-AZ Meetup <span>Scottsdale, Az (September 29th)</span></h3>
-
-- [Use Your Existing Web Skills to Create Native Mobile Applications](#ionic)
-- [Meeting details](http://www.meetup.com/Ionic-AZ/events/225449985/)
-
 <h3>Silicon Valley Code Camp <span>- Silicon Valley, Ca (Ocotber 3rd-4th, 2015)</span></h3>
 
 - [Ionic Framework Overview](#ionic)
@@ -50,6 +45,13 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 <p>&nbsp;</p>
 
 ## Past Speaking Engagements
+
+<h3>Ionic-AZ Meetup <span>Scottsdale, Az (September 29th)</span></h3>
+
+- [Use Your Existing Web Skills to Create Native Mobile Applications](#ionic)
+- [Meeting details](http://www.meetup.com/Ionic-AZ/events/225449985/)
+
+
 
 <h3>Phoenix Mobile Festival <span>- Chandler, Az (September 19th, 2015)</span></h3>
 

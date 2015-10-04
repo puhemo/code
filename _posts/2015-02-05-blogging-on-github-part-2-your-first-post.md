@@ -2,9 +2,19 @@
 layout: post
 title: 'Blogging On Github - Part 2 Your First Post'
 published: true
-categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
+categories: ['Blogging', 'Github', 'Jekyll']
 date: 2015-02-05
 series: blogging-on-github
+excerpt: | 
+    Welcome to part 2 of the series on blogging on  github.  In this post we will go through making your first blog post.
+    
+    **Lesson Length:** 10 minutes
+    
+    ## Overview
+    
+    We will go through all of the steps to create a new post, add metadata such as title/categories/tags/date, and then make it live on the site.  
+
+
 ---
 Welcome to part 2 of the series on blogging on  github.  In this post we will go through making your first blog post.
 
@@ -12,11 +22,11 @@ Welcome to part 2 of the series on blogging on  github.  In this post we will go
 
 {% include series.html %}
 
-### Overview
+## Overview
 
 We will go through all of the steps to create a new post, add metadata such as title/categories/tags/date, and then make it live on the site.  
 
-### Section 1: Creating the file 
+## Section 1: Creating the file 
 
 Thr first step is to create a new file to hold the content of the blog post.  In Jekyll all of the blog post are markdown files and are stored in the _post directory.    When you commit this file to Github, it will be compiled into a static html page.  
 
@@ -31,7 +41,7 @@ Go ahead and create your file now.
 3. Name the file yyyy-mm-dd-my-first-post.md where yyyy = 4digit year,  mm = 2 digit month, and dd = 2 digit day of montmonth.
 4. Head to the next section and fill out the metadata about the post (ie: title, date, is published, categories, etc)
 
-### Section 2: Creating metadata 
+## Section 2: Creating metadata 
 
 Now we need to define some information about our blog post.  All of the information such as title, is published,  categories, publish date, etc are stored at the top of the file in what is called Front Matter.  
 
@@ -46,7 +56,7 @@ Below are common metadata you will want to fill out.
 - categories: list of categories.  comma delimited.  put in quotes for multi word categories.  optional but recommended.  
 - tags: list of tags that would be used to build a tag cloud.  optional but recommended. 
  
-#### Sample Front Matter:
+### Sample Front Matter:
 	---
 	layout: post
 	title: Your First Post
@@ -56,9 +66,9 @@ Below are common metadata you will want to fill out.
 	tags: [blogging]
 	---
 	
-	Now on to creating actual content in your post.
+Now on to creating actual content in your post.
 	
-### Section 3:  Creating content 
+## Section 3:  Creating content 
 
 The content of the post will be written in markdown and will be directly below the front matter section .
  
@@ -66,7 +76,7 @@ The content of the post will be written in markdown and will be directly below t
  
 **Common Markdown Tags**
 
-#####Headers  
+####Headers  
 
 A #  starting  a line indicates to makebitba header and the number # indicates  the size of the header tag.  
 
@@ -80,17 +90,17 @@ A #  starting  a line indicates to makebitba header and the number # indicates  
 
 ## h2
 
-### h3
+## h3
 
-#### h4
+### h4
 
-##### h5
+#### h5
 
-###### h6
+#### h6
 
 
 
-##### Numbered list  or Bullets 
+#### Numbered list  or Bullets 
 
 For bullets: start a line with a * or -.
 
@@ -109,7 +119,7 @@ For numbered list start with a 1 or the number you want to start with.
 2. number 2
 
 
-##### Bold
+#### Bold
 
 surround  the text you to build with 2 ** and then put 2 more after the text  to end the bold.
 
@@ -117,7 +127,7 @@ surround  the text you to build with 2 ** and then put 2 more after the text  to
 
 **sample bold**
 
-##### Links
+#### Links
 
 link to other pages:
 
@@ -126,46 +136,47 @@ link to other pages:
 [link name display](http://myurl.com)
 
 
-##### Code Highlighting 
+###Code Highlighting 
 
-There are 2 ways:
+There are 2 ways: tab the line in and it will group the text like the examples above.
+or use the highlighter markup
 
-1. tab the line in and it will group the text like the examples above.
+{% raw %}
 
-1. use the highlighter markup
-	
-{% highlight c# %}
-// some c# code....
-var a = "bad variable name"
-{% endhighlight %}
+	{% highlight c# %}	
+	// some c# code	
+	var a = "bad variable name"
+	{% endhighlight %}
 
-#####  Highlighting text without the code highlighting 
+{% endraw %}
+
+## Highlighting text without the code highlighting 
 
 Start the line with a tab and it will automatically do it for you.  
 
 	you will get text like this if you start the line with a tab.
 	
-#####  Further Reading on Markdown
+##Further Reading on Markdown
 
 Github documentation on their markdown:  [https://help.github.com/articles/github-flavored-markdown/](https://help.github.com/articles/github-flavored-markdown/).
 
-### Section 4:  Saving as draft
+## Section 4:  Saving as draft
 
-most of the time you are not going to write and publish the blog post in one sitting but you need to save your work without it showing up in the website.  This is called saving a draft and it is super simple to do.  By setting the front matter published tag to false it will tell jekyll to not publish it. 
+Most of the time you are not going to write and publish the blog post in one sitting but you need to save your work without it showing up in the website.  This is called saving a draft and it is super simple to do.  By setting the front matter published tag to false it will tell jekyll to not publish it. 
 
 	---
-	.. other front matter tags 
+	other front matter tags 
 	published: false
 	---
 	
 You can also create a drafts folder and save the file in the but if you do that then you will need to move the file to the _post folder when you are ready to publish.
 
-### Section  5: Publishing post 
+## Section  5: Publishing post 
 
 Publishing a post is as simple as changing the front matter published to true and committing the change to the github repository.  
 
 	---
-	.. other front matter tags 
+	other front matter tags 
 	published: true
 	---
 
@@ -174,7 +185,7 @@ Github will take care of the conversion from markdown to an html page.  This sho
 If it doesn't show up then check your email that you registered on github with to see if there was a jekyll compile error email.
 
 
-### Conclusion
+## Conclusion
 
 This lesson is one of the key lessons as you need to kow how to create new blog post.  Creating new blog post is really easy with Jekyll and a little bit of markdown.  Once you learn the different markdown tags, you will be writing blog post in no time at all.
 

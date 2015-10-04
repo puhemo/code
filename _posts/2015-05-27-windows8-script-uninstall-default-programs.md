@@ -2,16 +2,28 @@
 published: true
 layout: post
 title: 'Windows 8.1 - Powershell Script to Uninstall Default Programs'
-categories: ['vagrant', 'windows', 'How-To', 'powershell']
+categories: ['vagrant', 'windows', 'powershell']
 date: 2015-05-29
+excerpt: | 
+    When I am provisioning a new development virtual machine with vagrant, I do not need all of the Windows 8 modern applications such as bing maps, finance, skype, etc to be installed onto the virtual machine.  These applications are nice on a non-virtualized machine but on a virtual machine it just uses extra resources that aren't needed.  
+    
+    The base install of Windows has all of these programs installed with live tiles turned on that I don't need.  This is a huge amount of clutter in the start menu.  
+
+    We will be going through 3 steps:
+    
+    1. Figure out which applications that you want to remove.  
+    1. Update the script with the list of applications to remove.  
+    1. Add the vagrant provisioning configuration to run the script when you initially run vagrant up  
+
 ---
 
+{% assign imagedir = "/images/vagrant/" | prepend: site.baseurl | prepend: site.url %}
 
 When I am provisioning a new development virtual machine with vagrant, I do not need all of the Windows 8 modern applications such as bing maps, finance, skype, etc to be installed onto the virtual machine.  These applications are nice on a non-virtualized machine but on a virtual machine it just uses extra resources that aren't needed.  
 
 The base install of Windows has all of these programs installed with live tiles turned on that I don't need.  This is a huge amount of clutter.  
 
-![{{site.url}}/images/Vagrant-Pre-RemoveDefaultProgramsProvisioning.png]({{site.url}}/images/Vagrant-Pre-RemoveDefaultProgramsProvisioning.png)
+!["Windows before removing start menu default programs]({{"Vagrant-Pre-RemoveDefaultProgramsProvisioning.png" | prepend: imagedir}})
 
 Luckily enough Ben Hunter, wrote a powershell script that we will be going through and setting up as part of the vagrant provisioning process.    [View Original Script](http://blogs.technet.com/b/deploymentguys/archive/2013/10/21/removing-windows-8-1-built-in-applications.aspx).  
 
@@ -21,7 +33,7 @@ We will be going through 3 steps:
 1. Update the script with the list of applications to remove.  
 1. Add the vagrant provisioning configuration to run the script when you initially run vagrant up  
 
-### Getting a List of Possible Applications to Remove 
+## Getting a List of Possible Applications to Remove 
 
 The first step is to get the list of possible application to remove.  We are going to get this list by running the Get-AppxPackage powershell function,  saving output to a file named ModernApps.txt that will be saved to the Windows temp directory and open it in notepad.  
 
@@ -34,7 +46,7 @@ The first step is to get the list of possible application to remove.  We are goi
 		
 1. In the script in the next section, modify the $AppsList variable with the programs that you wish to uninstall.
 
-### Powershell Script to Remove Specified Applications
+## Powershell Script to Remove Specified Applications
  
 The second step is to create the script to remove the specific applications.  The script below takes a list of application and calls the Remove-AppxPackage command to uninstall the application.  The list of applications to remove is stored in the $AppsList variable within the script.
  
@@ -130,7 +142,7 @@ Note:  If you are testing out the script below by running it from the Powershell
 	# Stop logging	
 	Stop-Transcript
 	
-###Executing Powershell Script as Part of Vagrant Provisioning
+##Executing Powershell Script as Part of Vagrant Provisioning
 
 The last step is to add the running of the script to the vagrant provisioning process.
 
@@ -176,8 +188,8 @@ The last step is to add the running of the script to the vagrant provisioning pr
 
 After we have run the script, if you used the application list that I had in the script, the start menu will look like this.  
 
-![{{site.url}}/images/Vagrant-Post-RemoveDefaultProgramsProvisioning.png]({{site.url}}/images/Vagrant-Post-RemoveDefaultProgramsProvisioning.png)
+![Windows start menu after removing default programs]({{"Vagrant-Post-RemoveDefaultProgramsProvisioning.png" | prepend: imagedir}})
 
-###Conclusion
+##Conclusion
 
 Now the start menu is mine again control again and I can actually make it useful.  No longer is the first 30 minutes of creating a new virtual machine nothing more than uninstall the default programs and messing with the start menu.     

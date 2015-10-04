@@ -4,6 +4,7 @@ layout: post
 title: 'Nuget - Incrementing Version Before Building'
 categories: ['nuget']
 date: 2015-05-03 6:00 pm
+excerpt: When you are building nuget packages that are not directly using the AssemblyInfo.cs for the version number, you need to make sure to increment the nuget version number before building the package.  Inevitable though you will forget to increment the version number and have to build the package a 2nd time.  Wouldn't it be great if you could automatically increment the version number before calling nuget pack.  Well I have written a powershell script to do just this.  Below are the details out the script.
 ---
 
 When you are building nuget packages that are not directly using the AssemblyInfo.cs for the version number, you need to make sure to increment the nuget version number before building the package.  Inevitable though you will forget to increment the version number and have to build the package a 2nd time.  Wouldn't it be great if you could automatically increment the version number before calling nuget pack.  Well I have written a powershell script to do just this.  Below are the details out the script.
@@ -301,7 +302,7 @@ Now anytime that you need to build the nuget package, you just have to call buil
 
 I know this post was a lot of code.  Both of the files that we create can be downloaded at:
 
-[IncrementNugetVersionNumber.ps1]({{site.url}}/Downloads/2015-05-03-Nuget-Auto-Incrementing-Version/IncrementNugetVersionNumber.ps1)
+[IncrementNugetVersionNumber.ps1]({{"/Downloads/2015-05-03-Nuget-Auto-Incrementing-Version/IncrementNugetVersionNumber.ps1" | prepend: site.baseurl | prepend: site.url }})
 
-[build.cmd]({{site.url}}/Downloads/2015-05-03-Nuget-Auto-Incrementing-Version/build.cmd)
+[build.cmd]({{"/Downloads/2015-05-03-Nuget-Auto-Incrementing-Version/build.cmd" | prepend: site.baseurl | prepend: site.url }})
 

@@ -1,0 +1,1 @@
+bundle exec jekyll serve _config _config.yml,_configdev.yml --drafts

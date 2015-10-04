@@ -2,10 +2,19 @@
 published: true
 layout: post
 title: 'Blogging On Github - Part 7 Adding a custom Google search'
-categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
+categories: ['Blogging', 'Github',  'Jekyll']
 date: 2015-02-24
 series: blogging-on-github
+excerpt: | 
+    Welcome to part 7 of the series on Blogging on Github.  In this lesson, we are going to add the ability to search your blog using google.
+    
+    **Length**: 30 minutes
+    
+    ## Overview
+    
+    As your blog grows, you want to make it easy for your readers to find the content that they need on your blog.  Out of the box, Jekyll does not have any type of search engine built-in.  Thankfully, with Google you can easily tell Google to index your blog and then add a search box on the blog.
 ---
+{% assign imagedir = "/images/BloggingOnGitHub/" | prepend: site.baseurl | prepend: site.url %}
 
 Welcome to part 7 of the series on Blogging on Github.  In this lesson, we are going to add the ability to search your blog using google.
 
@@ -13,11 +22,11 @@ Welcome to part 7 of the series on Blogging on Github.  In this lesson, we are g
 
 {% include series.html %}
 
-### Overview
+## Overview
 
 As your blog grows, you want to make it easy for your readers to find the content that they need on your blog.  Out of the box, Jekyll does not have any type of search engine built-in.  Thankfully, with Google you can easily tell Google to index your blog and then add a search box on the blog.
 
-### Section 1: Adding the Search Page
+## Section 1: Adding the Search Page
 
 If you have been following along with the other lessons in the series, this should be familiar to you.
 
@@ -25,11 +34,11 @@ If you have been following along with the other lessons in the series, this shou
 
 1. Click on the + button to add a new file
 
-    ![Github Plus Button]({{site.url}}/images/github_add_button.png)
+    ![Github Plus Button]({{"github_add_button.png" | prepend: imagedir}}   )
 
 1.  Name the file search.html
 
-    ![Github Name New File search.html]({{site.url}}/images/github_part_7_add_search_html_file.png)
+    ![Github Name New File search.html]({{"github_part_7_add_search_html_file.png" | prepend: imagedir}})
 
 1. Add the following front matter
 
@@ -58,7 +67,7 @@ If you have been following along with the other lessons in the series, this shou
             <gcse:search queryParameterName="searchString"></gcse:search>
         </div>
 
-### Section 2: Adding Search Box
+## Section 2: Adding Search Box
 
 1. We need to get back to the main directory of our repository.  To do this click on one of the [yourname].github.io links.
 
@@ -66,7 +75,7 @@ If you have been following along with the other lessons in the series, this shou
 
 1. Click on the default.html file to open it.
 
-1. Click on the ![github_edit_button.png]({{site.url}}/images/github_edit_button.png) icon to edit the file.
+1. Click on the ![github_edit_button.png]({{"github_edit_button.png" | prepend: imagedir}}) icon to edit the file.
 
 1. Before the &lt;div id="archives"&gt; tag that we added previously, add the following html snippet.
 
@@ -113,17 +122,17 @@ If you have been following along with the other lessons in the series, this shou
 
 1. Scroll down to the bottom, add the commit comment, and click on the commit change button.
 
-    ![Commit default.html changes]({{site.url}}/images/github_part_7_commit_search_html.png)
+    ![Commit default.html changes]({{"github_part_7_commit_search_html.png" | prepend: imagedir}})
 
 1. Next we need to update the theme so that the search box shows up in the correct spot on the page.
 
-### Section 3: Updating the Stylesheet
+## Section 3: Updating the Stylesheet
 
 1. We need to get back to the main directory of our repository.  To do this click on one of the [yourname].github.io links.
 
 1. Click on the style.scss file to open it.
 
-1. Click on the ![github_edit_button.png]({{site.url}}/images/github_edit_button.png) icon to edit the file.
+1. Click on the ![github_edit_button.png]({{"github_edit_button.png" | prepend: imagedir}}) icon to edit the file.
 
 1. Add the following to the bottom of the file before the two @import statements.
 
@@ -167,49 +176,49 @@ If you have been following along with the other lessons in the series, this shou
 
 1. Scroll down to the bottom, add the commit comment, and click on the commit change button.
 
-    ![Commit default.html changes]({{site.url}}/images/github_part_7_commit_style.png)
+    ![Commit default.html changes]({{"github_part_7_commit_style.png" | prepend: imagedir}})
 
 1. Now go view your blog's home page at http://[username].github.io/.  You should now see the search box in the header along with the "browse by category or date" links.
 
-    ![Blog's Home Page with Search and Browse By Category or Date Link in Header]({{site.url}}/images/github_part_7_browse_search_in_header.png)
+    ![Blog's Home Page with Search and Browse By Category or Date Link in Header]({{"github_part_7_browse_search_in_header.png" | prepend: imagedir}})
 
 1.  Now that the search box and search pages are done, we need to setup Google to actually search our blog.
 
-### Section 4: Configuring Google
+## Section 4: Configuring Google
 
 1. Navigate to [https://www.google.com/cse/](https://www.google.com/cse/all)
 1. If you do not have a Google account, you will need to create one.
 1. If you already have a Google account, please login to it now.
 
-    ![Signin to Google Custom Search]({{site.url}}/images/github_part_7_signin_to_cse.png)
+    ![Signin to Google Custom Search]({{"github_part_7_signin_to_cse.png" | prepend: imagedir}})
 
 1. Once signed in, click the Add button
 
-    ![Add Button]({{site.url}}/images/github_part_7_add_cse_button.png)
+    ![Add Button]({{"github_part_7_add_cse_button.png" | prepend: imagedir}})
 
 1. Fill in your web site url.  Should be http://[username].github.io/*
 
-    ![Url to Search Textbox]({{site.url}}/images/github_part_7_add_cse_url.png)
+    ![Url to Search Textbox]({{"github_part_7_add_cse_url.png" | prepend: imagedir}})
 
 1. Give the search a name that you will remember.
 
-    ![Name of the Search]({{site.url}}/images/github_part_7_add_cse_name.png)
+    ![Name of the Search]({{"github_part_7_add_cse_name.png" | prepend: imagedir}})
 
 1. Click the create button
 
-    ![Create Button]({{site.url}}/images/github_part_7_add_cse_create.png)
+    ![Create Button]({{"github_part_7_add_cse_create.png" | prepend: imagedir}})
 
 1.  You search should now be created
 
-    ![Search Created]({{site.url}}/images/github_part_7_add_cse_done.png)
+    ![Search Created]({{"github_part_7_add_cse_done.png" | prepend: imagedir}})
 
 1. Click the Get Code button
 
-    ![Click Get Code Button]({{site.url}}/images/github_part_7_get_cse_code.png)
+    ![Click Get Code Button]({{"github_part_7_get_cse_code.png" | prepend: imagedir}})
 
 1. Copy the var cx = line
 
-    ![Copy the code]({{site.url}}/images/github_part_7_cse_code.png)
+    ![Copy the code]({{"github_part_7_cse_code.png" | prepend: imagedir}})
 
 1. Go back to github and edit the search.html page.  Replace the var cx = line with the line that you just copied.
 
@@ -217,20 +226,20 @@ If you have been following along with the other lessons in the series, this shou
 
 1.  Now we are ready to test the search
 
-### Section 5: Testing the Search
+## Section 5: Testing the Search
 
 1.  Open a web browser and navigate to http://[username].github.io
 
 1.  Type some text into the search box and click Search
 
-    ![Type in Search text and click search button]({{site.url}}/images/github_part_7_search_term.png)
+    ![Type in Search text and click search button]({{"github_part_7_search_term.png" | prepend: imagedir}})
 
 1.  It should take you to your search page and then do a Google search
 
-    ![Search View]({{site.url}}/images/github_part_7_search_in_browser.png)
+    ![Search View]({{"github_part_7_search_in_browser.png" | prepend: imagedir}})
 
 
-### Conclusion
+## Conclusion
 
 You now have the ability for Google to index and search your blog.  This will make it much easier for your reader to find older posts that they may be interested in and hopefully keep them on your blog longer.
 

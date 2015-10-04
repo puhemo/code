@@ -2,9 +2,23 @@
 published: true
 layout: post
 title: 'Vagrant Part 4 - Install Boxstarter'
-categories: ['How-To', 'vagrant', 'chocolatey']
+categories: ['virtualbox', 'vagrant', 'chocolatey']
 date: 2015-06-18 03:00
 series: vagrant-getting-started-series
+excerpt: | 
+    Welcome to the Vagrant lesson on installing Boxstarter as part of the Vagrant provisioning process.
+    Boxstarter gives you the ability to bulk install Chocolatey packages plus several helper functions for Windows configuration options.  
+    
+    When you bulk install using Boxstarter, it will detect any reboots that are triggered by MSI installers, reboot the machine and then run the Boxstarter script again.
+    
+    The Windows configuration helper functions that Boxstarter provides  to enable or disable Windows features include items such as: 
+    * Remote desktop.
+    * Microsoft update.
+    * User access control (UAC).
+    * Set taskbar options like size, postion, and lock the size.
+    * Set Windows explorer options like showing hidden files, protected OS files, and file extensions.
+    
+
 ---
 Welcome to the Vagrant lesson on installing Boxstarter as part of the Vagrant provisioning process.
 
@@ -33,7 +47,7 @@ However, there are a few things we need to do in order for this to work without 
 * You have to run the install command as separate shell provision command in Vagrant instead of the main.cmd that we used to install Chocolatey. The reason for this is due to the environment path updates that are part of the Chocolatey install are not picked up until you open a new command prompt.
 * You have to turn off the Chocolatey confirmation prompts that ask you if you want to install this package or not.  
 
-###Creating the Provisioning Scripts
+##Creating the Provisioning Scripts
 
 1. Navigate to the shell directory in the MyFirstMachine directory that we created in previous lessons.
 1. Create a new file called InstallBoxStarter.bat

@@ -1,6 +1,17 @@
-# then add this to the url as well "/repository-name"
 url: http://localhost:4000
-disqus:
-disquscommentcount: 
-google_analytics: 
-google_search: 
+
+comments:
+    disqus: 
+    disquscommentcount: 
+#    isso: "comments.mysite.org"
+
+analytics:
+    google:
+    
+defaults:
+    -
+        scope:
+            path: ""
+            type: "posts"
+        values:
+            comments: false

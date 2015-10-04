@@ -2,8 +2,12 @@
 published: true
 layout: post
 title: 'Presentation Environment Setup'
-categories: ['How-To', 'Windows']
+categories: ['speaking', 'windows']
 date: 2015-07-14 16:00
+excerpt: |
+    One of the first things that you learn when giving presentations is that fonts and font size matters just as much as the content.  Below is a listing of the various font settings that I have found to be effective and how to set them in the programs that I use.  
+    
+    If you have other programs that you use, feel free to leave a comment on the font settings that you use.
 ---
 
 One of the first things that you learn when giving presentations is that fonts and font size matters just as much as the content.  Below is a listing of the various font settings that I have found to be effective and how to set them in the programs that I use.  

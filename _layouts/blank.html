@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Niklas Buschmann 2015 MIT <http://github.com/niklasbuschmann> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="{{ site.encoding }}">
+    {% if page.author %}<meta name="author" content="{{ page.author }}">{% endif %}
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <title>{% if page.title %} {{ page.title }} › {% endif %}{{ site.title }}</title>
+    <link rel="icon" type="image/png" href="{{site.baseurl}}/favicon.ico">
+
+    <link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url}}">
+    <link href="{{ "/main.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,200italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} &raquo; Feed" href="{{ "/feed.xml" | prepend: site.baseurl }}">
+    {% if site.comments.disqus and page.comments %}<script src="//{{ site.comments.disqus }}.disqus.com/embed.js" async></script>{% endif %}
+    {% if site.comments.disqus and site.comments.disquscommentcount %}
+    <script src="//{{ site.comments.disqus }}.disqus.com/count.js" async></script>
+{% endif %}
+    {% if site.comments.isso and page.comments %}<script data-isso="http://{{ site.comments.isso }}" src="//{{ site.comments.isso }}/js/embed.min.js"></script>{% endif %}
+  </head>
+  <body>
+    <header>
+      {% unless site.style.headline %}<h1 class="site-title"><span><img class="site-avatar" src="{{ site.avatar }}"/></span><span><a href="{{ site.baseurl | prepend: site.url}}/">{{ site.title }}</a></span></h1>{% endunless %}
+      <a href="#" class="toggle-nav">&#9776; MENU</a>
+      <nav class="menu">
+          
+            <ul class="active">
+                <li><a href="{{ "/" | prepend: site.baseurl  }}"  {% if page.url == site.baseurl %} id="selected"{% endif %}>Home</a></li>
+                <li><a href="{{ "/about" | prepend: site.baseurl }}"  {% if page.url == "about" %} id="selected"{% endif %}>About</a></li>
+                <li><a href="{{ "/speaking" | prepend: site.baseurl }}"  {% if page.url == "speaking %} id="selected"{% endif %}>Speaking</a></li>
+                
+                <li><a href="{{ "/categoryview" | prepend: site.baseurl }}"  {% if page.url == "categoryview" or page.url == "monthview" or page.url == "tagcloudview" %} id="selected"{% endif %}>Archive</a></li>
+                {% if site.links.rss %}
+                <li><a href="{{ site.links.rss }}">Subscribe</a></li>
+                {% endif %}
+            </ul>
+           
+      </nav>
+    </header>
+    {% if site.style.headline %}<div><h1><a href="{{ "/" | prepend: site.baseurl }}">{{ site.title }}</a></h1></div>{% endif %}
+    {% if site.subheading %}<div>{{ site.subheading }}</div>{% endif %}
+{{ content }}
+    <footer>
+      <span><a href="{{ site.baseurl }}">{% if page.author %}{{ page.author }}{% else %}{{site.author}}{% endif %}</a></span>
+      <span>{% for link in site.links %}{% if link[1] %}<a href="{{ link[1] }}"><i class="fa fa-{{ link[0] }}-square"></i></a>{% endif %}{% endfor %}        
+        </span>
+      <span>&copy; {{ site.time | date: "%Y" }}</span>
+      </footer>
+        {% include analytics_google.html %}
+ <script>
+          document.addEventListener("DOMContentLoaded", function(event) {
+              var hidden = true;
+              var menu = document.querySelector(".menu ul");
+              var opener = document.querySelector(".toggle-nav");
+              opener.addEventListener("click", function(e){
+                  if(hidden){
+                      opener.setAttribute("class", "toggle-nav active")
+                      menu.setAttribute("class", "");
+                  }else{
+                      opener.setAttribute("class", "toggle-nav")
+                      menu.setAttribute("class", "active");
+                  }
+                  hidden = !hidden;
+                e.preventDefault();
+              });
+          });
+      </script>
+  </body>
+</html>

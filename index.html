@@ -1,50 +1,44 @@
 ---
-layout: home
-title: Home
-sitemap:
-priority: 1.0
-changefreq: weekly
-lastmod: 2014-07-07T16:57:30+05:30
-active: home
+layout: blank
 ---
-{% for post in paginator.posts %}
-<div class="post unit whole single-post-excerpt">
-	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-	<div class="meta-info">
-		<span class="meta">
-			<time class="timeago postlist-meta" datetime="{{ post.date | date: "%Y-%m-%d" }}"><i class="fa fa-calendar"></i>{{ post.date | date: "%B %-d, %Y" }}</time>
-			 <a class="sharer facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;"><i class="fa fa-facebook"></i></a>
+{% for page in paginator.posts %}
+    {% if page.categories.size > 0 %}
+    {% capture tags_content %} <br /><i class="fa fa-folder-open-o"></i> Posted In: {% endcapture %}
+    {% assign categories = page.categories | sort %}
 
-			{% if site.twitter %}
-				<a class="sharer twitter" href="#" target="_blank" onclick="window.open('https://twitter.com/share?text={{page.title}}&url='+window.location.href+'&via={{ site.twitter }}','_blank','height=300,width=600');return false;"><i class="fa fa-twitter"></i></a>
-			{% else %}
-				<a class="sharer twitter" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href,'_blank','height=300,width=600');return false;"><i class="fa fa-twitter"></i></a>
-			{% endif %}
-			</span>
-		{% if post.categories and post.categories.size > 0 %}
-			<div class="tags">
-				Tagged:
-				{% for category in post.categories %}
-				<span><a href="{{site.url}}/category/{{ category  }}/"><i class="fa fa-tag"></i> {{ category | replace:'-', ' ' }} </a></span>
-				{% endfor %}
-			</div>
-		{% endif %}
-	</div>
+    {% for category in categories %}
+        {% capture tags_content_temp %}{{ tags_content }}{% if forloop.last == true and page.categories.size > 1 %} and {% endif %}<a href="{{site.baseurl}}/categoryview/#{{ category | slugify }}">{{ category | replace: '-', '' }}</a>{% if forloop.last == false and page.categories.size > 2 %}, {% endif %}{% endcapture %}
+        {% assign tags_content = tags_content_temp %}
+    {% endfor %}
+{% else %}
+    {% assign tags_content = '' %}
+{% endif %}
 
-	<p class="description">{{ post.content }}</p>
-    {% if site.disquscommentcount %}
-    <p> <a href="{{ site.url }}{{ post.url }}#disqus" class="read-more">Add/View Comments</a> [<a href="{{ post.url }}#disqus_thread" class="read-more"></a>]</p>
-    {% else if site.disqus  %}
-    <p> <a href="{{ site.url }}{{ post.url }}#disqus" class="read-more">Add/View Comments</a></p>
+    <article>
+      <header>
+        <h2><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h2>
+        <p>{% if page.author %}{{ page.author }} • {% endif %}{% if page.date %}<i class="fa fa-calendar"></i>  {{ page.date | date: "%b %-d, %Y" }}</time>{% endif %}
+            {% if site.comments.disquscommentcount and page.comments %}
+                • <i class="fa fa-comment-o"></i><a href="{{ "#disqus_thread" | prepend: page.url | prepend: site.baseurl }}" class="read-more"></a>
+           {% else if site.comments.disqus and page.comments  %}
+                • <i class="fa fa-comment-o"></i><a href="{{ "#disqus" | prepend: page.url | prepend: site.baseurl }}" class="read-more">Add/View Comments</a>
+            {% endif %}
+           {{ tags_content }}
+           </p>
+           
+      </header>
+      <div>
+{{ page.excerpt | markdownify }}
+      </div>
+      <footer>
+        <p><a href="{{ page.url | prepend: site.baseurl }}">{{ site.more }} &raquo;</a></p>
+      </footer>
+    </article>
+    {% endfor %}
+    {% if paginator.total_pages > 1 %}
+    <footer id="paginate">
+        {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">« newer posts</a>{% else %}<span>« newer posts</span>{% endif %}
+        <span>page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}<a href="{{ paginator.next_page_path | prepend: site.baseurl }}">older posts »</a>{% else %}<span>older posts »</span>{% endif %}
+    </footer>
     {% endif %}
-</div>
-{% endfor %}
-<div class="unit whole paginator">
-	{% if paginator.previous_page %}
-	<a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
-	{% endif %}
-	<span>Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-	{% if paginator.next_page %}
-	<a href="{{ paginator.next_page_path }}" class="next">Next</a>
-	{% endif %}
-</div>
