@@ -19,7 +19,7 @@ layout: blank
         <h2><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h2>
         <p>{% if page.author %}{{ page.author }} • {% endif %}{% if page.date %}<i class="fa fa-calendar"></i>  {{ page.date | date: "%b %-d, %Y" }}</time>{% endif %}
             {% if site.comments.disquscommentcount and page.comments %}
-                • <i class="fa fa-comment-o"></i><a href="{{site.url}}{{site.baseurl}}{{ page.url }}#disqus_thread"" class="read-more"></a>
+                • <i class="fa fa-comment-o"></i><a href="{{ page.url }}#disqus_thread"" class="read-more"></a>
            {% else if site.comments.disqus and page.comments  %}
                 • <i class="fa fa-comment-o"></i><a href="{{ "#disqus" | prepend: page.url | prepend: site.baseurl | prepend: site.url }}" class="read-more">Add/View Comments</a>
             {% endif %}
