@@ -65,10 +65,19 @@
           });
       </script>
     {% if site.comments.disqus and site.comments.disquscommentcount %}
-    <script src="//{{ site.comments.disqus }}.disqus.com/count.js" async></script>
+    <script type="text/javascript">
+        var disqus_shortname = '{{ site.comments.disqus }}';
+    
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     {% endif %}
-    {% if site.comments.disqus and page.comments %}<script src="//{{ site.comments.disqus }}.disqus.com/embed.js" async></script>
-    {% endif %}
-
+    {% if site.comments.disqus and page.comments %}<script src="//{{ site.comments.disqus }}.disqus.com/embed.js" async></script>{% endif %}
   </body>
 </html>
