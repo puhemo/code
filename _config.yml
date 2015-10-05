@@ -3,7 +3,7 @@ author: "Justin James"
 description: "A web developer and speaker from Arizona"
 subheading: "A web developer and speaker from Arizona"
 more: "read more"
-url: "http://digitaldrummerj.me" #"http://digitaldrummerj.me"
+url: "http://digitaldrummerj.me/" #"http://digitaldrummerj.me"
 baseurl: #"/" # comment out if in root directory
 
 avatar: https://avatars3.githubusercontent.com/u/708423?v=3&s=460
@@ -64,7 +64,7 @@ defaults:
 
 markdown: redcarpet
 highlighter: pygments
-permalink: /:title
+permalink: /:title/
 
 # The release of Jekyll Now that you're using
 version: v1.0.0
