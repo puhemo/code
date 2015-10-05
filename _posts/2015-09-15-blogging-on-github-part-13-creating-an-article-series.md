@@ -219,7 +219,7 @@ In this section we will add in the css to make the series listing stand out and 
 1. Save the file
 1. Run jekyll serve and view one of the new blog post.  If should look like this: 
 
-	![Series Listing with Css]({{site.url}}/images/BloggingOnGitHub/9/ScreenshotOfSeriesWithCss.png)
+	![Series Listing with Css]({{"ScreenshotOfSeriesWithCss.png" | prepend: imagedir }})
 
 
 ### Conclusion
