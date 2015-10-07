@@ -7,7 +7,7 @@ redirect_from: "/presentations/"
 sitemap:
     priority: 1.0
     changefreq: weekly
-    lastmod: 2015-08-28T16:31:30+05:30
+    lastmod: 2015-10-05T16:31:30+05:30
 ---
 
 
@@ -30,13 +30,11 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 ## Upcoming Speaking Engagements
 
-<h3>Silicon Valley Code Camp <span>- Silicon Valley, Ca (Ocotber 3rd-4th, 2015)</span></h3>
+<h3>Laravel Meetup <span>- Phoenix, Az (October 21st, 2015)</span></h3>
 
 - [Ionic Framework Overview](#ionic)
-- [DevOps Yourself:  Fast Track Your Development Environment Setup](#vagrant)
-- [Code Camp Home Page](http://siliconvalley-codecamp.com)
-
-
+- Using Ionic with Lavavel Api 
+ 
 <h3>So Cal Code Camp <span>- Los Angeles, Ca (November 14th-15th, 2015)</span></h3>
 
 - [Code Camp Home Page](http://www.socalcodecamp.com/)
@@ -46,11 +44,17 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 ## Past Speaking Engagements
 
-<h3>Ionic-AZ Meetup <span>Scottsdale, Az (September 29th)</span></h3>
+<h3>Silicon Valley Code Camp <span>- Silicon Valley, Ca (Ocotber 3rd-4th, 2015)</span></h3>
+
+- [Ionic Framework Overview](#ionic)
+- [DevOps Yourself:  Fast Track Your Development Environment Setup](#vagrant)
+- [Code Camp Home Page](http://siliconvalley-codecamp.com)
+
+
+<h3>Ionic-AZ Meetup <span>- Scottsdale, Az (September 29th)</span></h3>
 
 - [Use Your Existing Web Skills to Create Native Mobile Applications](#ionic)
 - [Meeting details](http://www.meetup.com/Ionic-AZ/events/225449985/)
-
 
 
 <h3>Phoenix Mobile Festival <span>- Chandler, Az (September 19th, 2015)</span></h3>
@@ -58,43 +62,36 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 - [Use Your Existing Web Skills to Create Native Mobile Applications](#ionic)
 - [Conference Home Page](http://phxmobifestival.com)
 
-<p>&nbsp;</p>
 
 <h3>Phoenix Versioning User Group <span>- Tempe, Az (September 9th, 2015)</span></h3>
 
 - [User Group Home Page](http://www.meetup.com/phoenix-versioning)
 - [Why You Need a Blog and How to Create a Successful One](#blogging)
 
-<p>&nbsp;</p>
 
 <h3>Iterate Phoenix 2015 The Devops Conference <span>- Chandler, Az (September 1st, 2015)</span></h3>
 
 - [Conference Home page](http://iteratephx.co)
 - [DevOps Yourself:  Fast Track Your Development Environment Setup](#vagrant)
 
-<p>&nbsp;</p>
 
 <h3>Las Vegas .NET User Group <span>- Las Vegas, Nv (July 30, 2015)</span></h3>
 
 - [User Group Home Page](http://www.dotnetgroup.org/) or [https://www.facebook.com/dotnetgroupdotorg](https://www.facebook.com/dotnetgroupdotorg)
 - [Developer Productivity in Visual Studio 2015](#vsprod)
 
-<p>&nbsp;</p>
 
 <h3>Southeast Valley .NET User Group <span>- Chandler, Az (July 23, 2015)</span></h3>
 
 - [http://www.meetup.com/sevdnug/](http://www.meetup.com/sevdnug/)
 - [Ionic Framework Overview with the Visual Studio 2015 Cordova Tools](#ionic)
 
-<p>&nbsp;</p>
-
-
 <h3>Northwest Valley .NET User Group <span>- Glendale, Az (July 22, 2015)</span></h3>
 
 - [http://nwvdnug.org/](http://nwvdnug.org/)
 - [Ionic Framework Overview with the Visual Studio 2015 Cordova Tools](#ionic)
 
-<p>&nbsp;</p>
+
 
 
 <h3>San Diego Code Camp <span>- San Diego, California (June 27th-28th, 2015)</span></h3>
@@ -104,21 +101,21 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 - [DevOps Yourself:  Fast Track Your Windows Dev Environment Setup.](#vagrant)
 - [Gulp for the .Net Developer](#gulp)
 
-<p>&nbsp;</p>
+
 
 
 <h3>NDC Oslo <span>- Oslo, Norway (June 15th-19th, 2015)</span></h3>
 
 - [DevOps Yourself:  Fast Track Your Windows Dev Environment Setup.](#vagrant)  
 
-<p>&nbsp;</p>
+
 
 <h3> Codepalous <span>- Louisville, Ky (April 27th-30th, 2015)</span></h3>
 
 - [Ionic Framework Workshop - Overview and Labs](#ionic)
 - [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
 
-<p>&nbsp;</p>
+
 
 
 <h3>Nebraska Code Camp <span>- Lincoln, Ne (March 19th-21st, 2015)</span></h3>
@@ -126,7 +123,7 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 - [Chocolatey](#chocolatey)
 - [Developer Productivity in Visual Studio](#vsprod)
 
-<p>&nbsp;</p>
+
 
 <h3>SoCal Code Camp <span>- Fullerton, Ca (March 7th & 8th, 2015)</span></h3>
 
@@ -136,7 +133,7 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 - [Ionic Framework Part 1: Overview](#ionic)
 - Ionic Framework Part 2: Deep Dive (all demo no slides)
 
-<p>&nbsp;</p>
+
 <h3>Las Vegas Code Camp <span>- Las Vegas, Nv (February 21, 2015)</span></h3>
 
 - [Ionic Framework - How to Easily Build Hybrid Mobile Applications for Android and iOS](#ionic)
@@ -185,18 +182,10 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 - [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)
 - [Chocolatey](#chocolatey)
 
-<p>&nbsp;</p>
+
 
 ## Presentation Details
-<p>&nbsp;</p>
 
-### <a name="blogging"></a> Why You A Blog and How to Create a Successful One
-
-Blogging can greatly help you advance your career.  Don't wait until you need a blog to create one.  This talk gives you all of the tools that you need to create a blog that is updated regularly. 
-
-Slides: [http://slides.com/digitaldrummerj/blogging/](http://slides.com/digitaldrummerj/blogging/)
-
-<p>&nbsp;</p>
 
 ### <a name="chocolatey"></a> Chocolatey - making the process of installing software on windows easy as pie
 
@@ -310,3 +299,12 @@ Demo: [https://github.com/digitaldrummerj/DeveloperProductivityTalk](https://git
 - [19 Must Know VS Keyboard Shortcuts Part 1](http://www.codeproject.com/Articles/1010023/Must-Know-Visual-Studio-Keyboard-Shortcuts-Part)
 - [19 Must Know VS Keyboard Shortcuts Part 2](http://www.codeproject.com/Articles/1010022/Must-Know-Visual-Studio-Keyboard-Shortcuts-Part)
 - [Default VS Shortcuts](http://visualstudioshortcuts.com/2015/)
+
+### <a name="blogging"></a> Why You A Blog and How to Create a Successful One
+
+Blogging can greatly help you advance your career.  Don't wait until you need a blog to create one.  This talk gives you all of the tools that you need to create a blog that is updated regularly. 
+
+Slides: [http://slides.com/digitaldrummerj/blogging/](http://slides.com/digitaldrummerj/blogging/)
+
+<p>&nbsp;</p>
+
