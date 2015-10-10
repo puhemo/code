@@ -64,7 +64,7 @@ You should already have NodeJS installed.  To install Gulp:
             .pipe(inject(
                 gulp.src(paths.javascript,
                     {read: false}), {relative: true}))
-            .pipe(gulp.dest('./www'));
+            .pipe(gulp.dest('./www'))
             .pipe(inject(
                 gulp.src(paths.css,
                   {read: false}), {relative: true}))
