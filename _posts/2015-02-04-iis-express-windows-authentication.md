@@ -3,7 +3,7 @@ layout: post
 title: IIS Express - Turning on Windows Authentication
 categories: ['iis']
 published: true
-date: 2015-02-04 20:45:35
+date: 2015-10-19 20:45:35
 excerpt: | 
     So I brought up a new machine and tried to run my ASP.NET web site in IIS Express that uses Windows Authentication and was greeted with the following error: 
     
@@ -45,6 +45,7 @@ The error is caused by this section in the web.config
 
 To fix this open up the IIS Express applicationhost.config.  This file is stored at C:\Users\[your user name]\Documents\IISExpress\config\applicationhost.config
 
+Update for VS2015+: config file location is   $(solutionDir)\.vs\config\applicationhost.config
     
 Look for the following lines
 
