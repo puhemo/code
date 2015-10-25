@@ -13,11 +13,11 @@ When you are using npm, bower, and git behind a proxy server you have to do a li
 
 ##Updates:
 
-* **Updated 2015-Feb-01**:  Added running source command for Bash and Ruby Gems section
-* **Updated 2015-May-07**:  Added the Ionic Start command
-* **Updated 2015-May-08**:  Added the Android SDK 
+* **Updated 2015-Feb-01**: Added running source command for Bash and Ruby Gems section
+* **Updated 2015-May-07**: Added the Ionic Start command
+* **Updated 2015-May-08**: Added the Android SDK 
 * **Updated 2015-Aug-03**: Added command lines to set proxy
-
+* **Updated 2015-Oct-20**: Added Gradle
 
 ##Windows Command Prompt
 
@@ -213,6 +213,23 @@ In order to run the ionic start command behind a proxy, you need start the comma
 
 The android SDK uses ~/.android/androidtool.cfg file to define the proxy information.  If the file does not exist, go ahead and create it.
 
-	http.proxyPort=[Your Proxy]
-	http.proxyHost=[Proxy Port]
 	
+	http.proxyHost=[Your Proxy]
+	http.proxyPort=[Proxy Port]
+
+----
+##Gradle
+
+When trying to build an Android project that uses Gradle, you may need to configure the proxy for it.  
+
+On Windows:  %userprofile%/.gradle.properties
+
+
+    systemProp.http.proxyHost=[Your Proxy]
+    systemProp.http.proxyPort=[Proxy Port]
+    systemProp.http.nonProxyHosts=*.nonproxyrepos.com|localhost    
+    
+    systemProp.https.proxyHost=[Your Https Proxy]
+    systemProp.https.proxyPort=[Https Proxy Port] 
+    systemProp.https.nonProxyHosts=*.nonproxyrepos.com|localhost
+
