@@ -7,12 +7,12 @@ published: true
 excerpt: | 
     Syncing your forked repository to the original repository is an important step before submitting any pull request to the original repository for the changes in your forked repository.  Even if you are not going to submit a pull request to the original repository, there are times that you want the additional features and/or bug fixes that have been done since you forked the original repository.  
     
-    You could do a pull request but this adds an additional commit into your forked repository instead of making your forked repository match the original repository.  In order to sync the forked repository without adding any additional commits as part of the process you need to configure the original repository as an upstream remote, merge in the change from the original repository and then push the merge version back to Github.  
+    You could do a pull request but this adds an additional commit into your forked repository instead of making your forked repository match the original repository.  In order to sync the forked repository without adding any additional commits as part of the process you need to configure the original repository as an upstream remote, merge in the changes from the original repository and then push the merged version back to Github.  
 ---
 
 Syncing your forked repository to the original repository is an important step before submitting any pull request to the original repository for the changes in your forked repository.  Even if you are not going to submit a pull request to the original repository, there are times that you want the additional features and/or bug fixes that have been done since you forked the original repository.  
 
-You could do a pull request but this adds an additional commit into your forked repository instead of making your forked repository match the original repository.  In order to sync the forked repository without adding any additional commits as part of the process you need to configure the original repository as an upstream remote, merge in the change from the original repository and then push the merge version back to Github.  
+You could do a pull request but this adds an additional commit into your forked repository instead of making your forked repository match the original repository.  In order to sync the forked repository without adding any additional commits as part of the process you need to configure the original repository as an upstream remote, merge in the changes from the original repository and then push the merged version back to Github.  
 
 ##Adding Original Repo As an Upstream Repo
 
@@ -27,11 +27,11 @@ In order to pull the changes from the original repository into your forked versi
         origin https://github.com/[Your UserName]/[Your Fork].git (fetch)
         origin https://github.com/[Your UserName]/[Your Fork].git (push)
         
-1. Now you need to add the original repository as an upstream repository 
+1. Add the original repository as an upstream repository 
 
         $ git remote add upstream https://github.com/[Original Owner Username]/[Original Repository].git
         
-1. If you run the git remote command again you will now see both origin and upstream are configured
+1. If you run the git remote command again, you will now see both origin and upstream are configured
 
         $ git remote -v
         
@@ -46,7 +46,7 @@ You are now ready to pull the changes from the original repository to the your f
 
 1. Open a Command Promt (Windows) or Terminal (Mac or Linux)
 1. Navigate to the directory that contains your forked repository that you configured with the upstream repository
-1. The first thing is to fetch all of teh changes from the original repository.  Note that commits to the original repository will be stored in a local branch called, upstream/master
+1. The first thing is to fetch all of the changes from the original repository.  Note that commits to the original repository will be stored in a local branch called, upstream/master
 
         $ git fetch upstream
         
@@ -63,7 +63,7 @@ You are now ready to pull the changes from the original repository to the your f
         
         Switched to branch 'master'
         
-1. Merge the changes from the upstream/master into your local master branch.  This will bring you forked master branch into sync with the upstream repository without losing your local changes.  If you have made any changes that create a conflict, you will obviously have to resolve those before you can complete the merge.
+1. Merge the changes from the upstream/master into your local master branch.  This will bring your fork's master branch into sync with the upstream repository without losing your local changes.  If you have made any changes that create a conflict, you will obviously have to resolve those before you can complete the merge.
 
         $ git merge upstream/upstream
         
@@ -76,11 +76,9 @@ You are now ready to pull the changes from the original repository to the your f
         $ git push
              
 
-At this point your forked repository contains all of the changes since your forked the repository as well as any changes that you have made.
-
 ##Wrap-Up
 
-With the 5 commands below you can now update your forked repository with all of the changes from the original repository.   
+To summarize, with the 5 commands below you can sync your forked repository with the original repository and push the changes to your Github repository.     
 
  
         $ git remote add upstream https://github.com/[Original Owner Username]/[Original Repository].git
