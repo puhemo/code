@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Strongloop - Fixing Security When Extending User Model'
-date: 2015-10-30 06:00
+date: 2015-11-03 06:00
 categories: ['ionic', 'strongloop']
 series: 'Strongloop Todo'
 published: true
