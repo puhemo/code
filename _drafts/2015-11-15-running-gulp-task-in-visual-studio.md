@@ -5,14 +5,15 @@ title: 'Running Gulp Task in Visual Studio'
 categories: ['visual studio', 'gulp']
 date: 2015-11-17
 excerpt: | 
-
-
+    When I am working in an code editor such as Visual Studio, I do not want to have to have to leave the editor to run command line programs such as Gulp task.  I want to be able to run the gulp task right from instead the editor.  Starting with Visual Studio 2013, you could do this with the [Task Runner Explorer extension](https://visualstudiogallery.msdn.microsoft.com/8e1b4368-4afb-467a-bc13-9650572db708).  Microsoft then integrated the Task Runner Explorer into Visual Studio 2015 so you no longer have to install an extension.   
+    
+    In this post, we will look at how to run your Gulp task within Visual Studio and then how to integrate them into the Visual Studio build process.
 ---
 {% assign imagedir = "/images/GulpInVisualStudio/" | prepend: site.baseurl | prepend: site.url %}
 
 When I am working in an code editor such as Visual Studio, I do not want to have to have to leave the editor to run command line programs such as Gulp task.  I want to be able to run the gulp task right from instead the editor.  Starting with Visual Studio 2013, you could do this with the [Task Runner Explorer extension](https://visualstudiogallery.msdn.microsoft.com/8e1b4368-4afb-467a-bc13-9650572db708).  Microsoft then integrated the Task Runner Explorer into Visual Studio 2015 so you no longer have to install an extension.   
 
-In addition to being able to run task with the Task Runner Explorer, Visual Studio 2015, includes intellisense for gulp which makes it easier to create new Gulp task.  
+In this post, we will look at how to run your Gulp task within Visual Studio and then how to integrate them into the Visual Studio build process.
 
 ##Code for this tutorial
 
@@ -49,7 +50,7 @@ For the demo, we have right-clicked on the default task and selected the run opt
 
 ![Results of Task Run]({{"TaskRunnerExplorer_TaskRun.png" | prepend: imagedir}})
 
-##Integrating Running of Task into Visual Studio Build Process
+##Integrating into Visual Studio Build Process
 
 Manually running a task is nice but it is even better if you can integrate it into the Visual Studio build process.  Luckily the Task Runner Explorer, give you just that option.  If you right-click on a task and select Bindings, you can see the options.  
 
@@ -62,43 +63,21 @@ There are 4 bindings options:
 * Clean - task will run when the project is cleaned.
 * Project Open - task will run when the project is opened.
 
-For this example, we are going to set the "Before Build" binding for the default task.  
+For this example, we are going to set the "Before Build" binding for the default task.  Right-click on the default task, select Bindings, and then Before Build.  
 
-When you set the binding, 2 things will happen in the Task Runner Explorer.  1st - the default task will show up in the Binding tab under the Before Build secton.  2nd - if you right-click on the default task and select binding there will be a checkmark next to the "Before Build"
+When you set the binding, 2 things happened in the Task Runner Explorer:
 
-![Before Build Binding]({{"TaskRunnerExplorer_BindingSetForBeforeBuild.png"  | prepend: imagedir}})
+1. The default task now shows up in the Bindings tab under the Before Build secton.  
+1. If you right-click on the default task and select binding there will be a checkmark next to the "Before Build" to indicate that it is set for this task.
+
+    ![Before Build Binding]({{"TaskRunnerExplorer_BindingSetForBeforeBuild.png"  | prepend: imagedir}})
 
 
 Also, if you open up the gulpfile.js, you will notice that the first line now has a comment with the bindings in it.
 
 ![Gulpfile with BeforeBuild set]({{"TaskRunnerExplorer_GulpfileWithBeforeBuildSet.png" | prepend: imagedir}})
 
-##Notes:
 
-## Why
-* No dropping to the command line
-* Integrate with the Visual Studio Build process
-* Intellisense for creating new task
+##Wrap-up
 
-##How
-
-* Pull up Task Runner Explorer
-* If task don't show, look at the output windows to see error
-* Right-click to run task
-* New tab opens when task is run with the results
-
-##Integrating into Build Process
-*    Right-click on task to see options to integration into build process
-*    Options:
-    *        Before Buid
-    *    After Build
-    *    Project Open
-    *    Clean Project
-        
-##Creating New Task
-* After save, shows up in the task runner explorer to run
-* Create new task to show it
-
-##Getting the Code
-* Give github url location
-        
+Now as a Visual Studio user, you kow how to run your gulp task without leaving Visual Studio and how to integrate it into the Visual Studio build process.        
