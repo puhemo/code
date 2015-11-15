@@ -3,7 +3,7 @@ published: true
 layout: post
 title: 'Running Gulp Task in Visual Studio'
 categories: ['visual studio', 'gulp']
-date: 2015-11-17
+date: 2015-11-17 06:00
 excerpt: | 
     When I am working in an code editor such as Visual Studio, I do not want to have to have to leave the editor to run command line programs such as Gulp task.  I want to be able to run the gulp task right from instead the editor.  Starting with Visual Studio 2013, you could do this with the [Task Runner Explorer extension](https://visualstudiogallery.msdn.microsoft.com/8e1b4368-4afb-467a-bc13-9650572db708).  Microsoft then integrated the Task Runner Explorer into Visual Studio 2015 so you no longer have to install an extension.   
     
