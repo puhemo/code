@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 'Using Twilio to Get Talk Feedback'
-date: 2015-10-16 06:00
+title: 'Better Way To Get Talk Feedback'
+date: 2016-01-05  06:00
 categories: ['Speaking']
 published: true
 --
@@ -18,13 +18,23 @@ NPS ask the user to rate on a scale of 1 to 10.   10 meaning, I would bring my b
 
 NPS seems easy enough but you still need some way to get the feedback and to get attendee to summit the feedback.  
 
-The first problem is solved by a combination of Twilio to receive the rating through a text message and Twinlbin to send an automated response back to the attendee.   By sending a text message the attendee does not have to register for any kind of account.   
+The first problem is solved by a combination of Twilio to receive the rating through a text message and Twinlbin to send an automated response back to the attendee.   By sending a text message the attendee does not have to register for any kind of account and are more willing to give feedback.
 
-The second problem is solved by giving attendees a reason to text in the rating.  Most attendees want to be able to download the slides and demo code.  I used to give the links at the end of the slide deck but now the attendees get the links as part of the automated response for giving me a rating.  
+The second problem is solved by giving attendees a reason to text in the rating.  Most attendees want to be able to download the slides and demo code.  I used to give the links at the end of the slide deck but now the attendees get the links as part of the automated response for giving me a rating.  It is a win win for attendees and myself. 
 
  By using this method of getting feedback I have seen the amount of feedback climb to between 50-75%.  
  
+Now lets take a look at how to actual implement this feedback system. 
 
+## Getting Twilio Phone Number 
+
+## Using Twinlbin 
+
+## Configure Twilio to Use Automated Response
+
+## Parsing Log To Calculate Feedback 
+
+## Turning off Twilio so you are not charged by accident 
 
 
 
