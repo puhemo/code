@@ -12,23 +12,18 @@ When I started speaking I tried several different speaker feedback sites but the
 
 I had been talking with other speakers about how they get feedback and all of them seemed to have the same issue of low response rate. 
 
-Then I meet ???? from [Twilio ](http:/twillio.com) and he mentioned a totally different way that they asked for talk feedback.  At Twilio they used something called Net Promoter Score (NPS).   
+Then I meet [Devin Rader ](http://twitter.com/devinrader) from [Twilio ](http:/twillio.com) and he mentioned a totally different way that they asked for talk feedback.  At Twilio they used something called Net Promoter Score (NPS).   
 
-NPS ask the user to rate something on a scale of 1 to 10.   10 meaning, I would bring my best friend to see the talk and 1 being, please never give this talk again.  
+NPS ask the user to rate on a scale of 1 to 10.   10 meaning, I would bring my best friend to see the talk and 1 being, please never give this talk again.  
 
-NPS seems easy enough but you still need some way to get the feedback.  
+NPS seems easy enough but you still need some way to get the feedback and to get attendee to summit the feedback.  
 
-problem solving?
+The first problem is solved by a combination of Twilio to receive the rating through a text message and Twinlbin to send an automated response back to the attendee.   By sending a text message the attendee does not have to register for any kind of account.   
 
-what is twilio?
+The second problem is solved by giving attendees a reason to text in the rating.  Most attendees want to be able to download the slides and demo code.  I used to give the links at the end of the slide deck but now the attendees get the links as part of the automated response for giving me a rating.  
 
-what is twimlbin  ?
-
-getting phone number
-
-setting up twilio app
-
-turning it off 
+ By using this method of getting feedback I have seen the amount of feedback climb to between 50-75%.  
+ 
 
 
 
