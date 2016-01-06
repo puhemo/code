@@ -80,7 +80,9 @@ You should get the automated response within a minute or so.  Make sure to click
 
 The one downside to use Twimlbin is that your are not able to intercept the incoming messages to parse and store them to calculate the feedback.
 
-Instead you need to export the incoming logs and   manually calculate the NPS score.  Luckily it is easy to import the log into excel and do the calculations.  I do find that in many cases that attendees send text feedback in addition to the score, so I  have to extract  the score of of the message.   
+Instead you need to export the incoming logs and   manually calculate the NPS score.  Luckily it is easy to import the log into excel and do the calculations.  I do find that in many cases that attendees send text feedback in addition to the score, so I have to extract  the score of of the message.   
+
+??? how to calculate????
 
 
 ## Turning off Twilio so you are not charged by accident 
@@ -95,3 +97,8 @@ If you are only using you Twilio phone number for text messages, you will want t
 
 By default a Twilio phone number has a url configured for what to do for voice calls.  If you make the url empty it will turn off the ability to get calls to the number.   
 
+## Conclusion 
+
+Now you can increase the amount of feedback that get on a talk like I did.  Having feedback is crucial to knowing if the talk resonated with users and to helping make the talk better.  As well the feedback will make you a better as a speaker.  
+
+Another upside for attendees is they won't have to wait for you to post  the material online and will have immediate access to it after the talk. 
