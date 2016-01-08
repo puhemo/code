@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Better Way To Get Talk Feedback'
-date: 2016-01-05  06:00
+date: 2016-01-05 06:00
 categories: ['Speaking']
 published: true
 --
@@ -30,17 +30,17 @@ Now lets take a look at how to actual implement this feedback system.
 
 ## Getting Twilio Phone Number 
 
-The first thing we need to do is sign up for a Twilio account.  
+The first thing we need to do is sign up for a Twilio account at [https://www.twilio.com/try-twilio].  If you already have an account, then go ahead and login to it.  
 
 Once you have an account you need to purchase a phone number.  The number of phone numbers to purchase depends on how close your talks are together at an event.  If the talks are on the same day then I get a separate phone number for each talk else I just reuse the phone number.  
 
 Sending a text message through Twilio does cost money but it is really inexpensive.  It is $1 per month for each phone number and $.0075 per message.  That is less than a penny per message.  
 
-![cost image here]() 
+![cost table]({% "pricing.png" | prepend: imagedir %}) 
 
 To purchase a phone number go under your account, select phone numbers, and click the buy a new Twilio phone  number llink.
 
-![buy phone number]()
+![buy phone number]({% "buy-phone-number.png" | prepend: imagedir %})
 
 ## Setup Twimlbin
 Now that we have a phone number we need to configure it to have an automated response when it gets SMS messages. 
@@ -49,11 +49,11 @@ To do this we are going to use [Twimlbin](http://twimlbin.com/)   which is a web
 
 To create a Twinlbin, click on the "Create a new Twimlbin" button on the home page. 
 
-![Twinlbin home page]()
+![Twinlbin home page]({% "twimlbin-home.png" | prepend: imagedir %})
 
 When you create a Twimlbin.com you will be presented with a box to type in the TwiML, a public url that  is read only and a private url to edit the twimlbin. 
 
-![Create twimlbin page]()
+![Create twimlbin page]({% "twimlbin-create.png" | prepend: imagedir %})
 
 On the Twimlbin text area you need to out valid TwiML markup which it will attempt to validate it for you.  For our purposes we have a basic reply that gives the url to the slides, demos and any other relevant links.  Try not to make the message to long since you are sending it back as a text message.  If the number is links becomes too much, just put them in a blog post or gist and give them that url.
 
