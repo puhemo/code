@@ -65,7 +65,7 @@ You are now ready to pull the changes from the original repository to the your f
         
 1. Merge the changes from the upstream/master into your local master branch.  This will bring your fork's master branch into sync with the upstream repository without losing your local changes.  If you have made any changes that create a conflict, you will obviously have to resolve those before you can complete the merge.
 
-        $ git merge upstream/upstream
+        $ git merge upstream/master
         
         Updating a422352..5fdff0f
         Fast-forward
@@ -73,7 +73,7 @@ You are now ready to pull the changes from the original repository to the your f
 
 1. At this point your local branch is synced to the original repositories master branch.  If you want to update the Github repository, you need to push your changes.
 
-        $ git push
+        $ git push origin master
              
 
 ##Wrap-Up
