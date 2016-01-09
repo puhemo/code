@@ -24,5 +24,4 @@ After you have the reference, then you can call any method that is exposed by th
     t.myServiceMethod().then(function(response) { console.log(response); });
 
 
-No longer will you have to go through the process of navigating through the UI to trigger a Service/Factory method to run.  Now you can just load up the web site and do all of your debugging through the Chrome console.   
-
+No longer will you have to go through the process of navigating through the UI to trigger a Service/Factory method to run.  Now you can just load up the web site and do all of your debugging through the Chrome console.
