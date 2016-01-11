@@ -29,6 +29,7 @@ layout: blank
       </header>
       <div>
 {{ page.excerpt | markdownify }}
+{% include readtime.html %}
       </div>
       <footer>
         <p><a href="{{ page.url | prepend: site.baseurl }}">{{ site.more }} &raquo;</a></p>

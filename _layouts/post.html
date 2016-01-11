@@ -1,6 +1,8 @@
 ---
 layout: blank
 ---
+
+
 {% if page.categories.size > 0 %}
 {% capture tags_content %} <br /><i class="fa fa-folder-open-o"></i> Posted In: {% endcapture %}
 {% assign categories = page.categories | sort %}
@@ -15,9 +17,11 @@ layout: blank
     <article>
       <header>
         <h2><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h2>
-        <p>{% if page.author %}{{ page.author }} • {% endif %}{% if page.date %}<i class="fa fa-calendar"></i> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>{% endif %}{{ tags_content }}</p>
+        <p>{% if page.author %}{{ page.author }} &bull; {% endif %}{% if page.date %}<i class="fa fa-calendar"></i> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>{% endif %}
+        {{ tags_content }}</p>
       </header>
       <div>
+          {% include readtime.html %}
 {{ content }}
       </div>
       {% if site.comments.isso and page.comments %}
