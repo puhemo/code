@@ -5,9 +5,9 @@ date: 2016-01-19 05:00
 categories: [' book reviews']
 published: true
 excerpt: |
-	At the HolidayJs event I won a book and I picked a copy of Angular In Action by Lukas Ruebbelke.  I had already been using Angular for a few projects and wasn't expecting to get much out of the book.  Honestly I got it to use as more of a give away at one of my talks but figured I would at least glance through a few chapters of it first.  Needless to say I ended up reading the whole book and plan to keep it.
+    At the HolidayJs event I won a book and I picked a copy of Angular In Action by Lukas Ruebbelke.  I had already been using Angular for a few projects and wasn't expecting to get much out of the book.  Honestly I got it to use as more of a give away at one of my talks but figured I would at least glance through a few chapters of it first.  Needless to say I ended up reading the whole book and plan to keep it.
 
-	This book is one of the best introduction to all of the parts of Angular that you need to know to get started.  Lukas does a fantastic jobs of explaining how it all works with lots of good code examples in a way that is very easy to understand.  The book walks you through building a Trello clone with a pre-built backend so that you can stay focused on Angular and not worry about the data storage.  After reading this book and going through the code examples you will be well on your way to being able to create your own Angular application.
+    This book is one of the best introduction to all of the parts of Angular that you need to know to get started.  Lukas does a fantastic jobs of explaining how it all works with lots of good code examples in a way that is very easy to understand.  The book walks you through building a Trello clone with a pre-built backend so that you can stay focused on Angular and not worry about the data storage.  After reading this book and going through the code examples you will be well on your way to being able to create your own Angular application.
 ---
 
 {% assign imagedir = "/images/bookreviews/" | prepend: site.baseurl | prepend: site.url %}
@@ -22,12 +22,12 @@ Before diving into the details of each component, Lukas tasks about how to struc
   
 Next the book dives into the details of each of the components.  He starts with views and controllers, then discusses services and  finishes off with directives.  He spends a while chapter on each component and the explanation of each is extremely easy to understand.  He walks through each of the sections as he is building the sample app which really help to reinforce the concepts.   
 
-Then we take a trip into polishing the UI with animations.  It was well explained and cool to see it in action.  However it was the one piece of the book that felt like it didn't fit as well.  With that said, I am betting though if you left out the animations from the sample app that you would have immediately noticed and thought the app didn't look as polished.  So it is obviously one of those concept that is helpful to know and that you didn't know that you need to know. 
+Then we take a trip into polishing the UI with animations.  At first I was thinking this is a throw away chapter but it turned out to be a really fun chapter.  Lukas did a good job of explaining how to quickly and easily create both CSS And Javascript animations.  All of the code was very easy to understand and could easily be applied to any application.  I may just have to start thinking about how to use animation in my application.  
 
-After animation, he covers routing.????
+After animations, he jumps into how to navigate to the different views using routing with ngRoute.  Like the rest of the book, it was a well explained chapter and a good overview for how routing actually works.  I do wish that he had used UI router instead of ng-route since many of the projects that I have been working are using UI router but that is just me being greedy.  ngRoute is more than enough for the coding examples.  The loading spinner control was cool to see since this is something that every application should have to indicate something is happening to users.  
 
-Next up is a quick trip into forms and forms validation.  Again Lukas does a great job of explaining the concept.  ????
+Next up is a quick trip into forms and forms validation.  This chapter cover the basics of form validation for textboxes using required and minimum length.  He covered a nice bit of the basic form validation code that you would need to know.  I do wish that he would have cover more of the Html controls such as drop downs, multiple select, checkboxes, etc.   
 
-One of the cool things for all of the chapters is that their is a section on how to test the concept using Karma.  This is typically a topic that is left out of most books but one that is essential to create a great application. 
+One more cool thing that Lukas does is include a testing with Karma section in each of the chapters.  Coming from an Agile background where I have done a good amount of automated unit tests for my projects, it was nice to see Lukas cover this topic.  Lukas covers just enough to get you started on automated testing and shows you how easy it is to get started with it.     
 
 Overall, I would give this book 5 out of 5 stars.  If you are already an Angular developer or just getting into Angular this is a must have book.  Wish I would have had it a long time ago.  Great job Lukas. 
