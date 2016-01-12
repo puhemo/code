@@ -70,7 +70,7 @@ Add export PATH=${PATH}:/users/[Your UserName]/Development/android-sdk-mac_x86/t
 1. Download correct Android API
 	- in terminal type source ~/.bash_profile to load the ~/.bash_profile changes.
     - type android from terminal.  If everything is working correct it will open up the Android SDK Manager.
-	- Install API 19  with SDK Platforms and Arm Image checked 
+	- Install API 22  with SDK Platforms and Arm Image checked 
 1. Configure Android Emulator
 	* In terminal type android avd.  If everything is working correct it will open up the Android AVD Manager.
 	* Click the create button and add at least 1 device to emulate
