@@ -11,7 +11,7 @@ excerpt: I am keyboard person and like shortcut keys.  There are lot of availabl
 
 Here is a list of  Visual Studio Community Edition shortcuts that I use.  
 
-##Building Solution
+## Building Solution
 
 <table class="exampleTable">
 <tr>
@@ -29,7 +29,7 @@ Here is a list of  Visual Studio Community Edition shortcuts that I use.
 </tr>
 </table>
 
-##Building Current Project
+## Building Current Project
 
 There is no default shortcut for building the current project or running code analysis on it.  You can go  under the Build menu and select to build just the current project but this is a manual step that requires you to navigate through the menus.  
 
@@ -49,7 +49,7 @@ To accomplish this, I set the keyboard shortcut Ctrl+Alt+\
 1. Set shortcut for Build.RunCodeAnalysisonSelection.  
 1. Open a file and Ctrl+Alt+\ to run the the code analysis for the project
 
-##Debugging
+## Debugging
 
 <table class="exampleTable">
 <tr>
@@ -84,7 +84,7 @@ To accomplish this, I set the keyboard shortcut Ctrl+Alt+\
 
 </table>
 
-##Searching
+## Searching
 
 <table class="exampleTable">
 <tr>
@@ -110,7 +110,7 @@ To accomplish this, I set the keyboard shortcut Ctrl+Alt+\
 
 </table>
 
-##Navigation
+## Navigation
 
 <table class="exampleTable">
 <tr>
@@ -129,7 +129,7 @@ To accomplish this, I set the keyboard shortcut Ctrl+Alt+\
 </table>
 
 
-##Visual Studio Windows Layout
+## Visual Studio Windows Layout
 
 In Visual Studio 2015, you can now save the Windows Layout and change them with a shortcut key.  
 
@@ -138,7 +138,7 @@ In Visual Studio 2015, you can now save the Windows Layout and change them with 
 
 If you have Visual Studio 2013 and below, you can use use the Visual Studio extension, [Layouts O Rama](http://tinyurl.com/vslayout)
 
-##Resharper Searching/Navigation
+## Resharper Searching/Navigation
 
 If you have Resharper there are several additional options that you get for searching.
 
@@ -168,7 +168,7 @@ Note: Assumes Visual Studio keyboard layout for Resharper
 
 </table>
 
-##Format Document
+## Format Document
 
 
 <table class="exampleTable">
@@ -188,7 +188,7 @@ Note: Assumes Visual Studio keyboard layout for Resharper
 </tr>
 </table>
 
-##Additional Shortcuts
+## Additional Shortcuts
 
 There are a lot more shortcuts that are set in Visual Studio.  I have only covered the ones that I use the most.  To see the full list, visit [http://visualstudioshortcuts.com](http://visualstudioshortcuts.com).
 

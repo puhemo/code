@@ -39,11 +39,11 @@ Instead, it is better if you can test out all of your changes and review your bl
 We need to install XCode command line tools, nodejs and python pip.
 
 
-###Section 1.1: Installing NodeJs
+### Section 1.1: Installing NodeJs
 
 Head over to [nodejs.org](https://nodejs.org) and download the NodeJs Installer and run it.  Take all of the defaults.
 
-###Section 1.2: Installing XCode Command Line Tools
+### Section 1.2: Installing XCode Command Line Tools
 
 Unfortunately to get the XCode command line tools, you first need to install XCode.
 
@@ -58,11 +58,11 @@ Once XCode is installed, open up a terminal windows (Application -> Other -> Ter
 	
 This will bring up a windows asking you to install the command line tools package that we need and just click the Install button.
 	
-###Section 1.3: Installing Pygments Code Highlighter
+### Section 1.3: Installing Pygments Code Highlighter
 
 		pip install Pygments
 
-###Section 1.4: Install Ruby Gems
+### Section 1.4: Install Ruby Gems
 
 	sudo gem update --system 	
 	sudo gem install bundler

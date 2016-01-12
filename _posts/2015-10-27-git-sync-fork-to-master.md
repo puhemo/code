@@ -2,7 +2,8 @@
 layout: post
 title: 'Sync your Git Fork to the Original Repo'
 date: 2015-10-27 06:00
-categories: ['git']
+categories: ['git', 'github']
+
 published: true
 excerpt: | 
     Syncing your forked repository to the original repository is an important step before submitting any pull request to the original repository for the changes in your forked repository.  Even if you are not going to submit a pull request to the original repository, there are times that you want the additional features and/or bug fixes that have been done since you forked the original repository.  
@@ -14,7 +15,7 @@ Syncing your forked repository to the original repository is an important step b
 
 You could do a pull request but this adds an additional commit into your forked repository instead of making your forked repository match the original repository.  In order to sync the forked repository without adding any additional commits as part of the process you need to configure the original repository as an upstream remote, merge in the changes from the original repository and then push the merged version back to Github.  
 
-##Adding Original Repo As an Upstream Repo
+## Adding Original Repo As an Upstream Repo
 
 In order to pull the changes from the original repository into your forked version, you need to add the original git repo as an upstream repository.
 
@@ -42,7 +43,7 @@ In order to pull the changes from the original repository into your forked versi
         
 You are now ready to pull the changes from the original repository to the your forked repository.
                  
-##Merging Original Repo Into Your Fork
+## Merging Original Repo Into Your Fork
 
 1. Open a Command Prompt (Windows) or Terminal (Mac or Linux)
 1. Navigate to the directory that contains your forked repository that you configured with the upstream repository
@@ -76,7 +77,7 @@ You are now ready to pull the changes from the original repository to the your f
         $ git push origin master
              
 
-##Wrap-Up
+## Wrap-Up
 
 To summarize, with the 5 commands below you can sync your forked repository with the original repository and push the changes to your Github repository.     
 

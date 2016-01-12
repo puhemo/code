@@ -17,7 +17,7 @@ When you are creating a mobile applications there are times where you need to no
 
 In this post we will walk you through creating an ionic application that uses the [ngCordova local notification plugin](http://ngcordova.com/docs/plugins/localNotification/).      
 
-##Environment Setup
+## Environment Setup
 
 Before we get started, we need to make sure that you have your development environment configured with either an emulator or physical device as the local notification only works on a device and not a web browser.  If you have already configured the Ionic Framework and an emulator/physical device, you can skip this section.
 
@@ -43,7 +43,7 @@ You can refer to the following articles to configure your environment:
 1. [Setup Ionic on Windows]({{"Ionic-Setup-Windows" | prepend: site.baseurl | prepend: site.url}})
 1. [Setup Ionic on Mac]({{"ionic-setup-osx/" | prepend: site.baseurl | prepend: site.url}})
 
-##Creating Project
+## Creating Project
 
 The first thing we need to do is create a new ionic project that we will use to test the local notifications.
 
@@ -62,7 +62,7 @@ To add the iOS platform (for Mac users):
     
 Remember, if you’re not using a Mac, you cannot build for the iOS platform.    
     
-##Install ngCordova
+## Install ngCordova
 
 ngCordova is a collection of 70+ AngularJS extensions on top of the Cordova API that make it easy to build, test, and deploy Cordova mobile apps with AngularJS.  These extensions allow us to interact with device features such as the camera, battery status, and geolocation.
 
@@ -77,7 +77,7 @@ Include ng-cordova.js or ng-cordova.min.js in your www\index.html file before co
     <script src="cordova.js"></script>
     
     
-##Install the local notification plugin
+## Install the local notification plugin
              
 To install the plugin run:
     
@@ -92,13 +92,13 @@ If you open up the package.json file, you will see the local notification plugin
         }
     ]
     
-##Add ngCordova as a dependency
+## Add ngCordova as a dependency
 
 Open up the www/js/app.js file and inject ngCordova into the module
 
 angular.module('starter', ['ionic', 'ngCordova'])
 
-##Creating a New Controller
+## Creating a New Controller
 
 We need to create an Angular controller that the UI will interact with.  At the bottom of the www/js/app.js file add the following
 
@@ -117,7 +117,7 @@ Now we need to tell the UI what the controller is.  Open up the www/index.html p
       </ion-content>
     </ion-pane>
 
-##Adding Functions to Create Notifications
+## Adding Functions to Create Notifications
 
 Within the SampleController, we need to add all of the functiosn to do the scheduling of the notifications.
 
@@ -126,7 +126,7 @@ All of the local notification functions should be contained within an ionic plat
     $ionicPlatform.ready(function () {
     }
     
-###Instant Notification
+### Instant Notification
     
 To schedule an immediate notification, add the following function within the ionicPlatform.ready function 
 
@@ -148,7 +148,7 @@ In the www/index.html page within the ion-content, add a button and set the ng-c
         Instant 
     </button>
       
-###Notification X Seconds from Now
+### Notification X Seconds from Now
       
 To schedule a notification 5 seconds from now, add the following function within the ionicPlatform.ready function.  
 
@@ -177,7 +177,7 @@ In the www/index.html page within the ion-content, add a button and set the ng-c
             In 5 Sec
     </button>
 
-###Notification Every Minute
+### Notification Every Minute
     
 To schedule a notification every minute, add the following function within the ionicPlatform.ready function 
     
@@ -202,7 +202,7 @@ In the www/index.html page within the ion-content, add a button and set the ng-c
             Every Minute
     </button>
 
-###Update Notification Text
+### Update Notification Text
 
 To update a the every minute notification, add the following function within the ionicPlatform.ready function.  You also need to check that the notification is scheduled before trying to update it.   This functions requires that you clicked on the Every Minute button to schedule the every minute notification.
   
@@ -231,7 +231,7 @@ In the www/index.html page within the ion-content, add a button and set the ng-c
             Update Text for Every Minute
     </button>
           
-###Update Notification Interval
+### Update Notification Interval
 
 To update a the every minute notification to be scheduled every second, add the following function within the ionicPlatform.ready function.  You also need to check that the notification is scheduled before trying to update it.  This functions requires that you clicked on the Every Minute button to schedule the every minute notification.    
   
@@ -262,7 +262,7 @@ In the www/index.html page within the ion-content, add a button and set the ng-c
         Update Every Min to Second
     </button>
             
-###Cancel Notification
+### Cancel Notification
 
 To cancel a notification, add the following function within the ionicPlatform.ready function.  You also need to check that the notification is scheduled before trying to cancel it.  This functions requires that you clicked on the Every Minute button to schedule the every minute notification.   
 
@@ -288,18 +288,18 @@ In the www/index.html page within the ion-content, add a button and set the ng-c
             Cancel Every Minute
     </button>
 
-##Deploy to Device
+## Deploy to Device
 
 In order for the local notifications to work, you need to deploy the application to a device or an emulator.  It will not work correctly in the browser.
 
-###Add Platform
+### Add Platform
 
     $ ionic platform add android
     $ ionic platform add ios
     
 Note: You can only compile and deploy ios application on a Mac.
 
-###Run on Device
+### Run on Device
 
 Android: 
 
@@ -311,7 +311,7 @@ iOS:
 
 Note: You may need to pass in --device to the command to get it to run on a device vs an emulator.    
     
-##Wrap-up
+## Wrap-up
 
 Local notifications are a great option for being able to alert a user to something in your application.  As you saw it only took a few lines of code to enable them.  This article touched on the basic but there is more that you can do with local notifications.  You can interact with multiple notifications at once for scheduling, updating, and cancelling.  You can pass additional data into each notification that you can then use when the notification is trigger.  On the rootscope you can listen for notifications to be scheduled, tiggered, updated or cancelled.  
 

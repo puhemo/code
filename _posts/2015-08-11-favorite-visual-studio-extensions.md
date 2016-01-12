@@ -12,7 +12,7 @@ excerpt: In the Visual Studio Extension Gallery there are hundreds of extensions
 
 In the Visual Studio Extension Gallery there are hundreds of extensions that are available.  The extensions add additional functionality to Visual Studio.  Below are the extensions that I typically have installed.
 
-##Web Essentials 
+## Web Essentials 
 
 Big pile of awesome for web developers.  If you are doing web development you need to have this installed.
 
@@ -29,7 +29,7 @@ Features:
 
 
 
-##GhostDoc
+## GhostDoc
 
 Auto generate Xml doc comments based on your method/parameter names, exceptions through and return types.
 
@@ -39,7 +39,7 @@ Default shortcut: ctrl+shift+d
 
 
      
-##I Hate Regions
+## I Hate Regions
 
 Regions is one of those features that you either love or hate.  If you are not a fan of regions then this extension is for you.  No longer will you even care that a file has a region in it.    
 
@@ -53,7 +53,7 @@ Features:
 
 
 
-##Productiviy Power Tools
+## Productiviy Power Tools
 
 This extension is written by Microsoft adds a lot of productivity enhancements to Visual Studio that you just wish came out of the box.
 
@@ -74,7 +74,7 @@ Features:
   
 
 
-##VS Commands
+## VS Commands
 
 Another productivity tool for Visual Studio.  Unfortunately, there is not yet a Visual Studio 2015 version.  
 
@@ -90,7 +90,7 @@ Features:
      
 
      
-##Switch Startup Project
+## Switch Startup Project
 
 Easily configure different startup project configurations and be able to switch between them or a select single project to start up.
 
@@ -99,7 +99,7 @@ Easily configure different startup project configurations and be able to switch 
       
   
 
-##Layout O Rama
+## Layout O Rama
 
 Store Visual Studio windows layout and be able to quickly change to a new layout.  This is really useful when moving to different monitor setups/resolution.  
 
@@ -108,7 +108,7 @@ Store Visual Studio windows layout and be able to quickly change to a new layout
 [http://tinyurl.com/vslayout](http://tinyurl.com/vslayout)
 
     
-##Task Runner Explorer
+## Task Runner Explorer
 
 Run Grunt or Gulp task directly in Visual Studio. 
 
@@ -121,14 +121,14 @@ Can hook Grunt/Gulp task up to the Visual Studio build system (before/after buil
     
     
     
-##File Nesting
+## File Nesting
 
 Easily group files by name and be able to collapse the group.
 
 [http://tinyurl.com/vsfilenest](http://tinyurl.com/vsfilenest)
 
 
-##Add New File
+## Add New File
 
 Fast and easy way to add new files to any project including files that start with a dart.
 
@@ -136,7 +136,7 @@ Fast and easy way to add new files to any project including files that start wit
    
 
     
-##Package Intellisense
+## Package Intellisense
 
 NPM and Bower package intellisense directly in the Visual Studio JSON editor.
 
@@ -144,7 +144,7 @@ NPM and Bower package intellisense directly in the Visual Studio JSON editor.
     
 
 
-##Bundler & Minifier
+## Bundler & Minifier
 
 Bundle and minify JS, CSSS, and Html files. Can be wired into the build system in Visual Studio.
 
@@ -164,7 +164,7 @@ Open a command line at the root of the project.  Supports all consoles: CMD, Pow
     
 
 
-##Stop on First build Error
+## Stop on First build Error
 
 Stops a solution build immediately after a project has a failed to build error.
 
@@ -172,13 +172,13 @@ Stops a solution build immediately after a project has a failed to build error.
 
 
 
-##Resharper
+## Resharper
 
 This is the one extension that I cannot live without.  It makes Visual Studio a much better IDE.  Once you start using it, you will wonder how you ever lived without it.  I could easily do several blog post on the features of Resharper.  Below I picked out some of my favorite features.      
   
 [http://jetbrains.com/resharper](http://jetbrains.com/resharper)
 
-##Features:
+## Features:
 
 **Navigation**
 

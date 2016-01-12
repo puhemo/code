@@ -10,13 +10,13 @@ excerpt: |
     Luckily, it is really easy to fix the included vagrantfile so that you can create vagrant machines but you have to do some prework before running a vagrant up using this base box.       
 ---
 
-##Overview
+## Overview
 
 As part of my [demo](https://github.com/digitaldrummerj/VagrantTalk/tree/master/ExampleVagrantFiles/WindowsWithChocolatey) during my Vagrant talk, I use the [opentable/win-8.1-enterprise-amd64-nocm](https://atlas.hashicorp.com/opentable/boxes/win-8.1-enterprise-amd64-nocm) vagrant base box with the virtualbox provider.  This vagrant base box unfortunately has an issue with the vagrantfile that is included with it looking for the old/unneeded vagrant windows plugin to be installed and trying to port forward the WinRM and RDP ports without detecting if the port is already in use.
 
 Luckily, it is really easy to fix the included vagrantfile so that you can create vagrant machines but you have to do some prework before running a vagrant up using this base box.
 
-##Downloading the Box
+## Downloading the Box
 
 Normally with vagrant you do not need to download the vagrant box before running vagrant up but in this case you do need to download the [opentable/win-8.1-enterprise-amd64-nocm](https://atlas.hashicorp.com/opentable/boxes/win-8.1-enterprise-amd64-nocm) box first.  We can download the box by running the following command from the command line.  
     
@@ -24,7 +24,7 @@ Normally with vagrant you do not need to download the vagrant box before running
     
 It will take a bit to download the vagrant box as it is several gigs in size.
 
-##Fix for Unneeded Check for Vagrant Windows Plugin
+## Fix for Unneeded Check for Vagrant Windows Plugin
 
 Once the box is downloaded, you need to go to the .vagrant.d directory that contains the box you just downloaded.  On Windows this directory is located at %userprofile%\.vagrant.d\boxes\opentable-VAGRANTSLASH-win-8.1-enterprise-amd64-nocm\1.0.0\virtualbox
 
@@ -42,7 +42,7 @@ When you open up the file you will see this section of code.
 This section is no longer need and can be deleted.  The vagrant-windows plugins is how Vagrant used to supported the Windows OS before it was supported out of the box.  
 
 
-##Fix for Port Forwarding Auto Correct
+## Fix for Port Forwarding Auto Correct
 
 We are going to edit the same Vagrantfile as the previous section.  Again this file is located at %userprofile%\.vagrant.d\boxes\opentable-VAGRANTSLASH-win-8.1-enterprise-amd64-nocm\1.0.0\virtualbox
 
@@ -60,7 +60,7 @@ To correct this we need to add the auto_correct parameter to each of the port fo
     config.vm.network :forwarded_port, guest: 3389, host: 3389, auto_correct: true
     config.vm.network :forwarded_port, guest: 5985, host: 5985, auto_correct: true
 
-##Wrap-up
+## Wrap-up
 
 Now you can use the [opentable/win-8.1-enterprise-amd64-nocm](https://atlas.hashicorp.com/opentable/boxes/win-8.1-enterprise-amd64-nocm) vagrant base box with the vagrant up command to create a new virtual machine.  
 

@@ -29,7 +29,7 @@ Here are the phases that I go through:
 
 There is no set time for how long each phase takes. It all depends on the presentation and the length of it. I have had talks where I spent several weeks working on it while other talks were done in less than a day.
 
-You can see a good number of my external presentations at [Presentations by Justin](http://slides.com/digitaldrummerj "http://slides.com/digitaldrummerj")
+You can see a good number of my presentations at [Presentations by Justin](http://slides.com/digitaldrummerj "http://slides.com/digitaldrummerj")
 
 ## Phase 1: Brainstorming
 
@@ -90,7 +90,7 @@ Now it is time to put the finishing touches on the presentation.
 5.  Run though the slide in presentation mode and make sure everything works as expected (transitions, bullet animations, etc). Try to stand back 5-10 feet from the monitor and make sure that you can read the presentation.
 6.  If you are going to be giving it on a projector or TV, hook it up to one and make sure that it looks rights (fonts, font size, colors, etc)
 
-## Phase 5: Practice
+##Phase 5: Practice
 
 Practice you talk out loud as much as you can. By practicing the talk out loud you will find any spots where you might stumble on words or phrases or that something doesn't make sense said out loud.
 

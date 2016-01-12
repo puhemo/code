@@ -15,12 +15,12 @@ When I am working in an code editor such as Visual Studio, I do not want to have
 
 In this post, we will look at how to run your Gulp task within Visual Studio and then how to integrate them into the Visual Studio build process.
 
-##Code for this tutorial
+## Code for this tutorial
 
 The sample code for this tutorial is available at [https://github.com/digitaldrummerj/pluralsight-audition](https://github.com/digitaldrummerj/pluralsight-audition).
 
 
-##Pulling up the Task Runner Explorer 
+## Pulling up the Task Runner Explorer 
 
 You can get to the task runner explorer, by going under the View Menu, selecting Other Windows, and then selecting the Task Runner Explorer.  
 ![Open Task Runner Explorer]({{"TaskRunnerExplorer_FindInMenu.png" | prepend: imagedir}}) 
@@ -38,7 +38,7 @@ In this case it shows the 5 task that are available in the gulpfile.js
 * release
 * watch
 
-##Running a Task
+## Running a Task
 
 After the task is opened up, to run a task, right-click on it and select the run option.  
  
@@ -50,7 +50,7 @@ For the demo, we have right-clicked on the default task and selected the run opt
 
 ![Results of Task Run]({{"TaskRunnerExplorer_TaskRun.png" | prepend: imagedir}})
 
-##Integrating into Visual Studio Build Process
+## Integrating into Visual Studio Build Process
 
 Manually running a task is nice but it is even better if you can integrate it into the Visual Studio build process.  Luckily the Task Runner Explorer, give you just that option.  If you right-click on a task and select Bindings, you can see the options.  
 
@@ -78,6 +78,6 @@ Also, if you open up the gulpfile.js, you will notice that the first line now ha
 ![Gulpfile with BeforeBuild set]({{"TaskRunnerExplorer_GulpfileWithBeforeBuildSet.png" | prepend: imagedir}})
 
 
-##Wrap-up
+## Wrap-up
 
 Now as a Visual Studio user, you kow how to run your gulp task without leaving Visual Studio and how to integrate it into the Visual Studio build process.        

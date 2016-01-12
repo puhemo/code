@@ -14,7 +14,7 @@ One of the first things that you learn when giving presentations is that fonts a
 
 If you have other programs that you use, feel free to leave a comment on the font settings that you use.
 
-##Notepad
+## Notepad
 
 1. Format -> Fonts
 	* Font: Lucida Console
@@ -22,7 +22,7 @@ If you have other programs that you use, feel free to leave a comment on the fon
 	* Size: 18-22
 
 
-##Notepad++
+## Notepad++
 
 1. Settings -> Style Configurator ...
 	* Select Theme: Default (stylers.xml)
@@ -33,7 +33,7 @@ If you have other programs that you use, feel free to leave a comment on the fon
 	* Bold: sometimes checked depending on the day
 	 
 	  
-##Command Prompt
+## Command Prompt
 
 1. Open cmd
 1. Click on menu and select Defaults
@@ -45,7 +45,7 @@ If you have other programs that you use, feel free to leave a comment on the fon
 	* Screen Text: Lime (Kermit Green or Green: 255, Red: 0, Blue: 9)
 	* Screen Background: Black
 
-##Powershell and Azure Powershell Command Prompt 
+## Powershell and Azure Powershell Command Prompt 
 
 1. For Win 8.1 On Start find PowerShell or Azure Powershell
 1. Open file location. 
@@ -71,7 +71,7 @@ Remember to always launch powershell from the start menu.  For some reason this 
 
 Don't forget to pin to start menu or task bar if going to be using for demo.
 
-##Powershell ISE
+## Powershell ISE
 
 Powershell ISE: C:\Windows\System32\WindowsPowerShell\v1.0
 
@@ -82,7 +82,7 @@ Powershell ISE: C:\Windows\System32\WindowsPowerShell\v1.0
 
 Don't forget to pin to start menu or task bar if going to be using for demo.
 
-##Visual Studio Code
+## Visual Studio Code
 
 1. File -> Preferences -> User Settings
 	
@@ -106,7 +106,7 @@ Don't forget to pin to start menu or task bar if going to be using for demo.
 				//"editor.formatOnType": true
 		}
 
-##Visual Studio Community / Ultimate / Enterprise
+## Visual Studio Community / Ultimate / Enterprise
 
 1. Go to **Tools -> Options** 
 1. **Environment -> General**
@@ -145,7 +145,7 @@ Don't forget to pin to start menu or task bar if going to be using for demo.
 		* Set "Indent size" to 2
 		* Check "Keep tabs"
 
-##Sources Used
+## Sources Used
 
 Here are some various sources that I got information from.
 

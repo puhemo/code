@@ -36,24 +36,22 @@ On Windows, you will only be able to setup Android development.  Apple requires 
 
 1. Install Chocolatey from [http://www.chocolatey.org](http://www.chocolatey.org).  Command is on the front-page of the site or below.  Open an administrative command prompt to run the command.  To open an administrative command prompt on Windows 8, go to the start menu, type cmd and then ctrl+shift+click on the cmd search result.
 
-    ```
-    Command Prompt: @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
-    ```
+        Command Prompt: @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+
 
 1. Install the [BoxStarter](http://boxstarter.org) Chocolatey package
 
-    ```
-    cinst BoxStarter
-    ```
+
+        cinst BoxStarter
+
 
 1. Close the command prompt that you opened to install Chocolatey and BoxStarter
 1. On the desktop there should be a BoxStarter Shell icon, double-click on that to run it.  If the icon is not on the desktop, then open up a command prompt and type BoxStarterShell.
 1. I have setup a gist file that has all of the Chocolatey commands to run to install the rest of the software and configure it.  Run the gist file from the Boxstarter Shell:
 
-    ```
-    Install-BoxStarterPackage -PackageName  https://gist.githubusercontent.com/digitaldrummerj/3fe2eb057004b6742b89/raw/c042aecff396d9b26d4061f45544bff80ff321e8/IonicSetup  -DisableReboots
-
-    ```
+    
+        Install-BoxStarterPackage -PackageName  https://gist.githubusercontent.com/digitaldrummerj/3fe2eb057004b6742b89/raw/c042aecff396d9b26d4061f45544bff80ff321e8/IonicSetup  -DisableReboots
+    
         
 - **NOTE:** If you want to install any of the optional software you will need to fork the gist file and remove the # in front of the line for the package you want to install.
     
@@ -62,7 +60,7 @@ On Windows, you will only be able to setup Android development.  Apple requires 
 1. Open a command prompt (it won't work from a powershell command prompt)
 1. type Android
 	- This will launch the Android SDK Manager.  
-    - Select the API 19 and check the SDK Platform and ARM EABI v8a System Image 
+    - Select the API 22 and check the SDK Platform and ARM EABI v8a System Image 
     - Scroll to the bottom and select the Google USB Driver
     - Click the install button.  This can take a bit of time.
 1. If you are going to use the Android Emulator you will need to configure an Android Virtual Device (AVD).  To do this, with the Android SDK Manager open under the Tools menu select Manage AVD

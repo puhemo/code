@@ -209,11 +209,11 @@ Full details at [https://help.github.com/articles/generating-ssh-keys/](https://
 
 	git push origin --delete [branch name]
 
-##Proxy Settings
+## Proxy Settings
 
 See Post on [Proxy  Configurations]({{"/proxy-configurations" | prepend: site.baseurl | prepend: site.url }}) for configuring your proxy settings with Git
 
-##Configurations
+## Configurations
 
 **Listing of Configurations:**
 

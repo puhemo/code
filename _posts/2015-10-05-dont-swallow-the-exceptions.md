@@ -9,7 +9,7 @@ excerpt: |
     
     I have worked on several codebases recently where methods returned false if either a business rule failed or an unexpected exception occurred with no logging of the error anywhere.  This made it extremely difficult to figure out what the issue was.  In several cases, even when you hooked up a debugger there was no way to get at the exception details since the exception was not passed into the catch block.     
     
-    ##Examples of Issue
+    ## Examples of Issue
     
     Here are a couple of examples of what I am talking about when I say swallowing the exception.  
     
@@ -34,7 +34,7 @@ Throwing away exceptions in your code is just a bad practice and makes it harder
 
 I have worked on several codebases recently where methods returned false if either a business rule failed or an unexpected exception occurred with no logging of the error anywhere.  This made it extremely difficult to figure out what the issue was.  In several cases, even when you hooked up a debugger there was no way to get at the exception details since the exception was not passed into the catch block.     
 
-##Examples of Issue
+## Examples of Issue
 
 Here are a couple of examples of what I am talking about when I say swallowing the exception.  
 
@@ -76,7 +76,7 @@ In this example, the code at least returns false back from the method so you can
         }    
     }
     
-##Fixing This Issue
+## Fixing This Issue
 
 Now that you understand the issue, lets examine how to fix it.  The fix is really simple.  There are two options that I use:
 
@@ -144,6 +144,6 @@ Yes I know I said there is 2 days to fix it but you can also do it this way.  Ho
     }    
     
     
-##Wrap-Up
+## Wrap-Up
 
 As you can see it does not take much more work to be able to do something with the exception.  It will save you hours of troubleshooting work just by handling the exception and not throwing it away.  Don't take the easy way out by swallowing exceptions.  Be nice to your fellow developers and don't throw away the exceptions.       

@@ -48,7 +48,7 @@ Thankfully, jekyll supports having draft posts that by default don't show even i
 		jekyll serve --config _config.yml,_configdev.yml
 		
 		
-##Section 2: Running with Drafts
+## Section 2: Running with Drafts
 
 To run jekyll with drafts, you just need to pass in the --drafts argument to the serve command
 

@@ -18,7 +18,7 @@ Below I have listed the code snippets  that I most frequently use and what the o
 
 To use these snippets type they keyword and then press the tab key. 
 
-##Loops
+## Loops
 
 * do
 
@@ -44,7 +44,7 @@ To use these snippets type they keyword and then press the tab key.
 		{
 		}
 	
-##Conditionals
+## Conditionals
 
 * if
 
@@ -64,7 +64,7 @@ To use these snippets type they keyword and then press the tab key.
 		{
 		}
 
-##Error Trapping
+## Error Trapping
 
 * try
 
@@ -114,7 +114,7 @@ To use these snippets type they keyword and then press the tab key.
 			}
 		}
 		
-##Properties
+## Properties
 
 * prop
 
@@ -134,7 +134,7 @@ To use these snippets type they keyword and then press the tab key.
 
 		public int I { get; private set; }
 
-##Misc
+## Misc
 
 * ctor
 	

@@ -31,7 +31,7 @@ This means that you can run vagrant destory, then vagrant up and have a fully co
 
 Vagrant gives you multiple options for provisioning the machine, from simple command line scripts to more complex configuration management systems such as chef and puppet. 
 
-##When Does Vagrant Provisioning Happens?
+## When Does Vagrant Provisioning Happens?
 
 Provisioning happens at certain points during the lifetime of your Vagrant environment:
 
@@ -41,7 +41,7 @@ Provisioning happens at certain points during the lifetime of your Vagrant envir
 
 You can also bring up your environment and explicitly not run provisioners by specifying --no-provision.  You would typically only do this if you need to test out something in your vagrant configuration.
 
-##Vagrant Provisioning Providers
+## Vagrant Provisioning Providers
 
 For this tutorial, we are going to use the shell and file providers as they are the simpliest to get started with.  
   
@@ -53,7 +53,7 @@ The shell provider will run either batch files or powershell scripts depending o
 
 The file provider, copies a file from your machine to the virtual machine but does not run the script.  This is useful for scripts that need user interaction or configuration files that need to be put into place on the virtual machine.
 
-##Next Steps
+## Next Steps
 
 Now that we understand what provisioning is, in the next couple of lessons we are going to expand on the provisioning to have it install Chocolatey, Boxstarter, and then all of our software using Chocolatey/BoxStarter.
 

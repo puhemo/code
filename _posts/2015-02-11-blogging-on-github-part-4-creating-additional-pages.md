@@ -108,7 +108,7 @@ To add it to the menu:
 
 3. Click on the default.html page.
 
-    ![Github Click on Default.html]({{site.url}}/images/github_part4_click_default.png)
+    ![Github Click on Default.html]({{ "github_part4_click_default.png" | prepend: imagedir }})
 
 4. Click on the ![github_edit_button.png]({{"github_edit_button.png" | prepend: imagedir}}) icon to edit the file.
 

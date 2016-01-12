@@ -38,7 +38,7 @@ Instead, it is better if you can test out all of your changes and review your bl
 
 We need to install nodejs, ruby 2.x, python pip, and git.
 
-###Section 1.1: Installing NodeJs
+### Section 1.1: Installing NodeJs
 
 First we are going to install NodeJS using the command below
 
@@ -50,7 +50,7 @@ First we are going to install NodeJS using the command below
 	
 	node -v
 	
-###Section 1.2: Installing Ruby
+### Section 1.2: Installing Ruby
 
 Ubuntu Trusty 14.04 unfortunately comes with Ruby 1.9.x and we need 2.x.  There is also a bug in the ubuntu packages where the Ruby 2.0 install is actually the 1.9.3 branch.
 
@@ -89,14 +89,14 @@ Ubuntu Trusty 14.04 unfortunately comes with Ruby 1.9.x and we need 2.x.  There 
 		sudo gem install bundler
 	
 	
-###Section 1.3: Python
+### Section 1.3: Python
 
 In order to use the Pygments code syntax highlighter, we need to install python pip
 
 	sudo apt-get install python-pip -y
 	
 	
-###Section 1.4: Installing Git
+### Section 1.4: Installing Git
 
 	sudo apt-get install git -y	
 
