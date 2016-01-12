@@ -16,13 +16,13 @@ Welcome to the Vagrant lesson on installing Chocolatey as part of the Vagrant pr
 {% include series.html %}
 
 
-##Overview
+## Overview
 
 The first thing we are going to do as part our provisioning is to install Chocolatey onto the virtual machine. 
 
 As we saw in the [Easy Virtual Machine Management]({{"/vagrant-overview" | prepend: site.baseurl | prepend: site.url }}) post, having Chocolatey on a machine allows you to easily install all of our software in an automated and repeatable fashion.
 
-##How to install as part of Vagrant provision?
+## How to install as part of Vagrant provision?
 
 1. Open Windows Explorer and navigate to the MyFirstMachine directory that we created in the [Easy Virtual Machine Management]({{ "/vagrant-overview" | prepend: site.baseurl | prepend: site.url }}) post.
 1. Create a directory called shell
@@ -45,7 +45,7 @@ As we saw in the [Easy Virtual Machine Management]({{"/vagrant-overview" | prepe
   	
 	  	config.vm.provision :shell, path: "shell/main.cmd"
 
-##Next Steps
+## Next Steps
 
 We now have Chocolatey installed on the virtual machine and are ready to start installing software.  The next lesson will install Boxstarter and then you will bulk install all of our software.   
 

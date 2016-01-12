@@ -22,7 +22,7 @@ So I decided I would just get my laptop working with my demos since I already ha
 
 I thought this shouldn't take that long but unfortunately I ran into a bunch of issues.  Luckily I have managed to fix all of the issue and can move on with the prep work for my presentation.
 
-###Software Installed on Laptop
+### Software Installed on Laptop
 
 * Windows 8.1 Enterprise
 * Visual Studio 2015 with Cordova Tooling Update 2 
@@ -32,7 +32,7 @@ I thought this shouldn't take that long but unfortunately I ran into a bunch of 
 
 
 
-###Steps to Create Visual Studio Ionic Project that caused issue
+### Steps to Create Visual Studio Ionic Project that caused issue
 
 To create the project I first created the Ionic project using the Ionic CLI and then created a Cordova project in Visual Studio based on the Ionic CLI project that was created.
 
@@ -54,7 +54,7 @@ To create the project I first created the Ionic project using the Ionic CLI and 
 Now the fun begins.  Below I have documented the different issues that I ran into.
 
  
-###Issue 1: Opening Cordova project took 100% CPU 
+### Issue 1: Opening Cordova project took 100% CPU 
 
 **Error**
 
@@ -74,7 +74,7 @@ Since Visual Studio and Node were taking all of the CPU, I had to open up the Ta
 
 The CPU this time should stay at a normal level    
 
-###Issue 2: node-sass would fail due to not having the 32 bit version installed
+### Issue 2: node-sass would fail due to not having the 32 bit version installed
 
 **Error**
 
@@ -92,7 +92,7 @@ This was caused by running npm install from the command line outside of Visual S
 1. After a few minutes the package restore should be completed.
 	* Now the Task Runner Explorer should also be working
 
-###Issue 3: Typescript error on Visual Studio build
+### Issue 3: Typescript error on Visual Studio build
 
 **Error**
 This issue actually had nothing to do with Visual Studio itself but with the angular bower packages.
@@ -104,7 +104,7 @@ It turns out that the angular-ui-router bower package that is installed as part 
 I just deleted the angular-ui-router\api folder.
  
 
-###Issue 4: Cordova error on Visual Studio build
+### Issue 4: Cordova error on Visual Studio build
 
 **Error**
 
@@ -139,7 +139,7 @@ I believe that this error has nothing to do with the firewall since I can restor
 1. Rebuild the solution and the build should be complete successfully
 
 
-###Issue 5: Visual Studio seems to randomly decide to use my node 4.1.0 install
+### Issue 5: Visual Studio seems to randomly decide to use my node 4.1.0 install
 
 It appear that Visual Studio sometimes wants to use its version of node and other times uses my 4.1.0 install.
 
@@ -155,7 +155,7 @@ It appear that Visual Studio sometimes wants to use its version of node and othe
 * Cordova build
 	* I see that at the start of the output windows for the build:  Your environment has been set up for using Node.js 4.1.0 (ia32) and npm.
 	
-###Issue 6: Visual Studio seem to have a bunch of updates that were needed as well
+### Issue 6: Visual Studio seem to have a bunch of updates that were needed as well
 
 Here is a list of different installed/re-installs/uninstalls that I did:
 
@@ -171,7 +171,7 @@ Here is a list of different installed/re-installs/uninstalls that I did:
 * Upgraded TypeScript for Visual Studio since the Visual Studio installer said there was a new version out
 
 
-###Working Steps
+### Working Steps
 
 To create the project I first created the Ionic project using the Ionic CLI and then created a Cordova project in Visual Studio based on the Ionic CLI project that was created.
 
@@ -199,7 +199,7 @@ To create the project I first created the Ionic project using the Ionic CLI and 
 
 
 
-###Conclusion
+### Conclusion
 
 After all of this Visual Studio is now performing like I expected it to and like it does on my Intel NUC machine.  The CPU is operating at normal levels.  I am able to build everything in Visual Studio and deploy to either the Visual Studio Android Emulator or an actual Android device.  
 

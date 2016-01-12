@@ -38,7 +38,7 @@ The Windows configuration helper functions that Boxstarter provides  to enable o
 * Set taskbar options like size, postion, and lock the size.
 * Set Windows explorer options like showing hidden files, protected OS files, and file extensions.
 
-##How to install Boxstarter part of Vagrant provision?
+## How to install Boxstarter part of Vagrant provision?
 
 Since we already have Chocolatey installed as part of the previous lesson, installing Boxstarter just requires use to call the choco install Boxstarter command.  
 
@@ -47,7 +47,7 @@ However, there are a few things we need to do in order for this to work without 
 * You have to run the install command as separate shell provision command in Vagrant instead of the main.cmd that we used to install Chocolatey. The reason for this is due to the environment path updates that are part of the Chocolatey install are not picked up until you open a new command prompt.
 * You have to turn off the Chocolatey confirmation prompts that ask you if you want to install this package or not.  
 
-##Creating the Provisioning Scripts
+## Creating the Provisioning Scripts
 
 1. Navigate to the shell directory in the MyFirstMachine directory that we created in previous lessons.
 1. Create a new file called InstallBoxStarter.bat
@@ -61,7 +61,7 @@ However, there are a few things we need to do in order for this to work without 
 
 		config.vm.provision :shell, path: "shell/InstallBoxStarter.bat"    
 
-##Next Steps
+## Next Steps
 
 So far in the provisioning process, we have had Vagrant install both Chocolatey and Boxstarter.  In the next lesson, we will use Boxstarter to bulk install our software and configure Windows.
 

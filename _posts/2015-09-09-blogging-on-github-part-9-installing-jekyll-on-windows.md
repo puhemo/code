@@ -42,7 +42,7 @@ Note that Jekyll is not officially supported on Windows but it does work and I h
 
 I am a big fan of Chocolatey and luckily a good majority of the software that we need had a chocolatey package so I wrote a gist file that we will install using Boxstarter.
 
-###Section 1.1: Installing Chocolatey
+### Section 1.1: Installing Chocolatey
 
 If you are not familiar with Chocolatey, check it out at [http://chocolatey.org](http://chocolatey.org).
 
@@ -55,7 +55,7 @@ If you are not familiar with Chocolatey, check it out at [http://chocolatey.org]
 
 Next we are going to install Boxstarter.
 
-###Section 1.2: Installing Boxstarer
+### Section 1.2: Installing Boxstarer
 
 Boxstarter gives you the ability to bulk install Chocolatey packages plus several helper functions for Windows configuration options.
 
@@ -76,7 +76,7 @@ Run the following commands to install Boxstarter
 		choco install BoxStarter
 		chocolatey feature disable -n=allowGlobalConfirmation	
 		
-###Section 1.3: Installing the rest of the software
+### Section 1.3: Installing the rest of the software
 
 We are going to be installing Ruby, Ruby DevKit, and Python using Chocolatey and Boxstarter.
 
@@ -149,7 +149,8 @@ Now that we have everything installed for jekyll it is time to test it out.
 
 1. Now if you open up your browser and navigate to http://localhost:4000 you will see you blog.
 
-##Section 3.1: Setting Up Dev _config.yml
+## Section 3.1: Setting Up Dev _config.yml
+
 However, by default your _config.yml file will be set for production which will cause any place that you have referenced the site.url to not working on your local machine.  You don't want to change your _config.yml file though for development since you will accidentally check it in at some point and break your blog.  Instead we can tell jekyll to use multiple configuration files.  When you load multiple files it will load them in order and then override any settings from a previously loaded config.
 
 1. Create a new file in the root of your repo called _configdev.yml

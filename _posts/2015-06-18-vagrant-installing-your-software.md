@@ -16,17 +16,17 @@ Welcome to the Vagrant lesson on how to use Boxstarter to configure Windows and 
 
 {% include series.html %}
 
-##Overview
+## Overview
 
 We have all of the needed software in place to start configuring and installing software onto our virtual machine.
 
 In this lesson, we will create an file with all of the install and configuration commands that will be executed with Boxstarter. 
 
-##Can I only install Chocolatey Packages?
+## Can I only install Chocolatey Packages?
 
 Even though Boxstarter is a Chocolatey package, you can install and configure more than just Chocolatey packages.  At the end of the day it is running a Powershell script, so anything that you can do with Powershell you can put into your file to execute through Boxstarter.
 
-##Example File
+## Example File
 
 1. In the shell directory for MyFirstMachine, create a file called BoxStarterGist.txt.
 1. In the shell directory for MyFirstMachine, create a 2nd file called 	RunBoxStarterGist.bat.
@@ -37,7 +37,7 @@ Even though Boxstarter is a Chocolatey package, you can install and configure mo
 	
 			@powershell -NoProfile -ExecutionPolicy Bypass -Command "Install-BoxStarterPackage -PackageName %temp%\\BoxstarterGist.txt"  
 
-##Populating the BoxstarterGist.txt file
+## Populating the BoxstarterGist.txt file
 
 We are going to do several things in the BoxstarterGist.txt file:  
 
@@ -50,7 +50,7 @@ These are all examples of things that you can do.  At the end of the day it is j
 
 Open up the BoxstarterGist.txt file in your favorite text editor and proceed to the configuration sections.  I have the sections in the order that I like to install/configure but you can have them in any order in the BoxstarterGist.txt file.
   
-###Windows Configurations
+### Windows Configurations
 
 This section is the Windows configuration options that we want to set.  The full Windows configuration documentation for Boxstarter is available at [http://boxstarter.org/WinConfig](http://boxstarter.org/WinConfig).
 
@@ -70,7 +70,7 @@ This section is the Windows configuration options that we want to set.  The full
 
 		Set-TaskbarOptions -Size Small -Lock
 
-###Chocolatey Installs
+### Chocolatey Installs
 
 Now it is time to install all of our Chocolatey Packages.
 
@@ -97,7 +97,7 @@ Last thing we are going to do is pin a couple of items that we installs to the t
 
 	Install-ChocolateyPinnedTaskBarItem "${env:ProgramFiles(x86)}\Google\Chrome\Application\chrome.exe"
 	
-###npm installs
+### npm installs
 
 I play around with npm a lot and don't like the spinner when running an npm command, so I turn that off and set the log level that I like.  I then install the Ionic framework and Cordova npm packages.   
 
@@ -107,7 +107,7 @@ I play around with npm a lot and don't like the spinner when running an npm comm
 	npm install -g ionic
 	npm install -g cordova
 
-###git clone repositories
+### git clone repositories
 
 The last thing that I do as part of the BoxStarterGist.txt file is to create c:\projects which is where I store my project source code at and pull it down from Github.
 
@@ -121,7 +121,7 @@ The last thing that I do as part of the BoxStarterGist.txt file is to create c:\
 	
 	git clone https://github.com/digitaldrummerj/VagrantTalk
 
-##How to install your software part of Vagrant provision?
+## How to install your software part of Vagrant provision?
 
 Now that we have the BoxStarterGist.txt file configured the way that we want it, we need to tell Vagrant what to do with it.  
 
@@ -131,11 +131,11 @@ For this one we are using the file provision which copies the files to the virut
 	           source: "shell/RunBoxStarterGist.bat",
 	           destination: "desktop\\RunBoxStarterGist.bat" 
 
-##Running the RunBoxStarterGist.bat file
+## Running the RunBoxStarterGist.bat file
 
 After you do vagrant up and all of the provisioners runs, you will see the RunBoxstarterGist.bat on the desktop for the vagrant user.  You will just need to manually execute this file.  Once you kick it off you can walk away and let it do all of the installs.
  
-##Next Steps
+## Next Steps
 
 The next lesson will cover the different networking options that vagrant supports.  By default Vagrant sets up the virtual machine with a NAT network so that you can only get to the machine from the host.  You an however setup both a public and private network.  We will dive into how to do this.
 

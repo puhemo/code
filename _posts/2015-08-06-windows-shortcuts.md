@@ -27,7 +27,7 @@ Here are some examples that I see people doing and below I will show you how to 
 **Note:**  All of these shortcuts are built directly into Windows. 
 
 
-##Moving Program between half screen, full screen and monitors
+## Moving Program between half screen, full screen and monitors
 
 * Move program to half screen on the left side: Windows Key + Left Arrow
 * Move Program to half screen on the right side: Windows Key + Right Arrow
@@ -35,7 +35,7 @@ Here are some examples that I see people doing and below I will show you how to 
 * Minimze Program: Windows Key + Down Arrow
 * Maximize Program: Windows Key + Up Arrow
 
-##Start Program as Administrator
+## Start Program as Administrator
 
 Windows 8: 
 
@@ -45,7 +45,7 @@ Windows 8:
 1. Either Ctrl + Shift + Left Mouse Click or Ctrl + Shift + Enter
 1. When prompted to open as adminstrative, click the yes button
 
-##Quickly Opening up Visual Studio Solutions
+## Quickly Opening up Visual Studio Solutions
 
 Windows has a feature called Jump List that allows you to pick items to an icon in the taskbar that are available when you right-click on the icons. 
 
@@ -57,12 +57,12 @@ Example:
 1. Find the project that you just opened and click the pin icon next to it
 1. Now instead of having to open Visual Studio and navigating to the solution file, you can right-click on the Visual Studio icon and select the solution from the pinned item.
 
-##Quickly Opening Task Manager
+## Quickly Opening Task Manager
  
  Ctrl+Shift+Esc 
  
  
-##Windows Explorer Favorites
+## Windows Explorer Favorites
  
  Windows explorer has the favorites links section that you can drag folders onto.
  

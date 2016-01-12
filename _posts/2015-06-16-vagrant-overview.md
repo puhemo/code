@@ -20,7 +20,7 @@ Welcome to an overview of Vagrant and creating of your first Vagrant machine.
 {% include series.html %}
 
 
-##What is Vagrant?
+## What is Vagrant?
 
 Vagrant allows you to create and manage lightweight reproducible virtual machines.   
 
@@ -30,7 +30,7 @@ No longer do you have to be afraid to delete a virtual machine for a project tha
   
 Before, we can see Vagrant in action, we first need to install a little bit of software onto your machine.
 
-##Getting Started
+## Getting Started
 
 In this section, we will install all of the software needed to be able to Vagrant.  
 
@@ -40,7 +40,7 @@ There are 3 pieces of software that we need:
 1. Virtualbox
 1. Vagrant
 
-##Chocolatey
+## Chocolatey
 
 Chocolatey is a Windows software install manager.  It solves several common issues with software installed:
 
@@ -67,7 +67,7 @@ You can find the package names on the Chocolatey Gallery at [http://chocolatey.o
 
 Next we are going to install Virtualbox using Chocolatey.
 
-##Virtualbox
+## Virtualbox
 
 For this tutorial, I am using Virtualbox as the virtual machine provider.  You could also use Hyper-V (free)  or VMWare (paid).  If you are using Hyper-V already, you can not use Virtualbox at the same as they conflict with each other.
 
@@ -79,7 +79,7 @@ Open an administrative command prompt and run the following Chocolatey command.
 	
 The command above will also instal Virtualbox as it is listed as a dependency for the virtualbox.extensionpack package.
 
-##Vagrant
+## Vagrant
 
 To install Vagrant, from the administrative command prompt, run the following Chocolatey command.
 
@@ -98,7 +98,7 @@ Vagrant starts with a base box which nothing more than the a portable skelton fo
 
 For this tutorial, we are going to use the Base OS box and build out the box with all of the software we need.
 
-##Creating VagrantFile 
+## Creating VagrantFile 
  
 The first step is to create a directory to hold the VagrantFile.  I use c:\VagrantBoxes to hold all of the my Vagrant machines configurations.
 
@@ -114,13 +114,13 @@ The first step is to create a directory to hold the VagrantFile.  I use c:\Vagra
 	
 Additional boxes can be from the cloud at [https://atlas.hashicorp.com/boxes/search]( https://atlas.hashicorp.com/boxes/search)
 
-##Configuring the VagrantFile
+## Configuring the VagrantFile
 
 In the MyFirstMachine directory there is now a file called VagrantFile.  Open this file up in your favorite text editor.  
 
 Within the VagrantFile, there is a basic configuration already setup and a lot of very useful comments that explain the different possible configurations.
 
-###Vagrant general configurations
+### Vagrant general configurations
 
 1. config.vm.box is the name of the Vagrant base box to use to start up the machine with.  If this base box does not already exist on your machine it will attempt to download it from the Vagrant cloud.  
 
@@ -138,7 +138,7 @@ Within the VagrantFile, there is a basic configuration already setup and a lot o
 	
 		config.vm.communicator = "winrm"
 
-###Virtualbox Configurations
+### Virtualbox Configurations
 
 In the configuration below, it will configure the virtual machine with: 
 
@@ -165,7 +165,7 @@ Now we are ready to start up the machine and start using it.
 
 Now that the machine is started up, there are some additional Vagrant commands that you will need to know to be able to hibernate, reboot, shutdown, and delete the virtual machine
 
-##Vagrant Commands
+## Vagrant Commands
 
 The commands below all need to run from the command line from within the MyFirstMachine folder.
 
@@ -193,7 +193,7 @@ The commands below all need to run from the command line from within the MyFirst
 
 	vagrant up
 	
-##Next Steps
+## Next Steps
 
 You have just create and started up your first Vagrant managed Virtual machine.  This is only the beginning of what you can do with Vagrant.  In future lessons in this series we will install software and configure the OS as part of the vagrant up command, we will create multiple machine with a single vagrant command, create azure virtual machines, and create own own base boxes.
 

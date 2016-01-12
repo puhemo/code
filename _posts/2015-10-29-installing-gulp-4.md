@@ -10,7 +10,7 @@ excerpt: |
 
 Gulp 4 is not released yet but if you have a need to install it here is how to do it.  I will cover how to globally install it as well as how to update your package.json for your projects.
 
-##Globally Installing Gulp
+## Globally Installing Gulp
 
 1. Open a Command Prompt (Windows) or Terminal (Mac or Linux)
 1. Check if you have Gulp 3.x install
@@ -27,7 +27,7 @@ Gulp 4 is not released yet but if you have a need to install it here is how to d
     
         $ gulp -v
             
-##Updating Your Projects package.son
+## Updating Your Projects package.son
 
 If you using a previous version of Gulp in your package.json file, you can upgrade it if you would like or continue to use Gulp 3.x.  I have not had any issue with leaving my local repository at 3.9 while having Gulp 4 installed globally.
 
@@ -43,6 +43,6 @@ If you using a previous version of Gulp in your package.json file, you can upgra
         $ npm uninstall gulp --save
         $ npm install git+https://git@github.com/gulpjs/gulp.git#4.0  --save
     
-##Wrap-up
+## Wrap-up
 
 You can keep up to date on Gulp 4 at [https://github.com/gulpjs/gulp/tree/4.0](https://github.com/gulpjs/gulp/tree/4.0) and [https://twitter.com/gulpjs?lang=en](https://twitter.com/gulpjs?lang=en)

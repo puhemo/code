@@ -37,7 +37,7 @@ Even being a windows user I was able to pretty easily get Ionic working on a Mac
 1. Google Chrome
     	- Download from [https://www.google.com/chrome/browser/desktop/](https://www.google.com/chrome/browser/desktop/)
 
-##Android Setup Steps
+## Android Setup Steps
 1. JDK 7
 	- Download from [http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
 	- After install from the terminal create ~/.bash_profile if it doesn't already exist.  You can use touch ~/.bash_profile to create the file.
@@ -70,7 +70,7 @@ Add export PATH=${PATH}:/users/[Your UserName]/Development/android-sdk-mac_x86/t
 1. Download correct Android API
 	- in terminal type source ~/.bash_profile to load the ~/.bash_profile changes.
     - type android from terminal.  If everything is working correct it will open up the Android SDK Manager.
-	- Install API 19  with SDK Platforms and Arm Image checked 
+	- Install API 22  with SDK Platforms and Arm Image checked 
 1. Configure Android Emulator
 	* In terminal type android avd.  If everything is working correct it will open up the Android AVD Manager.
 	* Click the create button and add at least 1 device to emulate
@@ -84,7 +84,7 @@ Add export PATH=${PATH}:/users/[Your UserName]/Development/android-sdk-mac_x86/t
     * Click the Next button and wait for the device to download
     * Click the Finish button.
 
-##iOS Setup Steps
+## iOS Setup Steps
 10. Install Xcode from app store.  This will take awhile since it is ~2 gigs in size.
 	- Once install is completed, open xcode and accept the license
 11. Install the IOS Simulator that Ionic will use.

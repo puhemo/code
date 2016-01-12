@@ -45,7 +45,7 @@ paginate: 5
 paginate_path: "/page/:num"
 
 excerpt_separator: "\n\n\n"
-
+safe: true
 defaults:
     -
         scope:
@@ -62,7 +62,10 @@ defaults:
 # !! You don't need to change any of the configuration flags below !!
 #
 
-markdown: redcarpet
+# markdown: redcarpet
+markdown: kramdown
+# kramdown:
+#     input: GFM
 highlighter: pygments
 permalink: /:title/
 

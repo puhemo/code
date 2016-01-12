@@ -30,19 +30,20 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 ## Upcoming Speaking Engagements
 
+<h3>O'Reilly Fluent Conference <span>- San Francisco, Ca (March 7th-10th, 2016)</span></h3>
+
+- [Conference Home Page](http://conferences.oreilly.com/fluent/javascript-html-us)
+- [Workshop - Use Your Existing Web Skills to Create Native Mobile Applications](#ionic)
+
+<p>&nbsp;</p>
+
+## Past Speaking Engagements
+
 <h3>Laravel Meetup <span>- Phoenix, Az (October 21st, 2015)</span></h3>
 
 - [Ionic Framework Overview](#ionic)
 - Using Ionic with Lavavel Api 
  
-<h3>So Cal Code Camp <span>- Los Angeles, Ca (November 14th-15th, 2015)</span></h3>
-
-- [Code Camp Home Page](http://www.socalcodecamp.com/)
-- Topics still in planning phase.
-
-<p>&nbsp;</p>
-
-## Past Speaking Engagements
 
 <h3>Silicon Valley Code Camp <span>- Silicon Valley, Ca (Ocotber 3rd-4th, 2015)</span></h3>
 
