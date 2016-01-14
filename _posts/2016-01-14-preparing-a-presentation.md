@@ -3,7 +3,7 @@ layout: post
 title: 'Preparing A Conference Talk'
 date: 2016-01-14 06:00
 categories: ['Speaking']
-published: false
+published: true
 excerpt: |
     I have done a bunch of conference talks and brown bag sessions this year (~45 in the past 2 years) and here is how I prepare for those talks. Sorry that the reply is a little long but I wanted to make sure you had a process to get started with. Remember that this is my process and you have to find what works best for you.
 
