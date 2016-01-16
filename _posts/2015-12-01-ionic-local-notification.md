@@ -124,7 +124,7 @@ Within the SampleController, we need to add all of the functions to do the sched
 All of the local notification functions should be contained within an ionic platform ready function.
 
     $ionicPlatform.ready(function () {
-    }
+    })
     
 ### Instant Notification
     
