@@ -7,6 +7,12 @@ published: true
 excerpt: |
 
 ---
+239
+
+Running a user group or meetup takes a good amount of work to make it successful.   At a minimum you need to worry about figuring out topics, finding speakers, finding a venue, and  getting people to attend.  
+
+Figuring out topics can be a difficult task when you are just getting started since you don't have a user base to get ideas from.     
+
 
 notes
 
