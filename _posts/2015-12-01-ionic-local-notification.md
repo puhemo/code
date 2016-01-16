@@ -119,7 +119,7 @@ Now we need to tell the UI what the controller is.  Open up the www/index.html p
 
 ## Adding Functions to Create Notifications
 
-Within the SampleController, we need to add all of the functiosn to do the scheduling of the notifications.
+Within the SampleController, we need to add all of the functions to do the scheduling of the notifications.
 
 All of the local notification functions should be contained within an ionic platform ready function.
 
