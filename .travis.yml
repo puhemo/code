@@ -5,7 +5,7 @@ rvm:
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install ncftp
-  - gem install -y htmlproof
+  - gem install htmlproof
 script:
   - chmod +x scripts/build
   - ./scripts/build
