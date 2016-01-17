@@ -50,7 +50,8 @@ The first thing we need to do is create a new ionic project that we will use to 
     ionic start ionic-local-notifications blank
     cd ionic-local-notifications
     
-Now we need to add the platforms to the ionic application.
+Now we need to add the platforms to the ionic application since we need to deploy to a device in order for the local notifications to work.  It will not work correctly in the browser.
+
 
 To add the android platform:
 
@@ -119,12 +120,20 @@ Now we need to tell the UI what the controller is.  Open up the www/index.html p
 
 ## Adding Functions to Create Notifications
 
-Within the SampleController, we need to add all of the functiosn to do the scheduling of the notifications.
+Within the SampleController, we need to add all of the functions to do the scheduling of the notifications.
 
-All of the local notification functions should be contained within an ionic platform ready function.
+All of the local notification functions should be contained within an ionic platform ready function and inside of a check that makes sure we are running in a WebView on a device.  This will at least allow us to see the UI in the browser without error, it just won't run any of the local notification function unless on a WebView.
 
     $ionicPlatform.ready(function () {
-    }
+              if (ionic.Platform.isWebView()) {
+              }
+    })
+    
+Make sure to inject $ionicPlatform into the SampleController
+
+    .controller('SampleController', function($scope, $cordovaLocalNotification, $ionicPlatform) {
+    
+    });
     
 ### Instant Notification
     
@@ -292,18 +301,12 @@ In the www/index.html page within the ion-content, add a button and set the ng-c
 
 In order for the local notifications to work, you need to deploy the application to a device or an emulator.  It will not work correctly in the browser.
 
-### Add Platform
-
-    $ ionic platform add android
-    $ ionic platform add ios
-    
 Note: You can only compile and deploy ios application on a Mac.
-
-### Run on Device
 
 Android: 
 
     $ ionic run android
+
     
 iOS:
 
