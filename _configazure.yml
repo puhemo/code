@@ -1,0 +1,17 @@
+url: http://digitaldrummerj-test.azurewebsites.net/
+
+comments:
+    disqus: 
+    disquscommentcount: 
+#    isso: "comments.mysite.org"
+
+analytics:
+    google:
+    
+defaults:
+    -
+        scope:
+            path: ""
+            type: "posts"
+        values:
+            comments: false

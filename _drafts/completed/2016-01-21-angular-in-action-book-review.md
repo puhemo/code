@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Angular In Action Book Review  
-date: 2016-01-19 05:00
+date: 2016-01-21 06:00
 categories: [' book reviews']
 published: false
 excerpt: |

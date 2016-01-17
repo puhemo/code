@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Calling Filters in Your Angular Controller 
-date: 2016-01-25
+date: 2016-01-28 06:00
 categories: ['angular']
 published: true
 excerpt: | 
