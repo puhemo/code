@@ -6,5 +6,11 @@ quit
 EOF
 
 cd _site
-ls _site
+del robots.txt
+touch robots.txt
+echo -e "# robots.txt generated at http://www.mcanerin.com" >> robots.txt
+echo -e "User-agent: *" >> robots.txt
+echo -e "Disallow: /" >> robots.txt
+echo -e "Disallow: /cgi-bin/" >> robots.txt
+
 ncftpput -R -v -u "$USERNAME" -p "$PASSWORD" $HOST /site/wwwroot .
