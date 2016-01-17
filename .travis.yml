@@ -1,8 +1,6 @@
 language: ruby
 rvm:
   - 2.0.0
-before_install:
-  - gem 'public_suffix' -v '1.5.1'
 script:
   - chmod +x script/build
   - ./script/build
