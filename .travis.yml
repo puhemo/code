@@ -3,7 +3,7 @@ sudo: true
 rvm:
   - 2.0.0
 before_install:
-  sudo apt-get install -qq ncftp
+  - sudo apt-get install -qq ncftp
 
 script:
   - chmod +x scripts/build
