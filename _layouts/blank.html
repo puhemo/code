@@ -40,7 +40,7 @@
     {% if site.subheading %}<div>{{ site.subheading }}</div>{% endif %}
 {{ content }}
     <footer>
-      <span><a href="{{ site.baseurl }}">{% if page.author %}{{ page.author }}{% else %}{{site.author}}{% endif %}</a></span>
+      <span><a href="{{ site.baseurl | prepend: site.url}}">{% if page.author %}{{ page.author }}{% else %}{{site.author}}{% endif %}</a></span>
       <span>{% for link in site.links %}{% if link[1] %}<a href="{{ link[1] }}"><i class="fa fa-{{ link[0] }}-square"></i></a>{% endif %}{% endfor %}        
         </span>
       <span>&copy; {{ site.time | date: "%Y" }}</span>
