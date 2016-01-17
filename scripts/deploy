@@ -6,7 +6,7 @@ quit
 EOF
 
 cd _site
-del robots.txt
+rm robots.txt
 touch robots.txt
 echo -e "# robots.txt generated at http://www.mcanerin.com" >> robots.txt
 echo -e "User-agent: *" >> robots.txt
