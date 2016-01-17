@@ -1,2 +1,2 @@
-bundle exec jekyll build --config _config.yml,_configdev.yml,_configazure.yml
+bundle exec jekyll build --config _config.yml,_configdev.yml,_configazure.yml --drafts
 bundle exec htmlproof ./_site
