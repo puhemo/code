@@ -15,6 +15,7 @@ defaults:
             type: "posts"
         values:
             comments: false
-future: false
+future: true
+drafts: true
 links:
    rss: site.xml # your feedburner url
