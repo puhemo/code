@@ -43,7 +43,6 @@ google_search: '004335243338270776845:estgbhnodmi'
 
 paginate: 5
 paginate_path: "/page/:num"
-exclude: [vendor]
 excerpt_separator: "\n\n\n"
 safe: true
 defaults:
@@ -93,3 +92,6 @@ exclude:
     - README.md
     - run.bat
     - drafts.bat
+    - vendor
+    - .travis.yml
+    - scripts
