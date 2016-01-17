@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ionic - Stop Icons from Overlapping in Ion List 
-date: 2016-01-22
+date: 2016-01-19 06:00
 categories: ['ionic']
 published: true
 excerpt: | 

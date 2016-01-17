@@ -2,7 +2,7 @@
 layout: post
 title: Angular - Difference Between $scope emit and broadcast
 date: 2016-01-25 06:00
-categories: [' angular','ionic']
+categories: [' angular']
 published: true
 excerpt: |
 
