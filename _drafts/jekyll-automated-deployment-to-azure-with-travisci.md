@@ -3,7 +3,7 @@ layout: post
 title: 'Jekyll - Automated Deployment to Azure'
 series: blogging-with-jekyll 
 date: 2016-02-04 05:00
-categories: [' jekyll', 'github']
+categories: ['jekyll', 'github']
 published: true 
 excerpt: |
 
