@@ -1,3 +1,4 @@
 url: http://digitaldrummerj-test.azurewebsites.net/
 links:
    rss: /feed.xml # your feedburner url
+testsite: true
