@@ -302,7 +302,7 @@ Now anytime that you need to build the nuget package, you just have to call buil
 
 I know this post was a lot of code.  Both of the files that we create can be downloaded at:
 
-[IncrementNugetVersionNumber.ps1]({{"Downloads/2015-05-03-Nuget-Auto-Incrementing-Version/IncrementNugetVersionNumber.ps1" | prepend: site.baseurl | prepend: site.url }})
+[IncrementNugetVersionNumber.ps1]({{"/Downloads/2015-05-03-Nuget-Auto-Incrementing-Version/IncrementNugetVersionNumber.ps1" | prepend: site.baseurl}})
 
-[build.cmd]({{"Downloads/2015-05-03-Nuget-Auto-Incrementing-Version/build.cmd" | prepend: site.baseurl | prepend: site.url }})
+[build.cmd]({{"/Downloads/2015-05-03-Nuget-Auto-Incrementing-Version/build.cmd" | prepend: site.baseurl }})
 

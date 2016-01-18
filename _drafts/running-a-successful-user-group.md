@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Running a Successful  User Group 
-date: 2016-01-21 05:00
+date: 2016-02-01 05:00
 categories: [' meetup','community']
 published: true
 excerpt: |

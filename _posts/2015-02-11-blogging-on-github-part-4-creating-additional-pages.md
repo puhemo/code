@@ -16,7 +16,7 @@ excerpt: |
 ---
 {% assign imagedir = "/images/BloggingOnGitHub/" | prepend: site.baseurl | prepend: site.url %}
 
-Welcome to part 4 of the series on Blogging on  Github.  In this lesson we will go through how to add an additional page such as the [speaking]( {{ "speaking" | prepend: site.baseurl | site.url }}) page on this blog.
+Welcome to part 4 of the series on Blogging on  Github.  In this lesson we will go through how to add an additional page such as the [speaking]( {{ "speaking" | prepend: site.baseurl | prepend: site.url }}) page on this blog.
  
 **Lesson Length**: 15 minutes
  

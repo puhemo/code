@@ -20,7 +20,7 @@ layout: blank
         <p>{% if page.author %}{{ page.author }} • {% endif %}{% if page.date %}<i class="fa fa-calendar"></i>  {{ page.date | date: "%b %-d, %Y" }}</time>{% endif %}
             {% if site.comments.disquscommentcount and page.comments %}
                 • <i class="fa fa-comment-o"></i><a href="{{ "#disqus_thread" | prepend: page.url | prepend: site.baseurl }}" class="disqus-comment-count"></a>
-           {% else if site.comments.disqus and page.comments  %}
+           {% elsif site.comments.disqus and page.comments  %}
                 • <i class="fa fa-comment-o"></i><a href="{{ "#disqus" | prepend: page.url | prepend: site.baseurl  }}">Add/View Comments</a>
             {% endif %}
            {{ tags_content }}

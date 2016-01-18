@@ -3,7 +3,7 @@
 	"files.exclude": {
 		"**/.git": true,
 		"**/.DS_Store": true,
-		"**/_site": true
+        "_site/**": true
 	},
 	"editor.insertSpaces": true
 }

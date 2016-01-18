@@ -1,8 +1,8 @@
 url: http://localhost:4000
 
 comments:
-    disqus: 
-    disquscommentcount: 
+    disqus:
+    disquscommentcount:
 #    isso: "comments.mysite.org"
 
 analytics:
@@ -18,4 +18,4 @@ defaults:
 future: true
 drafts: true
 links:
-   rss: feed.xml # your feedburner url
+   rss: /feed.xml # your feedburner url
