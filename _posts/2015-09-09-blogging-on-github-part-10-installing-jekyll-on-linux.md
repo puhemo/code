@@ -1,16 +1,12 @@
 ---
 published: true
 layout: post
-title: 'Blogging On Github - Part 10 -  Installing Jekyll On Linux'
+title: 'Jekyll Part 10: Installing Jekyll On Linux'
 categories: ['Blogging', 'Github', 'Jekyll']
 date: 2015-09-09 16:15
-series: blogging-on-github 
+series: blogging-with-jekyll
 excerpt: |
-    Welcome to part 10 of the series on Blogging on Github.  
-    
-    In this lesson, we are going to setup your Ubuntu Linux computer to be able to edit your blog on your computer.
-    
-    **Length**: 60 minutes
+    Welcome the continuing series on using Jekyll. In this tutorial we are going to setup your Ubuntu Linux computer to be able to edit your blog on your computer.
         
     ## Overview
     
@@ -20,11 +16,8 @@ excerpt: |
 ---
 {% assign imagedir = "/images/BloggingOnGitHub/" | prepend: site.baseurl | prepend: site.url %}
 
-Welcome to part 10 of the series on Blogging on Github.  
+Welcome the continuing series on using Jekyll. In this tutorial we are going to setup your Ubuntu Linux computer to be able to edit your blog on your computer.
 
-In this lesson, we are going to setup your Ubuntu Linux computer to be able to edit your blog on your computer.
-
-**Length**: 60 minutes
 
 {% include series.html %}
 

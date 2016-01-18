@@ -1,17 +1,13 @@
 ---
 published: true
 layout: post
-title: 'Blogging On Github - Part 9 -  Installing Jekyll On Windows'
+title: 'Jekyll Part 09: Installing Jekyll On Windows'
 categories: ['Blogging', 'Github', 'Jekyll']
 date: 2015-09-09 06:00
-series: blogging-on-github 
+series: blogging-with-jekyll
 excerpt: |
-    Welcome to part 9 of the series on Blogging on Github.  
-    
-    In this lesson, we are going to setup your Windows computer to be able to edit your blog on your computer.
-    
-    **Length**: 60 minutes
-    
+    Welcome the continuing series on using Jekyll. In this tutorial we are going to setup your Windows computer to be able to edit your blog on your computer.
+
     ## Overview
     
     Up to this point we have been using the Github web site to edit all of our files but the downside to this is that any chances you want to make show up live in your blog before you have had a chance to test them.  
@@ -22,11 +18,8 @@ excerpt: |
 ---
 {% assign imagedir = "/images/BloggingOnGitHub/" | prepend: site.baseurl | prepend: site.url %}
 
-Welcome to part 9 of the series on Blogging on Github.  
+Welcome the continuing series on using Jekyll. In this tutorial we are going to setup your Windows computer to be able to edit your blog on your computer.
 
-In this lesson, we are going to setup your Windows computer to be able to edit your blog on your computer.
-
-**Length**: 60 minutes
 
 {% include series.html %}
 

@@ -1,14 +1,12 @@
 ---
 layout: post
-title: 'Blogging On Github - Part 6 Adding Post by Date Page'
-date: 2015-02-18
+title: 'Jekyll Part 06: Adding Post by Date Page'
+date: 2015-02-18 06:00
 categories: ['Blogging', 'Github', 'Jekyll']
 published: true
-series: blogging-on-github
+series: blogging-with-jekyll
 excerpt: | 
-    Welcome to part 6 of the series on Blogging on Github.  In this lesson we will go through creating a page to show blog post by date.
-    
-    **Lesson Length**:  15 minutes
+    Welcome the continuing series on using Jekyll. In this tutorial we will go through creating a page to show blog post by date.
     
     ## Overview
     
@@ -17,10 +15,8 @@ excerpt: |
 ---
 {% assign imagedir = "/images/BloggingOnGitHub/" | prepend: site.baseurl | prepend: site.url %}
 
-Welcome to part 6 of the series on Blogging on Github.  In this lesson we will go through creating a page to show blog post by date.
+Welcome the continuing series on using Jekyll. In this tutorial we will go through creating a page to show blog post by date.
  
-**Lesson Length**:  15 minutes
-
 {% include series.html %}
 
 ## Overview

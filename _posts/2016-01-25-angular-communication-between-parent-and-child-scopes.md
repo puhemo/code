@@ -2,7 +2,7 @@
 layout: post
 title: Angular - Communicating Between Parent And Child Scopes
 date: 2016-01-25 06:00
-categories: [' angular']
+categories: ['angular']
 published: true
 excerpt: |
     Here is a quick tip in Angular on how to communicate between parent and child scopes.  

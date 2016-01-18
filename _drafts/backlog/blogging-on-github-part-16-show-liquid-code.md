@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'Blogging On Github - Part 16 - Show Liquid Code'
-series: blogging-on-github 
+title: 'Jekyll - Part 16 - Show Liquid Code'
+series: blogging-with-jekyll
 date: 2015-09-15 06:00
-categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
+categories: ['Blogging', 'Github', 'Jekyll']
 published: false
 ---
 

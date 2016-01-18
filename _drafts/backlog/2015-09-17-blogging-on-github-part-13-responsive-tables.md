@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'Blogging On Github - Part 12 - Responsive Html Tables with CSS'
-series: blogging-on-github 
+title: 'Jekyll - Part 12 - Responsive Html Tables with CSS'
+series: blogging-with-jekyll
 date: 2015-09-17 06:00
-categories: ['Blogging', 'Github', 'How-To', 'Jekyll', 'mobile-development']
+categories: ['Blogging', 'Github', 'Jekyll']
 published: false
 ---
 
