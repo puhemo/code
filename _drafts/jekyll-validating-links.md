@@ -1,13 +1,15 @@
 ---
 layout: post
-title: 'Jekyll - How To Validate Links and Images'
+title: Jekyll - How To Validate Links and Images
 date: 2016-02-02 06:00
 categories: ['jekyll', 'github']
 published: true
 series: blogging-with-jekyll 
 excerpt: |
 	Before you publish your blog post you want to make sure that all of the links and images in the post are validate.  You also want to make that all of the links and images from previous post are still validate.  The last thing you want is to be notified by a user that you have a broken link or a missing image.  
-	Luckily  there is a ruby gem that can do this work for us.  This gem is called html-proofer.   You
+    
+	Luckily  there is a ruby gem that can do this work for us.  This gem is called html-proofer.
+
 ---
 
 Before you publish your blog post you want to make sure that all of the links and images in the post are validate.  You also want to make that all of the links and images from previous post are still validate.  The last thing you want is to be notified by a user that you have a broken link or a missing image.  

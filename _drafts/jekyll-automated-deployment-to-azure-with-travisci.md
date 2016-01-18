@@ -9,16 +9,16 @@ excerpt: |
 
 ---
 
-setup travis ci
-setup azure Web app
-build scripts 
-deploy scripts 
-add html proffer
-reading log  files 
-setting ruby version 
-setting robots file  
-add sudo
- .travis.yml file
+* setup travis ci
+* setup azure Web app
+* build scripts 
+* deploy scripts 
+* add html proffer
+* reading log  files 
+* setting ruby version 
+* setting robots file  
+* add sudo
+*  .travis.yml file
  
 
  
