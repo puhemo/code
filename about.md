@@ -11,7 +11,7 @@ sitemap:
 
 My name is Justin James.  I'm a programmer, agile enthusiast, and speaker.  I work in Chandler, Arizona for Intel but **this blog, its content, and opinions are my own.** I blog about technology, agile practices, code, and the web.  I'm excited about web development, community, sharing knowledge, and agile practices.
 
-I also have a passion for teaching and  speaking at developer community events allows me to combine these two. If you'd like me to come to your event or user group, you can make a request through [INETA](http://ineta.org/Speakers/SearchCommunitySpeakers.aspx?SpeakerId=3bf95988-3e54-4757-b42b-7fc1407b36e1) or contact me directly.
+I also have a passion for teaching and  speaking at developer community events allows me to combine these two. If you'd like me to come to your event send me an [email](mailto:digitaldrummerj@gmail.com) or hit me up on [twitter]({{site.links.twitter}}). contact me directly.
 
 If you've attended one of my sessions, please send me your feedback or suggestions.
 
