@@ -20,7 +20,11 @@ You will need an account in order to use these systems.  Both of them are free b
 
 Both systems work extremely well and for additional tasks it is just a matter of which system has the ability to interact with your other systems.
 
+ The one feature that Zapier has that I like better is the ability to use Buffer and tell it to put the tweet at the top of the queue.  I like to use Buffer so that I can send out tweets at specific times instead of immediately.  
  
+## Setting up Zapier 
+
+## Setting up IFTTT 
 
   
 see previous post on using zapier
