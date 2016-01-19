@@ -16,8 +16,6 @@ excerpt: |
 
 Welcome the continuing series on using Jekyll. In this tutorial we are going to go through how to validate your links and images before publishing your blog post.  You also want to make that all of the links and images from previous post are still validate.  The last thing you want is to be notified by a user that you have a broken link or a missing image if you can catch them ahead of time.  
 
-{% include series.html %}
-
 
 Luckily there is a ruby gem that can do this work for us.  This gem is called html-proofer.  You can either install the gem as part of your Gemfile or as another ruby gem. 
 
