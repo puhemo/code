@@ -24,6 +24,7 @@ Luckily there is a ruby gem that can do this work for us.  This gem is called ht
 ### Gemfile 
 
 Add this line to your Gemfile
+
 	gem 'html-proofer'
 	
 Then to run the validation run 
@@ -32,9 +33,9 @@ Then to run the validation run
 	
 ### Ruby Gem 
 
-Install the ruby gem just like any other ruby gems 
+Install the ruby gem just like any other ruby gems
 
-	gem install html-proofer 
+     gem install html-proofer 
 	
 Then to run the validation run 
 
