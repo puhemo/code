@@ -1,14 +1,12 @@
 ---
 published: true
 layout: post 
-title: 'Blogging On Github - Part 4 Adding Additional Pages'
+title: 'Jekyll Part 04: Adding Additional Pages'
 categories: ['Blogging', 'Github', 'Jekyll']
-date: 2015-02-11  
-series: blogging-on-github
+date: 2015-02-11 06:00
+series: blogging-with-jekyll
 excerpt: | 
-    Welcome to part 4 of the series on Blogging on  Github.  In this lesson we will go through how to add an additional page such as the [speaking]( {{ "speaking" | prepend: site.baseurl | site.url }}) page on this blog.
-    
-    **Lesson Length**: 15 minutes
+    Welcome the continuing series on using Jekyll. In this tutorial we will go through how to add an additional page such as the [speaking]( {{ "speaking" | prepend: site.baseurl | prepend: site.url }}) page on this blog.
     
     ## Overview 
     
@@ -16,10 +14,8 @@ excerpt: |
 ---
 {% assign imagedir = "/images/BloggingOnGitHub/" | prepend: site.baseurl | prepend: site.url %}
 
-Welcome to part 4 of the series on Blogging on  Github.  In this lesson we will go through how to add an additional page such as the [speaking]( {{ "speaking" | prepend: site.baseurl | site.url }}) page on this blog.
- 
-**Lesson Length**: 15 minutes
- 
+Welcome the continuing series on using Jekyll. In this tutorial we will go through how to add an additional page such as the [speaking]( {{ "speaking" | prepend: site.baseurl | prepend: site.url }}) page on this blog.
+  
 {% include series.html %}
 
 ## Overview 

@@ -189,7 +189,7 @@ ionic serve
 
 You now have a Ionic project in a directory called firstApp and the web server is running.
 
-Open up your web browser and navigate to [http://localhost:8100](http://localhost:8100)
+Open up your web browser and navigate to http://localhost:8100
 
 You can view all of the files that make up this project on your host machine under c:\projects\firstApp
 

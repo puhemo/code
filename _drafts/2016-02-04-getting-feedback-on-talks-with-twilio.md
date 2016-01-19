@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Better Way To Get Talk Feedback'
-date: 2016-01-05 06:00
+date: 2016-02-04 06:00
 categories: ['Speaking']
 published: true
 excerpt: | 
@@ -14,7 +14,7 @@ excerpt: |
     Learned how I solved this issue and went from < 5% of attendees providing feedback to > 75%.
 ---
 
-{% assign imagedir = "/images/feedbackwithtwilio /" | prepend: site.baseurl | prepend: site.url %}
+{% assign imagedir = "/images/feedbackwithtwilio/" | prepend: site.baseurl | prepend: site.url %}
 
 As a public speaker one of the most important things for me is getting feedback from attendees.  The feedback helps me get better as a presenter as well as figuring out what is working in a talk and what is not. 
 
@@ -22,7 +22,7 @@ When I started speaking I tried several different speaker feedback sites but the
 
 I had been talking with other speakers about how they get feedback and all of them seemed to have the same issue of low response rate. 
 
-Then I meet [Devin Rader ](http://twitter.com/devinrader) from [Twilio ](http:/twillio.com) and he mentioned a totally different way that they asked for talk feedback.  At Twilio they used something called Net Promoter Score (NPS).   
+Then I meet [Devin Rader ](http://twitter.com/devinrader) from [Twilio ](http://twillio.com) and he mentioned a totally different way that they asked for talk feedback.  At Twilio they used something called Net Promoter Score (NPS).   
 
 NPS ask the user to rate on a scale of 1 to 10.   10 meaning, I would bring my best friend to see the talk and 1 being, please never give this talk again.  
 

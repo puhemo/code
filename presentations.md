@@ -219,7 +219,7 @@ Slides: [http://www.slides.com/digitaldrummerj/ionic-july-2015](http://www.slide
 
 Demos: [https://github.com/digitaldrummerj/IonicFrameworkTalk](https://github.com/digitaldrummerj/IonicFrameworkTalk)
 
-Workshop Labs: [http://github.com/ionicworkshop](http://github.com/ionicworkshops)
+Workshop Labs: [https://github.com/IonicWorkshop](https://github.com/IonicWorkshop)
 
 #### Additional Resources
 

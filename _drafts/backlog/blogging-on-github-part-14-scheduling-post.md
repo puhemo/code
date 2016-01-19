@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'Blogging On Github - Part 12 - Scheduling Post'
-series: blogging-on-github 
+title: 'Jekyll - Part 12 - Scheduling Post'
+series: blogging-with-jekyll
 date: 2015-09-22 06:00
-categories: ['Blogging', 'Github', 'How-To', 'Jekyll']
+categories: ['Blogging', 'Github', 'Jekyll']
 published: false
 ---
 

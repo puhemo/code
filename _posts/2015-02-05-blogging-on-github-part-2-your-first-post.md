@@ -1,24 +1,21 @@
 ---
 layout: post
-title: 'Blogging On Github - Part 2 Your First Post'
+title: 'Jekyll Part 02: Your First Post'
 published: true
 categories: ['Blogging', 'Github', 'Jekyll']
 date: 2015-02-05
-series: blogging-on-github
+series: blogging-with-jekyll
 excerpt: | 
-    Welcome to part 2 of the series on blogging on  github.  In this post we will go through making your first blog post.
-    
-    **Lesson Length:** 10 minutes
-    
+    Welcome the continuing series on using Jekyll.  In this tutorial we will go through making your first blog post.
+       
     ## Overview
     
     We will go through all of the steps to create a new post, add metadata such as title/categories/tags/date, and then make it live on the site.  
 
 
 ---
-Welcome to part 2 of the series on blogging on  github.  In this post we will go through making your first blog post.
 
-**Lesson Length:** 10 minutes
+Welcome the continuing series on using Jekyll.  In this tutorial we will go through making your first blog post.
 
 {% include series.html %}
 

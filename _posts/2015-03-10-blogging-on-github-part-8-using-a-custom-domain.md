@@ -1,14 +1,12 @@
 ---
 published: true
 layout: post
-title: 'Blogging On Github - Part 8 Using a Custom Domain'
+title: 'Jekyll Part 08: Using a Custom Domain'
 categories: ['Blogging', 'Github', 'Jekyll']
-date: 2015-3-12
-series: blogging-on-github
+date: 2015-3-12 06:00
+series: blogging-with-jekyll
 excerpt: | 
-    Welcome to part 8 of the series on Blogging on Github.  In this lesson, we are going to setup a custom domain for your blog.
-    
-    **Length**: 30 minutes
+    Welcome the continuing series on using Jekyll. In this tutorial we are going to setup a custom domain for your blog.
         
     ## Overview
     
@@ -16,9 +14,7 @@ excerpt: |
 ---
 {% assign imagedir = "/images/BloggingOnGitHub/" | prepend: site.baseurl | prepend: site.url %}
 
-Welcome to part 8 of the series on Blogging on Github.  In this lesson, we are going to setup a custom domain for your blog.
-
-**Length**: 30 minutes
+Welcome the continuing series on using Jekyll. In this tutorial we are going to setup a custom domain for your blog.
 
 {% include series.html %}
 

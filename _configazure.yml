@@ -1,17 +1,4 @@
 url: http://digitaldrummerj-test.azurewebsites.net/
-
-comments:
-    disqus: 
-    disquscommentcount: 
-#    isso: "comments.mysite.org"
-
-analytics:
-    google:
-    
-defaults:
-    -
-        scope:
-            path: ""
-            type: "posts"
-        values:
-            comments: false
+links:
+   rss: /feed.xml # your feedburner url
+testsite: true

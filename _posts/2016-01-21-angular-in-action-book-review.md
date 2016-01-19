@@ -2,7 +2,7 @@
 layout: post
 title: Angular In Action Book Review  
 date: 2016-01-21 06:00
-categories: [' book reviews']
+categories: ['book reviews']
 published: false
 excerpt: |
     At the HolidayJs event I won a book and I picked a copy of Angular In Action by Lukas Ruebbelke.  I had already been using Angular for a few projects and wasn't expecting to get much out of the book.  Honestly I got it to use as more of a give away at one of my talks but figured I would at least glance through a few chapters of it first.  Needless to say I ended up reading the whole book and plan to keep it.

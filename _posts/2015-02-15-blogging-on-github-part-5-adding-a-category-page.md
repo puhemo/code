@@ -1,14 +1,12 @@
 ---
 layout: post
-title: 'Blogging On Github - Part 5 Adding Category Page'
-date: 2015-02-15
+title: 'Jekyll Part 05: Adding Category Page'
+date: 2015-02-15 06:00
 categories: ['Blogging', 'Github', 'Jekyll']
 published: true
-series: blogging-on-github
+series: blogging-with-jekyll
 excerpt: | 
-    Welcome to part 5 of the series on blogging on github.  In this lesson we will go through creating a page to show blog post by category.
-    
-    **Lesson Length**:  15 minutes
+    Welcome the continuing series on using Jekyll. In this tutorial we will go through creating a page to show blog post by category.
         
     ## Overview
     
@@ -18,10 +16,8 @@ excerpt: |
 ---
 {% assign imagedir = "/images/BloggingOnGitHub/" | prepend: site.baseurl | prepend: site.url %}
 
-Welcome to part 5 of the series on blogging on github.  In this lesson we will go through creating a page to show blog post by category.
+Welcome the continuing series on using Jekyll. In this tutorial we will go through creating a page to show blog post by category.
  
-**Lesson Length**:  15 minutes
-
 {% include series.html %}
 
 ## Overview

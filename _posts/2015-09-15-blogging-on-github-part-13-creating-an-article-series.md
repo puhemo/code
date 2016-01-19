@@ -1,16 +1,12 @@
 ---
 layout: post
-title: 'Blogging On Github - Part 13 - Creating an Article Series'
-series: blogging-on-github 
+title: 'Jekyll Part 13: Creating an Article Series'
+series: blogging-with-jekyll
 date: 2015-09-15 06:00
 categories: ['Blogging', 'Github', 'Jekyll']
 published: true
 excerpt: |
-     Welcome to part 13 of the series on Blogging on Github.  
-
-     In this lesson, we are going to go through how to create the series listing like you see for this blog series.  
-
-     **Length**: 10 minutes
+     Welcome the continuing series on using Jekyll. In this tutorial we are going to go through how to create the series listing like you see for this blog series.  
 
      ### Overview
 
@@ -18,11 +14,8 @@ excerpt: |
 ---
 {% assign imagedir = "/images/BloggingOnGitHub/" | prepend: site.baseurl | prepend: site.url %}
 
-Welcome to part 13 of the series on Blogging on Github.  
+Welcome the continuing series on using Jekyll. In this tutorial we are going to go through how to create the series listing like you see for this blog series.  
 
-In this lesson, we are going to go through how to create the series listing like you see for this blog series.  
-
-**Length**: 10 minutes
 
 {% include series.html %}
 

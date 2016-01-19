@@ -9,7 +9,7 @@
     <title>{% if page.title %} {{ page.title }} › {% endif %}{{ site.title }}</title>
     <link rel="icon" type="image/png" href="{{site.baseurl}}/favicon.ico">
 
-    <link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url}}">
+    <link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url}}" data-proofer-ignore>
     <link href="{{ "/main.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
     <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,200italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -19,8 +19,9 @@
   </head>
   <body>
     <header>
-      {% unless site.style.headline %}<h1 class="site-title"><span><img class="site-avatar" src="{{ site.avatar }}"/></span><span><a href="{{ site.baseurl | prepend: site.url}}/">{{ site.title }}</a></span></h1>{% endunless %}
-      <a href="#" class="toggle-nav">&#9776; MENU</a>
+            {% if site.testsite %}<div style="background-color: yellow;height: 50px;padding: 5px 5px 5px 5px;width:100%"><h3 style="color:black">Test Site!  Real site at <a href="http://digitaldrummerj.me">http://digitaldrummerj.me</a></h3></div>{% endif %}
+      {% unless site.style.headline %}<h1 class="site-title"><span><img class="site-avatar" src="{{ site.avatar }}" alt="avatar"/></span><span><a href="{{ site.baseurl | prepend: site.url}}/">{{ site.title }}</a></span></h1>{% endunless %}
+      <a href="#" class="toggle-nav" data-proofer-ignore>&#9776; MENU</a>
       <nav class="menu">
           
             <ul class="active">
@@ -40,7 +41,7 @@
     {% if site.subheading %}<div>{{ site.subheading }}</div>{% endif %}
 {{ content }}
     <footer>
-      <span><a href="{{ site.baseurl }}">{% if page.author %}{{ page.author }}{% else %}{{site.author}}{% endif %}</a></span>
+      <span><a href="{{ "/" | prepend: site.baseurl }}">{% if page.author %}{{ page.author }}{% else %}{{site.author}}{% endif %}</a></span>
       <span>{% for link in site.links %}{% if link[1] %}<a href="{{ link[1] }}"><i class="fa fa-{{ link[0] }}-square"></i></a>{% endif %}{% endfor %}        
         </span>
       <span>&copy; {{ site.time | date: "%Y" }}</span>

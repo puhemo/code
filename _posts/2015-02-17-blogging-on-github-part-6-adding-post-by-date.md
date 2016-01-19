@@ -1,14 +1,12 @@
 ---
 layout: post
-title: 'Blogging On Github - Part 6 Adding Post by Date Page'
-date: 2015-02-18
+title: 'Jekyll Part 06: Adding Post by Date Page'
+date: 2015-02-18 06:00
 categories: ['Blogging', 'Github', 'Jekyll']
 published: true
-series: blogging-on-github
+series: blogging-with-jekyll
 excerpt: | 
-    Welcome to part 6 of the series on Blogging on Github.  In this lesson we will go through creating a page to show blog post by date.
-    
-    **Lesson Length**:  15 minutes
+    Welcome the continuing series on using Jekyll. In this tutorial we will go through creating a page to show blog post by date.
     
     ## Overview
     
@@ -17,10 +15,8 @@ excerpt: |
 ---
 {% assign imagedir = "/images/BloggingOnGitHub/" | prepend: site.baseurl | prepend: site.url %}
 
-Welcome to part 6 of the series on Blogging on Github.  In this lesson we will go through creating a page to show blog post by date.
+Welcome the continuing series on using Jekyll. In this tutorial we will go through creating a page to show blog post by date.
  
-**Lesson Length**:  15 minutes
-
 {% include series.html %}
 
 ## Overview
@@ -83,10 +79,10 @@ After the front matter, add the following code to display the post by Year and M
 
     {% if post.link %}
       <h3 class="link-post">
-        <a href="{{ site.url }}{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        <a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
         <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h3>
     {% else %}
-      <h3><a href="{{ site.url }}{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">{{ post.title }}<p class="date">{{ post.date |  date: "%B %e, %Y" }}</p></a></h3>
+      <h3><a href="{{site.baseurl}}{{ post.url }}" title="{{ post.title }}">{{ post.title }}<p class="date">{{ post.date |  date: "%B %e, %Y" }}</p></a></h3>
       <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
     {% endif %}
 

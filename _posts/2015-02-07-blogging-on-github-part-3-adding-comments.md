@@ -1,15 +1,13 @@
 ---
 layout: post
-title: 'Blogging On Github - Part 3 Adding Commenting to Post'
+title: 'Jekyll Part 03: Adding Commenting to Post'
 date: 2015-02-09
 categories: ['Blogging', 'Github','Jekyll']
 published: true
-series: blogging-on-github
+series: blogging-with-jekyll
 excerpt: | 
-    Welcome to part 3 of our series on blogging with github.  In this lesson you will learn how to add the ability for users to comment on your blog post.
+    Welcome the continuing series on using Jekyll.  In this tutorial you will learn how to add the ability for users to comment on your blog post.
     
-    **Lesson Length:** 20 minutes
-        
     ## Overview
     
     You may be thinking that commenting isn't really that important but it is a key feature for you to be able to interact with your readers.  Users want to have conversations about your blog post with you and to feel connected to you.   It is also a good way for you to learn from them as well.  
@@ -22,9 +20,8 @@ excerpt: |
 
 {% assign imagedir = "/images/BloggingOnGitHub/" | prepend: site.baseurl | prepend: site.url   %}
 
-Welcome to part 3 of our series on blogging with github.  In this lesson you will learn how to add the ability for users to comment on your blog post.
 
-**Lesson Length:** 20 minutes
+Welcome the continuing series on using Jekyll.  In this tutorial you will learn how to add the ability for users to comment on your blog post.
 
 {% include series.html %}
 

@@ -1,1 +1,2 @@
-bundle exec jekyll build --drafts --config _config.yml,_configdev.yml --future
+bundle exec jekyll build --config _config.yml,_configdev.yml,_configazure.yml --drafts
+htmlproof ./_site --only-4xx
