@@ -13,7 +13,7 @@ excerpt: |
 Here is a quick tip for how to call a filter from within your Angular controller.  This example assumes that you already know what a filter is and have one created.  
 
 1. Inject $filter into your controller
-2. Call your filter by calling $filter("filter name", arg1, arg2, arg3).   
+2. Call your filter by calling $filter("filter name")(arg1, arg2, arg3).   
 
 Calling a filter from your view:
 
@@ -23,4 +23,4 @@ Calling a filter from your view:
     
 Calling the same filter from your controller:
     
-    var value = $filter("myFilter", myDateVariable, arg1, arg2);
+    var value = $filter("myFilter")(myDateVariable, arg1, arg2);
