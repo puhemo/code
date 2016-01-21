@@ -9,3 +9,5 @@ excerpt: |
 --- 
 {% assign imagedir = "/images//" | prepend: site.baseurl | prepend: site.url %}
 
+There are three ways to safely  minify code in Angular 
+
