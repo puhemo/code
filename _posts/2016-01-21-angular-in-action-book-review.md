@@ -2,7 +2,7 @@
 layout: post
 title: Angular In Action Book Review  
 date: 2016-01-21 06:00
-categories: ['book reviews']
+categories: ['angular','ionic','book reviews']
 published: true
 excerpt: |
     At the HolidayJs event I won a book and I picked a copy of Angular In Action by Lukas Ruebbelke.  I had already been using Angular for a few projects and wasn't expecting to get much out of the book.  Honestly I got it to use as more of a give away at one of my talks but figured I would at least glance through a few chapters of it first.  Needless to say I ended up reading the whole book and plan to keep it.
@@ -12,7 +12,7 @@ excerpt: |
 
 {% assign imagedir = "/images/bookreviews/" | prepend: site.baseurl | prepend: site.url %}
 
-At the HolidayJs event I won a book and I picked a copy of Angular In Action by Lukas Ruebbelke.  I had already been using Angular for a few projects and wasn't expecting to get much out of the book.  Honestly I got it to use as more of a give away at one of my talks but figured I would at least glance through a few chapters of it first.  Needless to say I ended up reading the whole book and plan to keep it.
+<img style="float: left;" src="{{ "angular_in_action_cover.jpg" | prepend: imagedir }}"> At the [HolidayJs](http://holidayjs.com) event I won a book and I picked a copy of [Angular In Action](https://www.manning.com/books/angularjs-in-action) by [Lukas Ruebbelke](http://onehungrymind.com/).  I had already been using Angular for a few projects and wasn't expecting to get much out of the book.  Honestly I got it to use as more of a give away at one of my talks but figured I would at least glance through a few chapters of it first.  Needless to say I ended up reading the whole book and plan to keep it.
 
 This book is one of the best introductions to Angular that I have read.  Lukas does a fantastic jobs of explaining how it all works with lots of good code examples in a way that is very easy to understand.  The book walks you through building a Trello clone with a pre-built backend so that you can stay focused on Angular and not worry about the data storage.  After reading this book and going through the code examples you will be well on your way to being able to create your own Angular application.
 
@@ -31,3 +31,5 @@ Next up is a quick trip into forms and forms validation.  This chapter cover the
 One more cool thing that Lukas does is include a testing with Karma section in each of the chapters.  Coming from an Agile background where I have done a good amount of automated unit tests for my projects, it was nice to see Lukas cover this topic.  Lukas covers just enough to get you started on automated testing and shows you how easy it is to get started with it.     
 
 Overall, I would give this book 5 out of 5 stars.  If you are already an Angular developer or just getting into Angular this is a must have book.  Wish I would have had it a long time ago.  Great job Lukas. 
+
+Link to book [https://www.manning.com/books/angularjs-in-action](https://www.manning.com/books/angularjs-in-action)
