@@ -2,7 +2,7 @@
 layout: post
 title: Angular - Safely Minify Your Code 
 date: 2016-02-11 06:00
-categories: [' angular','ionic']
+categories: ['angular','ionic']
 published: true
 excerpt: |
 
