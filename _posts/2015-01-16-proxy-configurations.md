@@ -76,6 +76,7 @@ If the commands below just echo out the text instead of the actual proxy server,
 	echo %https_proxy%
 
 ----
+
 ## Bash Shell
 
 File Name: .bash_profile or .bashrc
@@ -92,6 +93,7 @@ Note:   After updated the .bash_profile or .bashrc, you should run one of the fo
 	source ~/.bash_profile
 
 ----
+
 ## Bower
 
 There is no command line that I found for configuring bower.  Instead you need to create a .bowerrc file in the users home directory.  
@@ -121,6 +123,7 @@ Windows Explorer unfortunately does not  allow you to create files without exten
 	}
      
 ---- 
+
 ## Git
 
 You can also set the proxy settings below to be system wide with the --system switch.
@@ -154,6 +157,7 @@ You can also set the proxy settings below to be system wide with the --system sw
 		proxy = http://[Your Proxy]:[Proxy Port]
 
 ----
+
 ## NPM
 
 ### Set Proxy:
@@ -178,6 +182,7 @@ You can also set the proxy settings below to be system wide with the --system sw
 	https-proxy=http://[Your Proxy]:[Proxy Port]
     
 ----	
+
 ## Ruby Gem Install
 
 
@@ -195,11 +200,13 @@ If you need to manually set it
 	gem install [your gem name]
 
 ----	
+
 ## Ionic Start Command
 
 In order to run the ionic start command behind a proxy, you need start the command out with the Proxy information.
 
 ### Linux
+
 	PROXY=http://[Your Proxy]:[Proxy Port] ionic start [App Name] [Template Name]
 
 ### Windows
@@ -208,6 +215,7 @@ In order to run the ionic start command behind a proxy, you need start the comma
 	ionic start [App Name] [Template Name]
 
 ----	
+
 ## Android SDK
 	
 
@@ -218,6 +226,7 @@ The android SDK uses ~/.android/androidtool.cfg file to define the proxy informa
 	http.proxyPort=[Proxy Port]
 
 ----
+
 ## Gradle
 
 When trying to build an Android project that uses Gradle, you may need to configure the proxy for it.  
