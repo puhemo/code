@@ -191,7 +191,7 @@ If you have set the proxy in the .bash_profile or .bashrc, then Ruby should pick
 If you need to manually set it
 
 ### Linux
-	export http://[Your Proxy]:[Proxy Port]
+  export http_proxy=[Your Proxy]:[Proxy Port]
 	sudo gem install [your gem name]
 
 ### Windows 
