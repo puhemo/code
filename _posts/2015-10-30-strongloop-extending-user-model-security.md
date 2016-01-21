@@ -6,7 +6,7 @@ categories: ['ionic', 'strongloop']
 series: 'Strongloop Todo'
 published: true
 excerpt: |   
-    After following Raymond Camden's [Strongloop Introduction](http://www.raymondcamden.com/tag/strongloop), I was ready to update the [todo demo application](https://github.com/Ionic-AZ/Todo-Lab1-LocalStorage) that I have been using for the [Ionic Arizona Meetup](http://meetup.com/ionic-az).  However, I quickly ran into an issue with getting 401 Unauthorized errors when I tried to query any of the rest endpoints to get the projects associated to the user.  The user model I was using extended the built-in user model so that I could add additional functionality of associating a project to a user.   
+    After following Raymond Camden's [Strongloop Introduction](http://www.raymondcamden.com/tags/strongloop/), I was ready to update the [todo demo application](https://github.com/Ionic-AZ/Todo-Lab1-LocalStorage) that I have been using for the [Ionic Arizona Meetup](http://meetup.com/ionic-az).  However, I quickly ran into an issue with getting 401 Unauthorized errors when I tried to query any of the rest endpoints to get the projects associated to the user.  The user model I was using extended the built-in user model so that I could add additional functionality of associating a project to a user.   
     
     After much research, it turns out that the built-in user model has security (ACL) on it to restrict everyone from being able to query the user endpoints that do not have an explictly defined security setup.  This is great except for the fact that even if you add additional ACLs in your extended user model the default security has already denied the user before it gets to the security you setup.  
 ---
