@@ -5,9 +5,9 @@ date: 2016-01-21 06:00
 categories: ['angular','ionic','book reviews']
 published: true
 excerpt: |
-    At the HolidayJs event I won a book and I picked a copy of Angular In Action by Lukas Ruebbelke.  I had already been using Angular for a few projects and wasn't expecting to get much out of the book.  Honestly I got it to use as more of a give away at one of my talks but figured I would at least glance through a few chapters of it first.  Needless to say I ended up reading the whole book and plan to keep it.
+     <img style="float: left;" src="{{ "angular_in_action_cover.jpg" | prepend: imagedir }}"> At the [HolidayJs](http://holidayjs.com) event I won a book and I picked a copy of [Angular In Action](https://www.manning.com/books/angularjs-in-action) by [Lukas Ruebbelke](http://onehungrymind.com/).  I had already been using Angular for a few projects and wasn't expecting to get much out of the book.  Honestly I got it to use as more of a give away at one of my talks but figured I would at least glance through a few chapters of it first.  Needless to say I ended up reading the whole book and plan to keep it.
 
-    This book is one of the best introductions to Angular that I have read.  Lukas does a fantastic jobs of explaining how it all works with lots of good code examples in a way that is very easy to understand.  The book walks you through building a Trello clone with a pre-built backend so that you can stay focused on Angular and not worry about the data storage.  After reading this book and going through the code examples you will be well on your way to being able to create your own Angular application.
+     This book is one of the best introductions to Angular that I have read.  Lukas does a fantastic jobs of explaining how it all works with lots of good code examples in a way that is very easy to understand.  The book walks you through building a Trello clone with a pre-built backend so that you can stay focused on Angular and not worry about the data storage.  After reading this book and going through the code examples you will be well on your way to being able to create your own Angular application.
 ---
 
 {% assign imagedir = "/images/bookreviews/" | prepend: site.baseurl | prepend: site.url %}
