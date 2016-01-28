@@ -17,6 +17,9 @@ Even though I host my blog on Github Pages there have been several times where I
 
 As well I have written many of my blog post on my phone but have had to wait until I was at a computer to make sure the post liked good before publishing it.  
 
+With Travis CI, it will monitor Github for commits and then kick off a build and deploy of the site.  For my jekyll repository I do all of my changes on a Github branch called Scheduled so as to not accidentally deploy a work in progress to the master branch.
+
+Setting up Travis CI is really simple. 
 
 * setup travis ci
 * setup azure Web app

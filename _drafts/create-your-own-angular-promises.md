@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create Your Own Angular Promises
-date: 2016-01-06 
+date: 2016-02-19 06:00
 categories: ['angular']
 published: true
 series: 

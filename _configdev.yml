@@ -20,3 +20,4 @@ drafts: true
 links:
    rss: /feed.xml # your feedburner url
 testsite: true
+paginate: 20
