@@ -12,6 +12,9 @@ published: true
 
 This book is one of the best introductions to Angular that I have read.  Lukas does a fantastic jobs of explaining how it all works with lots of good code examples in a way that is very easy to understand.  The book walks you through building a Trello clone with a pre-built backend so that you can stay focused on Angular and not worry about the data storage.  After reading this book and going through the code examples you will be well on your way to being able to create your own Angular application.
 
+
+
+
 The book starts off explaining how all of the parts of Angular play together: configurations, routes, views, directives, controllers, services, and $scope.  It is one of the best explanation that I had read or seen.  Before this book I had  understood how it played together enough to be able to code with it but couldn't explain it well to others.  Not anymore.  If nothing else the opening chapter was more than worth it. 
 
 Before diving into the details of each component, Lukas tasks about how to structure your Angular applications.  He covers the basics and some common best practices.  For detailed style guides he refers you to John Papa and Todd Moto's style guides.  I very much appreciate that he didn't rehash their style guides.  
