@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 
+title: Ionic - Releasing Your App to the Stores
 date: 2016-02-19 06:00
-categories: [' ']
+categories: ['ionic']
 published: true
-series: 
 excerpt: |
 
---- 
+---
+
 {% assign imagedir = "/images//" | prepend: site.baseurl | prepend: site.url %}
 
 

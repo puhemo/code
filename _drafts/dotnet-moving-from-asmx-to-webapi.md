@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 
+title: Moving from Asp.Net Web Services (asmx) to WebApi
 date: 2016-02-19 06:00
-categories: [' ']
+categories: ['WebApi', 'DotNet']
 published: true
-series: 
 excerpt: |
 
---- 
+---
+
 {% assign imagedir = "/images//" | prepend: site.baseurl | prepend: site.url %}
 
 

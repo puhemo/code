@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 
+title: Adding Asp.NEt WebApi to an Existing Project
 date: 2016-02-19 06:00
-categories: [' ']
+categories: ['WebApi', 'Asp.Net']
 published: true
-series: 
 excerpt: |
 
---- 
+---
+
 {% assign imagedir = "/images//" | prepend: site.baseurl | prepend: site.url %}

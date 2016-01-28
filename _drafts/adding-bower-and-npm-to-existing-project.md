@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 
+title: Adding bower and npm to an existnig project
 date: 2016-02-19 
-categories: [' ']
+categories: ['bower', 'npm', 'angular']
 published: true
-series: 
 excerpt: |
 
---- 
+---
+
 {% assign imagedir = "/images//" | prepend: site.baseurl | prepend: site.url %}
 
 
