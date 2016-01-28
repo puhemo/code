@@ -50,7 +50,7 @@ google_search: '004335243338270776845:estgbhnodmi'
 
 paginate: 5
 paginate_path: "/page/:num"
-excerpt_separator: "\n\n\n"
+excerpt_separator: "\n\n\n" #"<!-- more -->" 
 safe: true
 defaults:
     -
