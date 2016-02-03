@@ -4,43 +4,53 @@ title: 'Jekyll Part 14: How To Validate Links and Images'
 date: 2016-02-01 06:00
 categories: ['Blogging', 'Github', 'Jekyll']
 published: true
-series: blogging-with-jekyll 
-excerpt: |
-    Welcome the continuing series on using Jekyll. In this tutorial we are going to go through how to validate your links and images before publishing your blog post.  You also want to make that all of the links and images from previous post are still validate.  The last thing you want is to be notified by a user that you have a broken link or a missing image if you can catch them ahead of time.  
-    
-    Luckily  there is a ruby gem that can do this work for us.  This gem is called html-proofer.
-
+series: blogging-with-jekyll
 ---
 
 {% assign imagedir = "/images/BloggingOnGitHub/" | prepend: site.baseurl | prepend: site.url %}
 
-Welcome the continuing series on using Jekyll. In this tutorial we are going to go through how to validate your links and images before publishing your blog post.  You also want to make that all of the links and images from previous post are still validate.  The last thing you want is to be notified by a user that you have a broken link or a missing image if you can catch them ahead of time.  
+Welcome the continuing series on using Jekyll. In this tutorial we are going to go through how you can validate your link and image references. 
+
+As your blog grows and you get more posts, it becomes harder to validate images and links are still valid on older post.  On new post it is pretty easy since you only have one last to look for.  However, this  is a process that can be fully automated so  got don't even have to worry about it anymore. 
 
 
-Luckily there is a ruby gem that can do this work for us.  This gem is called html-proofer.  You can either install the gem as part of your Gemfile or as another ruby gem. 
 
-### Gemfile 
+Since Jekyll is Ruby based we  are going to use a ruby gem called [html-proofer](https://github.com/gjtorikian/html-proofer/).   Html-proofer is a command line utility that will  run a set of tests to validate your HTML output. These tests check if your image references are legitimate, if they have alt tags, if your internal links are working, and so on. It's intended to be an all-in-one checker for your output.
 
-Add this line to your Gemfile
+## Installation 
+
+You can either install the gem as part of your Gemfile or as another ruby gem.  
+
+Add this line to your Gemfile 
 
 	gem 'html-proofer'
-	
-Then to run the validation run 
 
-	bundle exec html-proof ./_site/
+and then execute 
+
+	bundle 
+	
+or install it yourself, just like any other ruby gems
+
+     gem install html-proofer 
+
+## Generating Report 
+
+To generate a report open up the command line and run the command the corresponds to how you install html-proofer.
+
+### Gemfile   
+
+	bundle exec html-proof ./_site/ --only-4xx
 	
 ### Ruby Gem 
 
-Install the ruby gem just like any other ruby gems
+	html-proof ./_site/ --only-4xx
 
-     gem install html-proofer 
-	
-Then to run the validation run 
+The  --only4xx parameter above tell it to only  reports errors for links that fall within the 4xx status code range.  This would capture not found (404) and not authorized (401) errors but would ignore 500 internal server errors.  The reason to ignore 500 errors is that we don't want validation to fail if their web server is throwing an error  since we are only testing that the link went some place valid.  
 
-	html-proof ./_site/
-	
-You will now get a report of any broken links or image tags.  You may need to look at some of the include or  layout file to fix links.  Once you get the initial set of links fixed, you will mainly have to worry about the new updates to the blog.
+You will now get a report of any broken links or image tags.  Since html-proofer is evaluating the Jekyll output,  you may need to look at some of the include or  layout file to fix links.  
 
-This will help improve the quality of your blog and ensure that you fix broken links and images before your users spot them.
+Once you get the initial set of issues fixed, you will mainly have to worry about the new updates to your blog.  
+ 
+Overall, this will help improve the quality of your blog by  ensuring that you fix broken links and images before your users spot them.
 
 {% include series.html %}
