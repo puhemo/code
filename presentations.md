@@ -30,12 +30,25 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 ## Upcoming Speaking Engagements
 
+<h3> Javascript Summit <span>- Virtual (February 23rd-25th, 2016)</span></h3>
+
+- [Use Your Existing Web Skills to Create Cross Platform Applications](#ionic)
+- [Conference Home Page](http://environmentsforhumans.com/2016/javascript-summit/)
+
+
+
 <h3>O'Reilly Fluent Conference <span>- San Francisco, Ca (March 7th-10th, 2016)</span></h3>
 
 - [Conference Home Page](http://conferences.oreilly.com/fluent/javascript-html-us)
 - [Workshop - Use Your Existing Web Skills to Create Native Mobile Applications](#ionic)
 
+<h3> Codepalousa <span>- Louisville, Ky (March 28th-30th, 2016)</span></h3>
+
+- [Use Your Existing Web Skills to Create Cross Platform Applications](#ionic)
+- [Conference Home Page](http://codepalousa.com/)
+
 <p>&nbsp;</p>
+
 
 ## Past Speaking Engagements
 
