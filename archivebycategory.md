@@ -10,10 +10,24 @@ layout: page
 
 {% assign tags = site.categories | sort %}
 {% assign sorted_posts = site.posts | sort: 'title' %}
-<div> 
-{% for tag in tags %}
-<a href="#{{ tag | first | slugify }}">{{ tag | first | replace: '-', ' ' }}({{ tag | last | size }})</a>{% if forloop.last == false %} • {% endif %}{% endfor %}
+{% assign tagArray = "" | split: "/" %}
+{% assign tagArrayDowncased = "" | split: "/" %}
+{% for tag in site.categories %}
+    {% assign tagDowncased = tag | first | downcase | split: "," %}
+    {% assign tagArrayDowncased = tagArrayDowncased | push: tagDowncased %} 
+    {% capture  html %}<a href="#{{ tag | first | downcase | slugify }}">{{ tag | first | downcase | replace: '-', ' ' }}({{ tag | last | size }})</a>{% if forloop.last == false %} • {% endif %} {% endcapture %}
+    {% assign tagArray = tagArray | push: html %}    
+{% endfor %}
+
+{% assign tagsSorted = tagArrayDowncased | sort %}
+
+{% assign sortedtags = tagArray | sort %}        
+<div>
+    {% for tag in sortedtags %}
+        {{tag}}
+    {% endfor %}
 </div>
+
 <p>&nbsp;</p>
 
 {% for tag in tags %}
