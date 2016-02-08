@@ -75,7 +75,7 @@ defaults:
 markdown: kramdown
 # kramdown:
 #     input: GFM
-highlighter: pygments
+highlighter: rouge
 permalink: /:title/
 
 # The release of Jekyll Now that you're using
@@ -98,6 +98,7 @@ gems:
   - jemoji # Emoji please!
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-redirect-from
+  - jekyll-paginate
 # Exclude these files from your production _site
 
 exclude:
