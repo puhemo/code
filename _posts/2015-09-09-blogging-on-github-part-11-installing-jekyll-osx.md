@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: 'Jekyll Part 11: Installing Jekyll On OSx'
-categories: ['Blogging', 'Github', 'Jekyll']
+categories: ['blogging', 'jekyll']
 date: 2015-09-09 17:15
 series: blogging-with-jekyll
 excerpt: |

@@ -2,7 +2,7 @@
 layout: post
 title: 'Jekyll Part 05: Adding Category Page'
 date: 2015-02-15 06:00
-categories: ['Blogging', 'Github', 'Jekyll']
+categories: ['blogging', 'jekyll']
 published: true
 series: blogging-with-jekyll
 excerpt: | 

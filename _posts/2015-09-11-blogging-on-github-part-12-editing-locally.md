@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: 'Jekyll Part 12: Editing Locally'
-categories: ['Blogging', 'Github', 'Jekyll']
+categories: ['blogging', 'jekyll']
 date: 2015-09-11 06:00
 series: blogging-with-jekyll
 excerpt: |

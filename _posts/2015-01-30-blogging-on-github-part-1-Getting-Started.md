@@ -3,7 +3,7 @@
 layout: post 
 title: 'Jekyll Part 01: Getting Started'
 date: 2015-01-30
-categories: ['Blogging', 'Github', 'Jekyll']
+categories: ['blogging', 'jekyll']
 published: true
 redirect_from: "/blogging-on-github-part-1/"
 series: blogging-with-jekyll

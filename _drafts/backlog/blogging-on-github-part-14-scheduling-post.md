@@ -3,7 +3,7 @@ layout: post
 title: 'Jekyll - Part 12 - Scheduling Post'
 series: blogging-with-jekyll
 date: 2015-09-22 06:00
-categories: ['Blogging', 'Github', 'Jekyll']
+categories: ['Blogging', 'Jekyll']
 published: false
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: 'Jekyll Part 03: Adding Commenting to Post'
 date: 2015-02-09
-categories: ['Blogging', 'Github','Jekyll']
+categories: ['blogging', 'jekyll']
 published: true
 series: blogging-with-jekyll
 excerpt: | 

@@ -2,7 +2,7 @@
 layout: post
 title: 'Jekyll Part 02: Your First Post'
 published: true
-categories: ['Blogging', 'Github', 'Jekyll']
+categories: ['blogging', 'jekyll']
 date: 2015-02-05
 series: blogging-with-jekyll
 excerpt: | 
@@ -133,19 +133,21 @@ link to other pages:
 [link name display](http://myurl.com)
 
 
-###Code Highlighting 
+### Code Highlighting 
 
 There are 2 ways: tab the line in and it will group the text like the examples above.
 or use the highlighter markup
 
+
+{% highlight text %}
 {% raw %}
-
-	{% highlight c# %}	
-	// some c# code	
-	var a = "bad variable name"
-	{% endhighlight %}
-
+{% highlight c# %}	
+// some c# code	
+var a = "bad variable name"
+{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
+
 
 ## Highlighting text without the code highlighting 
 
@@ -153,7 +155,7 @@ Start the line with a tab and it will automatically do it for you.
 
 	you will get text like this if you start the line with a tab.
 	
-##Further Reading on Markdown
+## Further Reading on Markdown
 
 Github documentation on their markdown:  [https://help.github.com/articles/github-flavored-markdown/](https://help.github.com/articles/github-flavored-markdown/).
 

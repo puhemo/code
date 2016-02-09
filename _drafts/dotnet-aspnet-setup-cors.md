@@ -2,7 +2,7 @@
 layout: post
 title: Setting up CORS with Asp.Net
 date: 2016-02-19 06:00
-categories: ['WebApi', 'DotNet']
+categories: ['webapi', 'asp.net']
 published: true
 excerpt: |
 
