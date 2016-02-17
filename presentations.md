@@ -62,6 +62,13 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 - Moving from local storage to the cloud with a discussion on  using Backand, Strongloop and Firebase as options.
 - [Meetup Page](http://www.meetup.com/ionicdenmark/)
 
+<h3> Codepalousa <span>- Louisville, Ky (March 28th-30th, 2016)</span></h3>
+
+- [Use Your Existing Web Skills to Create Cross Platform Applications](#ionic)
+- [Conference Home Page](http://codepalousa.com/)
+
+<p>&nbsp;</p>
+
 
 ## Past Speaking Engagements
 
