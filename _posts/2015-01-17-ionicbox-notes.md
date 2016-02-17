@@ -76,7 +76,6 @@ Ionic uses port 8100 for the web site and the live reload function use port 3572
 {% highlight  io %}
 config.vm.network :forwarded_port, host: 8100, guest: 8100
 config.vm.network :forwarded_port, host: 35729, guest: 35729
-
 {% endhighlight   %}
 
 The IonicBox is just a Linux shell with no GUI so you will want to use a feature in VirtualBox called Shared Folders to be able to edit the files from your host machine.  In our case we are using c:\projects on the host machine which is linked to ~/vagrant_projects on the IonicBox
@@ -87,7 +86,7 @@ config.vm.synced_folder "c:\\projects", "/home/vagrant/projects"
 
 Next we set up the VirtualBox options
 
--We don't need the VirtualBox GUI since we are going to SSH into the machine so we can turn it off with.  Set this to true the first time, just so you can see it
+- We don't need the VirtualBox GUI since we are going to SSH into the machine so we can turn it off with.  Set this to true the first time, just so you can see it
 
 {% highlight  io %}
 vb.gui = false
@@ -105,23 +104,17 @@ vb.customize ["modifyvm", :id, "--vram", "128"]
 vb.customize ["modifyvm", :id, "--usb", "on"]
 {% endhighlight %}
 
-
-
--Add a usb device filter for a Android Device
+- Add a usb device filter for a Android Device
 
 {% highlight  io %}
 vb.customize ["usbfilter", "add", "0", "--target", :id, "--name", "android", "--vendorid", "0x18d1"]
 {% endhighlight %}
 
-
-
-- On Windows, You need to turn on Symlinks to the synced_folders.  This is needed if your Host Operating System is Windows in order node/npm to work correctly.  
+- On Windows, You need to turn on Symlinks to the synced_folders.  This is needed if your Host Operating System is Windows in order node/npm to work correctly.  Remember you have to run your command prompt as an administrator for this command to work.    
 
 {% highlight  io %}
 vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
 {% endhighlight %}
-
-
 
 
 - Set the system memory for the virtual machine.  If you host machine is low on memory you can reduce this down.  You must have this much memory free when the virtual machine starts up
@@ -151,7 +144,7 @@ vb.name = "IonicBox"
 ## Starting up the IonicBox and Getting logged in
 
 1. Open a command prompt and navigate to the IonicBox folder that contains the VagrantFile.
-      * If on Windows, open the command prompt as an Administrator. 
+      * <font color="red">If on Windows, open the command prompt as an Administrator.</font> 
       * To open the command prompt as an administrator in Windows 8 go to the Start Menu Screen, type cmd, then ctrl+shift+click or ctrl+shift+enter   
   
 1. Run command below. This command will take a while the first time you run it since it has to download the vagrant box container which is about 1 gig in size.
@@ -195,7 +188,7 @@ You can view all of the files that make up this project on your host machine und
 
 If you are NOT using Windows as your host operating system that we are done with configurations.  Unfortunately, if you are using Windows as your host operating system, we have one more step to get npm working correctly, so that you can download all of the dependencies for Ionic.
 
-<font color="red">WARNING: This may not fix the issue with node and long file names.</font>
+<font color="red">WARNING: Unless you have npm 3.0+.  This may not fix the issue with node and long file names on Windows with npm.</font>
 
 We need to setup a symbolic link for the node modules folder since windows has a length limitation when using shared folders.  A symbolic link is basically a point from one directory to another.  Windows has a directory name length limitation that we encounter when host our files through a shared folder.  Since our npm dependencies (node modules) folder doesn't need to be checked into source control, we can move it to a directory on the IonicBox and just point to that from within our Ionic projects.
 
@@ -207,13 +200,13 @@ ln -s ~/node_modules_[Your Project] node_modules
 npm install
 {% endhighlight %}
 
+**<font color="red">Remember:</font>** If on Windows, you need to run the vagrant up command from an administrative command prompt. 
+
 You may also need to manually install bower 
 
 {% highlight  io %}
 sudo npm install bower -g
 {% endhighlight %}
-
-
 
 ## I am done with IonicBox, now what?
 
@@ -245,3 +238,15 @@ vagrant destroy
 
 
  - Note that sometimes this leaves behind the directory that contained the Virtual Machine.  Before you can run vagrant up again, you will need to manually delete this directory.
+
+## Conclusion
+
+This is a nice easy way to get started with ionic without having to install much onto your current machine.  
+
+However, if you are going to spend a lot of time developing ionic applications, it won't be long before you go down the route of installing everything onto your machine to do the development work.  
+
+Check out my installation guides to help you out:
+
+[Mac Installation]({{ "ionic-setup-osx" | prepend: baseurl | prepend: siteurl }})
+
+[Windows Installation]({{ "ionic-setup-windows" | prepend: baseurl | prepend: siteurl }})

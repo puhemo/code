@@ -64,7 +64,7 @@ export ANT_HOME=/users/jpjames/Development/apache-ant-1.9.4
 	- Open ~/.bash_profile and add the following line:
 
 {% highlight  text %}
-Add export PATH=${PATH}:/users/[Your UserName]/Development/android-sdk-mac_x86/tools:/users/[Your Username]/Development/android-sdk-mac_x86/platform-tools:${ANT_HOME}/bin
+export PATH=${PATH}:/users/[Your UserName]/Development/android-sdk-macosx/tools:/users/[Your Username]/Development/android-sdk-macosx/platform-tools:${ANT_HOME}/bin
 {% endhighlight %}
 
 1. Download correct Android API
