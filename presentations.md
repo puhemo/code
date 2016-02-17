@@ -24,23 +24,43 @@ If you see me at an event, please be sure to come up and say "Hi".  The best par
 I started really getting into speaking publicly in early 2014 after speaking at the [Southeast Valley .NET User Group](http://www.meetup.com/sevdnug/) in Chandler, Arizona.  I had suggested a couple of topics for future meetings that I wanted to learn about to the user group organizer, [Rob Richardson](http://www.robrich.org) and like a bullet he immediately shot back, "when would you like to present these topics?".  I wasn't quite prepared for that response but in retrospect it was the best response he could have given to me.  I had been an attendee of this user group for awhile but hadn't done a presentation there in a few years.  So after thinking about it for a few minutes I thought I got nothing to lose and asked for a few months to learn the topics.
 
 Over the next couple of months I worked on learning the ins and outs of [Nuget](http://www.nuget.org) and [Chocolatey](http://www.chocolatey.org) as well watching tips and tricks on speaking from speakers I admired like [Scott Hanselman](http://www.hanselman.com/) and [John Papa](http://www.johnpapa.net/).  The presentations both went amazingly well with a lot of great feedback from audience and I was immediately hooked.  Since that initial presentations I have presented well over 20 sessions and counting across the United States and Europe.  
- 
-
 <p>&nbsp;</p>
 
 ## Upcoming Speaking Engagements
 
-<h3> Javascript Summit <span>- Virtual (February 23rd-25th, 2016)</span></h3>
+<h3>Javascript Summit 2016 <span>- Virtual (February 24th, 2016)</span></h3>
 
-- [Use Your Existing Web Skills to Create Cross Platform Applications](#ionic)
+- [Use Your Existing Web Skills to Create Cross Platform Mobile Applications](#ionic)
 - [Conference Home Page](http://environmentsforhumans.com/2016/javascript-summit/)
-
-
 
 <h3>O'Reilly Fluent Conference <span>- San Francisco, Ca (March 7th-10th, 2016)</span></h3>
 
+- [Workshop - Use Your Existing Web Skills to Create Cross Platform Mobile Applications](#ionic)
 - [Conference Home Page](http://conferences.oreilly.com/fluent/javascript-html-us)
-- [Workshop - Use Your Existing Web Skills to Create Native Mobile Applications](#ionic)
+
+
+<h3>Codepalousa <span>- Louisville, Ky (March 28th-30th, 2016)</span></h3>
+
+- [Use Your Existing Web Skills to Create Cross Platform Mobile Applications](#ionic)
+- [Conference Home Page](http://codepalousa.com)
+
+
+<h3>Phoenix Version Control Meetup<span>- Phoenix, Az (April 13th, 2016)</span></h3>
+
+- Continuous Integration with Github and TravisCi
+- [Meetup Page](http://meetup.com/Phoenix-Version-Control)
+
+
+<h3>Hill Country Javascript User Group<span>- South Texas (giving Virtually) (April 20th, 2016)</span></h3>
+
+- Designing a Restful Api in Minutes with Backand 
+- [User Group Chat Page](https://gitter.im/hillcountryjs/contributors)
+
+
+<h3>Ionic Denmark Meetup<span>- Denmark (Giving Remotely) (April 27th, 2016)</span></h3>
+
+- Moving from local storage to the cloud with a discussion on  using Backand, Strongloop and Firebase as options.
+- [Meetup Page](http://www.meetup.com/ionicdenmark/)
 
 <h3> Codepalousa <span>- Louisville, Ky (March 28th-30th, 2016)</span></h3>
 
@@ -124,7 +144,7 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 
 
-<h3> Codepalous <span>- Louisville, Ky (April 27th-30th, 2015)</span></h3>
+<h3> Codepalousa <span>- Louisville, Ky (April 27th-30th, 2015)</span></h3>
 
 - [Ionic Framework Workshop - Overview and Labs](#ionic)
 - [Nuget is easier than you think and you should be using it as both a consumer and creator of packages](#nuget)

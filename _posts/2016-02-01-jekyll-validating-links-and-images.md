@@ -2,7 +2,7 @@
 layout: post
 title: 'Jekyll Part 14: How To Validate Links and Images'
 date: 2016-02-01 06:00
-categories: ['Blogging', 'Github', 'Jekyll']
+categories: ['blogging', 'jekyll']
 published: true
 series: blogging-with-jekyll
 ---

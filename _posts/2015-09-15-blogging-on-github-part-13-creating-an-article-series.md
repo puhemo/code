@@ -3,7 +3,7 @@ layout: post
 title: 'Jekyll Part 13: Creating an Article Series'
 series: blogging-with-jekyll
 date: 2015-09-15 06:00
-categories: ['Blogging', 'Github', 'Jekyll']
+categories: ['blogging', 'jekyll']
 published: true
 excerpt: |
      Welcome the continuing series on using Jekyll. In this tutorial we are going to go through how to create the series listing like you see for this blog series.  

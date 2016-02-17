@@ -51,7 +51,7 @@ google_search: '004335243338270776845:estgbhnodmi'
 paginate: 5
 paginate_path: "/page/:num"
 excerpt_separator: "\n\n\n" #"<!-- more -->" 
-safe: true
+#safe: true
 defaults:
     -
 
@@ -75,12 +75,12 @@ defaults:
 markdown: kramdown
 # kramdown:
 #     input: GFM
-highlighter: pygments
+highlighter: rouge
 permalink: /:title/
 
 # The release of Jekyll Now that you're using
 
-version: v2.4.0
+version: v3.0
 
 # Set the Sass partials directory, as we're using @imports
 
@@ -98,6 +98,7 @@ gems:
   - jemoji # Emoji please!
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-redirect-from
+  - jekyll-paginate
 # Exclude these files from your production _site
 
 exclude:

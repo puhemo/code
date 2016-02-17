@@ -44,7 +44,7 @@ Even being a windows user I was able to pretty easily get Ionic working on a Mac
     - Open up either vi or nano and add the following line:    
 
 {% highlight  text %}
-Add export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_72.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_72.jdk/Contents/Home
 {% endhighlight %}
 
 1. Android Studio
@@ -64,7 +64,7 @@ export ANT_HOME=/users/jpjames/Development/apache-ant-1.9.4
 	- Open ~/.bash_profile and add the following line:
 
 {% highlight  text %}
-Add export PATH=${PATH}:/users/[Your UserName]/Development/android-sdk-mac_x86/tools:/users/[Your Username]/Development/android-sdk-mac_x86/platform-tools:${ANT_HOME}/bin
+export PATH=${PATH}:/users/[Your UserName]/Development/android-sdk-macosx/tools:/users/[Your Username]/Development/android-sdk-macosx/platform-tools:${ANT_HOME}/bin
 {% endhighlight %}
 
 1. Download correct Android API

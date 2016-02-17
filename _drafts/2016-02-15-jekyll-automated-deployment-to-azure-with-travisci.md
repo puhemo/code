@@ -3,7 +3,7 @@ layout: post
 title: 'Jekyll Part 16: Automated Deployment to Azure'
 series: blogging-with-jekyll 
 date: 2016-02-15 06:00
-categories: ['Blogging', 'Github', 'Jekyll']
+categories: ['blogging', 'jekyll']
 published: true 
 excerpt: |
 

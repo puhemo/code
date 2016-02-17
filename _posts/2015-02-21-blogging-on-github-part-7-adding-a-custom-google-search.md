@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: 'Jekyll Part 07: Adding a custom Google search'
-categories: ['Blogging', 'Github',  'Jekyll']
+categories: ['blogging', 'jekyll']
 date: 2015-02-24 06:00
 series: blogging-with-jekyll
 excerpt: | 

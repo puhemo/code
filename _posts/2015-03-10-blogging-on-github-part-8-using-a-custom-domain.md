@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: 'Jekyll Part 08: Using a Custom Domain'
-categories: ['Blogging', 'Github', 'Jekyll']
+categories: ['blogging', 'jekyll']
 date: 2015-3-12 06:00
 series: blogging-with-jekyll
 excerpt: | 

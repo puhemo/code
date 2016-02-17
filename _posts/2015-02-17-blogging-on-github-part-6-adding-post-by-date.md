@@ -2,7 +2,7 @@
 layout: post
 title: 'Jekyll Part 06: Adding Post by Date Page'
 date: 2015-02-18 06:00
-categories: ['Blogging', 'Github', 'Jekyll']
+categories: ['blogging', 'jekyll']
 published: true
 series: blogging-with-jekyll
 excerpt: | 
