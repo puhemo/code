@@ -44,7 +44,7 @@ Even being a windows user I was able to pretty easily get Ionic working on a Mac
     - Open up either vi or nano and add the following line:    
 
 {% highlight  text %}
-Add export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_72.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_72.jdk/Contents/Home
 {% endhighlight %}
 
 1. Android Studio
