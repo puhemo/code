@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Rest Dell Venue 7 x86 Android Tablet 
-date: 
-categories: [' android']
+title: Factory Reset Dell Venue 7 x86 Android Tablet 
+date: '2016-03-10'
+categories: ['android']
 published: true
 excerpt: |
 
