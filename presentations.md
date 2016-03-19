@@ -19,7 +19,7 @@ If you've attended one of my sessions, please send me your feedback or suggestio
 
 If you see me at an event, please be sure to come up and say "Hi".  The best part of the events is hanging out with other developers.
 
-###Background
+### Background
 
 I started really getting into speaking publicly in early 2014 after speaking at the [Southeast Valley .NET User Group](http://www.meetup.com/sevdnug/) in Chandler, Arizona.  I had suggested a couple of topics for future meetings that I wanted to learn about to the user group organizer, [Rob Richardson](http://www.robrich.org) and like a bullet he immediately shot back, "when would you like to present these topics?".  I wasn't quite prepared for that response but in retrospect it was the best response he could have given to me and one that I have used in the meetups that I organize.  I had been an attendee of this user group for awhile but hadn't done a presentation there in a few years.  So after thinking about it for a few minutes I thought I got nothing to lose and asked for a few months to learn the topics.
 
