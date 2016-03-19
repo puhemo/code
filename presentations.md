@@ -65,59 +65,6 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 <p>&nbsp;</p>
 
-
-## Past Speaking Engagements
-
-<h3>Laravel Meetup <span>- Phoenix, Az (October 21st, 2015)</span></h3>
-
-- [Ionic Framework Overview](#ionic)
-- Using Ionic with Lavavel Api 
- 
-
-<h3>Silicon Valley Code Camp <span>- Silicon Valley, Ca (Ocotber 3rd-4th, 2015)</span></h3>
-
-- [Ionic Framework Overview](#ionic)
-- [DevOps Yourself:  Fast Track Your Development Environment Setup](#vagrant)
-- [Code Camp Home Page](http://siliconvalley-codecamp.com)
-
-
-<h3>Ionic-AZ Meetup <span>- Scottsdale, Az (September 29th)</span></h3>
-
-- [Use Your Existing Web Skills to Create Native Mobile Applications](#ionic)
-- [Meeting details](http://www.meetup.com/Ionic-AZ/events/225449985/)
-
-
-<h3>Phoenix Mobile Festival <span>- Chandler, Az (September 19th, 2015)</span></h3>
-
-- [Use Your Existing Web Skills to Create Native Mobile Applications](#ionic)
-- [Conference Home Page](http://phxmobifestival.com)
-
-
-<h3>Phoenix Versioning User Group <span>- Tempe, Az (September 9th, 2015)</span></h3>
-
-- [User Group Home Page](http://www.meetup.com/phoenix-versioning)
-- [Why You Need a Blog and How to Create a Successful One](#blogging)
-
-
-<h3>Iterate Phoenix 2015 The Devops Conference <span>- Chandler, Az (September 1st, 2015)</span></h3>
-
-- [Conference Home page](http://iteratephx.co)
-- [DevOps Yourself:  Fast Track Your Development Environment Setup](#vagrant)
-
-
-<h3>Las Vegas .NET User Group <span>- Las Vegas, Nv (July 30, 2015)</span></h3>
-
-- [User Group Home Page](http://www.dotnetgroup.org/) or [https://www.facebook.com/dotnetgroupdotorg](https://www.facebook.com/dotnetgroupdotorg)
-- [Developer Productivity in Visual Studio 2015](#vsprod)
-
-
-### Ionic Denmark Meetup <span>- Denmark Copenhagen (Giving Remotely) (May 11th, 2016)</span>
-
-- [Data Driven Restful Api Creation Made Easy Breezy](#cloudapishootout)
-- [Meetup Page](http://www.meetup.com/ionicdenmark/events/229123265/)
-
-<p>&nbsp;</p>
-
 ----
 
 ## Presentation Details
