@@ -29,15 +29,10 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 
 ## Upcoming Speaking Engagements
 
-### Codepalousa <span>- Louisville, Ky (March 28th-30th, 2016)</span>
-
-- [Use Your Existing Web Skills to Create Cross Platform Mobile Applications](#ionic)
-- [Conference Home Page](http://codepalousa.com)
-
 
 ### Phoenix Version Control Meetup <span>- Phoenix, Az (April 13th, 2016)</span>
 
-- Continuous Integration with Github and TravisCi
+- [Continuous Integration with Github and TravisCi](#travisci)
 - [Meetup Page](http://www.meetup.com/phoenix-version-control/events/229493593/)
 
 
@@ -53,15 +48,26 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 - [Data Driven Restful Api Creation Made Easy Breezy](#cloudapishootout)
 - [Meetup Page](http://www.meetup.com/ionicdenmark/events/228676467/)
 
-<h3>Ionic Denmark Meetup<span>- Denmark (Giving Remotely) (April 27th, 2016)</span></h3>
+### Ionic Denmark Meetup<span>- Denmark (Giving Remotely) (April 27th, 2016)</span>
 
-- Moving from local storage to the cloud with a discussion on  using Backand, Strongloop and Firebase as options.
-- [Meetup Page](http://www.meetup.com/ionicdenmark/)
+- [Data Driven Restful Api Creation Made Easy Breezy](#cloudapishootout)
+- [Meetup Page](http://www.meetup.com/ionicdenmark/events/229123265/)
 
-<h3> Codepalousa <span>- Louisville, Ky (March 28th-30th, 2016)</span></h3>
+###  Nebraska Code <span>- Lincoln, Ne (May 18th-20th, 2016)</span>
 
-- [Use Your Existing Web Skills to Create Cross Platform Applications](#ionic)
-- [Conference Home Page](http://codepalousa.com/)
+- [Cross Platform Mobile Applications with Ionic (Full Day Workshop)](#ionic)
+- [Database Driven Api Creation Made Easy Breezy with Back& ](#backand)
+- [Conference Home Page](http://nebrasakacode.com/)
+
+### That Conference <span>- Wisconsin Dells, Wisconsin (August 8th-10th, 2016)</span>
+
+- [Cross Platform Mobile Applications with Ionic](#ionic)
+- [Conference Home Page](https://www.thatconference.com/)
+
+### MidwestJS <span> - Minneapolis, MN (August 10th-12th 2016)</span>
+
+- [Cross Platform Mobile Applications with Ionic (Full Day Workshop)](#ionic)
+- [Conference Home Page](http://midwestjs.com/)
 
 <p>&nbsp;</p>
 
@@ -76,6 +82,7 @@ If you would like me to given any of these talks you are meetings, please let me
 ### Topics 
 
 * [Chocolatey - making the process of installing software on windows easy as pie](#chocolatey)
+* [Continuous Integration with Github and TravisCI](#travisci)
 * [Cross Platform Mobile Apps with Ionic](#ionic)
 * [Designing a Restful Api in Minutes with Backand](#backand)
 * [Data Driven Restful Api Creation Made Easy Breezy](#cloudapishootout)
@@ -118,6 +125,25 @@ Demo: [https://github.com/digitaldrummerj/ChocolateyTalk](https://github.com/dig
 
 ---
 
+### <a name="travisci"></a>Continuous Integration with Github and TravisCI
+
+Come learn how easy it is to implement continuous integration using TravisCI every time you push your commits to Github.   
+
+If you don't know what continuous integration is, it is where on push to your version control system, an automated build is kicked off that ensure that all of your tests and compilation works on a machine that mirrors production and is not your laptop.
+
+Slides: [https://slides.com/digitaldrummerj/travisci-intro/](https://slides.com/digitaldrummerj/travisci-intro/)
+
+My TravisCI: [https://travis-ci.org/digitaldrummerj/digitaldrummerj.github.io](https://travis-ci.org/digitaldrummerj/digitaldrummerj.github.io)
+
+
+#### Past Presentations
+
+* [Phoenix Version Control Meetup <span>- Phoenix, Az (April 13th, 2016)</span>](http://www.meetup.com/phoenix-version-control/events/229493593/)
+
+<p>&nbsp;</p>
+
+---
+
 
 
 ### <a name="backand"></a>Designing a Restful Api in Minutes with Backand
@@ -130,6 +156,7 @@ In this session, we will examine the features of Back& , walk through the creati
 
 #### Past Presentations
 
+* [Nebraska Code Full Day Workshop <span>- Lincoln, NE (May 18th-20th, 2016)</span>](http://nebraskacode.com)
 * [Hill Country Javascript User Group <span>- South Texas (giving Virtually) (April 20th, 2016)</span>](http://www.meetup.com/San-Antonio-JavaScript-User-Group/events/225255697/)
 
 <p>&nbsp;</p>
@@ -206,6 +233,10 @@ Are you already a web developer and want to create a mobile application?  Then c
 
 #### Past Presentations
 
+
+* [MidwestJS <span> - Minneapolis, MN (August 10th-12th 2016)</span>](http://midwestjs.com/)
+* [That Conference <span>- Wisconsin Dells, Wisconsin (August 8th-10th, 2016)](http://thatconference.com)
+* [Nebraska Code Full Day Workshop <span>- Lincoln, NE (May 18th-20th, 2016)</span>](http://nebraskacode.com)
 * [Codepalousa <span>- Louisville, Ky (March 28th-30th, 2016)</span>](http://codepalousa.com)
 * [Tutorial - Use Your Existing Web Skills to Create Cross Platform Mobile Applications](http://conferences.oreilly.com/fluent/javascript-html-us)* [Javascript Summit 2016 <span>- Virtual (February 24th, 2016)</span>](http://environmentsforhumans.com/2016/javascript-summit/)
 * [Laravel Meetup <span>- Phoenix, Az (October 21st, 2015)</span>](http://www.meetup.com/larazona/events/225877278/)
@@ -218,7 +249,6 @@ Are you already a web developer and want to create a mobile application?  Then c
 * [Codepalousa <span>- Louisville, Ky (April 27th-30th, 2015)</span>](http://codepalousa.com)
 * [SoCal Code Camp <span>- Fullerton, Ca (March 7th & 8th, 2015)</span>](http://www.socalcodecamp.net/)
 * [Las Vegas Code Camp <span>- Las Vegas, Nv (February 21, 2015)</span>](http://spring2015.lasvegascodecamp.com/home)
-* [Arizona Software Community <span>- Phoenix, Az (January 2015)</span>](http://www.meetup.com/azsoftcom/events/219258109/)
 * [Arizona Software Community <span>- Phoenix, Az (January 2015)</span>](http://www.meetup.com/azsoftcom/events/219258109/)
 
 <p>&nbsp;</p>
