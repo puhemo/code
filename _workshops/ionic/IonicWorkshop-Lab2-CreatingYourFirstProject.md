@@ -60,7 +60,7 @@ You should see a view similar to this in your browser.
 
 **--lab**
 
-This parameter is optional.  When used the --lab option opens up the web browser to a view of the application with iOS and Android views side by side.  Even if you don't pass the --lab option to the ionic serve command, you can always get to the Ionic lab page using the URL, http://localhost:8100/ionic-lab
+This parameter is optional.  When used the --lab option opens up the web browser to a view of the application with iOS and Android views side by side.  Even if you don't pass the --lab option to the ionic serve command, you can always get to the Ionic lab page using the URL, [http://localhost:8100/ionic-lab](http://localhost:8100/ionic-lab)
 
 
 ## Conclusion
