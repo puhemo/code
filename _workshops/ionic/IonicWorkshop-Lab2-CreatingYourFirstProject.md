@@ -1,6 +1,6 @@
 ---
 collection: workshops
-title: 'Lab 2: Creating Your First Project'
+title: 'Lab 02: Your First Project'
 published: true
 type: ionic
 layout: workshoppost
@@ -12,6 +12,16 @@ Length: 5-10 minutes (depending on internet connection)
 
 * Create your first Ionic project.
 * View the project in a web browser.
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Section 2.0: Creating A Project](#section-20-creating-a-project)
+- [Section 2.1: Testing Project](#section-21-testing-project)
+- [Conclusion](#conclusion)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Section 2.0: Creating A Project
 

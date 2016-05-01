@@ -1,6 +1,6 @@
 ---
 collection: workshops
-title: 'Lab 1: Windows - Installing the Ionic Framework'
+title: 'Lab 01: Windows Installations'
 published: true
 type: ionic
 layout: workshoppost

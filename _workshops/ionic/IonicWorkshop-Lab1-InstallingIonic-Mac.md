@@ -1,6 +1,6 @@
 ---
 collection: workshops
-title: 'Lab 1: Mac - Installing the Ionic Framework'
+title: 'Lab 01: Mac Installations'
 published: true
 type: ionic
 layout: workshoppost
