@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  {% include workshophead.html %}
+
+  <body>
+  
+{% if page.layout == "workshoppage" %}
+    {% include workshopsidebar.html %}
+{% else %}
+    {% include workshoppostsidebar.html %}
+{% endif %}
+
+    <div class="content container">
+      {{ content }}
+    </div>
+
+  </body>
+</html>
