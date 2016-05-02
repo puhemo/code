@@ -12,16 +12,21 @@ Length: 10 minutes
 
 **Note**: For this lab, I will be using WebStorm as our editor but you can use any text editor.  If you want to use WebStorm, you can download a 30 day evaluation version at at [http://www.jetbrains.com/webstorm](http://www.jetbrains.com/webstorm).  If you are on Windows and using Chocolatey, run the command: cinst webstorm to install it.
 
-##Objectives
+## Objectives
 
 * Understand the folder structure for an Ionic project
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<h2>Table of Contents</h2>
+
+- [Section 3.0: Opening Project in WebStorm](#section-30-opening-project-in-webstorm)
+- [Section 3.1: Exploring Project Layout](#section-31-exploring-project-layout)
+- [Wrap-up](#wrap-up)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-##Section 3.0: Opening Project in WebStorm
+## Section 3.0: Opening Project in WebStorm
 
 1. Open Visual Studio Code
 1. Click Open
@@ -38,7 +43,7 @@ Length: 10 minutes
 
 
 
-##Section 3.1: Exploring Project Layout
+## Section 3.1: Exploring Project Layout
 
 1. With the myFirstApp highlighted, click on the arrow next to the project name.
 
@@ -75,6 +80,6 @@ Length: 10 minutes
     </pre>
 
 
-##Wrap-up
+## Wrap-up
 
 Now we are ready to start building our app.  The next lab we will create the master view of the master/detail pages and bind some data from a service to the UI.

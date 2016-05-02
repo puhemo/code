@@ -8,16 +8,25 @@ layout: workshoppost
 
 Length: 10 minutes
 
-##Objective
+## Objective
 
 * Utilize gulp to automate the adding in of new javascript files to the index.html page
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<h2>Table of Contents</h2>
+
+- [Git Setup (Optional)](#git-setup-optional)
+- [Section 12.0: Installing Gulp Inject Package](#section-120-installing-gulp-inject-package)
+- [Secton 12.1: Adding Inject Task to gulpfile.js](#secton-121-adding-inject-task-to-gulpfilejs)
+- [Section 12.2: Adding Inject Task to Ionic Serve Startup](#section-122-adding-inject-task-to-ionic-serve-startup)
+- [Section 12.3: Setting up index.html to Accept Inject](#section-123-setting-up-indexhtml-to-accept-inject)
+- [Section 12.5: Further Reading](#section-125-further-reading)
+- [Wrap-up](#wrap-up)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-##Git Setup (Optional)
+## Git Setup (Optional)
 
 This lab builds on Lab 10.  If you did not do or complete this lab, use the command above to checkout Lab 11 and then run the checkout command below to take it to the point of the completed Lab5.
 
@@ -26,7 +35,7 @@ This lab builds on Lab 10.  If you did not do or complete this lab, use the comm
     $ git clone https://github.com/IonicWorkshop/Lab12-AutomaticallyInjectFilesOnIndex.git
 
 
-##Section 12.0: Installing Gulp Inject Package
+## Section 12.0: Installing Gulp Inject Package
 
 **Section Overview**
 
@@ -51,7 +60,7 @@ If you are following along using git, reset your project to Step0 and run npm in
     
 This will add gulp-inject to package.json as a development dependency and install it so that you can use it.
 
-##Secton 12.1: Adding Inject Task to gulpfile.js
+## Secton 12.1: Adding Inject Task to gulpfile.js
  
 **Section Overview**
 
@@ -89,7 +98,7 @@ If you are following along using git, reset your project to Step1.
 1. Finally, add the javascript and css paths to the gulp watch task and have it call the index task when a change is detected.
 
 
-##Section 12.2: Adding Inject Task to Ionic Serve Startup
+## Section 12.2: Adding Inject Task to Ionic Serve Startup
 
 **Section Overview**
 
@@ -111,7 +120,7 @@ If you are following along using git, reset your project to Step2.
             "watch"
           ]
 
-##Section 12.3: Setting up index.html to Accept Inject
+## Section 12.3: Setting up index.html to Accept Inject
 
 **Get Completed Steps (optional)**
 
@@ -132,7 +141,7 @@ If you are following along using git, reset your project to Step3.
         <!-- inject:css -->
         <!-- endinject -->
     
-##Section 12.4: Testing it out
+## Section 12.4: Testing it out
 
 **Get Completed Steps (optional)**
 
@@ -150,10 +159,10 @@ If you are following along using git, reset your project to Step4.
     * Note: If you already have ionic serve running, you will need to stop it and restart it for it to pick up the gulpStartupTasks.
 1. With ionic serve running, if you add a new javascript or css file in to the www folder, gulp will automatically add them into the index.html file.
 
-##Section 12.5: Further Reading
+## Section 12.5: Further Reading
 
 There is a lot of different options for the gulp-inject package.  If you want to read about all of the different options and see examples, the documentation is available at [https://www.npmjs.com/package/gulp-inject](https://www.npmjs.com/package/gulp-inject)
 
-##Wrap-up
+## Wrap-up
 
 No longer will you have to wonder why a feature is not working, just to realize that it is because you forgot to include a javascript file.

@@ -8,7 +8,7 @@ layout: workshoppost
 
 Length: 30 minutes
 
-##Objectives
+## Objectives
 
 * Add a new view into the UI (master view part of master/detail view)
 * Create our first service
@@ -17,10 +17,18 @@ Length: 30 minutes
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<h2>Table of Contents</h2>
+
+- [Git Setup (Optional)](#git-setup-optional)
+- [Section 4.0: Adding New Page](#section-40-adding-new-page)
+- [Section 4.1: Creating Your First Service](#section-41-creating-your-first-service)
+- [Section 4.2: Binding Service Data To UI](#section-42-binding-service-data-to-ui)
+- [Section 4.3: Giving the UI a Little Class](#section-43-giving-the-ui-a-little-class)
+- [Wrap-up](#wrap-up)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-##Git Setup (Optional)
+## Git Setup (Optional)
 
 During this lab, you will be able to follow along using git to checkout the completed version of the steps in each section if you do not want to write all of the code yourself. 
 
@@ -28,7 +36,7 @@ If you intend to use the completed version of the steps, you need to clone the r
 
     $ git clone https://github.com/IonicWorkshop/Lab4-AddingAView.git
 
-##Section 4.0: Adding New Page
+## Section 4.0: Adding New Page
 
 **Get Completed Steps (optional)**
 
@@ -79,7 +87,7 @@ To download the completed steps for this section, run the following git command:
 
 1. We have now add the placeholders for the page.  In the next section we will add the controllers and services to get data.
 
-##Section 4.1: Creating Your First Service
+## Section 4.1: Creating Your First Service
 
 **Section Overview**
 
@@ -143,7 +151,7 @@ To download the completed steps for this section, run the following git command:
     ![Contacts Raw Json](../images/Lab4/Lab4-ContactsRawJson.png)
     
 
-##Section 4.2: Binding Service Data To UI
+## Section 4.2: Binding Service Data To UI
 
 **Section Overview**
 
@@ -170,7 +178,7 @@ To download the completed steps for this section, run the following git command:
 1. To get to the &lt;ion-list&gt; documentation, at the command prompt, type ionic docs ion-list or go to [http://ionicframework.com/docs/api/directive/ionList/](http://ionicframework.com/docs/api/directive/ionList/)
 
 
-##Section 4.3: Giving the UI a Little Class
+## Section 4.3: Giving the UI a Little Class
 
 **Section Overview**
 
@@ -205,6 +213,6 @@ To download the completed steps for this section, run the following git command:
 
 1.  Finally, remove the json output from the UI
 
-##Wrap-up
+## Wrap-up
 
 We did a lot in this lab.  You created your first service, bound some data to the UI, and styled it.  This lab sets the foundation for the workflow of creating views in Ionic.  In the next lab, we will enable viewing of a contact's details when you click on them.

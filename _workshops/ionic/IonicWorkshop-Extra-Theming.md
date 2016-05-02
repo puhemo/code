@@ -8,17 +8,23 @@ layout: workshoppost
 
 Length: 10 minutes
 
-##Objective
+## Objective
 
 * Learn how to setup your Ionic project to use a SASS file
 * Learn how to style and theme the application using a SASS file.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<h2>Table of Contents</h2>
+
+- [Git Setup (Optional)](#git-setup-optional)
+- [Section 7.0: What is SASS?](#section-70-what-is-sass)
+- [Section 7.1: Setting up SASS](#section-71-setting-up-sass)
+- [Wrap-up](#wrap-up)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-##Git Setup (Optional)
+## Git Setup (Optional)
 
 During this lab, you will be able to follow along using git to checkout the completed version of the steps in each section if you do not want to write all of the code yourself. 
 
@@ -27,13 +33,13 @@ If you intend to use the completed version of the steps, you need to clone the r
     $ git clone https://github.com/IonicWorkshop/Lab7-StylingWithSASS.git
 
 
-##Section 7.0: What is SASS?
+## Section 7.0: What is SASS?
 
 Sass is an extension of CSS that adds power and elegance to the basic language. It allows you to use variables, nested rules, mixins, inline imports, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets well-organized, and get small stylesheets up and running quickly, particularly with the help of the Compass style library.
 
 The Ionic framework uses variables for all of the style information which enable you to easily override any of the colors of the application with your own.  
 
-##Section 7.1: Setting up SASS
+## Section 7.1: Setting up SASS
 
 
 **Get Completed Steps (optional)**
@@ -59,7 +65,7 @@ If you are following along using git, reset your project to Step1.
     * setup the ionic serve command to start the gulp watch task
     
         
-##Section 7.2: Modifying the Look of the Contacts List
+## Section 7.2: Modifying the Look of the Contacts List
 
 **Get Completed Steps (optional)**
 
@@ -85,6 +91,6 @@ If you are following along using git, reset your project to Step2.
     ![Lab7-ContactPinkHeader.png](images/Lab7/Lab7-ContactPinkHeader.png)
     
 
-##Wrap-up
+## Wrap-up
 
 With the few simple steps above you were able to easily to style your application.  Even though we only just touched on using SASS to style your application, it is obvious how easy it makes styling your application. 

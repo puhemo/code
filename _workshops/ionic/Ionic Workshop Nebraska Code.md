@@ -6,6 +6,8 @@ type: ionicoverview
 layout: workshoppost
 ---
 
+<!-- DOCTOC SKIP -->
+
 # Ionic Workshop
 
 **Nebraska Code**

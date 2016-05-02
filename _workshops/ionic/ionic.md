@@ -6,6 +6,8 @@ permalink: '/workshops/ionic/index'
 type: home
 ---
 
+<!-- DOCTOC SKIP -->
+
 This workshop is designed to be an all day workshop.  In the workshop it is a mix of lecture and hand-on labs.  You will be building a simple "Personal Project Task Tracking" that will demonstration many of the ionic components.
 
 Note that the workshop can be modified to run as a half day workshop as well.

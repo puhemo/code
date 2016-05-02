@@ -9,7 +9,7 @@ layout: workshoppost
 
 Length: 30 minutes
 
-##Objective
+## Objective
 
 * Create the detail view part of the master detail view
 * Link from the master view to the detail view
@@ -17,10 +17,15 @@ Length: 30 minutes
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<h2>Table of Contents</h2>
+
+- [Git Setup (Optional)](#git-setup-optional)
+- [Section 5.0: Adding the Contact Details Page](#section-50-adding-the-contact-details-page)
+- [Wrap-up](#wrap-up)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-##Git Setup (Optional)
+## Git Setup (Optional)
 
 During this lab, you will be able to follow along using git to checkout the completed version of the steps in each section if you do not want to write all of the code yourself. 
 
@@ -34,7 +39,7 @@ This lab also builds on the previous lab.  If you did not do or complete the pre
     $ git checkout -f Lab4Completed
 
 
-##Section 5.0: Adding the Contact Details Page
+## Section 5.0: Adding the Contact Details Page
 
 **Get Completed Steps (optional)**
 
@@ -67,7 +72,7 @@ To download the completed steps for this section, run the following git command:
 
     ![Lab4-ContactDetailsPlaceholder.png](../images/Lab5/Lab5-ContactDetailsPlaceholder.png)
     
-##Section 5.1: Creating the Contact Controller
+## Section 5.1: Creating the Contact Controller
 
 **Get Completed Steps (optional)**
 
@@ -94,7 +99,7 @@ If you are following along using git, reset your project to Step1.
 
     ![Lab4-ContactDetailsJson.png](../images/Lab5/Lab5-ContactDetailsJson.png)
     
-##Section 5.2: Making a Pretty UI
+## Section 5.2: Making a Pretty UI
 
 **Section Overview**
 
@@ -123,6 +128,6 @@ You can experiment with different icons.  You can search for other icons at [htt
 
 Once you get it the way that you want it to, remove the json text output that is being displayed.
 
-##Wrap-up
+## Wrap-up
 
 We now have a fully functional Master/Detail style page.  You could easily reuse the setup that we did for the Master/Detail in your application if you need similar functionality.  In the next lab, we are going to upload this application to a device using the Ionic View application.  

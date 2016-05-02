@@ -15,7 +15,7 @@ Length: 5-10 minutes (depending on internet connection)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
+<h2>Table of Contents</h2>
 
 - [Section 2.0: Creating A Project](#section-20-creating-a-project)
 - [Section 2.1: Testing Project](#section-21-testing-project)

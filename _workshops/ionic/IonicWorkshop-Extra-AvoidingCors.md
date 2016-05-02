@@ -8,11 +8,11 @@ layout: workshoppost
 
 Length: 10 minutes
 
-##Objective
+## Objective
 
 * Add configuration to the Ionic project to work around the CORS issue.
 
-##Background
+## Background
 
 You will often need to load data from a remote API. When you are running your Ionic application in the browser with ionic serve, it normally runs on localhost:8100. When you load data from another domain or port you might get this type of error.
 
@@ -22,10 +22,19 @@ This happens due to the browser's security policies, which blocks access to data
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<h2>Table of Contents</h2>
+
+- [Section 13.0: Download Project](#section-130-download-project)
+- [Section 13.1: Seeing CORS Error](#section-131-seeing-cors-error)
+- [Section 13.2: Setting Up and Using Ionic Proxy](#section-132-setting-up-and-using-ionic-proxy)
+- [Section 13.3: Making it Work Outside of Ionic Serve](#section-133-making-it-work-outside-of-ionic-serve)
+- [Section 13.4: Testing On a Device](#section-134-testing-on-a-device)
+- [Section 13.5: Setting up Your API for CORS](#section-135-setting-up-your-api-for-cors)
+- [Wrap-up](#wrap-up)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-##Section 13.0: Download Project
+## Section 13.0: Download Project
 
 The first step is to download the starter project that I have created so you can concentrate on the CORS issues and not writing code to call the remote Api.
 
@@ -36,7 +45,7 @@ Using git, you can get started with this lab by cloning the Lab13-WorkingThruCor
     $ git clone https://github.com/IonicWorkshop/Lab13-WorkingThruCorsErrors.git
     $ cd Lab13-WorkingThruCorsErrors
 
-##Section 13.1: Seeing CORS Error
+## Section 13.1: Seeing CORS Error
 
 Set the project you downloaded in the previous section to Step1.
 
@@ -50,7 +59,7 @@ The Api we are consuming is a hosted at [https://ioniccorsdemoapi.herokuapp.com/
 
 ![Lab13-NodeApiJsonResults.png](images/Lab13/Lab13-NodeApiJsonResults.png)
 
-##Section 13.2: Setting Up and Using Ionic Proxy
+## Section 13.2: Setting Up and Using Ionic Proxy
 
 **Get Completed Steps (optional)**
 
@@ -78,7 +87,7 @@ If you are following along using git, reset your project to Step2.
 1. If you have ionic serve running, quit the process and run ionic serve again.  
 
 
-##Section 13.3: Making it Work Outside of Ionic Serve
+## Section 13.3: Making it Work Outside of Ionic Serve
 
 **Get Completed Steps (optional)**
 
@@ -139,7 +148,7 @@ The Ionic proxies only work when we are using the ionic serve command.  This mea
 1. Switch to the ionic proxy 
 1. Run your ionic application in the browser and make sure it pulls data onto the home page
 
-##Section 13.4: Testing On a Device
+## Section 13.4: Testing On a Device
 
 **Get Completed Steps (optional)**
 
@@ -155,7 +164,7 @@ If you are following along using git, reset your project to Step4.  Then run the
 1. Deploy the application to a device or emulator
 
 
-##Section 13.5: Setting up Your API for CORS
+## Section 13.5: Setting up Your API for CORS
 
 This lab has been all about how to work around remote APIs that do not have CORS enabled.  However, you can also enable CORS within the API if you own it and skip having to setup the proxies.
 
@@ -188,6 +197,6 @@ Now that you understand how to setup your API with CORS enabled, lets see it in 
 1. Run ionic serve and you will notice that it pulled in the data on the main page instead of erroring out like it did before the proxies were setup.
 
 
-##Wrap-up
+## Wrap-up
 
 During development the Ionic proxies setup everything so that you do not need to worry about the CORS errors.  However, as part of your production readiness you will want to switch the Api url back to the real url since you do not have a CORS issues on the actual device. 

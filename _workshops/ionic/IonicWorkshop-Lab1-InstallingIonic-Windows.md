@@ -14,7 +14,7 @@ Length: 30 minutes (depending on internet connection speed)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
+<h2>Table of Contents</h2>
 
 - [Section 1.0: Chocolatey](#section-10-chocolatey)
 - [Section 1.1: NodeJs](#section-11-nodejs)
