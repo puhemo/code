@@ -24,6 +24,4 @@ For these labs to work you need to setup your machine for [Ionic](http://ionicfr
 
 ## Get Started
 
-[Windows Install Steps]({{"workshops/ionic/IonicWorkshop-Lab1-InstallingIonic-Windows/" | prepend: site.baseurl | prepend: site.url }})
-
-[Mac Install Steps]({{"workshops/ionic/IonicWorkshop-Lab1-InstallingIonic-Mac/" | prepend: site.baseurl | prepend: site.url }})
+[Lab 1 - Installs Ionic]({{"workshops/ionic/IonicWorkshop-Lab1-InstallingIonic" | prepend: site.baseurl | prepend: site.url }})
