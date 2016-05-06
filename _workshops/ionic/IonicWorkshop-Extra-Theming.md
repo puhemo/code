@@ -3,7 +3,8 @@ collection: workshops
 title: 'Styling the Application'
 published: true
 type: ionicextra
-layout: workshoppost
+layout: workshoppost2
+lab: ionic
 ---
 
 Length: 10 minutes

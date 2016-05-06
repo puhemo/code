@@ -3,7 +3,9 @@ collection: workshops
 title: 'Lab 08: Api Security'
 published: true
 type: ionic
-layout: workshoppost
+layout: workshoppost2
+order: 8
+lab: ionic
 ---
 
 <H1>???? LAB NOT FINISHED ????</h1>

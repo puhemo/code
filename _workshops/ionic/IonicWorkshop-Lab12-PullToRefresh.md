@@ -3,7 +3,9 @@ collection: workshops
 title: 'Lab 12: Refreshing Data'
 published: true
 type: ionic
-layout: workshoppost
+layout: workshoppost2
+order: 12
+lab: ionic
 ---
 
 

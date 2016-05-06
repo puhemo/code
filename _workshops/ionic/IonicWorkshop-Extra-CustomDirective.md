@@ -3,7 +3,7 @@ collection: workshops
 title: 'Custom Directive to Change Icon'
 published: true
 type: ionicextra
-layout: workshoppost
+layout: workshoppost2
 ---
 
 Length: 20 minutes

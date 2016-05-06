@@ -1,0 +1,86 @@
+{% capture pagetype %}{{ page.type | replace: 'extra', '' | replace: 'overview', ''}}{% endcapture %}
+{% capture extratype %}{{ pagetype }}extra{% endcapture %}
+{% capture overviewtype %}{{ pagetype }}overview{% endcapture %}
+{% capture home %}{{ page.lab | prepend: "/workshops/" | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+
+<html>
+<head>
+    <title>
+        {% if page.title == "Home" %} {{ site.title }} &middot; {{ site.tagline }} {% else %} {{ page.title }} &middot; {{ site.title
+        }} {% endif %}
+    </title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="icon" type="image/png" href="{{site.baseurl}}/favicon.ico">
+    <link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url}}" data-proofer-ignore>
+
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<!--    <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon.png" />-->
+    <link href="{{ " /workshop-main.css " | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+<!--
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,200italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+-->
+
+    <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+<div class="site-header">
+    <nav role="navigation">
+        <ul class="group">
+            <li><a href="{{ site.baseurl | prepend: site.url }}">Blog Home</a></li>
+            <li><a href="{{"workshops" |  prepend: site.baseurl | prepend: site.url }}">Workshops</a></li>
+            <li><a href="{{ "/speaking" | prepend: site.baseurl }}"  {% if page.url == "speaking %} id="selected"{% endif %}>Speaking</a></li>
+            <li><a href="{{ "/about" | prepend: site.baseurl }}"  {% if page.url == "about" %} id="selected"{% endif %}>About</a></li>
+        </ul>
+    </nav>
+</div>
+<header class="header">
+    <h1 class="main-title">
+        <a href="{{ home }}"><img src="/images/lightbulp.png" alt="Workshop Logo" />
+        {% if page.lab != null  %}
+            {{page.lab}}
+        {% else %}
+            workshops
+        {% endif %}
+        </a>
+        </h1>
+    {% if site.testsite %}<div class="test-site-warning">Test Site!  Real site at <a href="http://digitaldrummerj.me">http://digitaldrummerj.me</a></div>{% endif %}
+</header>
+<div class="content-wrap">
+    <section class="main-copy">
+        {{ content}}
+    </section>
+    {% if page.layout != "workshoppage2" %}
+        {% include workshoppostsidebar2.html %}
+    {% endif %}
+
+
+
+    <!--<footer class="footer">
+        <section class="copy">
+            <h4 class="disclaimer">digitaldrummerj.me</h4>
+            <p>Est. 2015 by Justin James</a></p>
+        </section>
+    </footer>
+-->
+    <footer  class="footer">
+        <section class="copy">
+        <span><a href="{{ "/" | prepend: site.baseurl }}">{% if page.author %}{{ page.author }}{% else %}{{site.author}}{% endif %}</a></span>
+      <span>{% for link in site.links %}{% if link[1] %}<a href="{{ link[1] }}"><i class="fa fa-{{ link[0] }}-square"></i></a>{% endif %}{% endfor %}
+        </span>
+        <span>&copy; {{ site.time | date: "%Y" }}</span>
+            </section>
+    </footer>
+    {% include analytics_google.html %}
+
+</div>
+</body>
+</html>

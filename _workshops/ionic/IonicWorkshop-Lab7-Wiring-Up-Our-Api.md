@@ -3,7 +3,9 @@ collection: workshops
 title: 'Lab 07: Wiring Up Our Api'
 published: true
 type: ionic
-layout: workshoppost
+layout: workshoppost2
+order: 7
+lab: ionic
 ---
 
 <H1>???? LAB NOT FINISHED ????</h1>

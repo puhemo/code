@@ -3,7 +3,8 @@ collection: workshops
 title: 'Using the Ionic View Application'
 published: true
 type: ionicextra
-layout: workshoppost
+layout: workshoppost2
+lab: ionic
 ---
 
 Length: 10 minutes

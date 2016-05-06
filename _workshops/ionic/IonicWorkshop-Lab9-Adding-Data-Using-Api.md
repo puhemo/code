@@ -3,7 +3,9 @@ collection: workshops
 title: 'Lab 09: Adding Data'
 published: true
 type: ionic
-layout: workshoppost
+layout: workshoppost2
+order: 9
+lab: ionic
 ---
 
 <H1>???? LAB NOT FINISHED ????</h1>

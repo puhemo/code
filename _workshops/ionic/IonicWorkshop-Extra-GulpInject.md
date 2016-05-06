@@ -3,7 +3,8 @@ collection: workshops
 title: 'Auto Add JS/CSS to index.html'
 published: true
 type: ionicextra
-layout: workshoppost
+layout: workshoppost2
+lab: ionic
 ---
 
 Length: 10 minutes

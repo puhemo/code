@@ -3,7 +3,9 @@ collection: workshops
 title: 'Lab 02: Your First Project'
 published: true
 type: ionic
-layout: workshoppost
+layout: workshoppost2
+order: 2
+lab: ionic
 ---
 
 Length: 5-10 minutes (depending on internet connection)

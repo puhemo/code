@@ -3,7 +3,8 @@ collection: workshops
 title: 'Schedule'
 published: true
 type: ionicoverview
-layout: workshoppost
+layout: workshoppost2
+lab: ionic
 ---
 
 Here is the tentative schedule that I have planned for the workshop.  The schedule is very flexible and can be modified to suit the attendees.

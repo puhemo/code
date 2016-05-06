@@ -3,8 +3,12 @@ collection: workshops
 title: 'Lab 01: Mac Installations'
 published: true
 type: ionic
-layout: workshoppost
+layout: workshoppost2
+lab: ionic
+order: 1
 ---
+
+
 
 Length: 30 minutes (depending on internet connection speed)
 

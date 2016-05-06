@@ -3,7 +3,9 @@ collection: workshops
 title: 'Lab 04: Adding Master View'
 published: true
 type: ionic
-layout: workshoppost
+layout: workshoppost2
+order: 4
+lab: ionic
 ---
 
 Length: 30 minutes

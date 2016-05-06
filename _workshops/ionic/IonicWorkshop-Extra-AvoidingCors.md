@@ -3,7 +3,8 @@ collection: workshops
 title: 'Avoiding CORS Issues'
 published: true
 type: ionicextra
-layout: workshoppost
+lab: ionic
+layout: workshoppost2
 ---
 
 Length: 10 minutes

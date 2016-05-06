@@ -3,7 +3,8 @@ collection: workshops
 title: 'Icon and Splash Screens'
 published: true
 type: ionicextra
-layout: workshoppost
+layout: workshoppost2
+lab: ionic
 ---
 
 Length: 15 minutes

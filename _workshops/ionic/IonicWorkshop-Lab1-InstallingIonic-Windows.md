@@ -3,7 +3,9 @@ collection: workshops
 title: 'Lab 01: Windows Installations'
 published: true
 type: ionic
-layout: workshoppost
+layout: workshoppost2
+order: 1
+lab: ionic
 ---
 
 Length: 30 minutes (depending on internet connection speed)

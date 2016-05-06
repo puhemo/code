@@ -3,7 +3,9 @@ collection: workshops
 title: 'Lab 11: Adding a Loading Spinner'
 published: true
 type: ionic
-layout: workshoppost
+layout: workshoppost2
+order: 11
+lab: ionic
 ---
 
 <H1>???? LAB NOT FINISHED ????</h1>

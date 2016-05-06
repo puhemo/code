@@ -3,7 +3,9 @@ collection: workshops
 title: 'Lab 13: Ordering Data'
 published: true
 type: ionic
-layout: workshoppost
+layout: workshoppost2
+order: 13
+lab: ionic
 ---
 
 

@@ -3,7 +3,9 @@ collection: workshops
 title: 'Lab 14: Ionic v2'
 published: true
 type: ionic
-layout: workshoppost
+layout: workshoppost2
+order: 14
+lab: ionic
 ---
 
 <H1>???? LAB NOT FINISHED ????</h1>

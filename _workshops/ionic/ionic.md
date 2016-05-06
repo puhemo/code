@@ -1,44 +1,27 @@
 ---
-title: 'Ionic Workshop'
+title: 'Ionic Workshop '
 published: true
-layout: workshoppage
+layout: workshoppost2
 permalink: '/workshops/ionic/index'
-type: home
+type: ionic
+ishome: true
+excerpt: |
+    This workshop will introduce you using the Ionic Framework to build a hybrid mobile application that you can release through the Apple, Google and Microsoft stores.  The workshop will be a mix of lecture to introduce concepts and then a lab to reinforce those concepts.   By the end of this workshop you will have a completed application that stores its data in the Cloud and is ready to be deployed to devices.
 ---
+
 
 <!-- DOCTOC SKIP -->
 
-This workshop is designed to be an all day workshop.  In the workshop it is a mix of lecture and hand-on labs.  You will be building a simple "Personal Project Task Tracking" that will demonstration many of the ionic components.
-
-Note that the workshop can be modified to run as a half day workshop as well.
-
-{% assign labs = site.workshops | sort: 'title' %}
-{% for lab in labs %}
-{% if lab.type == "ionicoverview" %}
-<a href="{{ lab.url | prepend: site.baseurl }}">{{ lab.title }}<br /></a>
-{% endif %}
-{% endfor %}
 
 
-## Hands-On Labs
+Welcome to my [Ionic](http://ionicframework.com) workshop.  This workshop is designed to be a hands-on all day workshop.  There will be a mix of lecture to introduce concepts and then a lab to reinforce those concepts.
 
-{% assign labs = site.workshops | sort: 'title' %}
-{% for lab in labs %}
-{% if lab.type == "ionic" %}
-<a href="{{ lab.url | prepend: site.baseurl }}">{{ lab.title }}<br /></a>
-{% endif %}
-{% endfor %}
+  By the end of this workshop you will have a completed application that stores its data in the Cloud and is ready to be deployed to devices.
 
+> Note that the workshop can be modified to run as a half day workshop as well.
 
-## Extra Hands-On Labs
+For these labs to work you need to setup your machine for [Ionic](http://ionicframework.com) development.  The instructions do vary depending on if you are on Windows or Mac.  Linux is supported for development but we are not going to be using it in this workshop.
 
-These are labs that are not planned into the workshop schedule but still are useful to do on your own or if time permits during the workshop
+[Windows Install Steps]({{"workshops/ionic/IonicWorkshop-Lab1-InstallingIonic-Windows/" | prepend: site.baseurl | prepend: site.url }})
 
-{% assign extras = site.workshops | sort: 'title' %}
-{% for lab in extras %}
-
-{% if lab.type == "ionicextra" %}
-<a href="{{ lab.url | prepend: site.baseurl }}">{{ lab.title }}<br /></a>
-{% endif %}
-{% endfor %}
-
+[Mac Install Steps]({{"workshops/ionic/IonicWorkshop-Lab1-InstallingIonic-Mac/" | prepend: site.baseurl | prepend: site.url }})

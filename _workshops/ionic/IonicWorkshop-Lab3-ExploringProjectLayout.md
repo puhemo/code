@@ -3,7 +3,9 @@ collection: workshops
 title: 'Lab 03: The Project Layout'
 published: true
 type: ionic
-layout: workshoppost
+layout: workshoppost2
+order: 3
+lab: ionic
 ---
 
 ??? NEED TO UPDATE FOR VS CODE ????

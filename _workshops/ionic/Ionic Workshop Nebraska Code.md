@@ -3,7 +3,7 @@ collection: workshops
 title: 'Agenda'
 published: true
 type: ionicoverview
-layout: workshoppost
+layout: workshoppost2
 ---
 
 <!-- DOCTOC SKIP -->

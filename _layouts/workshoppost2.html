@@ -1,0 +1,16 @@
+---
+layout: workshop2
+---
+
+<div class="post">
+    <h1 class="post-title">{% if page.ishome != null %}<img src="images/logo.png" alt="{{page.type}} Logo">{% endif %}{{ page.title }}</h1>
+    <span class="post-date" {% if page.ishome != null %} style="margin-left: 3.5em;" {% endif %}>{{ page.date | date_to_string }}</span>
+    <p>&nbsp;</p>
+    {% if page.ishome == null %}
+    {% include workshoppaging.html %}
+    {% endif %}
+    {{ content }}
+    {% if page.ishome == null %}
+    {% include workshoppaging.html %}
+    {% endif %}
+</div>

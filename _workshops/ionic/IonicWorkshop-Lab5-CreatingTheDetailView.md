@@ -3,7 +3,9 @@ collection: workshops
 title: 'Lab 05: Adding Details Page'
 published: true
 type: ionic
-layout: workshoppost
+layout: workshoppost2
+order: 5
+lab: ionic
 ---
 
 
