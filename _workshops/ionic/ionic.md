@@ -22,6 +22,8 @@ Welcome to my [Ionic](http://ionicframework.com) workshop.  This workshop is des
 
 For these labs to work you need to setup your machine for [Ionic](http://ionicframework.com) development.  The instructions do vary depending on if you are on Windows or Mac.  Linux is supported for development but we are not going to be using it in this workshop.
 
+## Get Started
+
 [Windows Install Steps]({{"workshops/ionic/IonicWorkshop-Lab1-InstallingIonic-Windows/" | prepend: site.baseurl | prepend: site.url }})
 
 [Mac Install Steps]({{"workshops/ionic/IonicWorkshop-Lab1-InstallingIonic-Mac/" | prepend: site.baseurl | prepend: site.url }})

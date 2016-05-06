@@ -13,11 +13,15 @@ Here you will find a list of available workshop tutorials that I have created.
 {% if lab.ishome == true and lab.url != "/workshops/index") %}
 <article>
 <header>
-<h2><a href="{{ lab.url | prepend: site.baseurl }}.html">{{ lab.title }}<br /></a></h2>
+<h2 class="post-title"><img src="{{ "/images/logo.png" | prepend: lab.type }}" alt="{{page.type}} Logo"><a href="{{ lab.url | prepend: site.baseurl }}.html">{{ lab.title }}<br /></a></h2>
 </header>
  <div>
 {{ lab.excerpt | markdownify }}
   </div>
+<footer class="more">
+  <p><a href="{{ lab.url }}">start workshop &raquo;</a></p>
+</footer>
+
 </article>
 {% endif %}
 {% endfor %}
