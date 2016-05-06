@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Add Table of Contents to Markdown'
-date: 5/9/2016 06:00
+date: 2016-05-09 06:00
 categories: ['github', 'markdown', 'blogging', 'npm']
 published: true
 excerpt: |
