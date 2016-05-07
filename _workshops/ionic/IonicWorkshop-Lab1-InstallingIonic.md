@@ -152,7 +152,7 @@ When deploying to an Android device you will be able to use the Chrome Developer
 1. Click the "Download Chrome" button to download chrome
 1. Launch the installer exe after it downloads and follow the on screen instructions
 
-## Section 2.3: Visual Studio Code
+### Section 2.3: Visual Studio Code
 
 > **<font color="red">NOTE:</font> If you already have Visual Studio Code installed, you can skip this section and go to [section 30](section-30-ionic)
 

@@ -21,13 +21,8 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon.png" />-->
-    <link href="{{ " /workshop-main.css " | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
+    <link href="{{ "/workshop.css" | prepend: site.baseurl }}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
-<!--
-    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,200italic,300italic,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
--->
-
     <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
 </head>
@@ -61,26 +56,17 @@
     {% if page.layout != "workshoppage2" %}
         {% include workshoppostsidebar2.html %}
     {% endif %}
-
-
-
-    <!--<footer class="footer">
-        <section class="copy">
-            <h4 class="disclaimer">digitaldrummerj.me</h4>
-            <p>Est. 2015 by Justin James</a></p>
-        </section>
-    </footer>
--->
-    <footer  class="footer">
-        <section class="copy">
-        <span><a href="{{ "/" | prepend: site.baseurl }}">{% if page.author %}{{ page.author }}{% else %}{{site.author}}{% endif %}</a></span>
-      <span>{% for link in site.links %}{% if link[1] %}<a href="{{ link[1] }}"><i class="fa fa-{{ link[0] }}-square"></i></a>{% endif %}{% endfor %}
-        </span>
-        <span>&copy; {{ site.time | date: "%Y" }}</span>
-            </section>
-    </footer>
-    {% include analytics_google.html %}
-
 </div>
+<footer class="footer">
+            <span><a href="{{ "/" | prepend: site.baseurl }}">{% if page.author %}{{ page.author }}{% else %}{{site.author}}{% endif %}</a></span>
+  <span>{% for link in site.links %}{% if link[1] %}<a href="{{ link[1] }}"><i class="fa fa-{{ link[0] }}-square"></i></a>{% endif %}{% endfor %}
+    </span>
+            <span>&copy; {{ site.time | date: "%Y" }}</span>
+    </footer>
+
+
+
+{% include analytics_google.html %}
+
 </body>
 </html>

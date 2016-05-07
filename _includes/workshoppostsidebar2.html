@@ -25,13 +25,9 @@
     <li class="<%= if page.id is @document.id then 'active' else 'inactive' %>">
         <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url  | remove_first: '/'  | prepend: site.baseurl | prepend: site.url}}">{{ node.title }}</a>
     </li>
-
     {% endif %}
     {% endfor %}
         </ul>
-
-
-
 
 <h3 class="sidebar-description">Extra Labs:</h3>
     <ul class="sidebar-items" id="extras">
