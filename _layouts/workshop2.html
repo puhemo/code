@@ -37,7 +37,7 @@
         </ul>
     </nav>
 </div>
-<header class="header">
+<header>
     <h1 class="main-title">
         <a href="{{ home }}"><img src="/images/lightbulp.png" alt="Workshop Logo" />
         {% if page.lab != null  %}
@@ -57,7 +57,7 @@
         {% include workshoppostsidebar2.html %}
     {% endif %}
 </div>
-<footer class="footer">
+<footer>
             <span><a href="{{ "/" | prepend: site.baseurl }}">{% if page.author %}{{ page.author }}{% else %}{{site.author}}{% endif %}</a></span>
   <span>{% for link in site.links %}{% if link[1] %}<a href="{{ link[1] }}"><i class="fa fa-{{ link[0] }}-square"></i></a>{% endif %}{% endfor %}
     </span>

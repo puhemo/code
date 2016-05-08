@@ -8,7 +8,6 @@ order: 5
 lab: ionic
 ---
 
-
 Length: 30 minutes
 
 ## Objective

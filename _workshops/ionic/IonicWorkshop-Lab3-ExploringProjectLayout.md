@@ -6,18 +6,15 @@ type: ionic
 layout: workshoppost2
 order: 3
 lab: ionic
+todo: |
+    * Update screenshots to use Visual Studio code
+    * Reference John Papa's Style Guide in section 3.3
+    * Add shortcut for VS Code hide folder structure
+    * Give quick Visual Studio Code overview of usage.  Open multiple panes. Git usage. see open files close all open files
+    * Add common VS Code settings that I have
 ---
 
-<div id="todo">
-    <ul>
-        <li>Update screenshots to use Visual Studio code</li>
-        <li>Reference John Papa's Style Guide in section 3.3</li>
-        <li>Add shortcut for VS Code hide folder structure</li>
-        <li>Give quick Visual Studio Code overview of usage.  Open multiple panes. Git usage. see open files close all open files</li>
-        <li>Add common VS Code settings that I have</li>
 
-    </ul>
-</div>
 
 Length: 10 minutes
 

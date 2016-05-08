@@ -6,22 +6,17 @@ type: ionic
 layout: workshoppost2
 order: 2
 lab: ionic
+todo: |
+    * Validate Mac security for ionic project directory
+    * Mac Chrome Dev Tools Shortcut
+    * Done - Add more information about the start command is actually doing
+    * Done - Update screenshot to not show lab
+    * Done - Create seperate section for the lab
+    * Done - Link localhost url
+    * Done - Toogle Device Mode icon
 ---
 
 Length: 5-10 minutes (depending on internet connection)
-
-<div id="todo">
-<ul>
-<li>Validate Mac security for ionic project directory</li>
-<li>Mac Chrome Dev Tools Shortcut</li>
-<li class="done">Add more information about the start command is actually doing</li>
-<li class="done">Update screenshot to not show lab</li>
-<li class="done">Create seperate section for the lab</li>
-<li class="done">Link localhost url</li>
-<li class="done">Toogle Device Mode icon</li>
-</ul>
-
-</div>
 
 ## Objectives
 
