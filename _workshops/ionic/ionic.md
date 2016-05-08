@@ -26,4 +26,16 @@ For these labs to work you need to setup your machine for [Ionic](http://ionicfr
   <p><a href="IonicWorkshop-Lab1-InstallingIonic">Start Lab 1 - Installing Ionic &raquo;</a></p>
 </div>
 
+<div id="todo">
+    <ul>
+        <li>Validate lengths for each lab</li>
+        <li>generate pdf for all of labs (optional)</li>
+        <li>make sure that all labs have todo removed from them</li>
+        <li>Add links to slides</li>
+        <li>update TOC</li>
+        <li>Remove Git tab sections</li>
+
+
+</ul>
+</div>
 

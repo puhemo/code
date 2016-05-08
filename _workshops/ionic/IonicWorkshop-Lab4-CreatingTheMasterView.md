@@ -7,7 +7,18 @@ layout: workshoppost2
 order: 4
 lab: ionic
 ---
+<div id="todo">
+    <ul>
+        <li>Update objectives</li>
+        <li>Add adding routes</li>
+        <li>Update for Projects page instead of Contacts.html</li>
+        <li>Make first service pull data from json file</li>
+        <li>explain minification safe options</li>
+        <li>explain why you may not care about minification</li>
+        <li>Show how to output the json version of projects</li>
 
+    </ul>
+</div>
 Length: 30 minutes
 
 ## Objectives

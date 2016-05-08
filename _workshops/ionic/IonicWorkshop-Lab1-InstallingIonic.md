@@ -1,6 +1,6 @@
 ---
 collection: workshops
-title: 'Lab 01: Windows Installations'
+title: 'Lab 01: Ionic Setup'
 published: true
 type: ionic
 layout: workshoppost2
@@ -28,7 +28,7 @@ Setup your Windows computer with the required software to create an Ionic Framew
   - [Section 2.0: NodeJs](#section-20-nodejs)
   - [Section 2.1: Git Command Line](#section-21-git-command-line)
   - [Section 2.2: Google Chrome](#section-22-google-chrome)
-- [Section 2.3: Visual Studio Code](#section-23-visual-studio-code)
+  - [Section 2.3: Visual Studio Code](#section-23-visual-studio-code)
 - [Section 3.0: Ionic](#section-30-ionic)
 - [Conclusion](#conclusion)
 
