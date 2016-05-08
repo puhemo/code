@@ -18,9 +18,9 @@ Here you will find a list of available workshop tutorials that I have created.
  <div>
 {{ lab.excerpt | markdownify }}
   </div>
-<footer class="more">
+<div class="more-link">
   <p><a href="{{ lab.url }}.html">start workshop &raquo;</a></p>
-</footer>
+</div>
 
 </article>
 {% endif %}
