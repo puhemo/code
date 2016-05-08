@@ -1,10 +1,10 @@
 ---
 collection: workshops
-title: 'Lab 04: Adding Master View'
+title: 'Lab 05: Adding Master View'
 published: true
 type: ionic
 layout: workshoppost2
-order: 4
+order: 5
 lab: ionic
 todo: |
     * Update objectives
@@ -29,10 +29,10 @@ Length: 30 minutes
 <h2>Table of Contents</h2>
 
 - [Git Setup (Optional)](#git-setup-optional)
-- [Section 4.0: Adding New Page](#section-40-adding-new-page)
-- [Section 4.1: Creating Your First Service](#section-41-creating-your-first-service)
-- [Section 4.2: Binding Service Data To UI](#section-42-binding-service-data-to-ui)
-- [Section 4.3: Giving the UI a Little Class](#section-43-giving-the-ui-a-little-class)
+- [Section 5.0: Adding New Page](#section-50-adding-new-page)
+- [Section 5.1: Creating Your First Service](#section-51-creating-your-first-service)
+- [Section 5.2: Binding Service Data To UI](#section-52-binding-service-data-to-ui)
+- [Section 5.3: Giving the UI a Little Class](#section-53-giving-the-ui-a-little-class)
 - [Wrap-up](#wrap-up)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -45,7 +45,7 @@ If you intend to use the completed version of the steps, you need to clone the r
 
     $ git clone https://github.com/IonicWorkshop/Lab4-AddingAView.git
 
-## Section 4.0: Adding New Page
+## Section 5.0: Adding New Page
 
 **Get Completed Steps (optional)**
 
@@ -96,7 +96,7 @@ To download the completed steps for this section, run the following git command:
 
 1. We have now add the placeholders for the page.  In the next section we will add the controllers and services to get data.
 
-## Section 4.1: Creating Your First Service
+## Section 5.1: Creating Your First Service
 
 **Section Overview**
 
@@ -160,7 +160,7 @@ To download the completed steps for this section, run the following git command:
     ![Contacts Raw Json](../images/Lab4/Lab4-ContactsRawJson.png)
     
 
-## Section 4.2: Binding Service Data To UI
+## Section 5.2: Binding Service Data To UI
 
 **Section Overview**
 
@@ -187,7 +187,7 @@ To download the completed steps for this section, run the following git command:
 1. To get to the &lt;ion-list&gt; documentation, at the command prompt, type ionic docs ion-list or go to [http://ionicframework.com/docs/api/directive/ionList/](http://ionicframework.com/docs/api/directive/ionList/)
 
 
-## Section 4.3: Giving the UI a Little Class
+## Section 5.3: Giving the UI a Little Class
 
 **Section Overview**
 

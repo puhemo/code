@@ -30,5 +30,12 @@ Welcome to my [Ionic](http://ionicframework.com) workshop.  This workshop is des
 For these labs to work you need to setup your machine for [Ionic](http://ionicframework.com) development.  The instructions do vary depending on if you are on Windows or Mac.  Linux is supported for development but we are not going to be using it in this workshop.
 
 <div class="more-link">
-  <p><a href="IonicWorkshop-Lab1-InstallingIonic">Start Lab 1 - Installing Ionic &raquo;</a></p>
+<p>
+
+{% for lab in (site.workshops | where: "type", page.type | order: 'title') %}
+{% if lab.type == page.type and lab.order == 1 %}
+<a href="{{lab.url}}">Start {{lab.title}} &raquo;</a>
+{% endif %}
+{% endfor %}
+</p>
 </div>

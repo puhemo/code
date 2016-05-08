@@ -16,6 +16,9 @@ todo: |
     * Done - Toogle Device Mode icon
 ---
 
+{% assign imagedir = "../images/first-project/" %}
+
+
 Length: 5-10 minutes (depending on internet connection)
 
 ## Objectives
@@ -26,23 +29,25 @@ Create your first Ionic project and view the project in a web browser.
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <h2>Table of Contents</h2>
 
-- [Section 2.0: Creating A Project](#section-20-creating-a-project)
-  - [Steps](#steps)
-  - [Start Command Details](#start-command-details)
-  - [Mac Cleanup](#mac-cleanup)
-- [Section 2.1: Install Dependencies](#section-21-install-dependencies)
-- [Section 2.2: Testing Project](#section-22-testing-project)
+- [2.0: Creating A Project](#20-creating-a-project)
+  - [2.0.1: Steps](#201-steps)
+  - [2.0.2 Start Command Details](#202-start-command-details)
+  - [2.0.3: Mac Cleanup](#203-mac-cleanup)
+- [2.1: Install Dependencies](#21-install-dependencies)
+- [2.2: Testing Project](#22-testing-project)
+  - [2.2.1: Ionic Lab](#221-ionic-lab)
+  - [2.2.2: Chrome Dev Tools](#222-chrome-dev-tools)
 - [Conclusion](#conclusion)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Section 2.0: Creating A Project
+## 2.0: Creating A Project
 
 Ionic comes with 3 templates: blank, side menu, and tabs.  These templates have everything that you need to get started using ionic and deploy it to a device.  For this workshop we are going to use the blank template and build up our application from scratch.
 
 The side menu comes with a pre-configured side menu while the tabs template comes with tabs already setup.  Both of these templates also include a few example pages.
 
-### Steps
+### 2.0.1: Steps
 
 1. Open a command prompt (Windows) or terminal (OSx)
 1. Navigate to where you typically store your project files/code.  For myself, here is where I store my project files: 
@@ -56,7 +61,7 @@ The side menu comes with a pre-configured side menu while the tabs template come
 
     > The start command may take a few minutes to run
 
-### Start Command Details
+### 2.0.2 Start Command Details
 
 While the start command runs lets take a look at what is doing for us and go through the output that it generates.
 
@@ -115,14 +120,14 @@ While the start command runs lets take a look at what is doing for us and go thr
         +
         +---------------------------------------------------------+
 
-### Mac Cleanup
+### 2.0.3: Mac Cleanup
 
 For OSx, you may need to change the permissions on your app directory for all of the ionic command to work like adding platforms which we will do later.
 
         $ sudo chmod -R 777 myFirstIonicApp 
 
 
-## Section 2.1: Install Dependencies
+## 2.1: Install Dependencies
 
 Before we can run the project, we need to install the required dependencies.
 
@@ -132,7 +137,7 @@ Before we can run the project, we need to install the required dependencies.
 
 > the npm install command will take several minutes to run depending on internet speed
 
-## Section 2.2: Testing Project
+## 2.2: Testing Project
 
 We are now ready to test our application using Google Chrome.  To do this, the Ionic framework ship with the command, ionic serve.  Ionic serve starts up a node web server on port 8100 and launches your default web browser to [http://localhost:8100](http://localhost:8100).
 
@@ -144,19 +149,19 @@ In your open command prompt (Windows) or terminal (OSx), from your project direc
 
 You should see a view similar to this in your browser.
 
-![view in browser](../images/lab2/ionic-serve-png.png)
+![view in browser]({{"ionic-serve-png.png" | prepend: imagedir}})
 
 This view however does not give you much of an idea how it might look on an actual device.    There are 2 ways to solve that we can emulate a mobile device from within Google Chrome.
 
-**Ionic Lab**
+### 2.2.1: Ionic Lab
 
 The first way is to use the optional ionic-lab web page to see a side-by-side view of iOS and Android within Chrome.  Even if you don't pass the --lab option to the ionic serve command, you can always get to the Ionic lab page at [http://localhost:8100/ionic-lab](http://localhost:8100/ionic-lab)
 
     $ ionic serve --lab
 
-![Ionic Lab](../images/lab2/ionic-serve-lab.png)
+![Ionic Lab]({{"ionic-serve-lab.png" | prepend: imagedir}})
 
-**Chrome Dev Tools**
+### 2.2.2: Chrome Dev Tools
 
 The second way is to turn on the device emulator within the Chrome Developer Tools.  Chrome has several known devices out of the box or you can add your own custom ones.
 
@@ -164,25 +169,25 @@ The second way is to turn on the device emulator within the Chrome Developer Too
     * Windows: F21
     * Mac:
 
-    ![Chrome Menu](../images/lab2/menu-icon.png)
+    ![Chrome Menu]({{ "menu-icon.png" | prepend: imagedir }})
 
-1. Selecct More Tools -> Developer Tools
+1. Select More Tools -> Developer Tools
 
-    ![Chrome Menu](../images/lab2/menu-dev-tools.png)
+    ![Chrome Menu]({{ "menu-dev-tools.png" | prepend: imagedir }})
 
-1. Click on the Toogle Device Mode icon
+1. Click on the Toggle Device Mode icon
     * Windows: Ctrl+Shift+M
     * Mac:
 
-    ![Device Mode Icon](../images/lab2/device-mode-button.png)
+    ![Device Mode Icon]({{ "device-mode-button.png" | prepend: imagedir }})
 
 1. You can now pick the device that you want to emulate
 
-    ![Device Mode Options](../images/lab2/device-mode.png)
+    ![Device Mode Options]({{ "device-mode.png" | prepend: imagedir }})
 
 1. If you don't see the device listed or want to remove emulated devices, click the Edit button under the device dropdown.
 
-    ![Device Mode Edit Dropdown Option](../images/lab2/device-mode-edit.png)
+    ![Device Mode Edit Dropdown Option]({{ "device-mode-edit.png" | prepend: imagedir }})
 
 ## Conclusion
 

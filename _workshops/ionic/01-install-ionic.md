@@ -18,29 +18,29 @@ Setup your Windows computer with the required software to create an Ionic Framew
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <h2>Table of Contents</h2>
 
-- [Windows](#windows)
-  - [Section 1.0: Chocolatey](#section-10-chocolatey)
-  - [Section 1.1: NodeJs](#section-11-nodejs)
-  - [Section 1.2: Git Command line](#section-12-git-command-line)
-  - [Section 1.3: Google Chrome](#section-13-google-chrome)
-  - [Section 1.4: Visual Studio Code](#section-14-visual-studio-code)
-- [Mac](#mac)
-  - [Section 2.0: NodeJs](#section-20-nodejs)
-  - [Section 2.1: Git Command Line](#section-21-git-command-line)
-  - [Section 2.2: Google Chrome](#section-22-google-chrome)
-  - [Section 2.3: Visual Studio Code](#section-23-visual-studio-code)
-- [Section 3.0: Ionic](#section-30-ionic)
+- [1.0: Windows](#10-windows)
+  - [1.0.1: Chocolatey](#101-chocolatey)
+  - [1.0.1: NodeJs](#101-nodejs)
+  - [1.0.2: Git Command line](#102-git-command-line)
+  - [1.0.3: Google Chrome](#103-google-chrome)
+  - [1.0.4: Visual Studio Code](#104-visual-studio-code)
+- [2.0: Mac](#20-mac)
+  - [2.1.1: NodeJs](#211-nodejs)
+  - [2.1.2: Git Command Line](#212-git-command-line)
+  - [2.1.3: Google Chrome](#213-google-chrome)
+  - [2.1.4: Visual Studio Code](#214-visual-studio-code)
+- [3.0: Ionic](#30-ionic)
 - [Conclusion](#conclusion)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Windows
+## 1.0: Windows
 
 Below are the instructions for installation if you are on a Windows machine.
 
-> **<font color="red">NOTE:</font>** Already have node v.4+, the git command line, Google Chrome and Visual Studio Code installed, skip to [section 3.0](#section-30-ionic)
+> **<font color="red">NOTE:</font>** Already have node v.4+, the git command line, Google Chrome and Visual Studio Code installed, skip to [section 3.0](#30-ionic)
 
-### Section 1.0: Chocolatey
+### 1.0.1: Chocolatey
 
 [Chocolatey](http://chocolatey.org) is a Windows package manager that takes care of downloading and installing software packages.  For Windows, it makes installing software a breeze if there is an existing Chocolatey package which for the software we are using there are packages available.
 
@@ -54,11 +54,11 @@ Below are the instructions for installation if you are on a Windows machine.
 
 1. Close and re-open the administrative command prompt to make pick the environment variables that were added for chocolatey
 
-### Section 1.1: NodeJs
+### 1.0.1: NodeJs
 
-> **<font color="red">NOTE:</font>** Already have node v.4+ installed, skip to [section 1.2](#section-12-git-command-line)
+> **<font color="red">NOTE:</font>** Already have node v.4+ installed, skip to [section 1.0.2](#102-git-command-line)
 
-1. From the administrative command prompt you opened in [section 1.0](#section-10-chocolatey), install the latest NodeJs version by running:
+1. From the administrative command prompt you opened in [section 1.0.1](#101-chocolatey), install the latest NodeJs version by running:
 
         $ choco install -y nodejs
 
@@ -68,11 +68,11 @@ Below are the instructions for installation if you are on a Windows machine.
 
 1. If the node -v command returns a version number, then node is installed and working correctly.
 
-### Section 1.2: Git Command line
+### 1.0.2: Git Command line
 
-> **<font color="red">NOTE:</font>** Already have the git command line installed, skip to [section 1.3](#section-13-google-chrome)
+> **<font color="red">NOTE:</font>** Already have the git command line installed, skip to [section 1.0.3](#103-google-chrome)
 
-1. From the administrative command prompt you opened in [section 1.0](#section-10-chocolatey) run:
+1. From the administrative command prompt you opened in [section 1.0.1](#101-chocolatey) run:
 
         $ choco install -y git
 
@@ -82,41 +82,41 @@ Below are the instructions for installation if you are on a Windows machine.
         
 1. If the git --version command returns a version number, then git is installed
 
-### Section 1.3: Google Chrome
+### 1.0.3: Google Chrome
 
-> **<font color="red">NOTE:</font>** Already have Google Chrome installed, skip to [section 1.4](#section-14-visual-studio-code)
+> **<font color="red">NOTE:</font>** Already have Google Chrome installed, skip to [section 1.0.4](#104-visual-studio-code)
 
 For testing in the browser as well on Android devices Google Chrome gives you the best debugging experience.  
 
 When deploying to an Android device you will be able to use the Chrome Developer Tools for debugging just as you do normally for a web site.
 
-1. From the administrative command prompt you opened in [section 1.0](#section-10-chocolatey) run:
+1. From the administrative command prompt you opened in [section 1.0.1](#101-chocolatey) run:
 
         $ choco install -y googlechrome
         
 
-### Section 1.4: Visual Studio Code
+### 1.0.4: Visual Studio Code
 
-> **<font color="red">NOTE:</font>** Already have Visual Studio Code installed, skip to [section 3.0](#section-30-ionic)
+> **<font color="red">NOTE:</font>** Already have Visual Studio Code installed, skip to [section 3.0](#30-ionic)
 
 Visual Studio Code is a great free lightweight cross-platform code editor.  
 
 By having everyone use the same editor it helps to eliminate editor specific issues.  You can however use any text editor or coding ide that you would like for developing ionic applications. 
 
-1. From the administrative command prompt you opened in [section 1.0](#section-10-chocolatey) run:
+1. From the administrative command prompt you opened in [section 1.0.1](#101-chocolatey) run:
 
         $ choco install -y visualstudiocode
       
 
-## Mac
+## 2.0: Mac
 
 Below are the instructions for installation if you are on a Mac machine.
 
-> **<font color="red">NOTE:</font>** Already have node v.4+, the git command line, Google Chrome and Visual Studio Code installed, skip to [section 3.0](#section-30-ionic)
+> **<font color="red">NOTE:</font>** Already have node v.4+, the git command line, Google Chrome and Visual Studio Code installed, skip to [section 3.0](#30-ionic)
 
-### Section 2.0: NodeJs
+### 2.1.1: NodeJs
 
-> **<font color="red">NOTE:</font>** If you already have node v.4+ installed, you can skip this section and go to [section 2.1](section-21-git-command-line)
+> **<font color="red">NOTE:</font>** If you already have node v.4+ installed, you can skip this section and go to [section 2.0.1](201-git-command-line)
 
 
 1. Open a Web Browser and go to [http://nodejs.org](http://nodejs.org)
@@ -128,7 +128,7 @@ Below are the instructions for installation if you are on a Mac machine.
 
 1. If the node -v command returns a version number, then node is installed
 
-### Section 2.1: Git Command Line
+### 2.1.2: Git Command Line
 
 On a recent Mac git comes pre-installed.  To verify it is installed open up terminal and run:
 
@@ -140,9 +140,9 @@ If you do not have the git command line tools installed, you will need to instal
 1. Click the download button.
 1. Run the downloaded exe and follow the installer instructions.
 
-### Section 2.2: Google Chrome
+### 2.1.3: Google Chrome
 
-> **<font color="red">NOTE:</font>** If you already have Google Chrome installed, you can skip this section and go to [section 2.3](section-23-visual-studio-code)
+> **<font color="red">NOTE:</font>** If you already have Google Chrome installed, you can skip this section and go to [section 2.0.3](203-visual-studio-code)
 
 For testing in the browser as well on Android devices Google Chrome gives you the best debugging experience.
 
@@ -152,9 +152,9 @@ When deploying to an Android device you will be able to use the Chrome Developer
 1. Click the "Download Chrome" button to download chrome
 1. Launch the installer exe after it downloads and follow the on screen instructions
 
-### Section 2.3: Visual Studio Code
+### 2.1.4: Visual Studio Code
 
-> **<font color="red">NOTE:</font> If you already have Visual Studio Code installed, you can skip this section and go to [section 30](section-30-ionic)
+> **<font color="red">NOTE:</font> If you already have Visual Studio Code installed, you can skip this section and go to [section 30](30-ionic)
 
 Visual Studio Code is a great free lightweight cross-platform code editor.
 
@@ -167,14 +167,14 @@ By having everyone use the same editor it helps to eliminate editor specific iss
 1. Add VS Code to your Dock by right-clicking on the icon and choosing Options, Keep in Dock.
 
 
-## Section 3.0: Ionic
+## 3.0: Ionic
 
 1. Open up a regular non-administrative command prompt or terminal 
 1. Run the command: 
 
         npm install -g ionic cordova bower gulp
                     
-**Verify Installation**
+### 3.0.1: Verify Installation
 
 1. Check that ionic installed correctly, run: 
     

@@ -1,10 +1,10 @@
 ---
 collection: workshops
-title: 'Lab 05: Adding Details Page'
+title: 'Lab 06: Adding Details Page'
 published: true
 type: ionic
 layout: workshoppost2
-order: 5
+order: 6
 lab: ionic
 ---
 
@@ -21,7 +21,7 @@ Length: 30 minutes
 <h2>Table of Contents</h2>
 
 - [Git Setup (Optional)](#git-setup-optional)
-- [Section 5.0: Adding the Contact Details Page](#section-50-adding-the-contact-details-page)
+- [Section 6.0: Adding the Contact Details Page](#section-60-adding-the-contact-details-page)
 - [Wrap-up](#wrap-up)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -40,7 +40,7 @@ This lab also builds on the previous lab.  If you did not do or complete the pre
     $ git checkout -f Lab4Completed
 
 
-## Section 5.0: Adding the Contact Details Page
+## Section 6.0: Adding the Contact Details Page
 
 **Get Completed Steps (optional)**
 
@@ -73,7 +73,7 @@ To download the completed steps for this section, run the following git command:
 
     ![Lab4-ContactDetailsPlaceholder.png](../images/Lab5/Lab5-ContactDetailsPlaceholder.png)
     
-## Section 5.1: Creating the Contact Controller
+## Section 6.1: Creating the Contact Controller
 
 **Get Completed Steps (optional)**
 
@@ -100,7 +100,7 @@ If you are following along using git, reset your project to Step1.
 
     ![Lab4-ContactDetailsJson.png](../images/Lab5/Lab5-ContactDetailsJson.png)
     
-## Section 5.2: Making a Pretty UI
+## Section 6.2: Making a Pretty UI
 
 **Section Overview**
 

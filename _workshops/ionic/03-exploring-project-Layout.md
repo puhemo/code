@@ -8,56 +8,59 @@ order: 3
 lab: ionic
 todo: |
     * Update screenshots to use Visual Studio code
-    * Reference John Papa's Style Guide in section 3.3
-    * Add shortcut for VS Code hide folder structure
-    * Give quick Visual Studio Code overview of usage.  Open multiple panes. Git usage. see open files close all open files
-    * Add common VS Code settings that I have
+    * Done - Reference John Papa's Style Guide in section 3.3
+    * Done - Add shortcut for VS Code hide folder structure
+    * Done - Give quick Visual Studio Code overview of usage.  Open multiple panes. Git usage. see open files close all open files
+    * Done - Add common VS Code settings that I have
 ---
 
-
-
+{% assign imagedir = "../images/project-layout/" %}
 Length: 10 minutes
-
-**Note**: For this lab, I will be using Visual Studio Code as our editor but you can use any text editor.  The install steps for Visual Studio Code are in [Lab 01: Ionic Setup](../IonicWorkshop-Lab1-InstallingIonic/)
 
 ## Objectives
 
 Understand the folder structure for an Ionic project and where to place files.
 
+>**Note**: For this lab, I will be using Visual Studio Code as our editor but you can use any text editor.  The install steps for Visual Studio Code are in [Lab 01: Ionic Setup](../IonicWorkshop-Lab1-InstallingIonic/)
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <h2>Table of Contents</h2>
 
-- [Section 3.0: Opening Project in WebStorm](#section-30-opening-project-in-webstorm)
-- [Section 3.1: Exploring Project Layout](#section-31-exploring-project-layout)
+- [3.0: Opening Project in Visual Studio Code](#30-opening-project-in-visual-studio-code)
+- [3.1: Exploring Project Layout](#31-exploring-project-layout)
+- [3.2: Suggested Structure](#32-suggested-structure)
+  - [3.2.1: Structure By Type](#321-structure-by-type)
+  - [3.3.2: Structure By Page](#332-structure-by-page)
+- [3.3 Angular Coding Style](#33-angular-coding-style)
 - [Wrap-up](#wrap-up)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Section 3.0: Opening Project in Visual Studio Code
+## 3.0: Opening Project in Visual Studio Code
 
 1. Open Visual Studio Code
 1. Click Open
     
-    ![Lab3-WebStormInitialScreen.png](../images/Lab3/Lab3-WebStormInitialScreen.png)
+    ![Lab3-WebStormInitialScreen.png]({{ "Lab3-WebStormInitialScreen.png" | prepend: imagedir }})
     
 1. Navigate to where you create the myFirstApp folder and click Choose
 
-    ![Lab3-WebStormChooseFolderLocation.png](../images/Lab3/Lab3-WebStormChooseFolderLocation.png)
+    ![Lab3-WebStormChooseFolderLocation.png]({{ "Lab3-WebStormChooseFolderLocation.png" | prepend: imagedir }})
     
 1. Your project should now be opened in Visual Stuod Code, similar to this screenshot.
 
-    ![Lab3-WebStormProjectOpened.png](../images/lab3/Lab3-WebStormProjectOpened.png)
+    ![Lab3-WebStormProjectOpened.png]({{ "Lab3-WebStormProjectOpened.png" | prepend: imagedir }})
 
 
 
-## Section 3.1: Exploring Project Layout
+## 3.1: Exploring Project Layout
 
 1. With the myFirstApp highlighted, click on the arrow next to the project name.
 
-    ![Lab3-WebStormTreeExpandTopLevel.png](../images/Lab3/Lab3-WebStormTreeExpandTopLevel.png)
+    ![Lab3-WebStormTreeExpandTopLevel.png]({{ "Lab3-WebStormTreeExpandTopLevel.png" | prepend: imagedir }})
 
-1. Top level projectused for structure:
+1. Top level project used for structure:
 
     <pre>
     ├── hooks &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;extra commands to run on cordova build
@@ -74,7 +77,7 @@ Understand the folder structure for an Ionic project and where to place files.
 
 1. Expand the www folder
 
-    ![Lab3-WebStormWWWTreeExpanded.png](../images/Lab3/Lab3-WebStormWWWTreeExpanded.png)
+    ![Lab3-WebStormWWWTreeExpanded.png]({{ "Lab3-WebStormWWWTreeExpanded.png" | prepend: imagedir }})
     
 1.  www folder structure:
 
@@ -87,11 +90,11 @@ Understand the folder structure for an Ionic project and where to place files.
     └── index.html &nbsp; &nbsp; main file. js/css/angular/ionic references
     </pre>
 
-## Section 3.2: Suggested Structure
+## 3.2: Suggested Structure
 
 There are two train of thoughts on how to structure your project depending on the size of the project.  The first option is by type and the second option is by page.
 
-### Structure By Type
+### 3.2.1: Structure By Type
 
 In this structure you create directories to hold controllers, services, directives, etc. and all of the files of that type for the project are stored in the directory.
 
@@ -117,7 +120,7 @@ If later on you decide to change the structure to [Structure By Page](#structure
 &nbsp; &nbsp; ├── config &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; configurations, constants, etc
 </pre>
 
-### Structure By Page
+### 3.3.2: Structure By Page
 
 In this structure you create a directory for each page and that directory contains all of the page specific files for controller, services, directives, etc.
 
@@ -141,10 +144,17 @@ This structure works great for large parts that have lots of files.  You can use
 &nbsp; &nbsp; ├── config &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;global configurations
 </pre>
 
-## Section 3.3 Coding Style
+## 3.3 Angular Coding Style
 
-Reference John Papa's Style Guide
+The Angular Style Guide by John Papa is a starting point for Angular development teams to provide consistency through good practices.  This workshop will use the suggested practices in John Papa's style guide.  You are free to use any style that you would like or that your team has defined as long as it is consistent among the team/projects.
+
+In the words of John Papa:
+
+>*"If you are looking for an opinionated style guide for syntax, conventions, and structuring Angular applications, then step right in. These styles are based on my development experience with Angular, presentations, Pluralsight training courses and working in teams. The purpose of this style guide is to provide guidance on building Angular applications by showing the conventions I use and, more importantly, why I choose them."*
+
+[View the Angular Style Guide](https://github.com/johnpapa/angular-styleguide)
+
 
 ## Wrap-up
 
-Now we are ready to start building our app.  The next lab we will create the master view of the master/detail pages and bind some data from a service to the UI.
+Before we start coding up our application need to do some configuration for Visual Studio Code.  In the next lab we will setup Visual Studio Code for ionic and angular snippets and Intellisense so that we can debug our application right instead Visual Studio Code.
