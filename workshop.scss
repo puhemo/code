@@ -34,7 +34,7 @@ body #paginate {
 
 .content-wrap {
   /*width: 38em;*/
-  margin: 0 1em;
+  margin: 0 2em;
 }
 
 body, a {
@@ -57,15 +57,17 @@ h1 {
 
 h3 {
   font-size: 1.2em;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.43;
   margin-bottom: 1.35em;
+  margin-top: 1.35em;
+  border-top: 1px dashed #d2d2d2;
 }
 
 h2 {
   font-style: italic;
   //text-align: center;
-  font-weight: 600;
+  font-weight: 800;
   font-size: 1.4em;
   margin-top: 1.8em;
   margin-bottom: 1em;
@@ -216,14 +218,14 @@ nav {
 }
 
 .main-copy {
-  width:65%;
+  width:75%;
   float:left;
   font-size:.875em;
   //padding-bottom: 60px;
 }
 
 .sidebar-lists {
-  width: 25%;
+  width: 20%;
   float: right;
   text-align: left;
   font-size: .675em;
