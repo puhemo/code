@@ -4,9 +4,10 @@ title: 'Custom Directive to Change Icon'
 published: true
 type: ionicextra
 layout: workshoppost2
+length: 20 minutes
 ---
 
-Length: 20 minutes
+
 
 ## Objectives
 

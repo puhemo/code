@@ -6,11 +6,11 @@ type: ionic
 layout: workshoppost2
 order: 15
 lab: ionic
+length:
+todo: |
+    * Finish lab
+    * update length
 ---
-
-<H1>???? LAB NOT FINISHED ????</h1>
-
-Length: NA
 
 ## Objective
 

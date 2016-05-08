@@ -6,13 +6,11 @@ type: ionic
 layout: workshoppost2
 order: 12
 lab: ionic
+length:
+todo: |
+    * Finish lab
+    * update length
 ---
-
-
-<H1>???? LAB NEEDS SCREENSHOTS UPDATED ????</h1>
-
-
-Length: 10 minutes
 
 ## Objective
 

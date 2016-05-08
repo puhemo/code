@@ -5,9 +5,10 @@ published: true
 type: ionicextra
 layout: workshoppost2
 lab: ionic
+length: 15 minutes
 ---
 
-Length: 15 minutes
+
 
 ## Objective
 

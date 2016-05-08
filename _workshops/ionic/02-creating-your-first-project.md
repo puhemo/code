@@ -6,6 +6,7 @@ type: ionic
 layout: workshoppost2
 order: 2
 lab: ionic
+length: 5-10 minutes (depending on internet connection)
 todo: |
     * Validate Mac security for ionic project directory
     * Mac Chrome Dev Tools Shortcut
@@ -17,9 +18,6 @@ todo: |
 ---
 
 {% assign imagedir = "../images/first-project/" %}
-
-
-Length: 5-10 minutes (depending on internet connection)
 
 ## Objectives
 

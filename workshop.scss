@@ -201,10 +201,40 @@ nav {
     width: 75%;
     float: left;
     font-size: .875em;
-  }
 
-  img {
-    vertical-align: middle;
+    img {
+      vertical-align: middle;
+    }
+
+    /* more link */
+    div.more-link {
+      clear:both;
+      margin: 1em 0;
+      border-top:none !important;
+
+      a {
+        border-radius: 3px;
+        padding: .3em .6em;
+        transition: background-color .2s ease-out;
+        border: 2px solid;
+        text-decoration: none;
+      }
+    }
+
+    #todo {
+      clear: both;
+      margin-top: 1.8em;
+      margin-bottom: 0.8em;
+      border: 2px solid red;
+      font-weight: 400;
+      font-size: .8em;
+
+      #icon {
+        height: 75px;
+        width: 75px;
+        padding: .5em;
+      }
+    }
   }
   .sidebar-lists {
     width: 20%;
@@ -226,21 +256,6 @@ nav {
       margin: 0;
       text-align: left;
       list-style: none;
-    }
-  }
-
-  /* more link */
-  div.more-link {
-    clear:both;
-    margin: 1em 0;
-    border-top:none !important;
-
-    a {
-      border-radius: 3px;
-      padding: .3em .6em;
-      transition: background-color .2s ease-out;
-      border: 2px solid;
-      text-decoration: none;
     }
   }
 }
@@ -344,21 +359,6 @@ body>footer {
   }
 }
 
-#todo {
-  clear: both;
-  text-align: left;
-  margin-top: 1.8em;
-  margin-bottom: 0.8em;
-  border: 2px solid red;
-  font-weight: 400;
-  font-size: 1.4em;
-  background-image: url({{"images/Todo.png" | prepend: site.baseurl }});
-  background-size: 100% 100%;
-
-  .done {
-    text-decoration: line-through;
-  }
-}
 
 code {
   white-space: pre-wrap;       //css-3

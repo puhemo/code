@@ -6,9 +6,10 @@ type: ionic
 layout: workshoppost2
 order: 1
 lab: ionic
+length: 30 minutes
 ---
 
-Length: 30 minutes (depending on internet connection speed)
+
 
 ## Objective
 

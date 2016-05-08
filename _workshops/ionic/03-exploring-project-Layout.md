@@ -6,6 +6,7 @@ type: ionic
 layout: workshoppost2
 order: 3
 lab: ionic
+length: 10 minutes
 todo: |
     * Update screenshots to use Visual Studio code
     * Done - Reference John Papa's Style Guide in section 3.3
@@ -15,7 +16,6 @@ todo: |
 ---
 
 {% assign imagedir = "../images/project-layout/" %}
-Length: 10 minutes
 
 ## Objectives
 
@@ -40,17 +40,17 @@ Understand the folder structure for an Ionic project and where to place files.
 ## Section 3.0: Opening Project in Visual Studio Code
 
 1. Open Visual Studio Code
-1. Click Open
+1. Click File -> Open Folder...
     
-    ![Lab3-WebStormInitialScreen.png]({{ "Lab3-WebStormInitialScreen.png" | prepend: imagedir }})
+    ![VSCode File Open Folder Menu]({{ "vscode-file-open-folder.png" | prepend: imagedir }})
     
-1. Navigate to where you create the myFirstApp folder and click Choose
+1. Navigate to where you create the myFirstApp folder and click Select Folder
 
-    ![Lab3-WebStormChooseFolderLocation.png]({{ "Lab3-WebStormChooseFolderLocation.png" | prepend: imagedir }})
+    ![VSCode Select Folder]({{ "vscode-select-folder.png" | prepend: imagedir }})
     
-1. Your project should now be opened in Visual Stuod Code, similar to this screenshot.
+1. Your project should now be opened in Visual Studio Code, similar to this screenshot.
 
-    ![Lab3-WebStormProjectOpened.png]({{ "Lab3-WebStormProjectOpened.png" | prepend: imagedir }})
+    ![VSCode Initial Folder Opened View]({{ "vscode-initial-folder-open.png" | prepend: imagedir }})
 
 
 
@@ -58,7 +58,7 @@ Understand the folder structure for an Ionic project and where to place files.
 
 1. With the myFirstApp highlighted, click on the arrow next to the project name.
 
-    ![Lab3-WebStormTreeExpandTopLevel.png]({{ "Lab3-WebStormTreeExpandTopLevel.png" | prepend: imagedir }})
+    ![VSCode Initial Folder Opened View]({{ "vscode-initial-folder-open.png" | prepend: imagedir }})
 
 1. Top level project used for structure:
 
@@ -77,7 +77,7 @@ Understand the folder structure for an Ionic project and where to place files.
 
 1. Expand the www folder
 
-    ![Lab3-WebStormWWWTreeExpanded.png]({{ "Lab3-WebStormWWWTreeExpanded.png" | prepend: imagedir }})
+    ![VSCode WWW Folder Expanded]({{ "vscode-www-expanded.png" | prepend: imagedir }})
     
 1.  www folder structure:
 
@@ -86,7 +86,7 @@ Understand the folder structure for an Ionic project and where to place files.
     ├── img &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;your image files
     ├── js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; your javascript files
     ├── lib &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;vendor javascript such as Ionic and Angular
-    ├── template &nbsp; &nbsp; &nbsp; used to store the view html.
+    ├── template &nbsp; &nbsp; &nbsp; used to store the view html (not yet created).
     └── index.html &nbsp; &nbsp; main file. js/css/angular/ionic references
     </pre>
 
@@ -108,16 +108,29 @@ If later on you decide to change the structure to [Structure By Page](#section-3
 
 <pre>
 ├── js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; javascript files files
+
 &nbsp; &nbsp; ├── controllers &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp; all of the controllers
+
 &nbsp; &nbsp; &nbsp; &nbsp; ├── projects.controller.js &nbsp; &nbsp; &nbsp;controller for projects page
 &nbsp; &nbsp; &nbsp; &nbsp; ├── tasks.controller.js &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;controller for projects page
+
 &nbsp; &nbsp; ├── services &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp; all of the services/factories
+
 &nbsp; &nbsp; &nbsp; &nbsp; ├── projects.services.js &nbsp; &nbsp; &nbsp; &nbsp;services for projects page
 &nbsp; &nbsp; &nbsp; &nbsp; ├── tasks.services.js  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;services for projects page
+
 &nbsp; &nbsp; ├── directives  &nbsp;  &nbsp;  &nbsp;  &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;custom directives
+
 &nbsp; &nbsp; &nbsp; &nbsp; ├── projects.directives.js &nbsp;&nbsp; &nbsp; directories for project page
 &nbsp; &nbsp; &nbsp; &nbsp; ├── tasks.directives.js &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; directories for project page
+
 &nbsp; &nbsp; ├── config &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; configurations, constants, etc
+
+├── templates&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; html for pages
+
+&nbsp; &nbsp; ├── projects.html&nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; html for project page
+&nbsp; &nbsp; ├── tasks.html&nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;html for tasks page
+
 </pre>
 
 ### Section 3.3.2: Structure By Page
@@ -129,19 +142,27 @@ This structure works great for large parts that have lots of files.  You can use
 **example layout**
 
 <pre>
-├── js &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; javascript files files
-&nbsp; &nbsp; ├── projects&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;all of the controllers
-&nbsp; &nbsp; &nbsp; &nbsp; ├── projects.controller.js &nbsp; &nbsp; &nbsp;controller for projects page
-&nbsp; &nbsp; &nbsp; &nbsp; ├── projects.services.js &nbsp; &nbsp; &nbsp; &nbsp;services for projects page
-&nbsp; &nbsp; &nbsp; &nbsp; ├── projects.directives.js &nbsp;&nbsp; &nbsp; directories for project page
-&nbsp; &nbsp; ├── tasks&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; all of the controllers
-&nbsp; &nbsp; &nbsp; &nbsp; ├── tasks.controller.js &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;controller for projects page
-&nbsp; &nbsp; &nbsp; &nbsp; ├── tasks.services.js  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;services for projects page
-&nbsp; &nbsp; &nbsp; &nbsp; ├── tasks.directives.js &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; directories for project page
-&nbsp; &nbsp; ├── services &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;global services/factories
-&nbsp; &nbsp; &nbsp; &nbsp; ├── user.service.js &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;reusable service for users
-&nbsp; &nbsp; ├── directives &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;global directives
-&nbsp; &nbsp; ├── config &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;global configurations
+├── projects&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;all of the controllers
+
+&nbsp; &nbsp; ├── projects.controller.js &nbsp; &nbsp; &nbsp;all files for projects page
+&nbsp; &nbsp; ├── projects.html&nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; html for project page
+&nbsp; &nbsp; ├── projects.services.js &nbsp; &nbsp; &nbsp; &nbsp;services for projects page
+&nbsp; &nbsp; ├── projects.directives.js &nbsp;&nbsp; &nbsp; directories for project page
+
+├── tasks&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; all files for task page
+
+&nbsp; &nbsp; ├── tasks.controller.js &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;controller for projects page
+&nbsp; &nbsp; ├── tasks.html&nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;html for tasks page
+&nbsp; &nbsp; ├── tasks.services.js  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;services for projects page
+&nbsp; &nbsp; ├── tasks.directives.js &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; directories for project page
+
+├── services &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;global services/factories
+
+&nbsp; &nbsp; ├── user.service.js &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;reusable service for users
+
+|── directives &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;global directives
+
+├── config &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;global configurations
 </pre>
 
 ## Section 3.3 Angular Coding Style

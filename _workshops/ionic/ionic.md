@@ -14,6 +14,7 @@ todo: |
     * Add links to slides
     * update TOC
     * Remove Git tab sections
+    * Add dates to add workshop pages
 ---
 
 

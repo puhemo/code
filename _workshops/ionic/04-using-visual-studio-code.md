@@ -6,11 +6,13 @@ type: ionic
 layout: workshoppost2
 order: 4
 lab: ionic
+length: 20 minutes
 todo: |
+    * remove debugging section as you can't do device emulation or inspect element since Chrome will crash and exit process.
 ---
 
 {% assign imagedir = "../images/project-layout/" %}
-Length: 10 minutes
+
 
 ## Objectives
 
@@ -26,8 +28,6 @@ Visual Studio Code out of the box has good default settings to immediately start
 - [Section 4.0: Shortcuts](#section-40-shortcuts)
 - [Section 4.1: My settings](#section-41-my-settings)
 - [Section 4.2 Extensions](#section-42-extensions)
-- [Section 4.3: Debugging Using Visual Studio Code](#section-43-debugging-using-visual-studio-code)
-- [Section 4.4: Intellisense](#section-44-intellisense)
 - [Wrap-up](#wrap-up)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -80,8 +80,8 @@ Written by John Papa and follow his style guide.
     ng1factory    // creates an Angular factory
     ng1module     // creates an Angular module
     ng1service    // creates an Angular service
-**[Ionic v1 Snippet
-s](https://marketplace.visualstudio.com/items?itemName=justinjames.ionic1-snippets)**
+
+**[Ionic v1 Snippets](https://marketplace.visualstudio.com/items?itemName=justinjames.ionic1-snippets)**
 
 * Over 200 html/javascript snippets plus 700 ionicons.
 * All snippets start with ionic
@@ -91,57 +91,13 @@ s](https://marketplace.visualstudio.com/items?itemName=justinjames.ionic1-snippe
 **[Cordova Tools](https://marketplace.visualstudio.com/items?itemName=vsmobile.cordova-tools)**
 
 * Intellisense for ionic framework and core cordova plugins
-* Includes a number of useful Javascript and HTML code Snippets for your project.  Just type ion_ in th e editor to see what's available.
+* Includes a number of useful Javascript and HTML code Snippets for your project.  Just type ion_ in the editor to see what's available.
 * Debug ionic application right in Visual Studio Code
 
 
-Find other extensions at the [VSCode Market Place](https://marketplace.visualstudio.com/VSCode)
+**More Snippets**
 
-
-## Section 4.3: Debugging Using Visual Studio Code
-
-Once you have the [Cordova Tools](https://marketplace.visualstudio.com/items?itemName=vsmobile.cordova-tools) extensions installed you can launch your ionic application and debug it using Visual Studio Code.
-
-**Setup the Debug Environment**
-
-Before you can launch your ionic application in Visual Studio Code, we need to tell Visual Studio Code that we are using a cordova environment.
-
-1. Click on the debug icon ![debug icon]({{ "debug-icon.png" | prepend: imagedir }})
-1. Click on the configure gear icon ![configure gear icon]({{ "configure-gear-icon.png" | prepend: imagedir }})
-1. Select the cordova environment from the list
-
-![Setup Debug Steps Picture]({{ "debug-environment.png" | prepend: imagedir }})
-
-**Launch the Application**
-
-To start the debugger, choose a target from the target drop-down list, and then either click the start button ![start icon]({{ "start-icon.png" | prepend: imagedir }}) or press F5.
-
-![Debug Targets]({{ "debug-targets.png" | prepend: imagedir }})
-
-You can debug your app on an Android emulator, iOS simulator, a device or in the browser. If you have your app running in one already, you can attach the debugger to it. The debugger uses the application ID of your project to locate the running instance.
-
-You can set breakpoints in Visual Studio Code by clicking in the left margin on the line you want to set a breakpoint for or pressing F9.
-
-
-## Section 4.4: Intellisense
-
-While the Cordova tools extensions provides IntelliSense Ionic and Angular, these frameworks use a dependency injection model for built-in services that VSCode's language service cannot understand by default.
-
-To properly enable IntelliSense for your code, you will need to use [JSDoc headers](http://usejsdoc.org/about-getting-started.html).
-
-The Cordova tools extension will provide the ionic and angular typings for you, so all you have to do is create the JSDoc headers above the functions you wish to receive IntelliSense for.
-
-For Ionic services, the service type will be in the following format: ionic.[service].Ionic[Service]Service, where [service] and [Service] should be replaced with the service's name, without the $ionic prefix. For example:
-
-    @param {ionic.popup.IonicPopupService} $ionicPopup - The $ionicPopup service
-    @param {ionic.modal.IonicModalService} $ionicModal - The $ionicModal service
-
-For Angular services, the service type will be in the following format: angular.I[Service]Service, where [Service] should be replaced with the capitalized service's name, without the $ prefix. For example:
-
-    @param {angular.ITimeoutService} $timeout - The Angular $timeout service
-    @param {angular.IHttpService} $http - The Angular $http service
-
-For a list of supported services for IntelliSense, see the angular.d.ts and ionic.d.ts typing files, that this extension places by default under .vscode/typings in your project.
+ See the [VSCode Market Place](https://marketplace.visualstudio.com/VSCode)
 
 
 ## Wrap-up

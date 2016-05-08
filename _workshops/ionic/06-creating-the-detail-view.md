@@ -4,17 +4,23 @@ title: 'Lab 06: Adding Details Page'
 published: true
 type: ionic
 layout: workshoppost2
+length:
 order: 6
 lab: ionic
+todo: |
+    * Update objectives
+    * remove git section
+    * updating styling section
+    * update screenshots
+    * change api to be hard coded
 ---
-
-Length: 30 minutes
 
 ## Objective
 
 * Create the detail view part of the master detail view
 * Link from the master view to the detail view
 * Setup routing for a view and pass in a parameter
+* Use the Ionic css classes to style the UI
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -22,6 +28,7 @@ Length: 30 minutes
 
 - [Git Setup (Optional)](#git-setup-optional)
 - [Section 6.0: Adding the Contact Details Page](#section-60-adding-the-contact-details-page)
+- [Section 5.3: Giving the UI a Little Class](#section-53-giving-the-ui-a-little-class)
 - [Wrap-up](#wrap-up)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -128,6 +135,36 @@ The icons I used are:
 You can experiment with different icons.  You can search for other icons at [http://iconicons.com](http://ionicons.com).  All of these icons are free and included with the Ionic Framework.
 
 Once you get it the way that you want it to, remove the json text output that is being displayed.
+
+## Section 5.3: Giving the UI a Little Class
+
+**Section Overview**
+
+The UI right now is functional but not very pretty.  We are going to modify it to look like the following:
+
+![Lab4-ContactsCompletedExample.png](../images/Lab4/Lab4-ContactsCompletedExample.png)
+
+**Steps**
+
+1. To get it styled correctly, you need to add the correct css classes to the ion-item element.
+1. For the profile picture, you want to turn it into an avatar. Refer to the documentation for the CSS styles of a list
+    * [http://ionicframework.com/docs/components/#list](http://ionicframework.com/docs/components/#list)
+1. To add the right arrow icon to refer to the Icons documentation
+    * [http://ionicframework.com/docs/components/#icons](http://ionicframework.com/docs/components/#icons).
+    * The icon I used was ion-chevron-right.
+1. View the application in the web browser and take a look at the layout and icon.
+1.  You will notice two things about the icon
+    * First is that the arrow is bold looking and fairly big
+    * Second is that the &gt; arrow did not automatically right align and instead is inline with the rest of the text
+1. To fix the arrow color, add the class icon-accessory to the icon.
+1. To fix the layout, take a look at the List icon documentation to find the class to use.
+    * [http://ionicframework.com/docs/components/#item-icons](http://ionicframework.com/docs/components/#item-icons)
+1. View the application in the web browser.  You should see that the layout is correct and the arrow is the right color.
+
+    ![Lab4-ContactsCompletedExample.png](images/Lab4/Lab4-ContactsCompletedExample.png)
+
+1.  Finally, remove the json output from the UI
+
 
 ## Wrap-up
 
