@@ -23,20 +23,16 @@ Visual Studio Code out of the box has good default settings to immediately start
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <h2>Table of Contents</h2>
 
-- [4.0: Helpful Visual Studio Code Hints](#40-helpful-visual-studio-code-hints)
-- [4.4.1: Shortcuts](#441-shortcuts)
-  - [4.4.2: My settings](#442-my-settings)
-  - [4.4.3 Extensions](#443-extensions)
-  - [3.4.4: Debugging Using Visual Studio Code](#344-debugging-using-visual-studio-code)
-  - [3.4.5: Intellisense](#345-intellisense)
+- [Section 4.0: Shortcuts](#section-40-shortcuts)
+- [Section 4.1: My settings](#section-41-my-settings)
+- [Section 4.2 Extensions](#section-42-extensions)
+- [Section 4.3: Debugging Using Visual Studio Code](#section-43-debugging-using-visual-studio-code)
+- [Section 4.4: Intellisense](#section-44-intellisense)
 - [Wrap-up](#wrap-up)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## 4.0: Helpful Visual Studio Code Hints
-
-
-## 4.4.1: Shortcuts
+## Section 4.0: Shortcuts
 
 * hide left sidebar: ctrl+b
 * zoom in: ctrl+=
@@ -49,7 +45,7 @@ Visual Studio Code out of the box has good default settings to immediately start
 * Toggle Breakpoint: F9
 
 
-### 4.4.2: My settings
+## Section 4.1: My settings
 
 Here are my settings that I use for Visual Studio Code.  You can edit these by going under File -> Preferences -> User Settings
 
@@ -69,7 +65,7 @@ Here are my settings that I use for Visual Studio Code.  You can edit these by g
         "editor.folding": true
     }
 
-### 4.4.3 Extensions
+## Section 4.2 Extensions
 
 Visual Studio Code allows you to extend the built-in functionality with extensions.  To install the extensions press F1, type extension, select Install Extension and then type the name of the extension you want to install.
 
@@ -84,7 +80,6 @@ Written by John Papa and follow his style guide.
     ng1factory    // creates an Angular factory
     ng1module     // creates an Angular module
     ng1service    // creates an Angular service
-
 **[Ionic v1 Snippet
 s](https://marketplace.visualstudio.com/items?itemName=justinjames.ionic1-snippets)**
 
@@ -103,7 +98,7 @@ s](https://marketplace.visualstudio.com/items?itemName=justinjames.ionic1-snippe
 Find other extensions at the [VSCode Market Place](https://marketplace.visualstudio.com/VSCode)
 
 
-### 3.4.4: Debugging Using Visual Studio Code
+## Section 4.3: Debugging Using Visual Studio Code
 
 Once you have the [Cordova Tools](https://marketplace.visualstudio.com/items?itemName=vsmobile.cordova-tools) extensions installed you can launch your ionic application and debug it using Visual Studio Code.
 
@@ -128,11 +123,11 @@ You can debug your app on an Android emulator, iOS simulator, a device or in the
 You can set breakpoints in Visual Studio Code by clicking in the left margin on the line you want to set a breakpoint for or pressing F9.
 
 
-### 3.4.5: Intellisense
+## Section 4.4: Intellisense
 
 While the Cordova tools extensions provides IntelliSense Ionic and Angular, these frameworks use a dependency injection model for built-in services that VSCode's language service cannot understand by default.
 
-To properly enable IntelliSense for your code, you will need to use []JSDoc headers](http://usejsdoc.org/about-getting-started.html).
+To properly enable IntelliSense for your code, you will need to use [JSDoc headers](http://usejsdoc.org/about-getting-started.html).
 
 The Cordova tools extension will provide the ionic and angular typings for you, so all you have to do is create the JSDoc headers above the functions you wish to receive IntelliSense for.
 
