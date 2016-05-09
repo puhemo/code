@@ -30,6 +30,7 @@
 <div class="site-header">
     <nav role="navigation">
         <ul class="group">
+            <li><img class="site-avatar" src="{{ site.avatar }}" alt="avatar"/></li>
             <li><a href="{{ site.baseurl | prepend: site.url }}">Blog Home</a></li>
             <li><a href="{{"workshops" |  prepend: site.baseurl | prepend: site.url }}">Workshops</a></li>
             <li><a href="{{ "/speaking" | prepend: site.baseurl }}"  {% if page.url == "speaking %} id="selected"{% endif %}>Speaking</a></li>

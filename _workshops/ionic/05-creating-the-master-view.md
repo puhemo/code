@@ -8,14 +8,6 @@ order: 5
 lab: ionic
 length:
 todo: |
-    * Done Update objectives
-    * Done - Add adding routes
-    * Done - Update for Projects page instead of Contacts.html
-    * Done - Make first service pull data from json file
-    * Change out .config section for minification safe option
-    * explain minification safe options
-    * explain why you may not care about minification
-    * Done - Show how to output the json version of projects
 ---
 
 {% assign imagedir = "../images/master-view/" %}
@@ -38,6 +30,7 @@ todo: |
 - [Section 5.2: Creating Your First Service](#section-52-creating-your-first-service)
 - [Section 5.4: Creating Your First Controller](#section-54-creating-your-first-controller)
 - [Section 5.5: Binding Service Data To UI](#section-55-binding-service-data-to-ui)
+- [Minification Safe Code](#minification-safe-code)
 - [Wrap-up](#wrap-up)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -55,18 +48,24 @@ todo: |
 
 ## Section 5.1: Add Route to New Page
 
-1. Open the js/app.js file and add the following to the bottom of the file so that the application routes to the projects.html file.
+1. In the www/js create a directory called config
+1. In the www/js/config directory create a file called app.config.js
+1. Open the www/js/config/app.config.js file and add the following code:
         
-        .config(function ($stateProvider, $urlRouterProvider) {
-            $stateProvider
-                .state('projects', {
-                    url: '/projects',
-                    templateUrl: 'templates/projects.html'
-                    })
+        angular.module('starter')
+          .config(config);
 
-            $urlRouterProvider.otherwise('/projects');
-        });
+        config.$inject = ['$stateProvider', '$urlRouterProvider'];
 
+        function config ($stateProvider, $urlRouterProvider) {
+          $stateProvider
+            .state('projects', {
+              url: '/projects',
+              templateUrl: 'templates/projects.html'
+            })
+
+          $urlRouterProvider.otherwise('/projects');
+        }
 1. Open the index.html file and replace the content in the &lt;body&gt; tag with the following
 
         <ion-pane>
@@ -78,6 +77,7 @@ todo: |
             <ion-nav-view></ion-nav-view>
         </ion-pane>
 
+1. In the index.html file after the script reference to app.js we need to add a script tag for the js/config/app.config.js file.
 1. If you don't already have ionic serve running, open a command prompt and run the command
 
         $ ionic serve
@@ -233,6 +233,38 @@ So far you have just bound the json output to the UI.  Useful for debugging but 
     ![project list without json included]({{"projects-ion-list-without-json.png" | prepend: imagedir }})
 
 To see the full docs on the &lt;ion-list&gt; documentation, at the command prompt, type ionic docs ion-list or go to [http://ionicframework.com/docs/api/directive/ionList/](http://ionicframework.com/docs/api/directive/ionList/)
+
+## Minification Safe Code
+
+For a web site that you are going to be deploying to a web server vs running locally, it is best practice to minify the code.  However, with creating application that are intended to run locally on a device, there is mixed opinions on if you need to worry about being able to safely minify your code.
+
+All of the code that we will be creating as part of this workshop will be minification safe, however, some of the code that is part of the ionic templates is not minification safe out of the box.  For the blank template the main issue is the app.js run block.  You could easily follow the same pattern as the app.config.js file and rewrite the run function.
+
+Why do we even need to worry about this?  The reason is that Angular uses dependency inject and when the code is minified, values such as $http get changed to variable names like "a".  When the variable becomes "a" then Angular does not know anything about "a" so it just throw an injector error.  By making the code minification safe $http is left as $http so that Angular knows to pass into the function.
+
+Out of the box Ionic does not provide any gulp tasks to minify css, javascript or html code.  It is not difficult to write these task or find one that suits you needs if you deem this a critical requirement.
+
+**example of NOT minification safe code**
+
+    angular.module('starter', ['ionic'])
+    .run(function($ionicPlatform) {
+    })
+
+In this code $ionicPlatform will be changed to a value that Angular does not understand.
+
+**example of minification safe code**
+
+    angular
+      .module('todo')
+      .run(runBlock);
+
+    Block.$inject = ['$ionicPlatform'];
+
+    function runBlock($ionicPlatform) {
+    }
+
+In this code the run block is written to use the $inject option to tell Angular that the parameter passed to the runBlock function is $ionicPlatform.  This in turn means that you can change the parameter name of the runBlock to anything that you want and Angular will still see  the underlying value as $ionicPlatform.
+
 
 ## Wrap-up
 

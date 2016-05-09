@@ -8,6 +8,7 @@ length:
 order: 6
 lab: ionic
 todo: |
+    * **LEFT ON 6.1**
     * Update objectives
     * remove git section
     * updating styling section
@@ -26,73 +27,40 @@ todo: |
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <h2>Table of Contents</h2>
 
-- [Git Setup (Optional)](#git-setup-optional)
 - [Section 6.0: Adding the Contact Details Page](#section-60-adding-the-contact-details-page)
-- [Section 5.3: Giving the UI a Little Class](#section-53-giving-the-ui-a-little-class)
+- [Section 6.3: Giving the UI a Little Class](#section-63-giving-the-ui-a-little-class)
 - [Wrap-up](#wrap-up)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Git Setup (Optional)
-
-During this lab, you will be able to follow along using git to checkout the completed version of the steps in each section if you do not want to write all of the code yourself. 
-
-If you intend to use the completed version of the steps, you need to clone the repository for this lab.
-
-    $ git clone https://github.com/IonicWorkshop/Lab5-CreatingADetailView.git
-
-
-This lab also builds on the previous lab.  If you did not do or complete the previous lab, use the command above to checkout the Lab5 completed version and then run the checkout command below to take it to the point of the completed Lab4.
-
-    $ git checkout -f Lab4Completed
-
-
 ## Section 6.0: Adding the Contact Details Page
-
-**Get Completed Steps (optional)**
-
-To download the completed steps for this section, run the following git command: 
-
-    $ git checkout -f Step0
 
 **Steps**
 
-1. In the www/templates directory, create a file called contactdetails.html
-1. Replace the contents of the contactdetails.html with the following:
+1. In the www/templates directory, create a file called tasks.html
+1. You the ionicview snippet and set the view-title to "Tasks"
+1. Open the www/js/config/app.config.js file and in the config function, add the following route after the projects state that we added in the previous lab.
 
-        <ion-view title="Contact Details">
-            <ion-content>
-                    Nothing to See Here
-            </ion-content>
-        </ion-view>
-1. Open the js/app.js file and in the .config function, add the following route after the contacts state that we added in the previous lab.
+        .state('tasks', {
+            url: '/tasks/:index',
+            templateUrl: 'templates/tasks.html'
+          });
 
-        .state('contactdetails', {
-            url: '/contactdetails/:index',
-            templateUrl: 'templates/contactdetails.html'
-        });
-
-1. On the contacts.html, on the ion-item element add the ng-href attribute below to make each row link to the contact page.  Each row can be referenced by the index number in the contacts array by using {{ $index }}.  
+1. In the www/templates/projects.html file, on the ion-item element add an ng-href attribute to make each row link to the tasks page.  Each row can be referenced by the index number in the projects array by using {{ $index }}.
     * Hint: To get Angular to trigger the router path, start the ng-href url with a #/.
 1. If you don't already have ionic serve running, open a command prompt and run the command ionic serve
 1. In your web browser, open [http://localhost:8100](http://localhost:8100)
-1. Now when you click on a row in the contact list, it should go to the contact details page and give you navigation to go back to the contact list
+1. Now when you click on a row in the project list, it should go to the task list page and give you navigation to go back to the contact list
 
-    ![Lab4-ContactDetailsPlaceholder.png](../images/Lab5/Lab5-ContactDetailsPlaceholder.png)
+    ![Blank Tasks View](../images/detail-view/detail-view-blank.png)
     
 ## Section 6.1: Creating the Contact Controller
 
-**Get Completed Steps (optional)**
-
-If you are following along using git, reset your project to Step1.
-
-    $ git checkout -f Step1
-
 **Steps**
         
-1. In the www/js directory, create a new javascript file called ContactDetailsCtrl.js
-1. Add the ControlDetailCtrl to the index.html file.
-1. Add the following code to the ContactsCtrl.js file.
+1. In the www/js/controllers directory, create a new javascript file called tasks.controller.js
+1. Add the tasks.controller.js file to the index.html file.
+1. Add the following code to the tasks.controller.js file.
 
         angular.module('starter')
             .controller('ContactDetailsCtrl', function ($scope, $stateParams, ContactsService) {
@@ -115,12 +83,6 @@ Now that everything is functional, lets design the contact details UI.  When we 
 
 ![Lab4-ContactDetailsPrettyUI.png](../images/Lab5/Lab5-ContactDetailsPrettyUI.png)
 
-**Get Completed Steps (optional)**
-
-If you are following along using git, reset your project to Step2.
-
-    $ git checkout -f Step2
-
 **Steps**
 
 To make this UI, we are going to use a an Ionic feature called Cards.  The documentation for the Cards is available at [http://ionicframework.com/docs/components/#cards](http://ionicframework.com/docs/components/#cards)
@@ -136,7 +98,7 @@ You can experiment with different icons.  You can search for other icons at [htt
 
 Once you get it the way that you want it to, remove the json text output that is being displayed.
 
-## Section 5.3: Giving the UI a Little Class
+## Section 6.3: Giving the UI a Little Class
 
 **Section Overview**
 
