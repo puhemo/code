@@ -10,10 +10,12 @@ lab: ionic
 todo: |
     * **LEFT ON 6.1**
     * Update objectives
-    * remove git section
+    * done - remove git section
     * updating styling section
     * update screenshots
     * change api to be hard coded
+    * update length
+    * update section numbers
 ---
 
 ## Objective
