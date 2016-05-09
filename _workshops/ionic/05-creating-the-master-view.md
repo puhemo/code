@@ -97,31 +97,7 @@ In this section, you will be creating your first service to pull data from a rem
 
 **Steps**
 
-1. In the www directory, create a new file called projects.json
-1. Add the following information to the file:
-
-        [{
-          "name": "Yoveo",
-          "created_on": "9/24/2015",
-          "created_by": "Ronald Matthews"
-        }, {
-          "name": "Linkbuzz",
-          "created_on": "11/6/2015",
-          "created_by": "Brenda Jordan"
-        }, {
-          "name": "Minyx",
-          "created_on": "1/22/2016",
-          "created_by": "Ryan Wilson"
-        }, {
-          "name": "Midel",
-          "created_on": "2/17/2016",
-          "created_by": "Anna Fisher"
-        }, {
-          "name": "Topicstorm",
-          "created_on": "5/27/2015",
-          "created_by": "Chris Johnston"
-        }]
-
+1. Download the [mock data file](../files/mock-data.json) and store it in the www directory
 1. In the www/js directory, create a new directory called services
 1. In the www/js/services directory, create a new javascript file called projects.service.js
 1. Using the angular snippet ng1factory to generate a new service snippet.
@@ -135,7 +111,7 @@ In this section, you will be creating your first service to pull data from a rem
 1. Change the getProjects function to look like the following.  This will get the data from the projects.json file.
 
         function getProjects() {
-            return $http.get("/projects.json")
+            return $http.get("/mock-data.json")
                 .then(function (result) {
                     return result.data;
                 });
@@ -210,7 +186,7 @@ Now we are ready to show the project data on our project view.  We will first ju
 
 So far you have just bound the json output to the UI.  Useful for debugging but not what you want a user to see.  In this section, we will create a nice looking contact list that shows the contact's first name, email address and a picture of them.   The UI should look like the following when done, 
 
-![project list with json included]({{"projects-ion-list-with-json.png" | prepend: imagedir }})
+![project list with json included]({{"projects-ion-list-without-json.png" | prepend: imagedir }})
 
 **Steps**
 
@@ -234,15 +210,27 @@ So far you have just bound the json output to the UI.  Useful for debugging but 
 
 To see the full docs on the &lt;ion-list&gt; documentation, at the command prompt, type ionic docs ion-list or go to [http://ionicframework.com/docs/api/directive/ionList/](http://ionicframework.com/docs/api/directive/ionList/)
 
+## Ordering Data
+
+If you look at the ion-list right now it is difficult to find a specific project since the list is ordered by the way it is stored in the mock-data.json json array.  Instead we want to order the ion-list by the project name.
+
+To order the ion-list by the project name add the orderBy statement to the ng-repeat
+
+    <ion-item ng-repeat="project in vm.projects | orderBy: 'name'">
+
+Now the list should be in alphabetical order
+
+![Projects Order By Name]({{ "projects-ion-list-ordered.png" | prepend: imagedir }})
+
 ## Minification Safe Code
 
-For a web site that you are going to be deploying to a web server vs running locally, it is best practice to minify the code.  However, with creating application that are intended to run locally on a device, there is mixed opinions on if you need to worry about being able to safely minify your code.
+Since this lab is the first bit of code that we are writing I want to briefly discuss minification of the code.  For a web site that you are going to be deploying to a web server vs running locally, it is best practice to minify the code.  However, when  creating an application that is intended to run locally on a device like we are doing, there is mixed opinions on if you need or should minify your code.
 
-All of the code that we will be creating as part of this workshop will be minification safe, however, some of the code that is part of the ionic templates is not minification safe out of the box.  For the blank template the main issue is the app.js run block.  You could easily follow the same pattern as the app.config.js file and rewrite the run function.
+To save yourself work later on it is important to decide early on if you are going to minify the code when you release your ionic application.  All of the code that we will be creating as part of this workshop will be minification safe, however, some of the code that is part of the ionic templates is not minification safe out of the box.  For the blank template the main issue is the app.js run block.  You could easily follow the same pattern as the app.config.js file and rewrite the run function.
 
-Why do we even need to worry about this?  The reason is that Angular uses dependency inject and when the code is minified, values such as $http get changed to variable names like "a".  When the variable becomes "a" then Angular does not know anything about "a" so it just throw an injector error.  By making the code minification safe $http is left as $http so that Angular knows to pass into the function.
+The reason that we need to care about minification safe code is that Angular uses dependency inject and when the code is minified, values such as $http get changed to variable names like "a".  When the variable becomes "a" then Angular have no clue what the heck "a" is so it throws an injector error.  By making the code minification safe, $http is left as $http so that Angular knows what it is.
 
-Out of the box Ionic does not provide any gulp tasks to minify css, javascript or html code.  It is not difficult to write these task or find one that suits you needs if you deem this a critical requirement.
+Out of the box Ionic does not provide any gulp tasks to minify css, javascript or html code.  It is not difficult to write these task or find one that suits you needs if you deem this a critical requirement.  Writing these task is outside the scope of this workshop.
 
 **example of NOT minification safe code**
 
