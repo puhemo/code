@@ -1,16 +1,17 @@
 ---
 layout: post
 title: 'Add Table of Contents to Markdown'
-date: 2016-05-09 06:00
+date: 2016-05-10 06:00
 categories: ['github', 'markdown', 'blogging', 'npm']
 published: true
 excerpt: |
     When you are writing tutorials that are broken up by sections it is nice to have a table of contents at the top to help the users navigate.  However, maintaining this by hand is a no go.  Luckily there is a great npm package called doctoc that will look at the headings in your markdown file and generated a table of contents for you.
+
 ---
 
 When you are writing tutorials that are broken up by sections it is nice to have a table of contents at the top to help the users navigate.  However, maintaining this by hand is a no go.  Luckily there is a great npm package called doctoc that will look at the headings in your markdown file and generated a table of contents for you.
 
-Here is sample of what the output will look like.
+**Table of Contents Sample Using This Post**
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -19,13 +20,14 @@ Here is sample of what the output will look like.
 - [Installing](#installing)
 - [Adding to All Files](#adding-to-all-files)
 - [Add to Single File](#add-to-single-file)
+  - [examples](#examples)
 - [Skipping Files](#skipping-files)
-- [Table of Contents](#table-of-contents)
 - [Specifying Location of the Table of Contents](#specifying-location-of-the-table-of-contents)
 - [Changing the Title to the Table of Contents](#changing-the-title-to-the-table-of-contents)
 - [Changing Max Level of Headings](#changing-max-level-of-headings)
 - [Site Compatibility](#site-compatibility)
-- [Including as Git Precommit](#including-as-git-precommit)
+- [Using with Jekyll](#using-with-jekyll)
+- [Running doctoc as a Git pre-commit](#running-doctoc-as-a-git-pre-commit)
 - [More Info](#more-info)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -42,7 +44,7 @@ Here is sample of what the output will look like.
 
     $ doctoc /path/to/file [...]
 
-**examples**
+### examples
 
     $ doctoc README.md
 
@@ -61,7 +63,7 @@ Using [Ack](http://beyondgrep.com/) which requires Perl
 
     $ ack -L 'DOCTOC SKIP' | xargs doctoc
 
-Using built-in Windows command line options.  Update the source variable to specific a directory other than the current directory.
+Here is an example using built-in Windows command line options.  If you are not running it in the directory that contains your markdown files that you want a table of contents on then make sure to update the source variable.
 
     @echo off
      setlocal
@@ -73,7 +75,7 @@ Using built-in Windows command line options.  Update the source variable to spec
      for /f "tokens=*" %%G in ('dir "%source%\%extension%" /a:-d /b') do (
        find /c /i %string% "%%G" > NUL || (
        echo "Add TOC to %%G"
-       doctoc --github --title "<h2>Table of Contents</h2>" "%%G"
+       doctoc --github --title "**Table of Contents**" "%%G"
       )
      )
 
@@ -86,7 +88,6 @@ By default doctoc will add the table of contents at the top of the file.  You ca
 
     <!-- START doctoc generated TOC please keep comment here to allow auto update -->
     <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
 
     <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -118,7 +119,45 @@ By default doctoc generated github formatted links.  To change use the following
     doctoc README.md --bitbucket
 
 
-## Including as Git Precommit
+## Using with Jekyll
+
+With the kramdown parser that Jekyll uses by default you can easily add in a table of contents.  The one limitation that stopped me from using it for the pages that I wanted a table of contents is that it gets all headers and not just the ones after the table of contents.  In my case, I had 2 headers above the table of contents that I could not get excluded from the table of contents output.  The one major advantage to use the kramdown table of contents generation is that it will automatically add it during the Jekyll build where as using doctoc you have to do it outside of the Jekyll build.
+
+To use add a table of contents using karmdown on your Jekyll blog, add the follow to your file where you are want your table of contents.
+
+    * TOC
+    {:toc}
+
+**Jekyll Kramdown TOC Sample Showing All Headers**
+
+* TOC
+{:toc}
+
+Using doctoc with Jekyll works for the most part.  Where I got tripped up is that the karmdown parser uses the [Pandoc](http://pandoc.org/README.html#header-identifiers) rules for generating the header auto ids which strips everything up to the first letter.  This meant if your header started with a number it would be stripped from the header anchor tag.  This by itself would be ok but doctoc does not follow this same rule and leaves the numbers in the links.  The quick solution is to not start the header text with a number.
+
+**doctoc TOC showing only headers that follow**
+
+
+Add the following right below this to generate the TOC at this point in the file:
+
+    <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+    <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+    <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+>Notice that it only has the 2 headers that follow this section in the table of contents
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<strong>Table of Contents Sample</strong>
+
+- [Including as Git Precommit](#including-as-git-precommit)
+- [More Info](#more-info)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
+## Running doctoc as a Git pre-commit
 
 To remember to always update the Table of Contents before committing to you can use a git hook to run your doctoc call before committing any files to Github for your repo.
 
@@ -133,3 +172,4 @@ To remember to always update the Table of Contents before committing to you can 
 [Github Repo](https://github.com/thlorenz/doctoc)
 
 [npm package](https://www.npmjs.com/package/doctoc)
+

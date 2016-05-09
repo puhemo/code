@@ -9,6 +9,11 @@ excerpt: |
 ---
 
 
+**nuget package**
+
+Microsoft.AspNet.Cors
+
+
 **global.asax.cs**
 
 	protected void Application_BeginRequest()
@@ -40,9 +45,6 @@ excerpt: |
 	</system.webServer>
 
 
-**nuget package**
-
-Microsoft.AspNet.Cors
 
 **WebApiConfig.cs**
 
