@@ -2,7 +2,7 @@
 collection: workshops
 title: 'Extra: Api Security'
 published: ionicextra
-type: ionic
+type: ionicextra
 layout: workshoppost2
 order:
 lab: ionic

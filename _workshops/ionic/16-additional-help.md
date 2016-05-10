@@ -1,10 +1,10 @@
 ---
 collection: workshops
-title: 'Lab 15: Getting Help'
+title: 'Lab 16: Getting Help'
 published: true
 type: ionic
 layout: workshoppost2
-order: 15
+order: 16
 lab: ionic
 length:
 todo: |

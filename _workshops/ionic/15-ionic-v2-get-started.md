@@ -1,19 +1,16 @@
 ---
 collection: workshops
-title: 'Lab 10: Updating Data'
+title: 'Lab 15: Ionic v2'
 published: true
 type: ionic
 layout: workshoppost2
-order: 10
+order: 15
 lab: ionic
 length:
 todo: |
     * Finish lab
     * update length
 ---
-
-
-
 
 ## Objective
 
@@ -22,7 +19,7 @@ todo: |
 <h2>Table of Contents</h2>
 
 - [Git Setup (Optional)](#git-setup-optional)
-- [Section 10.0: ??](#section-100-)
+- [Section 14.0: ??](#section-140-)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -32,6 +29,6 @@ During this lab, you will be able to follow along using git to checkout the comp
 
 If you intend to use the completed version of the steps, you need to clone the repository for this lab.
 
-    $ git clone https://github.com/IonicWorkshop/Lab10-UpdatingData.git
+    $ git clone https://github.com/IonicWorkshop/Lab14-Ionicv2.git
 
-## Section 10.0: ??
+## Section 14.0: ??

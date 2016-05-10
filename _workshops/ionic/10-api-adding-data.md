@@ -1,10 +1,10 @@
 ---
 collection: workshops
-title: 'Lab 14: Ionic v2'
+title: 'Lab 10: Adding Data'
 published: true
 type: ionic
 layout: workshoppost2
-order: 14
+order: 10
 lab: ionic
 length:
 todo: |
@@ -19,7 +19,7 @@ todo: |
 <h2>Table of Contents</h2>
 
 - [Git Setup (Optional)](#git-setup-optional)
-- [Section 14.0: ??](#section-140-)
+- [Section 9.0: ??](#section-90-)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -29,6 +29,6 @@ During this lab, you will be able to follow along using git to checkout the comp
 
 If you intend to use the completed version of the steps, you need to clone the repository for this lab.
 
-    $ git clone https://github.com/IonicWorkshop/Lab14-Ionicv2.git
+    $ git clone https://github.com/IonicWorkshop/Lab9-AddingData.git
 
-## Section 14.0: ??
+## Section 9.0: ??
