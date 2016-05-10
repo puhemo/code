@@ -39,11 +39,14 @@ Visual Studio Code out of the box has good default settings to immediately start
 * zoom out: ctrl+-
 * Split Editor: ctrl+\
 * Switch to Editor Page: ctrl+[pane #]
-* Command Palette: F1 or Ctrl + Shift + P
+* Command Palette: F1 or Ctrl+Shift+P
 * Start Debugger: F5 (once you have set the target the 1st time)
 * Format Code: Shift+Alt+F
 * Toggle Breakpoint: F9
-
+* Toggle Commenting Out Line: ctrl+k, ctrl+c
+* Open Command Prompt: ctrl+shift+c
+* Code Fold: ctrl+shift+[
+* Code Unfold: ctrl+shift+]
 
 ## Section 4.1: My settings
 

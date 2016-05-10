@@ -1,10 +1,10 @@
 ---
 collection: workshops
-title: 'Lab 06: Creating Our Api'
+title: 'Lab 08: Wiring Up Our Api'
 published: true
 type: ionic
 layout: workshoppost2
-order: 6
+order: 8
 lab: ionic
 length:
 todo: |
@@ -19,10 +19,9 @@ todo: |
 <h2>Table of Contents</h2>
 
 - [Git Setup (Optional)](#git-setup-optional)
-- [Section 6.0: ??](#section-60-)
+- [Section 7.0: ??](#section-70-)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 
 ## Git Setup (Optional)
 
@@ -30,6 +29,6 @@ During this lab, you will be able to follow along using git to checkout the comp
 
 If you intend to use the completed version of the steps, you need to clone the repository for this lab.
 
-    $ git clone https://github.com/IonicWorkshop/Lab6-CreatingOurApi.git
+    $ git clone https://github.com/IonicWorkshop/Lab7-WiringUpOurApi.git
 
-## Section 6.0: ??
+## Section 7.0: ??

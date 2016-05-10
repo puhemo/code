@@ -1,10 +1,10 @@
 ---
 collection: workshops
-title: 'Lab 11: Adding a Loading Spinner'
+title: 'Lab 13: Adding a Loading Spinner'
 published: true
 type: ionic
 layout: workshoppost2
-order: 11
+order: 13
 lab: ionic
 length:
 todo: |

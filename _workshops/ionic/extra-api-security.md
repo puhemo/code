@@ -1,10 +1,10 @@
 ---
 collection: workshops
-title: 'Lab 13: Ordering Data'
-published: true
+title: 'Extra: Api Security'
+published: ionicextra
 type: ionic
 layout: workshoppost2
-order: 13
+order:
 lab: ionic
 length:
 todo: |
@@ -19,7 +19,7 @@ todo: |
 <h2>Table of Contents</h2>
 
 - [Git Setup (Optional)](#git-setup-optional)
-- [Section 13.0: ??](#section-130-)
+- [Section 8.0: ??](#section-80-)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -31,4 +31,4 @@ If you intend to use the completed version of the steps, you need to clone the r
 
     $ git clone https://github.com/IonicWorkshop/Lab8-ApiSecurity.git
 
-## Section 13.0: ??
+## Section 8.0: ??

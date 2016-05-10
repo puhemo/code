@@ -8,128 +8,198 @@ length:
 order: 6
 lab: ionic
 todo: |
-    * **LEFT ON 6.1**
     * Update objectives
     * done - remove git section
-    * updating styling section
+    * removed - updating styling section
     * update screenshots
-    * change api to be hard coded
+    * done - change api to be hard coded
     * update length
-    * update section numbers
+    * done - update section numbers
+    * add warning about disappearing back to project nav when testing in browser
 ---
+{% assign imagedir = "../images/detail-view/" %}
 
 ## Objective
 
-* Create the detail view part of the master detail view
-* Link from the master view to the detail view
-* Setup routing for a view and pass in a parameter
-* Use the Ionic css classes to style the UI
+* Create the tasks view page
+* Link from the master view (projects) to the detail view (tasks)
+* Setup routing for sub-page (tasks) and pass a url parameter to it (projectId)
+* Ordering data by more than 1 field in an ng-repeat
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <h2>Table of Contents</h2>
 
-- [Section 6.0: Adding the Contact Details Page](#section-60-adding-the-contact-details-page)
-- [Section 6.3: Giving the UI a Little Class](#section-63-giving-the-ui-a-little-class)
+- [Section 6.0: Adding the Task List Page](#section-60-adding-the-task-list-page)
+- [Section 6.1: Add Route to Tasks Page](#section-61-add-route-to-tasks-page)
+- [Section 6.2: Navigating to Tasks Page](#section-62-navigating-to-tasks-page)
+- [Section 6.3: Creating the Tasks Service](#section-63-creating-the-tasks-service)
+- [Section 6.4: Creating the Tasks Controller](#section-64-creating-the-tasks-controller)
+- [Section 6.5: Binding Service Data To UI](#section-65-binding-service-data-to-ui)
+- [Section 6.6: Ordering Data](#section-66-ordering-data)
 - [Wrap-up](#wrap-up)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Section 6.0: Adding the Contact Details Page
-
-**Steps**
+## Section 6.0: Adding the Task List Page
 
 1. In the www/templates directory, create a file called tasks.html
-1. You the ionicview snippet and set the view-title to "Tasks"
+1. In the tasks.html file, use the `ionicview` snippet to generate the view boilerplate code and set the view-title to "Tasks"
+
+## Section 6.1: Add Route to Tasks Page
+
+In order for angular to properly route us to the tasks page, we need to tell Angular how to find the tasks page.
+
 1. Open the www/js/config/app.config.js file and in the config function, add the following route after the projects state that we added in the previous lab.
 
         .state('tasks', {
-            url: '/tasks/:index',
+            url: '/tasks/:projectId',
             templateUrl: 'templates/tasks.html'
           });
 
-1. In the www/templates/projects.html file, on the ion-item element add an ng-href attribute to make each row link to the tasks page.  Each row can be referenced by the index number in the projects array by using {{ $index }}.
+## Section 6.2: Navigating to Tasks Page
+
+To navigate to the task page when clicking on a project in the projects page, we need to add an ng-href to each ion-item in the projects list in the projects.html code.
+
+1. In the www/templates/projects.html file, on the ion-item element add an ng-href attribute to make each row link to the tasks page and include the project id value in the url.
     * Hint: To get Angular to trigger the router path, start the ng-href url with a #/.
+
+            {% raw %}
+            ng-href="#/tasks/{{project.id}}"
+            {% endraw %}
+
 1. If you don't already have ionic serve running, open a command prompt and run the command ionic serve
 1. In your web browser, open [http://localhost:8100](http://localhost:8100)
 1. Now when you click on a row in the project list, it should go to the task list page and give you navigation to go back to the contact list
 
-    ![Blank Tasks View](../images/detail-view/detail-view-blank.png)
-    
-## Section 6.1: Creating the Contact Controller
+    ![Blank Tasks View]({{"tasks-initial-view.png" | prepend: imagedir }})
 
-**Steps**
-        
-1. In the www/js/controllers directory, create a new javascript file called tasks.controller.js
-1. Add the tasks.controller.js file to the index.html file.
-1. Add the following code to the tasks.controller.js file.
+## Section 6.3: Creating the Tasks Service
 
-        angular.module('starter')
-            .controller('ContactDetailsCtrl', function ($scope, $stateParams, ContactsService) {
+In this section, you will be creating the tasks service to pull tasks data for the selected project from our mock-data.json file that we setup in the previous lab.
+
+1. In the www/js/services directory, create a new javascript file called tasks.service.js
+1. Using the angular snippet `ng1factory` to generate a new service.
+    * This will have a few fields to fill out as part of the template.  When you are done filling out each field press tab to go to the next one
+    * Values to fill out:
+        * Module: starter
+        * Service: TasksService
+        * dependency1: $http
+        * exposedFn: getTasks
+1. Press Esc to exit the snippet
+1. Change the getTasks function to look like the following.  This will get the data from the mock-data.json file and return the tasks for the project.
+
+        function getTasks(projectId) {
+          return $http.get("/mock-data.json")
+            .then(function (result) {
+              return result[projectId].tasks;
             });
+        }
 
-1. To get the index of the user we want to view, use the $stateParams.  The variable name will be the same as the one we put into the router.  
-1. Create a method in the ContactsService that returns the contact from the contacts array.
-1. In the ContactDetailsCtrl, you need to call the newly created method for the ContactsService and set the returned output to a variable that is able to be seen by the UI. 
-1. Open the contact.html and output the json for your contact variable.
-1. In the app.js, don't forget to tell the router about the ContactDetailsCtrl controller.
-1. Now when you run ionic serve and click on a contact in the contacts list, you should have a view such as the following:
+## Section 6.4: Creating the Tasks Controller
 
-    ![Lab4-ContactDetailsJson.png](../images/Lab5/Lab5-ContactDetailsJson.png)
-    
-## Section 6.2: Making a Pretty UI
+In this section, you will be creating the tasks page controller that will contain all of the logic for the tasks page and talk with the TasksService to get data.
 
-**Section Overview**
+1. In the www/js/controllers directory, create a new javascript file called tasks.controller.js
+1. Use the `ng1controller` snippet to generate the controller code
+    * This will have a few fields to fill out as part of the template.  When you are done filling out each field press tab to go to the next one
+    * Values to fill out:
+        * Module: starter
+        * Controller: TasksController
+        * dependency1: TasksService
+1. Press Esc to exit the snippet
+1. Add a 2nd dependency for $stateParams.  This will allow you to get the index of the project.  The $stateParams property for the project index will be the same as the one we put into the router.
+1. Before the return service statement add a variable named projectId set to the value of $stateParams.projectId
 
-Now that everything is functional, lets design the contact details UI.  When we are done with the UI it should like this: 
+        var projectId = $stateParams.projectId;
 
-![Lab4-ContactDetailsPrettyUI.png](../images/Lab5/Lab5-ContactDetailsPrettyUI.png)
+1. Add the call to the ProjectsServices in the activate function
 
-**Steps**
+        function activate() {
+              TasksService.getTasks(projectId)
+                .then(function (result) {
+                  vm.tasks = result;
+                });
+        }
 
-To make this UI, we are going to use a an Ionic feature called Cards.  The documentation for the Cards is available at [http://ionicframework.com/docs/components/#cards](http://ionicframework.com/docs/components/#cards)
+    * This says when the TasksService returns the data from getTasks() then store it in vm.tasks;
 
-The icons I used are:
+**Updating Tasks Route to Add Controller**
 
-* ion-home
-* ion-email
-* ion-ios-telephone
-* ion-iphone
+Now we need to tell angular that the Tasks view uses the TasksController.  We do this by modifying the tasks route.
 
-You can experiment with different icons.  You can search for other icons at [http://iconicons.com](http://ionicons.com).  All of these icons are free and included with the Ionic Framework.
+We need to add in a controller property for the tasks route and set it to TasksController as vm.
 
-Once you get it the way that you want it to, remove the json text output that is being displayed.
+       controller: 'TasksController as vm'
 
-## Section 6.3: Giving the UI a Little Class
+**Add javascript files to index.html**
 
-**Section Overview**
+In order to use the tasks controller and service that we created we need to add the script reference tags into the index.html page after the app.js file.  I like to put all of my services before my controllers since the controllers depend on the services.
 
-The UI right now is functional but not very pretty.  We are going to modify it to look like the following:
+      <!-- your app's js -->
+      <script src="js/app.js"></script>
+      <script src="js/services/projects.service.js"></script>
+      <script src="js/services/tasks.service.js"></script>
+      <script src="js/controllers/projects.controller.js"></script>
+      <script src="js/controllers/projects.controller.js"></script>
 
-![Lab4-ContactsCompletedExample.png](../images/Lab4/Lab4-ContactsCompletedExample.png)
+**Updating UI to Show Tasks**
 
-**Steps**
+Now we are ready to show the tasks data on our tasks view.  We will first just output the json view of the data and then we will create the real UI.
 
-1. To get it styled correctly, you need to add the correct css classes to the ion-item element.
-1. For the profile picture, you want to turn it into an avatar. Refer to the documentation for the CSS styles of a list
-    * [http://ionicframework.com/docs/components/#list](http://ionicframework.com/docs/components/#list)
-1. To add the right arrow icon to refer to the Icons documentation
-    * [http://ionicframework.com/docs/components/#icons](http://ionicframework.com/docs/components/#icons).
-    * The icon I used was ion-chevron-right.
-1. View the application in the web browser and take a look at the layout and icon.
-1.  You will notice two things about the icon
-    * First is that the arrow is bold looking and fairly big
-    * Second is that the &gt; arrow did not automatically right align and instead is inline with the rest of the text
-1. To fix the arrow color, add the class icon-accessory to the icon.
-1. To fix the layout, take a look at the List icon documentation to find the class to use.
-    * [http://ionicframework.com/docs/components/#item-icons](http://ionicframework.com/docs/components/#item-icons)
-1. View the application in the web browser.  You should see that the layout is correct and the arrow is the right color.
+1. Open the tasks.html template and inside the &lt;ion-content&gt; add the following to write out the json results:
 
-    ![Lab4-ContactsCompletedExample.png](images/Lab4/Lab4-ContactsCompletedExample.png)
+        {% raw %}
+        <pre>{{ vm.tasks | json }}</pre>
+        {% endraw %}
 
-1.  Finally, remove the json output from the UI
+    * In AngularJS, {{ }} brackets tells Angular to bind what is between the brackets to the UI.  In this case we are taking the vm.tasks and showing the raw json of the object.
+    * The &lt;pre&gt;&lt;/pre&gt; tags make the json look a little more readable by keeping the break returns
+
+1. Run ionic serve and view the application in the web browser
+1. If you click on the AED project (1st one in the list), you should see a view similar to this with the json showing.
+
+    ![Tasks Raw Json]({{ "tasks-raw-json.png" | prepend: imagedir }})
+
+
+## Section 6.5: Binding Service Data To UI
+
+So far you have just bound the json output to the UI.  Useful for debugging but not what you want a user to see.  In this section, we will create a nice looking task list that shows the task name and if it is completed or not.   The UI should look like the following when done:
+
+![tasks  list with json included]({{"tasks-ion-list-without-json.png" | prepend: imagedir }})
+
+1. Open the www/templates/tasks.html
+1. Inside of the &lt;ion-content&gt; use the snippet `ioniclist` to generate a ion-list and item-item component
+    * Values to fill in for the snippet:
+        * item: task
+        * items: vm.task
+1. For the tasks list, you want to loop through each contact and bind the following:
+    * task.name
+    * task.completed
+
+    > If you are unfamiliar with AngularJS, the ng-repeat on the ion-item is the command to loop through a collection
+1. Just like when you showed the raw json for the vm.projects you need to surround the properties with the double curly braces {{ }}
+    * Put the name inside an &lt;h2&gt; and completed inside a &lt;p&gt;
+1. Your view should now look like the screenshot at the start of this section.
+1. Once you get your view looking right, you can remove or comment out the &lt;pre&gt; tag for the raw json.
+
+    ![tasks list without json included]({{"tasks-ion-list-without-json.png" | prepend: imagedir }})
+
+To see the full docs on the &lt;ion-list&gt; documentation, at the command prompt, type ionic docs ion-list or go to [http://ionicframework.com/docs/api/directive/ionList/](http://ionicframework.com/docs/api/directive/ionList/)
+
+## Section 6.6: Ordering Data
+
+If you look at the ion-list right now it is difficult to find a specific task since the list is ordered by the way it is stored in the mock-data.json json array. Unlike the projects list where we sorted by a single field, for the task we want to sort by the completion status and then name so that completed tasks are at the bottom of the list and then the task are sorted by name.
+
+To order the ion-list by the completed and then name add the orderBy statement to the ng-repeat
+
+    <ion-item ng-repeat="task in vm.tasks | orderBy: ['completed','name']">
+
+Now the list should will show un-completed tasks at the top and then completed tasks and they should be order by name.
+
+![Tasks Order By Name]({{ "tasks-ion-list-ordered.png" | prepend: imagedir }})
 
 
 ## Wrap-up
 
-We now have a fully functional Master/Detail style page.  You could easily reuse the setup that we did for the Master/Detail in your application if you need similar functionality.  In the next lab, we are going to upload this application to a device using the Ionic View application.  
+We now have a fully functional Master/Detail style page.  You could easily reuse the setup that we did for the Master/Detail in your application if you need similar functionality.  In a later lab we will add the ability to change the completion status and add/update/delete tasks.
