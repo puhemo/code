@@ -7,7 +7,7 @@ redirect_from: "/presentations/"
 sitemap:
     priority: 1.0
     changefreq: weekly
-    lastmod: 2015-10-05T16:31:30+05:30
+    lastmod: 2016-05-08T16:31:30+05:30
 ---
 
 
@@ -30,25 +30,7 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 ## Upcoming Speaking Engagements
 
 
-### Phoenix Version Control Meetup <span>- Phoenix, Az (April 13th, 2016)</span>
-
-- [Continuous Integration with Github and TravisCi](#travisci)
-- [Meetup Page](http://www.meetup.com/phoenix-version-control/events/229493593/)
-
-
-### Hill Country Javascript User Group <span>- South Texas (giving Virtually) (April 20th, 2016)</span>
-
-- [Designing a Restful Api in Minutes with Backand](#backand) 
-- [User Group Chat Page](https://gitter.im/hillcountryjs/contributors)
-- [Meetup Page](http://www.meetup.com/San-Antonio-JavaScript-User-Group/events/225255697/)
-
-### Ionic Denmark Meetup <span>- Denmark Arhus (Giving Remotely) (April 27th, 2016)</span>
-
-
-- [Data Driven Restful Api Creation Made Easy Breezy](#cloudapishootout)
-- [Meetup Page](http://www.meetup.com/ionicdenmark/events/228676467/)
-
-### Ionic Denmark Meetup<span>- Denmark (Giving Remotely) (April 27th, 2016)</span>
+### Ionic Denmark Meetup<span>- Denmark (Giving Remotely) (May 11th, 2016)</span>
 
 - [Data Driven Restful Api Creation Made Easy Breezy](#cloudapishootout)
 - [Meetup Page](http://www.meetup.com/ionicdenmark/events/229123265/)
@@ -59,15 +41,40 @@ Over the next couple of months I worked on learning the ins and outs of [Nuget](
 - [Database Driven Api Creation Made Easy Breezy with Back& ](#backand)
 - [Conference Home Page](http://nebrasakacode.com/)
 
+### Ionic Az Meetup<span>- Phoenix, Az (July 26th, 2016)</span>
+
+- [Intro to ionic v2](#ionic)
+- [Meetup Page](http://www.meetup.com/Ionic-AZ/events/230709047/)
+
+### Central California .NET User Group<span>- Fresno, Ca (July 21st, 2016)</span>
+
+- [Cross Platform Mobile Developer with Visual Studio and Ionic](#ionic)
+- [Meetup Page](http://www.meetup.com/Central-CA-NET-Users/events/228410986/)
+
+### Las Vegas .NET User Group<span>- Las Vegas, Nv (July 28th, 2016)</span>
+
+- [Cross Platform Mobile Developer with Visual Studio and Ionic](#ionic)
+- [User Group Home Page](http://www.dotnetgroup.org/)
+
 ### That Conference <span>- Wisconsin Dells, Wisconsin (August 8th-10th, 2016)</span>
 
 - [Cross Platform Mobile Applications with Ionic](#ionic)
 - [Conference Home Page](https://www.thatconference.com/)
 
-### MidwestJS <span> - Minneapolis, MN (August 10th-12th 2016)</span>
+### MidwestJS <span> - Minneapolis, MN (August 10th-12th,2016)</span>
 
-- [Cross Platform Mobile Applications with Ionic (Full Day Workshop)](#ionic)
+- [Cross Platform Mobile Applications with Ionic](#ionic)
 - [Conference Home Page](http://midwestjs.com/)
+
+### Music City Code <span> - Nashville, TN (August 18th-20th, 2016)</span>
+
+- [Gulp for the .Net Developer](#gulp)
+- [Conference Home Page](http://www.musiccitycode.com)
+
+### Silicon Valley Code Camp <span> - San Jose, CA (October 1st and 2nd, 2016)</span>
+
+- [Data Driven Restful Api Creation Made Easy Breezy](#cloudapishootout)
+- [Conference Home Page](https://www.siliconvalley-codecamp.com/)
 
 <p>&nbsp;</p>
 
@@ -154,9 +161,12 @@ Back& can take all of this pain away and allow you to focus on your UI and not c
  
 In this session, we will examine the features of Back& , walk through the creation of an API, hook the API up to an AngularJS application and then deploy it to the Back& hosting.
 
+
+Slides: [http://slides.com/digitaldrummerj/backand-intro](http://slides.com/digitaldrummerj/backand-intro)
+
 #### Past Presentations
 
-* [Nebraska Code Full Day Workshop <span>- Lincoln, NE (May 18th-20th, 2016)</span>](http://nebraskacode.com)
+* [Nebraska Code Conference <span>- Lincoln, NE (May 18th-20th, 2016)</span>](http://nebraskacode.com)
 * [Hill Country Javascript User Group <span>- South Texas (giving Virtually) (April 20th, 2016)</span>](http://www.meetup.com/San-Antonio-JavaScript-User-Group/events/225255697/)
 
 <p>&nbsp;</p>
@@ -168,8 +178,11 @@ In this session, we will examine the features of Back& , walk through the creati
 
  Are you tired of writing CRUD based APIs?  Wish you could fast track your Api development so that you can focus on your UI?  Don't want to become an API/Hosting expert just to get a basic API in the Cloud?  Then this session is for you.  Creating and Hosting a Restful Api for standard CRUD operations should be an easy task and not one that slows down your applications development.   In this session, we examine the pros/cons my favorite Cloud based API providers (Firebase, Back& and Strongloop) and then we will create an API in each.  You will be able to see how with these 3 Cloud API providers how easy it is to create a full Restful Api in under 10 minutes.
 
+Slides: [http://slides.com/digitaldrummerj/data-driven-restful-api-creation-made-easy-breezy](http://slides.com/digitaldrummerj/data-driven-restful-api-creation-made-easy-breezy)
+
 #### Past Presentations
- 
+
+* [Silicon Valley Code Camp <span> - San Jose, CA (October 1st and 2nd, 2016)</span>](https://www.siliconvalley-codecamp.com/)
 * [Ionic Denmark Meetup <span>- Denmark Arhus (Giving Remotely) (April 27th, 2016)</span>](http://www.meetup.com/ionicdenmark/events/228676467/)
 * [Ionic Denmark Meetup<span>- Denmark Copenhagen (Giving Remotely) (May 11th, 2016)</span>](http://www.meetup.com/ionicdenmark/events/229123265/)
 
@@ -188,13 +201,13 @@ Slides and Source Code: [https://github.com/digitaldrummerj/GulpTalk](https://gi
 
 #### Past Presentations
 
+* [Music City Code <span> - Nashville, TN (August 18th-20th, 2016)</span>](http://www.musiccitycode.com)
 * [San Diego Code Camp <span>- San Diego, California (June 27th-28th, 2015)</span>](http://www.socalcodecamp.net/)
-
 <p>&nbsp;</p>
 
 ----
 
-### <a name="ionic"></a>Ionic - Revolutionizing Hybrid Mobile Application Development or Cross Platform Mobile Apps with Ionic
+### <a name="ionic"></a>Ionic v1 - Revolutionizing Hybrid Mobile Application Development or Cross Platform Mobile Apps with Ionic
 
 
 Are you already a web developer and want to create a mobile application?  Then come learn all about the Ionic mobile framework.  Using technologies that we already know and love with Html 5, Javascript, and CSS 3, you can easily create a mobile application that targets Android, iOS, and Windows 10 Phone.  Your application will look, feel and perform like a native application without you having to do anything special.  Ionic takes care of all of the hard work of making it look right on the mobile devices so that you can focus on your application.  After seeing the Ionic framework, you will be excited to deliver mobile applications.  We will walk through the features of Ionic, getting it setup, and then create a fully working application that is ready to release in the app store.
@@ -209,8 +222,6 @@ Are you already a web developer and want to create a mobile application?  Then c
 
 - Fluent Conference Slides: [https://slides.com/digitaldrummerj/ionic-workshop-fluent/](https://slides.com/digitaldrummerj/ionic-workshop-fluent/)
 - Fluent Conference Code: [https://github.com/digitaldrummerj/fluentconf-ionic-workshop](https://github.com/digitaldrummerj/fluentconf-ionic-workshop)
-
-
 
 #### Additional Resources
 
@@ -233,9 +244,11 @@ Are you already a web developer and want to create a mobile application?  Then c
 
 #### Past Presentations
 
-
 * [MidwestJS <span> - Minneapolis, MN (August 10th-12th 2016)</span>](http://midwestjs.com/)
-* [That Conference <span>- Wisconsin Dells, Wisconsin (August 8th-10th, 2016)](http://thatconference.com)
+* [That Conference <span>- Wisconsin Dells, Wisconsin (August 8th-10th, 2016)</span>](http://thatconference.com)
+* [Las Vegas .NET User Group<span>- Las Vegas, Nv (July 28th, 2016)</span>](http://www.dotnetgroup.org/)
+* [Ionic Az Meetup<span>- Phoenix, Az (July 26th, 2016)</span>](http://www.meetup.com/Ionic-AZ/events/230709047/)
+* [Central California .NET User Group<span>- Fresno, Ca (July 21st, 2016)</span>](http://www.meetup.com/Central-CA-NET-Users/events/228410986/)
 * [Nebraska Code Full Day Workshop <span>- Lincoln, NE (May 18th-20th, 2016)</span>](http://nebraskacode.com)
 * [Codepalousa <span>- Louisville, Ky (March 28th-30th, 2016)</span>](http://codepalousa.com)
 * [Tutorial - Use Your Existing Web Skills to Create Cross Platform Mobile Applications](http://conferences.oreilly.com/fluent/javascript-html-us)* [Javascript Summit 2016 <span>- Virtual (February 24th, 2016)</span>](http://environmentsforhumans.com/2016/javascript-summit/)
