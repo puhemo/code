@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Styling Your Jekyll Markdown'
+title: 'Jekyll Tip: Styling Your Jekyll Markdown'
 date: 2016-05-16 06:00
 categories: ['jekyll','blogging']
 published: true
