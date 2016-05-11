@@ -53,7 +53,7 @@ h1 {
   font-size: 2em;
 }
 
-h3 {
+h3, .fake-h2 {
   font-size: 1.2em;
   font-weight: 600;
   line-height: 1.43;
@@ -62,7 +62,7 @@ h3 {
   border-top: 1px dashed #d2d2d2;
 }
 
-h2 {
+h2, .fake-h2 {
   font-style: italic;
   //text-align: center;
   font-weight: 800;
@@ -76,7 +76,7 @@ h2 {
     font-style: italic;
     text-align: center;
     margin-top: -0.3em;
-}
+  }
 }
 
 ol, ul {
@@ -87,16 +87,52 @@ li {
   margin-bottom: 0.5em;
 }
 
-blockquote {
-  /*
-  margin: 1.2em 3em;
-  padding-left: 1em;
-  */
-  font-style: italic;
-  border-left: 5px solid #46e;
-  margin: 0;
-  padding-left: 1.5em;
 
+blockquote{
+  //font-style: italic;
+  display:block;
+  background: #fff;
+  padding: 15px 20px 15px 45px;
+  margin: 0 0 20px;
+  position: relative;
+
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #666;
+  text-align: justify;
+
+  /*Borders - (Optional)*/
+  border-left: 15px solid #46e;
+  border-right: 2px solid #46e;
+
+  /*Box Shadow - (Optional)*/
+  -moz-box-shadow: 2px 2px 15px #ccc;
+  -webkit-box-shadow: 2px 2px 15px #ccc;
+  box-shadow: 2px 2px 15px #ccc;
+
+  &:after {
+    /*Reset to make sure*/
+    content: "";
+  }
+
+  a {
+    padding: 0 3px;
+
+    &:hover {
+      color: #666;
+    }
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  &.warning {
+    border-color: #A00 !important;
+
+  }
 }
 
 hr {
@@ -149,8 +185,8 @@ body>header {
     height: 1.5em;
   }
 
-    a {
-      text-decoration: none;
+  a {
+    text-decoration: none;
   }
 }
 
@@ -213,6 +249,19 @@ body>header {
     float: left;
     font-size: .875em;
 
+    sup, sup a {
+      color: darkgray;
+      font-size: .8em;
+      vertical-align: baseline;
+      top: -0.5em;
+      bottom: -0.25em;
+      text-decoration: none;
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+
     img {
       vertical-align: middle;
     }
@@ -245,6 +294,11 @@ body>header {
         width: 75px;
         padding: .5em;
       }
+
+      .done {
+        text-decoration: line-through;
+        color: green;
+      }
     }
   }
   .sidebar-lists {
@@ -268,6 +322,14 @@ body>header {
       text-align: left;
       list-style: none;
     }
+  }
+
+  // Adding 'Contents' headline to the TOC
+  #markdown-toc {
+    border: 1px solid #aaa;
+    padding: 1em;
+    list-style: none;
+    display: inline-block;
   }
 }
 
@@ -387,22 +449,22 @@ code.highlighter-rouge {
     -moz-box-sizing: border-box;
   }
 
-    font-family: monospace, monospace;
-    font-size: 1em;
-    white-space: pre;
-    display: inline-block;
-    margin: 0px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    font-stretch: normal;
-    line-height: 1.8em;
-    padding: 0px 0.5em;
-    background-color: #FFFFFF;
-    max-width: 100%;
-    overflow-x: auto;
-    vertical-align: middle;
-    border: 1px dashed #d2d2d2;
+  font-family: monospace, monospace;
+  font-size: 1em;
+  white-space: pre;
+  display: inline-block;
+  margin: 0px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.8em;
+  padding: 0px 0.5em;
+  background-color: #FFFFFF;
+  max-width: 100%;
+  overflow-x: auto;
+  vertical-align: middle;
+  border: 1px dashed #d2d2d2;
 
 }
 
@@ -492,4 +554,3 @@ pre.highlight {
   .vi { color: #008080 } /* Name.Variable.Instance */
   .il { color: #009999 } /* Literal.Number.Integer.Long */
 }
-

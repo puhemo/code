@@ -12,35 +12,16 @@ todo: |
     * update length
 ---
 
-## Objective
+<div class="fake-h2">Objective</div>
 
 * Add the ability to refresh the contacts list with pull down to refresh functionality.
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<h2>Table of Contents</h2>
+<div class="fake-h2">Table of Contents</div>
 
-- [Git Setup (Optional)](#git-setup-optional)
-- [Section 10.0: Add ion-refresher and wiring it up](#section-100-add-ion-refresher-and-wiring-it-up)
-- [Section 10.1: Testing it in the browser](#section-101-testing-it-in-the-browser)
-- [Wrap-up](#wrap-up)
+* TOC
+{:toc}
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## Git Setup (Optional)
-
-During this lab, you will be able to follow along using git to checkout the completed version of the steps in each section if you do not want to write all of the code yourself. 
-
-If you intend to use the completed version of the steps, you need to clone the repository for this lab.
-
-    $ git clone https://github.com/IonicWorkshop/Lab10-PullToRefresh.git
-
-This lab builds on Lab 9.  If you did not do or complete this lab, use the command above to checkout Lab 10 and then run the checkout command below to take it to the point of the completed Lab5.
-
-    $ git checkout -f Lab9Completed
-
-
-## Section 10.0: Add ion-refresher and wiring it up
+## Section 14.0: Add ion-refresher and wiring it up
 
 **Get Completed Steps (optional)**
 
@@ -70,7 +51,7 @@ ion-refresher documentation can be found:
     * [http://ionicframework.com/docs/api/directive/ionRefresher/](http://ionicframework.com/docs/api/directive/ionRefresher/)
     * Running the ionic docs ion-refresh command line.
 
-## Section 10.1: Testing it in the browser
+## Section 14.1: Testing it in the browser
 
 1. If you don't already have ionic serve running, open a command prompt and run the command ionic serve
 1. In your web browser, open [http://localhost:8100](http://localhost:8100)

@@ -1,6 +1,6 @@
 ---
 collection: workshops
-title: 'Custom Directive to Change Icon'
+title: 'Extra: Custom Directive to Change Icon'
 published: true
 type: ionicextra
 layout: workshoppost2
@@ -9,39 +9,16 @@ length: 20 minutes
 
 
 
-## Objectives
+<div class="fake-h2">Objective</div>
 
 * Change an icon based on the OS the application is running.
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<h2>Table of Contents</h2>
+<div class="fake-h2">Table of Contents</div>
 
-- [Git Setup (Optional)](#git-setup-optional)
-- [Section 9.0: Creating a Directive](#section-90-creating-a-directive)
-- [Wrap-up](#wrap-up)
+* TOC
+{:toc}
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## Git Setup (Optional)
-
-During this lab, you will be able to follow along using git to checkout the completed version of the steps in each section if you do not want to write all of the code yourself. 
-
-If you intend to use the completed version of the steps, you need to clone the repository for this lab.
-
-    $ git clone https://github.com/IonicWorkshop/Lab9-ChangingIconsBasedOnPlatform.git
-
-This lab builds on Lab 5.  If you did not do or complete this lab, use the command above to checkout Lab 9 and then run the checkout command below to take it to the point of the completed Lab5.
-
-    $ git checkout -f Lab5Completed
-
-## Section 9.0: Creating a Directive
-
-**Get Completed Steps (optional)**
-
-If you are following along using git, reset your project to Step0.
-
-    $ git checkout -f Step0
+## Section 1.0: Creating a Directive
 
 **Steps**
 
@@ -73,7 +50,7 @@ There are many items in the Ionic Framework that change based on the OS of the m
 
         angular.element(element[0]).addClass(YOUR_CLASS_NAME);
         
-## Section 9.1: Using the Directive
+## Section 1.1: Using the Directive
 
 **Get Completed Steps (optional)**
 

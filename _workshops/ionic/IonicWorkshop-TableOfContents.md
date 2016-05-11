@@ -1,5 +1,3 @@
-<!-- DOCTOC SKIP -->
-
 #Ionic Workshop Labs
 
 ##Workshop Feedback

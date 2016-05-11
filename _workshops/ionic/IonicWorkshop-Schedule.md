@@ -9,16 +9,10 @@ lab: ionic
 
 Here is the tentative schedule that I have planned for the workshop.  The schedule is very flexible and can be modified to suit the attendees.
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<h2>Table of Contents</h2>
+<div class="fake-h2">Table of Contents</div>
 
-- [Morning](#morning)
-- [Lunch](#lunch)
-- [Afternoon](#afternoon)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
+* TOC
+{:toc}
 
 ## Morning
 

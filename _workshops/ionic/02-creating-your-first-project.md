@@ -19,26 +19,14 @@ todo: |
 
 {% assign imagedir = "../images/first-project/" %}
 
-## Objectives
-
+<div class="fake-h2">Objective</div>
 
 Create your first Ionic project and view the project in a web browser.
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<h2>Table of Contents</h2>
+<div class="fake-h2">Table of Contents</div>
 
-- [Section 2.0: Creating A Project](#section-20-creating-a-project)
-  - [Section 2.0.1: Steps](#section-201-steps)
-  - [Section 2.0.2 Start Command Details](#section-202-start-command-details)
-  - [Section 2.0.3: Mac Cleanup](#section-203-mac-cleanup)
-- [Section 2.1: Install Dependencies](#section-21-install-dependencies)
-- [Section 2.2: Testing Project](#section-22-testing-project)
-  - [Section 2.2.1: Ionic Lab](#section-221-ionic-lab)
-  - [Section 2.2.2: Chrome Dev Tools](#section-222-chrome-dev-tools)
-- [Conclusion](#conclusion)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+* TOC
+{:toc}
 
 ## Section 2.0: Creating A Project
 
@@ -134,7 +122,8 @@ Before we can run the project, we need to install the required dependencies.
     $ npm install
     $ bower install
 
-> the npm install command will take several minutes to run depending on internet speed
+> The npm install command will take several minutes to run depending on internet speed
+{:.warning}
 
 ## Section 2.2: Testing Project
 
@@ -144,7 +133,8 @@ In your open command prompt (Windows) or terminal (OSx), from your project direc
 
         $ ionic serve
 
->If you browser is not Google Chrome, please open Chrome and navigate to [http://localhost:8100](http://localhost:8100)
+>If your default browser is not Google Chrome, please open Google Chrome and navigate to [http://localhost:8100](http://localhost:8100)
+{:.warning}
 
 You should see a view similar to this in your browser.
 

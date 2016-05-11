@@ -15,7 +15,7 @@ todo: |
 {% assign imagedir = "../images/master-view/" %}
 
 
-## Objectives
+<div class="fake-h2">Objective</div>
 
 * Add a new view into the UI (master view part of master/detail view)
 * Create our first service
@@ -23,22 +23,10 @@ todo: |
 * Bind data to the UI
 * Order data in the UI
 
+<div class="fake-h2">Table of Contents</div>
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<h2>Table of Contents</h2>
-
-- [Section 5.0: Adding New Page](#section-50-adding-new-page)
-- [Section 5.1: Add Route to Project Page](#section-51-add-route-to-project-page)
-- [Section 5.2: Creating Your First Service](#section-52-creating-your-first-service)
-- [Section 5.3: Creating Your First Controller](#section-53-creating-your-first-controller)
-- [Section 5.4: Binding Service Data To UI](#section-54-binding-service-data-to-ui)
-- [Section 5.5: Ordering Data](#section-55-ordering-data)
-- [Minification Safe Code](#minification-safe-code)
-- [Wrap-up](#wrap-up)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
+* TOC
+{:toc}
 
 ## Section 5.0: Adding New Page
 

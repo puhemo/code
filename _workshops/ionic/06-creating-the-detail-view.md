@@ -19,27 +19,17 @@ todo: |
 ---
 {% assign imagedir = "../images/detail-view/" %}
 
-## Objective
+<div class="fake-h2">Objective</div>
 
 * Create the tasks view page
 * Link from the master view (projects) to the detail view (tasks)
 * Setup routing for sub-page (tasks) and pass a url parameter to it (projectId)
 * Ordering data by more than 1 field in an ng-repeat
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<h2>Table of Contents</h2>
+<div class="fake-h2">Table of Contents</div>
 
-- [Section 6.0: Adding the Task List Page](#section-60-adding-the-task-list-page)
-- [Section 6.1: Add Route to Tasks Page](#section-61-add-route-to-tasks-page)
-- [Section 6.2: Navigating to Tasks Page](#section-62-navigating-to-tasks-page)
-- [Section 6.3: Creating the Tasks Service](#section-63-creating-the-tasks-service)
-- [Section 6.4: Creating the Tasks Controller](#section-64-creating-the-tasks-controller)
-- [Section 6.5: Binding Service Data To UI](#section-65-binding-service-data-to-ui)
-- [Section 6.6: Ordering Data](#section-66-ordering-data)
-- [Wrap-up](#wrap-up)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+* TOC
+{:toc}
 
 ## Section 6.0: Adding the Task List Page
 

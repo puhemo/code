@@ -15,12 +15,9 @@ todo: |
     * update TOC
     * Remove Git tab sections
     * Add dates to add workshop pages
+    * fix bug in next lab for last extra.  it goes back to intro page.
+    * paging showing up on agenda and schedule
 ---
-
-
-<!-- DOCTOC SKIP -->
-
-
 
 Welcome to my [Ionic](http://ionicframework.com) workshop.  This workshop is designed to be a hands-on all day workshop.  There will be a mix of lecture to introduce concepts and then a lab to reinforce those concepts.
 

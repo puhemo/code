@@ -11,6 +11,13 @@ todo: |
     *
 ---
 
-{% assign imagedir = "/images/" | prepend: site.baseurl | prepend: site.url %}
+{% assign imagedir = "..//images/" | prepend: site.baseurl  %}
 
+<div class="fake-h2">Objective</div>
 
+<div class="fake-h2">Table of Contents</div>
+
+* TOC
+{:toc}
+
+## Section 12.0:

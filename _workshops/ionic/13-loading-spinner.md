@@ -12,31 +12,16 @@ todo: |
     * update length
 ---
 
-## Objective
+<div class="fake-h2">Objective</div>
 
 * Add a loading spinner to the contact list on initial page load.
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<h2>Table of Contents</h2>
+<div class="fake-h2">Table of Contents</div>
 
-- [Git Setup (Optional)](#git-setup-optional)
-- [Section 11.0: Add ionicLoading and Wiring It Up](#section-110-add-ionicloading-and-wiring-it-up)
-- [Section 11.2: Testing it in the browser](#section-112-testing-it-in-the-browser)
-- [Wrap-up](#wrap-up)
+* TOC
+{:toc}
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## Git Setup (Optional)
-
-During this lab, you will be able to follow along using git to checkout the completed version of the steps in each section if you do not want to write all of the code yourself. 
-
-If you intend to use the completed version of the steps, you need to clone the repository for this lab.
-
-    $ git clone https://github.com/IonicWorkshop/Lab11-AddingALoadingSpinner.git
-
-
-## Section 11.0: Add ionicLoading and Wiring It Up
+## Section 13.0: Add ionicLoading and Wiring It Up
 
 **Get Completed Steps (optional)**
 
@@ -62,7 +47,7 @@ The ionicLoading documentation can be found
 * By running the command line command: ionic docs ionicLoading 
 * [http://ionicframework.com/docs/api/service/%24ionicLoading/](http://ionicframework.com/docs/api/service/%24ionicLoading/)
 
-## Section 11.2: Testing it in the browser
+## Section 13.2: Testing it in the browser
 
 1. If you don't already have ionic serve running, open a command prompt and run the command ionic serve
 1. In your web browser, open [http://localhost:8100](http://localhost:8100)

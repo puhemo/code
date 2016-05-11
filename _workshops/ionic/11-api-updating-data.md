@@ -12,26 +12,11 @@ todo: |
     * update length
 ---
 
+<div class="fake-h2">Objective</div>
 
+<div class="fake-h2">Table of Contents</div>
 
+* TOC
+{:toc}
 
-## Objective
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<h2>Table of Contents</h2>
-
-- [Git Setup (Optional)](#git-setup-optional)
-- [Section 10.0: ??](#section-100-)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## Git Setup (Optional)
-
-During this lab, you will be able to follow along using git to checkout the completed version of the steps in each section if you do not want to write all of the code yourself.
-
-If you intend to use the completed version of the steps, you need to clone the repository for this lab.
-
-    $ git clone https://github.com/IonicWorkshop/Lab10-UpdatingData.git
-
-## Section 10.0: ??
+## Section 11.0:

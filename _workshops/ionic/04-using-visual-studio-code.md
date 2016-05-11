@@ -14,7 +14,7 @@ todo: |
 {% assign imagedir = "../images/project-layout/" %}
 
 
-## Objectives
+<div class="fake-h2">Objective</div>
 
 Visual Studio Code out of the box has good default settings to immediately start using it as an editor.  To make it even more effective to use Visual Studio Code there are a few extensions for angular and ionic that you will want to install.  As well there are a few shortcuts and settings that come in handy.
 

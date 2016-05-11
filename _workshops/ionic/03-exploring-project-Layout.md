@@ -17,25 +17,16 @@ todo: |
 
 {% assign imagedir = "../images/project-layout/" %}
 
-## Objectives
+<div class="fake-h2">Objective</div>
 
 Understand the folder structure for an Ionic project and where to place files.
 
 >**Note**: For this lab, I will be using Visual Studio Code as our editor but you can use any text editor.  The install steps for Visual Studio Code are in [Lab 01: Ionic Setup](../01-install-ionic/)
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<h2>Table of Contents</h2>
+<div class="fake-h2">Table of Contents</div>
 
-- [Section 3.0: Opening Project in Visual Studio Code](#section-30-opening-project-in-visual-studio-code)
-- [Section 3.1: Exploring Project Layout](#section-31-exploring-project-layout)
-- [Section 3.2: Suggested Structure](#section-32-suggested-structure)
-  - [Section 3.2.1: Structure By Type](#section-321-structure-by-type)
-  - [Section 3.3.2: Structure By Page](#section-332-structure-by-page)
-- [Section 3.3 Angular Coding Style](#section-33-angular-coding-style)
-- [Wrap-up](#wrap-up)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+* TOC
+{:toc}
 
 ## Section 3.0: Opening Project in Visual Studio Code
 

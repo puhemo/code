@@ -12,15 +12,11 @@ todo: |
     * update length
 ---
 
-## Objective
+<div class="fake-h2">Objective</div>
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<h2>Table of Contents</h2>
+<div class="fake-h2">Table of Contents</div>
 
-- [Section 15.0: ??](#section-150-)
+* TOC
+{:toc}
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
-## Section 15.0: ??
+## Section 16.0:

@@ -11,35 +11,20 @@ length: 30 minutes
 
 
 
-## Objective
+<div class="fake-h2">Objective</div>
 
 Setup your Windows computer with the required software to create an Ionic Framework based project and be able to run/test it in the browser.
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<h2>Table of Contents</h2>
+<div class="fake-h2">Table of Contents</div>
 
-- [Section 1.0: Windows](#section-10-windows)
-  - [Section 1.0.1: Chocolatey](#section-101-chocolatey)
-  - [Section 1.0.1: NodeJs](#section-101-nodejs)
-  - [Section 1.0.2: Git Command line](#section-102-git-command-line)
-  - [Section 1.0.3: Google Chrome](#section-103-google-chrome)
-  - [Section 1.0.4: Visual Studio Code](#section-104-visual-studio-code)
-- [Section 2.0: Mac](#section-20-mac)
-  - [Section 2.1.1: NodeJs](#section-211-nodejs)
-  - [Section 2.1.2: Git Command Line](#section-212-git-command-line)
-  - [Section 2.1.3: Google Chrome](#section-213-google-chrome)
-  - [Section 2.1.4: Visual Studio Code](#section-214-visual-studio-code)
-- [Section 3.0: Ionic](#section-30-ionic)
-- [Conclusion](#conclusion)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+* TOC
+{:toc}
 
 ## Section 1.0: Windows
 
 Below are the instructions for installation if you are on a Windows machine.
 
-> **<font color="red">NOTE:</font>** Already have node v.4+, the git command line, Google Chrome and Visual Studio Code installed, skip to [section 3.0](#section-30-ionic.)
+> **Note:** Already have node v.4+, the git command line, Google Chrome and Visual Studio Code installed, skip to [section 3.0](#section-30-ionic.)
 
 ### Section 1.0.1: Chocolatey
 
@@ -57,7 +42,7 @@ Below are the instructions for installation if you are on a Windows machine.
 
 ### Section 1.0.1: NodeJs
 
-> **<font color="red">NOTE:</font>** Already have node v.4+ installed, skip to [section 1.0.2](#section-102-git-command-line)
+> **Note:** Already have node v.4+ installed, skip to [section 1.0.2](#section-102-git-command-line)
 
 1. From the administrative command prompt you opened in [section 1.0.1](#  section-101-chocolatey), install the latest NodeJs version by running:
 
@@ -71,7 +56,7 @@ Below are the instructions for installation if you are on a Windows machine.
 
 ### Section 1.0.2: Git Command line
 
-> **<font color="red">NOTE:</font>** Already have the git command line installed, skip to [section 1.0.3](#section-103-google-chrome)
+> **Note:** Already have the git command line installed, skip to [section 1.0.3](#section-103-google-chrome)
 
 1. From the administrative command prompt you opened in [section 1.0.1](#  section-101-chocolatey) run:
 
@@ -85,7 +70,7 @@ Below are the instructions for installation if you are on a Windows machine.
 
 ### Section 1.0.3: Google Chrome
 
-> **<font color="red">NOTE:</font>** Already have Google Chrome installed, skip to [section 1.0.4](#section-104-visual-studio-code)
+> **Note:** Already have Google Chrome installed, skip to [section 1.0.4](#section-104-visual-studio-code)
 
 For testing in the browser as well on Android devices Google Chrome gives you the best debugging experience.  
 
@@ -98,7 +83,7 @@ When deploying to an Android device you will be able to use the Chrome Developer
 
 ### Section 1.0.4: Visual Studio Code
 
-> **<font color="red">NOTE:</font>** Already have Visual Studio Code installed, skip to [section 3.0](#section-30-ionic)
+> **Note:** Already have Visual Studio Code installed, skip to [section 3.0](#section-30-ionic)
 
 Visual Studio Code is a great free lightweight cross-platform code editor.  
 
@@ -113,11 +98,11 @@ By having everyone use the same editor it helps to eliminate editor specific iss
 
 Below are the instructions for installation if you are on a Mac machine.
 
-> **<font color="red">NOTE:</font>** Already have node v.4+, the git command line, Google Chrome and Visual Studio Code installed, skip to [section 3.0](#section-30-ionic.)
+> **Note:** Already have node v.4+, the git command line, Google Chrome and Visual Studio Code installed, skip to [section 3.0](#section-30-ionic.)
 
 ### Section 2.1.1: NodeJs
 
-> **<font color="red">NOTE:</font>** If you already have node v.4+ installed, you can skip this section and go to [section 2.0.1](section-201-git-command-line)
+> **Note:** If you already have node v.4+ installed, you can skip this section and go to [section 2.0.1](section-201-git-command-line)
 
 
 1. Open a Web Browser and go to [http://nodejs.org](http://nodejs.org)
@@ -133,7 +118,7 @@ Below are the instructions for installation if you are on a Mac machine.
 
 On a recent Mac git comes pre-installed.  To verify it is installed open up terminal and run:
 
-            $ git --version.
+            $ git --version
 
 If you do not have the git command line tools installed, you will need to install it.  As well, it also indicates that you are running an old version of OSx and you may have issue completing this lab.
 
@@ -143,7 +128,7 @@ If you do not have the git command line tools installed, you will need to instal
 
 ### Section 2.1.3: Google Chrome
 
-> **<font color="red">NOTE:</font>** If you already have Google Chrome installed, you can skip this section and go to [section 2.0.3](section-203-visual-studio-code)
+> **Note:** If you already have Google Chrome installed, you can skip this section and go to [section 2.0.3](section-203-visual-studio-code)
 
 For testing in the browser as well on Android devices Google Chrome gives you the best debugging experience.
 
@@ -155,7 +140,7 @@ When deploying to an Android device you will be able to use the Chrome Developer
 
 ### Section 2.1.4: Visual Studio Code
 
-> **<font color="red">NOTE:</font> If you already have Visual Studio Code installed, you can skip this section and go to [section 30](  section-30-ionic.)
+> **Note:** If you already have Visual Studio Code installed, you can skip this section and go to [section 30](  section-30-ionic.)
 
 Visual Studio Code is a great free lightweight cross-platform code editor.
 

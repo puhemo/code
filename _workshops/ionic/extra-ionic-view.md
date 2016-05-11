@@ -1,6 +1,6 @@
 ---
 collection: workshops
-title: 'Using the Ionic View Application'
+title: 'Extra: Using the Ionic View Application'
 published: true
 type: ionicextra
 layout: workshoppost2
@@ -10,25 +10,16 @@ length: 10 minutes
 
 
 
-## Objective
+<div class="fake-h2">Objective</div>
 
 * Upload an application to IonicView
 * Share an upload application with other people
 * Download the application in IonicView and interact with it
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<h2>Table of Contents</h2>
+<div class="fake-h2">Table of Contents</div>
 
-- [Background](#background)
-- [Git Setup (Optional)](#git-setup-optional)
-- [Section 6.0: Creating ionic.io account](#section-60-creating-ionicio-account)
-- [Section 6.1: Installing IonicView application](#section-61-installing-ionicview-application)
-- [Section 6.2: Uploading Your Application to IonicView](#section-62-uploading-your-application-to-ionicview)
-- [Section 6.3: Sharing Your IonicView Application](#section-63-sharing-your-ionicview-application)
-- [Wrap-up](#wrap-up)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+* TOC
+{:toc}
 
 ## Background
 
@@ -36,19 +27,13 @@ The IonicView application is a great way to test our your application on a devic
 
 For a real beta, you would want to do an actual application install since the IonicView runs your application inside of a container but for quick testing, you can't beat the IonicView application.
 
-## Git Setup (Optional)
-
-This lab uses the finished project from Lab5.  If you did not do or complete Lab5, you can download the finished project from git by running
-
-    $ git clone https://github.com/IonicWorkshop/Lab5-CreatingADetailView.git
-
-## Section 6.0: Creating ionic.io account
+## Section 1.0: Creating ionic.io account
 
 Ionic has several tools out there such as a drag and drop UI creator, push notifications, and the Ionic view which all require an ionic.io free account.  
 
 1.  If you do not already have an ionic.io account, you can sign up for one at [https://apps.ionic.io/signup](https://apps.ionic.io/signup)
 
-## Section 6.1: Installing IonicView application
+## Section 1.1: Installing IonicView application
 
 On your device, look up Ionic View in the app store.  Below are the direct links for each OS.
 
@@ -57,7 +42,7 @@ On your device, look up Ionic View in the app store.  Below are the direct links
 
 After you finish install IonicView, open up the application and login with your email and password that you signed up with.
 
-## Section 6.2: Uploading Your Application to IonicView
+## Section 1.2: Uploading Your Application to IonicView
 
 1. Open a command prompt, navigate to your Lab5 folder and run the command
 
@@ -70,7 +55,7 @@ After you finish install IonicView, open up the application and login with your 
 1. After it downloads, click on View App
 1. You can now play around in the application on your device.
 
-## Section 6.3: Sharing Your IonicView Application
+## Section 1.3: Sharing Your IonicView Application
 
 1. Open a command prompt, navigate to your Lab5 folder share the Ionic view application with me by running the command 
 
