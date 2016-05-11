@@ -121,9 +121,11 @@ By default doctoc generated github formatted links.  To change use the following
 
 ## Using with Jekyll
 
-With the kramdown parser that Jekyll uses by default you can easily add in a table of contents.  The one limitation that stopped me from using it for the pages that I wanted a table of contents is that it gets all headers and not just the ones after the table of contents.  In my case, I had 2 headers above the table of contents that I could not get excluded from the table of contents output.  The one major advantage to use the kramdown table of contents generation is that it will automatically add it during the Jekyll build where as using doctoc you have to do it outside of the Jekyll build.
+>UPDATED 2016-05-10: For Jekyll the recommendation is now to use the kramdown table of contents built-in generator
 
-To use add a table of contents using karmdown on your Jekyll blog, add the follow to your file where you are want your table of contents.
+With the kramdown parser that Jekyll uses by default you can easily add in a table of contents.  The one limitation that had stopped me from using it for the pages that I wanted a table of contents is that it gets all headers and not just the ones after he table of contents.  Granted most of the time that table of contents is at the top of the page but I had an objectives section above my table of contents that was being added in the table of contents which I did not want.  However, I was able to work around this issue by using html and CSS instead of markdown for the headers I wanted to exclude.  I would style the div tag just like it was an H1-H6 tag without it actually being a header.
+
+To use add a table of contents using kramdown on your Jekyll blog, add the follow to your file where you are want your table of contents.
 
     * TOC
     {:toc}
@@ -133,29 +135,7 @@ To use add a table of contents using karmdown on your Jekyll blog, add the follo
 * TOC
 {:toc}
 
-Using doctoc with Jekyll works for the most part.  Where I got tripped up is that the karmdown parser uses the [Pandoc](http://pandoc.org/README.html#header-identifiers) rules for generating the header auto ids which strips everything up to the first letter.  This meant if your header started with a number it would be stripped from the header anchor tag.  This by itself would be ok but doctoc does not follow this same rule and leaves the numbers in the links.  The quick solution is to not start the header text with a number.
-
-**doctoc TOC showing only headers that follow**
-
-
-Add the following right below this to generate the TOC at this point in the file:
-
-    <!-- START doctoc generated TOC please keep comment here to allow auto update -->
-    <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-    <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
->Notice that it only has the 2 headers that follow this section in the table of contents
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<strong>Table of Contents Sample</strong>
-
-- [Including as Git Precommit](#including-as-git-precommit)
-- [More Info](#more-info)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
+This will cause the * TOC to be replaced with the actual table of contents when the jekyll build/serve is run.
 
 ## Running doctoc as a Git pre-commit
 
