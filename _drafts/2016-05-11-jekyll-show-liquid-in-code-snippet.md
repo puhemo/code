@@ -1,29 +1,31 @@
 ---
 layout: post
-title: 'Jekyll Part 15: Showing Liquid Code'
+title: 'Jekyll Tip: Showing Liquid Code'
 date: 2016-05-11 06:00
 categories: ['jekyll','blogging']
 published: true
-series: blogging-with-jekyll
 excerpt: |
-    
+    There are times when you need to be able to output code snippets that contain what jekyll thinks is liquid code or the jekyll templating language.  This especially happens when you are doing Angular tutorial since &#123;&#123 &#125;&#125; is how you output properties to the UI.
 ---
 
 {% assign imagedir = "/images/" | prepend: site.baseurl | prepend: site.url %}
 
-Welcome to part 15 of the series on Blogging on Github.
+There are times when you need to be able to output code snippets that contain what jekyll thinks is liquid code or the jekyll templating language.  This especially happens when you are doing Angular tutorial since using the double brackets &#123;&#123;  &#125;&#125; is how you output properties to the UI.
 
-In this lesson, we are going to look at how to have jekyll show code that includes liquid syntax.
+To include liquid markup in the code snippet you need to surround the code snippet with the raw and endraw tags like so
 
-**Length**: 10 minutes
+<figure class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">&#123;%</span><span class="w"> </span><span class="nt">raw</span><span class="w"> </span><span class="w"> </span><span class="p">%&#125;</span>
 
-{% include series.html %}
+    &#123;&#123; Notice the double brackets will be in the output &#125;&#125;
 
-{% highlight js %}
-    {% raw %}
-        {{ test }}
-        {% assign test = 'test' %}
-    {% endraw %}
+<span class="p">&#123;%</span><span class="w"> </span><span class="nt">endraw</span><span class="w"> </span><span class="p">%&#125;</span></code></pre></figure>
+
+This will output:
+
+{% highlight liquid %}
+{% raw %}
+{{ Notice the double brackets are output }}
+{% endraw %}
 {% endhighlight %}
 
-{% include series.html %}
+
