@@ -18,7 +18,7 @@ length: 20 minutes
 * TOC
 {:toc}
 
-## Section 1.0: Creating a Directive
+## 1.0: Creating a Directive
 
 **Steps**
 
@@ -50,7 +50,7 @@ There are many items in the Ionic Framework that change based on the OS of the m
 
         angular.element(element[0]).addClass(YOUR_CLASS_NAME);
         
-## Section 1.1: Using the Directive
+## 1.1: Using the Directive
 
 **Get Completed Steps (optional)**
 

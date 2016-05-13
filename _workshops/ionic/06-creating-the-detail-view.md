@@ -31,12 +31,12 @@ todo: |
 * TOC
 {:toc}
 
-## Section 6.0: Adding the Task List Page
+## 6.0: Adding the Task List Page
 
 1. In the www/templates directory, create a file called tasks.html
 1. In the tasks.html file, use the `ionicview` snippet to generate the view boilerplate code and set the view-title to "Tasks"
 
-## Section 6.1: Add Route to Tasks Page
+## 6.1: Add Route to Tasks Page
 
 In order for angular to properly route us to the tasks page, we need to tell Angular how to find the tasks page.
 
@@ -47,7 +47,7 @@ In order for angular to properly route us to the tasks page, we need to tell Ang
             templateUrl: 'templates/tasks.html'
           });
 
-## Section 6.2: Navigating to Tasks Page
+## 6.2: Navigating to Tasks Page
 
 To navigate to the task page when clicking on a project in the projects page, we need to add an ng-href to each ion-item in the projects list in the projects.html code.
 
@@ -64,7 +64,7 @@ To navigate to the task page when clicking on a project in the projects page, we
 
     ![Blank Tasks View]({{"tasks-initial-view.png" | prepend: imagedir }})
 
-## Section 6.3: Creating the Tasks Service
+## 6.3: Creating the Tasks Service
 
 In this section, you will be creating the tasks service to pull tasks data for the selected project from our mock-data.json file that we setup in the previous lab.
 
@@ -86,7 +86,7 @@ In this section, you will be creating the tasks service to pull tasks data for t
             });
         }
 
-## Section 6.4: Creating the Tasks Controller
+## 6.4: Creating the Tasks Controller
 
 In this section, you will be creating the tasks page controller that will contain all of the logic for the tasks page and talk with the TasksService to get data.
 
@@ -152,7 +152,7 @@ Now we are ready to show the tasks data on our tasks view.  We will first just o
     ![Tasks Raw Json]({{ "tasks-raw-json.png" | prepend: imagedir }})
 
 
-## Section 6.5: Binding Service Data To UI
+## 6.5: Binding Service Data To UI
 
 So far you have just bound the json output to the UI.  Useful for debugging but not what you want a user to see.  In this section, we will create a nice looking task list that shows the task name and if it is completed or not.   The UI should look like the following when done:
 
@@ -177,7 +177,7 @@ So far you have just bound the json output to the UI.  Useful for debugging but 
 
 To see the full docs on the &lt;ion-list&gt; documentation, at the command prompt, type ionic docs ion-list or go to [http://ionicframework.com/docs/api/directive/ionList/](http://ionicframework.com/docs/api/directive/ionList/)
 
-## Section 6.6: Ordering Data
+## 6.6: Ordering Data
 
 If you look at the ion-list right now it is difficult to find a specific task since the list is ordered by the way it is stored in the mock-data.json json array. Unlike the projects list where we sorted by a single field, for the task we want to sort by the completion status and then name so that completed tasks are at the bottom of the list and then the task are sorted by name.
 

@@ -32,7 +32,7 @@ todo: |
 
 
 
-## Section 7.0: Stop Text From Being Cut Off
+## 7.0: Stop Text From Being Cut Off
 
 In the last lab I don't know if you caught that the text for the tasks was being truncated or not but it was.  In some cases this might be ok, but in our case we need to see all of the details of the task.
 
@@ -44,7 +44,7 @@ Thankfully ionic has a built-in css class to fix this issue.  We just need to ad
 
 ![Task List with Wrapped Text]({{ "tasks-ion-list-text-wrapped.png" | prepend: imagedir }})
 
-## Section 7.1: Making it Obvious That the Project is Clickable
+## 7.1: Making it Obvious That the Project is Clickable
 
 From a usability perspective it is not obvious at all that the each row in the project list when clicked will take you to a 2nd page.  Looking at the screenshot of the project list you would not know that where is even a 2nd page
 
@@ -67,7 +67,7 @@ To remedy this we are going to add a right arrow to each row but the arrow shoul
     ![Project List Arrow on Right Side, small and gray]({{"project-list-arrow-right-accessory.png" | prepend: imagedir }})
 
 
-## Section 7.2: Give completed tasks some style
+## 7.2: Give completed tasks some style
 
 Right now the task list looks all the same regardless of if the task is completed or not.  As well the completed property for each task is a boolean value that can easily be represented with an icon.   In this section we will implement both of these features.
 
@@ -116,7 +116,7 @@ The last thing we are going to change is to make the completed task gray and hav
 
 1. Open the www/css/style.css file and add the following css class
 
-        .completedTask {
+        .completed-task {
             text-decoration: line-through;
             color: #A9A9A9;
         }
@@ -130,7 +130,7 @@ Your ion-item code should look like:
 {%  raw %}
       <ion-item class="item-text-wrap item-icon-left"
         ng-repeat="task in vm.tasks | orderBy: ['completed','name']"
-        ng-class="{completedTask: task.completed }"
+        ng-class="{completed-task: task.completed }"
       >
         <h2>{{task.name}}</h2>
 

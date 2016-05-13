@@ -30,7 +30,7 @@ The icon image’s minimum dimensions should be 192×192 px and should have no r
 Splash screen dimensions vary for each platform, device, and orientation, so a square source image is required to generate each of the various screen sizes. The source image’s minimum dimensions should be 2208×2208 px, and the artwork should be centered within the square, because each generated image will be center cropped into landscape and portrait images.  Template available at [http://code.ionicframework.com/resources/splash.psd](http://code.ionicframework.com/resources/splash.psd)
 
 
-## Section 1.0: Download Project
+## 1.0: Download Project
 
 The first step is to download the project that I have created for you that includes the icon and splash screen images.  The starter project is based on Lab 5 with an additional Resources and ResourceTemplate folders.
 
@@ -41,7 +41,7 @@ If you intend to use the completed version of the steps, you need to clone the r
     $ git clone https://github.com/IonicWorkshop/Lab8-ConfiguringIconAndSplashImages.git
 
 
-## Section 1.1: Adding Icon
+## 1.1: Adding Icon
 
 1. A pre-selected icon and splash screen images are in the Resources folder.
 1. Open the config.xml file.
@@ -66,7 +66,7 @@ If you intend to use the completed version of the steps, you need to clone the r
 1. A default icon was also added to the config.xml file in the root of the &lt;widget&gt; node.  The value will be the last icon that was generated.  (e.g. if iOS was last resource add then it will be the iOS icon)
         <icon src="resources/ios/icon/icon-small@3x.png"/>
 
-## Section 1.2: Adding Splash Screen Image
+## 1.2: Adding Splash Screen Image
 
 1. Open the config.xml file.
 1. To add android splash screen images use:
@@ -87,11 +87,11 @@ If you intend to use the completed version of the steps, you need to clone the r
 1. If you look in the Resources folder, you will notice that an ios\splash folder has been added with all of the generated images.
 
 
-## Section 1.3: Updating the Icon and Splash Images
+## 1.3: Updating the Icon and Splash Images
 
 If you need to update either the icon or splash image, re-run the resource command.
 
-## Section 1.4: Generating Icon and Splash Images For All Platforms At Once
+## 1.4: Generating Icon and Splash Images For All Platforms At Once
 
 1. If you have all of the required software to deploy to an emulator or device then you can generate all of the resource images add once. (See Section 1.5 below)
 
@@ -104,7 +104,7 @@ If you need to update either the icon or splash image, re-run the resource comma
 
         ionic resources
 
-## Section 1.5: Testing Your Icon and Splash Screen on a Device
+## 1.5: Testing Your Icon and Splash Screen on a Device
 
 In order to test our the icons and splash screen images, you will need to deploy to either an emulator or a device.  To deploy to each platform, you have to install various pieces of software.
 

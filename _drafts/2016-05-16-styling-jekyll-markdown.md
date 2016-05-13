@@ -12,6 +12,17 @@ excerpt: |
 
 There are times where you want to add a little more style to the jekyll markdown output but you don't want to have to write out all of the html to do.  With the kramdown markdown parser that Jekyll uses you can add extra metadata tags in your markdown
 
+##paragraph
+
+**markdown**
+
+    {:.fake-h2}
+    This will be styled as a p tag with the css class fake-2
+
+**output**
+
+    <p class="fake-h2">Objective</p>
+
 ## list
 
 **markdown**

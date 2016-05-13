@@ -20,13 +20,13 @@ Setup your Windows computer with the required software to create an Ionic Framew
 * TOC
 {:toc}
 
-## Section 1.0: Windows
+## 1.0: Windows
 
 Below are the instructions for installation if you are on a Windows machine.
 
 > **Note:** Already have node v.4+, the git command line, Google Chrome and Visual Studio Code installed, skip to [section 3.0](#section-30-ionic.)
 
-### Section 1.0.1: Chocolatey
+### 1.0.1: Chocolatey
 
 [Chocolatey](http://chocolatey.org) is a Windows package manager that takes care of downloading and installing software packages.  For Windows, it makes installing software a breeze if there is an existing Chocolatey package which for the software we are using there are packages available.
 
@@ -40,7 +40,7 @@ Below are the instructions for installation if you are on a Windows machine.
 
 1. Close and re-open the administrative command prompt to make pick the environment variables that were added for chocolatey
 
-### Section 1.0.1: NodeJs
+### 1.0.1: NodeJs
 
 > **Note:** Already have node v.4+ installed, skip to [section 1.0.2](#section-102-git-command-line)
 
@@ -54,7 +54,7 @@ Below are the instructions for installation if you are on a Windows machine.
 
 1. If the node -v command returns a version number, then node is installed and working correctly.
 
-### Section 1.0.2: Git Command line
+### 1.0.2: Git Command line
 
 > **Note:** Already have the git command line installed, skip to [section 1.0.3](#section-103-google-chrome)
 
@@ -68,7 +68,7 @@ Below are the instructions for installation if you are on a Windows machine.
         
 1. If the git --version command returns a version number, then git is installed
 
-### Section 1.0.3: Google Chrome
+### 1.0.3: Google Chrome
 
 > **Note:** Already have Google Chrome installed, skip to [section 1.0.4](#section-104-visual-studio-code)
 
@@ -81,7 +81,7 @@ When deploying to an Android device you will be able to use the Chrome Developer
         $ choco install -y googlechrome
         
 
-### Section 1.0.4: Visual Studio Code
+### 1.0.4: Visual Studio Code
 
 > **Note:** Already have Visual Studio Code installed, skip to [section 3.0](#section-30-ionic)
 
@@ -94,13 +94,13 @@ By having everyone use the same editor it helps to eliminate editor specific iss
         $ choco install -y visualstudiocode
       
 
-## Section 2.0: Mac
+## 2.0: Mac
 
 Below are the instructions for installation if you are on a Mac machine.
 
 > **Note:** Already have node v.4+, the git command line, Google Chrome and Visual Studio Code installed, skip to [section 3.0](#section-30-ionic.)
 
-### Section 2.1.1: NodeJs
+### 2.1.1: NodeJs
 
 > **Note:** If you already have node v.4+ installed, you can skip this section and go to [section 2.0.1](section-201-git-command-line)
 
@@ -114,7 +114,7 @@ Below are the instructions for installation if you are on a Mac machine.
 
 1. If the node -v command returns a version number, then node is installed
 
-### Section 2.1.2: Git Command Line
+### 2.1.2: Git Command Line
 
 On a recent Mac git comes pre-installed.  To verify it is installed open up terminal and run:
 
@@ -126,7 +126,7 @@ If you do not have the git command line tools installed, you will need to instal
 1. Click the download button.
 1. Run the downloaded exe and follow the installer instructions.
 
-### Section 2.1.3: Google Chrome
+### 2.1.3: Google Chrome
 
 > **Note:** If you already have Google Chrome installed, you can skip this section and go to [section 2.0.3](section-203-visual-studio-code)
 
@@ -138,7 +138,7 @@ When deploying to an Android device you will be able to use the Chrome Developer
 1. Click the "Download Chrome" button to download chrome
 1. Launch the installer exe after it downloads and follow the on screen instructions
 
-### Section 2.1.4: Visual Studio Code
+### 2.1.4: Visual Studio Code
 
 > **Note:** If you already have Visual Studio Code installed, you can skip this section and go to [section 30](  section-30-ionic.)
 
@@ -153,7 +153,7 @@ By having everyone use the same editor it helps to eliminate editor specific iss
 1. Add VS Code to your Dock by right-clicking on the icon and choosing Options, Keep in Dock.
 
 
-## Section 3.0: Ionic
+## 3.0: Ionic
 
 1. Open up a regular non-administrative command prompt or terminal 
 1. Run the command: 

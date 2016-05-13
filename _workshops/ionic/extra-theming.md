@@ -6,6 +6,8 @@ type: ionicextra
 layout: workshoppost2
 lab: ionic
 length: 10 minutes
+todo: |
+    * add link to http://ionicframework.com/docs/components/#colors
 ---
 
 
@@ -19,13 +21,13 @@ length: 10 minutes
 * TOC
 {:toc}
 
-## Section 1.0: What is SASS?
+## 1.0: What is SASS?
 
 Sass is an extension of CSS that adds power and elegance to the basic language. It allows you to use variables, nested rules, mixins, inline imports, and more, all with a fully CSS-compatible syntax. Sass helps keep large stylesheets well-organized, and get small stylesheets up and running quickly, particularly with the help of the Compass style library.
 
 The Ionic framework uses variables for all of the style information which enable you to easily override any of the colors of the application with your own.  
 
-## Section 1.1: Setting up SASS
+## 1.1: Setting up SASS
 
 
 **Steps**
@@ -41,7 +43,7 @@ The Ionic framework uses variables for all of the style information which enable
     * setup the ionic serve command to start the gulp watch task
     
         
-## Section 1.2: Modifying the Look of the Contacts List
+## 1.2: Modifying the Look of the Contacts List
 
 **Get Completed Steps (optional)**
 

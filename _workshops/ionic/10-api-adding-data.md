@@ -19,4 +19,4 @@ todo: |
 * TOC
 {:toc}
 
-## Section 10.0:
+## 10.0:

@@ -21,7 +21,7 @@ todo: |
 * TOC
 {:toc}
 
-## Section 13.0: Add ionicLoading and Wiring It Up
+## 13.0: Add ionicLoading and Wiring It Up
 
 **Get Completed Steps (optional)**
 
@@ -47,7 +47,7 @@ The ionicLoading documentation can be found
 * By running the command line command: ionic docs ionicLoading 
 * [http://ionicframework.com/docs/api/service/%24ionicLoading/](http://ionicframework.com/docs/api/service/%24ionicLoading/)
 
-## Section 13.2: Testing it in the browser
+## 13.2: Testing it in the browser
 
 1. If you don't already have ionic serve running, open a command prompt and run the command ionic serve
 1. In your web browser, open [http://localhost:8100](http://localhost:8100)

@@ -32,7 +32,7 @@ Visual Studio Code out of the box has good default settings to immediately start
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Section 4.0: Shortcuts
+## 4.0: Shortcuts
 
 * hide left sidebar: ctrl+b
 * zoom in: ctrl+=
@@ -48,7 +48,7 @@ Visual Studio Code out of the box has good default settings to immediately start
 * Code Fold: ctrl+shift+[
 * Code Unfold: ctrl+shift+]
 
-## Section 4.1: My settings
+## 4.1: My settings
 
 Here are my settings that I use for Visual Studio Code.  You can edit these by going under File -> Preferences -> User Settings
 
@@ -68,7 +68,7 @@ Here are my settings that I use for Visual Studio Code.  You can edit these by g
         "editor.folding": true
     }
 
-## Section 4.2 Extensions
+## 4.2 Extensions
 
 Visual Studio Code allows you to extend the built-in functionality with extensions.  To install the extensions press F1, type extension, select Install Extension and then type the name of the extension you want to install.
 

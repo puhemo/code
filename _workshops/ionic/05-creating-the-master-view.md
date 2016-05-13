@@ -28,14 +28,14 @@ todo: |
 * TOC
 {:toc}
 
-## Section 5.0: Adding New Page
+## 5.0: Adding New Page
 
 1. under the www folder, create a directory called templates
 1. In the www/templates directory, create a file called projects.html
 1. In the projects.html file, , use the `ionicview` snippet to generate the view boilerplate code and set the view-title to "Projects"
 1. Press Esc to exit the snippet
 
-## Section 5.1: Add Route to Project Page
+## 5.1: Add Route to Project Page
 
 In order to get to the project page, we need to add a route so that Angular knows how to find the page when we navigate to it.
 
@@ -83,7 +83,7 @@ In order to get to the project page, we need to add a route so that Angular know
 
 1. We have now add the placeholders for the page.  In the next section we will add the controllers and services to get data.
 
-## Section 5.2: Creating Your First Service
+## 5.2: Creating Your First Service
 
 In this section, you will be creating your first service to pull data from a remote url.  Initially we will be hard coding our data in a local json and pulling it through $http but in future labs we will be creating a REST api using [Back&](http://backand.com).
 
@@ -107,7 +107,7 @@ In this section, you will be creating your first service to pull data from a rem
                 });
         }
 
-## Section 5.3: Creating Your First Controller
+## 5.3: Creating Your First Controller
 
 In this section, you will be creating your first controller that the html view will use to communicate with the ProjectsService.
 
@@ -165,7 +165,7 @@ Now we are ready to show the project data on our project view.  We will first ju
     ![Projects Raw Json]({{ "projects-raw-json.png" | prepend: imagedir }})
     
 
-## Section 5.4: Binding Service Data To UI
+## 5.4: Binding Service Data To UI
 
 So far you have just bound the json output to the UI.  Useful for debugging but not what you want a user to see.  In this section, we will create a nice looking project  list that shows the project name and created on date.   The UI should look like the following when done:
 
@@ -191,7 +191,7 @@ So far you have just bound the json output to the UI.  Useful for debugging but 
 
 To see the full docs on the &lt;ion-list&gt; documentation, at the command prompt, type ionic docs ion-list or go to [http://ionicframework.com/docs/api/directive/ionList/](http://ionicframework.com/docs/api/directive/ionList/)
 
-## Section 5.5: Ordering Data
+## 5.5: Ordering Data
 
 If you look at the ion-list right now it is difficult to find a specific project since the list is ordered by the way it is stored in the mock-data.json json array.  Instead we want to order the ion-list by the project name.
 
@@ -203,7 +203,7 @@ Now the list should be in alphabetical order
 
 ![Projects Order By Name]({{ "projects-ion-list-ordered.png" | prepend: imagedir }})
 
-## Section 5.6: Creating Minification Safe Code
+## 5.6: Creating Minification Safe Code
 
 Since this lab is the first bit of code that we are writing I want to briefly discuss minification of the code.  For a web site that you are going to be deploying to a web server vs running locally, it is best practice to minify the code.  However, when  creating an application that is intended to run locally on a device like we are doing, there is mixed opinions on if you need to or should minify your code.
 

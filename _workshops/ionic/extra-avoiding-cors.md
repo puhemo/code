@@ -27,7 +27,7 @@ This happens due to the browser's security policies, which blocks access to data
 * TOC
 {:toc}
 
-## Section 1.0: Download Project
+## 1.0: Download Project
 
 The first step is to download the starter project that I have created so you can concentrate on the CORS issues and not writing code to call the remote Api.
 
@@ -38,7 +38,7 @@ Using git, you can get started with this lab by cloning the Lab13-WorkingThruCor
     $ git clone https://github.com/IonicWorkshop/Lab13-WorkingThruCorsErrors.git
     $ cd Lab13-WorkingThruCorsErrors
 
-## Section 1.1: Seeing CORS Error
+## 1.1: Seeing CORS Error
 
 Set the project you downloaded in the previous section to Step1.
 
@@ -52,7 +52,7 @@ The Api we are consuming is a hosted at [https://ioniccorsdemoapi.herokuapp.com/
 
 ![Lab13-NodeApiJsonResults.png](images/Lab13/Lab13-NodeApiJsonResults.png)
 
-## Section 1.2: Setting Up and Using Ionic Proxy
+## 1.2: Setting Up and Using Ionic Proxy
 
 **Get Completed Steps (optional)**
 
@@ -80,7 +80,7 @@ If you are following along using git, reset your project to Step2.
 1. If you have ionic serve running, quit the process and run ionic serve again.  
 
 
-## Section 1.3: Making it Work Outside of Ionic Serve
+## 1.3: Making it Work Outside of Ionic Serve
 
 **Get Completed Steps (optional)**
 
@@ -141,7 +141,7 @@ The Ionic proxies only work when we are using the ionic serve command.  This mea
 1. Switch to the ionic proxy 
 1. Run your ionic application in the browser and make sure it pulls data onto the home page
 
-## Section 1.4: Testing On a Device
+## 1.4: Testing On a Device
 
 **Get Completed Steps (optional)**
 
@@ -157,7 +157,7 @@ If you are following along using git, reset your project to Step4.  Then run the
 1. Deploy the application to a device or emulator
 
 
-## Section 1.5: Setting up Your API for CORS
+## 1.5: Setting up Your API for CORS
 
 This lab has been all about how to work around remote APIs that do not have CORS enabled.  However, you can also enable CORS within the API if you own it and skip having to setup the proxies.
 

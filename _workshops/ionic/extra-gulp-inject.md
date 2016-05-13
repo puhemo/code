@@ -21,7 +21,7 @@ length: 10 minutes
 
 
 
-## Section 1.0: Installing Gulp Inject Package
+## 1.0: Installing Gulp Inject Package
 
 **Section Overview**
 
@@ -73,7 +73,7 @@ If you are following along using git, reset your project to Step1.
 1. Finally, add the javascript and css paths to the gulp watch task and have it call the index task when a change is detected.
 
 
-## Section 1.2: Adding Inject Task to Ionic Serve Startup
+## 1.2: Adding Inject Task to Ionic Serve Startup
 
 **Section Overview**
 
@@ -95,7 +95,7 @@ If you are following along using git, reset your project to Step2.
             "watch"
           ]
 
-## Section 1.3: Setting up index.html to Accept Inject
+## 1.3: Setting up index.html to Accept Inject
 
 **Get Completed Steps (optional)**
 
@@ -116,7 +116,7 @@ If you are following along using git, reset your project to Step3.
         <!-- inject:css -->
         <!-- endinject -->
     
-## Section 1.4: Testing it out
+## 1.4: Testing it out
 
 **Get Completed Steps (optional)**
 
@@ -134,7 +134,7 @@ If you are following along using git, reset your project to Step4.
     * Note: If you already have ionic serve running, you will need to stop it and restart it for it to pick up the gulpStartupTasks.
 1. With ionic serve running, if you add a new javascript or css file in to the www folder, gulp will automatically add them into the index.html file.
 
-## Section 1.5: Further Reading
+## 1.5: Further Reading
 
 There is a lot of different options for the gulp-inject package.  If you want to read about all of the different options and see examples, the documentation is available at [https://www.npmjs.com/package/gulp-inject](https://www.npmjs.com/package/gulp-inject)
 

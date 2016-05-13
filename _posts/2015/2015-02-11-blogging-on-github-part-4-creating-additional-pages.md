@@ -76,7 +76,7 @@ After you have added the above text, scroll to the bottom of the page, add your 
 
 ![Github Commit Portfolio.md]({{"github_part4_portfolio_page_commit_change.png" | prepend: imagedir}})
 
-##Section 4: Previewing page 
+## Section4: Previewing page
 
 To  view the page navigate to http://[username].github.io/portfolio
 

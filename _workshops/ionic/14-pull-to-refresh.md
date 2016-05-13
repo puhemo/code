@@ -21,7 +21,7 @@ todo: |
 * TOC
 {:toc}
 
-## Section 14.0: Add ion-refresher and wiring it up
+## 14.0: Add ion-refresher and wiring it up
 
 **Get Completed Steps (optional)**
 
@@ -51,7 +51,7 @@ ion-refresher documentation can be found:
     * [http://ionicframework.com/docs/api/directive/ionRefresher/](http://ionicframework.com/docs/api/directive/ionRefresher/)
     * Running the ionic docs ion-refresh command line.
 
-## Section 14.1: Testing it in the browser
+## 14.1: Testing it in the browser
 
 1. If you don't already have ionic serve running, open a command prompt and run the command ionic serve
 1. In your web browser, open [http://localhost:8100](http://localhost:8100)

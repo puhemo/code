@@ -24,10 +24,10 @@ Instead, I wanted the table to transform to a view that didn't make the page scr
 ### Section 1: Creating the Css for Non-Mobile
 
 
-###Section 2: Creating the Css for Mobile
+### Section2: Creating the Css for Mobile
 
 
-###Section 3: Seeing it in Action
+### Section3: Seeing it in Action
 
 
 

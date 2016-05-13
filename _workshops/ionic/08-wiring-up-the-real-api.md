@@ -31,7 +31,7 @@ todo: |
 {:toc}
 
 
-## Section 8.0: API Overview
+## 8.0: API Overview
 
 It is time to move on from hard coded mock data and to actually querying a real REST API that resides in the cloud.  This API is specific to our application and will allow us to add, update, and delete data through http call.
 
@@ -41,7 +41,7 @@ The provider that we will be using is [Back&].
 
 Back& is one of my favorite database as a service providers.   Back& are basically is an instant backend in the cloud.  All of the data that we will be dealing with from Back& will be in the JSON format.
 
-## Section 8.1: Back& Overview
+## 8.1: Back& Overview
 
 The primary reasons that I went with Back& are because of the extremely low barrier to entry and the responsiveness of their support staff when I have has questions.  With Back& you don't need to learn some new javascript library just to interact with the data, you just make standard http rest calls.  Back& really does allow you to "Focus on What Really Matters.  Creating Beautifully Crafted Front Ends".  You can be up and running with a Back& API in under 10 minutes.
 
@@ -80,13 +80,13 @@ The common types of http verbs that REST uses are:
 
 <sup>--via [http://www.restapitutorial.com/lessons/httpmethods.html](http://www.restapitutorial.com/lessons/httpmethods.html)
 
-## Section 8.2: API Security
+## 8.2: API Security
 
 Right now the security for the API is open to anyone to be able to read the data but it locked down for reading.  In a later lab, we implement username/password and social login security on the API.
 
 All of the data is mock data that was generated using [https://www.mockaroo.com] so no worries about any personal data being leaked allowing every to read.
 
-## Section 8.3: Back& Setup
+## 8.3: Back& Setup
 
 Now that we are on the same page for what a REST API is and the benefits of Back&, it is time to wire up the api.
 
@@ -120,7 +120,7 @@ In the www/js/config/app.config.js file we need to configure Backand with the an
 
 We are now ready to update the ProjectsService and TasksService to use our Back& API.
 
-## Section 8.4: Updating ProjectsServices to Use API
+## 8.4: Updating ProjectsServices to Use API
 
 1. Open the www/js/services/projects.service.js file
 1. Add `Backand` as a dependency to the service
@@ -138,7 +138,7 @@ We are now ready to update the ProjectsService and TasksService to use our Back&
             return result.data.data;
          });
 
-## Section 8.5: Updating TasksService to Use API
+## 8.5: Updating TasksService to Use API
 
 1. Open the www/js/services/projects.service.js file
 1. Add `BackandDataService` as a dependency to the service
