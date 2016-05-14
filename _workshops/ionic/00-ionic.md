@@ -17,8 +17,14 @@ todo: |
     * Add dates to add workshop pages
     * fix bug in next lab for last extra.  it goes back to intro page.
     * paging showing up on agenda and schedule
+    * add key concepts to the objectives for each lab
+    * update all ionic1-snippets mentions to be i1_
+    * validate that all of the snippets are still correct
+    * consistently use function vs method.  don't mix and match when talking about javascript functions
 ---
-
+<!-- WORD COUNT: Get-ChildItem -Path [0-9][0-9]-*.md  | ForEach-Object { Get-Content $_.
+     FullName | Measure-Object -Word }
+-->
 Welcome to my [Ionic](http://ionicframework.com) workshop.  This workshop is designed to be a hands-on all day workshop.  There will be a mix of lecture to introduce concepts and then a lab to reinforce those concepts.
 
   By the end of this workshop you will have a completed application that stores its data in the Cloud and is ready to be deployed to devices.

@@ -32,7 +32,7 @@ todo: |
 
 1. under the www folder, create a directory called templates
 1. In the www/templates directory, create a file called projects.html
-1. In the projects.html file, , use the `ionicview` snippet to generate the view boilerplate code and set the view-title to "Projects"
+1. In the projects.html file, use the `ionicview` snippet to generate the view boilerplate code and set the view-title to "Projects"
 1. Press Esc to exit the snippet
 
 ## 5.1: Add Route to Project Page
