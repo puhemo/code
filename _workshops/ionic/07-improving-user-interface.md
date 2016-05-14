@@ -130,7 +130,7 @@ Your ion-item code should look like:
 {%  raw %}
       <ion-item class="item-text-wrap item-icon-left"
         ng-repeat="task in vm.tasks | orderBy: ['completed','name']"
-        ng-class="{completed-task: task.completed }"
+        ng-class="{'completed-task': task.completed }"
       >
         <h2>{{task.name}}</h2>
 
@@ -140,7 +140,7 @@ Your ion-item code should look like:
       </ion-item>
 {% endraw %}
 
-
+>Pro-Tip: For ng-class, if your CSS class name has a dash in it then you need to encase it in quotes like we did.
 
 ## Wrap-up
 
