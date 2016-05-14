@@ -20,3 +20,14 @@ todo: |
 {:toc}
 
 ## 11.0:
+
+Add Completed Toggle to checkmark icon
+
+Call REST update
+
+List is rearranged and task moved to bottom of list
+
+
+
+
+

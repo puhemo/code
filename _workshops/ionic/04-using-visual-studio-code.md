@@ -34,17 +34,21 @@ Visual Studio Code out of the box has good default settings to immediately start
 
 ## 4.0: Shortcuts
 
-* hide left sidebar: ctrl+b
-* zoom in: ctrl+=
-* zoom out: ctrl+-
+**Key Shortcuts**
+
+* Toggle Sidebar: ctrl+b
+* Go to File: ctrl+p or ctrl+e (both seem to work)
 * Split Editor: ctrl+\
 * Switch to Editor Page: ctrl+[pane #]
-* Command Palette: F1 or Ctrl+Shift+P
-* Start Debugger: F5 (once you have set the target the 1st time)
+* Close active page: ctrl+w or ctrl+f4
+* Navigate Between Open Files: ctrl+tab
 * Format Code: Shift+Alt+F
-* Toggle Breakpoint: F9
 * Toggle Commenting Out Line: ctrl+k, ctrl+c
 * Open Command Prompt: ctrl+shift+c
+* Toggle Word Wrap: alt+z
+
+**Nice to Have If you Remember Them**
+* Command Palette: F1 or Ctrl+Shift+P
 * Code Fold: ctrl+shift+[
 * Code Unfold: ctrl+shift+]
 
@@ -62,8 +66,7 @@ Here are my settings that I use for Visual Studio Code.  You can edit these by g
         "files.exclude": {
              "**/.git": true,
             "**/.DS_Store": true,
-            "**/node_modules": true,
-            "**/_site": true
+            "**/node_modules": true
         },
         "editor.folding": true
     }
