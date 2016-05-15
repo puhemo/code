@@ -8,7 +8,7 @@ order: 11
 lab: ionic
 length:
 todo: |
-    * Finish lab
+    * {:.done} Finish lab
     * update length
     * write wrap up
     * update objectives
@@ -59,7 +59,7 @@ Table of Contents
 
 ## 11.1: Adding Update to the TasksController
 
-1. Open the www/js/controller/tasks.controller file
+1. Open the www/js/controllers/tasks.controller file
 1. We are going to add a new function called `updateTask` that takes a parameter called task that will hold the task json object.
 
 
