@@ -21,6 +21,7 @@ todo: |
     * update all ionic1-snippets mentions to be i1_
     * validate that all of the snippets are still correct
     * consistently use function vs method.  don't mix and match when talking about javascript functions
+    * add dates to all of the labs
 ---
 <!-- WORD COUNT: Get-ChildItem -Path [0-9][0-9]-*.md  | ForEach-Object { Get-Content $_.
      FullName | Measure-Object -Word }
