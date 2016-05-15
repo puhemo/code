@@ -207,12 +207,12 @@ We are going to use the `$ionicListDelete` to be able to close
 To ensure that the option buttons always close we need to add a finally block on the `deleteProject` function in the controller and call the `$ionicListDelete.closeOptionButton`.  To add the confirm to delete option we are going to use the `$ionicPopup` like we did for the task
 
 1. Open the www/js/controllers/projects.controller.js file
-1. Inject the `$ionicPopup` into the controller
+1. Inject `$ionicPopup` and `$ionicListDelegate` into the controller
 
-      ProjectsController.$inject = ['ProjectsService', '$ionicModal', '$scope', '$state', '$ionicPopup'];
+      ProjectsController.$inject = ['ProjectsService', '$ionicModal', '$scope', '$state', '$ionicPopup', '$ionicListDelegate'];
 
 
-      function ProjectsController(ProjectsService, $ionicModal, $scope, $state, $ionicPopup) {
+      function ProjectsController(ProjectsService, $ionicModal, $scope, $state, $ionicPopup, $ionicListDelegate) {
         .....
       }
 
