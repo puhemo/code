@@ -1,6 +1,6 @@
 ---
 collection: workshops
-title: 'Extra: Api Security'
+title: 'Extra 7: Api Security'
 published: ionicextra
 type: ionicextra
 layout: workshoppost2

@@ -1,10 +1,10 @@
 ---
 collection: workshops
-title: 'Lab 15: Ionic v2'
+title: 'Lab 17: Getting Help'
 published: true
 type: ionic
 layout: workshoppost2
-order: 15
+order: 17
 lab: ionic
 length:
 todo: |
@@ -19,4 +19,4 @@ todo: |
 * TOC
 {:toc}
 
-## 15.0:
+## 17.0:

@@ -6,15 +6,16 @@ type: ionic
 layout: workshoppost2
 order: 15
 lab: ionic
-length: 
+length: 30
 todo: |
-    * update objectivs
+    * {:.done} update objectives
     * update wrap up
-    * update length
-    * update imagedir
-    * check data length on project add to see if there is more data to load
-    * check data length on page refresh to see if there is more data to load
-    *
+    * {:.done} update length
+    * {:.done} update imagedir
+    * finish 15.3: Fixing Some Unintended Behaviors
+        * check data length on project add to see if there is more data to load
+        * check data length on page refresh to see if there is more data to load
+        * de-duplicate projects array.  happens when new projects added and an infinite scroll pulls in new data and that row is on the new data. Lodash, https://lodash.com/docs#union
 ---
 
 {% assign imagedir = "../images/paging-data" %}
@@ -141,7 +142,7 @@ We are technically done with the implementation of the infinite scroll in the co
             ......
           }
 
-## 51.2 Paging in the View
+## 15.2 Paging in the View
 
 We are now ready to add the `ion-infinite-scroll` to the view and test out the paging functionality.
 
@@ -168,6 +169,45 @@ We are now ready to add the `ion-infinite-scroll` to the view and test out the p
 
 1. If you don't already have ionic serve running, open a command prompt and run the command ionic serve
 1. In your web browser, open [http://localhost:8100](http://localhost:8100).  As long as you have enough projects listed, once you get near the bottom of the viewable list of projects, it will trigger the infinite scroll to pull in more projects.
+
+
+## 15.3: Fixing Some Unintended Behaviors
+
+**Not checking if infinite scroll needs to be turned back on for refresh**
+
+Right now if the infinite scroll triggers and you do not have enough data for another page, it sets the `vm.moreDataCanBeLoaded` flag to false and turns off the infinite scroll but we do not have any checks to turn it back on.  You would want to this check into the `getProjects`.
+
+The Back& API returns the total rows in the response.  However, we are currently only returning the data rows from the `ProjectsService`
+
+1. Open the www/js/services/projects.service.js file
+1. In the `getProjects` function we need to change the return from `result` to `result.data`.
+
+Now we need to update the `ProjectsController` to get the data for `vm.projects` from the data property of the service result.
+
+1. Open the www/js/controllers/projects.controller.js
+1. You need to update the `getProjects` and `getMoreProjects` functions
+
+        function getProjects() {
+            ....
+                return response.data;
+            ....
+        }
+
+        function getMoreProjects() {
+            ....
+                var rowNum = result.data.length;
+                ....
+                vm.projects = vm.projects.concat(result.data);
+            ....
+        }
+
+Now we can check the
+**Not checking if need to increment page number when adding project**
+
+
+
+
+Instead when adding a project and refreshing data we should check the if we have exceeded the current
 
 
 ## Wrap-up

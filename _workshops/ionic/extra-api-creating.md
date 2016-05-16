@@ -1,6 +1,6 @@
 ---
 collection: workshops
-title: 'Extra: Creating Our Api'
+title: 'Extra 6: Creating Our Api'
 published: true
 type: ionicextra
 layout: workshoppost2

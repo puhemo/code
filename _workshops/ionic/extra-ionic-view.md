@@ -1,22 +1,30 @@
 ---
 collection: workshops
-title: 'Extra: Using the Ionic View Application'
+title: 'Extra 2: Using the Ionic View Application'
 published: true
 type: ionicextra
 layout: workshoppost2
 lab: ionic
+order: 2
 length: 10 minutes
+todo: |
+    * update objectives
+    * update key concepts
+    * validate lab steps
 ---
 
 
+{% assign imagedir = "../images/iconic-view/" %}
 
-<div class="fake-h2">Objective</div>
+{:.fake-h2}
+Objective
 
 * Upload an application to IonicView
 * Share an upload application with other people
 * Download the application in IonicView and interact with it
 
-<div class="fake-h2">Table of Contents</div>
+{:.fake-h2}
+Table of Contents
 
 * TOC
 {:toc}

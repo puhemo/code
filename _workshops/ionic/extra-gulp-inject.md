@@ -1,20 +1,31 @@
 ---
 collection: workshops
-title: 'Extra: Auto Add JS/CSS to index.html'
+title: 'Extra 5: Auto Add JS/CSS to index.html'
 published: true
 type: ionicextra
 layout: workshoppost2
 lab: ionic
 length: 10 minutes
+todo: |
+    * update to latest gulp code
+    * update objectives
+    * update wrap
+    * update length
+
 ---
 
+{% assign imagedir = "../images/custom-directive/" %}
 
-
-<div class="fake-h2">Objective</div>
+{:.fake-h2}
+Objective
 
 * Utilize gulp to automate the adding in of new javascript files to the index.html page
 
-<div class="fake-h2">Table of Contents</div>
+Key Concepts:
+    *
+
+{:.fake-h2}
+Table of Contents
 
 * TOC
 {:toc}

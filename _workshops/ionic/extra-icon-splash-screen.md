@@ -1,27 +1,37 @@
 ---
 collection: workshops
-title: 'Extra: Icon and Splash Screens'
+title: 'Extra 1: Icon and Splash Screens'
 published: true
 type: ionicextra
 layout: workshoppost2
 lab: ionic
 length: 15 minutes
+order: 1
+todo: |
+    * update lab with current setup
+    * added download of icon and splash screen
+    * link to setup for all of the platform adding
+    * update key concepts
 ---
 
+{% assign imagedir = "../images/icon-splashscreen/" %}
 
-
-<div class="fake-h2">Objective</div>
+{:.fake-h2}
+Objective
 
 * Create all of the image sizes needed for the icon and splash screen that Google and Apple require when submitting to the App Stores.
 
-<div class="fake-h2">Table of Contents</div>
+Key Concepts:
+
+{:.fake-h2}
+Table of Contents
 
 * TOC
 {:toc}
 
 ## Background
 
-When you release your application to the App stores you are going to want an icon and splash screen that is your own and not a default one.  However, the process of creating all of the different sizes that are required is time consuming.  If you are supporting both iOS and Android, you have to create 44 different image files.  Then if you have to update those images, you have to re-generate all of them.
+When you release your application to the App stores you are going to want an icon and splash screen that is your own and not a default one.  However, the process of creating all of the different sizes that are required is time consuming.  If you are supporting both iOS and Android, you have to create at least 44 different image files.  Then if you have to update those images, you have to re-generate all of them.
 
 To drastically speed this process up and make it easy, the folks developing the Ionic Framework, gave us a resource command that generates all of the correct sizes from a splash and icon file.
 
@@ -30,29 +40,26 @@ The icon image’s minimum dimensions should be 192×192 px and should have no r
 Splash screen dimensions vary for each platform, device, and orientation, so a square source image is required to generate each of the various screen sizes. The source image’s minimum dimensions should be 2208×2208 px, and the artwork should be centered within the square, because each generated image will be center cropped into landscape and portrait images.  Template available at [http://code.ionicframework.com/resources/splash.psd](http://code.ionicframework.com/resources/splash.psd)
 
 
-## 1.0: Download Project
+## 1.0: Download Icon and Splash Screen
 
-The first step is to download the project that I have created for you that includes the icon and splash screen images.  The starter project is based on Lab 5 with an additional Resources and ResourceTemplate folders.
 
-During this lab, you will be able to follow along using git to checkout the completed version of the steps in each section if you do not want to write all of the code yourself.
+I have already created a splash screen and icon for our application to use.
 
-If you intend to use the completed version of the steps, you need to clone the repository for this lab.
-
-    $ git clone https://github.com/IonicWorkshop/Lab8-ConfiguringIconAndSplashImages.git
-
+ 1. Create a `resources` directory under our project directory
+ 1. Download the [icon]("../files/icon.png") file to the resources directory
+ 1. Download the [splash screen]("../splash.psd") file to the resources directory
 
 ## 1.1: Adding Icon
 
-1. A pre-selected icon and splash screen images are in the Resources folder.
-1. Open the config.xml file.
+1. Open the config.xml file.  You will notice that it does not currently have any icons or splash screens configured.
 1. Open a terminal (OSx) or command prompt (Windows)
-1. Navigate to the projet directory
+1. Navigate to the project directory
 1. To add android icons use:
         ionic resources android --icon
     * 6 icon sizes will be generated
 1. You can see the changes in the config.xml file
 
-    ![Lab8-ResourceAndroidIcons.png](images/Lab8/Lab8-ResourceAndroidIcons.png)
+    ![Config Xml for Icons for Android]({{ "config-xml-icons-android.png" | prepend: imagedir }})
 
 1. If you look in the Resources folder, you will notice that an android\icon folder has been added with all of the generated images.
 1. To add ios icons, run the command:
@@ -60,7 +67,7 @@ If you intend to use the completed version of the steps, you need to clone the r
     * 16 icon sizes will be generated
 1. You can see these in the config.xml file
 
-    ![Lab8-ResourceiOSIcons.png](images/Lab8/Lab8-ResourceiOSIcons.png)
+    ![Config Xml for Icons for iOS]({{ "config-xml-icons-ios.png" | prepend: imagedir }})
 
 1. If you look in the Resources folder, you will notice that an ios\icon folder has been added with all of the generated images.
 1. A default icon was also added to the config.xml file in the root of the &lt;widget&gt; node.  The value will be the last icon that was generated.  (e.g. if iOS was last resource add then it will be the iOS icon)
@@ -68,13 +75,13 @@ If you intend to use the completed version of the steps, you need to clone the r
 
 ## 1.2: Adding Splash Screen Image
 
-1. Open the config.xml file.
+1. Open the config.xml file and you will see that there are no splash screen images setup
 1. To add android splash screen images use:
         ionic resources android --splash
     * 12 splash screen sizes will be generated
 1. You can see these in the config.xml file
 
-    ![Lab8-ResourcesAndroidSplash.png](images/Lab8/Lab8-ResourcesAndroidSplash.png)
+    ![Config Xml Splashscreens for Android Splashscreen]({{"config-xml-splash-android.png" | prepend: imagedir }})
 
 1. If you look in the Resources folder, you will notice that an android\splash folder has been added with all of the generated images.
 1. To add ios splash screen images use:
@@ -82,7 +89,7 @@ If you intend to use the completed version of the steps, you need to clone the r
     * 10 icon sizes will be generated
 1. You can see these in the config.xml file
 
-    ![Lab8-ResourceiOSSplash.png](images/Lab8/Lab8-ResourceiOSSplash.png)
+    ![Config Xml Splashscreens for iOS]({{ "config-xml-splash-ios.png" | prepend: imagedir }})
 
 1. If you look in the Resources folder, you will notice that an ios\splash folder has been added with all of the generated images.
 
@@ -127,7 +134,8 @@ Once you computer is setup for iOS and Android you can add platforms to your pro
     ionic run android
     ionic run ios
 
-<font color="red">Note:</font> For the ionic run ios command, you will have to setup all of the provision for your device through Apple before you can run it directly on your device.
+>Note For the ionic run ios command, you will have to setup all of the provision for your device through Apple before you can run it directly on your device.
+{:.warning}
 
 **Run in Emulator**
 
@@ -136,4 +144,4 @@ Once you computer is setup for iOS and Android you can add platforms to your pro
 
 ## Wrap-up
 
-The resource command is a huge time saver.  The icon and splash screen setup now takes only a few minutes compared to hours before.
+The resource command is a huge time saver.  The icon and splash screen setup now takes only a few minutes compared to hours resizing everything by hand.

@@ -1,24 +1,30 @@
 ---
 collection: workshops
-title: 'Extra: Styling the Application'
+title: 'Extra 3: Styling the Application'
 published: true
 type: ionicextra
 layout: workshoppost2
 lab: ionic
 length: 10 minutes
+order: 3
 todo: |
     * add link to http://ionicframework.com/docs/components/#colors
+    * update objectives and key concepts
+    * retake workshop for new app
 ---
+{% assign imagedir = "../images/theming/" %}
 
-
-
-<div class="fake-h2">Objective</div>
+{:.fake-h2}
+Objective
 
 * Learn how to setup your Ionic project to use a SASS file
 * Learn how to style and theme the application using a SASS file.
-<div class="fake-h2">Table of Contents</div>
 
-* TOC
+Key Concepts:
+
+{:.fake-h2}
+Table of Contents
+
 {:toc}
 
 ## 1.0: What is SASS?
@@ -45,18 +51,10 @@ The Ionic framework uses variables for all of the style information which enable
         
 ## 1.2: Modifying the Look of the Contacts List
 
-**Get Completed Steps (optional)**
-
-If you are following along using git, reset your project to Step2.
-
-    $ git checkout -f Step2
-
-**Steps**
-
 1. If you don't already have ionic serve running, open a command prompt and run the command ionic serve
 1. You should also see a gulp task message about the starting the 'sass' task
 
-    ![Lab7-GulpSassCompile.png](images/Lab7/Lab7-GulpSassCompile.png)
+    ![Lab7-GulpSassCompile.png]({{ "Lab7-GulpSassCompile.png" | prepend: imagedir }})
     
 1. In your web browser, open [http://localhost:8100](http://localhost:8100)
 
@@ -66,7 +64,7 @@ If you are following along using git, reset your project to Step2.
 1. Once you save the file, you will notice in your command prompt that the sass task detected a change and ran
 1. Go back to your web browser and now your contact list header should be pink
 
-    ![Lab7-ContactPinkHeader.png](images/Lab7/Lab7-ContactPinkHeader.png)
+    ![Lab7-ContactPinkHeader.png]( {{ "Lab7-ContactPinkHeader.png" | prepend: imagedir }})
     
 
 ## Wrap-up
