@@ -128,12 +128,17 @@ We are now ready to update the ProjectsService and TasksService to use our Back&
           ProjectsService.$inject = ['$http', 'Backand'];
 
           function ProjectsService($http, Backand) {
+            .....
+          }
 
-1. Replace the contents of the `getProjects()` function the following code.  This code call the task API and only returns the task for the project_id that the task is associated to.
+1. Replace the contents of the `getProjects()` function the following code.  This code is getting the list of projects and it is sorted by name.  By default Back& pages the data and returns 20 records at a time.  In order to get the first 20 records in the right order, we are sorting the data on the Back& side by name
 
          return $http({
             method: 'GET',
-            url: Backand.getApiUrl() + '/1/objects/project/'
+            url: Backand.getApiUrl() + '/1/objects/project/',
+            params: {
+              sort: '[{ "fieldName": "name", "order": "asc" }]'
+            }
           }).then(function (result) {
             return result.data.data;
          });
@@ -148,22 +153,14 @@ We are now ready to update the ProjectsService and TasksService to use our Back&
           function TasksService($http, Backand) {
 
 
-1. Replace the contents of the `getTasks()` function the following code.  This code call the task API and only returns the task for the project_id that the task is associated to.
-
-
-        var filter = [
-            {
-              "fieldName": "project_id",
-              "operator": "in",
-              "value": projectId
-            }
-        ];
+1. Replace the contents of the `getTasks()` function the following code.  This code calls the task API and only returns the task for the project_id that the task is associated to.  The results will be sorted by the completed status and then the field name.  This way we get the uncompleted task first.
 
          return $http({
             method: 'GET',
             url: Backand.getApiUrl() + '/1/objects/task/',
             params: {
-              filter: filter
+              filter: [{ "fieldName": "project_id", "operator": "in", "value": projectId }],
+              sort: [{ "fieldName": "completed", "order": "asc" }, { "fieldName": "name", "order": "asc" }]
             }
           }).then(function (result) {
             return result.data.data;
