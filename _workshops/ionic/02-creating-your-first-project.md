@@ -170,7 +170,7 @@ The second way is to turn on the device emulator within the Chrome Developer Too
 
     ![Device Mode Icon]({{ "device-mode-button.png" | prepend: imagedir }})
 
-1. You can now pick the device that you want to emulate
+1. You can now pick the device that you want to emulate.  You will need to refresh the page after you change the device type.
 
     ![Device Mode Options]({{ "device-mode.png" | prepend: imagedir }})
 
