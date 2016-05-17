@@ -23,11 +23,11 @@ todo: |
     * {:.done} add dates to all of the labs
     * standardize on promise then result or response for variable.
     * make sure that all of the section headers have a colon following the numbers.
-
+    * Generate PDF: "C:\Program Files (x86)\Prince\engine\bin\prince.exe" --javascript --input-list=../../.. /_workshops/ionic/FileList.txt -o ionic-ws.pdf --media=print --style=http://localhost:4000 /workshop.css --style=http:///maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome. min.css
+    * WORD COUNT: Get-ChildItem -Path [0-9][0-9]-*.md  | ForEach-Object { Get-Content $_.
+           FullName | Measure-Object -Word }
 ---
-<!-- WORD COUNT: Get-ChildItem -Path [0-9][0-9]-*.md  | ForEach-Object { Get-Content $_.
-     FullName | Measure-Object -Word }
--->
+
 Welcome to my [Ionic](http://ionicframework.com) workshop.  This workshop is designed to be a hands-on all day workshop.  There will be a mix of lecture to introduce concepts and then a lab to reinforce those concepts.
 
   By the end of this workshop you will have a completed application that stores its data in the Cloud and is ready to be deployed to devices.

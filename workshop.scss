@@ -554,3 +554,11 @@ pre.highlight {
   .vi { color: #008080 } /* Name.Variable.Instance */
   .il { color: #009999 } /* Literal.Number.Integer.Long */
 }
+
+@media print {
+  .site-header { display: none;}
+  header { display: none;}
+  .sidebar-lists { display: none;}
+  footer { display: none !important; }
+  @page { size: US-Letter landscape; }
+}

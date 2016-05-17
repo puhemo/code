@@ -46,11 +46,11 @@ Using git, you can get started with this lab by cloning the Lab13-WorkingThruCor
 
 Run ionic serve and open up the Chrome developer tools.  You should see a CORS errors in the Console.
 
-  ![Lab13-CORSErrorMessage.png](images/Lab13/Lab13-CORSErrorMessage.png)
+  ![Lab13-CORSErrorMessage.png](../images/Lab13/Lab13-CORSErrorMessage.png)
 
 The Api we are consuming is a hosted at [https://ioniccorsdemoapi.herokuapp.com/api/endpoint](https://ioniccorsdemoapi.herokuapp.com/api/endpoint) and returns json results with a list users.
 
-![Lab13-NodeApiJsonResults.png](images/Lab13/Lab13-NodeApiJsonResults.png)
+![Lab13-NodeApiJsonResults.png](../images/Lab13/Lab13-NodeApiJsonResults.png)
 
 ## 1.2: Setting Up and Using Ionic Proxy
 
