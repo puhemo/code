@@ -6,16 +6,10 @@ type: ionic
 layout: workshoppost2
 order: 15
 lab: ionic
-length: 30
+length: 30 minutes
+date: 2016-05-16
 todo: |
-    * {:.done} update objectives
-    * update wrap up
-    * {:.done} update length
-    * {:.done} update imagedir
-    * finish 15.3: Fixing Some Unintended Behaviors
-        * check data length on project add to see if there is more data to load
-        * check data length on page refresh to see if there is more data to load
-        * de-duplicate projects array.  happens when new projects added and an infinite scroll pulls in new data and that row is on the new data. Lodash, https://lodash.com/docs#union
+    * de-duplicate projects array.  happens when new projects added and an infinite scroll pulls in new data and that row is on the new data. Lodash, https://lodash.com/docs#union
 ---
 
 {% assign imagedir = "../images/paging-data" %}
@@ -85,13 +79,10 @@ Now that the Projects service supports paging, we need to update the `ProjectsCo
           ProjectsService.getProjects(vm.pageNumber, vm.pageSize)
             .then(function (result) {
               var rowNum = result.length ;
-              if (rowNum === 0 || rowNum < vm.pageSize) {
-                vm.moreDataCanBeLoaded = false;
-              }
 
-              if (rowNum > 0) {
+             if (rowNum > 0) {
                 vm.projects = vm.projects.concat(result);
-              }
+             }
             })
             .finally(function () {
               $scope.$broadcast('scroll.infiniteScrollComplete')
@@ -100,11 +91,7 @@ Now that the Projects service supports paging, we need to update the `ProjectsCo
 
 1. Don't forget to expose the `getMoreProjects` function to the view
 
-              vm.getMoreProjects = getMoreProjects;
-
-1. We also need add the flag to the controller that set in the `getMoreProjects` function that sets if more data can be loaded.
-
-        vm.moreDataCanBeLoaded = true;
+        vm.getMoreProjects = getMoreProjects;
 
 We are technically done with the implementation of the infinite scroll in the controller.  However, one of the quirks that I ran into is that the `ion-refresher` was causing the infinite scroll to trigger.  To stop it from doing this, I added a refreshing flag to the `getProjects` function that tells the view that we are refreshing so that we can let the infinite scroll know not to trigger right now.  The flag is called `vm.refreshing` set to true on entering the function and in the finally block set to false so that the infinite scroll can be turned back on.
 
@@ -142,6 +129,44 @@ We are technically done with the implementation of the infinite scroll in the co
             ......
           }
 
+1. The last thing we need to do in the controller is to check if we have more data to load by seeing if the `totalRows` property on the data results is less than the total number of possible records for the page number and page size that we are on.  Since we need to check this in the `getProjects` and `getMoreProjects` function, we will want to create a function to hold this logic and call it from those methods.
+
+        function setMoreDataCanBeLoaded(resultData) {
+            if (resultData.totalRows < vm.pageSize * vm.pageNumber) {
+                vm.moreDataCanBeLoaded = false;
+            } else {
+                vm.moreDataCanBeLoaded = true;
+            }
+        }
+
+1. Don't forget to expose the `vm.moreDataCanBeLoaded` flag to the view
+
+        vm.moreDataCanBeLoaded = true;
+
+1. Now you need to add the call to `setMoreDataCanBeLoaded` in the `getProjects` and `getMoreProjects` functions
+
+          function getProjects() {
+            ....
+            ProjectsService.getProjects(1, vm.pageSize * vm.pageNumber).then(function (response) {
+              ....
+              setMoreDataCanBeLoaded(response);
+            })
+            .....
+          }
+
+          function getMoreProjects() {
+            ......
+            ProjectsService.getProjects(vm.pageNumber, vm.pageSize)
+            .then(function (result) {
+                setMoreDataCanBeLoaded(result);
+
+                var rowNum = result.data.length;
+                if (rowNum > 0) {
+                    vm.projects = vm.projects.concat(result.data);
+                }
+            .....
+            }
+
 ## 15.2 Paging in the View
 
 We are now ready to add the `ion-infinite-scroll` to the view and test out the paging functionality.
@@ -170,44 +195,8 @@ We are now ready to add the `ion-infinite-scroll` to the view and test out the p
 1. If you don't already have ionic serve running, open a command prompt and run the command ionic serve
 1. In your web browser, open [http://localhost:8100](http://localhost:8100).  As long as you have enough projects listed, once you get near the bottom of the viewable list of projects, it will trigger the infinite scroll to pull in more projects.
 
-
-## 15.3: Fixing Some Unintended Behaviors
-
-**Not checking if infinite scroll needs to be turned back on for refresh**
-
-Right now if the infinite scroll triggers and you do not have enough data for another page, it sets the `vm.moreDataCanBeLoaded` flag to false and turns off the infinite scroll but we do not have any checks to turn it back on.  You would want to this check into the `getProjects`.
-
-The Back& API returns the total rows in the response.  However, we are currently only returning the data rows from the `ProjectsService`
-
-1. Open the www/js/services/projects.service.js file
-1. In the `getProjects` function we need to change the return from `result` to `result.data`.
-
-Now we need to update the `ProjectsController` to get the data for `vm.projects` from the data property of the service result.
-
-1. Open the www/js/controllers/projects.controller.js
-1. You need to update the `getProjects` and `getMoreProjects` functions
-
-        function getProjects() {
-            ....
-                return response.data;
-            ....
-        }
-
-        function getMoreProjects() {
-            ....
-                var rowNum = result.data.length;
-                ....
-                vm.projects = vm.projects.concat(result.data);
-            ....
-        }
-
-Now we can check the
-**Not checking if need to increment page number when adding project**
-
-
-
-
-Instead when adding a project and refreshing data we should check the if we have exceeded the current
-
-
 ## Wrap-up
+
+Thank goodness we did not have to implement all of the logic to create our own infinite scroll component.  Using the Ionic infinite scroll is a breeze to implement and get working correctly.  The biggest thing to remember when using the infinite scroll component is to remember to set the flag to only allow it to run when it thinks there is more data else you can get into an infinite loop of checking for updates if the user is anywhere near the bottom of the page.
+
+You would also want to implement an infinite scroll on the task page or increase the page size to some amount that is far greater than would ever expect a single project to have input.

@@ -6,10 +6,9 @@ type: ionic
 layout: workshoppost2
 order: 11
 lab: ionic
-length:
+length: 20 minutes
+date: 2016-05-16
 todo: |
-    * {:.done} Finish lab
-    * update length
     * write wrap up
     * update objectives
 ---
@@ -17,7 +16,7 @@ todo: |
 {:.fake-h2}
 Objective
 
-To implement the ability to toogle the completed state of a task.
+To implement the ability to toggle the completed state of a task.
 
 
 Key Concepts:

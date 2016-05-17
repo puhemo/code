@@ -4,9 +4,10 @@ title: 'Extra 7: Api Security'
 published: ionicextra
 type: ionicextra
 layout: workshoppost2
-order:
+order: 7
 lab: ionic
-length:
+length: 30 minutes
+date: 2016-05-16
 todo: |
     * Finish lab
     * update length
@@ -30,7 +31,7 @@ Table of Contents
 
 ## Signup Issue
 
-There is currently a bug in the signup sdk method where it passes the anonymous token instead of the signup token.  When a user signs up, it cause their account to be created in the Security -> Registered Users section but it does not create the user in the Objects -> user table. This in turn does not allow the user to login with their credentials and if they try to sign up again it says that the account is already created.
+There is currently a bug in the signup sdk functon where it passes the anonymous token instead of the signup token.  When a user signs up, it cause their account to be created in the Security -> Registered Users section but it does not create the user in the Objects -> user table. This in turn does not allow the user to login with their credentials and if they try to sign up again it says that the account is already created.
 
 The workaround the [Back&](http://backand.com) gave me is to override the security template for the user object to allow public to post (create) to the user table.  This will allow anyone to sign up and have their account created.
 

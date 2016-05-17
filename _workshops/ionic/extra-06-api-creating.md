@@ -4,17 +4,22 @@ title: 'Extra 6: Creating Our Api'
 published: true
 type: ionicextra
 layout: workshoppost2
-order:
+order: 6
 lab: ionic
-length:
+length: 20 minutes
+date: 2016-05-16
 todo: |
     * Finish lab
     * update length
 ---
 
-<div class="fake-h2">Objective</div>
+{:.fake-h2}
+Objective
 
-<div class="fake-h2">Table of Contents</div>
+
+{:.fake-h2}
+Table of Contents
+
 
 * TOC
 {:toc}

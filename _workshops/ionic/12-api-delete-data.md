@@ -6,12 +6,10 @@ type: ionic
 layout: workshoppost2
 order: 12
 lab: ionic
-length: 
+length: 10 minutes
+date: 2016-05-16
 todo: |
-    * {:.done} Finish lab
-    * update length
     * write wrap up
-    *{:.done} update objectives
     * add screeshots
 ---
 

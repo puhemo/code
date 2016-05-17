@@ -6,10 +6,10 @@ type: ionic
 layout: workshoppost2
 order: 13
 lab: ionic
-length:
+length: 10 minutes
+date: 2016-05-16
 todo: |
-    * Finish lab
-    * update length
+    * write wrap up
 ---
 
 {% assign imagedir = "../images/loading-spinner"  %}
@@ -132,7 +132,7 @@ Anytime that you call the show function for `$ionicLoading` you pass in the temp
           })
 
 
-I encouraged you to try out both methods so that you understand how they work.
+I encouraged you to try out both ways so that you understand how they work.
 
 ## Wrap-up
 

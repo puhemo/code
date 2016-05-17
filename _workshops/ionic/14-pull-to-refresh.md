@@ -6,12 +6,9 @@ type: ionic
 layout: workshoppost2
 order: 14
 lab: ionic
-length: 10
+length: 10 minutes
+date: 2016-05-16
 todo: |
-    * {:.done} Finish lab
-    * {:.done} update length
-    * {:.done} update objectives
-    * {:.done} update wrap up
 ---
 
 {% assign imagedir = "../images/refresher"  %}
@@ -36,7 +33,7 @@ Table of Contents
 
 
 1. Open the www/templates/projects.html
-1. Above the ion-list, we need to add the `ion-refresher` that will call a method that we will create in a few minutes called `vm.refreshData`.  Use the `i1_refresher` snippet to create the refresher
+1. Above the ion-list, we need to add the `ion-refresher` that will call a function that we will create in a few minutes called `vm.refreshData`.  Use the `i1_refresher` snippet to create the refresher
         * pulling-text: anything you want
         * on-refresh: vm.getProjects()
 

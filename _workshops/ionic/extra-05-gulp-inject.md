@@ -4,8 +4,10 @@ title: 'Extra 5: Auto Add JS/CSS to index.html'
 published: true
 type: ionicextra
 layout: workshoppost2
+order: 5
 lab: ionic
 length: 10 minutes
+date: 2016-05-16
 todo: |
     * update to latest gulp code
     * update objectives
@@ -14,7 +16,7 @@ todo: |
 
 ---
 
-{% assign imagedir = "../images/custom-directive/" %}
+{% assign imagedir = "../images/gulp-inject/" %}
 
 {:.fake-h2}
 Objective
@@ -34,11 +36,8 @@ Table of Contents
 
 ## 1.0: Installing Gulp Inject Package
 
-**Section Overview**
-
 In this section we need will add the gulp-inject module into the package.json file as a dev dependency.  The gulp-inject module is what we will be using to add the javascript and css script tags into the index.html page.
 
-**Steps**
 
 1. You need to install gulp-inject from npm
 
@@ -46,19 +45,9 @@ In this section we need will add the gulp-inject module into the package.json fi
     
 This will add gulp-inject to package.json as a development dependency and install it so that you can use it.
 
-## Secton 1.1: Adding Inject Task to gulpfile.js
+## 1.1: Adding Inject Task to gulpfile.js
  
-**Section Overview**
-
 In this section you will update the gulpfile.js to include a task to inject the javascript/css files from the www folder into the index.html page and setup gulp to run the inject task when it detects any changes to the javascript/css files.
-
-**Get Completed Steps (optional)**
-
-If you are following along using git, reset your project to Step1. 
-
-    $ git checkout -f Step1
-
-**Steps**
 
 1. Open the gulpfile.js
 1. Add gulp-inject as a required module.  Name the variable used inject.  
@@ -86,17 +75,8 @@ If you are following along using git, reset your project to Step1.
 
 ## 1.2: Adding Inject Task to Ionic Serve Startup
 
-**Section Overview**
-
 In this section you will modify the ionic startup configuration to tell it to run the gulp index task when you run ionic serve.
 
-**Get Completed Steps (optional)**
-
-If you are following along using git, reset your project to Step2.
-
-    $ git checkout -f Step2
-
-**Steps**
 
 1. Open the ionic.project file
 2.  Add the gulpStartupTasks section below
@@ -107,14 +87,6 @@ If you are following along using git, reset your project to Step2.
           ]
 
 ## 1.3: Setting up index.html to Accept Inject
-
-**Get Completed Steps (optional)**
-
-If you are following along using git, reset your project to Step3.
-
-    $ git checkout -f Step3
-
-**Steps**
 
 1. Open the index.html page
 1. Replace all of the script tags for your controllers and services with the inject:js comment below.  Leave the app.js script tag.
@@ -128,14 +100,6 @@ If you are following along using git, reset your project to Step3.
         <!-- endinject -->
     
 ## 1.4: Testing it out
-
-**Get Completed Steps (optional)**
-
-If you are following along using git, reset your project to Step4.
-
-    $ git checkout -f Step4
-
-**Steps**
 
 1. Run the gulp task index and then look at the index.html page.  You should see all of the javascript and css files added back in.
 

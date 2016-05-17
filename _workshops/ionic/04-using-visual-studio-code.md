@@ -6,31 +6,28 @@ type: ionic
 layout: workshoppost2
 order: 4
 lab: ionic
-length: 20 minutes
+length: 10 minutes
+date: 2016-05-16
 todo: |
-    * remove debugging section as you can't do device emulation or inspect element since Chrome will crash and exit process.
 ---
 
 {% assign imagedir = "../images/project-layout/" %}
 
 
-<div class="fake-h2">Objective</div>
+{:.fake-h2}
+Objective
+
 
 Visual Studio Code out of the box has good default settings to immediately start using it as an editor.  To make it even more effective to use Visual Studio Code there are a few extensions for angular and ionic that you will want to install.  As well there are a few shortcuts and settings that come in handy.
 
 
 >**Note**: If you don't already have Visual Studio Code installed see [Lab 01: Ionic Setup](../01-install-ionic/)
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<h2>Table of Contents</h2>
+{:.fake-h2}
+Table of Contents
 
-- [Section 4.0: Shortcuts](#section-40-shortcuts)
-- [Section 4.1: My settings](#section-41-my-settings)
-- [Section 4.2 Extensions](#section-42-extensions)
-- [Wrap-up](#wrap-up)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+* TOC
+{:toc}
 
 ## 4.0: Shortcuts
 
@@ -98,8 +95,6 @@ Written by John Papa and follow his style guide.
 
 * Intellisense for ionic framework and core cordova plugins
 * Includes a number of useful Javascript and HTML code Snippets for your project.  Just type ion_ in the editor to see what's available.
-* Debug ionic application right in Visual Studio Code
-
 
 **More Snippets**
 

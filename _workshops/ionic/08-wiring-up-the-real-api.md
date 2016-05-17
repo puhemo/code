@@ -6,26 +6,27 @@ type: ionic
 layout: workshoppost2
 order: 8
 lab: ionic
-length:
+length: 30 minutes
+date: 2016-05-16
 todo: |
-    * {:.done}done - Finish lab
-    * update length
-    * {:.done}done - update objective
-    * {:.done}done - update wrap-up
 
 ---
 [Back&]:http://backand.com
 
 {% assign imagedir = "../images/wiring-up-the-real-api/" %}
 
-<div class="fake-h2">Objective</div>
+{:.fake-h2}
+Objective
+
 
 * Pull data from a real api
 * Define what a RESTful API means
 * Set the stage for future labs to be able to add, update and delete data
 *
 
-<div class="fake-h2">Table of Contents</div>
+{:.fake-h2}
+Table of Contents
+
 
 * TOC
 {:toc}
@@ -140,7 +141,7 @@ We are now ready to update the ProjectsService and TasksService to use our Back&
               sort: '[{ "fieldName": "name", "order": "asc" }]'
             }
           }).then(function (result) {
-            return result.data.data;
+            return result.data;
          });
 
 ## 8.5: Updating TasksService to Use API
@@ -163,7 +164,7 @@ We are now ready to update the ProjectsService and TasksService to use our Back&
               sort: [{ "fieldName": "completed", "order": "asc" }, { "fieldName": "name", "order": "asc" }]
             }
           }).then(function (result) {
-            return result.data.data;
+            return result.data;
          });
 
 ## Wrap-up

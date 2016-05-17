@@ -1,16 +1,19 @@
 ---
 collection: workshops
-title: 'Extra: Avoiding CORS Issues'
+title: 'Extra 8: Avoiding CORS Issues'
 published: true
 type: ionicextra
-lab: ionic
 layout: workshoppost2
+order: 8
+lab: ionic
 length: 10 minutes
+date: 2015-05-01
+todo: |
 
 ---
 
-
-<div class="fake-h2">Objective</div>
+{:.fake-h2}
+Objective
 
 * Add configuration to the Ionic project to work around the CORS issue.
 
@@ -22,7 +25,8 @@ You will often need to load data from a remote API. When you are running your Io
     
 This happens due to the browser's security policies, which blocks access to data from other domains unless the remote server explicitly allows it. To get around this issue, we will use an Ionic CLI feature called proxies.  
 
-<div class="fake-h2">Table of Contents</div>
+{:.fake-h2}
+Table of Contents
 
 * TOC
 {:toc}
@@ -40,10 +44,6 @@ Using git, you can get started with this lab by cloning the Lab13-WorkingThruCor
 
 ## 1.1: Seeing CORS Error
 
-Set the project you downloaded in the previous section to Step1.
-
-    $ git checkout -f Step1 
-
 Run ionic serve and open up the Chrome developer tools.  You should see a CORS errors in the Console.
 
   ![Lab13-CORSErrorMessage.png](images/Lab13/Lab13-CORSErrorMessage.png)
@@ -54,13 +54,6 @@ The Api we are consuming is a hosted at [https://ioniccorsdemoapi.herokuapp.com/
 
 ## 1.2: Setting Up and Using Ionic Proxy
 
-**Get Completed Steps (optional)**
-
-If you are following along using git, reset your project to Step2.
-
-    $ git checkout -f Step2
-
-**Steps**
 
 1. Open the ionic.project file
 1. After the app_id line add a proxies property. This proxies property can accept an array of proxies with each having its own path and url.
@@ -81,12 +74,6 @@ If you are following along using git, reset your project to Step2.
 
 
 ## 1.3: Making it Work Outside of Ionic Serve
-
-**Get Completed Steps (optional)**
-
-If you are following along using git, reset your project to Step3.
-
-    $ git checkout -f Step3
 
 **Steps**
 
@@ -143,15 +130,6 @@ The Ionic proxies only work when we are using the ionic serve command.  This mea
 
 ## 1.4: Testing On a Device
 
-**Get Completed Steps (optional)**
-
-If you are following along using git, reset your project to Step4.  Then run the ionic state restore command to download the cordova plugins and platforms.
-
-    $ git checkout -f Step4
-    $ ionic state restore
-
-**Steps**
-
 1. Add a platform to the application
 1. Switch to the remote url
 1. Deploy the application to a device or emulator
@@ -163,7 +141,7 @@ This lab has been all about how to work around remote APIs that do not have CORS
 
 The code for the API we have been using is located at [https://github.com/IonicWorkshop/Lab13-HerokuHostedApi](https://github.com/IonicWorkshop/Lab13-HerokuHostedApi).  
 
-If you open up the server.js file, you will see there are 2 additional get methods that we have not used yet, /api/endpointNoCors and /NoCors.  Both of these methods have response headers on them that allow for cross origin calls by adding in these response headers.
+If you open up the server.js file, you will see there are 2 additional get functions that we have not used yet, /api/endpointNoCors and /NoCors.  Both of these functions have response headers on them that allow for cross origin calls by adding in these response headers.
 
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");

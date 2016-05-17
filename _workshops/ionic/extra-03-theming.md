@@ -4,9 +4,10 @@ title: 'Extra 3: Styling the Application'
 published: true
 type: ionicextra
 layout: workshoppost2
+order: 3
 lab: ionic
 length: 10 minutes
-order: 3
+date: 2016-05-16
 todo: |
     * add link to http://ionicframework.com/docs/components/#colors
     * update objectives and key concepts
@@ -25,6 +26,7 @@ Key Concepts:
 {:.fake-h2}
 Table of Contents
 
+* TOC
 {:toc}
 
 ## 1.0: What is SASS?

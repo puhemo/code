@@ -4,7 +4,9 @@ title: 'Extra 4: Custom Directive to Change Icon'
 published: true
 type: ionicextra
 layout: workshoppost2
+order: 4
 length: 20 minutes
+date: 2015-05-16
 todo: |
     * add link to http://ionicframework.com/docs/components/#colors
     * update objectives and key concepts
@@ -19,7 +21,8 @@ Objective
 * Change an icon based on the OS the application is running.
 
 Key Concepts:
-    *
+
+* Using directives to change functionality
 
 {:.fake-h2}
 Table of Contents

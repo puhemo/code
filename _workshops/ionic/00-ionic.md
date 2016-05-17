@@ -8,20 +8,22 @@ ishome: true
 excerpt: |
     This workshop will introduce you using the Ionic Framework to build a hybrid mobile application that you can release through the Apple, Google and Microsoft stores.  The workshop will be a mix of lecture to introduce concepts and then a lab to reinforce those concepts.   By the end of this workshop you will have a completed application that stores its data in the Cloud and is ready to be deployed to devices.
 todo: |
-    * Validate lengths for each lab
+    * {:.done} Validate lengths for each lab
     * generate pdf for all of labs (optional)
-    * make sure that all labs have todo removed from them
-    * Add links to slides
-    * update TOC
-    * Remove Git tab sections
-    * Add dates to add workshop pages
-    * fix bug in next lab for last extra.  it goes back to intro page.
-    * paging showing up on agenda and schedule
+    * {:.done} make sure that all labs have todo removed from them
+    * {:.done} Add links to slides
+    * {:.done} update TOC
+    * {:.done}Remove Git tab sections
+    * {:.done} fix bug in next lab for last extra.  it goes back to intro page.
+    * {:.done} paging showing up on agenda and schedule
     * add key concepts to the objectives for each lab
     * update all ionic1-snippets mentions to be i1_
     * validate that all of the snippets are still correct
-    * consistently use function vs method.  don't mix and match when talking about javascript functions
-    * add dates to all of the labs
+    * {:.done} consistently use function vs method.  don't mix and match when talking about javascript functions
+    * {:.done} add dates to all of the labs
+    * standardize on promise then result or response for variable.
+    * make sure that all of the section headers have a colon following the numbers.
+
 ---
 <!-- WORD COUNT: Get-ChildItem -Path [0-9][0-9]-*.md  | ForEach-Object { Get-Content $_.
      FullName | Measure-Object -Word }

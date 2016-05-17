@@ -7,23 +7,21 @@ layout: workshoppost2
 order: 2
 lab: ionic
 length: 5-10 minutes (depending on internet connection)
+date: 2016-05-16
 todo: |
     * Validate Mac security for ionic project directory
     * Mac Chrome Dev Tools Shortcut
-    * Done - Add more information about the start command is actually doing
-    * Done - Update screenshot to not show lab
-    * Done - Create seperate section for the lab
-    * Done - Link localhost url
-    * Done - Toogle Device Mode icon
----
 
+---
 {% assign imagedir = "../images/first-project/" %}
 
-<div class="fake-h2">Objective</div>
+{:.fake-h2}
+Objective
 
 Create your first Ionic project and view the project in a web browser.
 
-<div class="fake-h2">Table of Contents</div>
+{:.fake-h2}
+Table of Contents
 
 * TOC
 {:toc}

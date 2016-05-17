@@ -1,17 +1,13 @@
 ---
 collection: workshops
 title: 'Agenda'
-published: true
+published: false
 type: ionicoverview
 layout: workshoppost2
+
 ---
 
 <!-- DOCTOC SKIP -->
-
-# Ionic Workshop
-
-**Nebraska Code**
-
 
 ## Table Of Contents
 

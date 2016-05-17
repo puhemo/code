@@ -6,14 +6,10 @@ type: ionic
 layout: workshoppost2
 order: 10
 lab: ionic
-length:
+length: 20 minutes
+date: 2016-05-16
 todo: |
-    * {:.done} Finish lab
-    * update length
-    * Add $scope for the modal to the inject
     * And $state for the addNew to the inject
-    * {:.done} Add exposing ProjectsController.saveNewProject to vm.
-    * Add the modal $scope.$on destroy
     * add 401/403 check for addProject and addTask and close modal if they happen.
     * complete wrap up
 ---
@@ -34,7 +30,6 @@ Key Concepts:
 
 {:.fake-h2}
 Table of Contents
-
 
 * TOC
 {:toc}
@@ -67,7 +62,7 @@ To add a new project we are going to use a modal dialog on the projects page to 
           });
 
 1. Make sure to inject `$scope` and `$ionicModal` into the controller
-1. In order to have the modal open and close we need to create the methods to call the vm.projectModal `show()` and `hide()` functions.
+1. In order to have the modal open and close we need to create the functions to call the vm.projectModal `show()` and `hide()` functions.
 
         function showProjectModal() {
           vm.projectModal.show();
@@ -82,6 +77,11 @@ To add a new project we are going to use a modal dialog on the projects page to 
         vm.showProjectModal = showProjectModal;
         vm.closeProjectModal = closeProjectModal;
 
+1. To prevent a memory leak, you should also tell Angular to remove the modal when the view goes out of scope and is destroyed.When a page is going to be removed, Anguar broadcast the event $destroy.  To remove the modal, we need to call the `remove` function.
+
+        $scope.$on('$destroy', function () {
+              vm.projectModal.remove();
+            });
 The last thing before we can test the show and hide functionality is to add a way to launch the modal dialog on the Project page.  We are going to do that by adding an icon into the header that will launch the modal.
 
 1. Open the www/js/templates/projects.html file
@@ -119,10 +119,10 @@ We are now ready to wire up the form to post data to the API.
 
 In this section we will be adding the functions needed to send data to the API and bind it to the UI for the Project page.
 
-**Creating the Service Add Methods**
+**Creating the Service Add Functions**
 
 1. Open the www/js/services/projects.service.js
-1. Add a new method called `addProject` that takes 1 parameter called name.
+1. Add a new function called `addProject` that takes 1 parameter called name.
 
         function addProject(name) {
 
@@ -158,7 +158,7 @@ In this section we will be adding the functions needed to send data to the API a
 
 1. Open the www/js/controllers/project.controller.js file
 1. Create a new function called saveNewProject that takes in an object named project
-    * This function will call the `ProjectsService.addNewProject` method and upon successful add will add the project to the UI project list, close the modal, clear out the new project name form field and redirect the user to the tasks page.
+    * This function will call the `ProjectsService.addNewProject` function and upon successful add will add the project to the UI project list, close the modal, clear out the new project name form field and redirect the user to the tasks page.
 
             function saveNewProject(project) {
               var projectName = project.name;
@@ -174,6 +174,7 @@ In this section we will be adding the functions needed to send data to the API a
 1.  Make sure to expose the saveNewProject function to the view
 
         vm.saveNewProject = saveNewProject;
+
 
 1. If you don't already have ionic serve running, open a command prompt and run the command ionic serve
 1. You should now be able to successfully add a new project into the list and have it redirect you to the tasks page
@@ -256,7 +257,7 @@ d
           });
 
 1. Make sure to inject `$scope` and `$ionicModal` into the controller
-1. In order to have the modal open and close we need to create the methods to call the vm.projectModal `show()` and `hide()` functions.
+1. In order to have the modal open and close we need to create the functions to call the vm.projectModal `show()` and `hide()` functions.
 
         function showTaskModal() {
           vm.taskModal.show();
@@ -308,10 +309,10 @@ We are now ready to wire up the form to post data to the API.
 
 In this section we will be adding the functions needed to send data to the API and bind it to the UI for the Task page.
 
-**Creating the Service Add Methods**
+**Creating the Service Add Functions**
 
 1. Open the www/js/services/tasks.service.js
-1. Add a new method called `addTask` that takes 2 parameters: name and projectId
+1. Add a new function called `addTask` that takes 2 parameters: name and projectId
 
         function addTask(name, projectId) {
 
@@ -353,7 +354,7 @@ In this section we will be adding the functions needed to send data to the API a
 
 1. Open the www/js/controllers/task.controller.js file
 1. Create a new function called saveNewTask that takes in an object named task
-    * This function will call the `TasksService.addNewTask` method and pass the `taskName` and `projectId` variables.  Then upon successful add will add the task to the UI project list, close the modal, and clear out the new task name form field.
+    * This function will call the `TasksService.addNewTask` function and pass the `taskName` and `projectId` variables.  Then upon successful add will add the task to the UI project list, close the modal, and clear out the new task name form field.
 
             function saveNewTask(task) {
               var taskName = task.name;
@@ -372,6 +373,7 @@ In this section we will be adding the functions needed to send data to the API a
 
 1. If you don't already have ionic serve running, open a command prompt and run the command ionic serve
 1. You should now be able to successfully add a new task into a project.  To ensure that it got added to the API, either refresh the Task page after you have added it or navigate back to the project list and then back into the task list for that project.
+
 
 ## Wrap-up
 

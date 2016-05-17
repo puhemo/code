@@ -4,29 +4,29 @@ title: 'Lab 06: Adding Details Page'
 published: true
 type: ionic
 layout: workshoppost2
-length:
+length: 30 minutes
 order: 6
 lab: ionic
+date: 2016-05-16
 todo: |
     * Update objectives
-    * done - remove git section
-    * removed - updating styling section
+    * remove - updating styling section
     * update screenshots
-    * done - change api to be hard coded
-    * update length
     * done - update section numbers
     * add warning about disappearing back to project nav when testing in browser
 ---
 {% assign imagedir = "../images/detail-view/" %}
 
-<div class="fake-h2">Objective</div>
+{:.fake-h2}
+Objective
 
 * Create the tasks view page
 * Link from the master view (projects) to the detail view (tasks)
 * Setup routing for sub-page (tasks) and pass a url parameter to it (projectId)
 * Ordering data by more than 1 field in an ng-repeat
 
-<div class="fake-h2">Table of Contents</div>
+{:.fake-h2}
+Table of Contents
 
 * TOC
 {:toc}
@@ -34,7 +34,7 @@ todo: |
 ## 6.0: Adding the Task List Page
 
 1. In the www/templates directory, create a file called tasks.html
-1. In the tasks.html file, use the `ionicview` snippet to generate the view boilerplate code and set the view-title to "Tasks"
+1. In the tasks.html file, use the `i1_view` snippet to generate the view boilerplate code and set the view-title to "Tasks"
 
 ## 6.1: Add Route to Tasks Page
 
@@ -82,7 +82,7 @@ In this section, you will be creating the tasks service to pull tasks data for t
         function getTasks(projectId) {
           return $http.get("/mock-data.json")
             .then(function (result) {
-              return result[projectId].tasks;
+              return result.data[projectId].tasks;
             });
         }
 

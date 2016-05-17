@@ -7,15 +7,16 @@ layout: workshoppost2
 order: 1
 lab: ionic
 length: 30 minutes
+date: 2016-05-10
 ---
+{:.fake-h2}
+Objective
 
+Setup your computer with the required software to create an Ionic Framework based project and be able to run/test it in the browser.
 
+{:.fake-h2}
+Table of Contents
 
-<div class="fake-h2">Objective</div>
-
-Setup your Windows computer with the required software to create an Ionic Framework based project and be able to run/test it in the browser.
-
-<div class="fake-h2">Table of Contents</div>
 
 * TOC
 {:toc}

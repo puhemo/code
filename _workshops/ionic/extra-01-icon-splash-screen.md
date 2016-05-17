@@ -7,6 +7,7 @@ layout: workshoppost2
 lab: ionic
 length: 15 minutes
 order: 1
+date: 2016-05-16
 todo: |
     * update lab with current setup
     * added download of icon and splash screen

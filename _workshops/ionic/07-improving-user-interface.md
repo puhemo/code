@@ -6,26 +6,25 @@ type: ionic
 layout: workshoppost2
 order: 7
 lab: ionic
-length: 
+length: 20 minutes
+date: 2016-05-16
+
 todo: |
-    * item text wrap
-     * right arrow on project list
-     * checkbox icon for completed on task
-     * css styling for completed task
-     * update length
-     * update objectives
-     * update toc
 ---
 
 {% assign imagedir = "../images/improving-ui/" %}
 
-<div class="fake-h2">Objective</div>
+{:.fake-h2}
+Objective
+
 
 * Understand how easy it is to make a good looking interface
 * Fix the text in the project and task list from being truncated
 * Make it more obvious if a task is completed or not
 
-<div class="fake-h2">Table of Contents</div>
+{:.fake-h2}
+Table of Contents
+
 
 * TOC
 {:toc}
@@ -79,7 +78,7 @@ The first thing we need to do is replace the completed output and change it to a
 
 
 1. Open the file www/templates/tasks.html
-1. Use the snippet 'ioniciconcheckmarkcircled' to generate the checkmark icon.
+1. Use the snippet 'i1_iconcheckmarkcircled' to generate the checkmark icon.
 1. At this point the icon has been added but it is as a new line in each row.  Just like in the project list we need to use a built-in ionic css to put the icon on the left.  Add the class 'item-icon-left' to the ion-item.
 
 Now that the icon placement is correct we need to tell angular to change the icon based on the value of the task.completed property.  On the ion-checkmark-circled icon we need to add an ng-class attribute.  This attribute allows us to use Angular logic to change the value of the css value that is used.
@@ -112,7 +111,7 @@ The last thing we are going to change is to make the completed task gray and hav
 
 1. On the ion-item we need to add an ng-class so that when the task is completed we add the css class completedTask
 
-       ng-class="{completedTask: task.completed }"
+       ng-class="{'completed-task': task.completed }"
 
 1. Open the www/css/style.css file and add the following css class
 

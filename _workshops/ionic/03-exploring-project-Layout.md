@@ -7,23 +7,23 @@ layout: workshoppost2
 order: 3
 lab: ionic
 length: 10 minutes
+date: 2016-05-16
 todo: |
-    * Update screenshots to use Visual Studio code
-    * Done - Reference John Papa's Style Guide in section 3.3
-    * Done - Add shortcut for VS Code hide folder structure
-    * Done - Give quick Visual Studio Code overview of usage.  Open multiple panes. Git usage. see open files close all open files
-    * Done - Add common VS Code settings that I have
+
 ---
 
 {% assign imagedir = "../images/project-layout/" %}
 
-<div class="fake-h2">Objective</div>
+{:.fake-h2}
+Objective
+
 
 Understand the folder structure for an Ionic project and where to place files.
 
 >**Note**: For this lab, I will be using Visual Studio Code as our editor but you can use any text editor.  The install steps for Visual Studio Code are in [Lab 01: Ionic Setup](../01-install-ionic/)
 
-<div class="fake-h2">Table of Contents</div>
+{:.fake-h2}
+Table of Contents
 
 * TOC
 {:toc}

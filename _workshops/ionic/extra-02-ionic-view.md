@@ -7,6 +7,7 @@ layout: workshoppost2
 lab: ionic
 order: 2
 length: 10 minutes
+date: 2016-05-16
 todo: |
     * update objectives
     * update key concepts

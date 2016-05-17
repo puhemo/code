@@ -6,16 +6,9 @@ type: ionic
 layout: workshoppost2
 order: 9
 lab: ionic
-length: 
+length: 45 minutes
+date: 2016-05-16
 todo: |
-    * Update length
-    * {:.done} Update objectives
-    * {:.done} Add Wrap Up
-    * {:.done} Write Lab
-    * Read through lab and check for errors/typos/etc
-    * Go through the lab and  try to implement the code to make sure it all works right.
-    * maybe break the verify user is logged in section into more mini sections.
-    * validate that the bullet numbers are incrementing correctly
     * add the demo account username and password to use
 ---
 
@@ -139,7 +132,7 @@ The first thing we are going to do is create the angular service to call the Bac
         * dependency1: Backand
         * exposedFn: signup
 1. Press Esc to exit the snippet
-1. In the signup method, we need to pass in the following fields:
+1. In the signup function, we need to pass in the following fields:
     * firstName
     * lastName
     * email
@@ -148,11 +141,11 @@ The first thing we are going to do is create the angular service to call the Bac
 
             function signup(firstName, lastName, email, password, passwordConfirm) {
             }
-1. Then inside the signup method we need to call the Backand.signup method and pass all of the fields in.  The Backand.signup method takes care all of the authentication.  It calls the Back& authorization service and upon successful login broadcast an authorize event.
+1. Then inside the signup function we need to call the Backand.signup function and pass all of the fields in.  The Backand.signup function takes care all of the authentication.  It calls the Back& authorization service and upon successful login broadcast an authorize event.
 
         return Backand.signup(firstName, lastName, email, password, passwordConfirm);
 
-1. In order for the Backand.signup method to work properly, we need to set the signup token value in the www/js/app.config.js file just like we set the app name and anonymous token in the previous lab.  Back& will
+1. In order for the Backand.signup function to work properly, we need to set the signup token value in the www/js/app.config.js file just like we set the app name and anonymous token in the previous lab.  Back& will
 
           BackandProvider.setSignUpToken('14d7ec8d-e57a-4d93-9724-10f7879a352b');
 

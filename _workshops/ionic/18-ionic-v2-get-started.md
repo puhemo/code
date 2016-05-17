@@ -1,12 +1,13 @@
 ---
 collection: workshops
-title: 'Lab 16: Ionic v2'
+title: 'Lab 18: Ionic v2'
 published: true
 type: ionic
 layout: workshoppost2
-order: 16
+order: 18
 lab: ionic
-length:
+length: 30 minutes
+date: 2016-05-16
 todo: |
     * update objectives
     * update wrap up

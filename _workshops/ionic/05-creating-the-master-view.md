@@ -6,16 +6,18 @@ type: ionic
 layout: workshoppost2
 order: 5
 lab: ionic
-length:
+length: 30 minutes
+date: 2016-05-16
 todo: |
     * Update screenshots for new json data
-    * update length
 ---
 
 {% assign imagedir = "../images/master-view/" %}
 
 
-<div class="fake-h2">Objective</div>
+{:.fake-h2}
+Objective
+
 
 * Add a new view into the UI (master view part of master/detail view)
 * Create our first service
@@ -23,7 +25,9 @@ todo: |
 * Bind data to the UI
 * Order data in the UI
 
-<div class="fake-h2">Table of Contents</div>
+{:.fake-h2}
+Table of Contents
+
 
 * TOC
 {:toc}
@@ -32,7 +36,7 @@ todo: |
 
 1. under the www folder, create a directory called templates
 1. In the www/templates directory, create a file called projects.html
-1. In the projects.html file, use the `ionicview` snippet to generate the view boilerplate code and set the view-title to "Projects"
+1. In the projects.html file, use the `i1_view` snippet to generate the view boilerplate code and set the view-title to "Projects"
 1. Press Esc to exit the snippet
 
 ## 5.1: Add Route to Project Page
@@ -124,7 +128,7 @@ In this section, you will be creating your first controller that the html view w
 
         function activate() {
               ProjectsService.getProjects().then(function (response) {
-                vm.projects = response;
+                vm.projects = response.data;
               })
          }
 
