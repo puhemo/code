@@ -167,6 +167,9 @@ You are now ready to proceed to the [Ionic Framework install](#section-30-ionic)
 
         npm install -g ionic cordova bower gulp
 
+   >On Mac, you may need to run this with sudo (.e.g sudo npm install -g ionic cordova bower gulp)
+   {:.warning}
+   
 ### Section 3.0.1: Verify Installation
 
 1. Check that ionic installed correctly, run: 
