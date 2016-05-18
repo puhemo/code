@@ -79,7 +79,7 @@ In this section, you will be creating the tasks service to pull tasks data for t
         * Service: TasksService
         * dependency1: $http
         * exposedFn: getTasks
-1. Press Esc to exit the snippet
+1. Press Esc or Enter to exit the snippet
 1. Change the getTasks function to look like the following.  This will get the data from the mock-data.json file and return the tasks for the project.
 
         function getTasks(projectId) {
@@ -100,7 +100,7 @@ In this section, you will be creating the tasks page controller that will contai
         * Module: starter
         * Controller: TasksController
         * dependency1: TasksService
-1. Press Esc to exit the snippet
+1. Press Esc or Enter to exit the snippet
 1. Add a 2nd dependency for $stateParams.  This will allow you to get the id of the project.  The $stateParams property for the project id will be the same as the one we put into the router.
 1. Before the return service statement add a variable named projectId set to the value of $stateParams.projectId
 

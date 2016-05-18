@@ -44,7 +44,7 @@ To add a new project we are going to use a modal dialog on the projects page to 
 
 1. In the www/templates directory created a new file called projects-modal-add.html
 1. In the projects-modal-add.html file, use the `i1_modal_html` snippet to generate the view boilerplate code and set the title to "New Project"
-1. Press Esc to exit the snippet
+1. Press Esc or Enter to exit the snippet
 
 **Wiring up the show and hide for the modal**
 
@@ -96,7 +96,7 @@ The last thing before we can test the show and hide functionality is to add a wa
 1. Between the `<ion-view>` and `<ion-content>` we need to add a `<ion-nav-buttons>` section by using the ionic `i1_navbuttons_right` snippet
     * ng-click: vm.showProjectModal()
     * content: use the `i1_iconplus` snippet
-1. Press Esc to exit the snippet editing
+1. Press Esc or Enter to exit the snippet editing
 1. To the &lt;button&gt; element add the css class `button-icon`
 1. If you don't already have ionic serve running, open a command prompt and run the command ionic serve
     * On the Projects page you will now see a ![Plus Icon]({{"plus-icon.png" | prepend: imagedir }}).  If you click on the icon the "New Project" modal should open up and if you click the cancel text on the modal it should close it.
@@ -247,7 +247,7 @@ The work to create a "new tasks" modal dialog, call the api and update the ui is
 
 1. In the www/templates directory created a new file called tasks-modal-add.html
 1. In the tasks-modal-add.html file, use the `i1_modal_html` snippet to generate the view boilerplate code and set the title to "New Tasks"
-1. Press Esc to exit the snippet
+1. Press Esc or Enter to exit the snippet
 
 **Wiring up the show and hide for the modal**
 
@@ -293,7 +293,7 @@ The last thing before we can test the show and hide functionality is to add a wa
 1. Between the `<ion-nav-title>` and `<ion-content>` we need to add a `<ion-nav-buttons>` section by using the ionic `i1_navbuttons_right` snippet
     * ng-click: vm.showTaskModal()
     * content: use the `i1_IconCompose` snippet
-1. Press Esc to exit the snippet editing
+1. Press Esc or Enter to exit the snippet editing
 1. To the &lt;button&gt; element add the css class `button-icon`
 1. If you don't already have ionic serve running, open a command prompt and run the command ionic serve
     * On the Projects page you will now see a ![Compose Icon]({{"compose-icon.png" | prepend: imagedir }}).  If you click on the icon the "New Task" modal should open up and if you click the cancel text on the modal it should close it.

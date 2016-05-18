@@ -135,7 +135,7 @@ The first thing we are going to do is create the angular service to call the Bac
         * Service: LoginService
         * dependency1: Backand
         * exposedFn: signup
-1. Press Esc to exit the snippet
+1. Press Esc or Enter to exit the snippet
 1. In the signup function, we need to pass in the following fields:
     * firstName
     * lastName
@@ -164,7 +164,7 @@ Now it is time to create the controller for the signup page for the UI view to b
         * Module: starter
         * Controller: SignupController
         * dependency1: LoginService
-1. Press Esc to exit the snippet
+1. Press Esc or Enter to exit the snippet
 
 Now we need to create the signup function and expose it to the view.  After the `activate` function create a new function called signup.  In the signup function if the call to the LoginService.signup is successfully we will redirect the user to the projects page by calling `$state.go` (Don't forget to inject `$state` into the `SignupController`).  To expose the function to the view we need to add it to the vm variable by creating the vm.signup variable and setting the value of it to signup.
 
@@ -292,7 +292,7 @@ We are now ready to create the login controller to call the `LoginService.login`
         * Module: starter
         * Controller: LoginController
         * dependency1: LoginService
-1. Press Esc to exit the snippet
+1. Press Esc or Enter to exit the snippet
 
 Now we need to create the login function and expose it to the view.  After the `activate` function create a new function called login.  In the login function if the call to the `LoginService.login` is successfully we will redirect the user to the projects page by calling `$state.go` (Don't forget to inject `$state` into the `LoginController`).  To expose the function to the view we need to add it to the vm variable by creating the vm.login variable and setting the value of it to login.
 
@@ -425,7 +425,7 @@ With Angular you can use Http Interceptors to globally inspect the request and r
         * Service: LoginService
         * dependency1: $rootScaope
         * exposedFn: responseError
-1. Press Esc to exit the snippet
+1. Press Esc or Enter to exit the snippet
 1. Add `$q` to the dependency list for the `HttpInterceptor`
 
           HttpInterceptor.$inject = ['$rootScope', '$q'];

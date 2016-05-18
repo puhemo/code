@@ -10,6 +10,7 @@ length: 30 minutes
 date: 2016-05-16
 todo: |
     * Update screenshots for new json data
+    * see
 ---
 
 {% assign imagedir = "../images/master-view/" %}
@@ -39,7 +40,8 @@ Table of Contents
 1. Under the www folder, create a directory called templates
 1. In the www/templates directory, create a file called projects.html
 1. In the projects.html file, use the `i1_view` snippet to generate the view boilerplate code and set the view-title to "Projects"
-1. Press Esc to exit the snippet
+    * To use snippets in Visual Studio Code, start typing the prefix of the snippet in the file of the type it supports.  In this case we are using the Ionic html snippets by typing i1_view.  Arrow to the snippet you want and hit enter to select it.
+1. Press Esc or Enter to exit the snippet
 
 ## 5.1: Add Route to Project Page
 
@@ -66,7 +68,7 @@ In order to get to the project page, we need to add a route so that Angular know
 
     >Note: The $urlRouterProvider.otherwise is the default route to use when angular does not have a route configured for the one the user tried to navigate to.  In this case it will route to the projects route.
 
-1. Open the index.html file and replace the content in the &lt;body&gt; tag with the following
+1. Open the index.html file and replace the content in the <font color="red">&lt;body&gt;</font> tag with the following
 
         <ion-pane>
             <ion-nav-bar class="bar-calm">
@@ -101,11 +103,11 @@ In this section, you will be creating your first service to pull data from a rem
         * Service: ProjectsService
         * dependency1: $http
         * exposedFn: getProjects
-1. Press Esc to exit the snippet
+1. Press Esc or Enter to exit the snippet
 1. Change the getProjects function to look like the following.  This will get the data from the mock-data.json file.
 
         function getProjects() {
-            return $http.get("/mock-data.json")
+            return $http.get('/mock-data.json')
                 .then(function (result) {
                     return result.data;
                 });
@@ -123,7 +125,7 @@ In this section, you will be creating your first controller that the html view w
         * Module: starter
         * Controller: ProjectsController
         * dependency1: ProjectsService
-1. Press Esc to exit the snippet
+1. Press Esc or Enter to exit the snippet
 1. Add the call to the ProjectsServices in the activate function
 
         function activate() {
@@ -151,6 +153,10 @@ In order to use the project controller and service that we created we need to ad
       <script src="js/app.js"></script>
       <script src="js/services/projects.service.js"></script>
       <script src="js/controllers/projects.controller.js"></script>
+
+>Warning: The javascript and css references need to be relative in order to work properly on a device
+{:.warning}
+
 
 **Updating UI to Show Projects**
 
