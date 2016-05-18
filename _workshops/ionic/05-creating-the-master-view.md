@@ -162,7 +162,7 @@ In order to use the project controller and service that we created we need to ad
         <script src="js/services/projects.service.js"></script>
         <script src="js/controllers/projects.controller.js"></script>
 
->Warning: The javascript and css references need to be relative in order to work properly on a device
+>Warning: The javascript and css references need to be relative in order to work properly on a device.  Meaning without the leading slash
 {:.warning}
 
 
