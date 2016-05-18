@@ -131,10 +131,10 @@ In this section, you will be creating your first controller that the html view w
         function activate() {
               ProjectsService.getProjects().then(function (response) {
                 vm.projects = response.data;
-              })
+              });
          }
 
-    * This says when the ProjectsService returns the data from getProjects() then store it in vm.projects;
+    * This says when the ProjectsService returns the data from getProjects() then store it in vm.projects
 
 
 **Updating Projects Route to Add Controller**
