@@ -65,7 +65,7 @@ The first thing we need to do is implement paging in the Back& service call for 
 Now that the Projects service supports paging, we need to update the `ProjectsController` to support paging.
 
 1. Open the www/js/controllers/projects.controller.js
-1. We need to add variables to track the page number and page size.  We will also set them the default values that we want to use which is a page size of 10 and page number set to 0 (we will increment to 1 in the first call).
+1. We need to add variables to track the page number and page size.  We will also set them to the default values that we want to use which is a page size of 10 and page number set to 0 (we will increment to 1 in the first call).
 
         vm.pageNumber = 0;
         vm.pageSize = 10;
@@ -78,10 +78,10 @@ Now that the Projects service supports paging, we need to update the `ProjectsCo
           vm.pageNumber = vm.pageNumber + 1;
           ProjectsService.getProjects(vm.pageNumber, vm.pageSize)
             .then(function (result) {
-              var rowNum = result.length ;
+              var rowNum = result.data.length ;
 
              if (rowNum > 0) {
-                vm.projects = vm.projects.concat(result);
+                vm.projects = vm.projects.concat(result.data);
              }
             })
             .finally(function () {
@@ -119,7 +119,7 @@ We are technically done with the implementation of the infinite scroll in the co
             });
          }
 
-1. The infinite scroll will initially be called so we do not need to call the `getProjects` in the `activate` function but need to initialize the `vm.projects` array at the top the `ProjectsController` function
+1. The infinite scroll will initially be called so we do not need to call the `getProjects` in the `activate` function but need to initialize the `vm.projects` array at the top of the `ProjectsController` function
 
           function ProjectsController(ProjectsService, $ionicModal, $scope, $state, $ionicPopup, $ionicListDelegate) {
             var vm = this;
@@ -142,6 +142,8 @@ We are technically done with the implementation of the infinite scroll in the co
 1. Don't forget to expose the `vm.moreDataCanBeLoaded` flag to the view
 
         vm.moreDataCanBeLoaded = true;
+
+    > The function `setMoreDataCanBeLoaded` does not however need to be exposed to the view since it is only called within the controller functions and not invoked from the UI
 
 1. Now you need to add the call to `setMoreDataCanBeLoaded` in the `getProjects` and `getMoreProjects` functions
 
@@ -175,12 +177,12 @@ We are now ready to add the `ion-infinite-scroll` to the view and test out the p
 1. After the `ion-list`, use the `i1_infinitescroll` snippet to get the `<ion-infinite-scroll>`
     * on-infinite: vm.getMoreProjects()
     * distance: 1%
-1. By default the infinite scroll will immediately check if there is more data.  We want to turn this off by setting the `immediate-check` attribute to false
+1. By default the infinite scroll will immediately check if there is more data which means that we no longer need to call `getProjects` in the `activate` function.
 
           <ion-infinite-scroll
               on-infinite="vm.getMoreProjects()"
               distance="1%"
-              immediate-check="false" >
+          >
           </ion-infinite-scroll>
 
 1. The last thing we need to implement is the check on the `ion-infinite-scroll` to see if more data can be loaded and that the refresher is not running.  To do this we are going to use an Angular ng-if statement on the `ion-infinite-scroll`.
@@ -197,6 +199,6 @@ We are now ready to add the `ion-infinite-scroll` to the view and test out the p
 
 ## Wrap-up
 
-Thank goodness we did not have to implement all of the logic to create our own infinite scroll component.  Using the Ionic infinite scroll is a breeze to implement and get working correctly.  The biggest thing to remember when using the infinite scroll component is to remember to set the flag to only allow it to run when it thinks there is more data else you can get into an infinite loop of checking for updates if the user is anywhere near the bottom of the page.
+Thank goodness we did not have to implement all of the logic to create our own infinite scroll component.  Using the Ionic infinite scroll is a breeze to implement and get working correctly.  The biggest thing to remember when using the infinite scroll component is to set the flag to only allow it to run when it thinks there is more data else you can get into an infinite loop of checking for updates if the user is anywhere near the bottom of the page.
 
 You would also want to implement an infinite scroll on the task page or increase the page size to some amount that is far greater than would ever expect a single project to have input.

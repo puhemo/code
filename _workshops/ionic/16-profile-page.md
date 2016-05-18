@@ -80,7 +80,7 @@ For the profile page we are going to use the `LoginService` to get the user's in
         * Controller: ProfileController
         * dependency1: LoginService
 1. Press Esc to exit the snippet
-1. Add the call to the `LoginService.getUSerDetails` in the activate function
+1. Add the call to the `LoginService.getUserDetails` in the activate function
 
             LoginService.getUserDetails().then(function(response){
                 vm.details = response;

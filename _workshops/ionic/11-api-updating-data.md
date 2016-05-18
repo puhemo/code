@@ -35,7 +35,7 @@ Table of Contents
 
 
 1. Open the www/js/service/tasks.service.js file
-1. We are going to add a new function called `updateTask`.  This function will take in the task id and the completed state.  It will then call the Back& API and update the data.
+1. We are going to add a new function called `updateTask`.  This function will take in the task object.  It will then call the Back& API and update the data.
 
         function updateTask(task) {
           return $http({

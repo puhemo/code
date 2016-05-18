@@ -46,71 +46,11 @@ The side menu comes with a pre-configured side menu while the tabs template come
 
     > The start command may take a few minutes to run
 
-### 2.0.2 Start Command Details
-
-While the start command runs, lets take a look at what is doing for us and go through the output that it generates.
-
-1. Downloaded the base project and template from Github
-
-        Creating Ionic app in folder C:\projects\myFirstApp based on blank project
-        Downloading: https://github.com/driftyco/ionic-app-base/archive/master.zip
-        Downloading: https://github.com/driftyco/ionic-starter-blank/archive/master.zip
-        Updated the hooks directory to have execute permissions
-
-1. Updated the config.xml which contains all of the metadata about our application
-
-        Update Config.xml
-
-1. Setup and Configured the cordova project to allow us to add platforms and deploy devices later
-
-        Initializing cordova project
-
-1. List a bunch of helpful commands to get started with Ionic
-
-        Your Ionic project is ready to go! Some quick tips:
-
-         * cd into your project: $ cd myFirstApp
-         * Setup this project to use Sass: ionic setup sass
-         * Develop in the browser with live reload: ionic serve
-         * Add a platform (ios or Android): ionic platform add ios [android]
-                Note: iOS development requires OS X currently
-
-                See the Android Platform Guide for full Android installation instructions:
-                https://cordova.apache.org/docs/en/edge/guide_platforms_android_index.md.html
-         * Build your app: ionic build <PLATFORM>
-         * Simulate your app: ionic emulate <PLATFORM>
-         * Run your app on a device: ionic run <PLATFORM>
-         * Package an app using Ionic package service: ionic package <MODE> <PLATFORM>
-
-        For more help use ionic --help or ionic docs
-
-        Visit the Ionic docs: http://ionicframework.com/docs
-
-        New! Add push notifications to your Ionic app with Ionic Push (alpha)!
-        https://apps.ionic.io/signup
-
-1. The last thing it does for us is show the latest updates that they have made to ionic.
-
-        +---------------------------------------------------------+
-        + New Ionic Updates for May 2016
-        +
-        + The View App just landed. Preview your apps on any device
-        + http://view.ionic.io
-        +
-        + Invite anyone to preview and test your app
-        + ionic share EMAIL
-        +
-        + Generate splash screens and icons with ionic resource
-        + http://ionicframework.com/blog/automating-icons-and-splash-screens/
-        +
-        +---------------------------------------------------------+
-
-### 2.0.3: Mac Cleanup
+### 2.0.2: Mac Cleanup
 
 For OSx, you may need to change the permissions on your app directory for all of the ionic command to work like adding platforms which we will do later.
 
-        $ sudo chmod -R 777 myFirstIonicApp 
-
+        $ sudo chmod -R 777 myFirstIonicApp
 
 ## 2.1: Install Dependencies
 

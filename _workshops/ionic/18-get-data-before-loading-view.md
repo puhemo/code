@@ -21,7 +21,7 @@ In a mobile application, this can make you application feel sluggish if you are 
 
 With our application, we are showing a spinner for all of the http calls so we have eliminated that concern.
 
-The functionality to pull data before showing a data is called resolve in the Angular UI-Router.
+The functionality to pull data before showing a page is called resolve in the Angular UI-Router.
 
 Key Concepts:
 

@@ -16,12 +16,14 @@ todo: |
 {:.fake-h2}
 Objective
 
-Show how easy it is to implement the functionality to typically mobile feature where the user can pull down the grid and get the latest data pulled in.  In a typically multi-user or multi-device application you want to be able to get the latest data onto your device without having to restart the application.  With the Ionic Framework implementing functionality the get the latest data into your application is very easy to do.
+Implement the ability to pull in the latest data from the server.
+
+In a typically multi-user or multi-device application you want to be able to get the latest data onto your device without having to restart the application.  With the Ionic Framework implementing functionality the get the latest data into your application is very easy to do.
 
 Key Concepts:
 
 * Introduce the ion-refresh component
-* Introduce the ionic-lab we page
+* Introduce the ionic-lab web page
 
 {:.fake-h2}
 Table of Contents
@@ -34,10 +36,11 @@ Table of Contents
 
 1. Open the www/templates/projects.html
 1. Above the ion-list, we need to add the `ion-refresher` that will call a function that we will create in a few minutes called `vm.refreshData`.  Use the `i1_refresher` snippet to create the refresher
-        * pulling-text: anything you want
-        * on-refresh: vm.getProjects()
 
-        <ion-refresher pulling-text="Pull to refresh..." on-refresh="vm.getProjects()"></ion-refresher>
+    * pulling-text: anything you want
+    * on-refresh: vm.getProjects()
+
+            <ion-refresher pulling-text="Pull to refresh..." on-refresh="vm.getProjects()"></ion-refresher>
 
 1. Open the www/js/controllers/project.controller.js
 1. We are going to refactor the `activate` function and move the call to `ProjectsService.getProjects` to its own function called `getProjects`
@@ -79,4 +82,4 @@ Table of Contents
 
 ## Wrap-up
 
-Pull to refresh is a standard functionality that users have come to expect.  The Ionic team made it very easy to add this functionality to your application.  In less than 5 minutes you can add pull to refresh to your application.  We used the built-in look and feel for the refresh component.  You can custom the the icon, spinner, and text.
+Pull to refresh is a standard feature that users have come to expect.  The Ionic team made it very easy to add this functionality to your application.  In less than 5 minutes you can add pull to refresh to your application.  We used the built-in look and feel for the refresh component.  You can custom the the icon, spinner, and text.
