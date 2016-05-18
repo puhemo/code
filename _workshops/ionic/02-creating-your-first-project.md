@@ -82,7 +82,7 @@ This view however does not give you much of an idea how it might look on an actu
 
 ### 2.2.1: Ionic Lab
 
-The first way is to use the optional ionic-lab web page to see a side-by-side view of iOS and Android within Chrome.  Even if you don't pass the --lab option to the ionic serve command, you can always get to the Ionic lab page at [http://localhost:8100/ionic-lab](http://localhost:8100/ionic-lab)
+The first way is to use the optional ionic-lab web page to see a side-by-side view of iOS and Android within Chrome.  Even if you don't pass the --lab option to the ionic serve command, you can always get to the Ionic lab page at [http://localhost:8100/ionic-lab](http://localhost:8100/ionic-lab).  To quit ionic serve, press q in the command window where ionic serve is running.
 
     $ ionic serve --lab
 
