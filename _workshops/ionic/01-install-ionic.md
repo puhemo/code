@@ -47,13 +47,13 @@ Below are the instructions for installation if you are on a Windows machine.
 
 1. From the administrative command prompt you opened in [1.0.1](#section-101-chocolatey), install the latest NodeJs version by running:
 
-        $ choco install -y nodejs
+        $ choco install -y nodejs -version 4.4.4
 
 1. To ensure that node installed successfully run
 
         $ node -v
 
-1. If the node -v command returns a version number, then node is installed and working correctly.
+1. If the node -v command returns a version number, then node is installed and working correctly.  The version should be 4.4.4 which is the latest Node LTS version .
 
 ### Section 1.0.2: Git Command line
 
@@ -154,6 +154,9 @@ By having everyone use the same editor it helps to eliminate editor specific iss
 1. Double-click on the downloaded archive to expand the contents.
 1. Drag Visual Studio Code.app to the Applications folder, making it available in the Launchpad.
 1. Add VS Code to your Dock by right-clicking on the icon and choosing Options, Keep in Dock.
+
+### Section 2.0.5: Python Install
+
 
 You are now ready to proceed to the [Ionic Framework install](#section-30-ionic).
 

@@ -62,6 +62,14 @@ To add a new project we are going to use a modal dialog on the projects page to 
           });
 
 1. Make sure to inject `$scope` and `$ionicModal` into the controller
+
+          ProjectsController.$inject = ['ProjectsService', '$ionicModal', '$scope'];
+
+
+          function ProjectsController(ProjectsService, $ionicModal, $scope) {
+            ......
+          }
+
 1. In order to have the modal open and close we need to create the functions to call the vm.projectModal `show()` and `hide()` functions.
 
         function showProjectModal() {
@@ -135,7 +143,7 @@ In this section we will be adding the functions needed to send data to the API a
               addProject: addProject
             };
 
-1. in the `addProject` function we are going to create a JSON object called `project` that has properties called `name` and `created_on`.
+1. In the `addProject` function we are going to create a JSON object called `project` that has properties: `name` and `created_on`.
     * name: name
     * created_on: new Date()
 
@@ -143,7 +151,7 @@ In this section we will be adding the functions needed to send data to the API a
             "name": name,
             "created_on": new Date()
         };
-1. To send data to Back& we need to create a $http post call that calls `Backand.getApiUrl() + '/1/objects/project'` and passed in the `project` json object as a data property.  This will then return a promise that we want to capture and return `result.data`
+1. To send data to Back& we need to create a $http post call that calls the Back& `project` endpoint.  This will then return a promise that we want to capture and return `result.data`
 
         return $http({
                 method: 'post',
@@ -158,7 +166,7 @@ In this section we will be adding the functions needed to send data to the API a
 
 1. Open the www/js/controllers/project.controller.js file
 1. Create a new function called saveNewProject that takes in an object named project
-    * This function will call the `ProjectsService.addNewProject` function and upon successful add will add the project to the UI project list, close the modal, clear out the new project name form field and redirect the user to the tasks page.
+    * This function will call the `ProjectsService.addNewProject` function and upon successful adding of the new record, will add the project to the UI project list, close the modal, clear out the new project name form field and redirect the user to the tasks page.
 
             function saveNewProject(project) {
               var projectName = project.name;
@@ -167,7 +175,7 @@ In this section we will be adding the functions needed to send data to the API a
                   vm.projects.push(result);
                   vm.closeProjectModal();
                   project.name = '';
-                  $state.go('tasks', { projectId: result.id, projectName: result.name }, { localtion: true });
+                  $state.go('tasks', { projectId: result.id, projectName: result.name }, { location: true });
                 });
             }
 
@@ -246,7 +254,7 @@ The work to create a "new tasks" modal dialog, call the api and update the ui is
 1. In the www/templates/tasks-modal.add.html file to the `ion-header-bar` we are going to add a button to the header after the title that will close the dialog when it is opened.
 
             <button class="button button-clear button-positive"  ng-click="vm.closeTaskModal()">Cancel</button>
-d
+
 1. Open up the www/js/controllers/tasks.controller.js file
 1. Inside the `activate` function we need to setup the `ionicModal` with what template to use and set the scoping variable for the modal.
 
@@ -257,6 +265,13 @@ d
           });
 
 1. Make sure to inject `$scope` and `$ionicModal` into the controller
+
+         TasksController.$inject = ['TasksService', '$stateParams', '$scope', '$ionicModal'];
+
+         function TasksController(TasksService, $stateParams, $scope, $ionicModal) {
+            .....
+         }
+
 1. In order to have the modal open and close we need to create the functions to call the vm.projectModal `show()` and `hide()` functions.
 
         function showTaskModal() {
@@ -325,7 +340,7 @@ In this section we will be adding the functions needed to send data to the API a
               addTask: addTask
             };
 
-1. in the `addTask` function we are going to create a JSON object called `task` that has properties called `name`, `created_on`, `completed` and `project_id`
+1. In the `addTask` function we are going to create a JSON object called `task` that has properties: `name`, `created_on`, `completed` and `project_id`
     * name: name
     * created_on: new Date()
     * completed: false
@@ -354,7 +369,7 @@ In this section we will be adding the functions needed to send data to the API a
 
 1. Open the www/js/controllers/task.controller.js file
 1. Create a new function called saveNewTask that takes in an object named task
-    * This function will call the `TasksService.addNewTask` function and pass the `taskName` and `projectId` variables.  Then upon successful add will add the task to the UI project list, close the modal, and clear out the new task name form field.
+    * This function will call the `TasksService.addNewTask` function and pass the `taskName` and `projectId` variables.  Then upon successful it will add the task to the UI project list, close the modal, and clear out the new task name form field.
 
             function saveNewTask(task) {
               var taskName = task.name;

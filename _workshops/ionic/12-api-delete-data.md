@@ -65,7 +65,7 @@ For the deleting of tasks we are going to add another icon into the row for each
 ### 12.0.2: TasksController
 
 1. Open the www/js/controllers/tasks.controller file
-1. We are going to add a new function called `deleteTask` that takes a parameter called taskId and then calls the `TasksService.deleteTask` function.  Upon successfully deletion it removed the row from the `vm.tasks`.
+1. We are going to add a new function called `deleteTask` that takes a parameter called taskId and then calls the `TasksService.deleteTask` function.  Upon successfully deletion it removes the row from the `vm.tasks`.
 
 
          function deleteTask(task) {
@@ -91,7 +91,7 @@ For the deleting of tasks we are going to add another icon into the row for each
 
 1. If you were to look at the Task page right now you would notice that the close icon is sitting on top of the checkmark icon.  To make it go to the right side of the ion-item, we need to add the `item-icon-right` css class to the ion-item.
 
-    >When you using both item-icon-left and item-icon-right, the position of the icon is decided by the order that the icon is listed in the ion-item.
+    >When you are using both item-icon-left and item-icon-right, the position of the icon is decided by the order that the icon is listed in the ion-item.
 
 1. The icons are now in the right position but from a usability perspective the close icon is drawing your eyes to it.  To remedy this we want to use the `icon-accessory` css class on the icon to make it smaller and gray.
 
@@ -140,12 +140,12 @@ The last remaining functionality to implement for deleting a task is to ask the 
 
 ## 12.1: Project Delete
 
-For deleting a project we are going to implement a standard feature that many mobile applications have on their list display where you can swipe to show buttons for additional actions.
+For deleting a project we are going to implement a standard feature that many mobile applications have on their list display where you can left swipe to show buttons for additional actions.
 
 ### 12.1.1: ProjectsService
 
 1. Open the www/js/service/projects.service.js file
-1. We are going to add a new function called `deleteProject`.  This function will take in the task id and call the Back& API to delete the project and all of the associated tasks.
+1. We are going to add a new function called `deleteProject`.  This function will take in the project id and call the Back& API to delete the project and all of the associated tasks.
 
         function deleteProject(projectId) {
           return $http({
@@ -168,7 +168,7 @@ For deleting a project we are going to implement a standard feature that many mo
 ### 12.1.2: ProjectsController
 
 1. Open the www/js/controllers/projects.controller file
-1. We are going to add a new function called `deleteProject` that takes a parameter called projectId and then calls the `ProjectsService.deleteProject` function.  Upon successfully deletion it removed the row from the `vm.projects`.
+1. We are going to add a new function called `deleteProject` that takes a parameter called projectId and then calls the `ProjectsService.deleteProject` function.  Upon successfully deletion it removes the row from the `vm.projects`.
 
 
          function deleteProject(project) {
@@ -181,11 +181,6 @@ For deleting a project we are going to implement a standard feature that many mo
 
          vm.deleteProject = deleteProject;
 
-
-Finally Block
-We are going to use the `$ionicListDelete` to be able to close
-
-
 ### 12.1.3: Project Page
 
 1. Open the www/templates/projects.html
@@ -197,12 +192,12 @@ We are going to use the `$ionicListDelete` to be able to close
           </ion-option-button>
 
 1. If you don't already have ionic serve running, open a command prompt and run the command ionic serve
-1. On the project page, if you to the left it will show the option menu and the delete button.  When you click on the delete button it will call the Back& delete API and then removed it from vm.projects on successfully completed.
+1. On the project page, if you swipe to the left it will show the option menu and the delete button.  When you click on the delete button it will call the Back& delete API and then removed it from vm.projects on successfully completed.
 
->At this point we have 2 major issues.  First, the option buttons may stay open when there is an error and causing issues.  To remedy this issue we need to use the `$ionicListDelete.closeoptionButtons` to close the option buttons.  The second issue is that it does not ask to confirm the delete.
+>At this point we have 2 major issues.  First, the option buttons may stay open when there is an error and this can cause unintended UI features.  To remedy this issue we need to use the `$ionicListDelete.closeoptionButtons` to close the option buttons.  The second issue is that it does not ask to confirm the delete.
 {:.warning}
 
-To ensure that the option buttons always close we need to add a finally block on the `deleteProject` function in the controller and call the `$ionicListDelete.closeOptionButton`.  To add the confirm to delete option we are going to use the `$ionicPopup` like we did for the task
+To ensure that the option buttons always close we need to add a finally block on the `deleteProject` function in the controller and call the `$ionicListDelete.closeOptionButton`.  To add the confirm to delete option we are going to use the `$ionicPopup` like we did for the task.
 
 1. Open the www/js/controllers/projects.controller.js file
 1. Inject `$ionicPopup` and `$ionicListDelegate` into the controller

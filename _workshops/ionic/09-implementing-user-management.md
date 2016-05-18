@@ -359,7 +359,8 @@ Now that we are able to login with the username and password, lets add in the ab
 
 1. Open the www/js/services/login.service.js file
 1. Add a function called `socialLogin` with 1 parameter called provider
-1. In the `socialLogin' function return `Back.socialLogin` and pass the provider parameter to it
+1. In the `socialLogin` function return `Backand.socialLogin` and pass the provider parameter to it
+1. In the `socialLogin` function return `Backand.socialLogin` and pass the provider parameter to it
 
           function socialLogin(provider) {
             return Backand.socialSignin(provider);
@@ -395,7 +396,7 @@ We are now ready to create the login controller to call the `LoginService.social
                });
            }
 
-The last piece before we test the functionality is to tell Back& if we are on a mobile device or not.  This is important due to how the social logins work differently on in a desktop browser versus a mobile device.
+The last piece before we test the functionality is to tell Back& if we are on a mobile device or not.  This is important due to how the social logins work differently on a desktop browser versus a mobile device.
 
 1. Open the www/js/app.js file and add the following lines to the run function
 
@@ -409,7 +410,7 @@ The last piece before we test the functionality is to tell Back& if we are on a 
 
 ## 9.3: Ensuring the User is Logged In
 
-We have added the functionality to be able to login and signup.  However, there is currently no checks in place to validate that an authorization error didn't occur in one of the Back& API calls and redirect the user to the login page if there is nor is there a check in place to make sure that the token is still valid.  It is not hard to implement this functionality code wise but if you have never done this in Angular then finding out how to do is no easy tasks.  Luckily I have gone through the pain of figuring it so that we can easily implement it.
+We have added the functionality to be able to login and signup.  However, there is currently no checks in place to validate that an authorization errors (401 and 403 status codes) didn't occur in one of the Back& API calls and if one did then redirect the user to the login page.  It is not hard to implement this functionality code wise but if you have never done this in Angular then finding out how to do it is no easy tasks.  Luckily I have gone through the pain of figuring it so that we can easily implement it in this workshop.
 
 
 ### 9.3.1: Capturing 401 Unauthorized and 403 Forbidden Errors
@@ -432,7 +433,7 @@ With Angular you can use Http Interceptors to globally inspect the request and r
                 ........
           }
 
-1. In the `responseError` function we need to check the response.state.  If it is a 401 then we are going to broadcast the `event:unauthorized` event on `$rootScope` and reject the promise.  Don't forget to pass in the `response` to the `responseError` function.
+1. In the `responseError` function we need to check the response.state.  If it is a 401 or 403 then we are going to broadcast the `event:unauthorized` event on `$rootScope` and reject the promise.  Don't forget to pass in the `response` parameter to the `responseError` function.
 
         function responseError(response) {
           if (response.status === 401 || response.status === 403) {
@@ -499,7 +500,7 @@ However, in order to test this out we need to change which Back& application we 
     1. Expand Local Storage and select http://localhost:8000
     1. If the `BACKANDtoken` or `BACKANDuser` rows exists, click on them and delete them
 
-           ![Chrome Devs  Tools Resources Local Storage]({{"chrome-devtools-resources-backand.png" | prepend: imagedir }})
+        ![Chrome Devs  Tools Resources Local Storage]({{"chrome-devtools-resources-backand.png" | prepend: imagedir }})
 
     1. Anytime that you want to test the 401/403 Authorization event broadcast, login, delete the Back& tokens from Local Storage, and refresh the page.  It should redirect you to the login page.
 
@@ -569,7 +570,7 @@ Now we are ready to test.
     1. Expand Local Storage and select http://localhost:8000
     1. If the `BACKANDtoken` or `BACKANDuser` rows exists, click on them and delete them
 
-           ![Chrome Devs  Tools Resources Local Storage]({{"chrome-devtools-resources-backand.png" | prepend: imagedir }})
+        ![Chrome Devs  Tools Resources Local Storage]({{"chrome-devtools-resources-backand.png" | prepend: imagedir }})
 
     1. Anytime that you want to test the 401/403 Authorization event broadcast, login, delete the Back& tokens from Local Storage, and refresh the page.  It should redirect you to the login page without
 1. Now try to navigate to [http://localhost:8100/#/projects](http://localhost:8100/#/projects) and it should redirect you to the login page.  If you look in the Chrome Dev Tools Console, you will also not see any network calls or errors like before since we no longer make network calls just to find out the authentication token is not there.

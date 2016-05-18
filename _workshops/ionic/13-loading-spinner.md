@@ -32,7 +32,7 @@ Table of Contents
 
 ## 13.0: Showing the Spinner on Http request
 
-We are already inspecting all of the http response errors in our `HttpInterceptor`.  Now we are going to add in function to show a spinner on request and hide it on response.
+We are already inspecting all of the http response errors in our `HttpInterceptor`.  Now we are going to add in a function to show a spinner on request and hide it on response.
 
 1. Open the www/js/http.interceptor.js
 1. We need to add the function `request` to intercept all request.  The request function takes a single argument and we are going to call it config
@@ -80,7 +80,7 @@ We now need to respond to the `loading:show` event and show the actual spinner
               $rootScope.$broadcast('loading:hide');
          }
 
-1. As the call to the `LoadingHide` function as the first line in the `response` and `responseError` functions.
+1. Add the call to the `LoadingHide` function as the first line in the `response` and `responseError` functions.
 
         function response(response) {
               LoadingHide();
