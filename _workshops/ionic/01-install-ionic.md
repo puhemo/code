@@ -193,6 +193,10 @@ You are now ready to proceed to the [Ionic Framework install](#section-30-ionic)
         
     * 3.9.0 as of this writing 
 
+## 3.2 Git Configuration
+
+   git config --global --add url.https://github.com.insteadof git://github.com
+   
 ## Wrap up
 
 You now have all of the software components needed to create an Ionic project and run/test it out in a web browser.  In the next lab you will create your first Ionic application and test it in the browser.
