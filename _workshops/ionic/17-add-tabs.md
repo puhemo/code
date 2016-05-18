@@ -6,14 +6,10 @@ type: ionic
 layout: workshoppost2
 order: 17
 lab: ionic
-length:
-date: 2016-05-16
+length: 10 minutes
+date: 2016-05-18
 todo: |
-    * update objectives
-    * update wrap up
-    * update length
-    * write lab
-    * {:done}update imagedir
+
 ---
 
 {% assign imagedir = "../images/adding-tabs/" %}
@@ -66,15 +62,19 @@ We are going to create 2 tabs: projects  and profile.  In the future you may wan
 	
 ## 17.1 Updating Routes  To Use Tabs 
 
+In order to use the tabs we need to update the routes so that the tabs control knows how to load the page. 
 
-**app.config.js**
+1. Open the www/js/config/app.config.js
+1.  We first need to add a new state called tab that is an abstract state.   With abstract routes you are not able to directly navigate to them and they are used as a way to group states. 
 
-    $stateProvider
         .state('tab', {
           url: '/tab',
           abstract: true,
           templateUrl: 'templates/tabs.html'
         })
+        
+For the project, task, and profile states we need to change the to start with tab.  Then we need to add a views node that is a json object.  Then we ended to move the url, templates, controller and resolve properties to the views node.  
+
         .state('tab.projects', {
           url: '/projects',
           views: {
@@ -109,22 +109,9 @@ We are going to create 2 tabs: projects  and profile.  In the future you may wan
             }
           }
         })
-        .state('tab.profile', {
-          url: '/profile',
-          views: {
-            'tab-profile': {
-              templateUrl: 'templates/tab-profile.html',
-              controller: 'ProfileController as vm'
-            }
-          }
-        })
-        .state('tab.about', {
-          url: '/about',
-          views: {
-            'tab-about': {
-              templateUrl: 'templates/tab-about.html'
-            }
-          }
-        })
+        
+1. If you don't already have ionic serve running, open a command prompt and run the command ionic serve.  The UI should now be tab based and you can navigate between the tabs.
 
 ## Wrap-up
+
+The tabs on Ionic work fantastic and change the look based on platform so that the users get the look and feel they expect in their platform.  With minimal work we were able to change our UI to be tabs based.  
