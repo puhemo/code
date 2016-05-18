@@ -161,10 +161,10 @@ So far you have just bound the json output to the UI.  Useful for debugging but 
 ![tasks  list with json included]({{"tasks-ion-list-without-json.png" | prepend: imagedir }})
 
 1. Open the www/templates/tasks.html
-1. Inside of the &lt;ion-content&gt; use the snippet `i1_list` to generate a ion-list and item-item component
+1. Insivmde of the &lt;ion-content&gt; use the snippet `i1_list` to generate a ion-list and item-item component
     * Values to fill in for the snippet:
         * item: task
-        * items: vm.task
+        * items: vm.tasks
 1. For the tasks list, you want to loop through each task and bind the following:
     * task.name
     * task.completed
