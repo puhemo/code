@@ -85,7 +85,7 @@ In this section, you will be creating the tasks service to pull tasks data for t
         function getTasks(projectId) {
           return $http.get("/mock-data.json")
             .then(function (result) {
-              return result.data[projectId].tasks;
+              return result.data.data[projectId].tasks;
             });
         }
 
