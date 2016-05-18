@@ -6,49 +6,51 @@ type: ionic
 layout: workshoppost2
 order: 4
 lab: ionic
-length: 20 minutes
+length: 10 minutes
+date: 2016-05-16
 todo: |
-    * remove debugging section as you can't do device emulation or inspect element since Chrome will crash and exit process.
 ---
 
 {% assign imagedir = "../images/project-layout/" %}
 
 
-## Objectives
+{:.fake-h2}
+Objective
 
-Visual Studio Code out of the box has good default settings to immediately start using it as an editor.  To make it even more effective to use Visual Studio Code there are a few extensions for angular and ionic that you will want to install.  As well there are a few shortcuts and settings that come in handy.
+
+Visual Studio Code out of the box has good default settings to immediately start using it as an editor.  To make it even more effective to use Visual Studio Code there are a few extensions for angular and ionic that you will want to install.  As well there are a few shortcuts and settings that come in handy.  We will also refer to some of the snippets that come with the extensions during these labs.
 
 
 >**Note**: If you don't already have Visual Studio Code installed see [Lab 01: Ionic Setup](../01-install-ionic/)
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<h2>Table of Contents</h2>
+{:.fake-h2}
+Table of Contents
 
-- [Section 4.0: Shortcuts](#section-40-shortcuts)
-- [Section 4.1: My settings](#section-41-my-settings)
-- [Section 4.2 Extensions](#section-42-extensions)
-- [Wrap-up](#wrap-up)
+* TOC
+{:toc}
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+## 4.0: Shortcuts
 
-## Section 4.0: Shortcuts
+**Key Shortcuts**
 
-* hide left sidebar: ctrl+b
-* zoom in: ctrl+=
-* zoom out: ctrl+-
+* Toggle Sidebar: ctrl+b
+* Go to File: ctrl+p or ctrl+e (both seem to work)
 * Split Editor: ctrl+\
 * Switch to Editor Page: ctrl+[pane #]
-* Command Palette: F1 or Ctrl+Shift+P
-* Start Debugger: F5 (once you have set the target the 1st time)
+* Close active page: ctrl+w or ctrl+f4
+* Navigate Between Open Files: ctrl+tab
 * Format Code: Shift+Alt+F
-* Toggle Breakpoint: F9
 * Toggle Commenting Out Line: ctrl+k, ctrl+c
 * Open Command Prompt: ctrl+shift+c
+* Toggle Word Wrap: alt+z
+
+**Nice to Have If you Remember Them**
+
+* Command Palette: F1 or Ctrl+Shift+P
 * Code Fold: ctrl+shift+[
 * Code Unfold: ctrl+shift+]
 
-## Section 4.1: My settings
+## 4.1: My settings
 
 Here are my settings that I use for Visual Studio Code.  You can edit these by going under File -> Preferences -> User Settings
 
@@ -62,13 +64,12 @@ Here are my settings that I use for Visual Studio Code.  You can edit these by g
         "files.exclude": {
              "**/.git": true,
             "**/.DS_Store": true,
-            "**/node_modules": true,
-            "**/_site": true
+            "**/node_modules": true
         },
         "editor.folding": true
     }
 
-## Section 4.2 Extensions
+## 4.2 Extensions
 
 Visual Studio Code allows you to extend the built-in functionality with extensions.  To install the extensions press F1, type extension, select Install Extension and then type the name of the extension you want to install.
 
@@ -87,7 +88,7 @@ Written by John Papa and follow his style guide.
 **[Ionic v1 Snippets](https://marketplace.visualstudio.com/items?itemName=justinjames.ionic1-snippets)**
 
 * Over 200 html/javascript snippets plus 700 ionicons.
-* All snippets start with ionic
+* All snippets start with `i1_`
 * All icons snippets start with ionicicon
 * See [Full Docs](https://github.com/digitaldrummerj/vscode-ionic1-snippets/blob/master/docs.md) for usage
 
@@ -95,8 +96,6 @@ Written by John Papa and follow his style guide.
 
 * Intellisense for ionic framework and core cordova plugins
 * Includes a number of useful Javascript and HTML code Snippets for your project.  Just type ion_ in the editor to see what's available.
-* Debug ionic application right in Visual Studio Code
-
 
 **More Snippets**
 

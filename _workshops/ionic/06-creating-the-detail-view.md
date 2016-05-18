@@ -4,49 +4,42 @@ title: 'Lab 06: Adding Details Page'
 published: true
 type: ionic
 layout: workshoppost2
-length:
+length: 30 minutes
 order: 6
 lab: ionic
+date: 2016-05-16
 todo: |
     * Update objectives
-    * done - remove git section
-    * removed - updating styling section
+    * remove - updating styling section
     * update screenshots
-    * done - change api to be hard coded
-    * update length
     * done - update section numbers
     * add warning about disappearing back to project nav when testing in browser
 ---
 {% assign imagedir = "../images/detail-view/" %}
 
-## Objective
+{:.fake-h2}
+Objective
 
-* Create the tasks view page
-* Link from the master view (projects) to the detail view (tasks)
-* Setup routing for sub-page (tasks) and pass a url parameter to it (projectId)
-* Ordering data by more than 1 field in an ng-repeat
+To create a the detail page of the master detail view setup.  This page will show the task associated to a project.
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<h2>Table of Contents</h2>
+Key Concepts:
 
-- [Section 6.0: Adding the Task List Page](#section-60-adding-the-task-list-page)
-- [Section 6.1: Add Route to Tasks Page](#section-61-add-route-to-tasks-page)
-- [Section 6.2: Navigating to Tasks Page](#section-62-navigating-to-tasks-page)
-- [Section 6.3: Creating the Tasks Service](#section-63-creating-the-tasks-service)
-- [Section 6.4: Creating the Tasks Controller](#section-64-creating-the-tasks-controller)
-- [Section 6.5: Binding Service Data To UI](#section-65-binding-service-data-to-ui)
-- [Section 6.6: Ordering Data](#section-66-ordering-data)
-- [Wrap-up](#wrap-up)
+* Master/Detail views
+* Order data in Angular by more than 1 field
+* Passing URL parameters into routes
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+{:.fake-h2}
+Table of Contents
 
-## Section 6.0: Adding the Task List Page
+* TOC
+{:toc}
+
+## 6.0: Adding the Task List Page
 
 1. In the www/templates directory, create a file called tasks.html
-1. In the tasks.html file, use the `ionicview` snippet to generate the view boilerplate code and set the view-title to "Tasks"
+1. In the tasks.html file, use the `i1_view` snippet to generate the view boilerplate code and set the view-title to "Tasks"
 
-## Section 6.1: Add Route to Tasks Page
+## 6.1: Add Route to Tasks Page
 
 In order for angular to properly route us to the tasks page, we need to tell Angular how to find the tasks page.
 
@@ -57,7 +50,7 @@ In order for angular to properly route us to the tasks page, we need to tell Ang
             templateUrl: 'templates/tasks.html'
           });
 
-## Section 6.2: Navigating to Tasks Page
+## 6.2: Navigating to Tasks Page
 
 To navigate to the task page when clicking on a project in the projects page, we need to add an ng-href to each ion-item in the projects list in the projects.html code.
 
@@ -70,11 +63,11 @@ To navigate to the task page when clicking on a project in the projects page, we
 
 1. If you don't already have ionic serve running, open a command prompt and run the command ionic serve
 1. In your web browser, open [http://localhost:8100](http://localhost:8100)
-1. Now when you click on a row in the project list, it should go to the task list page and give you navigation to go back to the contact list
+1. Now when you click on a row in the project list, it should go to the task list page and give you navigation to go back to the project list
 
     ![Blank Tasks View]({{"tasks-initial-view.png" | prepend: imagedir }})
 
-## Section 6.3: Creating the Tasks Service
+## 6.3: Creating the Tasks Service
 
 In this section, you will be creating the tasks service to pull tasks data for the selected project from our mock-data.json file that we setup in the previous lab.
 
@@ -92,11 +85,11 @@ In this section, you will be creating the tasks service to pull tasks data for t
         function getTasks(projectId) {
           return $http.get("/mock-data.json")
             .then(function (result) {
-              return result[projectId].tasks;
+              return result.data[projectId].tasks;
             });
         }
 
-## Section 6.4: Creating the Tasks Controller
+## 6.4: Creating the Tasks Controller
 
 In this section, you will be creating the tasks page controller that will contain all of the logic for the tasks page and talk with the TasksService to get data.
 
@@ -108,7 +101,7 @@ In this section, you will be creating the tasks page controller that will contai
         * Controller: TasksController
         * dependency1: TasksService
 1. Press Esc to exit the snippet
-1. Add a 2nd dependency for $stateParams.  This will allow you to get the index of the project.  The $stateParams property for the project index will be the same as the one we put into the router.
+1. Add a 2nd dependency for $stateParams.  This will allow you to get the id of the project.  The $stateParams property for the project id will be the same as the one we put into the router.
 1. Before the return service statement add a variable named projectId set to the value of $stateParams.projectId
 
         var projectId = $stateParams.projectId;
@@ -128,7 +121,7 @@ In this section, you will be creating the tasks page controller that will contai
 
 Now we need to tell angular that the Tasks view uses the TasksController.  We do this by modifying the tasks route.
 
-We need to add in a controller property for the tasks route and set it to TasksController as vm.
+We need to add in a controller property for the tasks route and set it to TasksController as vm like we did with the `Projects` route.
 
        controller: 'TasksController as vm'
 
@@ -157,23 +150,22 @@ Now we are ready to show the tasks data on our tasks view.  We will first just o
     * The &lt;pre&gt;&lt;/pre&gt; tags make the json look a little more readable by keeping the break returns
 
 1. Run ionic serve and view the application in the web browser
-1. If you click on the AED project (1st one in the list), you should see a view similar to this with the json showing.
+1. When you click on a project it will you to the task and you should see a view similar to this with the json showing.
 
     ![Tasks Raw Json]({{ "tasks-raw-json.png" | prepend: imagedir }})
 
-
-## Section 6.5: Binding Service Data To UI
+## 6.5: Binding Service Data To UI
 
 So far you have just bound the json output to the UI.  Useful for debugging but not what you want a user to see.  In this section, we will create a nice looking task list that shows the task name and if it is completed or not.   The UI should look like the following when done:
 
 ![tasks  list with json included]({{"tasks-ion-list-without-json.png" | prepend: imagedir }})
 
 1. Open the www/templates/tasks.html
-1. Inside of the &lt;ion-content&gt; use the snippet `ioniclist` to generate a ion-list and item-item component
+1. Inside of the &lt;ion-content&gt; use the snippet `i1_list` to generate a ion-list and item-item component
     * Values to fill in for the snippet:
         * item: task
         * items: vm.task
-1. For the tasks list, you want to loop through each contact and bind the following:
+1. For the tasks list, you want to loop through each task and bind the following:
     * task.name
     * task.completed
 
@@ -187,7 +179,7 @@ So far you have just bound the json output to the UI.  Useful for debugging but 
 
 To see the full docs on the &lt;ion-list&gt; documentation, at the command prompt, type ionic docs ion-list or go to [http://ionicframework.com/docs/api/directive/ionList/](http://ionicframework.com/docs/api/directive/ionList/)
 
-## Section 6.6: Ordering Data
+## 6.6: Ordering Data
 
 If you look at the ion-list right now it is difficult to find a specific task since the list is ordered by the way it is stored in the mock-data.json json array. Unlike the projects list where we sorted by a single field, for the task we want to sort by the completion status and then name so that completed tasks are at the bottom of the list and then the task are sorted by name.
 

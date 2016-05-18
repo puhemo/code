@@ -7,37 +7,28 @@ layout: workshoppost2
 order: 3
 lab: ionic
 length: 10 minutes
+date: 2016-05-16
 todo: |
-    * Update screenshots to use Visual Studio code
-    * Done - Reference John Papa's Style Guide in section 3.3
-    * Done - Add shortcut for VS Code hide folder structure
-    * Done - Give quick Visual Studio Code overview of usage.  Open multiple panes. Git usage. see open files close all open files
-    * Done - Add common VS Code settings that I have
+
 ---
 
 {% assign imagedir = "../images/project-layout/" %}
 
-## Objectives
+{:.fake-h2}
+Objective
+
 
 Understand the folder structure for an Ionic project and where to place files.
 
 >**Note**: For this lab, I will be using Visual Studio Code as our editor but you can use any text editor.  The install steps for Visual Studio Code are in [Lab 01: Ionic Setup](../01-install-ionic/)
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-<h2>Table of Contents</h2>
+{:.fake-h2}
+Table of Contents
 
-- [Section 3.0: Opening Project in Visual Studio Code](#section-30-opening-project-in-visual-studio-code)
-- [Section 3.1: Exploring Project Layout](#section-31-exploring-project-layout)
-- [Section 3.2: Suggested Structure](#section-32-suggested-structure)
-  - [Section 3.2.1: Structure By Type](#section-321-structure-by-type)
-  - [Section 3.3.2: Structure By Page](#section-332-structure-by-page)
-- [Section 3.3 Angular Coding Style](#section-33-angular-coding-style)
-- [Wrap-up](#wrap-up)
+* TOC
+{:toc}
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## Section 3.0: Opening Project in Visual Studio Code
+## 3.0: Opening Project in Visual Studio Code
 
 1. Open Visual Studio Code
 1. Click File -> Open Folder...
@@ -54,7 +45,7 @@ Understand the folder structure for an Ionic project and where to place files.
 
 
 
-## Section 3.1: Exploring Project Layout
+## 3.1: Exploring Project Layout
 
 1. With the myFirstApp highlighted, click on the arrow next to the project name.
 
@@ -90,11 +81,11 @@ Understand the folder structure for an Ionic project and where to place files.
     └── index.html &nbsp; &nbsp; main file. js/css/angular/ionic references
     </pre>
 
-## Section 3.2: Suggested Structure
+## 3.2: Suggested Structure
 
-There are two train of thoughts on how to structure your project depending on the size of the project.  The first option is by type and the second option is by page.
+There are two trains of thought on how to structure your project depending on the size of the project.  The first option is by type and the second option is by page.
 
-### Section 3.2.1: Structure By Type
+### 3.2.1: Structure By Type
 
 In this structure you create directories to hold controllers, services, directives, etc. and all of the files of that type for the project are stored in the directory.
 
@@ -133,7 +124,7 @@ If later on you decide to change the structure to [Structure By Page](#section-3
 
 </pre>
 
-### Section 3.3.2: Structure By Page
+### 3.2.2: Structure By Page
 
 In this structure you create a directory for each page and that directory contains all of the page specific files for controller, services, directives, etc.
 
@@ -165,9 +156,9 @@ This structure works great for large parts that have lots of files.  You can use
 ├── config &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;global configurations
 </pre>
 
-## Section 3.3 Angular Coding Style
+## 3.3 Angular Coding Style
 
-The Angular Style Guide by John Papa is a starting point for Angular development teams to provide consistency through good practices.  This workshop will use the suggested practices in John Papa's style guide.  You are free to use any style that you would like or that your team has defined as long as it is consistent among the team/projects.
+The Angular Style Guide by John Papa is a good starting point for Angular development teams to provide consistency through good practices.  This workshop will use the suggested practices in John Papa's style guide.  You are free to use any style that you would like or that your team has defined as long as it is consistent among the team/projects.
 
 In the words of John Papa:
 

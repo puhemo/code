@@ -1,7 +1,7 @@
 {% capture pagetype %}{{ page.type | replace: 'extra', '' | replace: 'overview', ''}}{% endcapture %}
 {% capture extratype %}{{ pagetype }}extra{% endcapture %}
 {% capture overviewtype %}{{ pagetype }}overview{% endcapture %}
-{% capture home %}{{ page.lab | prepend: "/workshops/" | prepend: site.baseurl | prepend: site.url }}{% endcapture %}
+{% capture home %}{{ page.lab | prepend: "/workshops/" | prepend: site.baseurl }}{% endcapture %}
 
 <html>
 <head>
@@ -31,8 +31,8 @@
     <nav role="navigation">
         <ul class="group">
             <li><img class="site-avatar" src="{{ site.avatar }}" alt="avatar"/></li>
-            <li><a href="{{ site.baseurl | prepend: site.url }}">Blog Home</a></li>
-            <li><a href="{{"workshops" |  prepend: site.baseurl | prepend: site.url }}">Workshops</a></li>
+            <li><a href="{{ "/" | prepend: site.baseurl  }}">Blog Home</a></li>
+            <li><a href="{{"/workshops" |  prepend: site.baseurl }}">Workshops</a></li>
             <li><a href="{{ "/speaking" | prepend: site.baseurl }}"  {% if page.url == "speaking %} id="selected"{% endif %}>Speaking</a></li>
             <li><a href="{{ "/about" | prepend: site.baseurl }}"  {% if page.url == "about" %} id="selected"{% endif %}>About</a></li>
         </ul>
