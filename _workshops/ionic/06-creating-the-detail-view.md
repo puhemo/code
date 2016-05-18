@@ -134,7 +134,7 @@ In order to use the tasks controller and service that we created we need to add 
       <script src="js/services/projects.service.js"></script>
       <script src="js/services/tasks.service.js"></script>
       <script src="js/controllers/projects.controller.js"></script>
-      <script src="js/controllers/projects.controller.js"></script>
+      <script src="js/controllers/tasks.controller.js"></script>
 
 **Updating UI to Show Tasks**
 
