@@ -79,7 +79,7 @@ For the profile page we are going to use the `LoginService` to get the user's in
         * Module: starter
         * Controller: ProfileController
         * dependency1: LoginService
-1. Press Esc to exit the snippet
+1. Press Esc or Enter to exit the snippet
 1. Add the call to the `LoginService.getUserDetails` in the activate function
 
             LoginService.getUserDetails().then(function(response){
@@ -95,7 +95,7 @@ Now we are finally ready to create the UI and test it out.
 
 1. In the www/templates directory, created a file called profile.html
 1. In the profile.html file, use the `i1_view` snippet to generate the view boilerplate code and set the view-title to "Me"
-1. Press Esc to exit the snippet
+1. Press Esc or Enter to exit the snippet
 1. To the `ion-content` we want to add the css class `padding`
 1. Inside of `ion-content` add the following html so that we can then style up a decent looking profile page.
 

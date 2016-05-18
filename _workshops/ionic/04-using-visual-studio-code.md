@@ -33,6 +33,8 @@ Table of Contents
 
 **Key Shortcuts**
 
+>These shortcut keys are for Windows.  For Mac it should be the command key instead of the ctrl key.
+
 * Toggle Sidebar: ctrl+b
 * Go to File: ctrl+p or ctrl+e (both seem to work)
 * Split Editor: ctrl+\
@@ -50,6 +52,8 @@ Table of Contents
 * Code Fold: ctrl+shift+[
 * Code Unfold: ctrl+shift+]
 
+Full key bindings per OS at [https://code.visualstudio.com/Docs/customization/keybindings](https://code.visualstudio.com/Docs/customization/keybindings)
+
 ## 4.1: My settings
 
 Here are my settings that I use for Visual Studio Code.  You can edit these by going under File -> Preferences -> User Settings
@@ -62,7 +66,7 @@ Here are my settings that I use for Visual Studio Code.  You can edit these by g
         "editor.detectIndentation": true,
         "editor.wrappingIndent": "indent",
         "files.exclude": {
-             "**/.git": true,
+            "**/.git": true,
             "**/.DS_Store": true,
             "**/node_modules": true
         },
@@ -77,15 +81,31 @@ Below are the extensions that we will be using in this workshop.
 
 **[Angular 1 Javascript and Typescript Snippets](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular1)**
 
+**Install**
+
+1. In VS Code press F1 or Ctrl+Shift+P
+1. Type in `ext install Angular1`
+
+**Usage Info**
+
 Written by John Papa and follow his style guide.
 
-    ng1controller // creates an Angular controller
-    ng1directive  // creates an Angular directive
-    ng1factory    // creates an Angular factory
-    ng1module     // creates an Angular module
-    ng1service    // creates an Angular service
+* ng1controller // creates an Angular controller
+* ng1directive  // creates an Angular directive
+* ng1factory    // creates an Angular factory
+* ng1module     // creates an Angular module
+* ng1service    // creates an Angular service
 
 **[Ionic v1 Snippets](https://marketplace.visualstudio.com/items?itemName=justinjames.ionic1-snippets)**
+
+**Install**
+
+1. In VS Code press F1 or Ctrl+Shift+P
+1. Type in `ext install ionic1-snippets`
+
+**Usage Info**
+
+Written by Yours Truly
 
 * Over 200 html/javascript snippets plus 700 ionicons.
 * All snippets start with `i1_`
@@ -94,12 +114,17 @@ Written by John Papa and follow his style guide.
 
 **[Cordova Tools](https://marketplace.visualstudio.com/items?itemName=vsmobile.cordova-tools)**
 
+**Install**
+
+1. In VS Code press F1 or Ctrl+Shift+P
+1. Type in `ext install cordova-tools`
+
+**Usage Info**
+
 * Intellisense for ionic framework and core cordova plugins
 * Includes a number of useful Javascript and HTML code Snippets for your project.  Just type ion_ in the editor to see what's available.
 
-**More Snippets**
-
- See the [VSCode Market Place](https://marketplace.visualstudio.com/VSCode)
+>If you want to see all of the possible snippets you can visit the [VSCode Market Place](https://marketplace.visualstudio.com/VSCode)
 
 
 ## Wrap-up
