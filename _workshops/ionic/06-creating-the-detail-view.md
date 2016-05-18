@@ -102,7 +102,7 @@ In this section, you will be creating the tasks page controller that will contai
         * dependency1: TasksService
 1. Press Esc or Enter to exit the snippet
 1. Add a 2nd dependency for $stateParams.  This will allow you to get the id of the project.  The $stateParams property for the project id will be the same as the one we put into the router.
-1. Before the return service statement add a variable named projectId set to the value of $stateParams.projectId
+1. Before the activate function call add a variable named projectId set to the value of $stateParams.projectId
 
         var projectId = $stateParams.projectId;
 
