@@ -143,16 +143,24 @@ Now we need to tell angular that the Projects view uses the ProjectsController. 
 
 We need to add in a controller property for the projects route and set it to ProjectsController as vm.
 
-       controller: 'ProjectsController as vm'
+1. Open the www/js/config/app.config.js file
+1. Find the projects route and the `controller` property
+
+        .state('projects', {
+          url: '/projects',
+          templateUrl: 'templates/projects.html',
+          controller: 'ProjectsController as vm'
+        })
 
 **Add javascript files to index.html**
 
 In order to use the project controller and service that we created we need to add the script reference tags into the index.html page after the app.js file.
 
-      <!-- your app's js -->
-      <script src="js/app.js"></script>
-      <script src="js/services/projects.service.js"></script>
-      <script src="js/controllers/projects.controller.js"></script>
+1. Open the www/index.html page
+1. After the app.config.js add in the `projects.service.js` and `projects.controller.js` files
+
+        <script src="js/services/projects.service.js"></script>
+        <script src="js/controllers/projects.controller.js"></script>
 
 >Warning: The javascript and css references need to be relative in order to work properly on a device
 {:.warning}
@@ -166,6 +174,7 @@ Now we are ready to show the project data on our project view.  We will first ou
         {% raw %}
         <pre>{{ vm.projects | json }}</pre>
         {% endraw %}
+
     * In AngularJS, &#123;&#123; &#125;&#125; brackets tells Angular to bind what is between the brackets to the UI.  In this case we are taking the vm.projects and showing the raw json of the object.
     * The &lt;pre&gt;&lt;/pre&gt; tags make the json look a little more readable by keeping the break returns
 
@@ -173,7 +182,6 @@ Now we are ready to show the project data on our project view.  We will first ou
 1. You should see a view similar to this with the json showing.
 
     ![Projects Raw Json]({{ "projects-raw-json.png" | prepend: imagedir }})
-    
 
 ## 5.4: Binding Service Data To UI
 
@@ -191,6 +199,7 @@ So far you have just bound the json output to the UI.  Useful for debugging but 
     * project.created_on
 
     > If you are unfamiliar with AngularJS, the ng-repeat on the ion-item is the command to loop through a collection
+
 1. Just like when you showed the raw json for the vm.projects you need to surround the properties with the double curly braces {{ }}
     * Put the name inside an &lt;h2&gt; and the created_on inside a &lt;p&gt;
     * For extra spacing, I also put a &lt;br /&gt; between the name and created_on
@@ -205,7 +214,8 @@ To see the full docs on the &lt;ion-list&gt; documentation, at the command promp
 
 If you look at the ion-list right now it is difficult to find a specific project since the list is ordered by the way it is stored in the mock-data.json json array.  Instead we want to order the ion-list by the project name.
 
-To have Angular sort the ion-list by the project name we need to add the orderBy statement to the ng-repeat like so:
+1. Open the projects.html file
+1. On the ng-repeat for the ion-item, we need to add the orderBy statement to have Angular sort the ion-list by the project name
 
     <ion-item ng-repeat="project in vm.projects | orderBy: 'name'">
 
@@ -219,7 +229,7 @@ Since this lab is the first bit of code that we are writing I want to briefly di
 
 To save yourself work later on it is important to decide early on if you are going to minify the code when you release your ionic application.  All of the code that we will be creating as part of this workshop will be minification safe, however, some of the code that is part of the ionic templates is not minification safe out of the box.  For the blank template the main issue is the app.js run block.  You could easily follow the same pattern as the app.config.js file and rewrite the run function.
 
-The reason that we need to care about minification safe code is that Angular uses dependency inject and when the code is minified, values such as $http get changed to variable names like "a".  When the variable becomes "a" then Angular have no clue what the heck "a" is so it throws an injector error.  By making the code minification safe, $http is left as $http so that Angular knows what it is.
+The reason that we need to care about minification safe code is that Angular uses dependency injection and when the code is minified, values such as $http get changed to variable names like "a".  When the variable becomes "a" then Angular have no clue what the heck "a" is so it throws an injector error.  By making the code minification safe, $http is left as $http so that Angular knows what it is.
 
 Out of the box Ionic does not provide any gulp tasks to minify css, javascript or html code.  It is not difficult to write these task or find one that suits you needs if you deem this a critical requirement.  Writing these task is outside the scope of this workshop.
 
@@ -234,15 +244,15 @@ In this code $ionicPlatform will be changed to a value that Angular does not und
 **example of minification safe code**
 
     angular
-      .module('todo')
+      .module('starter')
       .run(runBlock);
 
-    Block.$inject = ['$ionicPlatform'];
+    runBlock.$inject = ['$ionicPlatform'];
 
     function runBlock($ionicPlatform) {
     }
 
-In this code the run block is written to use the $inject option to tell Angular that the parameter passed to the runBlock function is $ionicPlatform.  This in turn means that you can change the parameter name of the runBlock to anything that you want and Angular will still see  the underlying value as $ionicPlatform.
+In this code the runBlock is written to use the $inject option to tell Angular that the parameter passed to the runBlock function is $ionicPlatform.  This in turn means that you can change the parameter name of the runBlock to anything that you want and Angular will still see  the underlying value as $ionicPlatform.
 
 
 ## Wrap-up
