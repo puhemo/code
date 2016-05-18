@@ -27,7 +27,8 @@ In this lab we are going to code up all of the functionality to implement the lo
 
 Key Concepts
 
-*
+* Authentication flow for making sure a user is signed up and logged
+* Inspecting Http request and response traffic
 
 {:.fake-h2}
 Table of Contents
@@ -37,8 +38,8 @@ Table of Contents
 
 ## 9.0: Creating the Signup Page
 
-1. Download the [logo image](../files/todo_logo.png) and save it into the www/img directory
-1. In the www/templates directory created a file called signup.html
+1. Download the [logo image](../files/todo_logo.png) that we will be using and save it to the directory www/img
+1. In the www/templates directory create a file called signup.html
 1. Set the contents of the signup.html page to:
 
         <ion-view view-title="Signup" hide-nav-bar="true">
@@ -185,7 +186,6 @@ Now we need to create the signup function and expose it to the view.  After the 
                $state.go('projects');
              },
              function (error) {
-               console.log('error', error);
                if (error.error_description !== undefined) {
                  vm.error = error.error_description;
                } else {
@@ -200,7 +200,7 @@ Now we need to create the signup function and expose it to the view.  After the 
 
         controller: 'SignupController as vm'
 
-1. The last step before viewing it in the browser is to add the reference to the signup.controller.js and login.service.js files in the index.html page
+1. The last step before viewing it in the browser is to add the reference to the signup.controller.js and login.service.js files in the index.html file.
 
         <script src="js/services/login.service.js"></script>
         <script src="js/controllers/signup.controller.js"></script>
@@ -248,9 +248,9 @@ Now we need to create the signup function and expose it to the view.  After the 
 
 ### 9.1.1: Adding a Route to the Login page
 
-We are now ready to add the routes in so that we can view the pages.
+We are now ready to add the route to the login page so that we can view it
 
-1. Open the www/js/config/app.config.js and add the following routes to get to the lign and signup pages.
+1. Open the www/js/config/app.config.js and add the following route to get to the login page.
 
             .state('login', {
               url: '/login',
@@ -260,7 +260,7 @@ We are now ready to add the routes in so that we can view the pages.
 1. If you don't already have ionic serve running, open a command prompt and run the command ionic serve
 1. In your web browser, navigate to [http://localhost:8100/#/login](http://localhost:8100/#/login) to view the login page.  Click on Join now will take you to the sign up page or you can navigate directly to it at [http://localhost:8100/#/signup](http://localhost:8100/#/signup)
 
-Right now the login page do not have any functionality behind it.  It is now time to wire up the login page with a controller that calls into the LoginService to log the user in.
+Right now the login page does not have any functionality behind it.  It is now time to wire up the login page with a controller that calls into the LoginService to log the user in.
 
 ### 9.1.2: Adding username and password login support to the LoginService
 
@@ -273,6 +273,7 @@ We are first going to implement the username and password login.  To do this we 
           function login(email, password) {
             return Backand.signin(email, password);
           }
+
 1.  Don't forget to also add the `login` function to the `var service` object
 
         var service = {
@@ -293,7 +294,7 @@ We are now ready to create the login controller to call the `LoginService.login`
         * dependency1: LoginService
 1. Press Esc to exit the snippet
 
-Now we need to create the login function and expose it to the view.  After the `activate` function create a new function called login.  In the ogin function if the call to the `LoginService.login` is successfully we will redirect the user to the projects page by calling `$state.go` (Don't forget to inject `$state` into the `LoginController`).  To expose the function to the view we need to add it to the vm variable by creating the vm.login variable and setting the value of it to login.
+Now we need to create the login function and expose it to the view.  After the `activate` function create a new function called login.  In the login function if the call to the `LoginService.login` is successfully we will redirect the user to the projects page by calling `$state.go` (Don't forget to inject `$state` into the `LoginController`).  To expose the function to the view we need to add it to the vm variable by creating the vm.login variable and setting the value of it to login.
 
     LoginController.$inject = ['LoginService', '$state'];
       function LoginController(LoginService, $state) {
@@ -312,7 +313,6 @@ Now we need to create the login function and expose it to the view.  After the `
               $state.go('projects');
             },
             function (error) {
-              console.log('error', error);
               if (error.error_description !== undefined) {
                 vm.error = error.error_description;
               } else {
@@ -333,7 +333,7 @@ Now we need to create the login function and expose it to the view.  After the `
 
 1. If you don't already have ionic serve running, open a command prompt and run the command ionic serve
 1. In your web browser, navigate directly to [http://localhost:8100/#/login](http://localhost:8100/#/login) to view the login page.  Later on we will wire up all of the logic to route the user correctly to the login if they are not authenticated but one thing at a time.
-1. You should be able to login with the user that you create when you signed up in the previous section and have it redirect you to the project list upon successful login.
+1. You should be able to login with the user that you created when you signed up in the previous section and have it redirect you to the project list upon successful login.
 
 ## 9.2: Adding ability to login through a social network provider
 
@@ -342,7 +342,7 @@ Now that we are able to login with the username and password, lets add in the ab
 ### 9.2.1  Add social login buttons to Login page
 
 1. Open the www/templates/login.html file
-1. Before the `</ion-content>` tag add the follwing html to add the social login buttons onto the login form.  This html will add the ionicons for the different provider and call the vm.socialSignin function for each type.  The possible social provider values are facebook, google, github, and twitter.
+1. Before the `</ion-content>` tag add the following html to add the social login buttons onto the login form.  This html will add the ionicons for the different provider and call the vm.socialSignin function for each type.  The possible social provider values are facebook, google, github, and twitter.
 
         <div id="social-login-buttons">
           <div class="button-bar">
@@ -387,7 +387,6 @@ We are now ready to create the login controller to call the `LoginService.social
                   $state.go('projects');
                 },
                 function (error) {
-                  console.log('error', error);
                   if (error.error_description !== undefined) {
                     vm.error = error.error_description;
                   } else {
