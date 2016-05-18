@@ -33,6 +33,8 @@ Table of Contents
 
 **Key Shortcuts**
 
+>These shortcut keys are for Windows.  For Mac it should be the command key instead of the ctrl key.   Full key bindings per OS at https://code.visualstudio.com/Docs/customization/keybindings
+
 * Toggle Sidebar: ctrl+b
 * Go to File: ctrl+p or ctrl+e (both seem to work)
 * Split Editor: ctrl+\
