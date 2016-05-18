@@ -195,7 +195,7 @@ You are now ready to proceed to the [Ionic Framework install](#section-30-ionic)
 
 ## 3.2 Git Configuration
 
-   git config --global --add url.https://github.com.insteadof git://github.com
+      git config --global --add url.https://github.com.insteadof git://github.com
    
 ## Wrap up
 
