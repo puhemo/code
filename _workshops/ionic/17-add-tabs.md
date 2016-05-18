@@ -21,6 +21,10 @@ todo: |
 {:.fake-h2}
 Objective
 
+Right now in our UI there is no way to get to the profile page except manually updating the url which is not something the user would be able to do on their device.  We could put a button  on the projects page to navigate to the profile page but that would just feel awkward.  Instead we are going to add in a tabbed interface to be able to switch between the projects and profile page.  
+
+If we had more than 3 pages that we wanted in the tabs then it would make more sense to go with a side menu interface. 
+
 Key Concepts:
 
 * Add Tabs to existing UI
@@ -31,28 +35,37 @@ Table of Contents
 * TOC
 {:toc}
 
+## 17.0:  Adding Tabs 
 
-## Section 17.0:SectionTitle 
+We are going to create 2 tabs: projects  and profile.  In the future you may want to add an about page tab in so that you can advertise who created the app and give them links to your other apps and website. 
 
+1. In the www/templates directory create a new file called tabs.html
+1. Use the i1_tabs snippet 
+1. We want the projects tab to be the first tab.     Update the 1st ion-tab with the following values 
+	*  title: Project
+	* icon: ion-document
+	* href: "#/tabs/projects"
+	* ion-nav-view name: tab-projects
 
-**tabs.html**
+				<ion-tab title="Projects" icon="ion-document" href="#/tab/projects">
+        		<ion-nav-view name="tab-projects"></ion-nav-view>
+      		</ion-tab>
+      		
+1.  The 2nd tab want to be the profile page.   Update the 2nd ion-tab with the following values  
+    *  title: Profile
+	* icon: ion-ios-person
+	* href: "#/tabs/profile"
+	* ion-nav-view name: tab-profile
+      	
+      		<ion-tab title="Profile" icon="ion-ios-person" href="#/tab/profile">
+            		<ion-nav-view name="tab-profile"></ion-nav-view>
+        	</ion-tab>
+      		
+      		
+	<ion-tabs class="tabs-icon-top tabs-color-active-positive" enable-menu-with-back-views="true">
+	
+## 17.1 Updating Routes  To Use Tabs 
 
-    <!--
-    Create tabs with an icon and label, using the tabs-positive style.
-    Each tab's child <ion-nav-view> directive will have its own
-    navigation history that also transitions its views in and out.
-    -->
-    <ion-tabs class="tabs-icon-top tabs-color-active-positive" enable-menu-with-back-views="true">
-      <ion-tab title="Projects" icon="ion-document" href="#/tab/projects">
-        <ion-nav-view name="tab-projects"></ion-nav-view>
-      </ion-tab>
-      <ion-tab title="Profile" icon="ion-ios-person" href="#/tab/profile">
-            <ion-nav-view name="tab-profile"></ion-nav-view>
-        </ion-tab>
-      <ion-tab title="About" icon="ion-at" href="#/tab/about">
-        <ion-nav-view name="tab-about"></ion-nav-view>
-      </ion-tab>
-    </ion-tabs>
 
 **app.config.js**
 
