@@ -83,7 +83,7 @@ Table of Contents
 
 ## 3.2: Suggested Structure
 
-There are two train of thoughts on how to structure your project depending on the size of the project.  The first option is by type and the second option is by page.
+There are two trains of thought on how to structure your project depending on the size of the project.  The first option is by type and the second option is by page.
 
 ### 3.2.1: Structure By Type
 
@@ -124,7 +124,7 @@ If later on you decide to change the structure to [Structure By Page](#section-3
 
 </pre>
 
-### 3.3.2: Structure By Page
+### 3.2.2: Structure By Page
 
 In this structure you create a directory for each page and that directory contains all of the page specific files for controller, services, directives, etc.
 
@@ -158,7 +158,7 @@ This structure works great for large parts that have lots of files.  You can use
 
 ## 3.3 Angular Coding Style
 
-The Angular Style Guide by John Papa is a starting point for Angular development teams to provide consistency through good practices.  This workshop will use the suggested practices in John Papa's style guide.  You are free to use any style that you would like or that your team has defined as long as it is consistent among the team/projects.
+The Angular Style Guide by John Papa is a good starting point for Angular development teams to provide consistency through good practices.  This workshop will use the suggested practices in John Papa's style guide.  You are free to use any style that you would like or that your team has defined as long as it is consistent among the team/projects.
 
 In the words of John Papa:
 

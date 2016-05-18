@@ -25,6 +25,9 @@ In this lab we are going to code up all of the functionality to implement the lo
 |login page|signup page
 |![Login Page]({{"login-page-no-error.png" | prepend: imagedir }}) |![Sign up page]({{"signup-page.png" | prepend: imagedir }})
 
+Key Concepts
+
+*
 
 {:.fake-h2}
 Table of Contents

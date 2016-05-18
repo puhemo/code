@@ -18,23 +18,20 @@ todo: |
 {:.fake-h2}
 Objective
 
+Go from hard coded mocked up data to an actual RESTful API that we can then start adding full create, read, update and delete (CRUD) functionality to.  This lab is the 1st of 5 labs that will walk us through implementing the full CRUD functionality.
 
-* Pull data from a real api
-* Define what a RESTful API means
-* Set the stage for future labs to be able to add, update and delete data
-*
+Key Concepts:
+
+* Pulling data from local JSON file vs $http works the same way code wise.
+* Learn what REST actually means
 
 {:.fake-h2}
 Table of Contents
 
-
 * TOC
 {:toc}
 
-
 ## 8.0: API Overview
-
-It is time to move on from hard coded mock data and to actually querying a real REST API that resides in the cloud.  This API is specific to our application and will allow us to add, update, and delete data through http call.
 
 Our API will ultimately give us a REST API for all of our CRUD (create, read, update and delete) operations, server side validation that the user calling the API owns the data they are trying to interact with and allow us to implement security with either username/password or social logins.
 
@@ -44,7 +41,7 @@ Back& is one of my favorite database as a service providers.   Back& are basical
 
 ## 8.1: Back& Overview
 
-The primary reasons that I went with Back& are because of the extremely low barrier to entry and the responsiveness of their support staff when I have has questions.  With Back& you don't need to learn some new javascript library just to interact with the data, you just make standard http rest calls.  Back& really does allow you to "Focus on What Really Matters.  Creating Beautifully Crafted Front Ends".  You can be up and running with a Back& API in under 10 minutes.
+The primary reasons that I went with Back& is because of the extremely low barrier to entry.  With Back& you don't need to learn some new javascript library just to interact with the data, you just make standard http rest calls.  Back& really does allow you to "Focus on What Really Matters.  Creating Beautifully Crafted Front Ends".  You can be up and running with a Back& API in under 10 minutes.
 
 There are no servers for you to manage or software to install onto your machine.  Once you create your schema in Back& it will auto-generate a REST api for all of your standard CRUD operations.  If you need to implement custom server side logic it has that feature.  If you want to expose a custom query that you can call like the other REST endpoints, you can do that as well.  Need to implement user management then you can either do username/password or use social logins.  Already got your own database but want the auto-generated REST api, you can do that as well.  Need to integrate with 3rd party services such as Twilio, Paypal, Stripe, plus many more, you can do that as well.
 
@@ -83,7 +80,7 @@ The common types of http verbs that REST uses are:
 
 ## 8.2: API Security
 
-Right now the security for the API is open to anyone to be able to read the data but it locked down for reading.  In a later lab, we implement username/password and social login security on the API.
+Right now the security for the API is open to anyone to be able to read the data but it is locked down for reading.  In a later lab, we will implement username/password and social login security on the API.
 
 All of the data is mock data that was generated using [https://www.mockaroo.com] so no worries about any personal data being leaked allowing every to read.
 
@@ -132,7 +129,7 @@ We are now ready to update the ProjectsService and TasksService to use our Back&
             .....
           }
 
-1. Replace the contents of the `getProjects()` function the following code.  This code is getting the list of projects and it is sorted by name.  By default Back& pages the data and returns 20 records at a time.  In order to get the first 20 records in the right order, we are sorting the data on the Back& side by name
+1. Replace the contents of the `getProjects()` function with the following code.  This code is getting the list of projects and it is sorted by name.  By default Back& pages the data and returns 20 records at a time.  In order to get the first 20 records in the right order, we are sorting the data on the Back& side by name
 
          return $http({
             method: 'GET',
@@ -147,7 +144,7 @@ We are now ready to update the ProjectsService and TasksService to use our Back&
 ## 8.5: Updating TasksService to Use API
 
 1. Open the www/js/services/projects.service.js file
-1. Add `BackandDataService` as a dependency to the service
+1. Add `Backand` as a dependency to the service
 
           TasksService.$inject = ['$http', 'Backand'];
 

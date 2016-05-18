@@ -18,8 +18,11 @@ todo: |
 {:.fake-h2}
 Objective
 
+To set the workflow for how to create new pages in Angular/Ionic.  Get introduced to services and controllers.
 
-* Add a new view into the UI (master view part of master/detail view)
+Key Concepts:
+
+* Our first view
 * Create our first service
 * Create our first controller
 * Bind data to the UI
@@ -28,13 +31,12 @@ Objective
 {:.fake-h2}
 Table of Contents
 
-
 * TOC
 {:toc}
 
 ## 5.0: Adding New Page
 
-1. under the www folder, create a directory called templates
+1. Under the www folder, create a directory called templates
 1. In the www/templates directory, create a file called projects.html
 1. In the projects.html file, use the `i1_view` snippet to generate the view boilerplate code and set the view-title to "Projects"
 1. Press Esc to exit the snippet
@@ -62,7 +64,7 @@ In order to get to the project page, we need to add a route so that Angular know
           $urlRouterProvider.otherwise('/projects');
         }
 
-        >Note: The $urlRouterProvider is the route to use when angular does not have a route configured for the one the user tried to navigate to.  In this case it will route to the projects route.
+    >Note: The $urlRouterProvider.otherwise is the default route to use when angular does not have a route configured for the one the user tried to navigate to.  In this case it will route to the projects route.
 
 1. Open the index.html file and replace the content in the &lt;body&gt; tag with the following
 
@@ -75,7 +77,7 @@ In order to get to the project page, we need to add a route so that Angular know
             <ion-nav-view></ion-nav-view>
         </ion-pane>
 
-1. In the indexhtml file after the script reference to app.js we need to add a script tag for the js/config/app.config.js file.
+1. In the index.html file after the script reference to app.js we need to add a script tag for the js/config/app.config.js file.
 1. If you don't already have ionic serve running, open a command prompt and run the command
 
         $ ionic serve
@@ -85,11 +87,9 @@ In order to get to the project page, we need to add a route so that Angular know
 
     ![Projects Blank Page]({{ "projects-initial-view.png" | prepend: imagedir }})
 
-1. We have now add the placeholders for the page.  In the next section we will add the controllers and services to get data.
-
 ## 5.2: Creating Your First Service
 
-In this section, you will be creating your first service to pull data from a remote url.  Initially we will be hard coding our data in a local json and pulling it through $http but in future labs we will be creating a REST api using [Back&](http://backand.com).
+In this section, you will be creating your first service to pull data from a remote url.  Initially we will be hard coding our data in a local json and pulling it through $http but in future labs we will be using a REST api provided by [Back&](http://backand.com).
 
 1. Download the [mock data file](../files/mock-data.json) and store it in the www directory
 1. In the www/js directory, create a new directory called services
@@ -107,7 +107,7 @@ In this section, you will be creating your first service to pull data from a rem
         function getProjects() {
             return $http.get("/mock-data.json")
                 .then(function (result) {
-                    return result;
+                    return result.data;
                 });
         }
 
@@ -154,7 +154,7 @@ In order to use the project controller and service that we created we need to ad
 
 **Updating UI to Show Projects**
 
-Now we are ready to show the project data on our project view.  We will first just output the json view of the data and then we will create the real UI.
+Now we are ready to show the project data on our project view.  We will first output the raw json view of the data and then we will create the real UI.
 
 1. Open the projects.html template and inside the &lt;ion-content&gt;  add the following to write out the json results:
         {% raw %}
@@ -176,7 +176,7 @@ So far you have just bound the json output to the UI.  Useful for debugging but 
 ![project list with json included]({{"projects-ion-list-without-json.png" | prepend: imagedir }})
 
 1. Open the www/templates/projects.html
-1. Inside of the &lt;ion-content&gt; use the snippet `ioniclist` to generate a ion-list and ion-item component
+1. Inside of the &lt;ion-content&gt; use the snippet `i1_list` to generate a ion-list and ion-item component
     * Values to fill in for the snippet:
         * item: project
         * items: vm.projects
@@ -199,7 +199,7 @@ To see the full docs on the &lt;ion-list&gt; documentation, at the command promp
 
 If you look at the ion-list right now it is difficult to find a specific project since the list is ordered by the way it is stored in the mock-data.json json array.  Instead we want to order the ion-list by the project name.
 
-To order the ion-list by the project name we need to add the orderBy statement to the ng-repeat like so:
+To have Angular sort the ion-list by the project name we need to add the orderBy statement to the ng-repeat like so:
 
     <ion-item ng-repeat="project in vm.projects | orderBy: 'name'">
 

@@ -18,7 +18,7 @@ todo: |
 Objective
 
 
-Visual Studio Code out of the box has good default settings to immediately start using it as an editor.  To make it even more effective to use Visual Studio Code there are a few extensions for angular and ionic that you will want to install.  As well there are a few shortcuts and settings that come in handy.
+Visual Studio Code out of the box has good default settings to immediately start using it as an editor.  To make it even more effective to use Visual Studio Code there are a few extensions for angular and ionic that you will want to install.  As well there are a few shortcuts and settings that come in handy.  We will also refer to some of the snippets that come with the extensions during these labs.
 
 
 >**Note**: If you don't already have Visual Studio Code installed see [Lab 01: Ionic Setup](../01-install-ionic/)
@@ -45,6 +45,7 @@ Table of Contents
 * Toggle Word Wrap: alt+z
 
 **Nice to Have If you Remember Them**
+
 * Command Palette: F1 or Ctrl+Shift+P
 * Code Fold: ctrl+shift+[
 * Code Unfold: ctrl+shift+]
@@ -87,7 +88,7 @@ Written by John Papa and follow his style guide.
 **[Ionic v1 Snippets](https://marketplace.visualstudio.com/items?itemName=justinjames.ionic1-snippets)**
 
 * Over 200 html/javascript snippets plus 700 ionicons.
-* All snippets start with ionic
+* All snippets start with `i1_`
 * All icons snippets start with ionicicon
 * See [Full Docs](https://github.com/digitaldrummerj/vscode-ionic1-snippets/blob/master/docs.md) for usage
 

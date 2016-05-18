@@ -35,7 +35,6 @@ Table of Contents
 * 10:30-12 - **Lab:** 8-9
     * Wiring up API
     * Implement User Management
-
 ## Lunch
 
 * 12-1 Lunch
@@ -51,10 +50,11 @@ Table of Contents
     * Adding Loading Spinner
     * Adding Ability to Refresh Data
 * 2:30-2:45 - Break
-* 2:45-3:30 - **Lab** 13-15
-    * Loading Spinner
-    * Get Recent Data
+* 2:45-3:30 - **Lab** 13-18
     * Paging Data
+    * Profile Page
+    * Adding Tabs
+    * UI-Router Resolve
 * 3:30-4:00 - **Lecture:**
     * Configuring Icon and Splash Screens
     * Deploying and Testing on a Device

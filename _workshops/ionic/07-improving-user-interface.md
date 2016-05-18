@@ -17,19 +17,21 @@ todo: |
 {:.fake-h2}
 Objective
 
+The interface we have designed so far does not look terrible but there are a few usability issues that are making it not as user friendly as it should be.  We have the tasks name being truncated, there is no indication that clicking a project shows a task list, and we are showing true/false text for the task completed value.  There are all very minor things to fix up but will make a huge different in the overall impression your users have of your application.
 
-* Understand how easy it is to make a good looking interface
-* Fix the text in the project and task list from being truncated
-* Make it more obvious if a task is completed or not
+>Remember, people will use and love your app if the interface is very easy to use and obvious even if it only has half the functionality of the app with the hard to use interface.
+
+Key Concepts:
+
+* Built-in class to wrap text
+* Easy to control look and feel of icons
+* Use Angular to change icons based on the value of a field
 
 {:.fake-h2}
 Table of Contents
 
-
 * TOC
 {:toc}
-
-
 
 ## 7.0: Stop Text From Being Cut Off
 
@@ -52,7 +54,7 @@ From a usability perspective it is not obvious at all that the each row in the p
 To remedy this we are going to add a right arrow to each row but the arrow should not draw your attention directly to it since it is just an accessory.  We also want this arrow to always be on the right side of the row and vertically centered.
 
 1. Open the www/templates/projects.html file
-1. Inside of the ion-item, use the snippet `ioniciconchevronright` to generate the right arrow icon.  For the icon, we are using the free [ionicons](http://ionicons.com) that come with ionic.
+1. Inside of the ion-item, use the snippet `i1_iconchevronright` to generate the right arrow icon.  For the icon, we are using the free [ionicons](http://ionicons.com) that come with ionic.
 1. Save the file and view the page in the browser.  You will notice that the arrow just got added as a new line to the each row.
 
     ![Project List Arrow as New Line]({{"project-list-arrow-new-line.png" | prepend: imagedir }})
@@ -68,7 +70,7 @@ To remedy this we are going to add a right arrow to each row but the arrow shoul
 
 ## 7.2: Give completed tasks some style
 
-Right now the task list looks all the same regardless of if the task is completed or not.  As well the completed property for each task is a boolean value that can easily be represented with an icon.   In this section we will implement both of these features.
+Right now the task list looks all the same regardless of if the task is completed or not.  As well the completed property for each task is a boolean value that can easily be represented with an icon such as a checkmark.   In this section we will implement both of these features.
 
 When we are done the task list will look like:
 
@@ -107,7 +109,7 @@ The task list is starting to take shape and look a little bit better.
 
 ![Task List with Checkmark for value display]({{ "tasks-ion-list-checkmark.png" | prepend: imagedir }})
 
-The last thing we are going to change is to make the completed task gray and have a line through the text.
+The last thing we are going to change is to make the completed task gray and have a line through the text so that it doesn't draw your eyes as much to it.
 
 1. On the ion-item we need to add an ng-class so that when the task is completed we add the css class completedTask
 

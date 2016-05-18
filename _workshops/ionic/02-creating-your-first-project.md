@@ -48,24 +48,24 @@ The side menu comes with a pre-configured side menu while the tabs template come
 
 ### 2.0.2 Start Command Details
 
-While the start command runs lets take a look at what is doing for us and go through the output that it generates.
+While the start command runs, lets take a look at what is doing for us and go through the output that it generates.
 
-1. Download the base project and template from Github
+1. Downloaded the base project and template from Github
 
         Creating Ionic app in folder C:\projects\myFirstApp based on blank project
         Downloading: https://github.com/driftyco/ionic-app-base/archive/master.zip
         Downloading: https://github.com/driftyco/ionic-starter-blank/archive/master.zip
         Updated the hooks directory to have execute permissions
 
-1. Next it updates the config.xml which contains all of the metadata about our application
+1. Updated the config.xml which contains all of the metadata about our application
 
         Update Config.xml
 
-1. Setup and Config the cordova project to allow us to add platforms and deploy devices later
+1. Setup and Configured the cordova project to allow us to add platforms and deploy devices later
 
         Initializing cordova project
 
-1. At this point the project is generated and the output shows us some help commands to run
+1. List a bunch of helpful commands to get started with Ionic
 
         Your Ionic project is ready to go! Some quick tips:
 
@@ -138,7 +138,7 @@ You should see a view similar to this in your browser.
 
 ![view in browser]({{"ionic-serve-png.png" | prepend: imagedir}})
 
-This view however does not give you much of an idea how it might look on an actual device.    There are 2 ways to solve that we can emulate a mobile device from within Google Chrome.
+This view however does not give you much of an idea how it might look on an actual device.    There are 2 ways we can attempt to solve this using the browser.  We can use a built-in ionic serve page or we can emulate a mobile device from within Google Chrome.
 
 ### 2.2.1: Ionic Lab
 
@@ -153,7 +153,7 @@ The first way is to use the optional ionic-lab web page to see a side-by-side vi
 The second way is to turn on the device emulator within the Chrome Developer Tools.  Chrome has several known devices out of the box or you can add your own custom ones.
 
 1. To open the Chrome Developer Tools go under the Chrome Menu
-    * Windows: F21
+    * Windows: F12
     * Mac:
 
     ![Chrome Menu]({{ "menu-icon.png" | prepend: imagedir }})
