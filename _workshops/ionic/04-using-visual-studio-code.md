@@ -86,6 +86,7 @@ Below are the extensions that we will be using in this workshop.
 1. In VS Code press F1 or Ctrl+Shift+P
 1. Type extension and select "Extensions: Install Extension" 
 1. Type in `Angular1`
+1. If asked to restart Visual Studio Code, you can ignore that until all of our extensions are installed
 
 **Usage Info**
 
@@ -104,6 +105,7 @@ Written by John Papa and follow his style guide.
 1. In VS Code press F1 or Ctrl+Shift+P
 1. Type extension and select "Extensions: Install Extension" 
 1. Type in `ionic1-snippets`
+1. If asked to restart Visual Studio Code, you can ignore that until all of our extensions are installed
 
 **Usage Info**
 
@@ -121,6 +123,7 @@ Written by Yours Truly
 1. In VS Code press F1 or Ctrl+Shift+P
 1. Type extension and select "Extensions: Install Extension" 
 1. Type in `cordova-tools`
+1. This is the last extension we are installing, go ahead and restart Visual Studio Code
 
 **Usage Info**
 
