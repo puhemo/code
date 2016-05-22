@@ -329,3 +329,29 @@ If you are connecting to a Github Enterprise edition and you don't have the SSL 
 
      $ docker pull [image name]:[tag or version]               
            
+           
+## Windows Server 2016
+
+**Install Docker**
+
+Install-WindowsFeature containers
+Install-WindowsFeature hyper-v
+wget -uri https://aka.ms/tp5/New-ContainerHost -OutFile c:\New-ContainerHost.ps1
+powershell.exe -NoProfile -ExecutionPolicy Bypass c:\New-ContainerHost.ps1 -VMName MyContainerHost -WindowsImage ServerDatacenterCore –Hyperv
+
+Invoke-WebRequest https://aka.ms/tp5/Update-Container-Host -OutFile update-containerhost.ps1
+Install-PackageProvider ContainerImage -Force
+Find-ContainerImage
+Install-ContainerImage -Name NanoServer -Version 10.0.14300.1010
+Install-ContainerImage -Name WindowsServerCore -Version 10.0.14300.1000           
+
+Install-ContainerImage -Name NanoServer
+
+https://msdn.microsoft.com/virtualization/windowscontainers/quick_start/quick_start_configure_host
+
+https://msdn.microsoft.com/virtualization/windowscontainers/quick_start/manage_docker
+
+https://msdn.microsoft.com/en-us/virtualization/windowscontainers/management/manage_images
+
+
+           
