@@ -10,7 +10,11 @@ excerpt: |
 
 {% assign imagedir = "/images/" | prepend: site.baseurl | prepend: site.url %}
 
-There are times where you want to add a little more style to the jekyll markdown output but you don't want to have to write out all of the html to do.  With the kramdown markdown parser that Jekyll uses you can add extra metadata tags in your markdown
+As I was writing some tutorials recently I wanted to be able to style the html elements that Jekyll  outputs with different css classes.  
+
+For example I wanted to use a blockquote both items to be aware of and warnings to watch out for.   For the regular note I wanted it to have a nice blue border whereas the warning u wanted to have a red border.  This gives the user a better experience by being able to easily find items that might give them trouble.  
+
+With the kramdown markdown parser that Jekyll uses you can easily add these css classes without having to write it the html code.  
 
 ##paragraph
 
@@ -27,7 +31,7 @@ There are times where you want to add a little more style to the jekyll markdown
 
 **markdown**
 
-    * {:.done}done - Completed this
+    * {:.done} done - Completed this
     * Not done yet
 
 **output**
