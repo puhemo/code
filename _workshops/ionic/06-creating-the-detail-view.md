@@ -85,7 +85,7 @@ In this section, you will be creating the tasks service to pull tasks data for t
         function getTasks(projectId) {
           return $http.get("/mock-data.json")
             .then(function (result) {
-              return result.data[projectId].tasks;
+              return result.data.data[projectId].tasks;
             });
         }
 
@@ -102,7 +102,7 @@ In this section, you will be creating the tasks page controller that will contai
         * dependency1: TasksService
 1. Press Esc or Enter to exit the snippet
 1. Add a 2nd dependency for $stateParams.  This will allow you to get the id of the project.  The $stateParams property for the project id will be the same as the one we put into the router.
-1. Before the return service statement add a variable named projectId set to the value of $stateParams.projectId
+1. Before the activate function call add a variable named projectId set to the value of $stateParams.projectId
 
         var projectId = $stateParams.projectId;
 
@@ -134,7 +134,7 @@ In order to use the tasks controller and service that we created we need to add 
       <script src="js/services/projects.service.js"></script>
       <script src="js/services/tasks.service.js"></script>
       <script src="js/controllers/projects.controller.js"></script>
-      <script src="js/controllers/projects.controller.js"></script>
+      <script src="js/controllers/tasks.controller.js"></script>
 
 **Updating UI to Show Tasks**
 
@@ -161,10 +161,10 @@ So far you have just bound the json output to the UI.  Useful for debugging but 
 ![tasks  list with json included]({{"tasks-ion-list-without-json.png" | prepend: imagedir }})
 
 1. Open the www/templates/tasks.html
-1. Inside of the &lt;ion-content&gt; use the snippet `i1_list` to generate a ion-list and item-item component
+1. Insivmde of the &lt;ion-content&gt; use the snippet `i1_list` to generate a ion-list and item-item component
     * Values to fill in for the snippet:
         * item: task
-        * items: vm.task
+        * items: vm.tasks
 1. For the tasks list, you want to loop through each task and bind the following:
     * task.name
     * task.completed

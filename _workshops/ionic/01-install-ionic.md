@@ -167,6 +167,9 @@ You are now ready to proceed to the [Ionic Framework install](#section-30-ionic)
 
         npm install -g ionic cordova bower gulp
 
+   >On Mac, you may need to run this with sudo (.e.g sudo npm install -g ionic cordova bower gulp)
+   {:.warning}
+   
 ### Section 3.0.1: Verify Installation
 
 1. Check that ionic installed correctly, run: 
@@ -193,6 +196,10 @@ You are now ready to proceed to the [Ionic Framework install](#section-30-ionic)
         
     * 3.9.0 as of this writing 
 
+## 3.2 Git Configuration
+
+      git config --global --add url.https://github.com.insteadof git://github.com
+   
 ## Wrap up
 
 You now have all of the software components needed to create an Ionic project and run/test it out in a web browser.  In the next lab you will create your first Ionic application and test it in the browser.
