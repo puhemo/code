@@ -7,6 +7,7 @@ layout: workshoppost2
 order: 18
 lab: ionic
 length: 5 minutes
+date: 2016-05-18
 todo: |
 ---
 

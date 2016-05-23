@@ -247,6 +247,6 @@ However, if you are going to spend a lot of time developing ionic applications, 
 
 Check out my installation guides to help you out:
 
-[Mac Installation]({{ "ionic-setup-osx" | prepend: baseurl | prepend: siteurl }})
+[Mac Installation]({{ "ionic-setup-osx" | prepend: site.baseurl | prepend: site.url }})
 
-[Windows Installation]({{ "ionic-setup-windows" | prepend: baseurl | prepend: siteurl }})
+[Windows Installation]({{ "Ionic-Setup-Windows" | prepend: site.baseurl | prepend: site.url }})

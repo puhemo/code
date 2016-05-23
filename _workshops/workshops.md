@@ -4,7 +4,6 @@ published: true
 type: home
 layout: workshoppage2
 permalink: '/workshops/index'
-
 ---
 
 Here you will find a list of available workshop tutorials that I have created.  

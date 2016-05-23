@@ -4,7 +4,7 @@ title: 'Agenda'
 published: false
 type: ionicoverview
 layout: workshoppost2
-
+date: 2016-05-10
 ---
 
 <!-- DOCTOC SKIP -->
