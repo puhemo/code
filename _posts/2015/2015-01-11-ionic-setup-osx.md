@@ -34,6 +34,8 @@ Even being a windows user I was able to pretty easily get Ionic working on a Mac
 	- npm install -g cordova
 	- npm install -g ionic
     - npm install -g gulp
+    - npm install -g Bower
+
 1. Google Chrome
     	- Download from [https://www.google.com/chrome/browser/desktop/](https://www.google.com/chrome/browser/desktop/)
 
@@ -70,10 +72,7 @@ export PATH=${PATH}:/users/[Your UserName]/Development/android-sdk-macosx/tools:
 1. Download correct Android API
 	- in terminal type source ~/.bash_profile to load the ~/.bash_profile changes.
     - type android from terminal.  If everything is working correct it will open up the Android SDK Manager.
-	- Install API 22  with SDK Platforms and Arm Image checked 
-1. Configure Android Emulator
-	* In terminal type android avd.  If everything is working correct it will open up the Android AVD Manager.
-	* Click the create button and add at least 1 device to emulate
+	- Install API 23 with SDK Platforms checked 
 1. Configure Genymotion Setup
     *  After Genymotion is installed, open up the Genymotion UI and click on the Add Button.
     * Then click the Sign in button and follow the login instructions to login with the account that you create as part of the Genymotion download.
@@ -94,7 +93,6 @@ npm install -g ios-sim
 {% endhighlight %}
 
 ## Verifying that everything works
-
 
 1. Open terminal
 1. Navigate the directory where you store you development projects (I use /users/[Your Username]/projects)
@@ -130,3 +128,5 @@ ionic emulate ios
 ionic run android
 ionic run ios
 {% endhighlight %}
+
+You are now ready to go create your ionic applications.
