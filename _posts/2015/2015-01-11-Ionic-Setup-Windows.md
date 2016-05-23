@@ -42,7 +42,7 @@ On Windows, you will only be able to setup Android development.  Apple requires 
 1. Install the [BoxStarter](http://boxstarter.org) Chocolatey package
 
 
-        cinst BoxStarter
+        choco install -y BoxStarter
 
 
 1. Close the command prompt that you opened to install Chocolatey and BoxStarter
@@ -60,13 +60,10 @@ On Windows, you will only be able to setup Android development.  Apple requires 
 1. Open a command prompt (it won't work from a powershell command prompt)
 1. type Android
 	- This will launch the Android SDK Manager.  
-    - Select the API 22 and check the SDK Platform and ARM EABI v8a System Image 
+    - Select the API 23 and check the SDK Platform 
     - Scroll to the bottom and select the Google USB Driver
     - Click the install button.  This can take a bit of time.
-1. If you are going to use the Android Emulator you will need to configure an Android Virtual Device (AVD).  To do this, with the Android SDK Manager open under the Tools menu select Manage AVD
-	- This will launch the Android Virtual Device (AVD) Manager
-    - Click the Create Button, fill out all of the fields, and click ok to create the AVD
-    - Select the newly created AVD and click the Start button.  If everything worked it should start up the emulator.
+ 
 1. Configure Genymotion Setup
     *  After Genymotion is installed, open up the Genymotion UI and click on the Add Button.
     * Then click the Sign in button and follow the login instructions to login with the account that you create as part of the Genymotion download.
@@ -91,10 +88,8 @@ On Windows, you will only be able to setup Android development.  Apple requires 
 
         ionic build android
 
-1. If using emulator run the command below.  Note: The Genymotion emulator is seen as a device and not an emulator so you need to use the run command below instead.
-
-        ionic emulate android
-
-1. If running on a device run the command below.  Note that if using the Genymotion emulator, make sure to start the Genymotion device before running the command below.  In the Genymotion UI, you can start the device by selecting the device that you downloaded and clicking the start button.
+1. If running on a device or the Genymotion emulator run the command below.  Note that if using the Genymotion emulator, make sure to start the Genymotion device before running the command below.  In the Genymotion UI, you can start the device by selecting the device that you downloaded and clicking the start button.
 
         ionic run android
+  
+You are now ready to go create your ionic applications.    
