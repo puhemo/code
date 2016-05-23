@@ -8,7 +8,6 @@ order: 7
 lab: ionic
 length: 20 minutes
 date: 2016-05-16
-
 todo: |
 ---
 
