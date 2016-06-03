@@ -312,7 +312,7 @@ blockquote{
 
   /*Font*/
   font-family: Georgia, serif;
-  font-size: 16px;
+  //font-size: 16px;
   line-height: 1.2;
   color: #666;
   text-align: justify;
@@ -348,3 +348,11 @@ blockquote{
 
   }
 }
+
+  // Adding 'Contents' headline to the TOC
+  #markdown-toc {
+    border: 1px solid #aaa;
+    padding: 1em;
+    list-style: none;
+    display: inline-block;
+  }

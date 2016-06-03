@@ -6,7 +6,7 @@
     <meta charset="{{ site.encoding }}">
     {% if page.author %}<meta name="author" content="{{ page.author }}">{% endif %}
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <title>{% if page.title %} {{ page.title }} › {% endif %}{{ site.title }}</title>
+    <title>{% if page.title %} {{ page.title }} › {% endif %}{{ site.title }} - {{site.description}}</title>
     <link rel="icon" type="image/png" href="{{site.baseurl}}/favicon.ico">
 
     <link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url}}" data-proofer-ignore>

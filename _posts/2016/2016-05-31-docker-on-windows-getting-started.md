@@ -138,4 +138,4 @@ Below is a list of common commands that you will get you started using Docker.
 
 Docker is a powerful tool to have in your arsenal.  Once you get it working on Windows, you will never install services that can run within Docker locally again.  With Docker you can run light-weight containers for services such as mysql, postgres, mongodb, redis, node, plus many more.  
 
-This is the first of several post on using Docker.  In future post we will cover, mounting additional directories, saving changes to a container into an image, saving our image to the Docker Hub and creating our own Docker image from scratch.  
+This is the first of several post on using Docker.  In future post we will cover mounting additional directories, saving changes to a container into an image, saving our image to the Docker Hub and creating our own Docker image from scratch.  
