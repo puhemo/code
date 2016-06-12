@@ -1,1 +1,1 @@
-My blog at [http://digitaldrummerj.me](http://digitaldrummerj.me)
+My blog at [http://puhemo.xyz/code/](http://puhemo.xyz/code/)
