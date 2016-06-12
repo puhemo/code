@@ -1,9 +1,9 @@
-title: "Justin James"
-author: "Justin James"
-description: "A web developer and speaker from Arizona"
-subheading: "A web developer and speaker from Arizona"
+title: "Puhemo"
+author: "Puhemo"
+description: "A new life"
+subheading: "A new life"
 more: "read more"
-url: "http://digitaldrummerj.me/" #"http://digitaldrummerj.me"
+url: "http://puhemo.xyz/code/" #"http://digitaldrummerj.me"
 baseurl: #"/" # comment out if in root directory
 
 future: false
@@ -11,14 +11,14 @@ avatar: https://avatars3.githubusercontent.com/u/708423?v=3&s=460
 
 
 comments:
-    disqus: "digitaldrummerj"
+    disqus: "puhemo"
     disquscommentcount: true
 #    isso: "comments.mysite.org"
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 
 analytics:
-    google: UA-58457343-1
+    google: UA-78761546-1
 
 
 style:
@@ -35,8 +35,8 @@ style:
 
 
 links:
-   github: "https://github.com/digitaldrummerj/"
-   twitter: "https://twitter.com/digitaldrummerj/"
+   github: "https://github.com/puhemo/"
+   twitter: "https://twitter.com/puhemo/"
    google-plus: #"https://plus.google.com/+me"
    reddit: #"https://www.reddit.com/user/me/"
    youtube: #"https://www.youtube.com/user/me"
