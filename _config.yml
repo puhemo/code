@@ -7,7 +7,7 @@ url: "http://puhemo.xyz/code/" #"http://digitaldrummerj.me"
 baseurl: #"/" # comment out if in root directory
 
 future: false
-avatar: https://avatars3.githubusercontent.com/u/708423?v=3&s=460
+avatar: http://i.imgur.com/CPbZsxN.jpg
 
 
 comments:
@@ -41,6 +41,7 @@ links:
    reddit: #"https://www.reddit.com/user/me/"
    youtube: #"https://www.youtube.com/user/me"
    steam: #"http://steamcommunity.com/id/me/"
+   Email: mail@puhemo.xyz
    rss: http://feeds.feedburner.com/puhemo # your feedburner url
 
 # Not Currently Used
