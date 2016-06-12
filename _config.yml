@@ -3,8 +3,8 @@ author: "Linus Liu"
 description: "A new life"
 subheading: "A new life"
 more: "read more"
-url: "http://puhemo.xyz/code/" #"http://digitaldrummerj.me"
-baseurl: /code#"/" # comment out if in root directory
+url: "http://puhemo.xyz/" #"http://digitaldrummerj.me"
+baseurl: "/code"# comment out if in root directory
 
 future: false
 avatar: http://i.imgur.com/CPbZsxN.jpg
