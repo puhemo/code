@@ -7,10 +7,11 @@ layout: page
 
 [By Date]({{"/monthview" | prepend: site.baseurl}}) | [By Tag Cloud]({{"/tagcloudview" | prepend: site.baseurl}})
 
-{% assign tags = site.python | sort %}
+{% assign tags = site.categories | sort %}
 {% assign sorted_posts = site.posts | sort: 'title' %}
 <div> 
 {% for tag in tags %}
+{% assign tag = Python | sort %}
 <a href="#{{ tag | first | slugify }}">{{ tag | first | replace: '-', ' ' }}({{ tag | last | size }})</a>{% if forloop.last == false %} • {% endif %}{% endfor %}
 </div>
 <p>&nbsp;</p>
