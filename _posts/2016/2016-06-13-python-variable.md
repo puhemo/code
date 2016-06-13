@@ -130,7 +130,8 @@ Type-casting is a universal programming notion of converting the value of a vari
 ## Debugging
 Here are a few pointers on debugging.
 
-1. Avoid spaces in between variable names. Python thinks there are two operands. Example:
+1. Avoid spaces in between variable names. Python thinks there are two operands. Example:  
+
    ```python
    >>>Madam Medousa = "lets start the bout"
    SyntaxError: invalid syntax
@@ -140,10 +141,11 @@ Here are a few pointers on debugging.
    >>>print madam_medousa
    "lets start the bout"
    ```
-
+  
    > Common Syntax Errors. 1) SyntaxError: invalid syntax 2) SyntaxError: invalid token
 
-2. Runtime Error: using a variable before it is defined. Example:
+2. Runtime Error: using a variable before it is defined. Example:  
+ 
    ```python
     >>>cat= "Garfield"
     >>>food = "burgers"
@@ -153,6 +155,7 @@ Here are a few pointers on debugging.
    # "Garfield" is a string in the variable cat.
    # Hence, Garfield is not a defined as a mnemonic variable.
    ```
+   
 3. Case sEn5iTiVity (sensitivity!) matters:
    ```python
    >>>Olive = 5
