@@ -156,7 +156,8 @@ Here are a few pointers on debugging.
    # Hence, Garfield is not a defined as a mnemonic variable.
    ```
    
-3. Case sEn5iTiVity (sensitivity!) matters:
+3. Case sEn5iTiVity (sensitivity!) matters:  
+  
    ```python
    >>>Olive = 5
    >>>olive = "olive oil"
