@@ -10,7 +10,7 @@ layout: page
 {% assign tags = site.categories | sort %}
 {% assign sorted_posts = site.posts | sort: 'title' %}
 <div> 
-{% for tag in tags %}
+{% for Python in tags %}
 <a href="#{{ tag | first | slugify }}">{{ tag | first | replace: '-', ' ' }}({{ tag | last | size }})</a>{% if forloop.last == false %} • {% endif %}{% endfor %}
 </div>
 <p>&nbsp;</p>
