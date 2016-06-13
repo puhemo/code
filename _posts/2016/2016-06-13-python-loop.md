@@ -86,5 +86,5 @@ Python for循环可以遍历任何序列的项目，如一个列表或者一个�
 ```
 
 ## More Info
-[Pythonlearn:resources-week01](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
-[Python 基础教程](http://www.runoob.com/python/python-if-statement.html)
+* [Pythonlearn:resources-week01](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
+* [Python 基础教程](http://www.runoob.com/python/python-if-statement.html)
