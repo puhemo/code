@@ -7,7 +7,7 @@ layout: page
 
 [By Date]({{"/monthview" | prepend: site.baseurl}}) | [By Tag Cloud]({{"/tagcloudview" | prepend: site.baseurl}})
 
-{% assign tags = site.categories | sort %}
+{% assign tags = site.python | sort %}
 {% assign sorted_posts = site.posts | sort: 'title' %}
 <div> 
 {% for tag in tags %}
