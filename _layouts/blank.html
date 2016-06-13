@@ -30,6 +30,7 @@
                 
                 <li><a href="{{ "/categoryview" | prepend: site.baseurl }}"  {% if page.url == "categoryview" or page.url == "monthview" or page.url == "tagcloudview" %} id="selected"{% endif %}>Archive</a></li>
                 {% if site.links.rss %}
+                <li><a href="{{ "/wiki" | prepend: site.baseurl }}"  {% if page.url == "wiki" %} id="selected"{% endif %}>Wiki</a></li>
                 <li><a href="{{ site.links.rss }}">Subscribe</a></li>
                 {% endif %}
             </ul>
