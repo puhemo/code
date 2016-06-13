@@ -8,8 +8,22 @@ categories:
 tags:
   - Python
   - Syntax
+excerpt: |
+    ## Conditional Steps - if ... elif .. else
+
+Python条件语句是通过一条或多条语句的执行结果（True或者False）来决定执行的代码块。
+
+```python
+  if (expression):
+     (command)
+  elif (expression):
+     (command)
+  else:
+     (command)
+```
 ---
 
+* TOC
 {:toc}
 
 ## Conditional Steps - if ... elif .. else
