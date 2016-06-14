@@ -3,7 +3,7 @@ author: "Linus Liu"
 description: "Learn to code"
 subheading: "A new life"
 more: "read more"
-url: "http://puhemo.xyz/" #"http://digitaldrummerj.me"
+url: "http://puhemo.xyz" #"http://digitaldrummerj.me"
 baseurl: "/code"# comment out if in root directory
 
 future: false
