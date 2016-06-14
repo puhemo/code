@@ -1,19 +1,22 @@
 ---
-title: Python导出Kindle笔记--待解决
-date: 2016-06-09 21:04:01
+title: "Python导出Kindle笔记"
+date: 2016-06-14
+modified: 2016-06-14
 categories:
-- 术
+  - Python
 tags:
-- Python
-- Kindle
-- Error
-permalink: python-kindle
+  - Python
+  - Kindle
+  - Issue
+published: ture
+excerpt: |
+    程序会在桌面创建一个文件夹，为每一本书创建一个TXT文件，里面是每一本书的摘录（Kindle内的摘录是按时间顺序存放的），只保留下正文，位置、时间全都舍去。
 ---
 
 程序会在桌面创建一个文件夹，为每一本书创建一个TXT文件，里面是每一本书的摘录（Kindle内的摘录是按时间顺序存放的），只保留下正文，位置、时间全都舍去。
-<!-- more -->
 
 ###  代码
+
 ```Python
 # encoding: utf-8
 import os
@@ -32,11 +35,15 @@ while True:
     book_note.write(onenote[3]+'\n')
     book_note.close()
 ```
+
 ### 运行报错
+
   `IOError: [Errno 22] invalid mod ('a') or filename`
 
 ### 可能原因
+
 文件名问题
 
 ### 代码来源
+
 https://www.zhihu.com/question/23031778#
