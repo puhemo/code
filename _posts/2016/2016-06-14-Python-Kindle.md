@@ -15,7 +15,7 @@ excerpt: |
 
 程序会在桌面创建一个文件夹，为每一本书创建一个TXT文件，里面是每一本书的摘录（Kindle内的摘录是按时间顺序存放的），只保留下正文，位置、时间全都舍去。
 
-###  代码
+##  代码
 
 ```Python
 # encoding: utf-8
@@ -36,14 +36,14 @@ while True:
     book_note.close()
 ```
 
-### 运行报错
+## 运行报错
 
   `IOError: [Errno 22] invalid mod ('a') or filename`
 
-### 可能原因
+## 可能原因
 
 文件名问题
 
-### 代码来源
+## 代码来源
 
 https://www.zhihu.com/question/23031778#
