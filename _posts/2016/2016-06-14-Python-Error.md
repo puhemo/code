@@ -24,7 +24,6 @@ A collection of some python errors for search
 # This Python file uses the following encoding: utf-8
 
 或添加语句为：
-
 # encoding: utf-8
 ```
 
