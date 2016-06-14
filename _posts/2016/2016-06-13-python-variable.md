@@ -11,6 +11,7 @@ tags:
 excerpt: |
     ## Variable Naming  
     Nota Bene: Python is a case sensitive programming language. Be aware of this when you first name and subsequently use your variables. For instance, leapyear, Leapyear, leapYear, and LeapYear will actually be viewed as 4 **different** variables by Python even if you intended the same thing, a "leap year," but simply mistyped.
+series: "Intro to Python"	
 ---
 
 * TOC
