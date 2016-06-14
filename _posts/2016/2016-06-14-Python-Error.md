@@ -17,7 +17,7 @@ A collection of some python errors for search
 ## SyntaxError
 
 ###  SyntaxError: non-ascii character ' xe6' in file
-中文注释乱码问题
+中文注释乱码问题  
 
 ```python
 代码开始的第一行添加如下一条语句：
