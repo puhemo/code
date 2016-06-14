@@ -1,5 +1,5 @@
 ---
-title:  "Python Synax Part 02: Conditional Steps, repeated steps, loop"
+title:  "Python Synax: Conditional Steps, repeated steps, loop"
 date: 2016-06-13
 modified: 2016-06-13
 published: true
