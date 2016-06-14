@@ -18,6 +18,7 @@ A collection of some python errors for search
 
 ###  SyntaxError: non-ascii character ' xe6' in file
 中文注释乱码问题
+
 ```python
 代码开始的第一行添加如下一条语句：
 # This Python file uses the following encoding: utf-8
@@ -26,4 +27,4 @@ A collection of some python errors for search
 
 # encoding: utf-8
 ```
-<!-- more -->
+
