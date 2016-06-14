@@ -1,5 +1,5 @@
 ---
-title:  "Python Synax Part 01: Variable"
+title:  "Python Synax: Variable"
 date: 2016-06-13
 modified: 2016-06-13
 published: true
