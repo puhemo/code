@@ -24,6 +24,8 @@ excerpt: |
 series: "Intro to Python"	
 ---
 
+ {% include series.html %}
+
 * TOC
 {:toc}
 
