@@ -21,6 +21,7 @@ excerpt: |
     else:
      (command)
     ```
+series: "Intro to Python"	
 ---
 
 * TOC
