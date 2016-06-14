@@ -1,13 +1,18 @@
 ---
 title: "Python Error"
-date: 2016-06-09 20:55:39
+date: 2016-06-14
+modified: 2016-06-14
+published: true
 categories:
-- 术
+  - Python
 tags:
-- Python
-- Error
-permalink: python-error
+  - Python
+  - Error
+excerpt: |
+    A Collection of some python errors for search
 ---
+
+A collection of some python errors for search
 
 ## SyntaxError
 
