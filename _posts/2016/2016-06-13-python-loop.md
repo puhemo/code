@@ -29,9 +29,11 @@ series: "Intro to Python"
 * TOC
 {:toc}
 
-## Conditional Steps - if ... elif .. else
+## Conditional Execution
 
 Python条件语句是通过一条或多条语句的执行结果（True或者False）来决定执行的代码块。
+
+### Conditional Steps - if ... elif .. else
 
 ```python
   if (expression):
@@ -44,7 +46,7 @@ Python条件语句是通过一条或多条语句的执行结果（True或者Fals
 
 <!-- more -->
 
-## Conditional Steps (Multi elif) - if ... elif .. else
+### Conditional Steps (Multi elif) - if ... elif .. else
 
 ```python
   if x < 0:
@@ -90,6 +92,7 @@ Python for循环可以遍历任何序列的项目，如一个列表或者一个�
 
 ## More Info
 * [Pythonlearn:resources-week01](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
+* [Pythonlearn:resources-week03](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week03)
 * [Python 基础教程](http://www.runoob.com/python/python-if-statement.html)
 
  {% include series.html %}
