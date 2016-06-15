@@ -1,12 +1,10 @@
 ---
-title: 大家的编程 (Python 入门)--学习纪录
+title: "Programming for Everybody (Getting Started with Python)"
 date: 2016-06-07 19:29:35
 categories:
-- 术
+  - Python
 tags:
-- Python
-permalink: python
-top: 1
+  - Python
 ---
 
 
@@ -162,6 +160,12 @@ top: 1
 - [Chapter 8](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week08)
 - [Chapter 9](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week09)
 - [Chapter 10](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week10)
+
+## [VISUALIZE](http://www.pythontutor.com/)--**Recommend**
+
+Python Tutor, created by Philip Guo, helps people overcome a fundamental barrier to learning programming: understanding what happens as the computer executes each line of a program's source code.
+
+Using this tool, you can write Python, Java, JavaScript, TypeScript, Ruby, C, and C++ programs in your Web browser and visualize what the computer is doing step-by-step as it executes those programs. So far, over 1.5 million people in over 180 countries have used Python Tutor to visualize over 15 million pieces of code, often as a supplement to textbooks, lecture notes, and online programming tutorials.
 
 ## 推荐阅读
 
