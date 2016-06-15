@@ -195,5 +195,19 @@ There are many different ways to construct a conditional statement in Python usi
 
 > Notice: `=` is the assignment operator, `==` equality operator is a comparison operator
 
+###  Logical Operators
+
+Python also provides a set of logical operators to combine multiple boolean expressions together for more complex boolean logic testing.
+
+- Logical AND ( and )
+  - `and` checks whether both boolean expressions evaluate as true
+  - `if x > 0 and y > 0 : print 'this line runs if both numbers are positive'`
+- Logical OR ( or )
+  - `or` checks whether either expression is evaluated as true
+  - `if x > 0 or y > 0 : print 'this line runs if either x or y is evaluated as positive'`
+- Logical NOT ( not )
+  - `not` negates a boolean expression, i.e. if the `bool` value returned is `false` then `not` evaluates to `true`
+  - `if not( x > y ) : print 'this line runs when x is less than or equal to y'`
+
 ## Referense
 [Pythonlearn:resources-week01](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
