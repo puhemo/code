@@ -11,11 +11,14 @@ excerpt: |
   简单记录大家的编程 (Python 入门)的学习记录和相关资料。
 ---
 
-简单记录大家的编程 (Python 入门)的学习记录和相关资料。
+* TOC
+{:toc}
 
+简单记录大家的编程 (Python 入门)的学习记录和相关资料。
 
 ## 更新历史
 
+* 20160615: 完成ChapterThree-Lecture materials
 * 20160614: 完成ChapterTwo
 * 20160607: 完成ChapterOne
 * 20160607: 完成Getting Started with Python学习框架
