@@ -25,9 +25,9 @@ excerpt: |
 * 20160608: [Python语法--Conditional Steps, repeated steps, loop][2]
 * 20160607: [常用终端命令][1]
 
-[1]: http://puhemo.tk/2016/06/07/commands/
-[2]: http://puhemo.tk/2016/06/08/python-loop/
-[3]: http://puhemo.tk/2016/06/08/python-variable/
+[1]: http://puhemo.xyz/2016/06/07/commands/
+[2]: http://puhemo.xyz/2016/06/08/python-loop/
+[3]: http://puhemo.xyz/2016/06/08/python-variable/
 
 ## 教材
 
