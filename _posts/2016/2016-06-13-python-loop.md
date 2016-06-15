@@ -33,6 +33,8 @@ series: "Intro to Python"
 
 Python条件语句是通过一条或多条语句的执行结果（True或者False）来决定执行的代码块。
 
+> We end the if statement with a **colon (:)** and lines after the if statement are **indented**.
+
 ### Conditional Steps - if ... elif .. else
 
 ```python
