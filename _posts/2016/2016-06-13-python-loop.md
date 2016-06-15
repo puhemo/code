@@ -69,6 +69,21 @@ You can also have one or more conditional statements indented as a subset of a p
          print 'x is greater than y'
 ```
 
+##  Try/Except
+
+Try/Except - Beginning with `try,` Python tests the first operation. If the operation fails, then it proceeds to follow the instructions in `except.` If the `try` is successful then `except` is skipped.
+
+```python
+test = raw_input("Enter an integer:")  
+try:  
+   test = int(test)  
+except:  
+   print "Invalid entry."
+   quit()  
+result = test * 2  
+print result  
+```
+
 # Repeated steps - while
 Python 编程中 while 语句用于循环执行程序，即在某条件下，循环执行某段程序，以处理需要重复处理的相同任务
 
