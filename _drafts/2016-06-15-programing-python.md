@@ -1,16 +1,18 @@
 ---
 title: "Programming for Everybody (Getting Started with Python)"
 date: 2016-06-07 19:29:35
+modified: 2016-06-15
 categories:
   - Python
 tags:
   - Python
+published: true
+excerpt: |
+  简单记录大家的编程 (Python 入门)的学习记录和相关资料。
 ---
 
+简单记录大家的编程 (Python 入门)的学习记录和相关资料。
 
-  简单记录个人学习 大家的编程 (Python 入门)的学习记录和相关资料。
-
-<!-- more -->
 
 ## 更新历史
 
