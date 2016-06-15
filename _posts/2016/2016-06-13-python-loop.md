@@ -29,11 +29,15 @@ series: "Intro to Python"
 * TOC
 {:toc}
 
-## Conditional Execution
+# Conditional Execution
 
 Python条件语句是通过一条或多条语句的执行结果（True或者False）来决定执行的代码块。
 
 > We end the if statement with a **colon (:)** and lines after the if statement are **indented**.
+
+## Conditional Statements
+
+Conditional statements let Python know it is about to enter a decision-making structure.
 
 ### Conditional Steps (Multi elif) - if ... elif .. else
 
@@ -65,7 +69,7 @@ You can also have one or more conditional statements indented as a subset of a p
          print 'x is greater than y'
 ```
 
-## Repeated steps - while
+# Repeated steps - while
 Python 编程中 while 语句用于循环执行程序，即在某条件下，循环执行某段程序，以处理需要重复处理的相同任务
 
 ```python
@@ -85,7 +89,7 @@ Python 编程中 while 语句用于循环执行程序，即在某条件下，循
       i=i-1
 ```
 
-## Loop - for
+# Loop - for
 Python for循环可以遍历任何序列的项目，如一个列表或者一个字符串
 
 ```python
@@ -93,7 +97,7 @@ Python for循环可以遍历任何序列的项目，如一个列表或者一个�
       (command)
 ```
 
-## More Info
+# More Info
 * [Pythonlearn:resources-week01](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
 * [Pythonlearn:resources-week03](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week03)
 * [Python 基础教程](http://www.runoob.com/python/python-if-statement.html)
