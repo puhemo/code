@@ -14,6 +14,8 @@ excerpt: |
 
 My Python exercise book
 
+# Getting Started with Python
+
 ## Assignment 3.3--Error
 
 ```python
