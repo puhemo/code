@@ -18,6 +18,7 @@ excerpt: |
 
 ## 更新历史
 
+* 20160615: 完成ChapterFour-Lecture materials
 * 20160615: 完成ChapterThree
 * 20160615: 完成ChapterThree-Lecture materials
 * 20160614: 完成ChapterTwo
