@@ -1,7 +1,7 @@
 ---
-title:  "Python Synax: Variable"
+title:  "Python Synax: Variable and Boolean"
 date: 2016-06-13
-modified: 2016-06-13
+modified: 2016-06-15
 published: true
 categories: 
   - Python
@@ -19,10 +19,12 @@ series: "Intro to Python"
 * TOC
 {:toc}
 
-## Variable Naming
+## Variable
+
+### Variable Naming
 Nota Bene: Python is a case sensitive programming language. Be aware of this when you first name and subsequently use your variables. For instance, leapyear, Leapyear, leapYear, and LeapYear will actually be viewed as 4 **different** variables by Python even if you intended the same thing, a "leap year," but simply mistyped.
 
-## Variable Assignment
+### Variable Assignment
 Variable are lines of code that do something. The most common type of statement you'll probably come across are assignment statements.
 
 **N.B.:** Although we can understand simple programs using this description, and many programming languages, including C, C++, and Java, do exactly this, Python doesn't. Instead, a variable points to a storage location containing its current value, and so does every variable with that same value. If its value is changed by assignment then, instead of changing its storage location to that value, a new location is set to the value if it's not already in memory, then the variable is changed to point to that new location--but other variables pointing to the old location still point there. Moreover, Python assumes small integers (-5 to +256) are very likely to be used, so they're automatically stored when the system is initialized, ready to be used (a process called memoization). So, to be quite accurate:
@@ -63,7 +65,7 @@ More complex mathematical expressions can be evaluated for variable assignment t
 
 *Nota Bene:* There is a marked difference between *integer number* division and *floating point number* division. Because Python treats these two numeric types distinctly different, you might get erroneous answers when doing division operations without precaution. (read more on **Data Types: Other Caveats** below)
 
-## Assigning from User Input--`raw_input()`
+### Assigning from User Input--`raw_input()`
 
 The command to accept user input is `raw_input()`. This will make a pop-up box appear on your screen.
 
@@ -79,7 +81,7 @@ name = input("What is your name, human? ")
 print ("Hello", name + "! I am Python :D")
 ```
 
-## Data Types—`type()`
+### Data Types—`type()`
 
 The data types we have learned about so far are:
 * **Numeric types**
@@ -110,7 +112,7 @@ String concatenation example:
  #Outputs: Free Education! Hip-hip-hooray! Hip-hip-hooray! Hip-hip-hooray! Thank you Coursera!
 ```
 
-## Type Conversion--`int()`
+### Type Conversion--`int()`
 
 Type-casting is a universal programming notion of converting the value of a variable from one type into another. In Python, this is achieved by utilizing functions such as` int()`, `float()`, or `str()`. 
 ```Python
@@ -130,7 +132,7 @@ Type-casting is a universal programming notion of converting the value of a vari
  #Output: The correct sum actually was 68
 ```
 
-## Debugging
+### Debugging
 Here are a few pointers on debugging.
 
 1. Avoid spaces in between variable names. Python thinks there are two operands. Example:  
@@ -169,6 +171,29 @@ Here are a few pointers on debugging.
     # variable names are case sensitive,
    # all of these variations of olive are separate variables.
    ```
+
+##  Boolean Expressions
+
+The `x > 0` segment is called a boolean expression. Boolean expressions test its given parameters, in this case the variable **x** to the left against the numeric literal 0 to the right, and returns a value of either `true` or `false.` The actual condition being tested depends on what comparison operator is being used in the middle.
+
+###  Comparison Operators
+
+There are many different ways to construct a conditional statement in Python using comparison operators. The comparison operators provided by Python are:
+
+- Less than ( < )
+  - `x < y`
+- Less than or equal ( <= )
+  - `x <= y`
+- Greater than ( > )
+  - `x > y`
+- Greater than or equal ( >= )
+  - `x >= y`
+- Equality ( == )
+  - `x == y`
+- Inequality ( != )
+  - `x != y`
+
+> Notice: `=` is the assignment operator, `==` equality operator is a comparison operator
 
 ## Referense
 [Pythonlearn:resources-week01](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
