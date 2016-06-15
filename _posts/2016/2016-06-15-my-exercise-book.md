@@ -42,6 +42,6 @@ I get F whatever number I input.
 > Try printing score (shown above in my edit). You'll find that this form of assignment using the 'and' operator will return a True or False. The mathematical value of True is 1 and False is 0. So since your assignment of score evaluates to False, it is less than 0.6 and returns an 'F'.
 
 ### Notice: 
-1. Assignment using  the 'and' operator will return a True or False
+1. Assignment using  the 'and' operator(**Logical Operators**) will return a True or False
 2. The mathematical value of True is 1 and False is 0
 3. print is a way to find error!
