@@ -35,19 +35,6 @@ Python条件语句是通过一条或多条语句的执行结果（True或者Fals
 
 > We end the if statement with a **colon (:)** and lines after the if statement are **indented**.
 
-### Conditional Steps - if ... elif .. else
-
-```python
-  if (expression):
-     (command)
-  elif (expression):
-     (command)
-  else:
-     (command)
-```
-
-<!-- more -->
-
 ### Conditional Steps (Multi elif) - if ... elif .. else
 
 ```python
@@ -62,6 +49,20 @@ Python条件语句是通过一条或多条语句的执行结果（True或者Fals
       print 'double'
   else:
       print 'more'
+```
+
+###  Nested Conditionals
+
+You can also have one or more conditional statements indented as a subset of a parent conditional, forming a hierarchy of nested conditional logic:
+
+```python
+ if x == y :
+     print 'x and y are equal'
+ else :
+     if x < y :
+         print 'x is less than y'
+     elif x > y :
+         print 'x is greater than y'
 ```
 
 ## Repeated steps - while
