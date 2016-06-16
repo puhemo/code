@@ -1,5 +1,5 @@
 ---
-title:  "Python Synax: Variable and Boolean"
+title:  "Python Syntax: Variable and Boolean"
 date: 2016-06-13
 modified: 2016-06-15
 published: true
