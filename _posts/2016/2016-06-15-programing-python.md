@@ -1,7 +1,7 @@
 ---
 title: "Programming for Everybody (Getting Started with Python)"
 date: 2016-06-07 19:29:35
-modified: 2016-06-15
+modified: 2016-06-16
 categories:
   - Python
 tags:
