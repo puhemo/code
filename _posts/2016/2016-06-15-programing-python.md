@@ -26,6 +26,8 @@ excerpt: |
 * 20160607: 完成Getting Started with Python学习框架
 
 ## 学习笔记
+
+* 20160616: [Python syntax: Functions and Modules][4]
 * 20160608: [Python语法--Variable][3]
 * 20160608: [Python语法--Conditional Steps, repeated steps, loop][2]
 * 20160607: [常用终端命令][1]
@@ -33,6 +35,7 @@ excerpt: |
 [1]: http://puhemo.xyz/2016/06/07/commands/
 [2]: http://puhemo.xyz/2016/06/08/python-loop/
 [3]: http://puhemo.xyz/2016/06/08/python-variable/
+[4]: http://puhemo.xyz/code/python-functions/
 
 ## 教材
 
