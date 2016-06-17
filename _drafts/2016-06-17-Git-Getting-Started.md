@@ -10,7 +10,10 @@ tags:
   - Github
 excerpt: |
   git是一个分布式版本控制软件，最初由林纳斯·托瓦兹（Linus Torvalds）创作，于2005年以GPL发布。最初目的是为更好地管理Linux内核开发而设计。
+series: Intro to Git
 ---
+
+{% include series.html %}
 
 ## Git 基础 - Getting Started
 
@@ -52,3 +55,5 @@ Git 更像是把数据看作是对小型文件系统的一组快照。每次你�
 
 * [gitpro](https://git-scm.com/book/zh/v2/)
 * [git - 简明指南](http://rogerdudler.github.io/git-guide/index.zh.html)
+
+{% include series.html %}
