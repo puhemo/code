@@ -1,7 +1,7 @@
 ---
 title: "Programming for Everybody (Getting Started with Python)"
 date: 2016-06-07 19:29:35
-modified: 2016-06-16
+modified: 2016-06-17
 categories:
   - Python
 tags:
@@ -157,7 +157,7 @@ excerpt: |
 
 [Python Code Playground](https://pr4e.dr-chuck.com/tsugi/mod/pythonauto/index.php?PHPSESSID=9ea284242fb711aa903999a768bb1fae)
 
-### [Student-curated notes(学生笔记)](https://share.coursera.org/wiki/index.php/Pythonlearn:Resources)
+### Student-curated notes(学生笔记)
 
 - [Installation](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-install)
 - [Chapter 1](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
