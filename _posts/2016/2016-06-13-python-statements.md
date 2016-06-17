@@ -112,6 +112,12 @@ while i > 2:
     i=i-1
 ```
 
+* Tips: Check for empty line
+  
+  ```
+  if len(inp) < 1: break
+  ```
+
 ## “Infinite loops” and `break`
 
 Sometimes you don’t know it’s time to end a loop until you get half way through the body. In that case you can write an infinite loop on purpose and then use the `break` statement to **jump out of the loop**.
