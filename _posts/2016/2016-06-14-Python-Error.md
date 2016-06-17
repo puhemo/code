@@ -19,10 +19,10 @@ A collection of some python errors for search
 ###  SyntaxError: non-ascii character ' xe6' in file
 中文注释乱码问题  
 
-代码开始的第一行添加如下一条语句：
+代码开始的第一行添加如下一条语句：  
 `# This Python file uses the following encoding: utf-8`
 
-或添加语句为：
+或添加语句为：  
 `# encoding: utf-8`
 
 
