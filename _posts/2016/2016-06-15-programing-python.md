@@ -194,6 +194,7 @@ Using this tool, you can write Python, Java, JavaScript, TypeScript, Ruby, C, an
 - [PEP 8(中文版)](http://damnever.github.io/2015/04/24/PEP8-style-guide-for-python-code/)
 * [**Codecademy- Python**][23]: 编程在线学习平台
 - [SoloLearn](http://sololearn.com/Play/Python ): 编程在线学习平台
+- [Python 2.7教程](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000)
 
 ### Books
 
