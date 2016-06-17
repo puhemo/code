@@ -46,7 +46,7 @@ while True:
 
 ## 修改1
 
-参考推荐阅读1[^1]修改
+参考推荐阅读[^1]修改
 
 ```python
 # encoding: utf-8
