@@ -1,6 +1,6 @@
 ---
 title:  "Git Part 1 - Getting Started"
-date: 2016-06-17
+date: 2016-06-17 07:00
 modified: 2016-06-17
 published: true
 categories: 
