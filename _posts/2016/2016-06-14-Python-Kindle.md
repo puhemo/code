@@ -71,6 +71,7 @@ while True:
 
 ### 运行报错
 
+lin14: book_note=open('%s%s.txt'%(digest_path,onenote[0]),'a+')  
 TypeError: an integer is required
 
 ### 可能原因
