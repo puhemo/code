@@ -70,6 +70,7 @@ More complex mathematical expressions can be evaluated for variable assignment t
 The command to accept user input is `raw_input()`. This will make a pop-up box appear on your screen.
 
 > raw_input()读取的内容以字符串的形式返回
+{:.warning}
 
 Example:
 ```python
