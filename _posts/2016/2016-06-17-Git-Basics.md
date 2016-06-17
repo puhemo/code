@@ -1,6 +1,6 @@
 ---
 title:  "Git Part 2 - Basics"
-date: 2016-06-17
+date: 2016-06-17 08:00
 modified: 2016-06-17
 published: true
 categories: 
@@ -9,7 +9,7 @@ tags:
   - Git
   - Github
 excerpt: |
-  Git 基础-获取 Git 仓库
+  本章内容涵盖你在使用 Git 完成各种工作中将要使用的各种基本命令。 在学习完本章之后，你应该能够配置并初始化一个仓库（repository）、开始或停止跟踪（track）文件、暂存（stage）或提交（commit)更改
 series: "Intro to Git"
 ---
 {% include series.html %}
