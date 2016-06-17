@@ -155,12 +155,14 @@ excerpt: |
 
 - [Box](https://app.box.com/s/q2gg8vc4i1m666eymokoun9xa4q0oh6x)
 - [Google Drive](https://drive.google.com/folderview?id=0B7X1ycQalUnyWXg2MVhTbEZFT28&usp=sharing)
+ 
+## Python Data Structures Chapters 6-10
 
-### 在线Python环境
+## 在线Python环境
 
 [Python Code Playground](https://pr4e.dr-chuck.com/tsugi/mod/pythonauto/index.php?PHPSESSID=9ea284242fb711aa903999a768bb1fae)
 
-### Student-curated notes(学生笔记)
+## Student-curated notes(学生笔记)
 
 - [Installation](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-install)
 - [Chapter 1](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
@@ -174,11 +176,13 @@ excerpt: |
 - [Chapter 9](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week09)
 - [Chapter 10](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week10)
 
-## VISUALIZE--**Recommend**
+## Tools
 
-[Python Tutor](http://www.pythontutor.com/), created by Philip Guo, helps people overcome a fundamental barrier to learning programming: understanding what happens as the computer executes each line of a program's source code.
+### VISUALIZE--**Recommend**
 
-Using this tool, you can write Python, Java, JavaScript, TypeScript, Ruby, C, and C++ programs in your Web browser and visualize what the computer is doing step-by-step as it executes those programs. So far, over 1.5 million people in over 180 countries have used Python Tutor to visualize over 15 million pieces of code, often as a supplement to textbooks, lecture notes, and online programming tutorials.
+[Python Tutor](http://www.pythontutor.com/), created by Philip Guo, helps people overcome a fundamental barrier to learning programming: **understanding what happens as the computer executes each line of a program's source code**.
+
+Using this tool, you can write Python, Java, JavaScript, TypeScript, Ruby, C, and C++ programs in your Web browser and visualize what the computer is doing step-by-step as it executes those programs. 
 
 ## 推荐阅读
 
