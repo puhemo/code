@@ -1,5 +1,5 @@
 ---
-title:  "Python Syntax: Conditional Steps and Loops"
+title:  "Python Syntax: Conditional Steps and Iteration"
 date: 2016-06-13
 modified: 2016-06-15
 published: true
