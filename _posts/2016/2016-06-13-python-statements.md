@@ -114,7 +114,7 @@ while i > 2:
 
 * Tips: Check for empty line
   
-  ```
+  ```python
   if len(inp) < 1: break
   ```
 
