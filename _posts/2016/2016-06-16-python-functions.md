@@ -88,7 +88,7 @@ import string
 
 # Function Definition
 def cipher(message, shift, encrypt):
-   if encrypt == False : shift = 26 - shift
+   if encrypt == False: shift = 26 - shift
    return message.translate(
        string.maketrans(
            string.ascii_uppercase + string.ascii_lowercase,
