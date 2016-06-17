@@ -169,5 +169,6 @@ Python for循环可以遍历任何序列的项目，如一个列表或者一个�
 * [Pythonlearn:resources-week01](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
 * [Pythonlearn:resources-week03](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week03)
 * [Python 基础教程](http://www.runoob.com/python/python-if-statement.html)
+* * [Pythonlearn:resources-week05](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week05)
 
  {% include series.html %}
