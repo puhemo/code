@@ -9,7 +9,7 @@ tags:
   - Python
   - Syntax
 excerpt: |
-    ## Conditional Steps - if ... elif .. else
+    # Conditional Execution
 
     Python条件语句是通过一条或多条语句的执行结果（True或者False）来决定执行的代码块。
 
@@ -83,28 +83,80 @@ except:
 result = test * 2  
 print result  
 ```
+# Loops and Iteration
 
-# Repeated steps - while
+## "is" and "is not" Operators
+
+"is" can be used in logical expressions.
+
+It implies 'is exactly the same instance, type and value'.
+
+>  '==' should be used more frequently than 'is' and 'is not' as these operators are intended for specific situations. 'is' and 'is not' are best used when testing for specific values like "None" or "True/False". '==' is best used for testing numeric values. (i.e. 'if i == 4')
+
+## The `while` statement
+
 Python 编程中 while 语句用于循环执行程序，即在某条件下，循环执行某段程序，以处理需要重复处理的相同任务
 
-```python
-  while i < 6:
-      print "At the top i is %d" % i
-```
-
-## Repeated steps- another example
-
-Python 编程中 while 语句用于循环执行程序，即在某条件下，循环执行某段程序，以处理需要重复处理的相同任务
-
-  Assign a value to i which is greater than 2
+We need while loops when you don't know the number of iterations before hand and want to execute a bunch of code until some **condition** is satisfied.
 
 ```python
-  while i > 2:
-      print "Right now i is %d" % i
-      i=i-1
+while i < 6:
+    print "At the top i is %d" % i
 ```
 
-# Loop - for
+```python
+# Assign a value to i which is greater than 2
+while i > 2:
+    print "Right now i is %d" % i
+    i=i-1
+```
+
+## “Infinite loops” and `break`
+
+Sometimes you don’t know it’s time to end a loop until you get half way through the body. In that case you can write an infinite loop on purpose and then use the `break` statement to **jump out of the loop**.
+
+```python
+while True:
+    line = raw_input('> ')
+    if line == 'done':
+        break
+    print line
+print 'Done!'
+```
+
+## Finishing iterations with `continue`
+
+Sometimes you are in an iteration of a loop and want to finish the current iteration and immediately **jump to the next iteration**.In that case you can use the `continue` statement to skip to the next iteration without finishing the body of the loop for the current iteration.
+
+`Continue` is needed for a piece of code like this:
+
+```python
+loop= 0
+count= 0
+running_total= 0
+while loop ==0:
+    inp= raw_input ("Enter a number:")
+    
+    if inp== "done" or inp== "Done" :
+        break   
+    try:
+        num= float(inp)
+    except:
+        print "Invalid input. Please insert a number or type done to finish"
+        continue    
+
+    count= count + 1
+    running_total= running_total + num
+ 
+print count," numbers input" 
+print running_total," total"
+print "and average:", running_total/count
+```
+
+to clarify, `continue` is needed here because **without it any bad input will not stop the iteration**. this will mess up the count and the running total.
+
+## Definite loops using `for`
+
 Python for循环可以遍历任何序列的项目，如一个列表或者一个字符串
 
 ```python
