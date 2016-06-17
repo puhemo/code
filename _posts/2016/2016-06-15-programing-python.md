@@ -158,10 +158,6 @@ excerpt: |
  
 ## Python Data Structures Chapters 6-10
 
-## 在线Python环境
-
-[Python Code Playground](https://pr4e.dr-chuck.com/tsugi/mod/pythonauto/index.php?PHPSESSID=9ea284242fb711aa903999a768bb1fae)
-
 ## Student-curated notes(学生笔记)
 
 - [Installation](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-install)
@@ -178,7 +174,11 @@ excerpt: |
 
 ## Tools
 
-### VISUALIZE--**Recommend**
+### 在线Python环境
+
+[Python Code Playground](https://pr4e.dr-chuck.com/tsugi/mod/pythonauto/index.php?PHPSESSID=9ea284242fb711aa903999a768bb1fae)
+
+### VISUALIZE
 
 [Python Tutor](http://www.pythontutor.com/), created by Philip Guo, helps people overcome a fundamental barrier to learning programming: **understanding what happens as the computer executes each line of a program's source code**.
 
