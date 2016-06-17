@@ -82,4 +82,4 @@ TypeError: an integer is required
 
 ## 推荐阅读
 
-1. [^1]: [简单解决Python文件中文编码问题](http://m.jb51.net/article/75247.htm)
+* [^1]: [简单解决Python文件中文编码问题](http://m.jb51.net/article/75247.htm)
