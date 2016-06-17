@@ -1,5 +1,5 @@
 ---
-title: "Programming for Everybody (Getting Started with Python)"
+title: "Programming for Everybody"
 date: 2016-06-07 19:29:35
 modified: 2016-06-17
 categories:
@@ -18,6 +18,9 @@ excerpt: |
 
 ## 更新历史
 
+* 20160617: 完成Programming for Everybody (Getting Started with Python)
+* 20160617: 完成ChapterFive
+* 20160616: 完成ChapterFour
 * 20160615: 完成ChapterFour-Lecture materials
 * 20160615: 完成ChapterThree
 * 20160615: 完成ChapterThree-Lecture materials
