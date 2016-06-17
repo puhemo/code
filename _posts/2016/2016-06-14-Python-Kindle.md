@@ -44,6 +44,27 @@ while True:
 
 文件名问题
 
+## 修改1
+
+```python
+# encoding: utf-8
+import os
+note_path='G:\documents\My Clippings.txt' #My Clippings文档路径
+f=open(note_path,'r+') #打开Clippings文件
+digest_path='/Users/Administrator/Desktop/digest/' #笔记保存位置
+os.mkdir(digest_path) #新建digest文件夹
+while True:
+    onenote=[]
+    for i in range(0,5):
+        line=f.readline()
+        if not line:
+            exit()
+        onenote.append(line)
+    book_note=open('%s%s.txt'%(digest_path,onenote[0]),'a+','utf-8') # 添加'utf-8'
+    book_note.write(onenote[3]+'\n')
+    book_note.close()
+```
+
 ## 代码来源
 
 [https://www.zhihu.com/question/23031778#](https://www.zhihu.com/question/23031778#)
