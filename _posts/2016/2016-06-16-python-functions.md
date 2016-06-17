@@ -118,9 +118,8 @@ else:
     print "This program will now self destruct!"
 ```
 
-- This throws up an error:
-
-AttributeError: 'str' object has no attribute 'translate' on line 10
+> This throws up an error:
+  AttributeError: 'str' object has no attribute 'translate' on line 10
 
 This program utilizes the principles of a classic [Caesar Cipher](http://en.wikipedia.org/wiki/Caesar_cipher) in order to encrypt and decrypt messages. The textbook [briefly covers module imports and dot notation](http://www.pythonlearn.com/html-008/cfbook005.html#toc46), however if you have only watched the lecture videos on Coursera, just ignore the verbose minutia in the latter part of the function definition and take it on faith that `return message.translate()` is returning an encrypted/decrypted value back to the function call. 
 
