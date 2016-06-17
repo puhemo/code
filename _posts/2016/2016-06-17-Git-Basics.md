@@ -1,5 +1,5 @@
 ---
-title:  "Git 基础 - Getting Started"
+title:  "Git 基础"
 date: 2016-06-17
 modified: 2016-06-17
 published: true
