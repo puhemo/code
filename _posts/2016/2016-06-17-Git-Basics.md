@@ -1,3 +1,19 @@
+---
+title:  "Git 基础 - Getting Started"
+date: 2016-06-17
+modified: 2016-06-17
+published: true
+categories: 
+  - Git
+tags:
+  - Git
+  - Github
+excerpt: |
+  Git 基础-获取 Git 仓库
+series: "Intro to Git"
+---
+{% include series.html %}
+
 # Git 基础 
 
 ## 获取 Git 仓库
@@ -149,3 +165,5 @@ $ git commit -m "Story 182: Fix benchmarks for speed"
 ## More Info
 
 * [2.2 Git 基础 - 记录每次更新到仓库](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93)
+
+{% include series.html %}
