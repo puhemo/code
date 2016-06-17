@@ -17,7 +17,7 @@ excerpt: |
 
 ##  代码
 
-```Python
+```python
 # encoding: utf-8
 import os
 note_path='G:\documents\My Clippings.txt' #My Clippings文档路径
