@@ -11,7 +11,9 @@ published: true
 excerpt: |
   # Functions
   Taking segments of related code, wrapping it up in its own allocated code block, and attributing it with a name so that it can be called later at any point of the overarching program, thus treating it as its own separate, self contained, and individually existing entity. A "sub program" within your program, if you will.
+series: "Intro to Python"	
 ---
+{% include series.html %}
 
 * TOC
 {:toc}
@@ -143,3 +145,6 @@ Decrypted cipher-text: Cryptography using Python!
 
 - [Pythonlearn:resources-week04](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week04#Lecture_Notes_-_Functions)
 - [Defining Functions](https://docs.python.org/2/tutorial/controlflow.html#defining-functions)
+
+{% include series.html %}
+
