@@ -78,7 +78,10 @@ Example:
  print "Hello", name + "! I am Python :D"
 ```
 
-> Note Chandrama:In Python 3.x,` input()` replaces `raw_input()`, for input from the console.Also remember to use the `print()` function with Python 3.4, including parentheses, for output to the console, instead of the old print command that did not require parentheses.So the example above will be in Python 3x as follows:
+> Note Chandrama:In Python 3.x,` input()` replaces `raw_input()`, for input from the console.Also remember to use the `print()` function with Python 3.4, including parentheses, for output to the console, instead of the old print command that did not require parentheses.
+{: .notice--info} 
+
+So the example above will be in Python 3x as follows:
 ```python
 name = input("What is your name, human? ")
 print ("Hello", name + "! I am Python :D")
