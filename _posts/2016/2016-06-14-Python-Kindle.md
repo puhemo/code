@@ -47,3 +47,8 @@ while True:
 ## 代码来源
 
 [https://www.zhihu.com/question/23031778#](https://www.zhihu.com/question/23031778#)
+
+## 推荐阅读
+
+* [简单解决Python文件中文编码问题](简单解决Python文件中文编码问题)
+
