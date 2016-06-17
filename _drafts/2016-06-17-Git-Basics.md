@@ -1,4 +1,4 @@
-## Git 基础
+## Git 基础 - Getting Started
 
 ### 直接记录快照，而非差异比较
 
