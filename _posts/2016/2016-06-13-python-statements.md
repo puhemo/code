@@ -94,7 +94,7 @@ It implies 'is exactly the same instance, type and value'.
 
 >  '==' should be used more frequently than 'is' and 'is not' as these operators are intended for specific situations. 'is' and 'is not' are best used when testing for specific values like "None" or "True/False". '==' is best used for testing numeric values. (i.e. 'if i == 4')
 
-## The `while` statement
+## Indefinite Loops - `while`
 
 Python 编程中 while 语句用于循环执行程序，即在某条件下，循环执行某段程序，以处理需要重复处理的相同任务
 
@@ -162,7 +162,7 @@ print "and average:", running_total/count
 
 to clarify, `continue` is needed here because **without it any bad input will not stop the iteration**. this will mess up the count and the running total.
 
-## Definite loops using `for`
+## Definite loops - `for`
 
 Python for循环可以遍历任何序列的项目，如一个列表或者一个字符串
 
