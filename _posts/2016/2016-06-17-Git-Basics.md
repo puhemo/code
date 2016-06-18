@@ -17,8 +17,6 @@ series: "Intro to Git"
 * TOC
 {:toc}
 
-# Git 基础 
-
 ## 获取 Git 仓库
 
 ### 在现有目录中初始化仓库
