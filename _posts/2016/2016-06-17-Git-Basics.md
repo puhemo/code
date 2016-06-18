@@ -47,7 +47,11 @@ $ git clone https://github.com/libgit2/libgit2
 ```
 
 ```
-$ git clone https://github.com/libgit2/libgit2 mylibgit #自定义仓库名
+$ git clone https://github.com/libgit2/libgit2 mylibgit #自定义本地仓库名
+```
+
+```
+$ git clone -o mylibgit https://github.com/libgit2/libgit2 #自定义远程仓库名
 ```
 
 ## 记录每次更新到仓库
