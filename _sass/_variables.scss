@@ -98,32 +98,6 @@ $masthead-link-color-hover  : mix(#000, $primary-color, 25%);
 
 
 /*
-   Grid
-   ========================================================================== */
-
-$right-sidebar-width-narrow : 200px;
-$right-sidebar-width        : 300px;
-$right-sidebar-width-wide   : 400px;
-
-$susy: (
-  columns: 12,
-  // column-width: 90px,
-  gutters: 1/4,
-  math: fluid,
-  output: float,
-  gutter-position: after,
-  container: $large,
-  global-box-sizing: border-box,
-  // debug: (
-  //   image: show,
-  //   color: blue,
-  //   output: overlay,
-  //   toggle: top right,
-  // ),
-);
-
-
-/*
    Other
    ========================================================================== */
 
