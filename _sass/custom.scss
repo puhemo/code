@@ -370,7 +370,7 @@ blockquote{
   /* Default notice */
 
   .notice {
-    @include notice{mix(#fff, #7a8288, 50%)};
+     border-color: mix(#fff, #7a8288, 50%);
   }
 
   /* Primary notice */
