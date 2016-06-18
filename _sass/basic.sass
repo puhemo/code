@@ -44,16 +44,9 @@ pre
     font-size: .8em
 
 blockquote
-    @import "variables"
-    @mixin notice($notice-color) {
-      margin: 2em 0 !important
-      padding: 1em
-      font-family: $global-font-family
-      font-size: $type-size-6 !important
-      text-indent: initial
-      background-color: mix(#fff, $notice-color, 90%)
-      border-radius: $border-radius
-      box-shadow: 0 1px 1px rgba($notice-color, 0.25)
+    border-left: 5px solid #46e
+    margin: 0
+    padding-left: 1.5em
 
 nav
     ul
@@ -85,4 +78,4 @@ body > footer
     justify-content: space-between
 
 #paginate
-    padding-bottom: 1.5em
+padding-bottom: 1.5em
