@@ -109,3 +109,7 @@ $ git commit -a -m 'made other changes'
 现在，这个项目的提交历史已经产生了分叉。因为刚才你创建了一个新分支，并切换过去进行了一些工作，随后又切换回 master 分支进行了另外一些工作。上述两次改动针对的是不同分支：你可以在不同分支间不断地来回切换和工作，并在时机成熟时将它们合并起来。而所有这些工作，你需要的命令只有 `branch`、`checkout` 和 `commit`。
 
 ![项目分叉历史.](https://git-scm.com/book/en/v2/book/03-git-branching/images/advance-master.png)Figure 3-9. 项目分叉历史
+
+## More Info
+
+* [3.1 Git 分支 - 分支简介](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%AE%80%E4%BB%8B)
