@@ -376,31 +376,31 @@ blockquote{
   /* Primary notice */
 
   .notice--primary {
-    @include notice($primary-color);
+    border-color: #7a8288;
   }
 
   /* Info notice */
 
   .notice--info {
-    @include notice($info-color);
+     border-color: #52adc8;
   }
 
   /* Warning notice */
 
   .notice--warning {
-    @include notice($warning-color);
+    border-color: #f89406;
   }
 
   /* Success notice */
 
   .notice--success {
-    @include notice($success-color);
+    border-color: #62c462;
   }
 
   /* Danger notice */
 
   .notice--danger {
-  @include notice($danger-color);
+  border-color: #ee5f5b;
 
   }
 }
