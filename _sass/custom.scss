@@ -1,3 +1,5 @@
+@import "variables";
+
 figure {
   margin-top: 0px;
   margin-right: 0px;
@@ -370,37 +372,37 @@ blockquote{
   /* Default notice */
 
   .notice {
-     border-color: mix(#fff, #7a8288, 50%);
+     @include notice($light-gray);
   }
 
   /* Primary notice */
 
   .notice--primary {
-    border-color: #7a8288;
+    @include notice($primary-color);
   }
 
   /* Info notice */
 
   .notice--info {
-     border-color: #52adc8;
+     @include notice($info-color);
   }
 
   /* Warning notice */
 
   .notice--warning {
-    border-color: #f89406;
+    @include notice($warning-color);
   }
 
   /* Success notice */
 
   .notice--success {
-    border-color: #62c462;
+    @include notice($success-color);
   }
 
   /* Danger notice */
 
   .notice--danger {
-  border-color: #ee5f5b;
+  @include notice($danger-color);
 
   }
 }
