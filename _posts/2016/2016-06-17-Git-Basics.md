@@ -1,7 +1,7 @@
 ---
 title:  "Git Part 2 - Basics"
 date: 2016-06-17 08:00
-modified: 2016-06-18
+modified: 2016-06-18 10:50
 published: true
 categories: 
   - Git
