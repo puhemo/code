@@ -413,10 +413,14 @@ From https://github.com/paulboone/ticgit
 
 ### 推送到远程仓库
 
-当你想分享你的项目时，必须将其推送到上游。这个命令很简单：`git push [remote-name] [branch-name]`。当你想要将 master 分支推送到 `origin` 服务器时（再次说明，克隆时通常会自动帮你设置好那两个名字），那么运行这个命令就可以将你所做的备份到服务器：
+```
+$ git push <远程主机名> <本地分支名>:<远程分支名>
+```
+
+当你想分享你的项目时，必须将其推送到上游。这个命令很简单：`git push [remote-name] [branch-name]`。当你想要将 master 分支推送到 `origin` 服务器时（**再次说明，克隆时通常会自动帮你设置好那两个名字**），那么运行这个命令就可以将你所做的备份到服务器：
 
 ```
-$ git push origin master
+$ git push origin master #将本地的master分支推送到origin主机的master分支。如果后者不存在，则会被新建。
 ```
 
 ### 查看远程仓库
