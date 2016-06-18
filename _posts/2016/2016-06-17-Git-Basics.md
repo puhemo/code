@@ -1,7 +1,7 @@
 ---
 title:  "Git Part 2 - Basics"
 date: 2016-06-17 08:00
-modified: 2016-06-17
+modified: 2016-06-18
 published: true
 categories: 
   - Git
@@ -216,6 +216,28 @@ $ git rm \*~
 ```
 
 该命令为删除以 `~` 结尾的所有文件。
+
+### 移动文件
+
+Git 不显示跟踪文件移动操作。如果在 Git 中重命名了某个文件，仓库中存储的元数据并不会体现出这是一次改名操作。
+
+要在 Git 中对文件改名，可以这么做：
+
+```
+$ git mv file_from file_to
+```
+
+此时查看状态信息：
+
+```
+$ git mv README.md README
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+    renamed:    README.md -> README
+```
 
 ## More Info
 
