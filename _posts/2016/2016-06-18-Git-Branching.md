@@ -1,5 +1,5 @@
 ---
-title:  "Git Part 3 - Branching"
+title:  "Git Part 3.1 - Branches in a Nutshell"
 date: 2016-06-18 
 modified: 2016-06-18 11:20
 published: true
