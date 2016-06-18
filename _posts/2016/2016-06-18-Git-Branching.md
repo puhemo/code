@@ -1,6 +1,6 @@
 ---
 title:  "Git Part 3 - Branching"
-date: 2016-06-18 11:20
+date: 2016-06-18 
 modified: 2016-06-18 11:20
 published: true
 categories: 
