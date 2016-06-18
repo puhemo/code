@@ -79,6 +79,11 @@ excerpt: |
 [13]: https://www.coursera.org/learn/python-network-data
 [14]: https://www.coursera.org/learn/python-databases
 
+## 课件
+
+- [Box](https://app.box.com/s/q2gg8vc4i1m666eymokoun9xa4q0oh6x)
+- [Google Drive](https://drive.google.com/folderview?id=0B7X1ycQalUnyWXg2MVhTbEZFT28&usp=sharing)
+
 ## Getting Started with Python Chapters 1-5
 
 ### Syllabus(课程提纲)
@@ -151,11 +156,6 @@ excerpt: |
 - Assignment:     5.2 
 - Bonus Interview: Guido van Rossum (Part 2)
 
-### 课件
-
-- [Box](https://app.box.com/s/q2gg8vc4i1m666eymokoun9xa4q0oh6x)
-- [Google Drive](https://drive.google.com/folderview?id=0B7X1ycQalUnyWXg2MVhTbEZFT28&usp=sharing)
- 
 ## Python Data Structures Chapters 6-10
 
 ### **Syllabus**
