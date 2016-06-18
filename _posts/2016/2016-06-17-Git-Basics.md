@@ -313,6 +313,116 @@ Changes to be committed:
     renamed:    README.md -> README
 ```
 
+## 远程仓库的使用
+
+为了能在任意 Git 项目上协作，你需要知道如何管理自己的远程仓库。你可以有好几个远程仓库，通常有些仓库对你只读，有些则可以读写。与他人协作涉及管理远程仓库以及根据需要推送或拉取数据。
+
+### 查看远程仓库
+
+如果想查看你已经配置的远程仓库服务器，可以运行 `git remote` 命令。
+
+```
+$ git clone https://github.com/schacon/ticgit
+Cloning into 'ticgit'...
+remote: Reusing existing pack: 1857, done.
+remote: Total 1857 (delta 0), reused 0 (delta 0)
+Receiving objects: 100% (1857/1857), 374.35 KiB | 268.00 KiB/s, done.
+Resolving deltas: 100% (772/772), done.
+Checking connectivity... done.
+$ cd ticgit
+$ git remote # 仓库服务器默认名
+origin
+$ git remote -v # 读写远程仓库使用的 Git 保存的简写与其对应的 URL
+origin	https://github.com/schacon/ticgit (fetch)
+origin	https://github.com/schacon/ticgit (push)
+```
+
+### 添加远程仓库
+
+运行 `git remote add  ` 添加一个新的远程 Git 仓库，同时指定一个你可以轻松引用的简写：
+
+```
+$ git remote
+origin
+$ git remote add pb https://github.com/paulboone/ticgit #字符串`pb`来代替整个 URL
+$ git remote -v
+origin	https://github.com/schacon/ticgit (fetch)
+origin	https://github.com/schacon/ticgit (push)
+pb	https://github.com/paulboone/ticgit (fetch)
+pb	https://github.com/paulboone/ticgit (push)
+
+$ git fetch pb #拉取远程仓库中有但你没有的信息
+remote: Counting objects: 43, done.
+remote: Compressing objects: 100% (36/36), done.
+remote: Total 43 (delta 10), reused 31 (delta 5)
+Unpacking objects: 100% (43/43), done.
+From https://github.com/paulboone/ticgit
+ * [new branch]      master     -> pb/master
+ * [new branch]      ticgit     -> pb/ticgit
+```
+
+### 从远程仓库中抓取与拉取
+
+就如刚才所见，从远程仓库中获得数据，可以执行：
+
+```
+$ git fetch [remote-name]
+```
+
+这个命令会访问远程仓库，从中拉取所有你还没有的数据。执行完成后，你将会拥有那个远程仓库中所有分支的引用，可以随时合并或查看。
+
+如果你使用 `clone` 命令克隆了一个仓库，命令会自动将其添加为远程仓库并默认以 “origin” 为简写。所以，`git fetch origin` 会抓取克隆（或上一次抓取）后新推送的所有工作。必须注意 `git fetch` 命令会将数据拉取到你的本地仓库 - 它并不会自动合并或修改你当前的工作。当准备好时你必须手动将其合并入你的工作。
+
+### 推送到远程仓库
+
+当你想分享你的项目时，必须将其推送到上游。这个命令很简单：`git push [remote-name] [branch-name]`。当你想要将 master 分支推送到 `origin` 服务器时（再次说明，克隆时通常会自动帮你设置好那两个名字），那么运行这个命令就可以将你所做的备份到服务器：
+
+```
+$ git push origin master
+```
+
+### 查看远程仓库
+
+如果想要查看某一个远程仓库的更多信息，可以使用 `git remote show [remote-name]` 命令。如果想以一个特定的缩写名运行这个命令，例如 `origin`，会得到像下面类似的信息：
+
+```
+$ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/schacon/ticgit
+  Push  URL: https://github.com/schacon/ticgit
+  HEAD branch: master
+  Remote branches:
+    master                               tracked
+    dev-branch                           tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+```
+
+它同样会列出远程仓库的 URL 与跟踪分支的信息。这些信息非常有用，它告诉你正处于 master 分支，并且如果运行 git pull，就会抓取所有的远程引用，然后将远程 master 分支合并到本地 master 分支。它也会列出拉取到的所有远程引用。
+
+### 远程仓库的移除与重命名
+
+如果想要重命名引用的名字可以运行 `git remote rename` 去修改一个远程仓库的简写名。例如，想要将 `pb` 重命名为 `paul`，可以用 `git remote rename` 这样做：
+
+```
+$ git remote rename pb paul
+$ git remote
+origin
+paul
+```
+
+值得注意的是这同样也会修改你的远程分支名字。那些过去引用 `pb/master` 的现在会引用 `paul/master`。
+
+如果因为一些原因想要移除一个远程仓库 - 你已经从服务器上搬走了或不再想使用某一个特定的镜像了，又或者某一个贡献者不再贡献了 - 可以使用 `git remote rm` ：
+
+```
+$ git remote rm paul
+$ git remote
+origin
+```
+
 ## More Info
 
 * [2.2 Git 基础 - 记录每次更新到仓库](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93)
