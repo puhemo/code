@@ -110,6 +110,8 @@ $ git commit -a -m 'made other changes'
 
 ![项目分叉历史.](https://git-scm.com/book/en/v2/book/03-git-branching/images/advance-master.png)Figure 3-9. 项目分叉历史
 
+由于 Git 的分支实质上仅是包含所指对象校验和（长度为 40 的 SHA-1 值字符串）的文件，所以它的创建和销毁都异常高效。 创建一个新分支就像是往一个文件中写入 41 个字节（40 个字符和 1 个换行符），如此的简单能不快吗？
+
 ## More Info
 
 * [3.1 Git 分支 - 分支简介](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%AE%80%E4%BB%8B)
