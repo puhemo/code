@@ -392,7 +392,7 @@ From https://github.com/paulboone/ticgit
   $ git pull origin next #
   ```
   
-  在某些场合，Git会自动在本地分支与远程分支之间，建立一种追踪关系（tracking）。比如，在git clone的时候，所有本地分支默认与远程主机的同名分支，建立追踪关系，也就是说，本地的master分支自动"追踪"origin/master分支。
+  在某些场合，Git会自动在本地分支与远程分支之间，建立一种追踪关系（tracking）[^1]。比如，在git clone的时候，所有本地分支默认与远程主机的同名分支，建立追踪关系，也就是说，本地的master分支自动"追踪"origin/master分支。
   
   如果当前分支与远程分支存在追踪关系，git pull就可以省略远程分支名。
   
@@ -467,5 +467,7 @@ origin
 
 * [2.2 Git 基础 - 记录每次更新到仓库](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93)
 * [Git远程操作详解](http://www.ruanyifeng.com/blog/2014/06/git_remote.html)
+
+[^1]: 从一个远程跟踪分支检出一个本地分支会自动创建一个叫做 “跟踪分支”（有时候也叫做 “上游分支”）。 跟踪分支是与远程分支有直接关系的本地分支。 如果在一个跟踪分支上输入 git pull，Git 能自动地识别去哪个服务器上抓取、合并到哪个分支。
 
 {% include series.html %}
