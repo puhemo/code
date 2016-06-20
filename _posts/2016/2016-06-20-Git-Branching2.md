@@ -14,6 +14,9 @@ series: "Intro to Git"
 ---
 {% include series.html %}
 
+* TOC
+{:toc}
+
 
 让我们来看一个简单的分支新建与分支合并的例子，实际工作中你可能会用到类似的工作流。你将经历如下步骤：
 
