@@ -34,7 +34,7 @@ series: "Intro to Git"
 
 ![一个简单的提交历史。](https://git-scm.com/book/en/v2/book/03-git-branching/images/basic-branching-1.png)Figure 3-10. 一个简单提交历史
 
-现在，你已经决定要解决你的公司使用的问题追踪系统中的 #53 问题。想要新建一个分支并同时切换到那个分支上，你可以运行一个带有 `-b` 参数的 `git checkout` 命令：
+现在，你已经决定要解决你的公司使用的问题追踪系统中的 #53 问题。想要新建一个分支并同时切换到那个分支上，你可以运行一个带有 `-b`[^2] 参数的 `git checkout` 命令：
 
 ```
 $ git checkout -b iss53
@@ -260,5 +260,6 @@ Conflicts:
 ```
 
 [^1]: Tell the command to automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected.
+[^2]: Create a new branch named <new_branch> and start it at <start_point>.
 
 {% include series.html %}
