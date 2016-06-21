@@ -1,6 +1,6 @@
 ---
-title: "Python Syntax: String Methods"
-date: 2016-06-21
+title: "Python Part4: String Methods"
+date: 2016-06-21 09:00
 modified: 2016-06-21
 categories:
   - Python
@@ -92,3 +92,5 @@ Return a copy of the string with leading characters removed.
 
 * [5.6.1. String Methods](https://docs.python.org/release/2.7.10/library/stdtypes.html#string-methods)
 * [Pythonlearn:resources-week06](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week06)
+
+{% include series.html %}
