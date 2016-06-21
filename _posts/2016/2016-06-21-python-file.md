@@ -9,9 +9,7 @@ tags:
   - Syntax
 published: true
 excerpt: |
-  # Functions
-  Taking segments of related code, wrapping it up in its own allocated code block, and attributing it with a name so that it can be called later at any point of the overarching program, thus treating it as its own separate, self contained, and individually existing entity. A "sub program" within your program, if you will.
-series: "Intro to Python"	
+  Working with files
 ---
 {% include series.html %}
 
@@ -98,3 +96,5 @@ while True:
 * [Python startswith()方法](http://www.runoob.com/python/att-string-startswith.html)
 * [Python 文件I/O](http://www.runoob.com/python/python-files-io.html)
 * [Pythonlearn:resources-week07](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week07)
+
+{% include series.html %}
