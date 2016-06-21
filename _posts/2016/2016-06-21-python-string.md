@@ -1,5 +1,5 @@
 ---
-title: "Python Part4: String Methods"
+title: "Python Part 4: String Methods"
 date: 2016-06-21 09:00
 modified: 2016-06-21
 categories:
