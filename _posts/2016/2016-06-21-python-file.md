@@ -10,6 +10,7 @@ tags:
 published: true
 excerpt: |
   Working with files
+series: "Intro to Python"	
 ---
 {% include series.html %}
 
