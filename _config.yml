@@ -34,6 +34,9 @@ style:
         even: "#222222"
 
 
+# Time Zone
+timezone: Asia/Shanghai
+
 links:
    twitter: "https://twitter.com/puhemo/"
    github: "https://github.com/puhemo/"
