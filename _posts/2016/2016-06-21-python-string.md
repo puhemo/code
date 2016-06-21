@@ -9,8 +9,7 @@ tags:
   - Syntax
 published: true
 excerpt: |
-  # Functions
-  Taking segments of related code, wrapping it up in its own allocated code block, and attributing it with a name so that it can be called later at any point of the overarching program, thus treating it as its own separate, self contained, and individually existing entity. A "sub program" within your program, if you will.
+  Below are listed the string methods.  
 series: "Intro to Python"	
 ---
 {% include series.html %}
