@@ -1,6 +1,6 @@
 ---
-title:  "Python Syntax: Conditional Steps and Iteration"
-date: 2016-06-13
+title:  "Python Part 2: Conditional Steps and Iteration"
+date: 2016-06-13 21:00
 modified: 2016-06-15
 published: true
 categories: 
