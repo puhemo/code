@@ -27,6 +27,7 @@ data="0123456"
 pos=data.find('3')        
 print pos         
 ```
+
 ### upper():
 
 Use the` .upper() `function to return a **copy** of the given string  converted to uppercase. 
