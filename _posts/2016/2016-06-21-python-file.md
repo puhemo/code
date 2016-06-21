@@ -1,5 +1,5 @@
 ---
-title: "Python Part5: File"
+title: "Python Part 5: File"
 date: 2016-06-21 10:00
 modified: 2016-06-21
 categories:
