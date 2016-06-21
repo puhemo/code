@@ -1,6 +1,6 @@
 ---
-title:  "Python Syntax: Variable and Boolean"
-date: 2016-06-13
+title:  "Python Part 1: Variable and Boolean"
+date: 2016-06-13 20:00
 modified: 2016-06-15
 published: true
 categories: 
