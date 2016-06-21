@@ -1,5 +1,5 @@
 ---
-title: "Python Syntax: Functions and Modules"
+title: "Python Part 3: Functions and Modules"
 date: 2016-06-16
 modified: 2016-06-16
 categories:
