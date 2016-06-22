@@ -19,7 +19,7 @@ series: "Intro to Python"
 
 ### find()： 
 
-The `.find()` method should be used only if you need to know the **position** of *sub*.
+The `.find()` method[^1] should be used only if you need to know the **position** of *sub*.
 
 ```python
 # To find the position of the "3" in the string "0123456":  
@@ -94,3 +94,5 @@ Return a copy of the string with leading characters removed.
 * [Pythonlearn:resources-week06](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week06)
 
 {% include series.html %}
+
+[^1]: A method is a function that “belongs to” an object.
