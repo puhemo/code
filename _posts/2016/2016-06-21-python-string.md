@@ -1,5 +1,5 @@
 ---
-title: "Python Part 4: String Methods"
+title: "Python Part 4: String"
 date: 2016-06-21 09:00
 modified: 2016-06-22
 categories:
@@ -16,6 +16,8 @@ series: "Intro to Python"
 
 * TOC
 {:toc}
+
+## String Methods
 
 ### find()
 
@@ -88,7 +90,20 @@ Return a copy of the string with leading characters removed.
 'spacious   '
 ```
 
-### More Info:
+## Format operator
+
+The format operator, `%` allows us to construct strings, replacing parts of the strings with the data stored in variables. 
+
+* '%d' to format an integer
+* '%g' to format a floating-point number 
+* '%s' to format a string
+
+```python
+>>> 'In %d years I have spotted %g %s.' % (3, 0.1, 'camels')
+'In 3 years I have spotted 0.1 camels.'
+```
+
+## More Info:
 
 * [5.6.1. String Methods](https://docs.python.org/release/2.7.10/library/stdtypes.html#string-methods)
 * [Pythonlearn:resources-week06](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week06)
