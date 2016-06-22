@@ -1,7 +1,7 @@
 ---
 title: "Python Part 4: String Methods"
 date: 2016-06-21 09:00
-modified: 2016-06-21
+modified: 2016-06-22
 categories:
   - Python
 tags:
@@ -17,7 +17,7 @@ series: "Intro to Python"
 * TOC
 {:toc}
 
-### find()： 
+### find()
 
 The `.find()` method[^1] should be used only if you need to know the **position** of *sub*.
 
@@ -28,7 +28,7 @@ pos=data.find('3')
 print pos         
 ```
 
-### upper():
+### upper()
 
 Use the` .upper() `function to return a **copy** of the given string  converted to uppercase. 
 
