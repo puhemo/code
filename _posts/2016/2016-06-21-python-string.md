@@ -1,7 +1,7 @@
 ---
 title: "Python Part 4: String"
 date: 2016-06-21 09:00
-modified: 2016-06-22
+modified: 2016-06-22 09:22
 categories:
   - Python
 tags:
