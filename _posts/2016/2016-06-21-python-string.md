@@ -17,11 +17,11 @@ series: "Intro to Python"
 * TOC
 {:toc}
 
-## String Methods
+## String Methods[^1]
 
 ### find()
 
-The `.find()` method[^1] should be used only if you need to know the **position** of *sub*.
+The `.find()` method should be used only if you need to know the **position** of *sub*.
 
 ```python
 # To find the position of the "3" in the string "0123456":  
@@ -110,4 +110,4 @@ The format operator, `%` allows us to construct strings, replacing parts of the 
 
 {% include series.html %}
 
-[^1]: A method is a function that “belongs to” an object.
+[^1]: A function that is associated with an object and called using dot notation. 
