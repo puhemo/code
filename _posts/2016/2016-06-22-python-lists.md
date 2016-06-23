@@ -39,7 +39,15 @@ Collection - allows us to put many values in a single variable.
 
 Methods: append, count, extend, index, insert, pop, remove, reverse, sort 
 
-* `append()` - use to add constants to the end of a list  (lst.append('word'))
+* `append()` - use to add constants to the end of a list 
+
+  ```
+  >>> t = ['a', 'b', 'c']
+  >>> t.append('d')
+  >>> print t
+  ['a', 'b', 'c', 'd']
+  ```
+
 * `remove()` - use to remove constants from a list  
 * `sort()` - use to sort the list. It changes the list permanently.
 * `split()` - break a string into parts and produces a list of strings.  
