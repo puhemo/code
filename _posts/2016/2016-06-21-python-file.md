@@ -67,6 +67,22 @@ for line in fhand:
 ##  Using try, except, and open
 
 ```python
+fname = raw_input('Enter the file name: ')
+# QA 
+try:
+    fhand = open(fname)
+except:
+    print 'File cannot be opened:', fname
+    exit()
+
+count = 0
+for line in fhand:
+    if line.startswith('Subject:') : 
+        count = count + 1
+print 'There were', count, 'subject lines in', fname
+```
+
+```python
 fhand = raw_input('Enter the file name: ')
 while True:
     try:
