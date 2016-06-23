@@ -41,15 +41,33 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
 
 * `append()` - use to add constants to the end of a list 
 
-  ```
+  ```python
   >>> t = ['a', 'b', 'c']
   >>> t.append('d')
   >>> print t
   ['a', 'b', 'c', 'd']
   ```
 
+* `extend()` -takes a list as an argument and appends all of the elements
+   
+  ```python
+  >>> t1 = ['a', 'b', 'c']
+  >>> t2 = ['d', 'e']
+  >>> t1.extend(t2)
+  >>> print t1
+  ['a', 'b', 'c', 'd', 'e']
+  ```
+
 * `remove()` - use to remove constants from a list  
-* `sort()` - use to sort the list. It changes the list permanently.
+* `sort()` -  arrange the elements of the list from low to highy.
+  
+  ```python
+  >>> t = ['d', 'c', 'e', 'b', 'a']
+  >>> t.sort()
+  >>> print t
+  ['a', 'b', 'c', 'd', 'e']
+  ```
+
 * `split()` - break a string into parts and produces a list of strings.  
 
 ##  List Functions
