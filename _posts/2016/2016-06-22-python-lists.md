@@ -110,6 +110,50 @@ del: A command which removes what corresponds to the index of the list.
 [2, 3, 5]
 ```
 
+## Lists and strings
+
+To convert from a string to a list of characters,you can use `list`:
+
+```python
+>>> s = 'spam'
+>>> t = list(s)
+>>> print t
+['s', 'p', 'a', 'm']
+```
+
+To break a string into words, you can use the `split` method:
+
+```python
+>>> s = 'pining for the fjords'
+>>> t = s.split()
+>>> print t
+['pining', 'for', 'the', 'fjords']
+>>> print t[2]
+the
+```
+
+You can call split with an optional argument called a delimiter that specifies which characters to use as word boundaries.The following example uses a hyphen as a delimiter:
+
+```python
+>>> s = 'spam-spam-spam'
+>>> delimiter = '-'
+>>> s.split(delimiter)
+['spam', 'spam', 'spam']
+
+```
+
+`join` is the inverse of split. It takes a list of strings and concatenates the elements. `join` is a string method,so you have to invoke it on the delimiter and pass the list as a parameter:
+
+```python
+>>> t = ['pining', 'for', 'the', 'fjords']
+>>> delimiter = ' '
+>>> delimiter.join(t)
+'pining for the fjords'
+
+```
+
+In this case the delimiter is a space character, so join puts a space between words. To concatenate strings without spaces, you can use the empty string`"`, as a delimiter. 
+
 ## More Info
 
 [Pythonlearn:resources-week08](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week08)
