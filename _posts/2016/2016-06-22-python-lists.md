@@ -72,6 +72,15 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
 
 * `split()` - break a string into parts and produces a list of strings.  
 
+  ```python
+  fhand = open('mbox-short.txt')
+  for line in fhand:
+      line = line.rstrip()
+      if not line.startswith('From ') : continue
+      words = line.split()
+      print words[2]
+  ```
+
 ##  List Functions
 
 * `len()` - find length, 
@@ -142,7 +151,7 @@ You can call split with an optional argument called a delimiter that specifies w
 
 ```
 
-`join` is the inverse of split. It takes a list of strings and concatenates the elements. `join` is a string method,so you have to invoke it on the delimiter and pass the list as a parameter:
+`join` is the inverse of split. **It takes a list of strings and concatenates the elements**. `join` is a string method,so you have to invoke it on the delimiter and pass the list as a parameter:
 
 ```python
 >>> t = ['pining', 'for', 'the', 'fjords']
