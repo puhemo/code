@@ -104,7 +104,8 @@ while True:
 ##  Writing files
 
 ```python
-# If the file already exists, opening it in write mode clears out the old data and starts fresh, so be careful! /n If the file doesn’t exist, a new one is created.
+# If the file already exists, opening it in write mode clears out the old data and starts fresh, so be careful! 
+# If the file doesn’t exist, a new one is created.
 >>> fout = open('output.txt', 'w')
 >>> print fout
 <open file 'output.txt', mode 'w' at 0xb7eb2410>
