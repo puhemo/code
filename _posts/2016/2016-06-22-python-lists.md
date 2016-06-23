@@ -39,6 +39,8 @@ Collection - allows us to put many values in a single variable.
 
 Methods: append, count, extend, index, insert, pop, remove, reverse, sort 
 
+> Most list methods are void; they modify the list and return None. If you accidentally write t = t.sort(), you will be disappointed with the result.
+
 * `append()` - use to add constants to the end of a list 
 
   ```python
@@ -86,9 +88,20 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
 
 * `sum()/len()`: average 
 
-## Del
+## Deleting elements
 
-A command which removes what corresponds to the index of the list.
+`pop` modifies the list and returns the element that was removed. If you don’t provide an index, it deletes and returns the last element.
+
+```python
+>>> t = ['a', 'b', 'c']
+>>> x = t.pop(1)
+>>> print t
+['a', 'c']
+>>> print x
+b
+```
+
+del: A command which removes what corresponds to the index of the list.
 
 ```python
 >>> a = [1, 2, 3, 4, 5]
