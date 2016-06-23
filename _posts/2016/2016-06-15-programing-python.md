@@ -18,6 +18,7 @@ excerpt: |
 
 ## 更新历史
 
+* 20160623: 完成ChapterEight
 * 20160621: 完成ChapterSeven
 * 20160620: 完成ChapterSix
 * 20160617: 完成Programming for Everybody (Getting Started with Python)
