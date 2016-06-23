@@ -101,6 +101,14 @@ while True:
     quit()
 ```
 
+##  Writing files
+
+```python
+# If the file already exists, opening it in write mode clears out the old data and starts fresh, so be careful! If the file doesn’t exist, a new one is created.
+>>> fout = open('output.txt', 'w')
+>>> print fout
+<open file 'output.txt', mode 'w' at 0xb7eb2410>
+```
 
 [^1]: read()方法會一次讀取所有的檔案內容，在不使用檔案時，可以使用fileObject.close()將檔案關閉以節省資源.
 [^2]: startswith() 方法用于检查字符串是否是以指定子字符串开头，如果是则返回 True，否则返回 False.
