@@ -72,6 +72,15 @@ Dictionaries have a method called `get` that takes a key and a default value. If
 0
 ```
 
+### `pop(key)`[^1]
+
+```python
+>>> d.pop('Bob')
+75
+>>> d
+{'Michael': 95, 'Tracy': 85}
+```
+
 ## Dictionary as a set of counters
 
 ```python
@@ -121,3 +130,5 @@ print counts
 [Pythonlearn:resources-week09](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week09)
 
 {% include series.html %}
+
+[^1]: 要删除一个key，用`pop(key)`方法，对应的value也会从dict中删除
