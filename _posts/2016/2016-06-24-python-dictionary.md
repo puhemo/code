@@ -127,8 +127,8 @@ print counts
 
 ## More Info:
 
-[Pythonlearn:resources-week09](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week09)
-[使用dict和set](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/0013868193482529754158abf734c00bba97c87f89a263b000)
+[Pythonlearn:resources-week09](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week09)  
+[使用dict和set](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/0013868193482529754158abf734c00bba97c87f89a263b000)  
 
 {% include series.html %}
 
