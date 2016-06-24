@@ -72,7 +72,7 @@ Dictionaries have a method called `get` that takes a key and a default value. If
 0
 ```
 
-### `pop(key)`[^1]
+### `.pop(key)`[^1]
 
 ```python
 >>> d.pop('Bob')
