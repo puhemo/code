@@ -18,6 +18,8 @@ excerpt: |
 
 ## 更新历史
 
+* 20160625: 完成ChapterTen
+* 20160624: 完成ChapterNine
 * 20160623: 完成ChapterEight
 * 20160621: 完成ChapterSeven
 * 20160620: 完成ChapterSix
