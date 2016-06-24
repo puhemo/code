@@ -163,6 +163,30 @@ You can call split with an optional argument called a delimiter that specifies w
 
 In this case the delimiter is a space character, so join puts a space between words. To concatenate strings without spaces, you can use the empty string`"`, as a delimiter. 
 
+## Debugging
+
+1. Don’t forget that most list methods modify the argument and return **None**
+   
+   ```python
+   t = t.sort()           # WRONG!
+   ```
+
+   Because `sort` returns **None**, the next operation you perform with t is likely to fail.
+   
+2. Pick an idiom and stick with it.
+   
+   ```python
+   t.append(x)
+   t = t + [x]
+   
+   t.append([x])          # WRONG!
+   t = t.append(x)        # WRONG!
+   t + [x]                # WRONG!
+   t = t + x              # WRONG!
+   ```
+
+
+
 ## More Info
 
 [Pythonlearn:resources-week08](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week08)
