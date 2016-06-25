@@ -15,8 +15,12 @@ excerpt: |
 ```python
 import string # A Module
 fname = raw_input('Enter the file name: ')
-if len(fname) < 1: fname = 'romeo-full.txt'
-fhand = open(fname)
+try:
+    fhand = open(fname)
+except: 
+    print 'File cannot be opened:', fname
+    exit()
+
 counts = dict()
 for line in fhand:
     words = line.translate(None, string.punctuation).lower().split()
