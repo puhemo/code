@@ -1,5 +1,5 @@
 ---
-title: "Python Part 7: Dictionary"
+title: "Python Part 7: Dictionaries"
 date: 2016-06-24 09:47
 modified: 2016-06-25
 categories:
