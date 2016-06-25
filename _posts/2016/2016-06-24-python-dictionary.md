@@ -1,7 +1,7 @@
 ---
 title: "Python Part 7: Dictionary"
 date: 2016-06-24 09:47
-modified: 2016-06-24
+modified: 2016-06-25
 categories:
   - Python
 tags:
@@ -54,6 +54,8 @@ for name in counts.keys():
 ```
 
 ### `.items()`
+
+return a list of tuples, where each tuple is a key-value pair.
 
 ```python
 for name,occurrence in counts.items():
