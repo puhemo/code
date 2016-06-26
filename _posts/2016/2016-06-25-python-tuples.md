@@ -32,7 +32,7 @@ Syntactically, a tuple is a comma-separated list of values:
 >>> type(t1)
 <type 'tuple'>
 
-# Without the final comma
+# Without the final comma[^4]
 >>> t2 = ('a')
 >>> type(t2)
 <type 'str'>
@@ -247,5 +247,6 @@ for key, val in lst[:10] :
 [^1]: Tuples can only count and index!
 [^2]: Delete all characters from s that are in deletechars (if present), and then translate the characters using table, which must be a 256-character string giving the translation for each character value, indexed by its ordinal. If table is None, then only the character deletion step is performed.
 [^3]: The list of charactersthat it considers “punctuation”
+[^4]: 只有1个元素的tuple定义时必须加一个逗号,，来消除歧义
 
 {% include series.html %}
