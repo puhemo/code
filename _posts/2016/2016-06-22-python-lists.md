@@ -5,8 +5,8 @@ modified: 2016-06-22
 categories:
   - Python
 tags:
-  - Python
-  - Syntax
+  - Python Syntax
+  - Python 2.x
 published: true
 excerpt: |
   Collection - allows us to put many values in a single variable.  
