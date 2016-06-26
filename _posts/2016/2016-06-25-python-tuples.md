@@ -7,6 +7,7 @@ categories:
 tags:
   - Python
   - Syntax
+  - Python 2.x
 published: true
 excerpt: |
   A tuple is a sequence of values much like a list. The important difference is that tuples are immutable.  
