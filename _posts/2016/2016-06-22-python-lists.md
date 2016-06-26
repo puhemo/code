@@ -105,28 +105,22 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
 
 * `len()` - find length, 
 
-
 * `max()` - find highest value, 
-
 
 * `min()` - find lowest value, 
 
-
 * `sum()` - add all values
-
 
 * `sum()/len()`: average 
 
-## Deleting elements
+* `del(n[1]）`: like `.pop()` in that it will remove the item at the given index, but it won't return it:
 
-del(n[1]）: like `.pop()` in that it will remove the item at the given index, but it won't return it:
-
-```python
->>> a = [1, 2, 3, 4, 5]
->>> del a[0], a[2] #  since a[0] first gets deleted yielding [2, 3, 4, 5], then since the 2-element of [2, 3, 4, 5] is 4, 4 gets deleted.
->>> print a
-[2, 3, 5]
-```
+  ```python
+  >>> a = [1, 2, 3, 4, 5]
+  >>> del a[0], a[2] #  since a[0] first gets deleted yielding [2, 3, 4, 5], then since the 2-element of [2, 3, 4, 5] is 4, 4 gets deleted.
+  >>> print a
+  [2, 3, 5]
+  ```
 
 ## Lists and strings
 
