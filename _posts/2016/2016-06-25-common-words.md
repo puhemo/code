@@ -5,9 +5,9 @@ modified: 2016-06-25
 categories:
   - Python
 tags:
-  - Python
-  - Utilities
+  - Python Syntax
   - Python 2.x
+  - Utilities
 published: true
 excerpt: |
   Use python to find the top 10 most common words in a txt file.
