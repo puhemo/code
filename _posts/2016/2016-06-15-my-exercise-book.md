@@ -5,7 +5,7 @@ modified: 2016-06-15
 categories:
   - Python
 tags:
-  - Python
+  - Python 2.x
   - Exercise
   - Error
 excerpt: |
