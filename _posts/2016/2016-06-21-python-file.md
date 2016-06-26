@@ -5,8 +5,8 @@ modified: 2016-06-23
 categories:
   - Python
 tags:
-  - Python
-  - Syntax
+  - Python Syntax
+  - Python 2.x
 published: true
 excerpt: |
   Working with files
