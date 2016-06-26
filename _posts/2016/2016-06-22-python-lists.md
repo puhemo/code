@@ -41,7 +41,7 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
 
 > Most list methods are void; they modify the list and return None. If you accidentally write t = t.sort(), you will be disappointed with the result.
 
-* `append()` - use to add constants to the end of a list 
+* `.append()` - use to add constants to the end of a list 
 
   ```python
   >>> t = ['a', 'b', 'c']
@@ -50,7 +50,7 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
   ['a', 'b', 'c', 'd']
   ```
 
-* `extend()` -takes a list as an argument and appends all of the elements
+* `.extend()` - take a list as an argument and appends all of the elements
    
   ```python
   >>> t1 = ['a', 'b', 'c']
@@ -60,8 +60,31 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
   ['a', 'b', 'c', 'd', 'e']
   ```
 
-* `remove()` - use to remove constants from a list  
-* `sort()` -  arrange the elements of the list from low to highy.
+* `.pop()` - remove the item at index from the list and return it to you:
+  
+  ```python
+  n = [1, 3, 5]
+  n.pop(1)
+  # Returns 3 (the item at index 1)
+  print n
+  # prints [1, 5]
+  ```
+
+
+* `.remove()` - remove the actual item if it finds it:  
+  
+  ```python
+  n = [1, 3, 5]
+  n.remove(1)
+  # Removes 1 from the list,
+  # NOT the item at index 1
+  print n
+  # prints [3, 5]
+  ```
+  
+  
+
+* `.sort()` -  arrange the elements of the list from low to highy.
   
   ```python
   >>> t = ['d', 'c', 'e', 'b', 'a']
@@ -70,7 +93,7 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
   ['a', 'b', 'c', 'd', 'e']
   ```
 
-* `split()` - break a string into parts and produces a list of strings.  
+* `.split()` - break a string into parts and produces a list of strings.  
 
   ```python
   fhand = open('mbox-short.txt')
