@@ -6,8 +6,8 @@ published: true
 categories: 
   - Python
 tags:
-  - Python
-  - Syntax
+  - Python Syntax
+  - Python 2.x
 excerpt: |
     # Conditional Execution
 
