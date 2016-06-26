@@ -35,6 +35,28 @@ Collection - allows us to put many values in a single variable.
 
 * List is an **ordered** sequence
 
+## Iterating over a list in a function
+
+we have two ways of iterating through a list.
+
+**Method 1** - `for item in list`:
+
+```python
+for item in list:
+    print item
+```
+
+**Method 2** - iterate through indexes:
+
+```python
+for i in range(len(list)):
+    print list[i]
+```
+
+**Method 1** is useful to loop through the list, but it's not possible to modify the list this way.  
+**Method 2** uses indexes to loop through the list, making it possible to also **modify** the list if needed.  
+
+
 ## List Methods[^1]
 
 Methods: append, count, extend, index, insert, pop, remove, reverse, sort 
