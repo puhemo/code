@@ -122,6 +122,8 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
       words = line.split()
       print words[2]
   ```
+  
+* `.join()` - delimiter.join(list) - It takes a list of strings and concatenates the elements. `join` is a string method.  
 
 ##  List Functions
 
