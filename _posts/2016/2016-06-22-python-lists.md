@@ -70,7 +70,6 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
   # prints [1, 5]
   ```
 
-
 * `.remove()` - remove the actual item if it finds it:  
   
   ```python
@@ -81,8 +80,6 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
   print n
   # prints [3, 5]
   ```
-  
-  
 
 * `.sort()` -  arrange the elements of the list from low to highy.
   
@@ -122,18 +119,7 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
 
 ## Deleting elements
 
-`pop` modifies the list and returns the element that was removed. If you don’t provide an index, it deletes and returns the last element.
-
-```python
->>> t = ['a', 'b', 'c']
->>> x = t.pop(1)
->>> print t
-['a', 'c']
->>> print x
-b
-```
-
-del: A command which removes what corresponds to the index of the list.
+del(n[1]）: like `.pop()` in that it will remove the item at the given index, but it won't return it:
 
 ```python
 >>> a = [1, 2, 3, 4, 5]
