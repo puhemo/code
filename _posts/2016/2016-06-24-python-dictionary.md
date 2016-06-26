@@ -5,8 +5,8 @@ modified: 2016-06-25
 categories:
   - Python
 tags:
-  - Python
-  - Syntax
+  - Python Syntax
+  - Python 2.x
 published: true
 excerpt: |
   A dictionary is a mapping between a set of indices(which are called keys) and a set of values.  
