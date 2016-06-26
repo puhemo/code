@@ -5,8 +5,7 @@ modified: 2016-06-25
 categories:
   - Python
 tags:
-  - Python
-  - Syntax
+  - Python Syntax
   - Python 2.x
 published: true
 excerpt: |
