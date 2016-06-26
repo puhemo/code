@@ -19,7 +19,7 @@ series: "Intro to Python"
 
 A tuple is a sequence of values much like a list. The important difference is that tuples are **immutable**[^1].
 
-Syntactically, a tuple is a comma-separated list of values:
+Syntactically, a tuple[^4] is a comma-separated list of values:
 
 ```python
 >>> t = 'a', 'b', 'c', 'd', 'e'
@@ -32,7 +32,7 @@ Syntactically, a tuple is a comma-separated list of values:
 >>> type(t1)
 <type 'tuple'>
 
-# Without the final comma[^4]
+# Without the final comma
 >>> t2 = ('a')
 >>> type(t2)
 <type 'str'>
