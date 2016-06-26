@@ -6,7 +6,7 @@ published: true
 categories:
   - Python
 tags:
-  - Python
+  - Python 2.x
   - Error
 excerpt: |
     A Collection of some python errors for search
