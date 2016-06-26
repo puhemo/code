@@ -5,7 +5,7 @@ modified: 2016-06-17
 categories:
   - Python
 tags:
-  - Python
+  - Python 2.x
   - Kindle
   - Issue
 published: ture
