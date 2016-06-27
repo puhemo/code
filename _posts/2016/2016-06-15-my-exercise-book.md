@@ -6,7 +6,7 @@ categories:
   - Python
 tags:
   - Python 2.x
-  - Exercise
+  - Python Exercise
   - Error
 excerpt: |
   My Python exercise book
