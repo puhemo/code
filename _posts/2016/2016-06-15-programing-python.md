@@ -237,6 +237,71 @@ excerpt: |
 - Bonus Interview: Douglas Crockford
 
 
+## Using Python to Access Web Data Chapters 11-13
+
+### **Unit 1**
+
+**Introduction**
+
+- Welcome Video
+- Textbook and Slides
+
+**Installing Python**
+
+- Installing Python on Windows 8
+- Using Python on a Macintosh
+- Using Python on a Raspberry Pi
+- Installing Python on Windows Vista
+- Peer-Graded Assignment: Python Installation Screen Shots
+
+### **Unit 2**
+
+**Regular Expressions**
+
+- Lecture Materials
+- Quiz: Regular Expressions
+- Assignment: Extracting Data With Regular Expressions
+
+
+- Bonus Interview: Bjarne Strostrup
+
+### **Unit 3**
+
+**Networks and Sockets**
+
+- Lecture Materials
+- Quiz: Networks and Sockets
+- Assignment: Understanding the Request / Response Cycle
+- Bonus Interview: Leonard Kleinrock
+- Bonus Interview: Robert Cailliau
+
+### **Unit 4**
+
+**Programs that Surf the Web**
+
+- Lecture Materials
+- Quiz: Reading Web Data from Python
+- Assignment: Scraping HTML Data with Beautiful Soup
+- Assignment: Following Links in HTML with Beautiful Soup
+- Bonus Interview: Tim Berners-Lee
+
+### **Unit 5**
+
+**Web Services and XML**
+
+- Lecture Materials
+- Quiz: eXtensible Markup Language
+- Assignment: Extracting Data from XML
+- Bonus Interview: Ian Horrocks
+
+### **Unit 6**
+
+**JSON and the REST Architecture**
+
+- Lecture Materials
+- Quiz: REST, JSON, and APIs
+- Assignment: Extracting Data from JSON
+- Assignment: Using the GeoJSON API
 
 ## Student-curated notes(学生笔记)
 
