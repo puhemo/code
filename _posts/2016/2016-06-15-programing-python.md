@@ -18,6 +18,7 @@ excerpt: |
 
 ## 更新历史
 
+* 20160627: 完成Unit 1
 * 20160625: 完成Python Data Structures
 * 20160625: 完成ChapterTen
 * 20160624: 完成ChapterNine
