@@ -18,7 +18,7 @@ excerpt: |
 
 * `$` - Matches the end of the line.
 
-* `.` - Matches any character (a wildcard).
+* `.` - Matches any character (a wildcard)except a newline.
 
 * `\s` - Matches a whitespace character.
 
