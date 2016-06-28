@@ -12,6 +12,8 @@ excerpt: |
   Here are some of regular expressions: 
 ---
 
+## Regular Expression Syntax
+
 * `^` - Matches the beginning of the line.
 
 * `$` - Matches the end of the line.
