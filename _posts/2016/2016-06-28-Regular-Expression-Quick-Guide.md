@@ -50,4 +50,6 @@ excerpt: |
 
 ## More Info
 
-[Chapter 11  Regular expressions](http://www.pythonlearn.com/html-270/book012.html)
+[Chapter 11  Regular expressions](http://www.pythonlearn.com/html-270/book012.html)  
+[7.2.1. Regular Expression Syntax](https://docs.python.org/2/library/re.html)  
+
