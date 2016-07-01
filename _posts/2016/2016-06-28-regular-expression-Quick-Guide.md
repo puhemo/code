@@ -9,7 +9,7 @@ tags:
   - Regular Expression
 published: true
 excerpt: |
-  A regular expression[^1] (sometimes called a rational expression) is a sequence of characters that define **a search pattern**, mainly for use in pattern matching with strings, or string matching.
+  A regular expression(sometimes called a rational expression) is a sequence of characters that define **a search pattern**, mainly for use in pattern matching with strings, or string matching.
 series: "Intro to Python"	
 ---
 {% include series.html %}
