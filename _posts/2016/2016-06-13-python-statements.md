@@ -122,6 +122,8 @@ while i > 2:
 
 ## “Infinite loops” and `break`
 
+The `break` is a one-line statement that means "exit the current loop." 
+
 Sometimes you don’t know it’s time to end a loop until you get half way through the body. In that case you can write an infinite loop on purpose and then use the `break` statement to **jump out of the loop**.
 
 ```python
