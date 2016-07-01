@@ -135,6 +135,29 @@ while True:
 print 'Done!'
 ```
 
+
+## While / else
+
+Something completely different about Python is the `while/else` construction. while/else is similar to `if/else`, but there is a difference: the `else` block will execute anytime the loop condition is evaluated to False. This means that it will execute if the loop is never entered or if the loop exits normally. If the loop exits as the result of a break, the else will not be executed.
+
+```python
+import random
+
+print "Lucky Numbers! 3 numbers will be generated."
+print "If one of them is a '5', you lose!"
+
+count = 0
+while count < 3:
+    num = random.randint(1, 6)
+    print num
+    if num == 5:
+        print "Sorry, you lose!"
+        break
+    count += 1
+else:
+    print "You win!"
+```
+
 ## Finishing iterations with `continue`
 
 Sometimes you are in an iteration of a loop and want to finish the current iteration and immediately **jump to the next iteration**.In that case you can use the `continue` statement to skip to the next iteration without finishing the body of the loop for the current iteration.
