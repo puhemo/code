@@ -207,6 +207,8 @@ for m in range(3) :
     hobbies.append(raw_input('Enter your hobbies:' ))
 ```
 
+### String manipulation
+
 String manipulation is useful in `for` loops if you want to modify some content in a string. 
 
 ```python
@@ -220,7 +222,7 @@ for char in phrase:
 ```
 > The `,` character after our print statement means that our next print statement keeps printing on the same line.
 
-### go through a list
+### Go through a list
 
 Perhaps the most useful (and most common) use of `for` loops is to go through a list.
 
