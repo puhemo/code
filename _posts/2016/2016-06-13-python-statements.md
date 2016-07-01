@@ -198,6 +198,15 @@ Python for循环可以遍历任何序列的项目，如一个列表或者一个�
       (command)
 ```
 
+This kind of loop is useful when you want to do something a certain number of times, such as append something to the end of a list.
+
+```python
+hobbies = []
+
+for m in range(3) :
+    hobbies.append(raw_input('Enter your hobbies:' ))
+```
+
 # More Info
 * [Pythonlearn:resources-week01](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
 * [Pythonlearn:resources-week03](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week03)
