@@ -244,6 +244,20 @@ for key in d:
         print "This dictionary has the value 10!"
 ```
 
+Counting as you go
+
+A weakness of using this for-each style of iteration is that you don't know the index of the thing you're looking at. Thankfully the built-in `enumerate` function helps with this.
+
+`enumerate` works by supplying a corresponding index to each element in the list that you pass it. 
+
+```python
+choices = ['pizza', 'pasta', 'salad', 'nachos']
+
+print 'Your choices are:'
+for index, item in enumerate(choices):
+    print index+1, item
+```
+
 # More Info
 * [Pythonlearn:resources-week01](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
 * [Pythonlearn:resources-week03](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week03)
