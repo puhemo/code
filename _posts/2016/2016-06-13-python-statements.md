@@ -1,5 +1,5 @@
 ---
-title:  "Python Part 2: Conditional Steps and Iteration"
+title:  "Python Part 2: Conditional Steps and Loops"
 date: 2016-06-13 21:00
 modified: 2016-07-01
 published: true
@@ -84,7 +84,7 @@ result = test * 2
 print result  
 ```
 
-# Loops and Iteration
+# Loops
 
 ## "is" and "is not" Operators
 
