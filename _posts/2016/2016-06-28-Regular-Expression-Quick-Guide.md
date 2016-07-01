@@ -1,7 +1,7 @@
 ---
 title: "Regular Expression Quick Guide"
 date: 2016-06-28 08:36
-modified: 2016-06-28
+modified: 2016-07-01
 categories:
   - Python
 tags:
@@ -52,4 +52,6 @@ excerpt: |
 
 [Chapter 11  Regular expressions](http://www.pythonlearn.com/html-270/book012.html)  
 [7.2.1. Regular Expression Syntax](https://docs.python.org/2/library/re.html)  
+[Python正则表达式指南](http://www.cnblogs.com/huxi/archive/2010/07/04/1771073.html)  
+[Python正则表达式操作指南](http://wiki.ubuntu.org.cn/Python%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97)  
 
