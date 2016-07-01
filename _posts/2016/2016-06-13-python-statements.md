@@ -207,6 +207,19 @@ for m in range(3) :
     hobbies.append(raw_input('Enter your hobbies:' ))
 ```
 
+String manipulation is useful in `for` loops if you want to modify some content in a string. 
+
+```python
+phrase = "A bird in the hand..."
+
+for char in phrase:
+    if char == 'A' or char == 'a':
+        print 'X',
+    else:
+        print char,
+```
+> The `,` character after our print statement means that our next print statement keeps printing on the same line.
+
 # More Info
 * [Pythonlearn:resources-week01](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
 * [Pythonlearn:resources-week03](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week03)
