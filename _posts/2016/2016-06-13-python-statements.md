@@ -1,7 +1,7 @@
 ---
 title:  "Python Part 2: Conditional Steps and Iteration"
 date: 2016-06-13 21:00
-modified: 2016-06-21
+modified: 2016-07-01
 published: true
 categories: 
   - Python
@@ -97,6 +97,8 @@ It implies 'is exactly the same instance, type and value'.
 ## Indefinite Loops - `while`
 
 Python 编程中 while 语句用于循环执行程序，即在某条件下，循环执行某段程序，以处理需要重复处理的相同任务
+
+The `while` loop is similar to an `if` statement: it executes the code inside of it if some condition is true. The difference is that the `while` loop will continue to execute as long as the condition is true.
 
 We need while loops when you don't know the number of iterations before hand and want to execute a bunch of code until some **condition** is satisfied.
 
