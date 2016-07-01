@@ -220,6 +220,8 @@ for char in phrase:
 ```
 > The `,` character after our print statement means that our next print statement keeps printing on the same line.
 
+### go through a list
+
 Perhaps the most useful (and most common) use of `for` loops is to go through a list.
 
 ```python
@@ -231,7 +233,7 @@ for num in numbers:
     print num
 ```
 
-Looping over a dictionary
+### Looping over a dictionary
 
 You may be wondering how looping over a dictionary would work. Would you get the key or the value?
 
@@ -244,7 +246,7 @@ for key in d:
         print "This dictionary has the value 10!"
 ```
 
-Counting as you go
+### Counting as you go
 
 A weakness of using this for-each style of iteration is that you don't know the index of the thing you're looking at. Thankfully the built-in `enumerate` function helps with this.
 
@@ -258,7 +260,7 @@ for index, item in enumerate(choices):
     print index+1, item
 ```
 
-Multiple lists
+### Multiple lists
 
 It's also common to need to iterate over two lists at once. This is where the built-in `zip` function comes in handy.
 
@@ -278,7 +280,7 @@ for a, b in zip(list_a, list_b):
         print b
 ```
 
-For / else
+### For / else
 
 Just like with `while`, `fo`r loops may have an else associated with them.
 
