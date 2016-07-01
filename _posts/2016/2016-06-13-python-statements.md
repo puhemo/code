@@ -231,6 +231,19 @@ for num in numbers:
     print num
 ```
 
+Looping over a dictionary
+
+You may be wondering how looping over a dictionary would work. Would you get the key or the value?
+
+The short answer is: you get the key which you can use to get the value.
+
+```python
+d = {'x': 9, 'y': 10, 'z': 20}
+for key in d:
+    if d[key] == 10:
+        print "This dictionary has the value 10!"
+```
+
 # More Info
 * [Pythonlearn:resources-week01](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
 * [Pythonlearn:resources-week03](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week03)
