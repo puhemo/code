@@ -220,6 +220,17 @@ for char in phrase:
 ```
 > The `,` character after our print statement means that our next print statement keeps printing on the same line.
 
+Perhaps the most useful (and most common) use of `for` loops is to go through a list.
+
+```python
+numbers  = [7, 9, 12, 54, 99]
+
+print "This list contains: "
+
+for num in numbers:
+    print num
+```
+
 # More Info
 * [Pythonlearn:resources-week01](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
 * [Pythonlearn:resources-week03](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week03)
