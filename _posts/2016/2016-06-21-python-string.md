@@ -1,7 +1,7 @@
 ---
 title: "Python Part 4: String"
 date: 2016-06-21 09:00
-modified: 2016-06-22 09:22
+modified: 2016-07-02
 categories:
   - Python
 tags:
@@ -54,7 +54,7 @@ print capdata
 
 ### replace()
 
-Use the` .replace()`to search and replace a character or letter in a given string.
+Use the` .replace()`to **search** and replace a character or letter in a given string.
 
 ```python
 data='Hello Python'
