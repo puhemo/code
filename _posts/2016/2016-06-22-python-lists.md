@@ -125,11 +125,11 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
   
 * `.join()` - delimiter.join(list) - It takes a list of strings and concatenates the elements. `join` is a string method.  
  
-```python
-str = "-"
-seq = ["a", "b", "c"]
-print str.join( seq )
-```
+  ```python
+  str = "-"
+  seq = ["a", "b", "c"]
+  print str.join( seq )
+  ```
 
 ##  List Functions
 
