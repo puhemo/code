@@ -1,7 +1,7 @@
 ---
 title: "Python Part 6: Lists"
 date: 2016-06-22 09:00
-modified: 2016-06-22
+modified: 2016-07-02
 categories:
   - Python
 tags:
@@ -124,6 +124,12 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
   ```
   
 * `.join()` - delimiter.join(list) - It takes a list of strings and concatenates the elements. `join` is a string method.  
+ 
+```python
+str = "-"
+seq = ["a", "b", "c"]
+print str.join( seq )
+```
 
 ##  List Functions
 
