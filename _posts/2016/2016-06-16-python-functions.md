@@ -9,7 +9,6 @@ tags:
   - Python 2.x
 published: true
 excerpt: |
-  # Functions
   Taking segments of related code, wrapping it up in its own allocated code block, and attributing it with a name so that it can be called later at any point of the overarching program, thus treating it as its own separate, self contained, and individually existing entity. A "sub program" within your program, if you will.
 series: "Intro to Python"	
 ---
@@ -70,6 +69,32 @@ triangleArea = product(base, height) * 0.5
 ```
 
 > The `return` statement should be placed at the bottom of your function code block. Anything after the `return` statement will not be executed since `return` force exits the function to give back the value to the calling expression
+
+### Lambda
+
+One of the more powerful aspects of Python is that it allows for a style of programming called **functional programming**, which means that you're allowed to pass functions around just as if they were variables or values. Sometimes we take this for granted, but not all languages allow this!
+
+Check out the code at the right. See the `lambda` bit? Typing
+
+```python
+lambda x: x % 3 == 0
+```
+
+Is the same as
+
+```python
+def by_three(x):
+    return x % 3 == 0
+```
+
+Only we don't need to actually give the function a name; it does its work and returns a value without one. That's why the function the lambda creates is an **anonymous function**.
+
+When we pass the `lambda` to `filter`, `filter` uses the `lambda` to determine what to filter, and the second argument is the list it does the filtering on.
+
+```python
+cubes = [x**3 for x in range(1, 11)]
+filter(lambda x: x % 3 == 0, cubes)
+```
 
 # Modules
 
