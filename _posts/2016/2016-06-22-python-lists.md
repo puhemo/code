@@ -1,7 +1,7 @@
 ---
 title: "Python Part 6: Lists"
 date: 2016-06-22 09:00
-modified: 2016-07-02
+modified: 2016-07-03
 categories:
   - Python
 tags:
@@ -195,6 +195,17 @@ You can call split with an optional argument called a delimiter that specifies w
 ```
 
 In this case the delimiter is a space character, so join puts a space between words. To concatenate strings without spaces, you can use the empty string`"`, as a delimiter. 
+
+## List comprehensions
+
+List comprehensions are a powerful way to generate lists using the `for`/`in` and `if` keywords.
+
+For example, a list of all the even numbers from 0 to 50.
+
+```python
+evens_to_50 = [i for i in range(51) if i % 2 == 0]
+print evens_to_50
+```
 
 ## Debugging
 
