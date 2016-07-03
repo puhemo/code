@@ -156,7 +156,7 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
 
 The `range()`[^2] generates a list of numbers, which is generally used to iterate over with for loops.
   
-The `range()` function works a little bit differently between Python 2.x and 3.x under the hood, however the concept is the same. 
+> The `range()` function works a little bit differently between Python 2.x and 3.x under the hood, however the concept is the same. 
 
 The `range()` function has two sets of parameters, as follows:
 
