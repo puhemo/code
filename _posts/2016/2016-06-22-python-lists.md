@@ -45,7 +45,12 @@ List slicing allows us to access elements of a list in a concise manner. The syn
 [start:end:stride]
 ```
 
-Where `start` describes where the slice starts (inclusive), `end` is where it ends (exclusive), and `stride` describes the space between items in the sliced list. For example, a stride of `2` would select every other item from the original list to place in the sliced list.
+*  `start` describes where the slice starts (inclusive), 
+*  `end` is where it ends (exclusive),
+*  `stride` describes the space between items in the sliced list. 
+  > A positive stride length traverses the list from left to right, and a negative one traverses the list from right to left.
+
+For example, a stride of `2` would select every other item from the original list to place in the sliced list.
 
 ```python
 l = [i ** 2 for i in range(1, 11)]
