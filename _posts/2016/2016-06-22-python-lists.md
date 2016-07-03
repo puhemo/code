@@ -143,7 +143,9 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
 
 * `sum()/len()`: average 
 
-###  `del(n[1]）`: like `.pop()` in that it will remove the item at the given index, but it won't return it:
+###  `del(n[1]）`: 
+
+`del()` like `.pop()` in that it will remove the item at the given index, but it won't return it:
 
 ```python
 >>> a = [1, 2, 3, 4, 5]
