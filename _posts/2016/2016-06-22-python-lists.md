@@ -47,8 +47,7 @@ List slicing allows us to access elements of a list in a concise manner. The syn
 
 *  `start` describes where the slice starts (inclusive), 
 *  `end` is where it ends (exclusive),
-*  `stride` describes the space between items in the sliced list.   
-    > A positive stride length traverses the list from left to right, and a negative one traverses the list from right to left.
+*  `stride`[^3] describes the space between items in the sliced list.   
 
 For example, a stride of `2` would select every other item from the original list to place in the sliced list.
 
@@ -359,5 +358,7 @@ print evens_to_50
 
 [^1]: A method is a function that “belongs to” an object.
 [^2]: [Python’s range() Function Explained](http://pythoncentral.io/pythons-range-function-explained/)
+[^3]: A positive stride length traverses the list from left to right, and a negative one traverses the list from right to left.
+
 
 {% include series.html %}
