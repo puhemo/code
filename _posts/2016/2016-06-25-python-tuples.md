@@ -193,7 +193,7 @@ for key, val in lst[:10] :
 
 ## List comprehension
 
-List comprehension creates a dynamic list.  In this case, we make a list of reversed tuples and then sort it.
+[List comprehension](http://puhemo.xyz/code/python-lists/#list-comprehensions) creates a dynamic list.  In this case, we make a list of reversed tuples and then sort it.
 
 ```python
 >>> c = {'a':10, 'b':1, 'c':22}
