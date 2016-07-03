@@ -143,16 +143,16 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
 
 * `sum()/len()`: average 
 
-* `del(n[1]）`: like `.pop()` in that it will remove the item at the given index, but it won't return it:
+###  `del(n[1]）`: like `.pop()` in that it will remove the item at the given index, but it won't return it:
 
-  ```python
-  >>> a = [1, 2, 3, 4, 5]
-  >>> del a[0], a[2] #  since a[0] first gets deleted yielding [2, 3, 4, 5], then since the 2-element of [2, 3, 4, 5] is 4, 4 gets deleted.
-  >>> print a
-  [2, 3, 5]
-  ```
+```python
+>>> a = [1, 2, 3, 4, 5]
+>>> del a[0], a[2] #  since a[0] first gets deleted yielding [2, 3, 4, 5], then since the 2-element of [2, 3, 4, 5] is 4, 4 gets deleted.
+>>> print a
+[2, 3, 5]
+```
 
-## `range()`
+### `range()`
 
 The `range()`[^2] generates a list of numbers, which is generally used to iterate over with for loops.
   
