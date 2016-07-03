@@ -294,7 +294,9 @@ print evens_to_50
 
 ## More Info
 
-[Pythonlearn:resources-week08](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week08)
+[Pythonlearn:resources-week08](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week08)  
+[详细记录python的range()函数用法](http://www.cnblogs.com/buro79xxd/archive/2011/05/23/2054493.html)
+
 
 [^1]: A method is a function that “belongs to” an object.
 [^2]: [Python’s range() Function Explained](http://pythoncentral.io/pythons-range-function-explained/)
