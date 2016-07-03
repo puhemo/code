@@ -76,6 +76,17 @@ print to_five[::2]
 2. The default ending index is the end of the list.
 3. The default stride is `1`.
 
+### Reversing a List
+
+A *negative* stride progresses through the list from right to left.
+
+```python
+letters = ['A', 'B', 'C', 'D', 'E']
+print letters[::-1]
+```
+
+In the example above, we print out `['E', 'D', 'C', 'B', 'A']`.
+
 ## Iterating over a list in a function
 
 we have two ways of iterating through a list.
