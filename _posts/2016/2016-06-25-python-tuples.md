@@ -17,7 +17,7 @@ series: "Intro to Python"
 * TOC
 {:toc}
 
-A tuple is a sequence of values much like a list. The important difference is that tuples are **immutable**[^1].
+A tuple is a sequence of values much like a list. The important difference is that tuples are **immutable**[^1].tuples are surrounded by ()s and can contain any data type.
 
 Syntactically, a tuple[^4] is a comma-separated list of values:
 
