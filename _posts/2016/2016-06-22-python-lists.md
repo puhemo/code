@@ -151,6 +151,7 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
   >>> print a
   [2, 3, 5]
   ```
+
 ## `range()`
 
 The `range()`[^2] generates a list of numbers, which is generally used to iterate over with for loops.
