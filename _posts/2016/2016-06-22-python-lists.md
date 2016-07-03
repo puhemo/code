@@ -35,7 +35,9 @@ Collection - allows us to put many values in a single variable.
 
 * List is an **ordered** sequence
 
-## List Slicing Syntax
+## List Slicing
+
+### List Slicing Syntax
 
 List slicing allows us to access elements of a list in a concise manner. The syntax looks like this:
 
@@ -52,6 +54,27 @@ l = [i ** 2 for i in range(1, 11)]
 print l[2:9:2]
 # Should be [9, 25, 49, 81]
 ```
+
+### Omitting Indices
+
+If you don't pass a particular index to the list slice, Python will pick a default. 
+
+```python
+to_five = ['A', 'B', 'C', 'D', 'E']
+
+print to_five[3:]
+# prints ['D', 'E'] 
+
+print to_five[:2]
+# prints ['A', 'B']
+
+print to_five[::2]
+# print ['A', 'C', 'E']
+```
+
+1. The default starting index is `0`.
+2. The default ending index is the end of the list.
+3. The default stride is `1`.
 
 ## Iterating over a list in a function
 
