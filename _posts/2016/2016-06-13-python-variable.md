@@ -19,6 +19,8 @@ series: "Intro to Python"
 * TOC
 {:toc}
 
+Python is an object-oriented programming language, which means it manipulates programming constructs called **objects**. You can think of an object as a single data structure that contains data as well as functions; functions of objects are called **methods**. 
+
 ## Variable
 
 ### Variable Naming
