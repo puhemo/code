@@ -5,7 +5,7 @@ modified: 2016-06-28
 categories:
   - Python
 tags:
-  - Python Application
+  - Python 2.x
   - Regular Expression
 published: true
 excerpt: |
