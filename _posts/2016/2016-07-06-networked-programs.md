@@ -193,6 +193,38 @@ http://www.py4inf.com/code
 http://www.pythonlearn.com/
 ```
 
+You can use BeautifulSoup to pull out various parts of each tag as follows:
+
+```python
+import urllib
+from BeautifulSoup import *
+
+url = raw_input('Enter - ')
+html = urllib.urlopen(url).read()
+soup = BeautifulSoup(html)
+
+# Retrieve all of the anchor tags
+tags = soup('a')
+for tag in tags:
+   # Look at the parts of a tag
+   print 'TAG:',tag
+   print 'URL:',tag.get('href', None)
+   print 'Content:',tag.contents[0]
+   print 'Attrs:',tag.attrs
+```
+
+This produces the following output:
+
+```
+python urllink2.py 
+Enter - http://www.dr-chuck.com/page1.htm
+TAG: <a href="http://www.dr-chuck.com/page2.htm">
+Second Page</a>
+URL: http://www.dr-chuck.com/page2.htm
+Content: [u'\nSecond Page']
+Attrs: [(u'href', u'http://www.dr-chuck.com/page2.htm')]
+```
+
 ## Reading binary files using urllib
 
 Sometimes you want to retrieve a non-text (or binary) file such as an image or video file. The data in these files is generally not useful to print out, but you can easily make a copy of a URL to a local file on your hard disk using `urllib`.
