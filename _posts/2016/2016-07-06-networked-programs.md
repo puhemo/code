@@ -5,7 +5,7 @@ modified: 2016-07-07
 categories:
   - Python
 tags:
-  - Python 2.x
+  - Python Application
   - HTTP
 published: true
 excerpt: |
@@ -288,3 +288,5 @@ while True:
 print size,'characters copied.'
 fhand.close()
 ```
+
+{% include series.html %}
