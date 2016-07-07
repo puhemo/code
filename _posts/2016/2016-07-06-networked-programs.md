@@ -225,6 +225,50 @@ Content: [u'\nSecond Page']
 Attrs: [(u'href', u'http://www.dr-chuck.com/page2.htm')]
 ```
 
+Following Links in Python
+
+The program will use urllib to read the HTML from the data files below, extract the href= vaues from the anchor tags, scan for a tag that is in a particular position relative to the first name in the list, follow that link and repeat the process a number of times and report the last name you find. 
+
+Start at: http://python-data.dr-chuck.net/known_by_Samuel.html
+Find the link at position 18 (the first name is 1). Follow that link. Repeat this process 7 times. The answer is the last name that you retrieve.
+
+```python
+import urllib
+from BeautifulSoup import *
+
+url = raw_input('Enter - ')
+c = int(raw_input('Enter count: '))
+p = int(raw_input('Enter position: '))
+print 'Retrieving: ', url
+
+for n in range(c):
+    html = urllib.urlopen(url).read()
+    soup = BeautifulSoup(html)
+    l = list()
+    tags = soup('a')
+    for tag in tags:
+        l.append(tag.get('href', None))
+    url = l[p-1]
+    print 'Retrieving: ', url
+```
+
+This produces the following output:
+
+```
+$ python solution.py 
+Enter - http://python-data.dr-chuck.net/known_by_Samuel.html
+Enter count: 7
+Enter position: 18
+Retrieving:  http://python-data.dr-chuck.net/known_by_Samuel.html
+Retrieving:  http://python-data.dr-chuck.net/known_by_Skyler.html
+Retrieving:  http://python-data.dr-chuck.net/known_by_Kaidan.html
+Retrieving:  http://python-data.dr-chuck.net/known_by_Jo.html
+Retrieving:  http://python-data.dr-chuck.net/known_by_Sonni.html
+Retrieving:  http://python-data.dr-chuck.net/known_by_Seb.html
+Retrieving:  http://python-data.dr-chuck.net/known_by_Yakup.html
+Retrieving:  http://python-data.dr-chuck.net/known_by_Merina.html
+```
+
 ## Reading binary files using urllib
 
 Sometimes you want to retrieve a non-text (or binary) file such as an image or video file. The data in these files is generally not useful to print out, but you can easily make a copy of a URL to a local file on your hard disk using `urllib`.
