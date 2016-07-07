@@ -1,7 +1,7 @@
 ---
 title: "Python Part 10: Networked programs"
 date: 2016-07-06 09:50
-modified: 2016-07-06
+modified: 2016-07-07
 categories:
   - Python
 tags:
