@@ -1,11 +1,11 @@
 ---
 title: "Python Part 9: Regular Expressions"
 date: 2016-06-28 11:00
-modified: 2016-06-28
+modified: 2016-07-07
 categories:
   - Python
 tags:
-  - Python 2.x
+  - Python Application
   - Regular Expression
 published: true
 excerpt: |
