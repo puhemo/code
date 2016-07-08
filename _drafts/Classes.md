@@ -1,0 +1,245 @@
+# Classes
+
+Python is an object-oriented programming language, which means it manipulates programming constructs called **objects**. You can think of an object as a single data structure that contains data as well as functions; functions of objects are called **methods**. 
+
+A **class** is just a way of organizing and producing objects with similar attributes and methods.
+
+Classes can be very useful for storing complicated objects with their own methods and variables.
+
+```python
+class Fruit(object):
+
+    """A class that makes various tasty fruits."""
+    def __init__(self, name, color, flavor, poisonous):
+        self.name = name
+        self.color = color
+        self.flavor = flavor
+        self.poisonous = poisonous
+    
+    def description(self):
+        print "I'm a %s %s and I taste %s." % (self.color, self.name, self.flavor)
+    
+    def is_edible(self):
+        if not self.poisonous:
+            print "Yep! I'm edible."
+        else:
+            print "Don't eat me! I am super poisonous."
+
+lemon = Fruit("lemon", "yellow", "sour", False)
+
+lemon.description()
+lemon.is_edible()
+```
+
+## Class Basics
+
+A basic class consists only of the `class` keyword, the name of the class, and the class from which the new class **inherits** in parentheses.
+
+```python
+class NewClass(object):
+    # Class magic here
+```
+
+### Initialize the objects
+
+`__init__()` is required for classes, and it's used to **initialize** the objects it creates. `__init__()` always takes at least one argument, `self`, that refers to the object being created. You can think of `__init__()` as the function that "boots up" each object the class creates.
+
+```python
+class Fruit(object):
+
+    """A class that makes various tasty fruits."""
+    def __init__(self, name, color, flavor, poisonous):
+        self.name = name
+        self.color = color
+        self.flavor = flavor
+        self.poisonous = poisonous
+```
+
+ `self` is the *first* parameter passed to `__init__()`. Python will use the first parameter that `__init__()` receives to refer to the object being created; this is why it's often called `self`, since this parameter gives the object being created its identity.
+
+### Instantiating Your First Object
+
+```python
+# Class definition
+class Animal(object):
+    """Makes cute animals."""
+    # For initializing our instance objects
+    def __init__(self, name, age, is_hungry):
+    # In order to assign a variable to the class (creating a member variable)
+    # we use dot notation.
+        self.name = name
+        self.age = age
+        self.is_hungry = is_hungry
+
+# Note that self is only used in the __init__()
+# function definition; we don't need to pass it
+# to our instance objects.
+
+zebra = Animal("Jeffrey", 2, True)
+giraffe = Animal("Bruce", 1, False)
+panda = Animal("Chad", 7, True)
+
+print zebra.name, zebra.age, zebra.is_hungry
+print giraffe.name, giraffe.age, giraffe.is_hungry
+print panda.name, panda.age, panda.is_hungry
+```
+
+If you add additional arguments—for instance, a `name` and `age` for your animal—setting each of those equal to `self.name` and `self.age` in the body of `__init__()` will make it so that when you create an instance object of your `Animal` class, you need to give each instance a name and an age, and those will be associated with the particular instance you create.
+
+### Class Scope
+
+The **scope** of a variable is the context in which it's visible to the program.
+
+When dealing with classes, you can have variables that are available everywhere (**global variables**), variables that are only available to members of a certain class (**member variables**), and variables that are only available to particular instances of a class (**instance variables**).
+
+```python
+class Animal(object):
+
+    """Makes cute animals."""
+    is_alive = True # Class Scope
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+zebra = Animal("Jeffrey", 2)
+giraffe = Animal("Bruce", 1)
+panda = Animal("Chad", 7)
+
+print zebra.name, zebra.age, zebra.is_alive
+print giraffe.name, giraffe.age, giraffe.is_alive
+print panda.name, panda.age, panda.is_alive
+```
+
+### A Methodical Approach
+
+When a class has its own functions, those functions are called **methods**. You've already seen one such method: `__init__()`. But you can also define your own methods!
+```python
+class Animal(object):
+
+    """Makes cute animals."""
+    is_alive = True
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    # Add your method here!
+    def description(self):
+        print self.name
+        print self.age
+
+hippo = Animal('Anna', 'John')
+
+hippo.description()
+```
+
+### Modifying member variables
+
+```python
+class Car(object):
+
+    condition = "new"
+    def __init__(self, model, color, mpg):
+        self.model = model
+        self.color = color
+        self.mpg   = mpg
+    def display_car(self):
+        return 'This is a %s %s with %d MPG.' % (self.color, self.model, self.mpg)
+    def drive_car(self):
+        self.condition = 'used'
+
+my_car = Car("DeLorean", "silver", 88)
+print my_car.condition
+my_car.drive_car()
+print my_car.condition
+```
+
+## Inheritance
+
+**Inheritance** is the process by which one class takes on the attributes and methods of another, and it's used to express an **is-a** relationship. 
+
+```python
+class Customer(object):
+
+    """Produces objects that represent customers."""
+    def __init__(self, customer_id):
+        self.customer_id = customer_id
+    
+    def display_cart(self):
+        print "I'm a string that stands in for the contents of your shopping cart!"
+
+class ReturningCustomer(Customer):
+    """For customers of the repeat variety."""
+    def display_order_history(self):
+        print "I'm a string that stands in for your order history!"
+
+monty_python = ReturningCustomer("ID: 12345")
+monty_python.display_cart()
+monty_python.display_order_history()
+```
+### Inheritance Syntax
+
+In Python, inheritance works like this:
+
+```python
+class DerivedClass(BaseClass):
+    # code goes here
+```
+
+where `DerivedClass` is the new class you're making and `BaseClass` is the class from which that new class inherits.
+
+### Override
+
+Sometimes you'll want one class that inherits from another to not only take on the methods and attributes of its parent, but to **override** one or more of them.
+
+```python
+class Employee(object):
+    def __init__(self, name):
+        self.name = name
+    def greet(self, other):
+        print "Hello, %s" % other.name
+
+class CEO(Employee):
+    def greet(self, other): # override
+        print "Get back to work, %s!" % other.name
+
+ceo = CEO("Emily")
+emp = Employee("Steve")
+emp.greet(ceo)
+# Hello, Emily
+ceo.greet(emp)
+# Get back to work, Steve!
+```
+
+### Super
+
+You can directly access the attributes or methods of a superclass with Python's built-in `super` call.
+
+The syntax looks like this:
+
+```python
+class Derived(Base):
+   def m(self, arg):
+       return super(Derived, self).m(arg)
+```
+
+Where `m()` is a method from the base class.
+
+```python
+class Employee(object):
+
+    """Models real-life employees!"""
+    def __init__(self, employee_name):
+        self.employee_name = employee_name
+    
+    def calculate_wage(self, hours):
+        self.hours = hours
+        return hours * 20.00
+
+class PartTimeEmployee(Employee):
+    def calculate_wage(sefl, hours):
+        self.hours = hours
+        return  hours*12.00
+    def full_time_wage(self, hours):
+        return super(PartTimeEmployee, self).calculate_wage(hours) # super
+milton = PartTimeEmployee('Nobody')
+print milton.full_time_wage(10)
+```
