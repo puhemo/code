@@ -1,7 +1,7 @@
 ---
-title:  "Python Part 1: Variable and Boolean"
+title:  "Python Part 01: Variable and Boolean"
 date: 2016-06-13 20:00
-modified: 2016-07-05
+modified: 2016-07-10
 published: true
 categories: 
   - Python
@@ -18,8 +18,6 @@ series: "Intro to Python"
 
 * TOC
 {:toc}
-
-Python is an object-oriented programming language, which means it manipulates programming constructs called **objects**. You can think of an object as a single data structure that contains data as well as functions; functions of objects are called **methods**. 
 
 ## Variable
 
