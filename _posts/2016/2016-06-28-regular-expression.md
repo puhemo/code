@@ -1,5 +1,5 @@
 ---
-title: "Python Part 9: Regular Expressions"
+title: "Python Part 10: Regular Expressions"
 date: 2016-06-28 11:00
 modified: 2016-07-07
 categories:
