@@ -8,6 +8,7 @@ tags:
   - Python Application
   - XML
   - JSON
+  - API
 published: true
 excerpt: |
   There are two common formats that we use when exchanging data across the web.
