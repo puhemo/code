@@ -1,29 +1,32 @@
-import json
 import urllib
+import json
 
-url = raw_input('Enter url: ')
+# serviceurl = 'http://maps.googleapis.com/maps/api/geocode/json?'
+serviceurl = 'http://python-data.dr-chuck.net/geojson?'
 
-#if len(url) < 1 : break
+while True:
+    address = raw_input('Enter location: ')
+    if len(address) < 1 : break
 
-print 'Retrieving', url
+    url = serviceurl + urllib.urlencode({'sensor':'false', 'address': address})
+    print 'Retrieving', url
+    uh = urllib.urlopen(url)
+    data = uh.read()
+    print 'Retrieved',len(data),'characters'
 
-uh = urllib.urlopen(url)
-data = uh.read()
-print 'Retrieved',len(data),'characters'
-#print data
+    try: js = json.loads(str(data))
+    except: js = None
+    if 'status' not in js or js['status'] != 'OK':
+        print '==== Failure To Retrieve ===='
+        print data
+        continue
 
-info = json.loads(data)
-print 'User count:', len(info)
-#print info
-items = info['comments']
+    #print json.dumps(js, indent=4)
 
+    #print len(js['results'][0]) , type(js['results'][0])
 
-n = 0
-sum = 0
-for item in items:
-    n += 1
-    sum += int(item['count'])
-
-print 'Count: ', n
-print 'Sum', sum
+    id = js["results"][0][ "place_id"]
+    print 'Place id',id
+    location = js['results'][0]['formatted_address']
+    print location
 
