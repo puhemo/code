@@ -21,13 +21,17 @@ series: "Intro to Python"
 
 ## Variable
 
+Creating web apps, games, and search engines all involve storing and working with different types of data. They do so using **variables**. A **variable** stores a piece of data, and gives it a specific name.
+
 ### Variable Naming
-Nota Bene: Python is a case sensitive programming language. Be aware of this when you first name and subsequently use your variables. For instance, leapyear, Leapyear, leapYear, and LeapYear will actually be viewed as 4 **different** variables by Python even if you intended the same thing, a "leap year," but simply mistyped.
+
+Python is a case sensitive programming language. Be aware of this when you first name and subsequently use your variables. For instance, leapyear, Leapyear, leapYear, and LeapYear will actually be viewed as 4 **different** variables by Python even if you intended the same thing, a "leap year," but simply mistyped.
 
 ### Variable Assignment
+
 Variable are lines of code that do something. The most common type of statement you'll probably come across are assignment statements.
 
-**N.B.:** Although we can understand simple programs using this description, and many programming languages, including C, C++, and Java, do exactly this, Python doesn't. Instead, a variable points to a storage location containing its current value, and so does every variable with that same value. If its value is changed by assignment then, instead of changing its storage location to that value, a new location is set to the value if it's not already in memory, then the variable is changed to point to that new location--but other variables pointing to the old location still point there. Moreover, Python assumes small integers (-5 to +256) are very likely to be used, so they're automatically stored when the system is initialized, ready to be used (a process called memoization). So, to be quite accurate:
+Although we can understand simple programs using this description, and many programming languages, including C, C++, and Java, do exactly this, Python doesn't. Instead, a variable points to a storage location containing its current value, and so does every variable with that same value. If its value is changed by assignment then, instead of changing its storage location to that value, a new location is set to the value if it's not already in memory, then the variable is changed to point to that new location--but other variables pointing to the old location still point there. Moreover, Python assumes small integers (-5 to +256) are very likely to be used, so they're automatically stored when the system is initialized, ready to be used (a process called memoization). So, to be quite accurate:
 
 ```python
  x = 5  # sets variable x to point to the location storing 5 (memoized during system initialization)
