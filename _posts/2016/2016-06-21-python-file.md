@@ -140,7 +140,16 @@ my_file.close()
 
 During the I/O process, data is **buffered**: this means that it is held in a temporary location before being written to the file.  
 
-Python doesn't **flush the buffer—that** is, write data to the file—until it's sure you're done writing. One way to do this is to close the file. If you write to a file without closing, the data won't make it to the target file.
+Python doesn't **flush the buffer**—that is, write data to the file—until it's sure you're done writing. One way to do this is to close the file. If you write to a file without closing, the data won't make it to the target file.
+
+## The 'with' and 'as' Keywords
+
+ With `with` and `as` to automatically close the files.
+
+```python
+with open("file", "mode") as variable:
+    # Read or write to the file
+```
 
 
 [^1]: read()方法會一次讀取所有的檔案內容，在不使用檔案時，可以使用fileObject.close()將檔案關閉以節省資源.
