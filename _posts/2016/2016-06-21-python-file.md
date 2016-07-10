@@ -151,6 +151,15 @@ with open("file", "mode") as variable:
     # Read or write to the file
 ```
 
+## Case Closed?
+
+Python file objects have a `closed` attribute which is `True` when the file is closed and `False` otherwise.
+
+```python
+f = open("bg.txt")
+f.closed
+# False
+```
 
 [^1]: read()方法會一次讀取所有的檔案內容，在不使用檔案時，可以使用fileObject.close()將檔案關閉以節省資源.
 [^2]: startswith() 方法用于检查字符串是否是以指定子字符串开头，如果是则返回 True，否则返回 False.
