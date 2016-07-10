@@ -147,3 +147,170 @@ Id 009
 Attribute 7
 ```
 
+## JavaScript Object Notation -- JSON
+
+JSON represents data as nested “lists” and “dictionaries”
+
+```json
+{
+  "name" : "Chuck",
+  "phone" : {
+    "type" : "intl",
+    "number" : "+1 734 303 4456"
+   },
+   "email" : {
+     "hide" : "yes"
+   }
+}
+```
+
+In general, there is an industry trend away from XML and towards JSON for web services. 
+
+ **JSON** structures are **simpler** than **XML** because JSON has fewer capabilities than XML. But JSON has the advantage that it maps *directly* to some combination of dictionaries and lists. And since nearly all programming languages have something equivalent to Python’s dictionaries and lists, JSON is a very natural format to have two cooperating programs exchange data.
+
+But XML is more self-descriptive than JSON and so there are some applications where XML retains an advantage. For example, most word processors store documents internally using XML rather than JSON.
+
+## Parsing JSON
+
+In the following program, we use the built-in `json` library to parse the JSON and read through the data.
+
+```python
+import json
+
+input = "'
+[
+  { "id" : "001",
+    "x" : "2",
+    "name" : "Chuck"
+  } ,
+  { "id" : "009",
+    "x" : "7",
+    "name" : "Brent"
+  } 
+]"'
+
+info = json.loads(input)
+print 'User count:', len(info)
+
+for item in info:
+    print 'Name', item['name']
+    print 'Id', item['id']
+    print 'Attribute', item['x']
+```
+
+The output of this program is exactly the same as the XML version above.
+
+```
+User count: 2
+Name Chuck
+Id 001
+Attribute 2
+Name Brent
+Id 009
+Attribute 7
+```
+
+## Application Programming Interfaces
+
+We now have the ability to exchange data between applications using HyperTextTransport Protocol (**HTTP**) and a way to represent complex data that we are sending back and forth between these applications using eXtensible Markup Language (**XML**) or JavaScript Object Notation (**JSON**).
+
+The next step is to begin to define and document “**contracts**” between applications using these techniques. The general name for these application-to-application contracts is Application Program Interfaces or **APIs**[^1]. When we use an API, generally one programmakes a set of **services** available for use by other applicationsand publishes the APIs (i.e., the “rules”) that must be followed to access the services provided by the program.
+
+When we begin to build our programs where the functionality of our program includes access to services provided by other programs, we call the approach a **Service-Oriented Architecture** or **SOA**[^2]. A **SOA** approach is one where our overall application makes use of the services of other applications. A non-SOA approach is where the application is a single standalone application which contains all of the code necessary to implement the application.
+
+![img](http://www.pythonlearn.com/html-270/book015.png)
+
+When an application makes a set of services in its API available over the web, we call these **web services**. 
+
+## Google geocoding web service
+
+The following is a simple application to prompt the user for a search string, call the Google geocoding API, and extract information from the returned JSON.
+
+```python
+import urllib
+import json
+
+serviceurl = 'http://maps.googleapis.com/maps/api/geocode/json?'
+
+while True:
+    address = raw_input('Enter location: ')
+    if len(address) < 1 : break
+
+    url = serviceurl + urllib.urlencode({'sensor':'false', 
+          'address': address})
+    print 'Retrieving', url
+    uh = urllib.urlopen(url)
+    data = uh.read()
+    print 'Retrieved',len(data),'characters'
+
+    try: js = json.loads(str(data))
+    except: js = None
+    if 'status' not in js or js['status'] != 'OK':
+        print '==== Failure To Retrieve ===='
+        print data
+        continue
+
+    print json.dumps(js, indent=4)
+
+    lat = js["results"][0]["geometry"]["location"]["lat"]
+    lng = js["results"][0]["geometry"]["location"]["lng"]
+    print 'lat',lat,'lng',lng
+    location = js['results'][0]['formatted_address']
+    print location
+```
+
+The output of the program is as follows (some of the returnedJSON has been removed):
+
+```
+$ python geojson.py
+Enter location: Ann Arbor, MI
+Retrieving http://maps.googleapis.com/maps/api/
+  geocode/json?sensor=false&address=Ann+Arbor%2C+MI
+Retrieved 1669 characters
+{
+    "status": "OK", 
+    "results": [
+        {
+            "geometry": {
+                "location_type": "APPROXIMATE", 
+                "location": {
+                    "lat": 42.2808256, 
+                    "lng": -83.7430378
+                }
+            }, 
+            "address_components": [
+                {
+                    "long_name": "Ann Arbor", 
+                    "types": [
+                        "locality", 
+                        "political"
+                    ], 
+                    "short_name": "Ann Arbor"
+                } 
+            ], 
+            "formatted_address": "Ann Arbor, MI, USA", 
+            "types": [
+                "locality", 
+                "political"
+            ]
+        }
+    ]
+}
+lat 42.2808256 lng -83.7430378
+Ann Arbor, MI, USA
+Enter location:
+```
+
+## Security and API usage
+
+It is quite common that you need some kind of “**API key**” to make use of a vendor’s API. 
+
+Sometimes once you get your API key, you simply include the key as part of POST data or perhaps as a parameter on the URL when calling the API.
+
+Other times, the vendor wants increased assurance of the source of the requests and so they add expect you to send **cryptographically signed messages** using shared keys and secrets. A very common technology that is used to sign requests over the Internet is called **[OAuth](http://www.oauth.net)**. 
+
+[^1]: Application Program Interface - A contract between applications that defines the patterns of interaction between two application components. 
+[^2]: Service-Oriented Architecture. When an application is made of components connected across a network.
+
+
+
