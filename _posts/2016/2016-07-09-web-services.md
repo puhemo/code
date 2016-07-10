@@ -22,7 +22,7 @@ There are two common formats that we use when **exchanging data** between applic
 The “eXtensible Markup Language” or **XML** has been in use for a very long time 
 and is best suited for exchanging document-style data. When programs just want 
 to exchange dictionaries, lists, or other internal information with each other,
-they use JavaScript Object Notation or **[JSON]( www.json.org)** . 
+they use JavaScript Object Notation or [JSON](www.json.org) . 
 
 ## eXtensible Markup Language - XML
 
