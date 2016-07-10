@@ -1,7 +1,7 @@
 ---
-title: "Python Part 5: File"
+title: "Python Part 5: File Input/Output"
 date: 2016-06-21 10:00
-modified: 2016-06-23
+modified: 2016-07-10
 categories:
   - Python
 tags:
@@ -16,6 +16,10 @@ series: "Intro to Python"
 
 * TOC
 {:toc}
+
+Until now, the Python code you've been writing comes from one source and only goes to one place: you type it in at the keyboard and its results are displayed in the console. But what if you want to read information from a file on your computer, and/or write that information to another file?
+
+This process is called file I/O (the "I/O" stands for "input/output"), and Python has a number of built-in functions that handle this for you.
 
 ## Open a file
 
@@ -50,6 +54,16 @@ inp = fhand.read() # reads the whole file into memory
 print len(inp)# returns the number of characters in a file
 print inp # prints the whole file
 inp.close() # close the file
+```
+
+## Reading Between the Lines
+
+If you open a file and call `.readline()` on the file object, you'll get the first line of the file; subsequent calls to .readline() will return successive lines.
+
+```python
+my_file = open('text.txt', 'r')
+print my_file.readline()
+my_file.close()
 ```
 
 ##  Searching through a file -- startswith()[^2]
@@ -110,6 +124,24 @@ while True:
 >>> print fout
 <open file 'output.txt', mode 'w' at 0xb7eb2410>
 ```
+
+You **must** close the file. You do this simply by calling `my_file.close()` . If you don't close your file, Python won't write to it properly. From here on out, you gotta close your files!
+
+```python
+my_list = [i**2 for i in range(1,11)]
+
+my_file = open("output.txt", "r+")
+
+for list in my_list:
+    my_file.write('str(list)', "\n")
+
+my_file.close()
+```
+
+During the I/O process, data is **buffered**: this means that it is held in a temporary location before being written to the file.  
+
+Python doesn't **flush the buffer—that** is, write data to the file—until it's sure you're done writing. One way to do this is to close the file. If you write to a file without closing, the data won't make it to the target file.
+
 
 [^1]: read()方法會一次讀取所有的檔案內容，在不使用檔案時，可以使用fileObject.close()將檔案關閉以節省資源.
 [^2]: startswith() 方法用于检查字符串是否是以指定子字符串开头，如果是则返回 True，否则返回 False.
