@@ -1,7 +1,7 @@
 ---
 title:  "Python Part 01: Syntax"
 date: 2016-06-13 20:00
-modified: 2016-07-10
+modified: 2016-07-11
 published: true
 categories: 
   - Python
@@ -26,13 +26,19 @@ Creating web apps, games, and search engines all involve storing and working wit
 
 ### Variable Naming
 
-Python is a case sensitive programming language. Be aware of this when you first name and subsequently use your variables. For instance, leapyear, Leapyear, leapYear, and LeapYear will actually be viewed as 4 **different** variables by Python even if you intended the same thing, a "leap year," but simply mistyped.
+Python is a case sensitive programming language. Be aware of this when you first name and subsequently use your variables.  
+
+For instance, leapyear, Leapyear, leapYear, and LeapYear will actually be viewed as 4 **different** variables by Python even if you intended the same thing, a "leap year," but simply mistyped.
 
 ### Variable Assignment
 
 Variable are lines of code that do something. The most common type of statement you'll probably come across are assignment statements.
 
-Although we can understand simple programs using this description, and many programming languages, including C, C++, and Java, do exactly this, Python doesn't. Instead, a variable points to a storage location containing its current value, and so does every variable with that same value. If its value is changed by assignment then, instead of changing its storage location to that value, a new location is set to the value if it's not already in memory, then the variable is changed to point to that new location--but other variables pointing to the old location still point there. Moreover, Python assumes small integers (-5 to +256) are very likely to be used, so they're automatically stored when the system is initialized, ready to be used (a process called memoization). So, to be quite accurate:
+Although we can understand simple programs using this description, and many programming languages, including C, C++, and Java, do exactly this, Python doesn't.   
+
+Instead, a variable points to a storage location containing its current value, and so does every variable with that same value. If its value is changed by assignment then, instead of changing its storage location to that value, a new location is set to the value if it's not already in memory, then the variable is changed to point to that new location--but other variables pointing to the old location still point there.   
+
+Moreover, Python assumes small integers (-5 to +256) are very likely to be used, so they're automatically stored when the system is initialized, ready to be used (a process called memoization). So, to be quite accurate:
 
 ```python
  x = 5  # sets variable x to point to the location storing 5 (memoized during system initialization)
@@ -48,7 +54,9 @@ Although we can understand simple programs using this description, and many prog
  z = 3.14  # sets z to point to 3.14, the same value as y and w presently point to
 ```
 
-So instead of thinking of a variable being a named location whose value gets changed, it's more accurate to think of a variable as a name on a sticky note that gets moved and stuck to a location storing its new value (after storing that value if it hasn't been used previously). Note that we have just one location storing value 3.14, but three variables (w, y, and z) presently share that value. If any one of them changes, the value in that location doesn't change; instead, that variable now points to a different location containing that new value and the other two still "point to" 3.14.
+So instead of thinking of a variable being a named location whose value gets changed, it's more accurate to think of a variable as a name on a sticky note that gets moved and stuck to a location storing its new value (after storing that value if it hasn't been used previously).   
+
+Note: We have just one location storing value 3.14, but three variables (w, y, and z) presently share that value. If any one of them changes, the value in that location doesn't change; instead, that variable now points to a different location containing that new value and the other two still "point to" 3.14.
 
 ## Math
 
@@ -69,7 +77,7 @@ More complex mathematical expressions can be evaluated for variable assignment t
   - Used to return the remainder of a division instead of the quotient answer ( 10 % 3 = 1, since 3 * 3 = 9 and 10 - 9 leaves a remainder 1 )
   - `x = 10 % 3`
 
-*Note:* There is a marked difference between *integer number* division and *floating point number* division. Because Python treats these two numeric types distinctly different, you might get erroneous answers when doing division operations without precaution.
+*Note:* There is a marked difference between *integer* division and *float* division. Because Python treats these two numeric types distinctly different, you might get erroneous answers when doing division operations without precaution.
 
 ## User Input--`raw_input()`
 
