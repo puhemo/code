@@ -201,7 +201,7 @@ Here are a few pointers on debugging.
 
 A **boolean** is like a light switch. It can only have two values. Just like a light switch can only be on or off, a boolean can only be `True` or `False`.
 
-The `x > 0` segment is called a **boolean expression**. Boolean expressions test its given parameters, in this case the variable **x** to the left against the numeric literal 0 to the right, and returns a value of either `true` or `false.` The actual condition being tested depends on what comparison operator is being used in the middle.
+The `x > 0` segment is called a **boolean expression**. Boolean expressions test its given parameters, in this case the variable **x** to the left against the numeric literal 0 to the right, and returns a value of either `true` or `false`.
 
 ###  Comparison Operators
 
