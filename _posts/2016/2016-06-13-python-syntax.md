@@ -70,7 +70,7 @@ More complex mathematical expressions can be evaluated for variable assignment t
 
 *Nota Bene:* There is a marked difference between *integer number* division and *floating point number* division. Because Python treats these two numeric types distinctly different, you might get erroneous answers when doing division operations without precaution. (read more on **Data Types: Other Caveats** below)
 
-### Assigning from User Input--`raw_input()`
+## Assigning from User Input--`raw_input()`
 
 The command to accept user input is `raw_input()`. This will make a pop-up box appear on your screen.
 
@@ -93,7 +93,7 @@ name = input("What is your name, human? ")
 print ("Hello", name + "! I am Python :D")
 ```
 
-### Data Types—`type()`
+## Data Types—`type()`
 
 The data types we have learned about so far are:
 * **Numeric types**
@@ -124,7 +124,7 @@ String concatenation example:
  #Outputs: Free Education! Hip-hip-hooray! Hip-hip-hooray! Hip-hip-hooray! Thank you Coursera!
 ```
 
-### Type Conversion--`int()`
+## Type Conversion--`int()`
 
 Type-casting is a universal programming notion of converting the value of a variable from one type into another. In Python, this is achieved by utilizing functions such as` int()`, `float()`, or `str()`. 
 ```Python
@@ -144,7 +144,7 @@ Type-casting is a universal programming notion of converting the value of a vari
  #Output: The correct sum actually was 68
 ```
 
-### Debugging
+## Debugging
 Here are a few pointers on debugging.
 
 1. Avoid spaces in between variable names. Python thinks there are two operands. Example:  
