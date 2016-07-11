@@ -29,6 +29,20 @@ There is no difference between using single quotes `'` and double quotes `"`. Ho
 
 If we want to include an apostrophe in our string, it would be smart to use double quotes to create the string like `"I'm a string"`. If we want to use quotes in the string, we might want to create the string with single quote like `'The man screamed "I love Python!" so that everyone could hear.'`
 
+## Escaping characters
+
+There are some characters that cause problems. For example:
+
+```python
+'There's a snake in my boot!'
+```
+
+This code breaks because Python thinks the apostrophe in `'There's'` ends the string. We can use the backslash to fix the problem, like this:
+
+```python
+'There\'s a snake in my boot!'
+```
+
 ## String Methods[^1]
 
 ### find()
