@@ -135,7 +135,7 @@ Universal import can handle this for you. The syntax for this is:
 from module import *
 ```
 
-# Bringing It All Together: A Practical Implementation--to do
+# Bringing It All Together
 
 A example code that implements all of the above topics to demonstrate them in real-world application.
 
