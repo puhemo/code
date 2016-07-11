@@ -35,6 +35,13 @@ Conditional statements let Python know it is about to enter a decision-making st
 
 The `else` statement complements the `if` statement. An `if/else` pair says: "If this expression is true, run this indented code block; otherwise, run this code after the `else` statement."
 
+```python
+if 8 > 9:
+    print "I don't printed!"
+else:
+    print "I get printed!"
+```
+
 ### Conditional Steps (Multi elif) - if ... elif .. else
 
 "Elif" is short for "else if." It means exactly what it sounds like: "otherwise, if the following expression is true, do this!"
