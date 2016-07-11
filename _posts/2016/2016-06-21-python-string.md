@@ -19,6 +19,16 @@ series: "Intro to Python"
 
 Another useful data type is the **string**. A string can contain letters, numbers, and symbols.
 
+```python
+name = "Ryan"
+age = "19"
+food = "cheese"
+```
+
+There is no difference between using single quotes `'` and double quotes `"`. However, sometimes it is helpful to use one or the other.   
+
+If we want to include an apostrophe in our string, it would be smart to use double quotes to create the string like `"I'm a string"`. If we want to use quotes in the string, we might want to create the string with single quote like `'The man screamed "I love Python!" so that everyone could hear.'`
+
 ## String Methods[^1]
 
 ### find()
