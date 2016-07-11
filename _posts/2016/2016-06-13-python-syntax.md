@@ -121,7 +121,7 @@ The data types we have learned about so far are:
 
 String concatenation example:
 
-```Python
+```python
  print "Hello" + "Coursera!"
 
  #Output: HelloCoursera!
@@ -129,7 +129,7 @@ String concatenation example:
 
 **Note**: When using concatenation with the `+` operator, **sentence spacing** isn't automatically allotted for. Whereas print "Hello", "Coursera!" would have output "Hello Coursera!". Also the multiplication * operator can be used for multiple string concatenation:
 
-```Python
+```python
  print "Free Education!", "Hip-hip-hooray! " * 3 + "Thank you Coursera!"
 
  #Outputs: Free Education! Hip-hip-hooray! Hip-hip-hooray! Hip-hip-hooray! Thank you Coursera!
@@ -139,7 +139,7 @@ String concatenation example:
 
 Type-casting is a universal programming notion of converting the value of a variable from one type into another. In Python, this is achieved by utilizing functions such as` int()`, `float()`, or `str()`. 
 
-```Python
+```python
  x = raw_input("Enter a number: ")
  y = raw_input("Enter another number: ")
  z = x + y
