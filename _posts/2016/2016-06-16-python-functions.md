@@ -102,7 +102,38 @@ filter(lambda x: x % 3 == 0, cubes)
 
 # Modules
 
-A [module](https://docs.python.org/2/tutorial/modules.html) is a file containing Python definitions and statements.  The file nameis the module name with the suffix `.py` appended.  Within a module, themodule’s name (as a string) is available as the value of the global variable`__name__`.
+A [module](https://docs.python.org/2/tutorial/modules.html) is a file containing Python definitions and statements.  The file name is the module name with the suffix `.py` appended.  Within a module, the module’s name (as a string) is available as the value of the global variable`__name__`.  
+
+A module is a file that contains definitions—including variables and functions—that you can use once it is imported.  
+
+## Generic import
+
+There is a Python module named `math` that includes a number of useful variables and functions, and sqrt() is one of those functions. 
+
+```python
+import math
+print math.sqrt(25)
+```
+
+When you simply import a module this way, it's called a **generic import**.
+
+## Function Imports
+
+It's possible to import only certain variables or functions from a given module. Pulling in just a single function from a module is called a **function import**, and it's done with the from keyword:
+
+```python
+from module import function
+```
+
+## Universal Imports
+
+What if we still want all of the variables and functions in a module but don't want to have to constantly type `math.`?
+
+Universal import can handle this for you. The syntax for this is:
+
+```python
+from module import *
+```
 
 # Bringing It All Together: A Practical Implementation--to do
 
