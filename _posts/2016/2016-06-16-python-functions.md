@@ -32,7 +32,7 @@ Python has a number of built-in functions we can use without any knowledge of ho
 - `int()`
 - `float()`
 - `str()`
-- `max()`
+- `max()`  
   The max() function takes any number of arguments and returns the largest one.   
 - `len()`
 
