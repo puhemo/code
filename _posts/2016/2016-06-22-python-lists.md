@@ -1,5 +1,5 @@
 ---
-title: "Python Part 6: Lists"
+title: "Python Part 07: Lists"
 date: 2016-06-22 09:00
 modified: 2016-07-03
 categories:
