@@ -92,7 +92,7 @@ Example:
  print "Hello", name + "! I am Python :D"
 ```
 
-> Note Chandrama:In Python 3.x,` input()` replaces `raw_input()`, for input from the console.Also remember to use the `print()` function with Python 3.4, including parentheses, for output to the console, instead of the old print command that did not require parentheses.
+> Note:In Python 3.x,` input()` replaces `raw_input()`, for input from the console.Also remember to use the `print()` function with Python 3.4, including parentheses, for output to the console, instead of the old print command that did not require parentheses.
 {:.notice--info} 
 
 So the example above will be in Python 3x as follows:
@@ -116,7 +116,8 @@ The data types we have learned about so far are:
   * A collection of characters
   * This can be alphabetic characters, special characters, or even numeric characters (but saved as type string, enclosed in "quotes")
   * Ex: "Alphabetic", "ch@r@cter$!!!", "1234567890"
-> Nota Bene: If you are unsure of what data type a particular variable, constant, or literal is, you can ask Python by using the` type()` function.
+
+> Note: If you are unsure of what data type a particular variable, constant, or literal is, you can ask Python by using the` type()` function.
 
 String concatenation example:
 
@@ -125,7 +126,8 @@ String concatenation example:
 
  #Output: HelloCoursera!
 ```
-**Note** that when using concatenation with the + operator, **sentence spacing** isn't automatically allotted for. Whereas print "Hello", "Coursera!" would have output "Hello Coursera!". Also the multiplication * operator can be used for multiple string concatenation:
+
+**Note**: When using concatenation with the `+` operator, **sentence spacing** isn't automatically allotted for. Whereas print "Hello", "Coursera!" would have output "Hello Coursera!". Also the multiplication * operator can be used for multiple string concatenation:
 
 ```Python
  print "Free Education!", "Hip-hip-hooray! " * 3 + "Thank you Coursera!"
@@ -136,6 +138,7 @@ String concatenation example:
 ## Type Conversion--`int()`
 
 Type-casting is a universal programming notion of converting the value of a variable from one type into another. In Python, this is achieved by utilizing functions such as` int()`, `float()`, or `str()`. 
+
 ```Python
  x = raw_input("Enter a number: ")
  y = raw_input("Enter another number: ")
@@ -154,6 +157,7 @@ Type-casting is a universal programming notion of converting the value of a vari
 ```
 
 ## Debugging
+
 Here are a few pointers on debugging.
 
 1. Avoid spaces in between variable names. Python thinks there are two operands. Example:  
