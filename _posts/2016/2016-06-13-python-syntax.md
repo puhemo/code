@@ -1,5 +1,5 @@
 ---
-title:  "Python Part 01: Variable and Boolean"
+title:  "Python Part 01: Syntax"
 date: 2016-06-13 20:00
 modified: 2016-07-10
 published: true
@@ -9,8 +9,7 @@ tags:
   - Python Syntax
   - Python 2.x
 excerpt: |
-    ## Variable Naming  
-    Nota Bene: Python is a case sensitive programming language. Be aware of this when you first name and subsequently use your variables. For instance, leapyear, Leapyear, leapYear, and LeapYear will actually be viewed as 4 **different** variables by Python even if you intended the same thing, a "leap year," but simply mistyped.
+    Python is an easy to learn programming language. You can use it to create web apps, games, even a search engine!
 series: "Intro to Python"	
 ---
 
@@ -223,6 +222,24 @@ Python also provides a set of logical operators to combine multiple boolean expr
 - Logical NOT ( not )
   - `not` negates a boolean expression, i.e. if the `bool` value returned is `false` then `not` evaluates to `true`
   - `if not( x > y ) : print 'this line runs when x is less than or equal to y'`
+
+## Comments
+
+### Single Line Comments
+
+The `#` sign is for comments. A comment is a line of text that Python won't try to run as code. It's just for humans to read.
+
+### Multi-Line Comments
+
+or multi-line comments, you can include the whole block in a set of triple quotation marks:
+
+```python
+"""Sipping from your cup 'til it runneth over,
+Holy Grail.
+"""
+```
+
+
 
 ## Referense
 [Pythonlearn:resources-week01](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
