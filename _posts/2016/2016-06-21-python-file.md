@@ -1,5 +1,5 @@
 ---
-title: "Python Part 5: File Input/Output"
+title: "Python Part 06: File Input/Output"
 date: 2016-06-21 10:00
 modified: 2016-07-10
 categories:
