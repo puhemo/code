@@ -1,5 +1,5 @@
 ---
-title:  "Python Part 04: Conditional Steps and Loops"
+title:  "Python Part 04: Conditionals & Control Flow"
 date: 2016-06-15 21:00
 modified: 2016-07-01
 published: true
@@ -9,18 +9,8 @@ tags:
   - Python Syntax
   - Python 2.x
 excerpt: |
-    # Conditional Execution
+    **Control flow** gives us this ability to choose among outcomes based off what else is happening in the program.
 
-    Python条件语句是通过一条或多条语句的执行结果（True或者False）来决定执行的代码块。
-
-    ```python
-    if (expression):
-     (command)
-    elif (expression):
-     (command)
-    else:
-     (command)
-    ```
 series: "Intro to Python"	
 ---
 
@@ -28,6 +18,8 @@ series: "Intro to Python"
 
 * TOC
 {:toc}
+
+**Control flow** gives us this ability to choose among outcomes based off what else is happening in the program.
 
 # Conditional Execution
 
