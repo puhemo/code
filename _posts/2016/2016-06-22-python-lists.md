@@ -9,7 +9,7 @@ tags:
   - Python 2.x
 published: true
 excerpt: |
-  Collection - allows us to put many values in a single variable.  
+  Lists are a datatype you can use to store a collection of different pieces of information as a sequence under a single variable name. 
 series: "Intro to Python"	
 ---
 {% include series.html %}
@@ -19,7 +19,7 @@ series: "Intro to Python"
 
 ## Lists
 
-Collection - allows us to put many values in a single variable.
+Lists are a **datatype** you can use to store a collection of different pieces of information as a sequence under a single variable name. 
 
 * A List element can be any Python object, even another **list**
 
@@ -34,6 +34,12 @@ Collection - allows us to put many values in a single variable.
 * When len() is used on a list, it counts the number of **constants** that make up the list.
 
 * List is an **ordered** sequence
+
+You can assign items to a list with an expression of the form
+
+```python
+list_name = [item_1, item_2]
+```
 
 ## List Slicing
 
