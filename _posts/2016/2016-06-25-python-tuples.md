@@ -1,5 +1,5 @@
 ---
-title: "Python Part 8: Tuples"
+title: "Python Part 09: Tuples"
 date: 2016-06-25 10:36
 modified: 2016-06-25
 categories:
