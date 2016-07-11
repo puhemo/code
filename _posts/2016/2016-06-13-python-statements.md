@@ -37,6 +37,8 @@ The `else` statement complements the `if` statement. An `if/else` pair says: "If
 
 ### Conditional Steps (Multi elif) - if ... elif .. else
 
+"Elif" is short for "else if." It means exactly what it sounds like: "otherwise, if the following expression is true, do this!"
+
 ```python
   if x < 0:
       x = 0
