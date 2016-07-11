@@ -50,11 +50,15 @@ def myFunction():
     # your code goes here...
 ```
 
+A parameter acts as a variable name for a passed in **argument**. 
+
 ```python
 # Function with parameters
 def product(num1, num2):
     num3 = num1 * num2
 ```
+
+A function can require as many parameters as you'd like, but when you call the function, you should generally pass in a matching number of arguments.
 
 ###  Returns
 
