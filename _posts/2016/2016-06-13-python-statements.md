@@ -1,6 +1,6 @@
 ---
 title:  "Python Part 04: Conditional Steps and Loops"
-date: 2016-06-13 21:00
+date: 2016-06-15 21:00
 modified: 2016-07-01
 published: true
 categories: 
