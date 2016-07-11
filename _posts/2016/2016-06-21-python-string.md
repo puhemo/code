@@ -17,6 +17,8 @@ series: "Intro to Python"
 * TOC
 {:toc}
 
+## Strings
+
 Another useful data type is the **string**. A string can contain letters, numbers, and symbols.
 
 ```python
