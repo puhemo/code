@@ -9,13 +9,15 @@ tags:
   - Python 2.x
 published: true
 excerpt: |
-  Below are listed the string methods.  
+  A string can contain letters, numbers, and symbols. 
 series: "Intro to Python"	
 ---
 {% include series.html %}
 
 * TOC
 {:toc}
+
+Another useful data type is the **string**. A string can contain letters, numbers, and symbols.
 
 ## String Methods[^1]
 
