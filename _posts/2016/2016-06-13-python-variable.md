@@ -19,6 +19,8 @@ series: "Intro to Python"
 * TOC
 {:toc}
 
+Python is an easy to learn programming language. You can use it to create web apps, games, even a search engine!
+
 ## Variable
 
 Creating web apps, games, and search engines all involve storing and working with different types of data. They do so using **variables**. A **variable** stores a piece of data, and gives it a specific name.
@@ -183,9 +185,11 @@ Here are a few pointers on debugging.
    # all of these variations of olive are separate variables.
    ```
 
-##  Boolean Expressions
+##  Boolean
 
-The `x > 0` segment is called a boolean expression. Boolean expressions test its given parameters, in this case the variable **x** to the left against the numeric literal 0 to the right, and returns a value of either `true` or `false.` The actual condition being tested depends on what comparison operator is being used in the middle.
+A **boolean** is like a light switch. It can only have two values. Just like a light switch can only be on or off, a boolean can only be `True` or `False`.
+
+The `x > 0` segment is called a **boolean expression**. Boolean expressions test its given parameters, in this case the variable **x** to the left against the numeric literal 0 to the right, and returns a value of either `true` or `false.` The actual condition being tested depends on what comparison operator is being used in the middle.
 
 ###  Comparison Operators
 
