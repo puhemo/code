@@ -33,6 +33,7 @@ Python has a number of built-in functions we can use without any knowledge of ho
 - `float()`
 - `str()`
 - `max()`
+  The max() function takes any number of arguments and returns the largest one.   
 - `len()`
 
 To see a full listing of Python's built-in functions, visit the [online Python documentation](https://docs.python.org/2/library/functions.html).
