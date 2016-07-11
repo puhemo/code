@@ -31,7 +31,9 @@ Python条件语句是通过一条或多条语句的执行结果（True或者Fals
 
 Conditional statements let Python know it is about to enter a decision-making structure.
 
-`if` is a conditional statement that executes some specified code after checking if its expression is `True`.
+`if` is a conditional statement that executes some specified code after checking if its expression is `True`.  
+
+The `else` statement complements the `if` statement. An `if/else` pair says: "If this expression is true, run this indented code block; otherwise, run this code after the `else` statement."
 
 ### Conditional Steps (Multi elif) - if ... elif .. else
 
