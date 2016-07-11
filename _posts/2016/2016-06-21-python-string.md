@@ -31,7 +31,7 @@ There is no difference between using single quotes `'` and double quotes `"`. Ho
 
 If we want to include an apostrophe in our string, it would be smart to use double quotes to create the string like `"I'm a string"`. If we want to use quotes in the string, we might want to create the string with single quote like `'The man screamed "I love Python!" so that everyone could hear.'`
 
-## Escaping characters
+### Escaping characters
 
 There are some characters that cause problems. For example:
 
@@ -43,6 +43,28 @@ This code breaks because Python thinks the apostrophe in `'There's'` ends the st
 
 ```python
 'There\'s a snake in my boot!'
+```
+
+### Access by Index
+
+Each character in a string is assigned a number. This number is called the **index**. 
+
+```python
+"""
+The string "PYTHON" has six characters,
+numbered 0 to 5, as shown below:
+
++---+---+---+---+---+---+
+| P | Y | T | H | O | N |
++---+---+---+---+---+---+
+  0   1   2   3   4   5
+
+So if you wanted "Y", you could just type
+"PYTHON"[1] (always start counting from 0!)
+"""
+fifth_letter = "MONTY"[4]
+
+print fifth_letter
 ```
 
 ## String Methods[^1]
