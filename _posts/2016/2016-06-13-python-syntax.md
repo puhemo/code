@@ -50,7 +50,8 @@ Although we can understand simple programs using this description, and many prog
 
 So instead of thinking of a variable being a named location whose value gets changed, it's more accurate to think of a variable as a name on a sticky note that gets moved and stuck to a location storing its new value (after storing that value if it hasn't been used previously). Note that we have just one location storing value 3.14, but three variables (w, y, and z) presently share that value. If any one of them changes, the value in that location doesn't change; instead, that variable now points to a different location containing that new value and the other two still "point to" 3.14.
 
-## Assigning from Mathematical Expressions
+## Math
+
 More complex mathematical expressions can be evaluated for variable assignment than just numeric literals. This can be achieved by way of the following operators:
 
 - Addition ( + )
@@ -68,9 +69,9 @@ More complex mathematical expressions can be evaluated for variable assignment t
   - Used to return the remainder of a division instead of the quotient answer ( 10 % 3 = 1, since 3 * 3 = 9 and 10 - 9 leaves a remainder 1 )
   - `x = 10 % 3`
 
-*Nota Bene:* There is a marked difference between *integer number* division and *floating point number* division. Because Python treats these two numeric types distinctly different, you might get erroneous answers when doing division operations without precaution. (read more on **Data Types: Other Caveats** below)
+*Note:* There is a marked difference between *integer number* division and *floating point number* division. Because Python treats these two numeric types distinctly different, you might get erroneous answers when doing division operations without precaution.
 
-## Assigning from User Input--`raw_input()`
+## User Input--`raw_input()`
 
 The command to accept user input is `raw_input()`. This will make a pop-up box appear on your screen.
 
