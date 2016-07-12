@@ -17,7 +17,15 @@ series: "Intro to Python"
 * TOC
 {:toc}
 
-A dictionary is a mapping between a set of indices(which are called keys) and a set of values. The association of a key and a value is called a key-value pair or sometimes an item.
+A dictionary is similar to a list, but you access values by looking up a **key** instead of an index.  
+
+A dictionary is a mapping between a set of indices(which are called keys) and a set of values. The association of a key and a value is called a **key-value pair** or sometimes an item.  
+
+Dictionaries are enclosed in curly braces, like so:
+
+```python
+d = {'key1' : 1, 'key2' : 2, 'key3' : 3}
+```
 
 ## Functions  and Methods
 
