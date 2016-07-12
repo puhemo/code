@@ -27,6 +27,16 @@ Dictionaries are enclosed in curly braces, like so:
 d = {'key1' : 1, 'key2' : 2, 'key3' : 3}
 ```
 
+## New Entries
+
+Like Lists, Dictionaries are "mutable". 
+
+```python
+dict_name[new_key] = new_value
+```
+
+An empty pair of curly braces `{}` is an empty dictionary, just like an empty pair of `[]` is an empty list.
+
 ## Functions  and Methods
 
 ### `dict()`
