@@ -37,7 +37,7 @@ dict_name[new_key] = new_value
 
 An empty pair of curly braces `{}` is an empty dictionary, just like an empty pair of `[]` is an empty list.  
 
-The function `dict` creates a new dictionary with no items: 
+The function `dict()` creates a new dictionary with no items: 
 
 ```python
 >>> eng2sp = dict()
