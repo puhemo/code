@@ -37,6 +37,19 @@ dict_name[new_key] = new_value
 
 An empty pair of curly braces `{}` is an empty dictionary, just like an empty pair of `[]` is an empty list.  
 
+The function `dict` creates a new dictionary with no items: 
+
+```python
+>>> eng2sp = dict()
+>>> print eng2sp
+{}
+>>> eng2sp['one'] = 'uno' # To add items to the dictionary
+>>> print eng2sp
+{'one': 'uno'}
+>>> print eng2sp['noe'] # Use the keys to look up the corresponding values
+'uno'
+```
+
 Items can be removed from a dictionary with the del command:  
 
 ```python
@@ -51,24 +64,9 @@ A new value can be associated with a key by assigning a value to the key, like s
 dict_name[key] = new_value
 ```
 
-## Functions  and Methods
+## Methods
 
-### `dict()`
-
-The function `dict` creates a new dictionary with no items: 
-
-```python
->>> eng2sp = dict()
->>> print eng2sp
-{}
->>> eng2sp['one'] = 'uno' # To add items to the dictionary
->>> print eng2sp
-{'one': 'uno'}
->>> print eng2sp['noe'] # Use the keys to look up the corresponding values
-'uno'
-```
-
-### `.values()`
+### `values()`
 
 To see whether something appears as a value in a dictionary, you can use the method `values`, which returns the values as a **list**, and then use the in operator:
 
@@ -78,14 +76,14 @@ To see whether something appears as a value in a dictionary, you can use the met
 True
 ```
 
-### `.keys()`
+### `keys()`
 
 ```python
 for name in counts.keys():
     print name
 ```
 
-### `.items()`
+### `items()`
 
 return a list of tuples, where each tuple is a key-value pair.
 
@@ -94,7 +92,7 @@ for name,occurrence in counts.items():
     print name, occurrence`
 ```
 
-### `.get()`
+### `get()`
 
 Dictionaries have a method called `get` that takes a key and a default value. If the key appears in the dictionary, `get` returns the corresponding value; otherwise it returns the default value. For example:
 
@@ -106,7 +104,7 @@ Dictionaries have a method called `get` that takes a key and a default value. If
 0
 ```
 
-### `.pop(key)`[^1]
+### `pop(key)`[^1]
 
 ```python
 >>> d.pop('Bob')
