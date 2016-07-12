@@ -27,7 +27,7 @@ Dictionaries are enclosed in curly braces, like so:
 d = {'key1' : 1, 'key2' : 2, 'key3' : 3}
 ```
 
-## New Entries
+## Basics
 
 Like Lists, Dictionaries are "mutable". 
 
@@ -35,7 +35,21 @@ Like Lists, Dictionaries are "mutable".
 dict_name[new_key] = new_value
 ```
 
-An empty pair of curly braces `{}` is an empty dictionary, just like an empty pair of `[]` is an empty list.
+An empty pair of curly braces `{}` is an empty dictionary, just like an empty pair of `[]` is an empty list.  
+
+Items can be removed from a dictionary with the del command:  
+
+```python
+del dict_name[key_name]
+```
+
+will remove the key key_name and its associated value from the dictionary.  
+
+A new value can be associated with a key by assigning a value to the key, like so:  
+
+```python
+dict_name[key] = new_value
+```
 
 ## Functions  and Methods
 
