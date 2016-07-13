@@ -9,6 +9,7 @@ tags:
   - Python 2.x
   - SQL
   - SQLite
+  - Database
 published: true
 excerpt: |
   A database is a file that is organized for storing data. Most databases are organized like a dictionary in the sense that they map from keys to values.
