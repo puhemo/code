@@ -207,3 +207,22 @@ These four basic SQL commands (`INSERT`, `SELECT`, `UPDATE`, and `DELETE`) allow
 * **Basic Rule**: Don’t put the same string data in twice - use a relationship instead
 
 * When there is one thing in the “real world” there should be one copy of that thing in the database
+
+### Three Kinds of Keys
+
+* **Primary key** - generally an integer auto-increment field
+* **Logical key** - What the outside world uses for lookup
+* **Foreign key** - generally an integer key pointing to a row in another table
+
+### The JOIN Operation
+
+The `JOIN` operation **links across several tables** as part of a select operation.  
+
+You must tell the `JOIN` how to use the keys that make the connection between the tables using an `ON` clause.  
+
+```sql
+select Album.title, Artist.name from Album join Artist on Album.artist_id = Artist.id
+```
+
+
+
