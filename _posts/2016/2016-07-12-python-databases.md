@@ -26,8 +26,6 @@ A **database** is a file that is organized for storing data. Most databases are 
 
 **Like a dictionary**, database software is designed to keep the inserting and accessing of data very fast, even for large amounts of data. Database software maintains its performance by building **indexes** as data is added to the database to allow the computer to jump quickly to a particular entry.
 
-**[SQLite](http://sqlite.org/)** is well suited to some of the data manipulation problems that we see in Informatics such as the Twitter spidering application that we describe in this chapter.
-
 When you first look at a database it looks **like a spreadsheet** with multiple sheets. The primary data structures in a database are:tables, rows, and columns. 
 
 ![img](http://www.pythonlearn.com/html-270/book016.png)
