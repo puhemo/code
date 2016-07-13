@@ -199,3 +199,11 @@ The `UPDATE` statement specifies a table and then a list of fields and values to
 A single `UPDATE` statement will change all of the rows that match the `WHERE` clause. If a `WHERE` clause is not specified, it performs the `UPDATE` on all of the rows in the table.
 
 These four basic SQL commands (`INSERT`, `SELECT`, `UPDATE`, and `DELETE`) allow the four basic operations needed to create and maintain data.
+
+## Building a Data Model
+
+* Drawing a picture of the data objects for our application and then figuring out how to represent the objects and their relationships
+
+* **Basic Rule**: Don’t put the same string data in twice - use a relationship instead
+
+* When there is one thing in the “real world” there should be one copy of that thing in the database
