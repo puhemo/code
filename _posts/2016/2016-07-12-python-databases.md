@@ -224,5 +224,7 @@ You must tell the `JOIN` how to use the keys that make the connection between th
 select Album.title, Artist.name from Album join Artist on Album.artist_id = Artist.id
 ```
 
+> Note: Joining two tables without an `ON` clause gives all possible combinations of rows.
+
 
 
