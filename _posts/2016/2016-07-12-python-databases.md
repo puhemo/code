@@ -33,7 +33,29 @@ When you first look at a database it looks **like a spreadsheet** with multiple 
 
 In technical descriptions of relational databases the concepts of **table**, **row**, and **column** are more formally referredto as relation, tuple, and attribute, respectively.We will use the less formal terms in this chapter.
 
-## Basics
+A `relation` is defined as a set of `tuples` that have the same `attributes`.   A `tuple` usually represents an object and information about that object.  Objects are typically physical objects or concepts.   A `relation` is usually described as a table, which is organized into rows and columns.   All the data referenced by an attribute are in the same domain and conform to the same constraints. 
+
+## SQL Basics
+
+**Structured Query Language** is the language we use to issue commands to the database
+
+* Create a table
+* Retrieve some data
+* Insert data
+* Delete data 
+
+A **database model** or **database schema** is the structure or format of a **database**, described in a formal language supported by the database management system. In other words, a “database model” is the application of a data model when used in conjunction with a database management system.
+
+### Common Database Systems
+
+* Three major Database Management Systems in wide use
+  * **Oracle** - Large, commercial, enterprise-scale, very very tweakable
+  * **MySql** - Simpler but very fast and scalable - commercial open source
+  * **SqlServer** - Very nice - from Microsoft (also Access)
+* Many other smaller projects, free and open source
+  HSQL, **SQLite**, Postgres, ... 
+
+### Creating a database table
 
 When we create a database **table** we must tell the database in advance the names of each of the **columns** in the table and the type of data which we are planning to store in each column. When the database software knows the type of data in each column, it can choose the most efficient way to store and look up the data based on the type of data. 
 
