@@ -158,5 +158,6 @@ We've learned six commands commonly used to manage data stored in a relational d
   - `UPDATE` edits a row in a table.
   - `ALTER TABLE` changes an existing table.
   - `DELETE FROM` deletes rows from a table.
-  
+
+
 {% include series.html %}
