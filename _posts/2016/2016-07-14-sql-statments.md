@@ -9,7 +9,7 @@ tags:
   - Database
 published: true
 excerpt: |
-  A statement is text that the database recognizes as a valid command.
+  A **statement** is text that the database recognizes as a valid command.
 series: "Intro to SQL"	
 ---
 {% include series.html %}
@@ -25,7 +25,7 @@ CREATE TABLE table_name (
   );
 ```
 
-The above code is a SQL statement. A *statement* is text that the database recognizes as a valid command. Statements always end in a semi-colon `;`.
+The above code is a **SQL statement**. A *statement* is text that the database recognizes as a valid command. Statements always end in a semi-colon `;`.
 
 Let's break down the components of a statement:
 
@@ -35,7 +35,7 @@ Let's break down the components of a statement:
 
 The number of lines used do not matter. A statement can be written all on one line, or split up across multiple lines if it makes it easier to read. 
 
-### Create
+## Create
 
 ```sql
 CREATE TABLE celebs (id INTEGER, name TEXT, age INTEGER);
@@ -51,7 +51,7 @@ This `CREATE` statement creates a new table in the database named `celebs`. You 
 3. `(id INTEGER, name TEXT, age INTEGER)` is a list of parameters defining each column in the table and its data type. 
 
 
-### Insert
+## Insert
 
 ```sql
 INSERT INTO celebs (id, name, age) VALUES (1, 'Justin Bieber', 21);
@@ -69,7 +69,7 @@ This `INSERT` statement inserts new rows into a table. You can use the `INSERT` 
    `(1, 'Justin Bieber', 21)` is a parameter identifying the values being inserted.
 
 
-### Select
+## Select
 
 ```sql
 SELECT name FROM celebs;
@@ -92,7 +92,7 @@ SELECT * FROM celebs;
 
 `SELECT` statements always return a new table called the *result set*.
 
-### Update
+## Update
 
 ```sql
 UPDATE celebs
@@ -111,7 +111,7 @@ The `UPDATE` statement edits a row in the table. You can use the `UPDATE` statem
 4. `WHERE` is a clause that indicates which row(s) to update with the new column value. Here the row with a `1` in the `id` column is the row that will have the `age` updated to `22`.
 
 
-### Alter
+## Alter
 
 ```sql
 ALTER TABLE celebs ADD COLUMN twitter_handle TEXT;
@@ -131,7 +131,7 @@ The `ALTER TABLE` statement added a new column to the table. You can use this co
                                     have `NULL` values for `twitter_handle`.
     ```
 
-### Delete
+## Delete
 
 ```sql
 DELETE FROM celebs WHERE twitter_handle IS NULL;
