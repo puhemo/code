@@ -149,3 +149,4 @@ GROUP BY price;
 * `AVG()` takes a column name as an argument and returns the average value for that column.
 * `ROUND()` takes two arguments, a column name and the number of decimal places to round the values in that column.
 
+{% include series.html %}
