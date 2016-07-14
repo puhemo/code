@@ -184,3 +184,6 @@ Sometimes even filtered results can return thousands of rows in large databases.
 4. `AND` and `OR` are special operators that you can use with `WHERE` to filter the query on two or more conditions.
 5. `ORDER BY` lets you sort the results of the query in either ascending or descending order.
 6. `LIMIT` lets you specify the maximum number of rows that the query will return. This is especially important in large tables that have thousands or even millions of rows.
+ 
+
+{% include series.html %}
