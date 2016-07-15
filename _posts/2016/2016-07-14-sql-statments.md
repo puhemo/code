@@ -1,5 +1,5 @@
 ---
-title: "SQL Part 02: SQL Basics"
+title: "SQL Part 02: SQL Statement"
 date: 2016-07-14 12:20
 modified: 2016-07-14
 categories:
