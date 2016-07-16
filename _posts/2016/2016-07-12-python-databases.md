@@ -233,4 +233,50 @@ select Album.title, Artist.name from Album join Artist on Album.artist_id = Arti
 > Note: Joining two tables without an `ON` clause gives all possible combinations of rows.
 
 
+## Many-To-Many Relationships
+
+In [systems analysis](https://en.wikipedia.org/wiki/Systems_analysis), a **many-to-many** relationship is a type of [cardinality](https://en.wikipedia.org/wiki/Cardinality_%28data_modeling%29) that refers to the relationship between two [entities](https://en.wikipedia.org/wiki/Entity) A and B in which A may contain a [parent](https://en.wikipedia.org/wiki/Hierarchy#Nomenclature) instance for which there are many [children](https://en.wikipedia.org/wiki/Hierarchy#Nomenclature) in B and vice versa.
+
+* Sometimes we need to model a relationship that is many-to-many
+
+* We need to add a "connection" table with two foreign keys
+
+* There is usually no separate primary key
+
+[![File:CPT-Databases-ManytoMany.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/CPT-Databases-ManytoMany.svg/460px-CPT-Databases-ManytoMany.svg.png)](https://en.wikipedia.org/wiki/Many-to-many_(data_model))
+
+[![Databases-ManyToManyWJunction.jpg](https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Databases-ManyToManyWJunction.jpg/800px-Databases-ManyToManyWJunction.jpg)](https://en.wikipedia.org/wiki/Many-to-many_(data_model))
+
+An **associative entity(** **junction table**) is a term used in [relational](https://en.wikipedia.org/wiki/Relational_model) and [entity–relationship](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model) theory. A relational database requires the implementation of a base relation (or base table) to resolve [many-to-many relationships](https://en.wikipedia.org/wiki/Many-to-many_%28data_model%29). This kind of base relation is called an **associative table**.
+
+As mentioned above, associative entities are implemented in a database structure using **associative tables,** which are tables that can contain references to columns from the same or different database tables within the same database.
+
+![Concept of a mapping table](https://upload.wikimedia.org/wikipedia/commons/d/d7/Mapping_table_concept.png)
+
+```sql
+CREATE TABLE User (
+    id     INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+    name   TEXT UNIQUE,
+    email  TEXT
+)
+
+CREATE TABLE Course (
+    id     INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+    title  TEXT UNIQUE
+)
+
+CREATE TABLE Member (
+    user_id     INTEGER,
+    course_id   INTEGER,
+	role        INTEGER,
+    PRIMARY KEY (user_id, course_id)
+)
+```
+
+## More Info
+
+[Many-to-many (data model)](https://en.wikipedia.org/wiki/Many-to-many_%28data_model%29)
+
+[Associative entity](https://en.wikipedia.org/wiki/Associative_entity)
+
 
