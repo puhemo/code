@@ -213,6 +213,13 @@ These four basic SQL commands (`INSERT`, `SELECT`, `UPDATE`, and `DELETE`) allow
 * **Logical key** - What the outside world uses for lookup
 * **Foreign key** - generally an integer key pointing to a row in another table
 
+### Database Normalization 
+
+* There is *tons* of database theory - way too much to understand without excessive predicate calculus
+* **Do not replicate data** - reference data - point at data
+* Use **integers for keys** and for references
+* Add a special “**key**” column to each table which we will make references to.   By convention, many programmers call this column “**id**”
+
 ### The JOIN Operation
 
 The `JOIN` operation **links across several tables** as part of a select operation.  
