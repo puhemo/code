@@ -147,6 +147,74 @@ Tracks:
 
 Do not be concerned that the title strings are shown starting with `u’`. This is an indication that the strings are **Unicode** strings that are capable of storing non-Latin character sets.
 
+## Spidering Twitter using a database
+
+We will start by retrieving one person’s Twitter friends and their statuses, looping through the list of friends, and adding each of the friends to a database to be retrieved in the future. After we process one person’s Twitter friends, we check in our database and retrieve one of the friends of the friend. We do this over and over, picking an “unvisited” person, retrieving their friend list, and adding friends we have not seen to our list for a future visit.
+
+This program is a bit complex. It is based on the code from the exercise earlier in the book that uses the Twitter API.
+
+Here is the source code for our Twitter spidering application:
+
+```sql
+import urllib
+import twurl
+import json
+import sqlite3
+
+TWITTER_URL = 'https://api.twitter.com/1.1/friends/list.json'
+
+conn = sqlite3.connect('spider.sqlite3')
+cur = conn.cursor()
+
+cur.execute("'
+CREATE TABLE IF NOT EXISTS Twitter 
+(name TEXT, retrieved INTEGER, friends INTEGER)"')
+
+while True:
+    acct = raw_input('Enter a Twitter account, or quit: ')
+    if ( acct == 'quit' ) : break
+    if ( len(acct) < 1 ) :
+        cur.execute('SELECT name FROM Twitter WHERE retrieved = 0 LIMIT 1')
+        try:
+            acct = cur.fetchone()[0]
+        except:
+            print 'No unretrieved Twitter accounts found'
+            continue
+
+    url = twurl.augment(TWITTER_URL, 
+               {'screen_name': acct, 'count': '20'} )
+    print 'Retrieving', url
+    connection = urllib.urlopen(url)
+    data = connection.read()
+    headers = connection.info().dict
+    # print 'Remaining', headers['x-rate-limit-remaining']
+    js = json.loads(data)
+    # print json.dumps(js, indent=4)
+
+    cur.execute('UPDATE Twitter SET retrieved=1 WHERE name = ?', (acct, ) )
+
+    countnew = 0
+    countold = 0
+    for u in js['users'] :
+        friend = u['screen_name']
+        print friend
+        cur.execute('SELECT friends FROM Twitter WHERE name = ? LIMIT 1', 
+            (friend, ) )
+        try:
+            count = cur.fetchone()[0]
+            cur.execute('UPDATE Twitter SET friends = ? WHERE name = ?', 
+                (count+1, friend) )
+            countold = countold + 1
+        except:
+            cur.execute("'INSERT INTO Twitter (name, retrieved, friends) 
+                VALUES ( ?, 0, 1 )"', ( friend, ) )
+            countnew = countnew + 1
+    print 'New accounts=',countnew,' revisited=',countold
+    conn.commit()
+
+cur.close()
+```
+
 ## Structured Query Language summary
 
 Since there are so many different database vendors, the Structured Query Language (SQL) was standardized so we could communicate in a portable manner to database systems from multiple vendors.
