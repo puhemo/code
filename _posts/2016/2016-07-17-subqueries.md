@@ -55,16 +55,35 @@ In a **correlated subquery**, the subquery can not be run independently of the o
 
 This means that for each row processed by the outer query, the subquery will also be processed for that row. 
 
-In this example, we will find the list of all flights whose distance is above average for their carrier.
+Here is an example for a typical correlated subquery. In this example, the object is to find all employees whose salary is above average for their department.
 
 ```sql
-SELECT id
-FROM flights AS f
-WHERE distance > (
- SELECT AVG(distance)
- FROM flights
- WHERE carrier = f.carrier);
+ SELECT employee_number, name
+   FROM employees AS Bob
+   WHERE salary > (
+     SELECT AVG(salary)
+       FROM employees
+       WHERE department = Bob.department);
 ```
+
+In the above query the outer query is
+
+```sql
+ SELECT employee_number, name
+   FROM employees AS Bob
+   WHERE salary > ...
+```
+
+and the inner query (the correlated subquery) is
+
+```sql
+ SELECT AVG(salary)
+   FROM employees
+   WHERE department = Bob.department
+```
+
+In the above nested query the inner query has to be re-executed for each employee.
+
 
 ## Subqueries with the SELECT Statement:
 
