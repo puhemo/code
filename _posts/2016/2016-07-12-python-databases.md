@@ -176,6 +176,7 @@ while True:
     if ( len(acct) < 1 ) :
         cur.execute('SELECT name FROM Twitter WHERE retrieved = 0 LIMIT 1')
         try:
+        # To retrieve data after executing a SELECT statement, you can either treat the cursor as an iterator, call the cursor’s fetchone()[^1] method to retrieve a single matching row, or call fetchall() to get a list of the matching rows.
             acct = cur.fetchone()[0]
         except:
             print 'No unretrieved Twitter accounts found'
@@ -441,3 +442,4 @@ We will cover each of these in turn.
 [Associative entity](https://en.wikipedia.org/wiki/Associative_entity)
 
 
+[^1]: 使用Cursor对象执行select语句时，通过`featchall()`可以拿到结果集。结果集是一个list，每个元素都是一个tuple，对应一行记录。
