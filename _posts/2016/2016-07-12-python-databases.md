@@ -179,7 +179,7 @@ while True:
 """
 To retrieve data after executing a SELECT statement, 
 you can either treat the cursor as an iterator, 
-call the cursor’s fetchone()[^1] method to retrieve a single matching row, 
+call the cursor’s fetchone() method to retrieve a single matching row, 
 or call fetchall() to get a list of the matching rows.
 """
             acct = cur.fetchone()[0]
@@ -445,6 +445,8 @@ We will cover each of these in turn.
 [Many-to-many (data model)](https://en.wikipedia.org/wiki/Many-to-many_%28data_model%29)
 
 [Associative entity](https://en.wikipedia.org/wiki/Associative_entity)
+
+[使用SQLite](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001388320596292f925f46d56ef4c80a1c9d8e47e2d5711000)
 
 
 [^1]: 使用Cursor对象执行select语句时，通过`featchall()`可以拿到结果集。结果集是一个list，每个元素都是一个tuple，对应一行记录。
