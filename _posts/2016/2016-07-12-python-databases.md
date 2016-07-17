@@ -176,12 +176,14 @@ while True:
     if ( len(acct) < 1 ) :
         cur.execute('SELECT name FROM Twitter WHERE retrieved = 0 LIMIT 1')
         try:
-        """
-        To retrieve data after executing a SELECT statement, 
-        you can either treat the cursor as an iterator, 
-        call the cursor’s fetchone()[^1] method to retrieve a single matching row, 
-        or call fetchall() to get a list of the matching rows.
-        """
+"""
+
+To retrieve data after executing a SELECT statement, 
+you can either treat the cursor as an iterator, 
+call the cursor’s fetchone()[^1] method to retrieve a single matching row, 
+or call fetchall() to get a list of the matching rows.
+
+"""
             acct = cur.fetchone()[0]
         except:
             print 'No unretrieved Twitter accounts found'
