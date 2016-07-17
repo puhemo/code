@@ -55,7 +55,7 @@ In a **correlated subquery**, the subquery can not be run independently of the o
 
 This means that for each row processed by the outer query, the subquery will also be processed for that row. 
 
-Here is an example for a typical correlated subquery. In this example, the object is to find all employees whose salary is above average for their department.
+Here is an example for a typical correlated subquery. In this example[^1], the object is to find all employees whose salary is above average for their department.
 
 ```sql
  SELECT employee_number, name
@@ -254,5 +254,5 @@ This would impact two rows and finally CUSTOMERS table would have the following 
 
 [Subqueries](https://www.codecademy.com/en/courses/sql-table-transformation/lessons/subqueries/exercises/table-transformation)
 
-[Correlated subquery](https://en.wikipedia.org/wiki/Correlated_subquery)
+[^1]: [Correlated subquery](https://en.wikipedia.org/wiki/Correlated_subquery)
 
