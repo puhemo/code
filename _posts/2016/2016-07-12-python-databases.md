@@ -416,16 +416,16 @@ while True:
             friend_id = cur.fetchone()[0]
             countold = countold + 1
         except:
-            cur.execute("'INSERT OR IGNORE INTO People (name, retrieved) 
-                VALUES ( ?, 0)"', ( friend, ) )
+            cur.execute('''INSERT OR IGNORE INTO People (name, retrieved) 
+                VALUES ( ?, 0)''', ( friend, ) )
             conn.commit()
             if cur.rowcount != 1 :
                 print 'Error inserting account:',friend
                 continue
             friend_id = cur.lastrowid
             countnew = countnew + 1
-        cur.execute("'INSERT OR IGNORE INTO Follows (from_id, to_id) 
-            VALUES (?, ?)"', (id, friend_id) )
+        cur.execute('''INSERT OR IGNORE INTO Follows (from_id, to_id) 
+            VALUES (?, ?)''', (id, friend_id) )
     print 'New accounts=',countnew,' revisited=',countold
     conn.commit()
 
