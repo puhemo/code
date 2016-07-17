@@ -182,7 +182,7 @@ you can either treat the cursor as an iterator,
 call the cursor’s fetchone() method to retrieve a single matching row, 
 or call fetchall() to get a list of the matching rows.
 """
-            acct = cur.fetchone()[0]
+            acct = cur.fetchone()[0] # fetchone() returns the row as a tuple. 
         except:
             print 'No unretrieved Twitter accounts found'
             continue
