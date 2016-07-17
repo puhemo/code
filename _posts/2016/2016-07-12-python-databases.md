@@ -166,9 +166,9 @@ TWITTER_URL = 'https://api.twitter.com/1.1/friends/list.json'
 conn = sqlite3.connect('spider.sqlite3')
 cur = conn.cursor()
 
-cur.execute("'
+cur.execute('''
 CREATE TABLE IF NOT EXISTS Twitter 
-(name TEXT, retrieved INTEGER, friends INTEGER)"')
+(name TEXT, retrieved INTEGER, friends INTEGER)''')
 
 while True:
     acct = raw_input('Enter a Twitter account, or quit: ')
@@ -212,8 +212,8 @@ or call fetchall() to get a list of the matching rows.
                 (count+1, friend) )
             countold = countold + 1
         except:
-            cur.execute("'INSERT INTO Twitter (name, retrieved, friends) 
-                VALUES ( ?, 0, 1 )"', ( friend, ) )
+            cur.execute('''INSERT INTO Twitter (name, retrieved, friends) 
+                VALUES ( ?, 0, 1 )''', ( friend, ) )
             countnew = countnew + 1
     print 'New accounts=',countnew,' revisited=',countold
     conn.commit()
