@@ -254,3 +254,5 @@ This would impact two rows and finally CUSTOMERS table would have the following 
 
 [Subqueries](https://www.codecademy.com/en/courses/sql-table-transformation/lessons/subqueries/exercises/table-transformation)
 
+[Correlated subquery](https://en.wikipedia.org/wiki/Correlated_subquery)
+
