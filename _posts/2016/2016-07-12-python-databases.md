@@ -371,8 +371,8 @@ while True:
     acct = raw_input('Enter a Twitter account, or quit: ')
     if ( acct == 'quit' ) : break
     if ( len(acct) < 1 ) :
-        cur.execute("'SELECT id, name FROM People 
-            WHERE retrieved = 0 LIMIT 1"')
+        cur.execute('''SELECT id, name FROM People 
+            WHERE retrieved = 0 LIMIT 1''')
         try:
             (id, acct) = cur.fetchone()
         except:
@@ -384,8 +384,8 @@ while True:
         try:
             id = cur.fetchone()[0]
         except:
-            cur.execute("'INSERT OR IGNORE INTO People (name, retrieved) 
-                VALUES ( ?, 0)"', ( acct, ) )
+            cur.execute('''INSERT OR IGNORE INTO People (name, retrieved) 
+                VALUES ( ?, 0)''', ( acct, ) )
             conn.commit()
             if cur.rowcount != 1 : 
                 print 'Error inserting account:',acct
