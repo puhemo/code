@@ -115,6 +115,22 @@ The result is not what we need .
 
 Notice: The above `SELECT` statement specifies two rows (`Customer` and `SUM (OrderPrice)`). `SUM (OrderPrice)` returns a single value ( `OrderPrice` column totals ) , and `Customer` returns six values ( each value corresponding to the `Orders` table for each row ) . 
 
+```sql
+SELECT account_id, open_emp_id
+         ^^^^        ^^^^
+          1           2
+
+FROM account
+GROUP BY 1;
+```
+
+In above query `GROUP BY 1` refers to the `first column in select statement` which is   `account_id`.
+
+You also can specify in `ORDER BY`.
+
+> Note : The number in `ORDER BY` and `GROUP BY` always start with 1 not with 0.
+
+
 ## Sum
 
 ```sql
