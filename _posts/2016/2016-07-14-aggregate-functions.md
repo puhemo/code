@@ -68,6 +68,53 @@ WHERE downloads > 20000
 GROUP BY price;
 ```
 
+Consider the `Orders` [^1]table is having the following records:
+
+| O_Id | OrderDate  | OrderPrice | Customer |
+| ---- | ---------- | ---------- | -------- |
+| 1    | 2008/12/29 | 1000       | Bush     |
+| 2    | 2008/11/23 | 1600       | Carter   |
+| 3    | 2008/10/05 | 700        | Bush     |
+| 4    | 2008/09/28 | 300        | Bush     |
+| 5    | 2008/08/06 | 2000       | Adams    |
+| 6    | 2008/07/21 | 100        | Carter   |
+
+If you want to know the total amount of Orderprice on each customer, then `GROUP BY` query would be as follows:
+
+```sql
+SELECT Customer,SUM(OrderPrice) FROM Orders
+GROUP BY Customer
+```
+
+This would produce the following result:
+
+| Customer | SUM(OrderPrice) |
+| -------- | --------------- |
+| Bush     | 2000            |
+| Carter   | 1700            |
+| Adams    | 2000            |
+
+Now, let us try to ignore the `GROUP BY` clause :
+
+```sql
+SELECT Customer,SUM(OrderPrice) FROM Orders
+```
+
+This would produce the following result:
+
+| Customer | SUM(OrderPrice) |
+| -------- | --------------- |
+| Bush     | 5700            |
+| Carter   | 5700            |
+| Bush     | 5700            |
+| Bush     | 5700            |
+| Adams    | 5700            |
+| Carter   | 5700            |
+
+The result is not what we need .
+
+Notice: The above `SELECT` statement specifies two rows (`Customer` and `SUM (OrderPrice)`). "SUM (OrderPrice)" returns a single value ( "OrderPrice" column totals ) , and "Customer" returns six values ( each value corresponding to the "Orders" table for each row ) . 
+
 ## Sum
 
 ```sql
@@ -165,4 +212,12 @@ GROUP BY price;
 * `AVG()` takes a column name as an argument and returns the average value for that column.
 * `ROUND()` takes two arguments, a column name and the number of decimal places to round the values in that column.
 
+# References
+
+[SQL - Group By](http://www.tutorialspoint.com/sql/sql-group-by.htm)
+
+[^1]: [SQL GROUP BY 语句](http://www.w3school.com.cn/sql/sql_groupby.asp)
+
 {% include series.html %}
+
+
