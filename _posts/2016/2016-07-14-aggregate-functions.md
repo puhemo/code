@@ -1,7 +1,7 @@
 ---
 title: "SQL Part 04: Aggregate Functions"
 date: 2016-07-14 12:36
-modified: 2016-07-14
+modified: 2016-07-17
 categories:
   - SQL
 tags:
@@ -124,7 +124,7 @@ FROM account
 GROUP BY 1;
 ```
 
-In above query `GROUP BY 1` refers to the `first column in select statement` which is   `account_id`.
+In above query `GROUP BY 1`[^2] refers to the `first column in select statement` which is   `account_id`.
 
 You also can specify in `ORDER BY`.
 
@@ -233,6 +233,8 @@ GROUP BY price;
 [SQL - Group By](http://www.tutorialspoint.com/sql/sql-group-by.htm)
 
 [^1]: [SQL GROUP BY 语句](http://www.w3school.com.cn/sql/sql_groupby.asp)
+
+[^2]: [What does SQL clause “GROUP BY 1” mean?](http://stackoverflow.com/questions/7392730/what-does-sql-clause-group-by-1-mean)
 
 {% include series.html %}
 
