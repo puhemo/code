@@ -22,6 +22,10 @@ series: "Intro to SQL"
 ## Count
 
 ```sql
+SELECT COUNT(column_name) FROM table_name;
+```
+
+```sql
 SELECT COUNT(*) FROM fake_apps;
 ```
 
@@ -31,14 +35,26 @@ The fastest way to calculate the number of rows in a table is to use the `COUNT(
 
 ## Group by
 
+`GROUP BY` is a clause in SQL that is **only** used with **aggregate functions**, it is used in collaboration with the `SELECT` statement to **arrange identical data into groups**.
+
+The `GROUP BY` clause follows the `WHERE` clause in a `SELECT` statement and precedes the `ORDER BY` clause.
+
+The basic syntax of `GROUP BY` clause is given below. The `GROUP BY` clause must follow the conditions in the `WHERE` clause and must precede the `ORDER BY` clause if one is used.
+
 ```sql
-SELECT price, COUNT(*) FROM fake_apps
-GROUP BY price;
+SELECT column1, column2
+FROM table_name
+WHERE [ conditions ]
+GROUP BY column1, column2
+ORDER BY column1, column2
 ```
 
 Aggregate functions are more useful when they organize data into groups.
 
-`GROUP BY` is a clause in SQL that is **only** used with **aggregate functions**. It is used in collaboration with the `SELECT` statement to **arrange identical data into groups**.
+```sql
+SELECT price, COUNT(*) FROM fake_apps
+GROUP BY price;
+```
 
 Here, our aggregate function is `COUNT()` and we are passing `price` as an argument to `GROUP BY`. SQL will count the total number of apps for each price in the table.
 
