@@ -113,7 +113,7 @@ This would produce the following result:
 
 The result is not what we need .
 
-Notice: The above `SELECT` statement specifies two rows (`Customer` and `SUM (OrderPrice)`). "SUM (OrderPrice)" returns a single value ( "OrderPrice" column totals ) , and "Customer" returns six values ( each value corresponding to the "Orders" table for each row ) . 
+Notice: The above `SELECT` statement specifies two rows (`Customer` and `SUM (OrderPrice)`). `SUM (OrderPrice)` returns a single value ( `OrderPrice` column totals ) , and `Customer` returns six values ( each value corresponding to the `Orders` table for each row ) . 
 
 ## Sum
 
