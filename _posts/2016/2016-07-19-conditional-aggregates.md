@@ -164,10 +164,3 @@ GROUP BY origin;
 [^1]: [SQL - NULL Values](http://www.tutorialspoint.com/sql/sql-null-values.htm)
 
 
-
-
-
-
-
-
-[^1]: [SQL - NULL Values](http://www.tutorialspoint.com/sql/sql-null-values.htm)
