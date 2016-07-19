@@ -263,5 +263,8 @@ Holy Grail.
 ## Referense
 [Pythonlearn:resources-week01](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
 
+[Scripting language](https://en.wikipedia.org/wiki/Scripting_language)
+
 [^1]: [Python Overview](http://www.tutorialspoint.com/python/python_overview.htm)
-[^2]: A scripting or script language is a programming language that supports scripts, programs written for a special run-time environment that automate[1] the execution of tasks that could alternatively be executed one-by-one by a human operator. 
+
+[^2]: A scripting or script language is a programming language that supports scripts, programs written for a special run-time environment that automate the execution of tasks that could alternatively be executed one-by-one by a human operator. 
