@@ -1,5 +1,5 @@
 ---
-title: "SQL Part 07: Conditional Aggregates"
+title: "SQL Part 08: Conditional Aggregates"
 date: 2016-07-19 08:20
 modified: 2016-07-19
 categories:
