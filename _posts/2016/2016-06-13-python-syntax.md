@@ -27,6 +27,61 @@ Python[^1] is a high-level, interpreted, interactive and object-oriented **scrip
 - **Python is Object-Oriented:** Python supports Object-Oriented style or technique of programming that encapsulates code within objects.
 - **Python is a Beginner's Language:** Python is a great language for the beginner-level programmers and supports the development of a wide range of applications from simple text processing to WWW browsers to games.
 
+## Reserved Words
+
+The following list shows the Python keywords. These are reserved words and you cannot use them as constant or variable or any other identifier names. All the Python keywords contain lowercase letters only.
+
+| And      | exec    | Not    |
+| -------- | ------- | ------ |
+| Assert   | finally | or     |
+| Break    | for     | pass   |
+| Class    | from    | print  |
+| Continue | global  | raise  |
+| def      | if      | return |
+| del      | import  | try    |
+| elif     | in      | while  |
+| else     | is      | with   |
+| except   | lambda  | yield  |
+
+## Multi-Line Statements
+
+Statements in Python typically end with a new line. Python does, however, allow the use of the line continuation character (\) to denote that the line should continue. For example −
+
+```python
+total = item_one + \
+        item_two + \
+        item_three
+```
+
+Statements contained within the [], {}, or () brackets do not need to use the line continuation character. For example −
+
+```python
+days = ['Monday', 'Tuesday', 'Wednesday',
+        'Thursday', 'Friday']
+```
+
+## Quotation in Python
+
+Python accepts single ('), double (") and triple (''' or """) quotes to denote string literals, as long as the same type of quote starts and ends the string.
+
+The triple quotes are used to span the string across multiple lines. For example, all the following are legal −
+
+```python
+word = 'word'
+sentence = "This is a sentence."
+paragraph = """This is a paragraph. It is
+made up of multiple lines and sentences."""
+```
+
+## Multiple Statements on a Single Line
+
+The semicolon ( ; ) allows multiple statements on the single line given that neither statement starts a new code block. Here is a sample snip using the semicolon −
+
+```python
+import sys; x = 'foo'; sys.stdout.write(x + '\n')
+```
+
+
 ## Variable
 
 Creating web apps, games, and search engines all involve storing and working with different types of data. They do so using **variables**. A **variable** stores a piece of data, and gives it a specific name.
