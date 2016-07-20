@@ -27,6 +27,21 @@ Python条件语句是通过一条或多条语句的执行结果（True或者Fals
 
 > We end the if statement with a **colon (:)** and lines after the if statement are **indented**.
 
+Following is the general form of a typical decision making structure found in most of the programming languages −
+
+![Decision making statements in Python](http://www.tutorialspoint.com/python/images/decision_making.jpg)
+
+Python programming language assumes any **non-zero** and **non-null** values as TRUE, and if it is either **zero** or **null**, then it is assumed as FALSE value.
+
+Python programming language provides following types of decision making statements. Click the following links to check their detail.
+
+| Statement                                | Description                              |
+| ---------------------------------------- | ---------------------------------------- |
+| [if statements](http://www.tutorialspoint.com/python/python_if_statement.htm) | An **if statement** consists of a boolean expression followed by one or more statements. |
+| [if...else statements](http://www.tutorialspoint.com/python/python_if_else.htm) | An **if statement** can be followed by an optional **else statement**, which executes when the boolean expression is FALSE. |
+| [nested if statements](http://www.tutorialspoint.com/python/nested_if_statements_in_python.htm) | You can use one **if** or **else if** statement inside another **if** or **else if** statement(s). |
+
+
 ## Conditional Statements
 
 Conditional statements let Python know it is about to enter a decision-making structure.
