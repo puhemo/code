@@ -98,6 +98,8 @@ import sys; x = 'foo'; sys.stdout.write(x + '\n')
 
 Creating web apps, games, and search engines all involve storing and working with different types of data. They do so using **variables**. A **variable** stores a piece of data, and gives it a specific name.
 
+Variables are nothing but reserved memory locations to store values. This means that when you create a variable you **reserve some space in memory**.
+
 ### Variable Naming
 
 Python is a case sensitive programming language. Be aware of this when you first name and subsequently use your variables.  
@@ -110,22 +112,24 @@ Variable are lines of code that do something. The most common type of statement 
 
 Although we can understand simple programs using this description, and many programming languages, including C, C++, and Java, do exactly this, Python doesn't.   
 
-Instead, a variable points to a storage location containing its current value, and so does every variable with that same value. If its value is changed by assignment then, instead of changing its storage location to that value, a new location is set to the value if it's not already in memory, then the variable is changed to point to that new location--but other variables pointing to the old location still point there.   
+Instead, a variable points to a storage location containing its current value, and so does every variable with that same value. **If its value is changed by assignment then, instead of changing its storage location to that value, a new location is set to the value** if it's not already in memory, then the variable is changed to point to that new location--but other variables pointing to the old location still point there.   
 
 Moreover, Python assumes small integers (-5 to +256) are very likely to be used, so they're automatically stored when the system is initialized, ready to be used (a process called memoization). So, to be quite accurate:
 
 ```python
- x = 5  # sets variable x to point to the location storing 5 (memoized during system initialization)
+# The equal sign (=) is used to assign values to variables.
 
- y = x  # sets y to point to the location x presently does (so the location storing 5)
+x = 5  # sets variable x to point to the location storing 5 (memoized during system initialization)
 
- x = x + 1 # sets variable x to point to the location storing 6 (memoized during system initialization)--but y still points to 5
+y = x  # sets y to point to the location x presently does (so the location storing 5)
 
- y = 3.14  # stores 3.14 in a new memory location unless it has already been used and so is already available (has been memoized), and sets y to point to it 
+x = x + 1 # sets variable x to point to the location storing 6 (memoized during system initialization)--but y still points to 5
 
- w = y  # sets w to point to the same value y presently points to (3.14)
+y = 3.14  # stores 3.14 in a new memory location unless it has already been used and so is already available (has been memoized), and sets y to point to it 
 
- z = 3.14  # sets z to point to 3.14, the same value as y and w presently point to
+w = y  # sets w to point to the same value y presently points to (3.14)
+
+z = 3.14  # sets z to point to 3.14, the same value as y and w presently point to
 ```
 
 So instead of thinking of a variable being a named location whose value gets changed, it's more accurate to think of a variable as a name on a sticky note that gets moved and stuck to a location storing its new value (after storing that value if it hasn't been used previously).   
@@ -152,6 +156,22 @@ More complex mathematical expressions can be evaluated for variable assignment t
   - `x = 10 % 3`
 
 *Note:* There is a marked difference between *integer* division and *float* division. Because Python treats these two numeric types distinctly different, you might get erroneous answers when doing division operations without precaution.
+
+### Multiple Assignment
+
+Python allows you to assign a single value to several variables simultaneously. For example −
+
+```sql
+a = b = c = 1
+```
+
+Here, an integer object is created with the value 1, and all three variables are assigned to the same memory location. You can also assign multiple objects to multiple variables. For example −
+
+```sql
+a, b, c = 1, 2, "john"
+```
+
+Here, two integer objects with values 1 and 2 are assigned to variables a and b respectively, and one string object with the value "john" is assigned to the variable c.
 
 ## User Input--`raw_input()`
 
