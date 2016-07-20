@@ -206,11 +206,26 @@ Python supports the following control statements. Click the following links to c
 
 ## Indefinite Loops - `while`
 
-Python 编程中 while 语句用于循环执行程序，即在某条件下，循环执行某段程序，以处理需要重复处理的相同任务
-
 The `while` loop is similar to an `if` statement: it executes the code inside of it if some condition is true. The difference is that the `while` loop will continue to execute as long as the condition is true.
 
-We need while loops when you don't know the number of iterations before hand and want to execute a bunch of code until some **condition** is satisfied.
+We need `while` loops when you don't know the number of iterations before hand and want to execute a bunch of code until some **condition** is satisfied.
+
+### Syntax
+
+The syntax of a **while** loop in Python programming language is −
+
+```python
+while expression:
+   statement(s)
+```
+
+Here, **statement(s)** may be a single statement or a block of statements. The **condition** may be any expression, and true is any non-zero value. The loop iterates while the condition is true.
+
+### Flow Diagram
+
+![while loop in Python](http://www.tutorialspoint.com/python/images/python_while_loop.jpg)
+
+### Example
 
 ```python
 while i < 6:
