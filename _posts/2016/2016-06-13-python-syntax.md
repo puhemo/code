@@ -1,7 +1,7 @@
 ---
 title:  "Python Part 01: Syntax"
 date: 2016-06-13 20:00
-modified: 2016-07-11
+modified: 2016-07-19
 published: true
 categories: 
   - Python
@@ -72,6 +72,18 @@ sentence = "This is a sentence."
 paragraph = """This is a paragraph. It is
 made up of multiple lines and sentences."""
 ```
+
+## Waiting for the User
+
+The following line of the program displays the prompt, the statement saying “Press the enter key to exit”, and waits for the user to take action −
+
+```sql
+#!/usr/bin/python
+
+raw_input("\n\nPress the enter key to exit.")
+```
+
+Here, **"\n\n"** is used to create two **new lines** before displaying the actual line. Once the user presses the key, the program ends. This is a nice trick to keep a console window open until the user is done with an application.
 
 ## Multiple Statements on a Single Line
 
@@ -319,6 +331,8 @@ Holy Grail.
 [Pythonlearn:resources-week01](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
 
 [Scripting language](https://en.wikipedia.org/wiki/Scripting_language)
+
+[Python Basic Syntax](http://www.tutorialspoint.com/python/python_basic_syntax.htm)
 
 [^1]: [Python Overview](http://www.tutorialspoint.com/python/python_overview.htm)
 
