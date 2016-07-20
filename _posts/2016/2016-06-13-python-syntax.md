@@ -414,6 +414,49 @@ This is two
 
 Dictionaries have no concept of order among elements. It is incorrect to say that the elements are "out of order"; they are simply unordered.
 
+## Type Conversion
+
+Type-casting is a universal programming notion of converting the value of a variable from one type into another. In Python, this is achieved by utilizing functions such as` int()`, `float()`, or `str()`. 
+
+```python
+ x = raw_input("Enter a number: ")
+ y = raw_input("Enter another number: ")
+ z = x + y
+ print "The sum of", x, "and", y, "is",  z
+ 
+ #Output:
+ # Enter a number: 23
+ # Enter another number: 45
+ # The sum of 23 and 45 is 2345
+ 
+ z = int(x) + int(y)
+ print "The correct sum actually was", z
+
+ #Output: The correct sum actually was 68
+```
+
+There are several built-in functions to perform conversion from one data type to another. These functions return a new object representing the converted value.
+
+| Function              | Description                              |
+| --------------------- | ---------------------------------------- |
+| int(x [,base])        | Converts x to an integer. base specifies the base if x is a string. |
+| long(x [,base] )      | Converts x to a long integer. base specifies the base if x is a string. |
+| float(x)              | Converts x to a floating-point number.   |
+| complex(real [,imag]) | Creates a complex number.                |
+| str(x)                | Converts object x to a string representation. |
+| repr(x)               | Converts object x to an expression string. |
+| eval(str)             | Evaluates a string and returns an object. |
+| tuple(s)              | Converts s to a tuple.                   |
+| list(s)               | Converts s to a list.                    |
+| set(s)                | Converts s to a set.                     |
+| dict(d)               | Creates a dictionary. d must be a sequence of (key,value) tuples. |
+| frozenset(s)          | Converts s to a frozen set.              |
+| chr(x)                | Converts an integer to a character.      |
+| unichr(x)             | Converts an integer to a Unicode character. |
+| ord(x)                | Converts a single character to its integer value. |
+| hex(x)                | Converts an integer to a hexadecimal string. |
+| oct(x)                | Converts an integer to an octal string.  |
+
 ## Math
 
 More complex mathematical expressions can be evaluated for variable assignment than just numeric literals. This can be achieved by way of the following operators:
@@ -434,28 +477,6 @@ More complex mathematical expressions can be evaluated for variable assignment t
   - `x = 10 % 3`
 
 *Note:* There is a marked difference between *integer* division and *float* division. Because Python treats these two numeric types distinctly different, you might get erroneous answers when doing division operations without precaution.
-
-
-## Type Conversion--`int()`
-
-Type-casting is a universal programming notion of converting the value of a variable from one type into another. In Python, this is achieved by utilizing functions such as` int()`, `float()`, or `str()`. 
-
-```python
- x = raw_input("Enter a number: ")
- y = raw_input("Enter another number: ")
- z = x + y
- print "The sum of", x, "and", y, "is",  z
- 
- #Output:
- # Enter a number: 23
- # Enter another number: 45
- # The sum of 23 and 45 is 2345
- 
- z = int(x) + int(y)
- print "The correct sum actually was", z
-
- #Output: The correct sum actually was 68
-```
 
 ##  Boolean
 
