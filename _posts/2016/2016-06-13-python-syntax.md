@@ -73,18 +73,6 @@ paragraph = """This is a paragraph. It is
 made up of multiple lines and sentences."""
 ```
 
-## Waiting for the User
-
-The following line of the program displays the prompt, the statement saying “Press the enter key to exit”, and waits for the user to take action −
-
-```sql
-#!/usr/bin/python
-
-raw_input("\n\nPress the enter key to exit.")
-```
-
-Here, **"\n\n"** is used to create two **new lines** before displaying the actual line. Once the user presses the key, the program ends. This is a nice trick to keep a console window open until the user is done with an application.
-
 ## Multiple Statements on a Single Line
 
 The semicolon ( ; ) allows multiple statements on the single line given that neither statement starts a new code block. Here is a sample snip using the semicolon −
@@ -136,6 +124,23 @@ So instead of thinking of a variable being a named location whose value gets cha
 
 Note: We have just one location storing value 3.14, but three variables (w, y, and z) presently share that value. If any one of them changes, the value in that location doesn't change; instead, that variable now points to a different location containing that new value and the other two still "point to" 3.14.
 
+### Multiple Assignment
+
+Python allows you to assign a single value to several variables simultaneously. For example −
+
+```sql
+a = b = c = 1
+```
+
+Here, an integer object is created with the value 1, and all three variables are assigned to the same memory location. You can also assign multiple objects to multiple variables. For example −
+
+```sql
+a, b, c = 1, 2, "john"
+```
+
+Here, two integer objects with values 1 and 2 are assigned to variables a and b respectively, and one string object with the value "john" is assigned to the variable c.
+
+
 ## Math
 
 More complex mathematical expressions can be evaluated for variable assignment than just numeric literals. This can be achieved by way of the following operators:
@@ -156,22 +161,6 @@ More complex mathematical expressions can be evaluated for variable assignment t
   - `x = 10 % 3`
 
 *Note:* There is a marked difference between *integer* division and *float* division. Because Python treats these two numeric types distinctly different, you might get erroneous answers when doing division operations without precaution.
-
-### Multiple Assignment
-
-Python allows you to assign a single value to several variables simultaneously. For example −
-
-```sql
-a = b = c = 1
-```
-
-Here, an integer object is created with the value 1, and all three variables are assigned to the same memory location. You can also assign multiple objects to multiple variables. For example −
-
-```sql
-a, b, c = 1, 2, "john"
-```
-
-Here, two integer objects with values 1 and 2 are assigned to variables a and b respectively, and one string object with the value "john" is assigned to the variable c.
 
 ## User Input--`raw_input()`
 
@@ -195,6 +184,18 @@ So the example above will be in Python 3x as follows:
 name = input("What is your name, human? ")
 print ("Hello", name + "! I am Python :D")
 ```
+
+### Waiting for the User
+
+The following line of the program displays the prompt, the statement saying “Press the enter key to exit”, and waits for the user to take action −
+
+```sql
+#!/usr/bin/python
+
+raw_input("\n\nPress the enter key to exit.")
+```
+
+Here, **"\n\n"** is used to create two **new lines** before displaying the actual line. Once the user presses the key, the program ends. This is a nice trick to keep a console window open until the user is done with an application.
 
 ## Data Types—`type()`
 
