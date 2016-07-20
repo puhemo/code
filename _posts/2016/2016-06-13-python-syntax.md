@@ -27,7 +27,7 @@ Python[^1] is a high-level, interpreted, interactive and object-oriented **scrip
 - **Python is Object-Oriented:** Python supports Object-Oriented style or technique of programming that encapsulates code within objects.
 - **Python is a Beginner's Language:** Python is a great language for the beginner-level programmers and supports the development of a wide range of applications from simple text processing to WWW browsers to games.
 
-##Basic Syntax
+## Basic Syntax
 
 ### Reserved Words
 
