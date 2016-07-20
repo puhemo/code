@@ -37,9 +37,9 @@ Python programming language provides following types of decision making statemen
 
 | Statement                                | Description                              |
 | ---------------------------------------- | ---------------------------------------- |
-| [if statements](http://www.tutorialspoint.com/python/python_if_statement.htm) | An **if statement** consists of a boolean expression followed by one or more statements. |
-| [if...else statements](http://www.tutorialspoint.com/python/python_if_else.htm) | An **if statement** can be followed by an optional **else statement**, which executes when the boolean expression is FALSE. |
-| [nested if statements](http://www.tutorialspoint.com/python/nested_if_statements_in_python.htm) | You can use one **if** or **else if** statement inside another **if** or **else if** statement(s). |
+| if statements | An **if statement** consists of a boolean expression followed by one or more statements. |
+| if...else statements | An **if statement** can be followed by an optional **else statement**, which executes when the boolean expression is FALSE. |
+| nested if statements | You can use one **if** or **else if** statement inside another **if** or **else if** statement(s). |
 
 
 ## Conditional Statements
