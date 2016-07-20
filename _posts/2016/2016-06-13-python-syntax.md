@@ -558,6 +558,8 @@ else:
    print "Line 4 - a and b have same identity"
 ```
 
+>  '==' should be used more frequently than 'is' and 'is not' as these operators are intended for specific situations. 'is' and 'is not' are best used when testing for specific values like "None" or "True/False". '==' is best used for testing numeric values. (i.e. 'if i == 4')
+
 ## Debugging
 
 Here are a few pointers on debugging.
