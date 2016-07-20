@@ -414,7 +414,7 @@ This is two
 
 Dictionaries have no concept of order among elements. It is incorrect to say that the elements are "out of order"; they are simply unordered.
 
-## Type Conversion
+### Type Conversion
 
 Type-casting is a universal programming notion of converting the value of a variable from one type into another. In Python, this is achieved by utilizing functions such as` int()`, `float()`, or `str()`. 
 
@@ -569,6 +569,8 @@ Here are a few pointers on debugging.
 [Scripting language](https://en.wikipedia.org/wiki/Scripting_language)
 
 [Python Basic Syntax](http://www.tutorialspoint.com/python/python_basic_syntax.htm)
+
+[Python Basic Operators](http://www.tutorialspoint.com/python/python_basic_operators.htm)
 
 [^1]: [Python Overview](http://www.tutorialspoint.com/python/python_overview.htm)
 
