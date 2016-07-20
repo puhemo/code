@@ -23,7 +23,9 @@ series: "Intro to Python"
 
 # Conditional Execution
 
-Python条件语句是通过一条或多条语句的执行结果（True或者False）来决定执行的代码块。
+Decision making is anticipation of conditions occurring while execution of the program and specifying actions taken according to the conditions.
+
+Decision structures evaluate multiple expressions which produce TRUE or FALSE as outcome. You need to determine which action to take and which statements to execute `if` outcome is TRUE or FALSE otherwise.
 
 > We end the if statement with a **colon (:)** and lines after the if statement are **indented**.
 
@@ -31,9 +33,9 @@ Following is the general form of a typical decision making structure found in mo
 
 ![Decision making statements in Python](http://www.tutorialspoint.com/python/images/decision_making.jpg)
 
-Python programming language assumes any **non-zero** and **non-null** values as TRUE, and if it is either **zero** or **null**, then it is assumed as FALSE value.
+Python programming language assumes any **non-zero** and **non-null** values as TRUE, and if it is either **zero** or **null**, then it is assumed as `FALSE` value.
 
-Python programming language provides following types of decision making statements. Click the following links to check their detail.
+Python programming language provides following types of decision making statements. 
 
 | Statement                                | Description                              |
 | ---------------------------------------- | ---------------------------------------- |
@@ -41,14 +43,32 @@ Python programming language provides following types of decision making statemen
 | if...else statements | An **if statement** can be followed by an optional **else statement**, which executes when the boolean expression is FALSE. |
 | nested if statements | You can use one **if** or **else if** statement inside another **if** or **else if** statement(s). |
 
-
 ## Conditional Statements
 
 Conditional statements let Python know it is about to enter a decision-making structure.
 
+### if...else statements
+
 `if` is a conditional statement that executes some specified code after checking if its expression is `True`.  
 
 The `else` statement complements the `if` statement. An `if/else` pair says: "If this expression is true, run this indented code block; otherwise, run this code after the `else` statement."
+
+#### Syntax
+
+The syntax of the *if...else* statement is −
+
+```python
+if expression:
+   statement(s)
+else:
+   statement(s)
+```
+
+#### Flow Diagram
+
+![Python if...else statement](http://www.tutorialspoint.com/python/images/if_else_statement.jpg)
+
+#### Example
 
 ```python
 if 8 > 9:
@@ -60,6 +80,25 @@ else:
 ### Conditional Steps (Multi elif) - if ... elif .. else
 
 "Elif" is short for "else if." It means exactly what it sounds like: "otherwise, if the following expression is true, do this!"
+
+The **elif** statement allows you to check multiple expressions for `TRUE` and execute a block of code as soon as one of the conditions evaluates to `TRUE`.
+
+Similar to the **else**, the **elif** statement is optional. However, unlike **else**, for which there can be at most one statement, there can be an arbitrary number of **elif** statements following an **if**.
+
+#### syntax
+
+```python
+if expression1:
+   statement(s)
+elif expression2:
+   statement(s)
+elif expression3:
+   statement(s)
+else:
+   statement(s)
+```
+
+#### Example
 
 ```python
   if x < 0:
@@ -77,7 +116,28 @@ else:
 
 ###  Nested Conditionals
 
-You can also have one or more conditional statements indented as a subset of a parent conditional, forming a hierarchy of nested conditional logic:
+You can also have one or more conditional statements indented as a subset of a parent conditional, forming a hierarchy of nested conditional logic.
+
+#### Syntax
+
+The syntax of the nested *if...elif...else* construct may be:
+
+```python
+if expression1:
+   statement(s)
+   if expression2:
+      statement(s)
+   elif expression3:
+      statement(s)
+   else
+      statement(s)
+elif expression4:
+   statement(s)
+else:
+   statement(s)
+```
+
+#### Example
 
 ```python
  if x == y :
