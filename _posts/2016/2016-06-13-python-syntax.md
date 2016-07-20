@@ -29,6 +29,8 @@ Python[^1] is a high-level, interpreted, interactive and object-oriented **scrip
 
 ## Basic Syntax
 
+The Python language has many similarities to Perl, C, and Java. However, there are some definite differences between the languages.
+
 ### Reserved Words
 
 The following list shows the Python keywords. These are reserved words and you cannot use them as constant or variable or any other identifier names. All the Python keywords contain lowercase letters only.
@@ -253,47 +255,6 @@ Type-casting is a universal programming notion of converting the value of a vari
  #Output: The correct sum actually was 68
 ```
 
-## Debugging
-
-Here are a few pointers on debugging.
-
-1. Avoid spaces in between variable names. Python thinks there are two operands. Example:  
-
-   ```python
-   >>>Madam Medousa = "lets start the bout"
-   SyntaxError: invalid syntax
-
-   #correct syntax
-   >>>madam_medousa = "lets start the bout"
-   >>>print madam_medousa
-   "lets start the bout"
-   ```
-  
-   > Common Syntax Errors. 1) SyntaxError: invalid syntax 2) SyntaxError: invalid token
-
-2. Runtime Error: using a variable before it is defined. Example:  
- 
-   ```python
-    >>>cat= "Garfield"
-    >>>food = "burgers"
-    >>>Garfield + food
-   NameError: name"Garfield" is not defined
-
-   # "Garfield" is a string in the variable cat.
-   # Hence, Garfield is not a defined as a mnemonic variable.
-   ```
-   
-3. Case sEn5iTiVity (sensitivity!) matters:  
-  
-   ```python
-   >>>Olive = 5
-   >>>olive = "olive oil"
-   >>>oLiVe = 7
-
-    # variable names are case sensitive,
-   # all of these variations of olive are separate variables.
-   ```
-
 ##  Boolean
 
 A **boolean** is like a light switch. It can only have two values. Just like a light switch can only be on or off, a boolean can only be `True` or `False`.
@@ -349,6 +310,46 @@ Holy Grail.
 """
 ```
 
+## Debugging
+
+Here are a few pointers on debugging.
+
+1. Avoid spaces in between variable names. Python thinks there are two operands. Example:  
+
+   ```python
+   >>>Madam Medousa = "lets start the bout"
+   SyntaxError: invalid syntax
+
+   #correct syntax
+   >>>madam_medousa = "lets start the bout"
+   >>>print madam_medousa
+   "lets start the bout"
+   ```
+  
+   > Common Syntax Errors. 1) SyntaxError: invalid syntax 2) SyntaxError: invalid token
+
+2. Runtime Error: using a variable before it is defined. Example:  
+ 
+   ```python
+    >>>cat= "Garfield"
+    >>>food = "burgers"
+    >>>Garfield + food
+   NameError: name"Garfield" is not defined
+
+   # "Garfield" is a string in the variable cat.
+   # Hence, Garfield is not a defined as a mnemonic variable.
+   ```
+   
+3. Case sEn5iTiVity (sensitivity!) matters:  
+  
+   ```python
+   >>>Olive = 5
+   >>>olive = "olive oil"
+   >>>oLiVe = 7
+
+    # variable names are case sensitive,
+   # all of these variations of olive are separate variables.
+   ```
 
 ## Referense
 [Pythonlearn:resources-week01](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
