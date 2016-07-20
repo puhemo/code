@@ -31,6 +31,30 @@ Python[^1] is a high-level, interpreted, interactive and object-oriented **scrip
 
 The Python language has many similarities to Perl, C, and Java. However, there are some definite differences between the languages.
 
+### Interactive Mode Programming
+
+Invoking the interpreter without passing a script file as a parameter brings up the following prompt −
+
+```sql
+$ python
+Python 2.4.3 (#1, Nov 11 2010, 13:34:43)
+[GCC 4.1.2 20080704 (Red Hat 4.1.2-48)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+```
+
+Type the following text at the Python prompt and press the Enter:
+
+```sql
+>>> print "Hello, Python!"
+```
+
+If you are running new version of Python, then you would need to use print statement with parenthesis as in **print ("Hello, Python!");**. However in Python version 2.4.3, this produces the following result:
+
+```
+Hello, Python!
+```
+
 ### Reserved Words
 
 The following list shows the Python keywords. These are reserved words and you cannot use them as constant or variable or any other identifier names. All the Python keywords contain lowercase letters only.
