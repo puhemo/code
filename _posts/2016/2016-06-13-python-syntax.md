@@ -47,6 +47,41 @@ The following list shows the Python keywords. These are reserved words and you c
 | else     | is      | with   |
 | except   | lambda  | yield  |
 
+### User Input--`raw_input()`
+
+The command to accept user input is `raw_input()`. This will make a pop-up box appear on your screen.
+
+> raw_input()读取的内容以字符串的形式返回
+{:.warning}
+
+Example:
+```python
+ name = raw_input("What is your name, human? ")
+ print "Hello", name + "! I am Python :D"
+```
+
+> Note:In Python 3.x,` input()` replaces `raw_input()`, for input from the console.Also remember to use the `print()` function with Python 3.4, including parentheses, for output to the console, instead of the old print command that did not require parentheses.
+{:.notice--info} 
+
+So the example above will be in Python 3x as follows:
+
+```python
+name = input("What is your name, human? ")
+print ("Hello", name + "! I am Python :D")
+```
+
+### Waiting for the User
+
+The following line of the program displays the prompt, the statement saying “Press the enter key to exit”, and waits for the user to take action −
+
+```sql
+#!/usr/bin/python
+
+raw_input("\n\nPress the enter key to exit.")
+```
+
+Here, **"\n\n"** is used to create two **new lines** before displaying the actual line. Once the user presses the key, the program ends. This is a nice trick to keep a console window open until the user is done with an application.
+
 ### Multi-Line Statements
 
 Statements in Python typically end with a new line. Python does, however, allow the use of the line continuation character (\) to denote that the line should continue. For example −
@@ -178,41 +213,6 @@ More complex mathematical expressions can be evaluated for variable assignment t
   - `x = 10 % 3`
 
 *Note:* There is a marked difference between *integer* division and *float* division. Because Python treats these two numeric types distinctly different, you might get erroneous answers when doing division operations without precaution.
-
-## User Input--`raw_input()`
-
-The command to accept user input is `raw_input()`. This will make a pop-up box appear on your screen.
-
-> raw_input()读取的内容以字符串的形式返回
-{:.warning}
-
-Example:
-```python
- name = raw_input("What is your name, human? ")
- print "Hello", name + "! I am Python :D"
-```
-
-> Note:In Python 3.x,` input()` replaces `raw_input()`, for input from the console.Also remember to use the `print()` function with Python 3.4, including parentheses, for output to the console, instead of the old print command that did not require parentheses.
-{:.notice--info} 
-
-So the example above will be in Python 3x as follows:
-
-```python
-name = input("What is your name, human? ")
-print ("Hello", name + "! I am Python :D")
-```
-
-### Waiting for the User
-
-The following line of the program displays the prompt, the statement saying “Press the enter key to exit”, and waits for the user to take action −
-
-```sql
-#!/usr/bin/python
-
-raw_input("\n\nPress the enter key to exit.")
-```
-
-Here, **"\n\n"** is used to create two **new lines** before displaying the actual line. Once the user presses the key, the program ends. This is a nice trick to keep a console window open until the user is done with an application.
 
 ## Data Types—`type()`
 
