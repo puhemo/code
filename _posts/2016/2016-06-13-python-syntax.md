@@ -457,7 +457,12 @@ There are several built-in functions to perform conversion from one data type to
 | hex(x)                | Converts an integer to a hexadecimal string. |
 | oct(x)                | Converts an integer to an octal string.  |
 
-## Math
+
+## Basic Operators
+
+Operators are the constructs which can manipulate the value of operands.
+
+### Math
 
 More complex mathematical expressions can be evaluated for variable assignment than just numeric literals. This can be achieved by way of the following operators:
 
@@ -478,13 +483,13 @@ More complex mathematical expressions can be evaluated for variable assignment t
 
 *Note:* There is a marked difference between *integer* division and *float* division. Because Python treats these two numeric types distinctly different, you might get erroneous answers when doing division operations without precaution.
 
-##  Boolean
+###  Boolean
 
 A **boolean** is like a light switch. It can only have two values. Just like a light switch can only be on or off, a boolean can only be `True` or `False`.
 
 The `x > 0` segment is called a **boolean expression**. Boolean expressions test its given parameters, in this case the variable **x** to the left against the numeric literal 0 to the right, and returns a value of either `true` or `false`.
 
-###  Comparison Operators
+####  Comparison Operators
 
 There are many different ways to construct a conditional statement in Python using comparison operators. The comparison operators provided by Python are:
 
@@ -503,7 +508,7 @@ There are many different ways to construct a conditional statement in Python usi
 
 > Notice: `=` is the assignment operator, `==` equality operator is a comparison operator
 
-###  Logical Operators
+####  Logical Operators
 
 Python also provides a set of logical operators to combine multiple boolean expressions together for more complex boolean logic testing.
 
