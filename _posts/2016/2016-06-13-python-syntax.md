@@ -27,7 +27,9 @@ Python[^1] is a high-level, interpreted, interactive and object-oriented **scrip
 - **Python is Object-Oriented:** Python supports Object-Oriented style or technique of programming that encapsulates code within objects.
 - **Python is a Beginner's Language:** Python is a great language for the beginner-level programmers and supports the development of a wide range of applications from simple text processing to WWW browsers to games.
 
-## Reserved Words
+##Basic Syntax
+
+### Reserved Words
 
 The following list shows the Python keywords. These are reserved words and you cannot use them as constant or variable or any other identifier names. All the Python keywords contain lowercase letters only.
 
@@ -43,7 +45,7 @@ The following list shows the Python keywords. These are reserved words and you c
 | else     | is      | with   |
 | except   | lambda  | yield  |
 
-## Multi-Line Statements
+### Multi-Line Statements
 
 Statements in Python typically end with a new line. Python does, however, allow the use of the line continuation character (\) to denote that the line should continue. For example −
 
@@ -60,7 +62,7 @@ days = ['Monday', 'Tuesday', 'Wednesday',
         'Thursday', 'Friday']
 ```
 
-## Quotation in Python
+### Quotation in Python
 
 Python accepts single ('), double (") and triple (''' or """) quotes to denote string literals, as long as the same type of quote starts and ends the string.
 
@@ -73,7 +75,7 @@ paragraph = """This is a paragraph. It is
 made up of multiple lines and sentences."""
 ```
 
-## Multiple Statements on a Single Line
+### Multiple Statements on a Single Line
 
 The semicolon ( ; ) allows multiple statements on the single line given that neither statement starts a new code block. Here is a sample snip using the semicolon −
 
