@@ -522,6 +522,42 @@ Python also provides a set of logical operators to combine multiple boolean expr
   - `not` negates a boolean expression, i.e. if the `bool` value returned is `false` then `not` evaluates to `true`
   - `if not( x > y ) : print 'this line runs when x is less than or equal to y'`
 
+### Python Identity Operators
+
+Identity operators compare the memory locations of two objects. There are two Identity operators explained below:
+
+
+| Operator | Description                              | Example                                  |
+| -------- | ---------------------------------------- | ---------------------------------------- |
+| is       | Evaluates to true if the variables on either side of the operator point to the same object and false otherwise. | x is y, here **is** results in 1 if id(x) equals id(y). |
+| is not   | Evaluates to false if the variables on either side of the operator point to the same object and true otherwise. | x is not y, here **is not** results in 1 if id(x) is not equal to id(y). |
+
+```sql
+a = 20
+b = 20
+
+if ( a is b ):
+   print "Line 1 - a and b have same identity"
+else:
+   print "Line 1 - a and b do not have same identity"
+
+if ( id(a) == id(b) ):
+   print "Line 2 - a and b have same identity"
+else:
+   print "Line 2 - a and b do not have same identity"
+
+b = 30
+if ( a is b ):
+   print "Line 3 - a and b have same identity"
+else:
+   print "Line 3 - a and b do not have same identity"
+
+if ( a is not b ):
+   print "Line 4 - a and b do not have same identity"
+else:
+   print "Line 4 - a and b have same identity"
+```
+
 ## Debugging
 
 Here are a few pointers on debugging.
