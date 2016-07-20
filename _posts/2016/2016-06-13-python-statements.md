@@ -47,6 +47,20 @@ Python programming language provides following types of decision making statemen
 
 Conditional statements let Python know it is about to enter a decision-making structure.
 
+### Single Statement
+
+If the suite of an **if** clause consists only of a single line, it may go on the same line as the header statement.
+
+Here is an example of a **one-line if** clause −
+
+```python
+var = 100
+
+if ( var  == 100 ) : print "Value of expression is 100"
+
+print "Good bye!"
+```
+
 ### if...else statements
 
 `if` is a conditional statement that executes some specified code after checking if its expression is `True`.  
