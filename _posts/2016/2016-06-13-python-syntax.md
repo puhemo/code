@@ -85,6 +85,19 @@ The semicolon ( ; ) allows multiple statements on the single line given that nei
 import sys; x = 'foo'; sys.stdout.write(x + '\n')
 ```
 
+### Single Line Comments
+
+The `#` sign is for comments. A comment is a line of text that Python won't try to run as code. It's just for humans to read.
+
+### Multi-Line Comments
+
+or multi-line comments, you can include the whole block in a set of triple quotation marks:
+
+```python
+"""Sipping from your cup 'til it runneth over,
+Holy Grail.
+"""
+```
 
 ## Variable
 
@@ -293,22 +306,6 @@ Python also provides a set of logical operators to combine multiple boolean expr
 - Logical NOT ( not )
   - `not` negates a boolean expression, i.e. if the `bool` value returned is `false` then `not` evaluates to `true`
   - `if not( x > y ) : print 'this line runs when x is less than or equal to y'`
-
-## Comments
-
-### Single Line Comments
-
-The `#` sign is for comments. A comment is a line of text that Python won't try to run as code. It's just for humans to read.
-
-### Multi-Line Comments
-
-or multi-line comments, you can include the whole block in a set of triple quotation marks:
-
-```python
-"""Sipping from your cup 'til it runneth over,
-Holy Grail.
-"""
-```
 
 ## Debugging
 
