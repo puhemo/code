@@ -228,6 +228,8 @@ Python has five standard data types −
 - Tuple
 - Dictionary
 
+> Note: If you are unsure of what data type a particular variable, constant, or literal is, you can ask Python by using the` type()` function.
+
 ### Python Numbers
 
 Number data types store numeric values. Number objects are created when you assign a value to them. For example −
@@ -300,6 +302,14 @@ llo
 llo World!
 Hello World!Hello World!
 Hello World!TEST
+```
+
+**Note**: When using concatenation with the `+` operator, **sentence spacing** isn't automatically allotted for. Whereas print "Hello", "Coursera!" would have output "Hello Coursera!". Also the multiplication * operator can be used for multiple string concatenation:
+
+```python
+ print "Free Education!", "Hip-hip-hooray! " * 3 + "Thank you Coursera!"
+
+ #Outputs: Free Education! Hip-hip-hooray! Hip-hip-hooray! Hip-hip-hooray! Thank you Coursera!
 ```
 
 ### Python Lists
@@ -425,38 +435,6 @@ More complex mathematical expressions can be evaluated for variable assignment t
 
 *Note:* There is a marked difference between *integer* division and *float* division. Because Python treats these two numeric types distinctly different, you might get erroneous answers when doing division operations without precaution.
 
-## Data Types—`type()`
-
-The data types we have learned about so far are:
-* **Numeric types**
-  * **Integer numbers**
-    A whole number, i.e. a number that is not a fraction
-    Ex: 1, 5, 33, -24, 5000
-  * **Floating-point numbers**
-    A number with a fraction or decimal point
-    17.34, 98.2, -768.001, 0.2
-* **Strings**
-  * A collection of characters
-  * This can be alphabetic characters, special characters, or even numeric characters (but saved as type string, enclosed in "quotes")
-  * Ex: "Alphabetic", "ch@r@cter$!!!", "1234567890"
-
-> Note: If you are unsure of what data type a particular variable, constant, or literal is, you can ask Python by using the` type()` function.
-
-String concatenation example:
-
-```python
- print "Hello" + "Coursera!"
-
- #Output: HelloCoursera!
-```
-
-**Note**: When using concatenation with the `+` operator, **sentence spacing** isn't automatically allotted for. Whereas print "Hello", "Coursera!" would have output "Hello Coursera!". Also the multiplication * operator can be used for multiple string concatenation:
-
-```python
- print "Free Education!", "Hip-hip-hooray! " * 3 + "Thank you Coursera!"
-
- #Outputs: Free Education! Hip-hip-hooray! Hip-hip-hooray! Hip-hip-hooray! Thank you Coursera!
-```
 
 ## Type Conversion--`int()`
 
