@@ -31,7 +31,7 @@ Lists are a **datatype** you can use to store a collection of different pieces o
 
   >  This is a big difference between lists and strings.  Strings are NOT mutable.
 
-* When len() is used on a list, it counts the number of **constants** that make up the list.
+* When `len()` is used on a list, it counts the number of **constants** that make up the list.
 
 * List is an **ordered** sequence
 
@@ -41,7 +41,23 @@ You can assign items to a list with an expression of the form
 list_name = [item_1, item_2]
 ```
 
+## Basic List Operations
+
+Lists respond to the `+` and `*` operators much like strings; they mean concatenation and repetition here too, except that the result is a new list, not a string.
+
+In fact, lists respond to all of the general sequence operations we used on strings.
+
+| Python Expression            | Results                      | Description   |
+| ---------------------------- | ---------------------------- | ------------- |
+| len([1, 2, 3])               | 3                            | Length        |
+| [1, 2, 3] + [4, 5, 6]        | [1, 2, 3, 4, 5, 6]           | Concatenation |
+| ['Hi!'] * 4                  | ['Hi!', 'Hi!', 'Hi!', 'Hi!'] | Repetition    |
+| 3 in [1, 2, 3]               | True                         | Membership    |
+| for x in [1, 2, 3]: print x, | 1 2 3                        | Iteration     |
+
 ## List Slicing
+
+Because lists are sequences, indexing and slicing work the same way for lists as they do for strings.
 
 ### List Slicing Syntax
 
@@ -204,6 +220,22 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
 * `sum()` - add all values
 
 * `sum()/len()`: average 
+
+* `list(seq)`: Converts a tuple into list.
+  The following example shows the usage of list() method.
+
+  ```python
+  aTuple = (123, 'xyz', 'zara', 'abc');
+  aList = list(aTuple)
+
+  print "List elements : ", aList
+  ```
+
+  When we run above program, it produces following result:
+
+  ```
+  List elements :  [123, 'xyz', 'zara', 'abc']
+  ```
 
 ###  `del(n[1]）`
 
