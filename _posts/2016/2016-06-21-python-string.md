@@ -1,7 +1,7 @@
 ---
 title: "Python Part 02: String"
 date: 2016-06-14 09:00
-modified: 2016-07-02
+modified: 2016-07-21
 categories:
   - Python
 tags:
@@ -158,6 +158,16 @@ Return a copy of the string with leading characters removed.
 'spacious   '
 ```
 
+### join()
+
+The method **join()** returns a string in which the string elements of sequence have been joined by *str* separator.
+
+```python
+s = "-";
+seq = ("a", "b", "c"); # This is sequence of strings.
+print s.join( seq )
+```
+
 ## Format operator
 
 One of Python's coolest features is the string format operator `%`. This operator is unique to strings and makes up for the pack of having functions from C's printf() family. Following is a simple example −
@@ -206,7 +216,8 @@ the variable assignment will also show up.
 
 * [5.6.1. String Methods](https://docs.python.org/release/2.7.10/library/stdtypes.html#string-methods)
 * [Pythonlearn:resources-week06](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week06)
-
-{% include series.html %}
+* [Python Strings](http://www.tutorialspoint.com/python/python_strings.htm)
 
 [^1]: A function that is associated with an object and called using dot notation. 
+
+{% include series.html %}
