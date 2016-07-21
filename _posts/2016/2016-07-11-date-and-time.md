@@ -1,7 +1,7 @@
 ---
 title: "Python Part 03: Date and Time"
 date: 2016-06-15 10:40
-modified: 2016-07-11
+modified: 2016-07-21
 categories:
   - Python
 tags:
