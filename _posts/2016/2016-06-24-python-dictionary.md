@@ -21,11 +21,20 @@ A dictionary is similar to a list, but you access values by looking up a **key**
 
 A dictionary is a mapping between a set of indices(which are called keys) and a set of values. The association of a key and a value is called a **key-value pair** or sometimes an item.  
 
+Keys are **unique** within a dictionary while values may not be. The values of a dictionary can be of any type, but the **keys** must be of an **immutable data** type such as strings, numbers, or tuples.
+
 Dictionaries are enclosed in curly braces, like so:
 
 ```python
 d = {'key1' : 1, 'key2' : 2, 'key3' : 3}
 ```
+
+There are two important points to remember about dictionary keys −
+
+**(a)** More than one entry per key not allowed. Which means no duplicate key is allowed. When duplicate keys encountered during assignment, the last assignment wins. 
+
+
+**(b)** Keys must be **immutable**. Which means you can use strings, numbers or tuples as dictionary keys but something like ['key'] is not allowed. 
 
 ## Basics
 
