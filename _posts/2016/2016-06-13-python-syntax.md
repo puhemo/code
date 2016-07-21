@@ -1,7 +1,7 @@
 ---
 title:  "Python Part 01: Syntax"
 date: 2016-06-13 20:00
-modified: 2016-07-20
+modified: 2016-07-21
 published: true
 categories: 
   - Python
@@ -232,7 +232,7 @@ Python has five standard data types −
 
 ### Python Numbers
 
-Number data types store numeric values. Number objects are created when you assign a value to them. For example −
+Number[^3] data types store numeric values. Number objects are created when you assign a value to them. For example −
 
 ```sql
 var1 = 1
@@ -613,3 +613,5 @@ Here are a few pointers on debugging.
 [^1]: [Python Overview](http://www.tutorialspoint.com/python/python_overview.htm)
 
 [^2]: A scripting or script language is a programming language that supports scripts, programs written for a special run-time environment that automate the execution of tasks that could alternatively be executed one-by-one by a human operator. 
+
+[^3]: [Python Numbers](http://www.tutorialspoint.com/python/python_numbers.htm)
