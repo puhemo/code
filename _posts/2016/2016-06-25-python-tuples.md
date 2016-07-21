@@ -1,7 +1,7 @@
 ---
 title: "Python Part 09: Tuples"
 date: 2016-06-25 10:36
-modified: 2016-06-25
+modified: 2016-07-21
 categories:
   - Python
 tags:
@@ -19,7 +19,7 @@ series: "Intro to Python"
 
 A tuple is a sequence of values much like a list. The important difference is that tuples are **immutable**[^1].tuples are surrounded by ()s and can contain any data type.
 
-Syntactically, a tuple[^4] is a comma-separated list of values:
+Syntactically, a tuple is a comma-separated list of values:
 
 ```python
 >>> t = 'a', 'b', 'c', 'd', 'e'
@@ -38,6 +38,63 @@ Syntactically, a tuple[^4] is a comma-separated list of values:
 <type 'str'>
 ```
 
+> To write a tuple containing a single value you have to include a comma, even though there is only one value.
+
+## Accessing Values in Tuples:
+
+To access values in tuple, use the square brackets for slicing along with the index or indices to obtain value available at that index. For example −
+
+```python
+tup1 = ('physics', 'chemistry', 1997, 2000);
+tup2 = (1, 2, 3, 4, 5, 6, 7 );
+
+print "tup1[0]: ", tup1[0]
+print "tup2[1:5]: ", tup2[1:5]
+```
+
+When the above code is  executed, it produces the following result −
+
+```
+tup1[0]:  physics
+tup2[1:5]:  [2, 3, 4, 5]
+```
+
+## Updating Tuples
+
+Tuples are **immutable** which means you cannot update or change the values of tuple elements. You are able to take portions of existing tuples to create new tuples as the following example demonstrates −
+
+```python
+tup1 = (12, 34.56);
+tup2 = ('abc', 'xyz');
+
+# Following action is not valid for tuples
+# tup1[0] = 100;
+
+# So let's create a new tuple as follows
+tup3 = tup1 + tup2;
+print tup3
+```
+
+When the above code is executed, it produces the following result −
+
+```
+(12, 34.56, 'abc', 'xyz')
+```
+
+## Basic Tuples Operations
+
+Tuples respond to the `+` and `*` operators much like strings; they mean concatenation and repetition here too, except that the result is a new tuple, not a string.
+
+In fact, tuples respond to all of the general sequence operations we used on strings in the prior chapter −
+
+| Python Expression            | Results                      | Description   |
+| ---------------------------- | ---------------------------- | ------------- |
+| len((1, 2, 3))               | 3                            | Length        |
+| (1, 2, 3) + (4, 5, 6)        | (1, 2, 3, 4, 5, 6)           | Concatenation |
+| ('Hi!',) * 4                 | ('Hi!', 'Hi!', 'Hi!', 'Hi!') | Repetition    |
+| 3 in (1, 2, 3)               | True                         | Membership    |
+| for x in (1, 2, 3): print x, | 1 2 3                        | Iteration     |
+
 ## Functions  and Methods
 
 ### tuple()
@@ -51,6 +108,15 @@ Syntactically, a tuple[^4] is a comma-separated list of values:
 >>> t = tuple('lupins')
 >>> print t
 ('l', 'u', 'p', 'i', 'n', 's')
+```
+
+The method tuple() converts a list of items into tuples:
+
+```python
+aList = (123, 'xyz', 'zara', 'abc');
+aTuple = tuple(aList)
+
+print "Tuple elements : ", aTuple
 ```
 
 ## Comparing tuples
@@ -203,8 +269,6 @@ for key, val in lst[:10] :
 [(1, 'b'), (10, 'a'), (22, 'c')]
 ```
 
-
-
 ## The top 10 most common words
 
 ```python
@@ -243,10 +307,10 @@ for key, val in lst[:10] :
 ## More Info
 
 [Pythonlearn:resources-week10](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week10)  
+[Python Tuples](http://www.tutorialspoint.com/python/python_tuples.htm)
 
 [^1]: Tuples can only count and index!
 [^2]: Delete all characters from s that are in deletechars (if present), and then translate the characters using table, which must be a 256-character string giving the translation for each character value, indexed by its ordinal. If table is None, then only the character deletion step is performed.
 [^3]: The list of charactersthat it considers “punctuation”
-[^4]: 只有1个元素的tuple定义时必须加一个逗号,，来消除歧义
 
 {% include series.html %}
