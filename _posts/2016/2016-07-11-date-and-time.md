@@ -65,3 +65,6 @@ print '%s/%s/%s' % (now.month, now.day, now.year)
 print '%s:%s:%s' % (now.hour, now.minute, now.second)
 ```
 
+## More Info
+
+[Python Date & Time](http://www.tutorialspoint.com/python/python_date_time.htm)
