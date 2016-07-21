@@ -1,7 +1,7 @@
 ---
 title: "Python Part 07: Lists"
 date: 2016-06-22 09:00
-modified: 2016-07-03
+modified: 2016-07-21
 categories:
   - Python
 tags:
@@ -208,6 +208,16 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
   seq = ["a", "b", "c"]
   print str.join( seq )
   ```
+  
+*  `reverse()` - It reverses objects of list in place.
+  
+  ```python
+  aList = [123, 'xyz', 'zara', 'abc', 'xyz'];
+
+  aList.reverse();
+  print "List : ", aList
+  ```
+
 
 ##  List Functions
 
@@ -221,7 +231,7 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
 
 * `sum()/len()`: average 
 
-* `list(seq)`: Converts a tuple into list.
+* `list(seq)`: Converts a tuple into list.  
   The following example shows the usage of list() method.
 
   ```python
@@ -392,6 +402,7 @@ print evens_to_50
 
 [Pythonlearn:resources-week08](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week08)  
 [详细记录python的range()函数用法](http://www.cnblogs.com/buro79xxd/archive/2011/05/23/2054493.html)
+[Python Lists](http://www.tutorialspoint.com/python/python_lists.htm)
 
 
 [^1]: A method is a function that “belongs to” an object.
