@@ -245,11 +245,30 @@ while i > 2:
   if len(inp) < 1: break
   ```
 
+A loop becomes **infinite loop** if a condition never becomes `FALSE`. You must use caution when using while loops because of the possibility that this condition never resolves to a `FALSE` value. This results in a loop that never ends. Such a loop is called an infinite loop.
+
+An infinite loop might be useful in **client/server programming** where the server needs to run continuously so that client programs can communicate with it as and when required.
+
+```python
+var = 1
+while var == 1 :  # This constructs an infinite loop
+   num = raw_input("Enter a number  :")
+   print "You entered: ", num
+
+print "Good bye!"
+```
+
 ## “Infinite loops” and `break`
 
 The `break` is a one-line statement that means "exit the current loop." 
 
 Sometimes you don’t know it’s time to end a loop until you get half way through the body. In that case you can write an infinite loop on purpose and then use the `break` statement to **jump out of the loop**.
+
+### Flow Diagram
+
+![Python break statement](http://www.tutorialspoint.com/python/images/cpp_break_statement.jpg)
+
+### Example
 
 ```python
 while True:
@@ -260,10 +279,12 @@ while True:
 print 'Done!'
 ```
 
-
 ## While / else
 
-Something completely different about Python is the `while/else` construction. `while/else` is similar to `if/else`, but there is a difference: the `else` block will execute anytime the loop condition is evaluated to False. This means that it will execute if the loop is never entered or if the loop exits normally. If the loop exits as the result of a break, the else will not be executed.
+Something completely different about Python is the `while/else` construction. `while/else` is similar to `if/else`, but there is a difference: the `else` block will execute anytime the loop condition is evaluated to `False`. This means that it will execute if the loop is never entered or if the loop exits normally. If the loop exits as the result of a break, the else will not be executed.
+
+- If the **else** statement is used with a **for** loop, the **else** statement is executed when the loop has exhausted iterating the list.
+- If the **else** statement is used with a **while** loop, the **else** statement is executed when the condition becomes false.
 
 ```python
 import random
@@ -286,6 +307,14 @@ else:
 ## Finishing iterations with `continue`
 
 Sometimes you are in an iteration of a loop and want to finish the current iteration and immediately **jump to the next iteration**.In that case you can use the `continue` statement to skip to the next iteration without finishing the body of the loop for the current iteration.
+
+The `continue` statement rejects all the remaining statements in the current iteration of the loop and moves the control **back to the top of the loop**.
+
+### Flow Diagram
+
+![Python continue statement](http://www.tutorialspoint.com/python/images/cpp_continue_statement.jpg)
+
+### Example
 
 `Continue` is needed for a piece of code like this:
 
@@ -312,17 +341,24 @@ print running_total," total"
 print "and average:", running_total/count
 ```
 
-to clarify, `continue` is needed here because **without it any bad input will not stop the iteration**. this will mess up the count and the running total.
+To clarify, `continue` is needed here because **without it any bad input will not stop the iteration**. this will mess up the count and the running total.
 
 ## Definite loops - `for`
 
-Python for循环可以遍历任何序列的项目，如一个列表或者一个字符串
+It has the ability to iterate over the items of any sequence, such as a list or a string.
+
+### Syntax
 
 ```python
-  for (y) in (x):
-      (command)
+for iterating_var in sequence:
+   statements(s)
 ```
 
+### Flow Diagram
+
+![for loop in Python](http://www.tutorialspoint.com/python/images/python_for_loop.jpg)
+
+### Example
 This kind of loop is useful when you want to do something a certain number of times, such as append something to the end of a list.
 
 ```python
@@ -409,9 +445,12 @@ for a, b in zip(list_a, list_b):
 
 ### For / else
 
-Just like with `while`, `fo`r loops may have an else associated with them.
+Just like with `while`, `for` loops may have an else associated with them.
 
 In this case, the else statement is executed after the `for`, but only if the for ends normally—that is, not with a `break`. 
+
+- If the **else** statement is used with a **for** loop, the **else** statement is executed when the loop has exhausted iterating the list.
+- If the **else** statement is used with a **while** loop, the **else** statement is executed when the condition becomes false.
 
 ```python
 fruits = ['banana', 'apple', 'orange', 'tomato', 'pear', 'grape']
@@ -431,5 +470,6 @@ else:
 * [Pythonlearn:resources-week03](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week03)
 * [Python 基础教程](http://www.runoob.com/python/python-if-statement.html)
 * [Pythonlearn:resources-week05](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week05)
+* [Python Loops](http://www.tutorialspoint.com/python/python_loops.htm)
 
  {% include series.html %}
