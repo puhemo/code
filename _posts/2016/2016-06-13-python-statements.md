@@ -1,7 +1,7 @@
 ---
 title:  "Python Part 04: Conditionals & Control Flow"
 date: 2016-06-15 21:00
-modified: 2016-07-01
+modified: 2016-07-21
 published: true
 categories: 
   - Python
@@ -443,7 +443,7 @@ for a, b in zip(list_a, list_b):
         print b
 ```
 
-### For / else
+## For / else
 
 Just like with `while`, `for` loops may have an else associated with them.
 
