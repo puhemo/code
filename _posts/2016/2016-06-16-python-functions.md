@@ -188,6 +188,8 @@ Universal import can handle this for you. The syntax for this is:
 from module import *
 ```
 
+This provides an easy way to import all the items from a module into the current namespace; however, this statement should be used sparingly.
+
 # Bringing It All Together
 
 A example code that implements all of the above topics to demonstrate them in real-world application.
