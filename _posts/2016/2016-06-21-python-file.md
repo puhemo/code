@@ -365,6 +365,96 @@ import os
 os.remove("text2.txt")
 ```
 
+## Directories in Python
+
+All files are contained within various directories, and Python has no problem handling these too. The **os** module has several methods that help you create, remove, and change directories.
+
+### The `mkdir()` Method
+
+You can use the `mkdir()` method of the **os** module to create directories in the current directory. You need to supply an argument to this method which contains the name of the directory to be created.
+
+#### Syntax
+
+```python
+os.mkdir("newdir")
+```
+
+#### Example
+
+Following is the example to create a directory *test* in the current directory −
+
+```python
+import os
+
+# Create a directory "test"
+os.mkdir("test")
+```
+
+### The `chdir()` Method
+
+You can use the `chdir()` method to **change the current directory**. The `chdir()` method takes an argument, which is the name of the directory that you want to make the current directory.
+
+#### Syntax
+
+```python
+os.chdir("newdir")
+```
+
+#### Example
+
+Following is the example to go into "/home/newdir" directory −
+
+```python
+import os
+
+# Changing a directory to "/home/newdir"
+os.chdir("/home/newdir")
+```
+
+### The `getcwd()` Method
+
+The `getcwd()` method displays the current working directory.
+
+#### Syntax
+
+```python
+os.getcwd()
+```
+
+#### Example
+
+Following is the example to give current directory −
+
+```python
+import os
+
+# This would give location of the current directory
+os.getcwd()
+```
+
+### The `rmdir()` Method
+
+The `rmdir()` method **deletes the directory**, which is passed as an argument in the method.
+
+Before removing a directory, all the contents in it should be removed.
+
+#### Syntax:
+
+```python
+os.rmdir('dirname')
+```
+
+#### Example
+
+Following is the example to remove "/tmp/test" directory. It is required to give fully qualified name of the directory, otherwise it would search for that directory in the current directory.
+
+```python
+import os
+
+# This would  remove "/tmp/test"  directory.
+os.rmdir( "/tmp/test"  )
+```
+
 [^1]: read()方法會一次讀取所有的檔案內容，在不使用檔案時，可以使用fileObject.close()將檔案關閉以節省資源.
 [^2]: startswith() 方法用于检查字符串是否是以指定子字符串开头，如果是则返回 True，否则返回 False.
 [^3]: 去除字符串的**首尾**字符(默认去除首尾空格)
