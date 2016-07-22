@@ -1,7 +1,7 @@
 ---
 title: "Python Part 06: File Input/Output"
 date: 2016-06-21 10:00
-modified: 2016-07-10
+modified: 2016-07-22
 categories:
   - Python
 tags:
@@ -67,6 +67,68 @@ fhand= open(inp) # handling the file
 
 Opening a file does not cause Python to read all the data in the file, but it makes the information in the file available to Python to use - it creates a **connection** between Python and the file on the hard drive, referred to as a **"Handle"**.
 
+## The *file* Object Attributes
+
+Once a file is opened and you have one *file* object, you can get various information related to that file.
+
+Here is a list of all attributes related to file object:
+
+| Attribute      | Description                              |
+| -------------- | ---------------------------------------- |
+| file.closed    | Returns true if file is closed, false otherwise. |
+| file.mode      | Returns access mode with which file was opened. |
+| file.name      | Returns name of the file.                |
+| file.softspace | Returns false if space explicitly required with print, true otherwise. |
+
+### Example
+
+```python
+# Open a file
+fo = open("foo.txt", "wb")
+print "Name of the file: ", fo.name
+print "Closed or not : ", fo.closed
+print "Opening mode : ", fo.mode
+print "Softspace flag : ", fo.softspace
+```
+
+This produces the following result −
+
+```
+Name of the file:  foo.txt
+Closed or not :  False
+Opening mode :  wb
+Softspace flag :  0
+```
+
+## The *close()* Method
+
+The `close()` method of a *file* object flushes any unwritten information and closes the file object, after which no more writing can be done.
+
+Python automatically closes a file when the reference object of a file is reassigned to another file. It is a good practice to use the `close()` method to close a file.
+
+### Syntax
+
+```python
+fileObject.close();
+```
+
+### Example
+
+```python
+# Open a file
+fo = open("foo.txt", "wb")
+print "Name of the file: ", fo.name
+
+# Close opend file
+fo.close()
+```
+
+This produces the following result −
+
+```
+Name of the file:  foo.txt
+```
+
 ##  Counting lines in a file
 
 ```python
@@ -74,10 +136,22 @@ fhand = open("words.txt")
 count = 0
 for line in fhand: # line ?
     count = count + 1
-print "line count", count #Don't use '+'
+print "line count", count # Don't use '+'
 ```
 
 ##  Reading the whole file -- read()[^1]
+
+The *read()* method reads a string from an open file. It is important to note that Python strings can have binary data. apart from text data.
+
+### Syntax
+
+```python
+fileObject.read([count]);
+```
+
+Here, passed parameter is the number of bytes to be read from the opened file. This method starts reading from the beginning of the file and if *count* is missing, then it tries to read as much as possible, maybe until the end of file.
+
+### Example
 
 ```python
 fhand =  open("words.txt")
@@ -148,6 +222,20 @@ while True:
 
 ##  Writing files
 
+The *write()* method writes any string to an open file. It is important to note that Python strings can have binary data and not just text.
+
+The write() method does not add a newline character ('\n') to the end of the string −
+
+### Syntax
+
+```python
+fileObject.write(string);
+```
+
+Here, passed parameter is the content to be written into the opened file.
+
+### Example
+
 ```python
 # If the file already exists, opening it in write mode clears out the old data and starts fresh, so be careful! 
 # If the file doesn’t exist, a new one is created.
@@ -180,16 +268,6 @@ Python doesn't **flush the buffer**—that is, write data to the file—until it
 ```python
 with open("file", "mode") as variable:
     # Read or write to the file
-```
-
-## Case Closed?
-
-Python file objects have a `closed` attribute which is `True` when the file is closed and `False` otherwise.
-
-```python
-f = open("bg.txt")
-f.closed
-# False
 ```
 
 [^1]: read()方法會一次讀取所有的檔案內容，在不使用檔案時，可以使用fileObject.close()將檔案關閉以節省資源.
