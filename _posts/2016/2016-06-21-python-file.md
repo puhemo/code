@@ -461,10 +461,11 @@ os.rmdir( "/tmp/test"  )
 [^4]: 去除**右边**的字符(默认去除右边空格), 也可以去除\n; something,lstrip()用于去除**左边**的字符
 [^5]: '\n' represents a newline. Newline is `one character`, even though it is represented by two.
 
-## More Info:
+## Reference:
 
 * [Python startswith()方法](http://www.runoob.com/python/att-string-startswith.html)
 * [Python 文件I/O](http://www.runoob.com/python/python-files-io.html)
 * [Pythonlearn:resources-week07](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week07)
+* [Python Files I/O](http://www.tutorialspoint.com/python/python_files_io.htm)
 
 {% include series.html %}
