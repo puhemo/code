@@ -21,11 +21,15 @@ Until now, the Python code you've been writing comes from one source and only go
 
 This process is called file I/O (the "I/O" stands for "input/output"), and Python has a number of built-in functions that handle this for you.
 
-## Open a file
+## Opening and Closing Files
+
+Python provides basic functions and methods necessary to manipulate files by default. You can do most of the file manipulation using a **file** object.
+
+### Open a file
 
 `open()` is the built-in function which tells Python to open the file.
 
-### Syntax
+#### Syntax
 
 ```python
 file object = open(file_name [, access_mode][, buffering])
@@ -54,7 +58,7 @@ Here is a list of the different modes of opening a file −
 | a+    | Opens a file for both **appending and reading**. The file pointer is at the end of the file if the file exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing. |
 | ab+   | Opens a file for both appending and reading in binary format. The file pointer is at the end of the file if the file exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing. |
 
-### Example
+#### Example
 
 ```python
 open( 'filename' ,  'mode') # mode: 'r' and 'w'
@@ -67,7 +71,7 @@ fhand= open(inp) # handling the file
 
 Opening a file does not cause Python to read all the data in the file, but it makes the information in the file available to Python to use - it creates a **connection** between Python and the file on the hard drive, referred to as a **"Handle"**.
 
-## The *file* Object Attributes
+### The *file* Object Attributes
 
 Once a file is opened and you have one *file* object, you can get various information related to that file.
 
@@ -80,7 +84,7 @@ Here is a list of all attributes related to file object:
 | file.name      | Returns name of the file.                |
 | file.softspace | Returns false if space explicitly required with print, true otherwise. |
 
-### Example
+#### Example
 
 ```python
 # Open a file
@@ -100,19 +104,19 @@ Opening mode :  wb
 Softspace flag :  0
 ```
 
-## The *close()* Method
+### The *close()* Method
 
 The `close()` method of a *file* object flushes any unwritten information and closes the file object, after which no more writing can be done.
 
 Python automatically closes a file when the reference object of a file is reassigned to another file. It is a good practice to use the `close()` method to close a file.
 
-### Syntax
+#### Syntax
 
 ```python
 fileObject.close();
 ```
 
-### Example
+#### Example
 
 ```python
 # Open a file
@@ -129,7 +133,7 @@ This produces the following result −
 Name of the file:  foo.txt
 ```
 
-##  Counting lines in a file
+###  Counting lines in a file
 
 ```python
 fhand = open("words.txt")
@@ -139,89 +143,7 @@ for line in fhand: # line ?
 print "line count", count # Don't use '+'
 ```
 
-##  Reading the whole file -- read()[^1]
-
-The *read()* method reads a string from an open file. It is important to note that Python strings can have binary data. apart from text data.
-
-### Syntax
-
-```python
-fileObject.read([count]);
-```
-
-Here, passed parameter is the number of bytes to be read from the opened file. This method starts reading from the beginning of the file and if *count* is missing, then it tries to read as much as possible, maybe until the end of file.
-
-### Example
-
-```python
-fhand =  open("words.txt")
-inp = fhand.read() # reads the whole file into memory
-print len(inp)# returns the number of characters in a file
-print inp # prints the whole file
-inp.close() # close the file
-```
-
-## Reading Between the Lines
-
-If you open a file and call `.readline()` on the file object, you'll get the first line of the file; subsequent calls to .readline() will return successive lines.
-
-```python
-my_file = open('text.txt', 'r')
-print my_file.readline()
-my_file.close()
-```
-
-## File Positions
-
-The`tell()` method tells you the **current position** within the file; in other words, the next read or write will occur at that many bytes from the beginning of the file.
-
-The `seek(offset[, from])` method **changes** the current file **position**. The *offset* argument indicates the number of bytes to be moved. The *from* argument specifies the reference position from where the bytes are to be moved.
-
-If *from* is set to 0, it means use the beginning of the file as the reference position and 1 means use the current position as the reference position and if it is set to 2 then the end of the file would be taken as the reference position.
-
-### Example
-
-Let us take a file *foo.txt*, which we created above.
-
-```python
-# Open a file
-fo = open("foo.txt", "r+")
-str = fo.read(10);
-print "Read String is : ", str
-
-# Check current position
-position = fo.tell();
-print "Current file position : ", position
-
-# Reposition pointer at the beginning once again
-position = fo.seek(0, 0);
-str = fo.read(10);
-print "Again read String is : ", str
-# Close opend file
-fo.close()
-```
-
-This produces the following result −
-
-```
-Read String is :  Python is
-Current file position :  10
-Again read String is :  Python is
-```
-
-##  Searching through a file -- startswith()[^2]
-
-```python
-fhand= open("mbox-short.txt")
-for line in fhand:
-    # line = line.rstrip()
-    if line.startswith("From "):
-        print line
-```
-
-> note that methods something.strip() [^3]or something.rstrip()[^4] should be used to get rid of the extra \n (new line character)[^5]. 
-
-##  Using try, except, and open
+###  Using try, except, and open
 
 ```python
 fname = raw_input('Enter the file name: ')
@@ -258,13 +180,100 @@ while True:
     quit()
 ```
 
-##  Writing files
+
+## Reading and Writing Files
+
+The *file* object provides a set of access methods to make our lives easier. We would see how to use *read()* and *write()* methods to read and write files.
+
+###  Reading the whole file -- read()[^1]
+
+The *read()* method reads a string from an open file. It is important to note that Python strings can have binary data. apart from text data.
+
+#### Syntax
+
+```python
+fileObject.read([count]);
+```
+
+Here, passed parameter is the number of bytes to be read from the opened file. This method starts reading from the beginning of the file and if *count* is missing, then it tries to read as much as possible, maybe until the end of file.
+
+#### Example
+
+```python
+fhand =  open("words.txt")
+inp = fhand.read() # reads the whole file into memory
+print len(inp)# returns the number of characters in a file
+print inp # prints the whole file
+inp.close() # close the file
+```
+
+### Reading Between the Lines
+
+If you open a file and call `.readline()` on the file object, you'll get the first line of the file; subsequent calls to .readline() will return successive lines.
+
+```python
+my_file = open('text.txt', 'r')
+print my_file.readline()
+my_file.close()
+```
+
+### File Positions
+
+The`tell()` method tells you the **current position** within the file; in other words, the next read or write will occur at that many bytes from the beginning of the file.
+
+The `seek(offset[, from])` method **changes** the current file **position**. The *offset* argument indicates the number of bytes to be moved. The *from* argument specifies the reference position from where the bytes are to be moved.
+
+If *from* is set to 0, it means use the beginning of the file as the reference position and 1 means use the current position as the reference position and if it is set to 2 then the end of the file would be taken as the reference position.
+
+#### Example
+
+Let us take a file *foo.txt*, which we created above.
+
+```python
+# Open a file
+fo = open("foo.txt", "r+")
+str = fo.read(10);
+print "Read String is : ", str
+
+# Check current position
+position = fo.tell();
+print "Current file position : ", position
+
+# Reposition pointer at the beginning once again
+position = fo.seek(0, 0);
+str = fo.read(10);
+print "Again read String is : ", str
+# Close opend file
+fo.close()
+```
+
+This produces the following result −
+
+```
+Read String is :  Python is
+Current file position :  10
+Again read String is :  Python is
+```
+
+###  Searching through a file -- startswith()[^2]
+
+```python
+fhand= open("mbox-short.txt")
+for line in fhand:
+    # line = line.rstrip()
+    if line.startswith("From "):
+        print line
+```
+
+> note that methods something.strip() [^3]or something.rstrip()[^4] should be used to get rid of the extra \n (new line character)[^5]. 
+
+###  Writing files
 
 The *write()* method writes any string to an open file. It is important to note that Python strings can have binary data and not just text.
 
 The write() method does not add a newline character ('\n') to the end of the string −
 
-### Syntax
+#### Syntax
 
 ```python
 fileObject.write(string);
@@ -272,7 +281,7 @@ fileObject.write(string);
 
 Here, passed parameter is the content to be written into the opened file.
 
-### Example
+#### Example
 
 ```python
 # If the file already exists, opening it in write mode clears out the old data and starts fresh, so be careful! 
