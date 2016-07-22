@@ -308,6 +308,54 @@ with open("file", "mode") as variable:
     # Read or write to the file
 ```
 
+## Renaming and Deleting Files
+
+Python **os** module provides methods that help you perform file-processing operations, such as renaming and deleting files.
+
+To use this module you need to import it first and then you can call any related functions.
+
+### The `rename()` Method
+
+The *rename()* method takes two arguments, the current filename and the new filename.
+
+#### Syntax
+
+```python
+os.rename(current_file_name, new_file_name)
+```
+
+#### Example
+
+Following is the example to rename an existing file *test1.txt*:
+
+```python
+import os
+
+# Rename a file from test1.txt to test2.txt
+os.rename( "test1.txt", "test2.txt" )
+```
+
+### The `remove()` Method
+
+You can use the *remove()* method to delete files by supplying the name of the file to be deleted as the argument.
+
+#### Syntax
+
+```python
+os.remove(file_name)
+```
+
+#### Example
+
+Following is the example to delete an existing file *test2.txt* −
+
+```python
+import os
+
+# Delete file test2.txt
+os.remove("text2.txt")
+```
+
 [^1]: read()方法會一次讀取所有的檔案內容，在不使用檔案時，可以使用fileObject.close()將檔案關閉以節省資源.
 [^2]: startswith() 方法用于检查字符串是否是以指定子字符串开头，如果是则返回 True，否则返回 False.
 [^3]: 去除字符串的**首尾**字符(默认去除首尾空格)
