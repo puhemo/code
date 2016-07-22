@@ -1,7 +1,7 @@
 ---
 title: "Python Part 05: Functions and Modules"
 date: 2016-06-16
-modified: 2016-06-21
+modified: 2016-07-22
 categories:
   - Python
 tags:
@@ -77,6 +77,49 @@ triangleArea = product(base, height) * 0.5
 
 > The `return` statement should be placed at the bottom of your function code block. Anything after the `return` statement will not be executed since `return` force exits the function to give back the value to the calling expression
 
+### Variable-length arguments
+
+You may need to process a function for more arguments than you specified while defining the function. These arguments are called **variable-length** arguments.
+
+Syntax for a function with non-keyword variable arguments is this −
+
+```python
+def functionname([formal_args,] *var_args_tuple ):
+   "function_docstring"
+   function_suite
+   return [expression]
+```
+
+An asterisk (`*`) is placed before the variable name that holds the values of all nonkeyword variable arguments. This tuple remains empty if no additional arguments are specified during the function call. 
+
+Following is a simple example −
+
+```python
+# Function definition is here
+def printinfo( arg1, *vartuple ):
+   "This prints a variable passed arguments"
+   print "Output is: "
+   print arg1
+   for var in vartuple:
+      print var
+   return;
+
+# Now you can call printinfo function
+printinfo( 10 )
+printinfo( 70, 60, 50 )
+```
+
+When the above code is  executed, it produces the following result −
+
+```
+Output is:
+10
+Output is:
+70
+60
+50
+```
+
 ### Lambda
 
 One of the more powerful aspects of Python is that it allows for a style of programming called **functional programming**, which means that you're allowed to pass functions around just as if they were variables or values. Sometimes we take this for granted, but not all languages allow this!
@@ -95,6 +138,13 @@ def by_three(x):
 ```
 
 Only we don't need to actually give the function a name; it does its work and returns a value without one. That's why the function the lambda creates is an **anonymous function**.
+
+These functions are called **anonymous** because they are not declared in the standard manner by using the `def` keyword. You can use the `lambda` keyword to create small **anonymous functions**.
+
+- **Lambda** forms can take any number of arguments but return just one value in the form of an expression. They cannot contain commands or multiple expressions.
+- An **anonymous function** cannot be a direct call to print because lambda requires an expression
+- Lambda functions have their own local namespace and cannot access variables other than those in their parameter list and those in the global namespace.
+- Although it appears that lambda's are a one-line version of a function, they are not equivalent to inline statements in C or C++, whose purpose is by passing function stack allocation during invocation for performance reasons.
 
 When we pass the `lambda` to `filter`, `filter` uses the `lambda` to determine what to filter, and the second argument is the list it does the filtering on.
 
@@ -207,6 +257,7 @@ Decrypted cipher-text: Cryptography using Python!
 
 - [Pythonlearn:resources-week04](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week04#Lecture_Notes_-_Functions)
 - [Defining Functions](https://docs.python.org/2/tutorial/controlflow.html#defining-functions)
+- [Python Functions](http://www.tutorialspoint.com/python/python_functions.htm)
 
 {% include series.html %}
 
