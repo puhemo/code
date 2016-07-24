@@ -448,5 +448,7 @@ We will cover each of these in turn.
 
 [使用SQLite](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001388320596292f925f46d56ef4c80a1c9d8e47e2d5711000)
 
+[Python MySQL Database Access](http://www.tutorialspoint.com/python/python_database_access.htm)
+
 
 [^1]: 使用Cursor对象执行select语句时，通过`featchall()`可以拿到结果集。结果集是一个list，每个元素都是一个tuple，对应一行记录。
