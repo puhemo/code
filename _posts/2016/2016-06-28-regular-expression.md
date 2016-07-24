@@ -23,6 +23,8 @@ Regular expressions are almost their own little programming language for searchi
 
 ![re_simple](http://images.cnblogs.com/cnblogs_com/huxi/WindowsLiveWriter/Python_10A67/re_simple_38246a58-83be-4adf-9f30-6d735e9b9b47.png)
 
+> There are various characters, which would have special meaning when they are used in regular expression. To avoid any confusion while dealing with regular expressions, we would use Raw Strings as `r'expression'`.
+
 ## `re`— Regular expression operations
 
 This **module** provides regular expression matching operations similar tothose found in Perl.
