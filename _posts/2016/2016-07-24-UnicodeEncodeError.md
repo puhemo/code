@@ -9,7 +9,7 @@ tags:
   - Python 2.x
   - Error
 excerpt: |
-    “UnicodeEncodeError: ‘gbk’ codec can’t encode character ****: illegal multibyte sequence”
+    UnicodeEncodeError: ‘gbk’ codec can’t encode character ****: illegal multibyte sequence
 ---
 
 ## Error
