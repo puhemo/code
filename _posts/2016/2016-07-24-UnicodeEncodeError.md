@@ -18,7 +18,7 @@ excerpt: |
 UnicodeDecodeError: 'gbk' codec can't decode bytes in position 7-8: illegal multibyte sequence
 ```
 
-## Problem
+## Sample Code
 
 ```python
 def getResult(url):
