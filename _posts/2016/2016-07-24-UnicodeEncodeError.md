@@ -1,6 +1,6 @@
 ---
 title: "UnicodeEncodeError01"
-date: 2016-07-74
+date: 2016-07-24
 modified: 2016-07-24
 published: true
 categories:
