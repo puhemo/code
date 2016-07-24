@@ -194,6 +194,9 @@ for line in hand:
 
 * [Python正则表达式操作指南](http://wiki.ubuntu.org.cn/Python%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97)
 
+* [Python Regular Expressions](http://www.tutorialspoint.com/python/python_reg_expressions.htm) 
+
+
 [^1]: 正则表达式并不是Python的一部分。正则表达式是用于处理字符串的强大工具，拥有自己独特的语法以及一个独立的处理引擎，效率上可能不如str自带的方法，但功能十分强大。得益于这一点，在提供了正则表达式的语言里，正则表达式的语法都是一样的，区别只在于不同的编程语言实现支持的语法数量不同；但不用担心，不被支持的语法通常是不常用的部分。
 [^2]: . - 匹配任意除换行符外的字符
 [^3]: + - 匹配前一个字符1次或无限次
