@@ -7,6 +7,7 @@ categories:
 tags:
   - Python
   - Regular Expression
+  - Quick Guide
 published: true
 excerpt: |
   Here are some of regular expressions: 
