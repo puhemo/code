@@ -12,6 +12,9 @@ excerpt: |
     Python is a high-level, interpreted, interactive and object oriented-scripting language.
 ---
 
+* TOC
+{:toc}
+
 ## Python Overview
 
 Python is a high-level, interpreted, interactive and object oriented-scripting language.
