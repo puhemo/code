@@ -343,6 +343,8 @@ Using this tool, you can write Python, Java, JavaScript, TypeScript, Ruby, C, an
 - [Python 2.7教程](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000)
 - [ Python Central](http://pythoncentral.io/): Python Programming Guides and Tutorials
 - [Python爬虫入门一之综述](http://cuiqingcai.com/927.html)
+- [Python](http://www.tutorialspoint.com/python/index.htm)
+* [Web Programming in Python](http://wiki.python.org/moin/WebProgramming) − This topic guide attempts to cover every aspect of programming Web applications (both clients and servers) using Python.
 
 ### Books
 
