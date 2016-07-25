@@ -1,7 +1,7 @@
 ---
 title: "Python Part 13: Using Web Services"
 date: 2016-07-09 08:40
-modified: 2016-07-10
+modified: 2016-07-25
 categories:
   - Python
 tags:
@@ -314,4 +314,6 @@ Other times, the vendor wants increased assurance of the source of the requests 
 [^2]: Service-Oriented Architecture. When an application is made of components connected across a network.
 
 
+## More Info
 
+[Python XML Processing](http://www.tutorialspoint.com/python/python_xml_processing.htm)
