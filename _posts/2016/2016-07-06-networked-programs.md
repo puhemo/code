@@ -7,6 +7,9 @@ categories:
 tags:
   - Python Application
   - HTTP
+  - Socket
+  - BeautifulSoup
+  - urllib
 published: true
 excerpt: |
   The network protocol that powers the web is actually quite simple and there is built-in support in Python called **sockets** which makes it very easy to make network connections and retrieve data over those sockets in a Python program.
