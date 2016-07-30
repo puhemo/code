@@ -1,7 +1,7 @@
 ---
 title:  "Python Part 04: Conditionals & Control Flow"
 date: 2016-06-15 21:00
-modified: 2016-07-21
+modified: 2016-07-30 
 published: true
 categories: 
   - Python
@@ -165,7 +165,7 @@ else:
 
 ##  Try/Except
 
-Try/Except - Beginning with `try,` Python tests the first operation. If the operation fails, then it proceeds to follow the instructions in `except.` If the `try` is successful then `except` is skipped.
+Try/Except[^1] - Beginning with `try,` Python tests the first operation. If the operation fails, then it proceeds to follow the instructions in `except.` If the `try` is successful then `except` is skipped.
 
 ```python
 test = raw_input("Enter an integer:")  
@@ -471,5 +471,7 @@ else:
 * [Python 基础教程](http://www.runoob.com/python/python-if-statement.html)
 * [Pythonlearn:resources-week05](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week05)
 * [Python Loops](http://www.tutorialspoint.com/python/python_loops.htm)
+
+[^1]: [错误处理](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386832284796780f5db7b5744bf9989f8d845ef77712000)
 
  {% include series.html %}
