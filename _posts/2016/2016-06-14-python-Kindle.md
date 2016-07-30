@@ -88,4 +88,6 @@ TypeError: an integer is required
 
 [调试](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00138683229901532c40b749184441dbd428d2e0f8aa50e000)
 
+[python读写不同编码txt文件 ](http://blog.csdn.net/zm2714/article/details/8012474)
+
 [^1]: [简单解决Python文件中文编码问题](http://m.jb51.net/article/75247.htm)
