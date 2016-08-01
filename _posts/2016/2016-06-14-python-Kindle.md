@@ -113,6 +113,39 @@ while True:
     book_note.close()
 ```
 
+### 1.2.1
+
+去除文件名中换行符[^3]
+
+```python
+# 1.2
+# encoding: utf-8
+import os
+note_path='G:\documents\My Clippings.txt' 
+f=open(note_path,'r+') 
+
+# 检测目录是否存在
+digest_path='/Users/Administrator/Desktop/digest/' 
+if os.path.exists(digest_path):
+	print digest_path + ' exits!'
+else:
+	os.mkdir(digest_path) 
+
+while True:
+    onenote=[]
+    for i in range(0,5):
+        line=f.readline()
+        if not line:
+            exit()
+        onenote.append(line)
+    # 去除换行符
+    name = onenote[0].strip('\n')
+    fname = '%s%s.txt'%(digest_path,name)
+    book_note=open(fname,'a+','utf-8') 
+    book_note.write(onenote[3]+'\n')
+    book_note.close()
+```
+
 ## 推荐阅读
 
 [https://www.zhihu.com/question/23031778#](https://www.zhihu.com/question/23031778#): 代码来源
@@ -125,3 +158,4 @@ while True:
 
 [^1]: [简单解决Python文件中文编码问题](http://m.jb51.net/article/75247.htm)
 [^2]: [Python文件目录判断和创建 ](http://blog.csdn.net/andrewhunter/article/details/21938945)
+[^3]: [python按行读取文件，如何去掉换行符"\n" ](http://blog.csdn.net/jfkidear/article/details/7532293)
