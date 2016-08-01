@@ -1,7 +1,7 @@
 ---
 title: "Python导出Kindle笔记"
 date: 2016-06-14
-modified: 2016-07-30
+modified: 2016-08-01
 categories:
   - Python
 tags:
@@ -50,7 +50,7 @@ while True:
 
 ## 1.1
 
-参考推荐阅读[^1]修改
+尝试解决编码问题[^1]
 
 ```python
 # 1.1
@@ -74,8 +74,10 @@ while True:
 
 ### 运行报错
 
+```python
 lin14: book_note=open('%s%s.txt'%(digest_path,onenote[0]),'a+')  
 TypeError: an integer is required
+```
 
 ### 可能原因
 
