@@ -266,10 +266,47 @@ while True:
 
 ### 2.0.1
 
-输出笔记和标记位置和时间
+删除空白笔记
 
 ```python
 # 2.0
+# encoding: utf-8
+import os
+
+note_path='G:\documents\My Clippings.txt' 
+f=open(note_path,'r+') 
+
+# 检测目录是否存在
+digest_path='/Users/Administrator/Desktop/digest/' 
+if os.path.exists(digest_path):
+	print digest_path + ' exits!'
+else:
+	os.mkdir(digest_path) 
+
+while True:
+    onenote=[]
+    for i in range(0,5):
+        line=f.readline()
+        if not line:
+            exit()
+        onenote.append(line)
+    # 去除换行符
+    name = onenote[0].strip('\n').replace(':','-') # 替换无法文件名不支持的符号
+    fname = '%s%s.txt'%(digest_path,name)
+    # 修复中文名乱码
+    book_note=open(fname.decode('utf-8'),'a+')
+    # 删除空白笔记
+    if len(onenote[3]) > 1:
+        book_note.write(onenote[3]+'\n') 
+    book_note.close()
+```
+
+## 2.1
+
+输出笔记和标记位置和时间
+
+```python
+# 2.1
 # encoding: utf-8
 import os
 
