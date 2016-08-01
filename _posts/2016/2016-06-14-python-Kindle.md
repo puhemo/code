@@ -21,6 +21,7 @@ excerpt: |
 ##  源代码
 
 ```python
+# 1.0
 # encoding: utf-8
 import os
 note_path='G:\documents\My Clippings.txt' #My Clippings文档路径
@@ -47,11 +48,12 @@ while True:
 
 中文编码问题
 
-## 修改1
+## 1.1
 
 参考推荐阅读[^1]修改
 
 ```python
+# 1.1
 # encoding: utf-8
 import os
 note_path='G:\documents\My Clippings.txt' #My Clippings文档路径
@@ -79,6 +81,36 @@ TypeError: an integer is required
 
 暂未发现
 
+## 1.2
+
+修复文件夹已存在问题[^2]
+
+```python
+# 1.2
+# encoding: utf-8
+import os
+note_path='G:\documents\My Clippings.txt' 
+f=open(note_path,'r+') 
+
+# 检测目录是否存在
+digest_path='/Users/Administrator/Desktop/digest/' 
+if os.path.exists(digest_path):
+	print digest_path + ' exits!'
+else:
+	os.mkdir(digest_path) 
+
+while True:
+    onenote=[]
+    for i in range(0,5):
+        line=f.readline()
+        if not line:
+            exit()
+        onenote.append(line)
+    book_note=open('%s%s.txt'%(digest_path,onenote[0]),'a+','utf-8') 
+    book_note.write(onenote[3]+'\n')
+    book_note.close()
+```
+
 ## 源代码来源
 
 [https://www.zhihu.com/question/23031778#](https://www.zhihu.com/question/23031778#)
@@ -91,3 +123,4 @@ TypeError: an integer is required
 [python读写不同编码txt文件 ](http://blog.csdn.net/zm2714/article/details/8012474)
 
 [^1]: [简单解决Python文件中文编码问题](http://m.jb51.net/article/75247.htm)
+[^2]: [Python文件目录判断和创建 ](http://blog.csdn.net/andrewhunter/article/details/21938945)
