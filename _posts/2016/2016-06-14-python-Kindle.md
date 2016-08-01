@@ -187,6 +187,10 @@ while True:
     book_note.close()
 ```
 
+#### 问题
+
+部分文件无‘.txt’后缀
+
 ## 推荐阅读
 
 [https://www.zhihu.com/question/23031778#](https://www.zhihu.com/question/23031778#): 代码来源
