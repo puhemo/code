@@ -121,7 +121,7 @@ while True:
 去除文件名中换行符[^3]
 
 ```python
-# 1.2。1
+# 1.2.1
 # encoding: utf-8
 import os
 note_path='G:\documents\My Clippings.txt' 
@@ -158,7 +158,7 @@ while True:
 修复中文名乱码[^4]
 
 ```python
-# 1.2
+# 1.2.2
 # encoding: utf-8
 import os
 note_path='G:\documents\My Clippings.txt' 
@@ -190,6 +190,45 @@ while True:
 #### 问题
 
 部分文件无‘.txt’后缀
+
+#### 可能原因
+
+文件名不支持':'
+
+### 1.2.3
+
+修复文件名不支持符号（':'）问题
+
+```python
+# 1.2.3
+# encoding: utf-8
+import os
+note_path='G:\documents\My Clippings.txt' 
+f=open(note_path,'r+') 
+
+# 检测目录是否存在
+digest_path='/Users/Administrator/Desktop/digest/' 
+if os.path.exists(digest_path):
+	print digest_path + ' exits!'
+else:
+	os.mkdir(digest_path) 
+
+while True:
+    onenote=[]
+    for i in range(0,5):
+        line=f.readline()
+        if not line:
+            exit()
+        onenote.append(line)
+    # 去除换行符
+    name = onenote[0].strip('\n').replace(':','-') # 替换无法文件名不支持的符号
+    fname = '%s%s.txt'%(digest_path,name)
+    # 修复中文名乱码
+    book_note=open(fname.decode('utf-8'),'a+')
+    book_note.write(onenote[3]+'\n')
+    book_note.close()
+```
+
 
 ## 推荐阅读
 
