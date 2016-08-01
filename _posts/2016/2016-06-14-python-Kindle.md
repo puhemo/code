@@ -81,7 +81,10 @@ TypeError: an integer is required
 
 ### 可能原因
 
-暂未发现
+```python
+book_note=open('%s%s.txt'%(digest_path,onenote[0]),'a+','utf-8') # 添加'utf-8'
+```
+可能添加'utf-8'的方法不对
 
 ## 1.2
 
@@ -108,7 +111,7 @@ while True:
         if not line:
             exit()
         onenote.append(line)
-    book_note=open('%s%s.txt'%(digest_path,onenote[0]),'a+','utf-8') 
+    book_note=open('%s%s.txt'%(digest_path,onenote[0]),'a+') 
     book_note.write(onenote[3]+'\n')
     book_note.close()
 ```
