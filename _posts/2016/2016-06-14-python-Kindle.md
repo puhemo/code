@@ -564,6 +564,8 @@ while True:
 
 [10.1. os.path — 常用路径名操作](http://python.usyiyi.cn/python_278/library/os.path.html)
 
+[Python文件夹与文件的操作](http://www.cnblogs.com/yuxc/archive/2011/08/01/2124012.html)
+
 [^1]: [简单解决Python文件中文编码问题](http://m.jb51.net/article/75247.htm)
 [^2]: [Python文件目录判断和创建 ](http://blog.csdn.net/andrewhunter/article/details/21938945)
 [^3]: [python按行读取文件，如何去掉换行符"\n" ](http://blog.csdn.net/jfkidear/article/details/7532293)
