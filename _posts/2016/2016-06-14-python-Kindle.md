@@ -301,7 +301,7 @@ while True:
     book_note.close()
 ```
 
-## 2.0.2
+### 2.0.2
 
 优化文件保存目录
 
@@ -376,7 +376,7 @@ while True:
     book_note.close()
 ```
 
-### 2.1.11
+### 2.1.1
 
 删除空白笔记
 
