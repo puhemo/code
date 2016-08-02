@@ -1,7 +1,7 @@
 ---
 title: "Python导出Kindle笔记"
 date: 2016-06-14
-modified: 2016-08-01
+modified: 2016-08-02
 categories:
   - Python
 tags:
@@ -269,7 +269,7 @@ while True:
 删除空白笔记
 
 ```python
-# 2.0
+# 2.0.1
 # encoding: utf-8
 import os
 
@@ -300,6 +300,46 @@ while True:
         book_note.write(onenote[3]+'\n') 
     book_note.close()
 ```
+
+## 2.0.2
+
+优化文件保存目录
+
+```python
+# 2.0.2
+# encoding: utf-8
+import os
+
+note_path='G:\documents\My Clippings.txt' 
+f=open(note_path,'r+') 
+
+path = os.getcwd() # 当前目录
+# print path
+digest_path='%s/digest/' %(path) # 在当前目录新建文件夹
+# 检测目录是否存在
+if os.path.exists(digest_path):
+	print digest_path + ' exits!'
+else:
+	os.mkdir(digest_path) 
+
+while True:
+    onenote=[]
+    for i in range(0,5):
+        line=f.readline()
+        if not line:
+            exit()
+        onenote.append(line)
+    # 去除换行符
+    name = onenote[0].strip('\n').replace(':','-') # 替换无法文件名不支持的符号
+    fname = '%s%s.txt'%(digest_path,name)
+    # 修复中文名乱码
+    book_note=open(fname.decode('utf-8'),'a+')
+    # 删除空白笔记
+    if len(onenote[3]) > 1:
+        book_note.write(onenote[3]+'\n') 
+    book_note.close()
+```
+
 
 ## 2.1
 
