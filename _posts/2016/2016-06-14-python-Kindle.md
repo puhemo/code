@@ -382,6 +382,54 @@ while True:
     book_note.close()
 ```
 
+### 2.0.4
+
+修复盘符变动问题
+
+```python
+# 2.0.4
+# encoding: utf-8
+import os
+
+# 输入kindle所在盘符
+npath = raw_input('Enter the disk name: ').upper()
+note_path='%s:\documents\My Clippings.txt' %(npath) 
+try:  
+   f=open(note_path,'r+') 
+except:  
+   print 'Please enter the right disk name!'
+   quit() 
+
+path = os.getcwd() # 当前目录
+# 自定义保存目录
+digest = raw_input('Enter the folder name: ')
+if len(digest) < 1:
+	digest = 'digest'
+digest_path='%s/%s/' %(path, digest) # 在当前目录新建文件夹
+# 检测目录是否存在
+if os.path.exists(digest_path):
+	print digest_path + ' exits!'
+else:
+	os.mkdir(digest_path) 
+
+while True:
+    onenote=[]
+    for i in range(0,5):
+        line=f.readline()
+        if not line:
+            exit()
+        onenote.append(line)
+    # 去除换行符
+    name = onenote[0].strip('\n').replace(':','-') # 替换无法文件名不支持的符号
+    fname = '%s%s.txt'%(digest_path,name)
+    # 修复中文名乱码
+    book_note=open(fname.decode('utf-8'),'a+')
+    # 删除空白笔记
+    if len(onenote[3]) > 1:
+        book_note.write(onenote[3]+'\n') 
+    book_note.close()
+```
+
 ## 2.1
 
 输出笔记和标记位置和时间
