@@ -392,7 +392,7 @@ while True:
 import os
 
 # 输入kindle所在盘符
-npath = raw_input('Enter the disk name: ').upper()
+npath = raw_input('Enter kindle disk name: ').upper()
 note_path='%s:\documents\My Clippings.txt' %(npath) 
 try:  
    f=open(note_path,'r+') 
