@@ -388,6 +388,7 @@ while True:
 
 ```python
 # 2.0.4
+# python 2.x
 # encoding: utf-8
 import os
 
@@ -506,7 +507,8 @@ while True:
 更新参考 2.0.2， 2.0.3，2.0.4
 
 ```python
-# 2.0.4
+# 2.1.2
+# python 2.x
 # encoding: utf-8
 import os
 
@@ -559,6 +561,8 @@ while True:
 [python读写不同编码txt文件 ](http://blog.csdn.net/zm2714/article/details/8012474)
 
 [python报错UnicodeDecodeError: 'ascii' codec can't decode byte 0xe5 in position 4: ordinal not in range ](http://blog.csdn.net/a657941877/article/details/9063883)
+
+[10.1. os.path — 常用路径名操作](http://python.usyiyi.cn/python_278/library/os.path.html)
 
 [^1]: [简单解决Python文件中文编码问题](http://m.jb51.net/article/75247.htm)
 [^2]: [Python文件目录判断和创建 ](http://blog.csdn.net/andrewhunter/article/details/21938945)
