@@ -16,6 +16,8 @@ excerpt: |
 
 ### 1.0
 
+获取图片链接
+
 ```python
 # 1.0
 import urllib
@@ -40,6 +42,8 @@ for tag in tags:
 ```
 
 ### 1.1
+
+下载图片到本地
 
 ```python
 # python 2.x
