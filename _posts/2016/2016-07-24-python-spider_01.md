@@ -101,6 +101,10 @@ for link in t:
 
 ## 淘宝颜色图
 
+### 1.0
+
+获取图片链接
+
 ```python
 # 1.0
 import urllib
@@ -123,6 +127,62 @@ for tag in tags:
 	       print link
    else: continue
 ```
+
+### 1.1 
+
+保存到本地
+
+```python
+# python 2.x
+import urllib2
+from BeautifulSoup import *
+import re
+
+def findImg(im):
+    links = re.findall('(//.*?jpg?)', im)
+    if len(links) > 0:
+    	link = links[0]
+        link = 'https:'+ link
+        return link
+
+def saveImg(imageURL, name):
+    req = urllib2.Request(imageURL, headers = {
+        'Connection': 'Keep-Alive',
+        'Accept': 'text/html, application/xhtml+xml, */*',
+        'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
+    })
+    oper = urllib2.urlopen(req)
+    data = oper.read()
+    name=name+".jpg" 
+    f = open(name, 'wb')
+    f.write(data)
+    f.close()
+
+url = raw_input('Enter - ')
+if len(url) < 1:
+	url = 'https://item.taobao.com/item.htm?id=534076017689&ns=1&abbucket=14#detail'
+print 'URL:', url
+html = urllib2.urlopen(url).read()
+soup = BeautifulSoup(html)
+
+l = list()
+tags = soup('a')
+for tag in tags:
+   img = tag.get('style', None)
+   #print img
+   if img != None :
+       ii = findImg(img)
+       if ii != None:
+            l.append(ii)
+n = 0
+for u in l:
+    n = n + 1
+    print n
+    print u
+    saveImg(u, str(n))
+```
+
 ## 伪装浏览器
 
 ```python
