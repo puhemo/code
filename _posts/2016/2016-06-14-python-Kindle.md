@@ -1,7 +1,7 @@
 ---
 title: "Python导出Kindle笔记"
 date: 2016-06-14
-modified: 2016-08-02
+modified: 2016-08-03
 categories:
   - Python
 tags:
@@ -221,7 +221,7 @@ while True:
             exit()
         onenote.append(line)
     # 去除换行符
-    name = onenote[0].strip('\n').replace(':','-') # 替换无法文件名不支持的符号
+    name = onenote[0].strip('\n').replace(':','-') # 替换文件名不支持符号
     fname = '%s%s.txt'%(digest_path,name)
     # 修复中文名乱码
     book_note=open(fname.decode('utf-8'),'a+')
@@ -256,7 +256,7 @@ while True:
             exit()
         onenote.append(line)
     # 去除换行符
-    name = onenote[0].strip('\n').replace(':','-') # 替换无法文件名不支持的符号
+    name = onenote[0].strip('\n').replace(':','-') # 替换文件名不支持符号
     fname = '%s%s.txt'%(digest_path,name)
     # 修复中文名乱码
     book_note=open(fname.decode('utf-8'),'a+')
@@ -291,7 +291,7 @@ while True:
             exit()
         onenote.append(line)
     # 去除换行符
-    name = onenote[0].strip('\n').replace(':','-') # 替换无法文件名不支持的符号
+    name = onenote[0].strip('\n').replace(':','-') # 替换文件名不支持符号
     fname = '%s%s.txt'%(digest_path,name)
     # 修复中文名乱码
     book_note=open(fname.decode('utf-8'),'a+')
@@ -330,7 +330,7 @@ while True:
             exit()
         onenote.append(line)
     # 去除换行符
-    name = onenote[0].strip('\n').replace(':','-') # 替换无法文件名不支持的符号
+    name = onenote[0].strip('\n').replace(':','-') # 替换文件名不支持符号
     fname = '%s%s.txt'%(digest_path,name)
     # 修复中文名乱码
     book_note=open(fname.decode('utf-8'),'a+')
@@ -372,7 +372,7 @@ while True:
             exit()
         onenote.append(line)
     # 去除换行符
-    name = onenote[0].strip('\n').replace(':','-') # 替换无法文件名不支持的符号
+    name = onenote[0].strip('\n').replace(':','-') # 替换文件名不支持符号
     fname = '%s%s.txt'%(digest_path,name)
     # 修复中文名乱码
     book_note=open(fname.decode('utf-8'),'a+')
@@ -421,7 +421,7 @@ while True:
             exit()
         onenote.append(line)
     # 去除换行符
-    name = onenote[0].strip('\n').replace(':','-') # 替换无法文件名不支持的符号
+    name = onenote[0].strip('\n').replace(':','-') # 替换文件名不支持符号
     fname = '%s%s.txt'%(digest_path,name)
     # 修复中文名乱码
     book_note=open(fname.decode('utf-8'),'a+')
@@ -458,7 +458,7 @@ while True:
             exit()
         onenote.append(line)
     # 去除换行符
-    name = onenote[0].strip('\n').replace(':','-') # 替换无法文件名不支持的符号
+    name = onenote[0].strip('\n').replace(':','-') # 替换文件名不支持符号
     fname = '%s%s.txt'%(digest_path,name)
     # 修复中文名乱码
     book_note=open(fname.decode('utf-8'),'a+')
@@ -493,7 +493,7 @@ while True:
             exit()
         onenote.append(line)
     # 去除换行符
-    name = onenote[0].strip('\n').replace(':','-') # 替换无法文件名不支持的符号
+    name = onenote[0].strip('\n').replace(':','-') # 替换文件名不支持符号
     fname = '%s%s.txt'%(digest_path,name)
     # 修复中文名乱码
     book_note=open(fname.decode('utf-8'),'a+')
@@ -541,7 +541,7 @@ while True:
             exit()
         onenote.append(line)
     # 去除换行符
-    name = onenote[0].strip('\n').replace(':','-') # 替换无法文件名不支持的符号
+    name = onenote[0].strip('\n').replace(':','-') # 替换文件名不支持符号
     fname = '%s%s.txt'%(digest_path,name)
     # 修复中文名乱码
     book_note=open(fname.decode('utf-8'),'a+')
