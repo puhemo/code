@@ -14,6 +14,8 @@ excerpt: |
 
 ## 淘宝主图
 
+### 1.0
+
 ```python
 # 1.0
 import urllib
@@ -35,6 +37,62 @@ for tag in tags:
     	if 'img' in im:
     		i = re.findall('(//.*?)_50', im)[0]
     		print i
+```
+
+### 1.1
+
+```python
+# python 2.x
+import urllib2
+import re
+from BeautifulSoup import *
+
+
+def findImg(im):
+    if 'img' in im:
+        i = re.findall('(//.*?)_50', im)[0]
+        i = 'https:'+i
+        return i
+
+def saveImg(imageURL, name):
+    req = urllib2.Request(imageURL, headers = {
+        'Connection': 'Keep-Alive',
+        'Accept': 'text/html, application/xhtml+xml, */*',
+        'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
+    })
+    oper = urllib2.urlopen(req)
+    data = oper.read()
+    name=name+".jpg" 
+    f = open(name, 'wb')
+    f.write(data)
+    f.close()
+            
+url = raw_input('Enter - ')
+if len(url) < 1:
+	url = 'https://item.taobao.com/item.htm?id=523172528872'
+print 'URL:', url
+html = urllib2.urlopen(url).read()
+html = html.decode('gbk', 'ignore').encode('utf-8')
+soup = BeautifulSoup(html)
+
+t = list()
+
+tags = soup('a')
+for tag in tags:
+    img = tag.contents
+    if len(img) > 0:
+    	im = str(img[0])
+        ii = findImg(im)
+        if ii != None:
+            t.append(ii)
+
+
+n = 0
+for link in t:
+    n = n + 1
+    print link
+    saveImg(link, str(n))
 ```
 
 ## 淘宝颜色图
