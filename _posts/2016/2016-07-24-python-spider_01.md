@@ -61,3 +61,7 @@ for tag in tags:
 	       print link
    else: continue
 ```
+
+## Reference
+
+[简洁的python，简洁的urllib,保存图片](http://blog.csdn.net/wwaiym/article/details/5829471) 
