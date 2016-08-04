@@ -117,7 +117,7 @@ def findImg(im):
         i = 'https:'+i
         return i
 
-def saveImg(imageURL, name,p):
+def saveImg(imageURL, name):
     req = urllib2.Request(imageURL, headers = {
         'Connection': 'Keep-Alive',
         'Accept': 'text/html, application/xhtml+xml, */*',
@@ -163,7 +163,7 @@ n = 0
 for link in t:
     n = n + 1
     print link
-    saveImg(link, str(n),p)
+    saveImg(link, str(n))
 ```
 
 ## 淘宝颜色图
