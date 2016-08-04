@@ -1,7 +1,7 @@
 ---
 title: "Python Spider test01"
 date: 2016-07-24
-modified: 2016-07-24
+modified: 2016-08-04
 published: true
 categories:
   - Python
@@ -97,6 +97,73 @@ for link in t:
     n = n + 1
     print link
     saveImg(link, str(n))
+```
+
+### 1.2
+
+本地目录新建图片保存位置
+
+```python
+# python 2.x
+# encoding: utf-8
+import urllib2
+import re
+import os
+from BeautifulSoup import *
+
+def findImg(im):
+    if 'img' in im:
+        i = re.findall('(//.*?)_50', im)[0]
+        i = 'https:'+i
+        return i
+
+def saveImg(imageURL, name,p):
+    req = urllib2.Request(imageURL, headers = {
+        'Connection': 'Keep-Alive',
+        'Accept': 'text/html, application/xhtml+xml, */*',
+        'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
+    })
+    oper = urllib2.urlopen(req)
+    data = oper.read()
+    fname = '%s%s.jpg'%(s_path,name)
+    #name=name+".jpg" 
+    f = open(fname, 'wb')
+    f.write(data)
+    f.close()
+            
+url = raw_input('Enter - ')
+if len(url) < 1:
+	url = 'https://item.taobao.com/item.htm?id=523172528872'
+print 'URL:', url
+html = urllib2.urlopen(url).read()
+html = html.decode('gbk', 'ignore').encode('utf-8')
+soup = BeautifulSoup(html)
+
+t = list()
+
+tags = soup('a')
+for tag in tags:
+    img = tag.contents
+    if len(img) > 0:
+    	im = str(img[0])
+        ii = findImg(im)
+        if ii != None:
+            t.append(ii)
+
+p = raw_input('Enter filename: ')
+path = os.getcwd() 
+s_path='%s/%s/' %(path, p) 
+if os.path.exists(s_path):
+    print s_path + ' exits!'
+else:
+    os.mkdir(s_path) 
+
+n = 0
+for link in t:
+    n = n + 1
+    print link
+    saveImg(link, str(n),p)
 ```
 
 ## 淘宝颜色图
