@@ -452,7 +452,6 @@ from BeautifulSoup import *
 
 # 获取主图链接
 def m_findImg(t1):
-    ml = list()
     m_img = t1.contents
     if len(m_img) > 0:
         im = str(m_img[0])
