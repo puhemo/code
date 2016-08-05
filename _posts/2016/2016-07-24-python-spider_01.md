@@ -607,12 +607,8 @@ for tag in tags:
     ml.append(m_findImg(tag))
     cl.append(c_findImg(tag))
 
-
 n_ml = [x for x in ml if x is not None]
 n_cl = [x for x in cl if x is not None]
-
-print n_ml
-print n_cl
 
 m = raw_input('Enter main filename: ')
 if len(m) < 1:
