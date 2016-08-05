@@ -15,14 +15,16 @@ excerpt: |
 * TOC
 {:toc}
 
-## 淘宝主图
+## 1.0
 
-### 1.0
+淘宝主图
+
+### 1.0.1
 
 获取图片链接
 
 ```python
-# 1.0
+# 1.0.1
 import urllib
 from BeautifulSoup import *
 import re
@@ -44,7 +46,7 @@ for tag in tags:
     		print i
 ```
 
-### 1.1
+### 1.0.2
 
 下载图片到本地
 
@@ -102,7 +104,7 @@ for link in t:
     saveImg(link, str(n))
 ```
 
-### 1.2
+### 1.0.3
 
 本地目录新建图片保存位置
 
@@ -169,14 +171,14 @@ for link in t:
     saveImg(link, str(n))
 ```
 
-## 淘宝颜色图
+## 1.1
 
-### 1.0
+淘宝颜色图
 
 获取图片链接
 
 ```python
-# 1.0
+# 1.1
 import urllib
 from BeautifulSoup import *
 import re
@@ -198,7 +200,7 @@ for tag in tags:
    else: continue
 ```
 
-### 1.1 
+### 1.1.1
 
 保存到本地
 
@@ -251,32 +253,6 @@ for u in l:
     print n
     print u
     saveImg(u, str(n))
-```
-
-## 伪装浏览器
-
-```python
-import urllib2
-import time
-
-url = 'https://gd1.alicdn.com/imgextra/i8/***.SS2' 
-
-def saveImg(imageURL):
-    req = urllib2.Request(url, headers = {
-        'Connection': 'Keep-Alive',
-        'Accept': 'text/html, application/xhtml+xml, */*',
-        'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
-    })
-    oper = urllib2.urlopen(req)
-    data = oper.read()
-    name=time.strftime("%H%M%S", time.localtime())
-    name=name+".jpg" 
-    f = open(name, 'wb')
-    f.write(data)
-    f.close()
-
-saveImg(url)
 ```
 
 ## 2.0 
@@ -463,6 +439,32 @@ if len(c) < 1:
 
 saveImg2(ml, m)
 saveImg2(cl, c)
+```
+
+## 伪装浏览器
+
+```python
+import urllib2
+import time
+
+url = 'https://gd1.alicdn.com/imgextra/i8/***.SS2' 
+
+def saveImg(imageURL):
+    req = urllib2.Request(url, headers = {
+        'Connection': 'Keep-Alive',
+        'Accept': 'text/html, application/xhtml+xml, */*',
+        'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
+    })
+    oper = urllib2.urlopen(req)
+    data = oper.read()
+    name=time.strftime("%H%M%S", time.localtime())
+    name=name+".jpg" 
+    f = open(name, 'wb')
+    f.write(data)
+    f.close()
+
+saveImg(url)
 ```
 
 ## Reference
