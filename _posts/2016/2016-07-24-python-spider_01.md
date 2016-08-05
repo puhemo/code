@@ -286,13 +286,13 @@ import re
 import os
 from BeautifulSoup import *
 
-
+# 获取主图图片链接
 def m_findImg(im):
     if 'img' in im:
         i = re.findall('(//.*?)_50', im)[0]
         i = 'https:'+i
         return i
-
+# 获取颜色图片链接
 def c_findImg(im):
     links = re.findall('(//.*?jpg?)', im)
     if len(links) > 0:
