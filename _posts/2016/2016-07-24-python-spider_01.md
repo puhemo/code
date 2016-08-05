@@ -276,6 +276,98 @@ def saveImg(imageURL):
 saveImg(url)
 ```
 
+## 2.0 
+
+```python
+# python 2.x
+# encoding: utf-8
+import urllib2
+import re
+import os
+from BeautifulSoup import *
+
+
+def m_findImg(im):
+    if 'img' in im:
+        i = re.findall('(//.*?)_50', im)[0]
+        i = 'https:'+i
+        return i
+
+def c_findImg(im):
+    links = re.findall('(//.*?jpg?)', im)
+    if len(links) > 0:
+        link = 'https:'+ links[0]
+        return link
+
+# 新建文件保存目录
+def Img_path(i_name):
+    path = os.getcwd() 
+    image_path = '%s/%s/' %(path, i_name)
+    if not os.path.exists(image_path):
+        os.mkdir(image_path)
+    else:
+        print image_path + ' exits!' 
+    return image_path
+
+# 保存图片
+def saveImg(img_URL,img_name,img_path):
+    req = urllib2.Request(img_URL, headers = {
+        'Connection': 'Keep-Alive',
+        'Accept': 'text/html, application/xhtml+xml, */*',
+        'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
+    }) #伪装浏览器
+    oper = urllib2.urlopen(req)
+    data = oper.read()
+    fname = '%s%s.jpg'%(img_path,img_name)
+    f = open(fname, 'wb')
+    f.write(data)
+    f.close()
+
+url = raw_input('Enter - ')
+if len(url) < 1:
+    url = 'https://item.taobao.com/item.htm?id=534076017689&ns=1&abbucket=14#detail'
+print 'URL:', url
+html = urllib2.urlopen(url).read()
+html = html.decode('gbk', 'ignore').encode('utf-8') # 转码
+soup = BeautifulSoup(html)
+
+ml = list()
+cl = list()
+tags = soup('a')
+
+for tag in tags:
+    m_img = tag.contents
+    if len(m_img) > 0:
+        im = str(m_img[0])
+        if m_findImg(im) != None:
+            ml.append(m_findImg(im))
+
+for tag in tags:
+    c_img = tag.get('style', None)
+    if c_img != None :
+        if c_findImg(c_img) != None:
+           cl.append(c_findImg(c_img))  
+
+m = raw_input('Enter main filename: ')
+if len(m) < 1:
+    m = 'main'
+c = raw_input('Enter color filename: ')
+if len(c) < 1:
+    c = 'color'
+
+n = 0
+for u1 in ml:
+    n = n + 1
+    #print u1
+    saveImg(u1, str(n), Img_path(m))
+p = 0
+for u2 in cl:
+    p = p + 1
+    #print u2
+    saveImg(u2, str(p), Img_path(c))
+```
+
 ## Reference
 
 [简洁的python，简洁的urllib,保存图片](http://blog.csdn.net/wwaiym/article/details/5829471) 
