@@ -12,6 +12,9 @@ excerpt: |
     Sample code
 ---
 
+* TOC
+{:toc}
+
 ## 淘宝主图
 
 ### 1.0
