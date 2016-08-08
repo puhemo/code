@@ -204,7 +204,7 @@ The *read()* method reads a string from an open file. It is important to note th
 fileObject.read([count]);
 ```
 
-Here, passed parameter is the number of bytes to be read from the opened file. This method starts reading from the beginning of the file and if *count* is missing, then it tries to read as much as possible, maybe until the end of file.
+Here, passed parameter is the number of bytes to be read from the opened file. This method starts reading from the beginning of the file and if *count* is missing, then it tries to read as much as possible, maybe until the end of file.[^6]
 
 #### Example
 
@@ -460,6 +460,7 @@ os.rmdir( "/tmp/test"  )
 [^3]: 去除字符串的**首尾**字符(默认去除首尾空格)
 [^4]: 去除**右边**的字符(默认去除右边空格), 也可以去除\n; something,lstrip()用于去除**左边**的字符
 [^5]: '\n' represents a newline. Newline is `one character`, even though it is represented by two.
+[^6]: 调用`read()`会一次性读取文件的全部内容，如果文件有10G，内存就爆了，所以，要保险起见，可以反复调用read(size)方法，每次最多读取size个字节的内容。另外，调用readline()可以每次读取一行内容，调用readlines()一次读取所有内容并按行返回list。
 
 ## Reference:
 
