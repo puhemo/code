@@ -377,6 +377,20 @@ os.remove("text2.txt")
 
 All files are contained within various directories, and Python has no problem handling these too. The **os** module has several methods that help you create, remove, and change directories.
 
+```python
+# 查看当前目录的绝对路径:
+>>> os.path.abspath('.')
+'/Users/michael'
+# 在某个目录下创建一个新目录，
+# 首先把新目录的完整路径表示出来:
+>>> os.path.join('/Users/michael', 'testdir')
+'/Users/michael/testdir'
+# 然后创建一个目录:
+>>> os.mkdir('/Users/michael/testdir')
+# 删掉一个目录:
+>>> os.rmdir('/Users/michael/testdir')
+```
+
 ### The `mkdir()` Method
 
 You can use the `mkdir()` method of the **os** module to create directories in the current directory. You need to supply an argument to this method which contains the name of the directory to be created.
