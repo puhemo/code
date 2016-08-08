@@ -470,6 +470,7 @@ os.rmdir( "/tmp/test"  )
 [^5]: '\n' represents a newline. Newline is `one character`, even though it is represented by two.
 [^6]: 调用`read()`会一次性读取文件的全部内容，如果文件有10G，内存就爆了，所以，要保险起见，可以反复调用read(size)方法，每次最多读取size个字节的内容。另外，调用readline()可以每次读取一行内容，调用readlines()一次读取所有内容并按行返回list。
 [^7]: [字符编码](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386820066616a77f826d876b46b9ac34cb5f34374f7a000)
+
 ## Reference:
 
 * [Python startswith()方法](http://www.runoob.com/python/att-string-startswith.html)
@@ -477,4 +478,6 @@ os.rmdir( "/tmp/test"  )
 * [Pythonlearn:resources-week07](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week07)
 * [Python Files I/O](http://www.tutorialspoint.com/python/python_files_io.htm)
 * [文件读写](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386820066616a77f826d876b46b9ac34cb5f34374f7a000)
+ 
+
 {% include series.html %}
