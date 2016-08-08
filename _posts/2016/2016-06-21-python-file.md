@@ -1,7 +1,7 @@
 ---
 title: "Python Part 06: File Input/Output"
 date: 2016-06-21 10:00
-modified: 2016-07-22
+modified: 2016-08-08
 categories:
   - Python
 tags:
@@ -478,6 +478,7 @@ os.rmdir( "/tmp/test"  )
 * [Pythonlearn:resources-week07](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week07)
 * [Python Files I/O](http://www.tutorialspoint.com/python/python_files_io.htm)
 * [文件读写](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386820066616a77f826d876b46b9ac34cb5f34374f7a000)
+* [操作文件和目录](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/0013868321590543ff305fb9f9949f08d760883cc243812000)
  
 
 {% include series.html %}
