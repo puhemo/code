@@ -396,14 +396,39 @@ The **[os.path](https://docs.python.org/2/library/os.path.html)** module impleme
 
 #### `os.path.join()`
 
-Join one or more path components intelligently.
+Join one or more path components intelligently.[^9]
 
 ```python
 >>> os.path.join('/Users/michael', 'testdir')
 '/Users/michael/testdir'
 ```
 
+#### `os.path.split()`
 
+Split the pathname path into a pair, `(head, tail)` where tail is the last pathname component and head is everything leading up to that. [^9]
+
+```python
+>>> os.path.split('/Users/michael/testdir/file.txt')
+('/Users/michael/testdir', 'file.txt')
+```
+
+#### `os.path.splitext()`
+
+Split the pathname path into a pair `(root, ext)` such that `root + ext == path`.[^9]
+
+```python
+>>> os.path.splitext('/path/to/file.txt')
+('/path/to/file', '.txt')
+```
+
+### The `rename` and `remove` Method
+
+```python
+# 对文件重命名:
+>>> os.rename('test.txt', 'test.py')
+# 删掉文件:
+>>> os.remove('test.py')
+```
 
 ### The `mkdir()` Method
 
@@ -499,6 +524,8 @@ os.rmdir( "/tmp/test"  )
 [^6]: 调用`read()`会一次性读取文件的全部内容，如果文件有10G，内存就爆了，所以，要保险起见，可以反复调用read(size)方法，每次最多读取size个字节的内容。另外，调用readline()可以每次读取一行内容，调用readlines()一次读取所有内容并按行返回list。
 [^7]: [字符编码](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386820066616a77f826d876b46b9ac34cb5f34374f7a000)
 [^8]: [操作文件和目录](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/0013868321590543ff305fb9f9949f08d760883cc243812000)
+[^9]: 这些合并、拆分路径的函数并不要求目录和文件要真实存在，它们只对字符串进行操作。
+
 ## Reference:
 
 * [Python startswith()方法](http://www.runoob.com/python/att-string-startswith.html)
