@@ -390,6 +390,7 @@ All files are contained within various directories, and Python has no problem ha
 # 删掉一个目录:
 >>> os.rmdir('/Users/michael/testdir')
 ```
+
 ### The **os.path** module
 
 The **[os.path](https://docs.python.org/2/library/os.path.html)** module implements some useful functions on pathnames.[^8]
