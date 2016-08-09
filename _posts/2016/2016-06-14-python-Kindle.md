@@ -24,9 +24,9 @@ excerpt: |
 # 1.0
 # encoding: utf-8
 import os
-note_path='G:\documents\My Clippings.txt' #My Clippings文档路径
+note_path='/Volumes/Kindle/documents/My Clippings.txt' #My Clippings文档路径
 f=open(note_path,'r+') #打开Clippings文件
-digest_path='/Users/Administrator/Desktop/digest/' #笔记保存位置
+digest_path='/Users/yangxin/Desktop/digest/'#笔记保存位置
 os.mkdir(digest_path) #新建digest文件夹
 while True:
     onenote=[]
