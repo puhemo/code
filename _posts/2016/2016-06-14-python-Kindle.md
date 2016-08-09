@@ -470,7 +470,7 @@ while True:
         onenote.append(line)
     # 去除换行符
     name = onenote[0].strip('\n').replace(':','-') # 替换文件名不支持符号
-    fname = '%s%s.txt'%(digest_path,name)
+    fname = os.path.join(digest_path,name + '.txt')
     # 修复中文名乱码
     book_note=open(fname.decode('utf-8'),'a+')
     # 删除空白笔记
