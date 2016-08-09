@@ -375,7 +375,7 @@ os.remove("text2.txt")
 
 ## Directories in Python
 
-All files are contained within various directories, and Python has no problem handling these too. The **os** module has several methods that help you create, remove, and change directories.
+All files are contained within various directories, and Python has no problem handling these too. The **os** and **os.path** module has several methods that help you create, remove, and change directories.
 
 ```python
 # 查看当前目录的绝对路径:
