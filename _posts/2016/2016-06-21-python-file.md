@@ -390,6 +390,20 @@ All files are contained within various directories, and Python has no problem ha
 # 删掉一个目录:
 >>> os.rmdir('/Users/michael/testdir')
 ```
+### The **os.path** module
+
+The **[os.path](https://docs.python.org/2/library/os.path.html)** module implements some useful functions on pathnames.[^8]
+
+#### `os.path.join()`
+
+Join one or more path components intelligently.
+
+```python
+>>> os.path.join('/Users/michael', 'testdir')
+'/Users/michael/testdir'
+```
+
+
 
 ### The `mkdir()` Method
 
@@ -484,7 +498,7 @@ os.rmdir( "/tmp/test"  )
 [^5]: '\n' represents a newline. Newline is `one character`, even though it is represented by two.
 [^6]: 调用`read()`会一次性读取文件的全部内容，如果文件有10G，内存就爆了，所以，要保险起见，可以反复调用read(size)方法，每次最多读取size个字节的内容。另外，调用readline()可以每次读取一行内容，调用readlines()一次读取所有内容并按行返回list。
 [^7]: [字符编码](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386820066616a77f826d876b46b9ac34cb5f34374f7a000)
-
+[^8]: [操作文件和目录](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/0013868321590543ff305fb9f9949f08d760883cc243812000)
 ## Reference:
 
 * [Python startswith()方法](http://www.runoob.com/python/att-string-startswith.html)
