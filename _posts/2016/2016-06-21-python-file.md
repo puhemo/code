@@ -422,15 +422,6 @@ Split the pathname path into a pair `(root, ext)` such that `root + ext == path`
 ('/path/to/file', '.txt')
 ```
 
-### The `rename` and `remove` Method
-
-```python
-# 对文件重命名:
->>> os.rename('test.txt', 'test.py')
-# 删掉文件:
->>> os.remove('test.py')
-```
-
 ### The `mkdir()` Method
 
 You can use the `mkdir()` method of the **os** module to create directories in the current directory. You need to supply an argument to this method which contains the name of the directory to be created.
