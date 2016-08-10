@@ -1,7 +1,7 @@
 ---
 title: "Python Part 02: String"
 date: 2016-06-14 09:00
-modified: 2016-07-21
+modified: 2016-08-10
 categories:
   - Python
 tags:
@@ -183,7 +183,7 @@ The format operator, `%` allows us to construct strings, replacing parts of the 
 * '%g' to format a floating-point number 
 * '%s' to format a string
 
-### Example
+### Example[^2]
 
 ```python
 my_name = 'Zed A. Shaw'
@@ -242,5 +242,6 @@ the variable assignment will also show up.
 * [Python Strings](http://www.tutorialspoint.com/python/python_strings.htm)
 
 [^1]: A function that is associated with an object and called using dot notation. 
+[^2]: [Exercise 5: More Variables and Printing](http://learnpythonthehardway.org/book/ex5.html)
 
 {% include series.html %}
