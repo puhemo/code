@@ -160,8 +160,34 @@ Holy Grail.
 
 ### Encoding comment
 
+Python will default to ASCII as standard encoding if no other encoding hints are given.
+
+To define a source code encoding, a magic comment must be placed into the source files either as first or second line in the file.
+
+such as:
+
 ```python
-    # -*- coding:utf-8 -*-
+# coding=<encoding name>
+```
+
+or (using formats recognized by popular editors)
+
+```python
+#!/usr/bin/python
+# -*- coding: <encoding name> -*-
+```
+
+or
+
+```python
+#!/usr/bin/python
+# vim: set fileencoding=<encoding name> :
+```
+
+#### Examples
+
+```python
+# -*- coding:utf-8 -*-
 ```
 
 ## Variable
