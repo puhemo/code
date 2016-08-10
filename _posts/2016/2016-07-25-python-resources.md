@@ -1,7 +1,7 @@
 ---
 title: "Python Useful Resources"
 date: 2016-07-25
-modified: 2016-07-25
+modified: 2016-08-10
 published: true
 categories:
   - Python
@@ -38,4 +38,5 @@ The following resources contain additional information on Python. Please use the
 3. [**Learn Python the Hard Way**](http://learnpythonthehardway.org/book/index.html): 练习册
 4. [Inventwithpython](http://inventwithpython.com/): 游戏设计
 5. [A Byte of Python](http://python.swaroopch.com/): For Python3
+6. [Python for Informatics: Exploring Information](http://www.pythonlearn.com/html-270/)
 
