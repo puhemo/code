@@ -19,7 +19,7 @@ series: "Intro to Python"
 
 ## Strings
 
-Strings are amongst the most popular types in Python. We can create them simply by enclosing characters in quotes. Python treats single quotes the same as double quotes. A string can contain letters, numbers, and symbols.
+Strings are amongst the most popular types in Python. We can create them simply by enclosing characters in quotes. Python treats `'` (single quotes) the same as `"` (double quotes). A string can contain letters, numbers, and symbols.
 
 ```python
 name = "Ryan"
@@ -185,6 +185,8 @@ The format operator, `%` allows us to construct strings, replacing parts of the 
 
 ### Example[^2]
 
+If you want multiple formats in your string to print multiple variables, you need to put them inside `( )` (parenthesis) separated by `,` (commas).
+
 ```python
 my_name = 'Zed A. Shaw'
 my_age = 35 # not a lie
@@ -235,11 +237,12 @@ this within the brackets [
 the variable assignment will also show up.
 ```
 
-## More Info:
+## More Info
 
 * [5.6.1. String Methods](https://docs.python.org/release/2.7.10/library/stdtypes.html#string-methods)
 * [Pythonlearn:resources-week06](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week06)
 * [Python Strings](http://www.tutorialspoint.com/python/python_strings.htm)
+* [Exercise 6: Strings and Text](http://learnpythonthehardway.org/book/ex6.html)
 
 [^1]: A function that is associated with an object and called using dot notation. 
 [^2]: [Exercise 5: More Variables and Printing](http://learnpythonthehardway.org/book/ex5.html)
