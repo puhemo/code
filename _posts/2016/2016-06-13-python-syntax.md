@@ -1,7 +1,7 @@
 ---
 title:  "Python Part 01: Syntax"
 date: 2016-06-13 20:00
-modified: 2016-07-21
+modified: 2016-08-10
 published: true
 categories: 
   - Python
@@ -602,6 +602,9 @@ Here are a few pointers on debugging.
    ```
 
 ## Referense
+
+[Exercise 0: The Setup](http://learnpythonthehardway.org/book/ex0.html#video)
+
 [Pythonlearn:resources-week01](https://share.coursera.org/wiki/index.php/Pythonlearn:resources-week01)
 
 [Scripting language](https://en.wikipedia.org/wiki/Scripting_language)
