@@ -162,7 +162,7 @@ Holy Grail.
 
 Python will default to ASCII as standard encoding if no other encoding hints are given.
 
-To define a source code encoding, a magic comment must be placed into the source files either as first or second line in the file.
+To define a source code encoding, a magic comment must be placed into the source files either as first or second line in the file.[^4]
 
 such as:
 
@@ -650,3 +650,5 @@ Here are a few pointers on debugging.
 [^2]: A scripting or script language is a programming language that supports scripts, programs written for a special run-time environment that automate the execution of tasks that could alternatively be executed one-by-one by a human operator. 
 
 [^3]: [Python Numbers](http://www.tutorialspoint.com/python/python_numbers.htm)
+
+[^4]: [PEP 263 -- Defining Python Source Code Encodings](https://www.python.org/dev/peps/pep-0263/)
