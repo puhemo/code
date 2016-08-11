@@ -697,7 +697,7 @@ saveImg2(dl, d)
 修复输入错误网址bug。
 
 ```python
-# 3.0.1
+# 3.1.1
 # python 2.x
 # encoding: utf-8
 import urllib2
@@ -772,6 +772,85 @@ if len(d) < 1:
 saveImg2(dl, d)
 ````
 
+### 3.1.2
+
+修复部分图片网址未加密链接问题
+
+```python
+# 3.1.2
+# python 2.x
+# encoding: utf-8
+import urllib2
+from BeautifulSoup import *
+import re
+import os
+
+# 新建文件保存目录
+def Img_path(i_name):
+    path = os.getcwd() 
+    image_path = '%s/%s/' %(path, i_name)
+    if not os.path.exists(image_path):
+        os.mkdir(image_path)
+    else:
+        print image_path + ' exits!' 
+    return image_path
+
+# 保存单个图片
+def saveImg(img_URL,img_name,img_path):
+    req = urllib2.Request(img_URL, headers = {
+        'Connection': 'Keep-Alive',
+        'Accept': 'text/html, application/xhtml+xml, */*',
+        'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
+    }) #伪装浏览器
+    oper = urllib2.urlopen(req)
+    data = oper.read()
+    fname = '%s%s.jpg'%(img_path,img_name)
+    f = open(fname, 'wb')
+    f.write(data)
+    f.close()
+
+# 批量保存图片
+def saveImg2(l, f):
+    n = 0
+    for u in l:
+        n = n + 1
+        saveImg(u, str(n), Img_path(f))
+
+url = raw_input('Enter - ')
+
+try:
+    html = urllib2.urlopen(url).read()
+except:
+	print 'Please enter a url!'
+	quit()
+
+html = html.decode('gbk', 'ignore').encode('utf-8')
+soup = BeautifulSoup(html)
+img_url = soup.findAll("div", {"class" : "mod-detail-description mod-info mod"})
+
+try:
+    detail_url = re.findall('(https.*?)",', str(img_url[0]))[0]
+except:
+    print 'Please enter the right product url'
+    quit()
+
+detail_html = urllib2.urlopen(detail_url).read()
+detail_html = detail_html.decode('gbk', 'ignore').encode('utf-8')
+detail_img = re.findall('src.*?(http.*?jpg)', detail_html)
+
+dl = list()
+for img in detail_img:
+    if 'x' not in img:
+        #print img
+        dl.append(img)
+
+d = raw_input('Enter detail filename: ')
+if len(d) < 1:
+    d = 'detail'
+
+saveImg2(dl, d)
+````
 
 ### 3.2 
 
@@ -809,7 +888,7 @@ def d_findImg(t3):
     detail_url = re.findall('(https.*?)",', str(img_url[0]))[0]
     detail_html = urllib2.urlopen(detail_url).read()
     detail_html = detail_html.decode('gbk', 'ignore').encode('utf-8')
-    detail_img = re.findall('src.*?(https.*?jpg)', detail_html)
+    detail_img = re.findall('src.*?(http.*?jpg)', detail_html)
     dl = list()
     for img in detail_img:
         if 'x' not in img:
