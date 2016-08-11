@@ -1,7 +1,7 @@
 ---
 title: "Python Spider test01"
 date: 2016-07-24
-modified: 2016-08-05
+modified: 2016-08-11
 published: true
 categories:
   - Python
@@ -732,3 +732,5 @@ saveImg(url)
 [python字符串decode中遇到非法字符的问题](http://www.cnblogs.com/baiyuyang/archive/2011/10/29/2228667.html)
 
 [remove None value from a list without removing the 0 value](http://stackoverflow.com/questions/16096754/remove-none-value-from-a-list-without-removing-the-0-value)
+
+[get div from HTML with Python](http://stackoverflow.com/questions/20975400/get-div-from-html-with-python)
