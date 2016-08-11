@@ -841,7 +841,7 @@ detail_img = re.findall('src.*?(http.*?jpg)', detail_html)
 
 dl = list()
 for img in detail_img:
-    if 'x' not in img:
+    if '0x' not in img: # 排除关联营销图片
         #print img
         dl.append(img)
 
@@ -891,7 +891,7 @@ def d_findImg(t3):
     detail_img = re.findall('src.*?(http.*?jpg)', detail_html)
     dl = list()
     for img in detail_img:
-        if 'x' not in img:
+        if '0x' not in img:
             dl.append(img)
     return dl
 
