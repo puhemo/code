@@ -765,7 +765,7 @@ for img in detail_img:
         #print img
         dl.append(img)
 
-d = raw_input('Enter main filename: ')
+d = raw_input('Enter detail filename: ')
 if len(d) < 1:
     d = 'detail'
 
