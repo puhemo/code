@@ -77,7 +77,7 @@ def saveImg(imageURL, name):
             
 url = raw_input('Enter - ')
 if len(url) < 1:
-	url = 'https://item.taobao.com/item.htm?id=523172528872'
+	url = 'https://item.taobao.com/item.htm?id=??????'
 print 'URL:', url
 html = urllib2.urlopen(url).read()
 html = html.decode('gbk', 'ignore').encode('utf-8')
@@ -137,7 +137,7 @@ def saveImg(imageURL, name):
             
 url = raw_input('Enter - ')
 if len(url) < 1:
-	url = 'https://item.taobao.com/item.htm?id=523172528872'
+	url = 'https://item.taobao.com/item.htm?id=??????'
 print 'URL:', url
 html = urllib2.urlopen(url).read()
 html = html.decode('gbk', 'ignore').encode('utf-8')
@@ -231,7 +231,7 @@ def saveImg(imageURL, name):
 
 url = raw_input('Enter - ')
 if len(url) < 1:
-	url = 'https://item.taobao.com/item.htm?id=534076017689&ns=1&abbucket=14#detail'
+	url = 'https://item.taobao.com/item.htm?id=?????&ns=1&abbucket=14#detail'
 print 'URL:', url
 html = urllib2.urlopen(url).read()
 soup = BeautifulSoup(html)
@@ -304,7 +304,7 @@ def saveImg(img_URL,img_name,img_path):
 
 url = raw_input('Enter - ')
 if len(url) < 1:
-    url = 'https://item.taobao.com/item.htm?id=534076017689&ns=1&abbucket=14#detail'
+    url = 'https://item.taobao.com/item.htm?id=??????&ns=1&abbucket=14#detail'
 print 'URL:', url
 html = urllib2.urlopen(url).read()
 html = html.decode('gbk', 'ignore').encode('utf-8') # 转码
@@ -405,7 +405,7 @@ def saveImg2(l, f):
 
 url = raw_input('Enter - ')
 if len(url) < 1:
-    url = 'https://item.taobao.com/item.htm?id=534076017689&ns=1&abbucket=14#detail'
+    url = 'https://item.taobao.com/item.htm?id=???????&ns=1&abbucket=14#detail'
 print 'URL:', url
 html = urllib2.urlopen(url).read()
 html = html.decode('gbk', 'ignore').encode('utf-8') # 转码
@@ -502,7 +502,7 @@ def saveImg2(l, f):
 
 url = raw_input('Enter - ')
 if len(url) < 1:
-    url = 'https://item.taobao.com/item.htm?id=534076017689&ns=1&abbucket=14#detail'
+    url = 'https://item.taobao.com/item.htm?id=???????&ns=1&abbucket=14#detail'
 print 'URL:', url
 html = urllib2.urlopen(url).read()
 html = html.decode('gbk', 'ignore').encode('utf-8') # 转码
@@ -594,7 +594,7 @@ def saveImg2(l, f):
 
 url = raw_input('Enter - ')
 if len(url) < 1:
-    url = 'https://detail.1688.com/offer/532796658993.html'
+    url = 'https://detail.1688.com/offer/????????.html'
 print 'URL:', url
 html = urllib2.urlopen(url).read()
 html = html.decode('gbk', 'ignore').encode('utf-8') # 转码
@@ -668,7 +668,7 @@ def saveImg2(l, f):
 
 url = raw_input('Enter - ')
 if len(url) < 1:
-    url = 'https://detail.1688.com/offer/536153152407.html'
+    url = 'https://detail.1688.com/offer/????????.html'
 html = urllib2.urlopen(url).read()
 html = html.decode('gbk', 'ignore').encode('utf-8')
 soup = BeautifulSoup(html)
@@ -769,7 +769,7 @@ def saveImg2(l, f):
 
 url = raw_input('Enter - ')
 if len(url) < 1:
-    url = 'https://detail.1688.com/offer/532796658993.html'
+    url = 'https://detail.1688.com/offer/??????????.html'
 print 'URL:', url
 html = urllib2.urlopen(url).read()
 html = html.decode('gbk', 'ignore').encode('utf-8') # 转码
