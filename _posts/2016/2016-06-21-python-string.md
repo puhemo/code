@@ -1,7 +1,7 @@
 ---
 title: "Python Part 02: String"
 date: 2016-06-14 09:00
-modified: 2016-08-10
+modified: 2016-08-13
 categories:
   - Python
 tags:
@@ -66,6 +66,8 @@ This code breaks because Python thinks the apostrophe in `'There's'` ends the st
 ```python
 'There\'s a snake in my boot!'
 ```
+
+This `\` (backslash) character encodes difficult-to-type characters into a string. There are various "escape sequences" available for different characters you might want to use. 
 
 Following table is a list of escape or non-printable characters that can be represented with backslash notation.
 
