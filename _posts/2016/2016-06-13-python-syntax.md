@@ -1,7 +1,7 @@
 ---
 title:  "Python Part 01: Syntax"
 date: 2016-06-13 20:00
-modified: 2016-08-10
+modified: 2016-08-14
 published: true
 categories: 
   - Python
