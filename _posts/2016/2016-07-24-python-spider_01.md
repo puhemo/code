@@ -554,7 +554,6 @@ def m_findImg(t1):
         im = str(m_img[0])
         if 'img' in im:
             m_url = 'https:'+ re.findall('(//.*?)_50', im)[0]
-            print "\nGET M >>> " + m_url
             return m_url
 
 # 获取颜色图链接
@@ -564,7 +563,6 @@ def c_findImg(t2):
         links = re.findall('(//.*?jpg?)', c_img)
         if len(links) > 0:
             c_url = 'https:'+ links[0]
-            print "\nGET C >>> " + c_url
             return c_url
 
 # 新建文件保存目录
@@ -595,11 +593,12 @@ def saveImg2(l, f):
     n = 0
     for u in l:
         n = n + 1
+        print "\nGET %s %d >>> " % (f, n) + u
         saveImg(u, str(n), Img_path(f))
 
 url = raw_input('Enter Taobao Url - ')
 if len(url) < 1:
-    url = 'https://item.taobao.com/item.htm?spm=a230r.1.14.189.5VUFvX&id=535740173765&ns=1&abbucket=18#detail'
+    url = 'https://item.taobao.com/item.htm?xxxxxxxxxxxxx'
 print 'URL:', url
 m = raw_input('Enter main directory: ')
 if len(m) < 1:
