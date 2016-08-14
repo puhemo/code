@@ -1,7 +1,7 @@
 ---
 title: "Python Part 06: File Input/Output"
 date: 2016-06-21 10:00
-modified: 2016-08-08
+modified: 2016-08-14
 categories:
   - Python
 tags:
