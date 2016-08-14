@@ -635,7 +635,7 @@ Here are a few pointers on debugging.
 
 ## pydoc - Online help system
 
-The built-in function [help()](https://docs.python.org/2/library/functions.html#help) invokes the online help system in the interactive interpreter, which uses `**pydoc**`[^5] to generate its documentation as text on the console. The same text documentation can also be viewed from outside the Python interpreter by running pydoc as a script at the operating system’s command prompt.  For example, running
+The built-in function [help()](https://docs.python.org/2/library/functions.html#help) invokes the online help system in the interactive interpreter, which uses `pydoc`[^5] to generate its documentation as text on the console. The same text documentation can also be viewed from outside the Python interpreter by running pydoc as a script at the operating system’s command prompt.  For example, running
 
 ```
 pydoc raw_input
