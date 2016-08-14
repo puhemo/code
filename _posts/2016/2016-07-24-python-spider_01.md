@@ -530,6 +530,104 @@ saveImg2(n_ml, m)
 saveImg2(n_cl, c)
 ```
 
+### 2.0.3
+
+优化细节
+
+```python
+# 2.0.3
+# python 2.x
+# encoding: utf-8
+import urllib2
+import re
+import os
+from BeautifulSoup import *
+
+print """
+        Taobao Item Image Spider
+"""
+
+# 获取主图链接
+def m_findImg(t1):
+    m_img = t1.contents
+    if len(m_img) > 0:
+        im = str(m_img[0])
+        if 'img' in im:
+            m_url = 'https:'+ re.findall('(//.*?)_50', im)[0]
+            print "\nGET M >>> " + m_url
+            return m_url
+
+# 获取颜色图链接
+def c_findImg(t2):
+    c_img = t2.get('style', None)
+    if c_img != None :
+        links = re.findall('(//.*?jpg?)', c_img)
+        if len(links) > 0:
+            c_url = 'https:'+ links[0]
+            print "\nGET C >>> " + c_url
+            return c_url
+
+# 新建文件保存目录
+def Img_path(i_name):
+    path = os.getcwd() 
+    image_path = '%s/%s/' %(path, i_name)
+    if not os.path.exists(image_path):
+        os.mkdir(image_path)
+    return image_path
+
+# 保存单个图片
+def saveImg(img_URL,img_name,img_path):
+    req = urllib2.Request(img_URL, headers = {
+        'Connection': 'Keep-Alive',
+        'Accept': 'text/html, application/xhtml+xml, */*',
+        'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
+    }) #伪装浏览器
+    oper = urllib2.urlopen(req)
+    data = oper.read()
+    fname = '%s%s.jpg'%(img_path,img_name)
+    f = open(fname, 'wb')
+    f.write(data)
+    f.close()
+
+# 批量保存图片
+def saveImg2(l, f):
+    n = 0
+    for u in l:
+        n = n + 1
+        saveImg(u, str(n), Img_path(f))
+
+url = raw_input('Enter Taobao Url - ')
+if len(url) < 1:
+    url = 'https://item.taobao.com/item.htm?spm=a230r.1.14.189.5VUFvX&id=535740173765&ns=1&abbucket=18#detail'
+print 'URL:', url
+m = raw_input('Enter main directory: ')
+if len(m) < 1:
+    m = 'main'
+c = raw_input('Enter color directory: ')
+if len(c) < 1:
+    c = 'color'
+
+html = urllib2.urlopen(url).read()
+html = html.decode('gbk', 'ignore').encode('utf-8') # 转码
+soup = BeautifulSoup(html)
+
+ml = list()
+cl = list()
+tags = soup('a')
+for tag in tags:
+    ml.append(m_findImg(tag))
+    cl.append(c_findImg(tag))
+
+n_ml = [x for x in ml if x is not None]
+n_cl = [x for x in cl if x is not None]
+
+saveImg2(n_ml, m)
+saveImg2(n_cl, c)
+
+print u"\nHi~Finished~~~"
+```
+
 ## 3.0
 
 爬取阿里主图和颜色图
