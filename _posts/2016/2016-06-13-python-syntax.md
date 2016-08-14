@@ -633,6 +633,19 @@ Here are a few pointers on debugging.
    # all of these variations of olive are separate variables.
    ```
 
+## pydoc - Online help system
+
+The built-in function [help()](https://docs.python.org/2/library/functions.html#help) invokes the online help system in the interactive interpreter, which uses `**pydoc**`[^5] to generate its documentation as text on the console. The same text documentation can also be viewed from outside the Python interpreter by running pydoc as a script at the operating system’s command prompt.  For example, running
+
+```
+pydoc raw_input
+```
+
+```powershell
+# windows
+python -m pydoc raw_input
+```
+
 ## Referense
 
 [Exercise 0: The Setup](http://learnpythonthehardway.org/book/ex0.html#video)
@@ -652,3 +665,5 @@ Here are a few pointers on debugging.
 [^3]: [Python Numbers](http://www.tutorialspoint.com/python/python_numbers.htm)
 
 [^4]: [PEP 263 -- Defining Python Source Code Encodings](https://www.python.org/dev/peps/pep-0263/)
+
+[^5]: [The `pydoc` module automatically generates documentation from Python modules. The documentation can be presented as pages of text on the console, served to a Web browser, or saved to HTML files.](https://docs.python.org/2/library/pydoc.html)
