@@ -443,8 +443,8 @@ saveImg2(cl, c)
 
 ```python
 # 2.0.2
-# python 2.x
 # encoding: utf-8
+# python 2.x
 import urllib2
 import re
 import os
@@ -536,8 +536,8 @@ saveImg2(n_cl, c)
 
 ```python
 # 2.0.3
-# python 2.x
 # encoding: utf-8
+# python 2.x
 import urllib2
 import re
 import os
@@ -724,8 +724,8 @@ saveImg2(n_cl, c)
 
 ```python
 # 3.1
-# python 2.x
 # encoding: utf-8
+# python 2.x
 import urllib2
 from BeautifulSoup import *
 import re
@@ -795,8 +795,8 @@ saveImg2(dl, d)
 
 ```python
 # 3.1.1
-# python 2.x
 # encoding: utf-8
+# python 2.x
 import urllib2
 from BeautifulSoup import *
 import re
@@ -875,8 +875,8 @@ saveImg2(dl, d)
 
 ```python
 # 3.1.2
-# python 2.x
 # encoding: utf-8
+# python 2.x
 import urllib2
 from BeautifulSoup import *
 import re
@@ -1064,8 +1064,8 @@ saveImg2(d_findImg(soup), d)
 
 ```python
 # 3.2.1
-# python 2.x
 # encoding: utf-8
+# python 2.x
 import urllib2
 import re
 import os
