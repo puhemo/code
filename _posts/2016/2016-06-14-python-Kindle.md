@@ -583,6 +583,61 @@ while True:
     book_note.close()
 ```
 
+### 2.0.7
+
+```python
+# -*- coding:utf-8 -*-
+# 2.0.7
+# python 2.x
+import os
+import os.path
+from sys import argv
+
+print """
+        Kindle Clippings Export
+"""
+print '''
+input_file = 'X:\documents\My Clippings.txt' in WINDOWNS\n
+input_file = '/Volumes/Kindle/documents/My Clippings.txt' in MAC
+'''
+script, input_file = argv
+
+try:  
+   f=open(input_file,'r+') 
+except:  
+   print 'Please enter the right file path!'
+   quit() 
+
+path = os.getcwd() 
+digest = raw_input('Enter the folder name: ')
+if len(digest) < 1:
+	digest = 'digest'
+digest_path=os.path.join(path, digest)
+if os.path.exists(digest_path):
+	print digest_path + ' exits!'
+else:
+	os.mkdir(digest_path)  
+
+while True:
+    onenote=[]
+    for i in range(0,5):
+        line=f.readline()
+        if not line:
+            exit()
+        onenote.append(line)
+ 
+    name = onenote[0].strip('\n').replace(':','-') # 替换文件名不支持符号
+    fname = os.path.join(digest_path,name + '.txt')
+    # 修复中文名乱码
+    book_note=open(fname.decode('utf-8'),'a+')
+    # 删除空白笔记
+    if len(onenote[3]) > 1:
+        book_note.write(onenote[3]+'\n') 
+    book_note.close()
+
+print u"\nHi~Finished~~~"
+```
+
 ## 2.1
 
 输出笔记和标记位置和时间
