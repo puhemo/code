@@ -1,7 +1,7 @@
 ---
 title: "Python Part 05: Functions and Modules"
 date: 2016-06-16
-modified: 2016-07-22
+modified: 2016-08-15
 categories:
   - Python
 tags:
@@ -89,6 +89,8 @@ def product(num1, num2):
 ```
 
 A function can require as many parameters as you'd like, but when you call the function, you should generally pass in a matching number of arguments.
+
+> Remember that inside the function the variable is temporary. When you return it then it can be assigned to a variable for later. 
 
 ###  Returns
 
