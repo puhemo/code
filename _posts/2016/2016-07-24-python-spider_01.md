@@ -627,6 +627,76 @@ saveImg2(n_cl, c)
 print u"\nHi~Finished~~~"
 ```
 
+### 2.0.4 
+
+优化代码
+
+```python
+# encoding: utf-8
+# python 2.x
+#2.0.4
+import urllib2
+import re
+import os
+
+print """
+        Taobao Item Image Spider
+"""
+
+# 新建文件保存目录
+def Img_path(i_name):
+    path = os.getcwd() 
+    image_path = '%s/%s/' %(path, i_name)
+    if not os.path.exists(image_path):
+        os.mkdir(image_path)
+    return image_path
+
+# 保存单个图片
+def saveImg(img_URL,img_name,img_path):
+    req = urllib2.Request(img_URL, headers = {
+        'Connection': 'Keep-Alive',
+        'Accept': 'text/html, application/xhtml+xml, */*',
+        'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
+    }) #伪装浏览器
+    oper = urllib2.urlopen(req)
+    data = oper.read()
+    fname = '%s%s.jpg'%(img_path,img_name)
+    f = open(fname, 'wb')
+    f.write(data)
+    f.close()
+
+# 批量保存图片
+def saveImg2(l, f):
+    n = 0
+    for u in l:
+        n = n + 1
+        u = 'https:' + u
+        print "\nGET %s %d >>> " % (f, n) + u
+        saveImg(u, str(n), Img_path(f))
+
+url = raw_input('Enter Taobao Url - ')
+if len(url) < 1:
+    url = 'https://item.taobao.com/item.htm?spm=a230r.1.14.163.zx416O&id=534076017689&ns=1&abbucket=18#detail'
+print 'URL:', url
+m = raw_input('Enter main directory: ')
+if len(m) < 1:
+    m = 'main'
+c = raw_input('Enter color directory: ')
+if len(c) < 1:
+    c = 'color'
+
+html = urllib2.urlopen(url).read()
+html = html.decode('gbk', 'ignore').encode('utf-8') # 转码
+m_url = re.findall('(//.*?)_50', html)
+c_url = re.findall('(//.*?jpg?)_30x30', html)
+saveImg2(m_url, m)
+saveImg2(c_url, c)
+
+print u"\nHi~Finished~~~"
+
+```
+
 ## 3.0
 
 爬取阿里主图和颜色图
