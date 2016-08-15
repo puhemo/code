@@ -712,7 +712,7 @@ print """
 """
 
 # 保存单个图片
-def saveImg(img_URL,img_folder):
+def saveImg(img_URL,img_name, img_folder):
     req = urllib2.Request(img_URL, headers = {
         'Connection': 'Keep-Alive',
         'Accept': 'text/html, application/xhtml+xml, */*',
@@ -724,8 +724,8 @@ def saveImg(img_URL,img_folder):
     path = os.getcwd() 
     img_path = '%s/%s/' %(path, img_folder)
     if not os.path.exists(img_path):
-        os.mkdir(image_path)
-    fname = '%s%s.jpg'%(img_path,img_folder)
+        os.mkdir(img_path)
+    fname = '%s%s.jpg'%(img_path,img_name)
     f = open(fname, 'wb')
     f.write(data)
     f.close()
@@ -737,7 +737,7 @@ def saveImg2(url_list, folder):
         n = n + 1
         link = 'https:' + link
         print "\nGET %s %d >>> " % (folder, n) + link
-        saveImg(link, str(n))
+        saveImg(link, str(n), folder)
 
 url = raw_input('Enter Taobao Url - ')
 if len(url) < 1:
@@ -752,7 +752,6 @@ if len(c) < 1:
 
 html = urllib2.urlopen(url).read()
 html = html.decode('gbk', 'ignore').encode('utf-8') # 转码
-
 m_url = re.findall('(//.*?)_50', html)
 c_url = re.findall('(//.*?jpg?)_30x30', html)
 
