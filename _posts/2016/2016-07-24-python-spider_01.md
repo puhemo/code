@@ -677,7 +677,7 @@ def saveImg2(l, f):
 
 url = raw_input('Enter Taobao Url - ')
 if len(url) < 1:
-    url = 'https://item.taobao.com/item.htm?spm=a230r.1.14.163.zx416O&id=534076017689&ns=1&abbucket=18#detail'
+    url = 'https://item.taobao.com/item.htm????????'
 print 'URL:', url
 m = raw_input('Enter main directory: ')
 if len(m) < 1:
@@ -741,7 +741,7 @@ def saveImg2(url_list, folder):
 
 url = raw_input('Enter Taobao Url - ')
 if len(url) < 1:
-    url = 'https://item.taobao.com/item.htm?spm=a230r.1.14.163.zx416O&id=534076017689&ns=1&abbucket=18#detail'
+    url = 'https://item.taobao.com/item.htm??????????'
 print 'URL:', url
 m = raw_input('Enter main directory: ')
 if len(m) < 1:
