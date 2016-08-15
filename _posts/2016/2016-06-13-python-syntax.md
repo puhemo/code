@@ -123,6 +123,35 @@ days = ['Monday', 'Tuesday', 'Wednesday',
         'Thursday', 'Friday']
 ```
 
+### User Input--`argv`
+
+The `argv` is the "**argument variable**," a very standard name in programming, that you will find used in many other languages.  This variable *holds* the arguments you pass to your Python script when you run it.
+
+```python
+from sys import argv
+
+script, first, second, third = argv
+
+print "The script is called:", script
+print "Your first variable is:", first
+print "Your second variable is:", second
+print "Your third variable is:", third
+```
+
+Run the program like this (and you **must** pass **three** command line arguments):
+
+```powershell
+$ python ex13.py first 2nd 3rd
+The script is called: ex13.py
+Your first variable is: first
+Your second variable is: 2nd
+Your third variable is: 3rd
+```
+
+You can actually replace `first`, `2nd`, and `3rd` with any three things you want.
+
+The difference between `argv` and `raw_input()` has to do with **where the user is required to give input**. If they give your script inputs on the command line, then you use `argv`.  If you want them to input using the keyboard while the script is running, then use `raw_input()`.
+
 ### Quotation in Python
 
 Python accepts single ('), double (") and triple (''' or """) quotes to denote string literals, as long as the same type of quote starts and ends the string.
@@ -657,6 +686,8 @@ python -m pydoc raw_input
 [Python Basic Syntax](http://www.tutorialspoint.com/python/python_basic_syntax.htm)
 
 [Python Basic Operators](http://www.tutorialspoint.com/python/python_basic_operators.htm)
+
+[Exercise 13: Parameters, Unpacking, Variables](http://learnpythonthehardway.org/book/ex13.html)
 
 [^1]: [Python Overview](http://www.tutorialspoint.com/python/python_overview.htm)
 
