@@ -365,13 +365,7 @@ During the I/O process, data is **buffered**: this means that it is held in a te
 
 Python doesn't **flush the buffer**—that is, write data to the file—until it's sure you're done writing. One way to do this is to close the file. If you write to a file without closing, the data won't make it to the target file.
 
-## Renaming and Deleting Files
-
-Python **os** module provides methods that help you perform file-processing operations, such as renaming and deleting files.
-
-To use this module you need to import it first and then you can call any related functions.
-
-#### Example 2[^10]
+###  Copy one file to another[^10]
 
 ```python
 from sys import argv
@@ -399,6 +393,12 @@ print "Alright, all done."
 out_file.close()
 in_file.close()
 ```
+
+## Renaming and Deleting Files
+
+Python **os** module provides methods that help you perform file-processing operations, such as renaming and deleting files.
+
+To use this module you need to import it first and then you can call any related functions.
 
 ### The `rename()` Method
 
