@@ -214,7 +214,7 @@ fileObject.read([count]);
 
 Here, passed parameter is the number of bytes to be read from the opened file. This method starts reading from the beginning of the file and if *count* is missing, then it tries to read as much as possible, maybe until the end of file.[^6]
 
-#### Example
+#### Example 
 
 ```python
 fhand =  open("words.txt")
@@ -370,6 +370,35 @@ Python doesn't **flush the buffer**—that is, write data to the file—until it
 Python **os** module provides methods that help you perform file-processing operations, such as renaming and deleting files.
 
 To use this module you need to import it first and then you can call any related functions.
+
+#### Example 2[^10]
+
+```python
+from sys import argv
+from os.path import exists
+
+script, from_file, to_file = argv
+
+print "Copying from %s to %s" % (from_file, to_file)
+
+# we could do these two on one line, how?
+in_file = open(from_file)
+indata = in_file.read()
+
+print "The input file is %d bytes long" % len(indata)
+
+print "Does the output file exist? %r" % exists(to_file)
+print "Ready, hit RETURN to continue, CTRL-C to abort."
+raw_input()
+
+out_file = open(to_file, 'w')
+out_file.write(indata)
+
+print "Alright, all done."
+
+out_file.close()
+in_file.close()
+```
 
 ### The `rename()` Method
 
@@ -569,6 +598,7 @@ os.rmdir( "/tmp/test"  )
 [^7]: [字符编码](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001386820066616a77f826d876b46b9ac34cb5f34374f7a000)
 [^8]: [操作文件和目录](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/0013868321590543ff305fb9f9949f08d760883cc243812000)
 [^9]: 这些合并、拆分路径的函数并不要求目录和文件要真实存在，它们只对字符串进行操作。
+[^10]: [Exercise 17: More Files](http://learnpythonthehardway.org/book/ex17.html)
 
 ## Reference:
 
