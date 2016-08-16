@@ -1504,3 +1504,11 @@ saveImg(url)
 [remove None value from a list without removing the 0 value](http://stackoverflow.com/questions/16096754/remove-none-value-from-a-list-without-removing-the-0-value)
 
 [get div from HTML with Python](http://stackoverflow.com/questions/20975400/get-div-from-html-with-python)
+
+[Python:PIL库处理网络图片利用StringIO避免中途写入文件到硬盘](http://www.polarxiong.com/archives/python-pil-stringio.html)
+
+[Python读取网络图片](http://liulixiang1988.github.io/pythondu-qu-wang-luo-tu-pian.html)
+
+[Python图像处理库：PIL中Image,ImageDraw等基本模块介绍](http://www.cnblogs.com/wei-li/archive/2012/04/19/2456725.html)
+
+[PIL 简明教程 - 基本用法 ](http://liam0205.me/2015/04/22/pil-tutorial-basic-usage/)
