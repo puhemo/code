@@ -999,7 +999,7 @@ if len(d) < 1:
 saveImg2(dl, d)
 ```
 
-### 3.1.1
+#### 3.1.1
 
 修复输入错误网址bug。
 
@@ -1079,7 +1079,7 @@ if len(d) < 1:
 saveImg2(dl, d)
 ````
 
-### 3.1.2
+#### 3.1.2
 
 修复未加密图片网址链接问题
 
@@ -1268,7 +1268,7 @@ saveImg2(n_cl, c)
 saveImg2(d_findImg(soup), d)
 ```
 
-### 3.2.1
+#### **3.2.1**
 
 修复re匹配bug
 
@@ -1378,7 +1378,7 @@ saveImg2(n_cl, c)
 saveImg2(d_findImg(soup), d)
 ```
 
-### 3.2.2
+#### 3.2.2
 
 优化代码
 
