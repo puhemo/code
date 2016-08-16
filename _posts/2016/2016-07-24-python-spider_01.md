@@ -1389,6 +1389,10 @@ import urllib2
 import re
 import os
 
+print """
+        1688 Item Image Spider
+"""
+
 # 获取链接
 def find_url(item_url, img_re):
     html = urllib2.urlopen(item_url).read()
