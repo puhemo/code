@@ -1,7 +1,7 @@
 ---
 title: "Python导出Kindle笔记"
 date: 2016-06-14
-modified: 2016-08-09
+modified: 2016-08-17
 categories:
   - Python
 tags:
@@ -583,7 +583,7 @@ while True:
     book_note.close()
 ```
 
-### 2.0.7
+### **2.0.7**
 
 ```python
 # -*- coding:utf-8 -*-
@@ -628,6 +628,53 @@ while True:
  
     name = onenote[0].strip('\n').replace(':','-') # 替换文件名不支持符号
     fname = os.path.join(digest_path,name + '.txt')
+    # 修复中文名乱码
+    book_note = open(fname.decode('utf-8'),'a+')
+    # 删除空白笔记
+    if len(onenote[3]) > 1:
+        book_note.write(onenote[3]+'\n') 
+    book_note.close()
+
+print u"\nHi~Finished~~~"
+```
+
+### 2.0.8
+
+```python
+# -*- coding:utf-8 -*-
+# python 2.x
+import os
+import os.path
+from sys import argv
+
+print """
+        Kindle Clippings Export
+"""
+print '''
+input_file = 'X:\documents\My Clippings.txt' in WINDOWNS\n
+input_file = '/Volumes/Kindle/documents/My Clippings.txt' in MAC
+'''
+script, input_file = argv
+
+try:  
+   f = open(input_file,'r+') 
+except:  
+   print 'Please enter the right file path!'
+   quit() 
+
+if not os.path.exists("./digest/"):
+    os.mkdir("./digest/")
+
+while True:
+    onenote = []
+    for i in range(0,5):
+        line = f.readline()
+        if not line:
+            exit()
+        onenote.append(line)
+
+    name = onenote[0].strip('\n').replace(':','-') # 替换文件名不支持符号
+    fname = os.path.join("./digest/", name + '.txt')
     # 修复中文名乱码
     book_note = open(fname.decode('utf-8'),'a+')
     # 删除空白笔记
