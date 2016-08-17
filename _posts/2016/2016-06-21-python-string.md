@@ -194,6 +194,21 @@ seq = ("a", "b", "c"); # This is sequence of strings.
 print s.join( seq )
 ```
 
+### isdigit() 
+
+The method `isdigit()` checks whether the string consists of digits only.
+
+```python
+str.isdigit()
+```
+
+This method returns true if all characters in the string are digits and there is at least one character, false otherwise
+
+```python
+offset = raw_input("Please input the number(Default 500)\n")
+offset = int(offset if offset.isdigit() and offset > 0 else 500)
+```
+
 ## Format operator
 
 One of Python's coolest features is the string format operator `%`. This operator is unique to strings and makes up for the pack of having functions from C's printf() family. Following is a simple example −
