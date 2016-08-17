@@ -1378,7 +1378,7 @@ saveImg2(n_cl, c)
 saveImg2(d_findImg(soup), d)
 ```
 
-#### 3.2.2
+#### **3.2.2**
 
 优化代码
 
@@ -1410,6 +1410,100 @@ def saveImg(img_URL,img_name, img_folder):
     }) #伪装浏览器
     oper = urllib2.urlopen(req)
     data = oper.read()
+    path = os.getcwd() 
+    img_path = '%s/%s/' %(path, img_folder)
+    if not os.path.exists(img_path):
+        os.mkdir(img_path)
+    fname = '%s%s.jpg'%(img_path,img_name)
+    f = open(fname, 'wb')
+    f.write(data)
+    f.close()
+
+# 批量保存图片
+def saveImg2(url_list, folder):
+    n = 0
+    for link in url_list:
+        n = n + 1
+        if 'jpg' not in link:
+            link += '.jpg'
+        print "\nGET %s %d >>> " % (folder, n) + link
+        saveImg(link, str(n), folder)
+
+url = raw_input('Enter 1688 Url - ')
+if len(url) < 1:
+    url = 'https://detail.1688.com/offer/44677887013.html?spm=0.0.0.0.PORris'
+print 'URL:', url
+m = raw_input('Enter main filename: ')
+if len(m) < 1:
+    m = 'main'
+c = raw_input('Enter color filename: ')
+if len(c) < 1:
+    c = 'color'
+
+d = raw_input('Enter main filename: ')
+if len(d) < 1:
+    d = 'detail'
+
+m_re = '(https.*?).60x60'
+c_re = 'imageUrl.*?(https.*?)\",\"name'
+d_re = 'data-tfs-url="(https.*?)" data'
+d_img_re = 'img alt.*? src.*?(//.*?jpg)'
+
+m_url = [m_img_url for m_img_url in find_url(url, m_re) if  'data-lazy-src' not in m_img_url]
+c_url = find_url(url, c_re)
+
+d_html = find_url(url, d_re)[0]
+dl = find_url(d_html, d_img_re)
+d_url = ['https:' + d_img_url for d_img_url in dl]
+
+saveImg2(m_url, m)
+saveImg2(c_url, c)
+saveImg2(d_url, d)
+
+print u"\nHi~Finished~~~"
+```
+
+#### 3.2.3
+
+图片大小筛选[^1]
+
+```python
+# python 2.x
+# encoding: utf-8
+import urllib2
+import re
+import os
+from PIL import Image
+import StringIO
+
+print """
+        1688 Item Image Spider
+"""
+
+# 获取链接
+def find_url(item_url, img_re):
+    html = urllib2.urlopen(item_url).read()
+    html = html.decode('gbk', 'ignore').encode('utf-8')
+    url = re.findall(img_re, html)
+    return url
+
+# 保存单个图片
+def saveImg(img_URL,img_name, img_folder):
+    req = urllib2.Request(img_URL, headers = {
+        'Connection': 'Keep-Alive',
+        'Accept': 'text/html, application/xhtml+xml, */*',
+        'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
+    }) #伪装浏览器
+    oper = urllib2.urlopen(req)
+    data = oper.read()
+    f = StringIO.StringIO(data)
+    im = Image.open(f)
+    ### 宽/高的像素小于300
+    if im.size[0] < 300 or im.size[1] < 300:
+        print "\nGET <<< USELESS IMG"
+        im.close()
+        return
     path = os.getcwd() 
     img_path = '%s/%s/' %(path, img_folder)
     if not os.path.exists(img_path):
@@ -1512,3 +1606,5 @@ saveImg(url)
 [Python图像处理库：PIL中Image,ImageDraw等基本模块介绍](http://www.cnblogs.com/wei-li/archive/2012/04/19/2456725.html)
 
 [PIL 简明教程 - 基本用法 ](http://liam0205.me/2015/04/22/pil-tutorial-basic-usage/)
+
+[^1]: [Python:PIL库处理网络图片利用StringIO避免中途写入文件到硬盘](http://www.polarxiong.com/archives/python-pil-stringio.html)
