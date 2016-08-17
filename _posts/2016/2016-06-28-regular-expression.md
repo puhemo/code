@@ -182,6 +182,7 @@ The output of the program would be:
 
 Regular expression literals may include an optional modifier to control various aspects of matching. The modifiers are specified as an optional flag. You can provide multiple modifiers using exclusive OR (|), as shown previously and may be represented by one of these −
 
+
 | Modifier | Description                              |
 | -------- | ---------------------------------------- |
 | re.I     | Performs case-insensitive matching.      |
