@@ -32,6 +32,8 @@ The following resources contain additional information on Python. Please use the
 - [Web Programming in Python](http://wiki.python.org/moin/WebProgramming) − This topic guide attempts to cover every aspect of programming Web applications (both clients and servers) using Python.
 - [Requests--快速上手](http://docs.python-requests.org/zh_CN/latest/user/quickstart.html)
 - [Requests--高级用法](http://docs.python-requests.org/zh_CN/latest/user/advanced.html)
+- [Python爬虫入门三之Urllib库的基本使用](http://cuiqingcai.com/947.html)
+- [Python爬虫入门四之Urllib库的高级用法](http://cuiqingcai.com/954.html)
 
 ## Useful Books
 
