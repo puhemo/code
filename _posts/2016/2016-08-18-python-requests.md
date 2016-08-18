@@ -7,6 +7,7 @@ categories:
   - Python
 tags:
   - Python
+  - Python Modules
 excerpt: |
     Requests allows you to send organic, grass-fed HTTP/1.1 requests, without the need for manual labor. There's no need to manually add query strings to your URLs, or to form-encode your POST data. Keep-alive and HTTP connection pooling are 100% automatic, powered by urllib3, which is embedded within Requests.
 ---
