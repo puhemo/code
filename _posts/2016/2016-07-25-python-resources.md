@@ -1,7 +1,7 @@
 ---
 title: "Python Useful Resources"
 date: 2016-07-25
-modified: 2016-08-10
+modified: 2016-08-18
 published: true
 categories:
   - Python
@@ -30,6 +30,8 @@ The following resources contain additional information on Python. Please use the
 - [Python爬虫入门一之综述](http://cuiqingcai.com/927.html)
 - [Python](http://www.tutorialspoint.com/python/index.htm): Tutorialspoint.com
 - [Web Programming in Python](http://wiki.python.org/moin/WebProgramming) − This topic guide attempts to cover every aspect of programming Web applications (both clients and servers) using Python.
+- [Requests--快速上手](http://docs.python-requests.org/zh_CN/latest/user/quickstart.html)
+- [Requests--高级用法](http://docs.python-requests.org/zh_CN/latest/user/advanced.html)
 
 ## Useful Books
 
