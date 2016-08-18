@@ -254,3 +254,5 @@ r = requests.get('https://github.com', timeout=None)
 [Requests–高级用法](http://docs.python-requests.org/zh_CN/latest/user/advanced.html) 
 
 [深入理解urllib、urllib2及requests](http://www.codefrom.com/paper/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3urllib%E3%80%81urllib2%E5%8F%8Arequests)
+
+[What are the differences between the urllib, urllib2, and requests module?](http://stackoverflow.com/questions/2018026/what-are-the-differences-between-the-urllib-urllib2-and-requests-module)
