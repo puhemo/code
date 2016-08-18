@@ -762,6 +762,79 @@ print u"\nHi~Finished~~~"
 
 ```
 
+### 2.0.6
+
+换用requests库[^2][^3][^4]
+
+```python
+# python 2.x
+# encoding: utf-8
+try:
+    import re
+    import os
+    import requests
+except Exception as error:
+    print "MISSING SOME MODULE(s)"
+    print (error)
+    os.system("pip install requests")
+    print "TRY TO INSTALL SOME MODs"
+    print "PLEASE UPGRADE PIP IF IT DOESN'T WORK "
+    print "Restart this Program!"
+    exit(-2)
+
+print """
+        Taobao Item Image Spider
+"""
+
+# 保存单个图片
+def saveImg(img_URL,img_name, img_folder):
+    req = requests.get(img_URL)
+    headers = {
+        'Connection': 'Keep-Alive',
+        'Accept': 'text/html, application/xhtml+xml, */*',
+        'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
+    }
+    req = requests.get(img_URL, headers = headers, timeout = 10)
+    data = req.content
+    path = os.getcwd() 
+    img_path = '%s/%s/' %(path, img_folder)
+    if not os.path.exists(img_path):
+        os.mkdir(img_path)
+    fname = '%s%s.jpg'%(img_path,img_name)
+    f = open(fname, 'wb')
+    f.write(data)
+    f.close()
+
+# 批量保存图片
+def saveImg2(url_list, folder):
+    n = 0
+    for link in url_list:
+        n = n + 1
+        link = 'https:' + link
+        print "\nGET %s %d >>> " % (folder, n) + link
+        saveImg(link, str(n), folder)
+
+url = raw_input('Enter Taobao Url - ')
+if len(url) < 1:
+    url = 'https://item.taobao.com/item.htm?spm=a230r.1.14.163.zx416O&id=534076017689&ns=1&abbucket=18#detail'
+print 'URL:', url
+m = raw_input('Enter main directory: ')
+if len(m) < 1:
+    m = 'main'
+c = raw_input('Enter color directory: ')
+if len(c) < 1:
+    c = 'color'
+
+html = requests.get(url).content
+m_url = re.findall('(//.*?)_50', html)
+c_url = re.findall('(//.*?jpg?)_30x30', html)
+saveImg2(m_url, m)
+saveImg2(c_url, c)
+
+print u"\nHi~Finished~~~"
+```
+
 ## 3.0
 
 爬取阿里主图和颜色图
@@ -1608,3 +1681,6 @@ saveImg(url)
 [TaobaoSearchImageBot/TSIB.py](https://github.com/hafrans/TaobaoSearchImageBot/blob/master/TSIB.py)
 
 [^1]: [Python:PIL库处理网络图片利用StringIO避免中途写入文件到硬盘](http://www.polarxiong.com/archives/python-pil-stringio.html)
+[^2]: [Python爬虫利器一之Requests库的用法](http://cuiqingcai.com/2556.html)
+[^3]: [Requests--快速上手](http://docs.python-requests.org/zh_CN/latest/user/quickstart.html)
+[^4]: [Requests--高级用法](http://docs.python-requests.org/zh_CN/latest/user/advanced.html)
