@@ -1733,6 +1733,111 @@ saveImg2(d_url, d)
 print u"\nHi~Finished~~~"
 ```
 
+#### 3.2.5
+
+```python
+# python 2.x
+# encoding: utf-8
+try:
+    import re
+    import os
+    from PIL import Image
+    import StringIO
+    import requests
+except Exception as error:
+    print "MISSING SOME MODULE(s)"
+    print (error)
+    os.system("pip install requests Image")
+    print "TRY TO INSTALL SOME MODs"
+    print "PLEASE UPGRADE PIP IF IT DOESN'T WORK "
+    print "Restart this Program!"
+    exit(-2)
+
+print """
+        1688 Item Image Spider
+"""
+
+# 获取链接
+def find_url(url, img_re):
+    html = requests.get(url).content
+    img_url_list = re.findall(img_re, html)
+    return img_url_list
+
+# 图片名
+def Img_name(folder, name):
+    img_path = './%s/' %(folder)
+    if not os.path.exists(img_path):
+        os.mkdir(img_path)
+    fname = '%s%s.jpg'%(img_path,name)
+    return fname
+
+# 保存单个图片
+def saveImg(img_url,name, folder):
+    req = requests.get(img_url)
+    headers = {
+        'Connection': 'Keep-Alive',
+        'Accept': 'text/html, application/xhtml+xml, */*',
+        'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
+    }
+    req = requests.get(img_url, headers = headers, timeout = 10)
+    data = req.content
+    f = StringIO.StringIO(data)
+    im = Image.open(f)
+    ### 宽/高的像素小于300
+    if im.size[0] < 300 or im.size[1] < 300:
+        print "\nGET <<< USELESS IMG"
+        im.close()
+        return
+    img = Img_name(folder, name)
+    f = open(img, 'wb')
+    f.write(data)
+    f.close()
+
+# 批量保存图片
+def saveImg2(url_list, folder):
+    n = 0
+    for link in url_list:
+        n = n + 1
+        if 'jpg' not in link:
+            link += '.jpg'
+        print "\nGET %s %d >>> " % (folder, n) + link
+        saveImg(link, str(n), folder)
+
+url = raw_input('Enter 1688 Url - ')
+if len(url) < 1:
+    url = 'https://detail.1688.com/offer/532666501125.html?spm=a2615.2177701.0.0.4BMixz'
+print 'URL:', url
+m = raw_input('Enter main folder name: ')
+if len(m) < 1:
+    m = 'main'
+c = raw_input('Enter color folder name: ')
+if len(c) < 1:
+    c = 'color'
+
+d = raw_input('Enter detail folder name: ')
+if len(d) < 1:
+    d = 'detail'
+
+m_re = '(https.*?).60x60'
+c_re = 'imageUrl.*?(https.*?)\",\"name'
+d_re = 'data-tfs-url="(https.*?)" data'
+d_img_re = 'img alt.*? src.*?(//.*?jpg)'
+
+m_url = [m_img_url for m_img_url in find_url(url, m_re) if  'data-lazy-src' not in m_img_url]
+c_url = find_url(url, c_re)
+
+d_html = find_url(url, d_re)[0]
+dl = find_url(d_html, d_img_re)
+d_url = ['https:' + d_img_url for d_img_url in dl]
+
+saveImg2(m_url, m)
+saveImg2(c_url, c)
+saveImg2(d_url, d)
+
+print u"\nHi~Finished~~~"
+```
+
 ## 伪装浏览器
 
 ```python
