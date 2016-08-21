@@ -1814,7 +1814,6 @@ if len(m) < 1:
 c = raw_input('Enter color folder name: ')
 if len(c) < 1:
     c = 'color'
-
 d = raw_input('Enter detail folder name: ')
 if len(d) < 1:
     d = 'detail'
