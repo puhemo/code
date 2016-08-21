@@ -137,6 +137,37 @@ for i in range(len(list)):
 
 ## List Methods[^1]
 
+### How method works[^4]
+
+When you write `mystuff.append('hello')` you are actually setting off a chain of events inside Python to cause something to happen to the `mystuff` list.  Here's how it works:
+
+1. Python sees you mentioned `mystuff` and looks up that variable.  It might have to look backward to see if you created with `=`, if it is a function argument, or if it's a global variable.  Either way it has to find the `mystuff` first.
+2. Once it finds `mystuff` it reads the `.` (period) operator and starts to look at *variables* that are a part of `mystuff`.  Since `mystuff` is a list, it knows that `mystuff` has a bunch of functions.
+3. It then hits `append` and compares the name to all the names that `mystuff` says it owns.  If `append` is in there (it is) then Python grabs *that* to use.
+4. Next Python sees the `(` (parenthesis) and realizes, "Oh hey, this should be a function." At this point it *calls* (runs, executes) the function just like normally, but instead it calls the function with an *extra* argument.
+5. That *extra* argument is ... `mystuff`!  I know, weird, right?  But that's how Python works so it's best to just remember it and assume that's the result.  What happens, at the end of all this, is a function call that looks like: `append(mystuff, 'hello')` instead of what you read which is `mystuff.append('hello')`.
+
+For the most part you do not have to know that this is going on, but it helps when you get error messages from Python like this:
+
+```python
+$ python
+Python 2.6.5 (r265:79063, Apr 16 2010, 13:57:41)
+[GCC 4.4.3] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> class Thing(object):
+...     def test(hi):
+...             print "hi"
+...
+>>> a = Thing()
+>>> a.test("hello")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: test() takes exactly 1 argument (2 given)
+>>>
+```
+
+What was all that?  Well, this is me typing into the Python shell and showing you some magic.  You haven't seen class yet but we'll get into that later.  For now you see how Python said `test()` takes exactly 1 argument (2 given).  If you see this it means that Python changed `a.test("hello")` to `test(a, "hello")` and that somewhere someone messed up and didn't add the argument for `a`.
+
 Methods: append, count, extend, index, insert, pop, remove, reverse, sort 
 
 > Most list methods are void; they modify the list and return None. If you accidentally write t = t.sort(), you will be disappointed with the result.
@@ -408,6 +439,6 @@ print evens_to_50
 [^1]: A method is a function that “belongs to” an object.
 [^2]: [Python’s range() Function Explained](http://pythoncentral.io/pythons-range-function-explained/)
 [^3]: A positive stride length traverses the list from left to right, and a negative one traverses the list from right to left.
-
+[^4]: [Exercise 38: Doing Things to Lists](https://learnpythonthehardway.org/book/ex38.html)
 
 {% include series.html %}
