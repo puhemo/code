@@ -1773,7 +1773,6 @@ def Img_name(folder, name):
 
 # 保存单个图片
 def saveImg(img_url,name, folder):
-    req = requests.get(img_url)
     headers = {
         'Connection': 'Keep-Alive',
         'Accept': 'text/html, application/xhtml+xml, */*',
