@@ -191,8 +191,14 @@ Methods: append, count, extend, index, insert, pop, remove, reverse, sort
   ['a', 'b', 'c', 'd', 'e']
   ```
 
-* `.pop()` - remove the item at index from the list and return it to you:
+* `.pop()` 
   
+  The method `pop()` removes and returns **last object or obj** from the list.
+
+  ```python
+  list.pop(obj=list[-1])
+  ```
+
   ```python
   n = [1, 3, 5]
   n.pop(1)
