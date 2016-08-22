@@ -2020,7 +2020,7 @@ for url in list:
     saveImg2(img_url_list, folder)
 ```
 
-## 4.1[^7][^8][^9][^10]
+## 4.1[^7][^8][^9][^10][^11]
 
 ```python
 try:
@@ -2083,7 +2083,7 @@ def to_csv(url, n):
                         'shopLink': shopLink_list,
                         'pic_url': pic_url_list}, index = range(1, 45))
 
-    df.to_csv('Page%d.csv' % n, encoding="gb2312")
+    df.to_csv('Page%d.csv' % n, encoding="gbk")
 
 list = list()
 
@@ -2169,3 +2169,4 @@ saveImg(url)
 [^8]: [pandas读写文件乱码问题](http://blog.sina.com.cn/s/blog_54b09dc90102vfms.html)
 [^9]: [3.2:pandas数据的导入与导出【CSV，JSON】](http://www.cnblogs.com/pengsixiong/p/5050833.html)
 [^10]: [Pandas之DataFrame操作 ](http://blog.csdn.net/u013045749/article/details/48370007)
+[^11]: [pandas怎样处理中文？](https://www.zhihu.com/question/22016184)
