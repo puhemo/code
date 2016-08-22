@@ -2020,7 +2020,7 @@ for url in list:
     saveImg2(img_url_list, folder)
 ```
 
-## 4.1
+## 4.1[^7][^8][^9][^10]
 
 ```python
 try:
@@ -2165,3 +2165,7 @@ saveImg(url)
 [^4]: [Requests--高级用法](http://docs.python-requests.org/zh_CN/latest/user/advanced.html)
 [^5]: [[Python爬虫] 中文编码问题：raw_input输入、文件读取、变量比较等str、unicode、utf-8转换问题](http://blog.csdn.net/eastmount/article/details/48841593)
 [^6]: [Python 2.7中使用raw_input输入中文时的编码转换](http://www.sijitao.net/2216.html)
+[^7]: [10 Minutes to pandas](http://pandas.pydata.org/pandas-docs/stable/10min.html)
+[^8]: [pandas读写文件乱码问题](http://blog.sina.com.cn/s/blog_54b09dc90102vfms.html)
+[^9]: [3.2:pandas数据的导入与导出【CSV，JSON】](http://www.cnblogs.com/pengsixiong/p/5050833.html)
+[^10]: [Pandas之DataFrame操作 ](http://blog.csdn.net/u013045749/article/details/48370007)
