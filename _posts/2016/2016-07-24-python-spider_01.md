@@ -1925,6 +1925,102 @@ for url in list:
     saveImg2(img_url_list, folder)
 ```
 
+### 4.0.1
+
+换用json
+
+```python
+# python 2.x
+# encoding: utf-8
+try:
+    import re
+    import os
+    import sys
+    import requests
+    import json
+    from datetime import datetime
+except Exception as error:
+    print "MISSING SOME MODULE(s)"
+    print (error)
+    os.system("pip install requests")
+    print "TRY TO INSTALL SOME MODs"
+    print "PLEASE UPGRADE PIP IF IT DOESN'T WORK "
+    print "Restart this Program!"
+    exit(-2)
+
+print """
+        Taobao Best Sellers Image Spider
+"""
+
+# 获取链接
+def find_url(url, g_page_re):
+    html = requests.get(url).content
+    g_page = re.findall(g_page_re, html)[0]
+    info = json.loads(g_page)
+    detail = info["mods"]["itemlist"]["data"]["auctions"]
+    img_url_list = []
+    for item in detail:
+        img_url_list.append(item['pic_url'])
+    return img_url_list
+# 图片名
+def Img_name(folder, name):
+    img_path = './%s/' %(folder)
+    if not os.path.exists(img_path):
+        os.mkdir(img_path)
+    fname = '%s%s.jpg'%(img_path,name)
+    return fname
+
+# 保存单个图片
+def saveImg(img_url,name, folder):
+    req = requests.get(img_url)
+    headers = {
+        'Connection': 'Keep-Alive',
+        'Accept': 'text/html, application/xhtml+xml, */*',
+        'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
+    }
+    req = requests.get(img_url, headers = headers, timeout = 10)
+    data = req.content
+    img = Img_name(folder, name)
+    f = open(img, 'wb')
+    f.write(data)
+    f.close()
+
+# 批量保存图片
+def saveImg2(url_list, folder):
+    n = 0
+    for link in url_list:
+        n = n + 1
+        if 'jpg' not in link and 'SS2' not in link and 'png' not in link:
+            link += '.jpg'
+        print "\nGET %s %d >>> " % (folder, n) + link
+        saveImg(link, str(n), folder)
+
+list = list()
+
+print 'Please input the keyword'
+keyword = raw_input('>').decode(sys.stdin.encoding)
+now = datetime.now()
+date = now.strftime('%Y%m%d')
+
+url = 'https://s.taobao.com/search?q=%s&imgfile=&commend=all&ssid=s5-e&search_type=item&sourceId=tb.index&spm=a21bo.50862.201856-taobao-item.1&ie=utf8&initiative_id=tbindexz_%d&sort=sale-desc' % (keyword, int(date))
+
+print 'Please input the number of pages (Default 10)\n'
+pages = raw_input('>')
+pages = int(pages if pages.isdigit() and pages > 0 else 10)
+for n in range(pages):
+    url += '&p4ppushleft=%2C44&s=' + str(44*n)
+    list.append(url)
+
+n = 0
+for url in list:
+    n += 1
+    folder = 'Page%d' % n
+    g_page_re = 'g_page_config = ({.*?});'
+    img_url_list = ['https:' + img_url for img_url in find_url(url, g_page_re)]
+    saveImg2(img_url_list, folder)
+```
+
 ## 伪装浏览器
 
 ```python
