@@ -34,6 +34,7 @@ The following resources contain additional information on Python. Please use the
 - [Requests--高级用法](http://docs.python-requests.org/zh_CN/latest/user/advanced.html)
 - [Python爬虫入门三之Urllib库的基本使用](http://cuiqingcai.com/947.html)
 - [Python爬虫入门四之Urllib库的高级用法](http://cuiqingcai.com/954.html)
+- [10 Minutes to pandas](http://pandas.pydata.org/pandas-docs/stable/10min.html)
 
 ## Useful Books
 
