@@ -2020,6 +2020,95 @@ for url in list:
     saveImg2(img_url_list, folder)
 ```
 
+## 4.1
+
+```python
+try:
+    import json
+    import re
+    import requests
+    import sys
+    import pandas as pd
+    import numpy as np
+    from datetime import datetime
+except Exception as error:
+    print "MISSING SOME MODULE(s)"
+    print (error)
+    os.system("pip install requests pandas numpy")
+    print "TRY TO INSTALL SOME MODs"
+    print "PLEASE UPGRADE PIP IF IT DOESN'T WORK "
+    print "Restart this Program!"
+    exit(-2)
+
+print """
+        Taobao Best Sellers info Spider
+"""
+
+def to_csv(url, n):
+    g_page_re = 'g_page_config = ({.*?});'
+    html = requests.get(url).content
+    g_page = re.findall(g_page_re, html)[0]
+    info = json.loads(g_page)
+    detail = info["mods"]["itemlist"]["data"]["auctions"]
+
+    detail_url_list = []
+    pic_url_list = []
+    user_id_list = []
+    raw_title_list = []
+    nick_list = []
+    view_price_list = []
+    shopLink_list = []
+    view_sales_list = []
+    comment_count_list = []
+
+    for item in detail:
+        detail_url_list.append(item['detail_url'])
+        pic_url_list.append(item['pic_url'])
+        user_id_list.append(item['user_id'])
+        raw_title_list.append(item['raw_title'])
+        nick_list.append(item['nick'])
+        view_price_list.append(item['view_price'])
+        shopLink_list.append(item['shopLink'])
+        view_sales_list.append(item['view_sales'])
+        comment_count_list.append(item['comment_count'])
+
+
+    df = pd.DataFrame({'raw_title': raw_title_list,
+                        'user_id': user_id_list,
+                        'nick': nick_list,
+                        'view_sales': view_sales_list,
+                        'view_price': view_price_list,
+                        'comment_count': comment_count_list,
+                        'detail_url': detail_url_list,
+                        'shopLink': shopLink_list,
+                        'pic_url': pic_url_list}, index = range(1, 45))
+
+    df.to_csv('Page%d.csv' % n, encoding="gb2312")
+
+list = list()
+
+print 'Please input the keyword'
+keyword = raw_input('>').decode(sys.stdin.encoding)
+now = datetime.now()
+date = now.strftime('%Y%m%d')
+
+url = 'https://s.taobao.com/search?q=%s&imgfile=&commend=all&ssid=s5-e&search_type=item&sourceId=tb.index&spm=a21bo.50862.201856-taobao-item.1&ie=utf8&initiative_id=tbindexz_%d&sort=sale-desc' % (keyword, int(date))
+
+print 'Please input the number of pages (Default 10)\n'
+pages = raw_input('>')
+pages = int(pages if pages.isdigit() and pages > 0 else 10)
+for n in range(pages):
+    url += '&p4ppushleft=%2C44&s=' + str(44*n)
+    list.append(url)
+
+n = 0
+for url in list:
+    n += 1
+    to_csv(url, n)
+
+print u"\nHi~Finished~~~"
+```
+
 ## 伪装浏览器
 
 ```python
