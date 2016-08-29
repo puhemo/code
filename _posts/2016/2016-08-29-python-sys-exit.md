@@ -7,7 +7,6 @@ categories:
   - Python
 tags:
   - Python
-  - OOP
 excerpt: |
     Exit from Python. Zero is considered “successful termination” and any nonzero value is considered “abnormal termination” by shells and the like.
 ---
