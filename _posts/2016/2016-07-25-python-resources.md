@@ -22,7 +22,7 @@ The following resources contain additional information on Python. Please use the
 - [**Beginner’s Guide to Python**](https://wiki.python.org/moin/BeginnersGuide): 官方新手指南
 - [LearnPython.org](http://www.learnpython.org): Python在线学习
 - [PEP 8](http://legacy.python.org/dev/peps/pep-0008/#imports): Python编码风格指南
-- [PEP 8(中文版)](http://damnever.github.io/2015/04/24/PEP8-style-guide-for-python-code/)
+- [PEP 8(中文版)](http://drafts.damnever.com/2015/EPE8-style-guide-for-python-code.html)
 - [**Codecademy- Python**](http://www.codecademy.com/en/tracks/python/resume): 编程在线学习平台
 - [SoloLearn](http://sololearn.com/Play/Python): 编程在线学习平台
 - [Python 2.7教程](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000)
