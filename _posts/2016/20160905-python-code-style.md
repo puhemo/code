@@ -46,4 +46,4 @@ This article excerpt from [Exercise 45: You Make a Game](https://learnpythonthe
 
 ## More Info
 
-- [PEP 8](http://legacy.python.org/dev/peps/pep-0008/#imports): Python编码风格指南
+- [PEP 8](http://legacy.python.org/dev/peps/pep-0008/#imports)
