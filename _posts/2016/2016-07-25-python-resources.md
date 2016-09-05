@@ -1,7 +1,7 @@
 ---
 title: "Python Useful Resources"
 date: 2016-07-25
-modified: 2016-08-18
+modified: 2016-09-05
 published: true
 categories:
   - Python
@@ -45,3 +45,6 @@ The following resources contain additional information on Python. Please use the
 5. [A Byte of Python](http://python.swaroopch.com/): For Python3
 6. [Python for Informatics: Exploring Information](http://www.pythonlearn.com/html-270/)
 
+## Useful Questions
+
+- [Static class variables in Python](http://stackoverflow.com/questions/68645/static-class-variables-in-python)
