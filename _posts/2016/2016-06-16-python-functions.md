@@ -1,7 +1,7 @@
 ---
 title: "Python Part 05: Functions and Modules"
 date: 2016-06-16
-modified: 2016-08-15
+modified: 2016-09-10
 categories:
   - Python
 tags:
@@ -37,6 +37,8 @@ Python has a number of built-in functions we can use without any knowledge of ho
 - `len()`
 - `abs()`  
   The `abs()` function returns the absolute value of the number it takes as an argument.
+
+> When writing a function name, the opening and closing parentheses at the end identify it as the name of a function.
 
 To see a full listing of Python's built-in functions, visit the [online Python documentation](https://docs.python.org/2/library/functions.html).
 
