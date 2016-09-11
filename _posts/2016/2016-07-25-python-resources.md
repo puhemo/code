@@ -1,7 +1,7 @@
 ---
 title: "Python Useful Resources"
 date: 2016-07-25
-modified: 2016-09-05
+modified: 2016-09-11
 published: true
 categories:
   - Python
@@ -16,6 +16,12 @@ The following resources contain additional information on Python. Please use the
 ## Useful Tools
 
 * [VISUALIZE](http://www.pythontutor.com/): helps people overcome a fundamental barrier to learning programming: **understanding what happens as the computer executes each line of a program’s source code**.
+
+* [Trinket](https://trinket.io/): Trinket lets you run and write code in any browser, on any device.
+
+Trinkets work instantly, with no need to log in, download plugins, or install software.
+
+Easily share or embed the code with your changes when you're done.
 
 ## Useful Links
 
