@@ -1,7 +1,7 @@
 ---
 title:  "Python Part 01: Syntax"
 date: 2016-06-13 20:00
-modified: 2016-08-14
+modified: 2016-09-11
 published: true
 categories: 
   - Python
@@ -75,8 +75,7 @@ The following list shows the Python keywords. These are reserved words and you c
 
 The command to accept user input is `raw_input()`. This will make a pop-up box appear on your screen.
 
-> raw_input()读取的内容以字符串的形式返回
-{:.warning}
+> The raw_input() function always returns a string (even if the user typed in a number).
 
 Example:
 ```python
