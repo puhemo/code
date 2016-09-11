@@ -19,9 +19,9 @@ The following resources contain additional information on Python. Please use the
 
 * [Trinket](https://trinket.io/): Trinket lets you run and write code in any browser, on any device.
 
-Trinkets work instantly, with no need to log in, download plugins, or install software.
+  Trinkets work instantly, with no need to log in, download plugins, or install software.
 
-Easily share or embed the code with your changes when you're done.
+  Easily share or embed the code with your changes when you're done.
 
 ## Useful Links
 
