@@ -134,6 +134,20 @@ for i in range(len(list)):
 **Method 1** is useful to loop through the list, but it's not possible to modify the list this way.  
 **Method 2** uses indexes to loop through the list, making it possible to also **modify** the list if needed.  
 
+### Iterate over the indexes of a list
+
+A common Python technique is to use range(len(someList)) with a for loop to iterate over the indexes of a list. For example, enter the following into the interactive shell:
+
+```python
+>>> supplies = ['pens', 'staplers', 'flame-throwers', 'binders']
+>>> for i in range(len(supplies)):
+    print('Index ' + str(i) + ' in supplies is: ' + supplies[i])
+
+Index 0 in supplies is: pens
+Index 1 in supplies is: staplers
+Index 2 in supplies is: flame-throwers
+Index 3 in supplies is: binders
+```
 
 ## List Methods[^1]
 
