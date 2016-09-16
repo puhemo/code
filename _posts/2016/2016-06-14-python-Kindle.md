@@ -642,7 +642,13 @@ print u"\nHi~Finished~~~"
 
 ```python
 # -*- coding:utf-8 -*-
-# python 2.x
+
+"""This is a test Python program.
+Written by Linus Liu mail@puhemo.xyz
+
+This program was designed for Python 3, not Python 2.
+"""
+
 import os
 import os.path
 from sys import argv
