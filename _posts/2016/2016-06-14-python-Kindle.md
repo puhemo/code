@@ -646,7 +646,7 @@ print u"\nHi~Finished~~~"
 """This is a test Python program.
 Written by Linus Liu mail@puhemo.xyz
 
-This program was designed for Python 3, not Python 2.
+This program was designed for Python 2, not Python 3.
 """
 
 import os
