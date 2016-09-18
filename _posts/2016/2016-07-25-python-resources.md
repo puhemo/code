@@ -1,7 +1,7 @@
 ---
 title: "Python Useful Resources"
 date: 2016-07-25
-modified: 2016-09-11
+modified: 2016-09-18
 published: true
 categories:
   - Python
@@ -22,6 +22,8 @@ The following resources contain additional information on Python. Please use the
   Trinkets work instantly, with no need to log in, download plugins, or install software.
 
   Easily share or embed the code with your changes when you're done.
+
+* [Regex Tester](http://www.regexpal.com/): A web-based regular expression tester.
 
 ## Useful Links
 
