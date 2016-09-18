@@ -20,6 +20,8 @@ excerpt: |
 * `$` - Matches the end of the line.
 
 * `.` - Matches any character (a wildcard)except a newline.
+ 
+* `?` - Causes the resulting RE to match 0 or 1 repetitions of the preceding RE. 
 
 * `\s` - Matches a whitespace character.
 
