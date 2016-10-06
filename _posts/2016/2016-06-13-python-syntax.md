@@ -124,7 +124,7 @@ days = ['Monday', 'Tuesday', 'Wednesday',
 
 ### User Input--`argv`
 
-The `argv` is the "**argument variable**," a very standard name in programming, that you will find used in many other languages.  This variable *holds* the arguments you pass to your Python script when you run it.
+The `argv`[^6] is the "**argument variable**," a very standard name in programming, that you will find used in many other languages.  This variable *holds* the arguments you pass to your Python script when you run it.
 
 ```python
 from sys import argv
@@ -697,3 +697,5 @@ python -m pydoc raw_input
 [^4]: [PEP 263 -- Defining Python Source Code Encodings](https://www.python.org/dev/peps/pep-0263/)
 
 [^5]: [The `pydoc` module automatically generates documentation from Python modules. The documentation can be presented as pages of text on the console, served to a Web browser, or saved to HTML files.](https://docs.python.org/2/library/pydoc.html)
+
+[^6]: [More usage](https://automatetheboringstuff.com/chapter8/)
