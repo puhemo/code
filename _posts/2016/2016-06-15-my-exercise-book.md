@@ -1,16 +1,83 @@
 ---
 title: "My Python exercise book"
 date: 2016-06-15
-modified: 2016-07-02
+modified: 2016-10-07
 categories:
   - Python
 tags:
-  - Python 2.x
+  - Python
   - Python Exercise
   - Error
 excerpt: |
   My Python exercise book
 ---
+
+# Automate the Boring Stuff with Python
+
+## Chapter 8.1 -- Mad Libs
+
+Create a Mad Libs program that reads in text files and lets the user add their own text anywhere the word ADJECTIVE, NOUN, ADVERB, or VERB appears in the text file. For example, a text file may look like this:
+
+The ADJECTIVE panda walked to the NOUN and then VERB. A nearby NOUN was
+unaffected by these events.
+The program would find these occurrences and prompt the user to replace them.
+
+Enter an adjective:
+silly
+Enter a noun:
+chandelier
+Enter a verb:
+screamed
+Enter a noun:
+pickup truck
+The following text file would then be created:
+
+The silly panda walked to the chandelier and then screamed. A nearby pickup
+truck was unaffected by these events.
+The results should be printed to the screen and saved to a new text file.
+
+```python
+#! python3
+# mad_libs.py - Reads in text files and lets the user add 
+#               their own text anywhere the word ADJECTIVE,
+#               NOUN, ADVERB, or VERB appears in the text file.
+# Usage: mad_libs.py <text files> - Saves clipboard to keyword.
+from sys import argv
+import re
+
+file = open(argv[1]).read()
+
+word_dict = {'ADJECTIVE':'Enter an adjective:', 
+    'NOUN':'Enter a noun:',
+    'ADVERB':'Enter an adverb:',
+    'VERB':'Enter a verb:'}
+
+Regex = re.compile (r'ADJECTIVE|NOUN|ADVERB|VERB')
+keywords = Regex.findall(file)
+words = tuple([input(word_dict[word]) for word in keywords])
+new_file = Regex.sub(r'%s', file) % words
+with open('new.txt', 'w') as f:
+    f.write(new_file)
+```
+
+## Chapter 8.2 -- Regex Search
+
+Write a program that opens all .txt files in a folder and searches for any line that matches a user-supplied regular expression. The results should be printed to the screen.
+
+```python
+#! python3
+import os, re, codecs
+
+folder = r'C:\Users\Administrator\test' # folder dir
+os.chdir(folder)
+listdir = os.listdir(folder)
+listdir = [dir for dir in listdir if 'txt' in dir]
+Regex = re.compile(input('Enter the regular expression:'))
+for dir in listdir:
+    words = codecs.open(dir, 'r', 'utf-8').read()
+    word = Regex.findall(words)
+    print(word)
+```
 
 # Getting Started with Python
 
