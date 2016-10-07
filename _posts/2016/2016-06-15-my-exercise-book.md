@@ -12,6 +12,9 @@ excerpt: |
   My Python exercise book
 ---
 
+* TOC
+{:toc}
+
 # Automate the Boring Stuff with Python
 
 ## Chapter 8.1 -- Mad Libs
