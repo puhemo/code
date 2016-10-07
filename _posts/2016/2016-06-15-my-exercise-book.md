@@ -41,6 +41,7 @@ For this project, open a new file editor window and save your code as renameDate
 
 ```python
 #! python3
+# Written by Al Sweigart
 # renameDates.py - Renames filenames with American MM-DD-YYYY date format
 # to European DD-MM-YYYY.
 
