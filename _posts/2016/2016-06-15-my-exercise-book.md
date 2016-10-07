@@ -74,7 +74,7 @@ import os, re, codecs
 folder = r'C:\Users\Administrator\test' # folder dir
 os.chdir(folder)
 listdir = os.listdir(folder)
-listdir = [dir for dir in listdir if 'txt' in dir]
+listdir = [dir for dir in listdir if dir.endswith('.txt')]
 Regex = re.compile(input('Enter the regular expression:'))
 for dir in listdir:
     words = codecs.open(dir, 'r', 'utf-8').read()
