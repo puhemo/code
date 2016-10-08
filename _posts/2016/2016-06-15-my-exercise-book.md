@@ -17,6 +17,51 @@ excerpt: |
 
 # Automate the Boring Stuff with Python
 
+## Chapter 9.2 -- Backing Up a Folder into a ZIP File
+
+Say you’re working on a project whose files you keep in a folder named C:\AlsPythonBook. You’re worried about losing your work, so you’d like to create ZIP file “snapshots” of the entire folder. You’d like to keep different versions, so you want the ZIP file’s filename to increment each time it is made; for example, AlsPythonBook_1.zip, AlsPythonBook_2.zip, AlsPythonBook_3.zip, and so on. You could do this by hand, but it is rather annoying, and you might accidentally misnumber the ZIP files’ names. It would be much simpler to run a program that does this boring task for you.
+
+For this project, open a new file editor window and save it as backupToZip.py.
+
+```python
+#! python3
+# Written by Al Sweigart
+# backupToZip.py - Copies an entire folder and its contents into
+# a ZIP file whose filename increments.
+
+import zipfile, os
+
+def backupToZip(folder):
+    # Backup the entire contents of "folder" into a ZIP file.
+    folder = os.path.abspath(folder) # make sure folder is absolute
+    # Figure out the filename this code should use based on
+    # what files already exist.
+    number = 1
+    while True:
+        zipFilename = os.path.basename(folder) + '_' + str(number) + '.zip'
+        if not os.path.exists(zipFilename):
+            break
+        number = number + 1
+        # Create the ZIP file.
+        print('Creating %s...' % (zipFilename))
+    backupZip = zipfile.ZipFile(zipFilename, 'w')
+    # Walk the entire folder tree and compress the files in each folder.
+    for foldername, subfolders, filenames in os.walk(folder):
+        print('Adding files in %s...' % (foldername))
+        # Add the current folder to the ZIP file.
+        backupZip.write(foldername)
+        # Add all the files in this folder to the ZIP file.
+        for filename in filenames:
+            newBase = os.path.basename(folder) + '_'
+            if filename.startswith(newBase) and filename.endswith('.zip'):
+                continue   # don't backup the backup ZIP files
+            backupZip.write(os.path.join(foldername, filename))
+    backupZip.close()
+    print('Done.')
+
+backupToZip('C:\AlsPythonBook')
+```
+
 ## Chapter 9.1 -- Renaming Files with American-Style Dates to European-Style Dates[^1]
 
 Say your boss emails you thousands of files with American-style dates (MM-DD-YYYY) in their names and needs them renamed to European-style dates (DD-MM-YYYY). This boring task could take all day to do by hand! Let’s write a program to do it instead.
