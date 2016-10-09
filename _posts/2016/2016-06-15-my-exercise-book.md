@@ -17,6 +17,44 @@ excerpt: |
 
 # Automate the Boring Stuff with Python
 
+## Chapter 9.3 -- Filling in the Gaps
+
+Write a program that finds all files with a given prefix, such as spam001.txt, spam002.txt, and so on, in a single folder and locates any gaps in the numbering (such as if there is a spam001.txt and spam003.txt but no spam002.txt). Have the program rename all the later files to close this gap.
+
+As an added challenge, write another program that can insert gaps into numbered files so that a new file can be added.
+
+```python
+import shutil, os, re
+
+def addfile(file):
+    Regex = re.compile(r'^(.*?)(\d)(\d)(\d)(.*?)$')
+    for Filename in os.listdir('.'):
+        mo = Regex.search(Filename)
+        if mo == None:
+            continue
+        beforePart = mo.group(1)
+        afterPart = mo.group(5) 
+        file = os.path.abspath(file)
+        n1, n2, n3 = 1, 0, 0  
+        while True:
+            if n1 == 10:
+                n1 = 0
+                n2 += 1                
+            elif n2 == 10:
+            	n2 = 0
+            	n1 += 1
+            Filename = os.path.abspath(beforePart + str(n3) + str(n2) + str(n1) + afterPart)
+            if not os.path.exists(Filename):
+                    break
+            n1 += 1
+    print('Creating %s...' % (Filename))
+    shutil.move(file, Filename)    
+
+os.chdir(r'C:\Users\Administrator\Desktop\spam')
+
+addfile(r'C:\Users\Administrator\Desktop\a.txt')
+```
+
 ## Chapter 9.2 -- Backing Up a Folder into a ZIP File
 
 Say you’re working on a project whose files you keep in a folder named C:\AlsPythonBook. You’re worried about losing your work, so you’d like to create ZIP file “snapshots” of the entire folder. You’d like to keep different versions, so you want the ZIP file’s filename to increment each time it is made; for example, AlsPythonBook_1.zip, AlsPythonBook_2.zip, AlsPythonBook_3.zip, and so on. You could do this by hand, but it is rather annoying, and you might accidentally misnumber the ZIP files’ names. It would be much simpler to run a program that does this boring task for you.
