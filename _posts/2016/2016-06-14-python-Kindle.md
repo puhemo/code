@@ -5,7 +5,7 @@ modified: 2016-08-17
 categories:
   - Python
 tags:
-  - Python 2.x
+  - Python
   - Kindle
   - Issue
 published: ture
@@ -808,6 +808,54 @@ while True:
     # 删除空白笔记
     if len(onenote[3]) > 1:
         book_note.write(onenote[1]+'\n'+onenote[3]+'\n'+onenote[4]+'\n') 
+    book_note.close()
+```
+
+## 3.0
+
+```python
+# -*- coding:utf-8 -*-
+
+"""This is a test Python program.
+Written by Linus Liu mail@puhemo.xyz
+This program was designed for Python 3, not Python 2.
+Usage: Clippings.py <text files> - Exports note to text files.
+"""
+
+import os
+import os.path
+import codecs
+from sys import argv
+
+print("""
+        Kindle Clippings Export
+""")
+print('''
+input_file = 'X:\documents\My Clippings.txt' in WINDOWNS\n
+input_file = '/Volumes/Kindle/documents/My Clippings.txt' in MAC
+''')
+
+assert os.path.exists(argv[1]), 'This path does not exist!'
+f = open(argv[1],'r+', encoding="utf8")
+
+if not os.path.exists("./digest/"):
+    os.mkdir("./digest/")
+
+while True:
+    onenote = []
+    for i in range(0,5):
+        line = f.readline()
+        if not line:
+            print("\nHi~Finished~~~")
+            exit()
+        onenote.append(line)
+    name = onenote[0].strip('\n').replace(':','-') # 替换文件名不支持符号
+    fname = os.path.join("./digest/", name + '.txt')
+    # 修复中文名乱码
+    book_note = open(fname,'a+', encoding="utf8")
+    # 删除空白笔记
+    if len(onenote[3]) > 1:
+        book_note.write(onenote[3]+'\n') 
     book_note.close()
 ```
 
