@@ -2233,6 +2233,257 @@ for page_url in pageUrls:
 
 print("\nHi~Finished~~~")
 ```
+## 5.1
+
+获取阿里图片
+
+```python
+#! python3
+# encoding: utf-8
+
+try:
+    import os
+    import json
+    import re
+    from io import BytesIO
+    from PIL import Image
+    import bs4
+    import requests
+except Exception as error:
+    print("MISSING SOME MODULE(s)")
+    print (error)
+    os.system("pip install beautifulsoup4 Pillow requests ")
+    print("TRY TO INSTALL SOME MODs")
+    print("PLEASE UPGRADE PIP IF IT DOESN'T WORK ")
+    print("Restart this Program!")
+    exit(-2)
+
+print("""
+        1688 Item Image Spider
+""")
+
+def saveImg(imgUrl, folder):
+    n = 0
+    for url in imgUrl:
+        n = n + 1
+        print("\nGET %s %d >>> " % (folder, n) + url)
+        # 伪装浏览器
+        headers = {
+            'Connection': 'Keep-Alive',
+            'Accept': 'text/html, application/xhtml+xml, */*',
+            'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
+        }
+        res = requests.get(url, headers = headers, timeout = 10)
+        res.raise_for_status()
+        data = res.content
+        im = Image.open(BytesIO(data))
+        ### 宽/高的像素小于300
+        if im.size[0] < 300 or im.size[1] < 300:
+            print("\nGET <<< USELESS IMG")
+            im.close()
+            return
+        # 保存图片
+        imgFolder = os.path.join(baseFolder, folder)
+        os.makedirs(imgFolder, exist_ok=True)
+        imgName = str(n) + '.jpg'
+        f = open(os.path.join(imgFolder, imgName), 'wb')
+        f.write(data)
+        f.close()
+
+url = input('Enter 1688 Url - ')
+if len(url) < 1:
+    url = 'https://detail.1688.com/offer/44677887013.html'
+print('URL:', url)
+baseFolder = os.path.basename(url).split('.')[0]
+
+res = requests.get(url)
+res.raise_for_status()
+soup = bs4.BeautifulSoup(res.text, "html.parser")
+
+# 获取主图颜色图链接
+m_urls = []
+els= soup.select('li[data-imgs]')
+for el in els:
+    data = el.get('data-imgs')
+    url = json.loads(data)['original']
+    m_urls.append(url)
+
+# 获取详情图片链接
+elems = soup.select('#desc-lazyload-container')
+html =  elems[0].get('data-tfs-url')
+data = requests.get(html).text
+d_re = 'img alt.*? src.*?(//.*?jpg)'
+d_urls = ['https:' + d_url for d_url in re.findall(d_re, data)]
+
+saveImg(m_urls, 'main')
+saveImg(d_urls, 'detail')
+
+print("\nHi~Finished~~~")
+```
+
+## 5.2 
+
+Taobao Best Sellers Image Spider
+
+```python
+#! python3
+# encoding: utf-8
+try:
+    import re
+    import os
+    import sys
+    import requests
+    import json
+    from datetime import datetime
+except Exception as error:
+    print("MISSING SOME MODULE(s)")
+    print (error)
+    os.system("pip install requests")
+    print("TRY TO INSTALL SOME MODs")
+    print("PLEASE UPGRADE PIP IF IT DOESN'T WORK ")
+    print("Restart this Program!")
+    exit(-2)
+
+print("""
+        Taobao Best Sellers Image Spider
+""")
+
+# 保存图片
+def saveImg(urls, folder):
+    n = 0
+    for link in urls:
+        n = n + 1
+        imgFolder = os.path.join(date+keyword, folder)
+        os.makedirs(imgFolder, exist_ok=True)
+        imgName = str(n) + '-' + id[link] + '.jpg'
+        fname = os.path.join(imgFolder, imgName)
+        link = 'https:' + link
+        print("\nGET %s %d >>> " % (folder, n) + link)
+        headers = {
+            'Connection': 'Keep-Alive',
+            'Accept': 'text/html, application/xhtml+xml, */*',
+            'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
+        }
+        req = requests.get(link, headers = headers, timeout = 10)
+        data = req.content
+        f = open(fname, 'wb')
+        f.write(data)
+        f.close()
+
+# 获取搜索链接
+pageUrls = []
+print('Please input the keyword')
+keyword = input('>')
+now = datetime.now()
+date = now.strftime('%Y%m%d')
+url = 'https://s.taobao.com/search?q=%s&imgfile=&commend=all&ssid=s5-e&search_type=item&sourceId=tb.index&spm=a21bo.50862.201856-taobao-item.1&ie=utf8&initiative_id=tbindexz_%d&sort=sale-desc' % (keyword, int(date))
+print('Please input the number of pages (Default 10)\n')
+pages = input('>')
+pages = int(pages if pages.isdigit() and int(pages) > 0 else 10)
+for n in range(pages):
+    url += '&p4ppushleft=%2C44&s=' + str(44*n)
+    pageUrls.append(url)
+
+# 获取图片链接
+n = 0
+for url in pageUrls:
+    n += 1
+    folder = 'Page%d' % n
+    html = requests.get(url).text
+    img_re = 'g_page_config = ({.*?});'
+    g_page = re.findall(img_re, html)[0]
+    info = json.loads(g_page)
+    detail = info["mods"]["itemlist"]["data"]["auctions"]
+    id, img_urls = {}, []
+    for item in detail:
+        img_urls.append(item['pic_url'])
+        id[item['pic_url']] = item['nick']
+    saveImg(img_urls, folder)
+```
+
+## 5.3
+
+Taobao Item Image Spider
+
+```python
+#! python3
+# encoding: utf-8
+
+try:
+    import os
+    import re
+    import bs4
+    import requests
+except Exception as error:
+    print("MISSING SOME MODULE(s)")
+    print (error)
+    os.system("pip install beautifulsoup4 requests ")
+    print("TRY TO INSTALL SOME MODs")
+    print("PLEASE UPGRADE PIP IF IT DOESN'T WORK ")
+    print("Restart this Program!")
+    exit(-2)
+print("""
+        Taobao Item Image Spider
+""")
+
+def saveName(folder, name):
+    Folder = os.path.join(itemId, folder)
+    os.makedirs(Folder, exist_ok=True)
+    fname =  os.path.join(Folder, name)
+    return fname
+
+# 保存单个图片
+def saveImg(imgDict):
+    for url in imgDict.keys():
+        print("\nGET %s >>> " % url)
+        headers = {
+            'Connection': 'Keep-Alive',
+            'Accept': 'text/html, application/xhtml+xml, */*',
+            'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
+        }
+        res = requests.get(url, headers = headers, timeout = 10)
+        data = res.content
+        f = open(imgDict[url], 'wb')
+        f.write(data)
+        f.close()
+
+url = input('Enter Taobao Url - ')
+if len(url) < 1:
+    url = 'https://item.taobao.com/item.htm?spm=a230r.1.14.163.zx416O&id=534076017689&ns=1&abbucket=18#detail'
+print('URL:', url)
+itemId = re.findall('id=(\d+)', url)[0]
+
+res = requests.get(url)
+res.raise_for_status()
+soup = bs4.BeautifulSoup(res.text, "html.parser")
+
+m_dict = {}
+els = soup.select('div[class="tb-pic tb-s50"] > a > img')
+n = 0
+for el in els:
+    n += 1
+    m_name = str(n) + '.jpg'
+    mName = saveName('main', m_name)
+    m_data = el.get('data-src').split('_')
+    m_url = 'https:' + '_'.join(m_data[:len(m_data)-1])
+    m_dict[m_url] = mName
+
+c_dict = {}
+cels = soup.select('li[data-value] > a')
+for cel in cels:
+    c_name = cel.getText().strip('\n') + '.jpg'
+    cName = saveName('color', c_name)
+    c_data = cel.get('style')
+    c_url = 'https:' + re.findall('(//.*?jpg?)_30x30', c_data)[0]
+    c_dict[c_url] = cName
+
+saveImg(m_dict)
+saveImg(c_dict)
+print("\nHi~Finished~~~")
+```
 
 ## Reference
 
