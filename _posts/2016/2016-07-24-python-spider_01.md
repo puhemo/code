@@ -2135,6 +2135,105 @@ def saveImg(imageURL):
 saveImg(url)
 ```
 
+## 5.0
+
+按分类下载主图
+
+```python
+#! python3
+# encoding: utf-8
+try:
+    import re
+    import os
+    import sys
+    import requests
+    import bs4
+except Exception as error:
+    print("MISSING SOME MODULE(s)")
+    print (error)
+    os.system("pip install requests")
+    print("TRY TO INSTALL SOME MODs")
+    print("PLEASE UPGRADE PIP IF IT DOESN'T WORK ")
+    print("Restart this Program!")
+    exit(-2)
+	
+print("""
+        Taobao Image Spider
+""")
+
+# 保存图片
+def saveImg(url, folder, path):
+    print("\nGET %s >>> %s " % (folder, url))
+    headers = {
+        'Connection': 'Keep-Alive',
+        'Accept': 'text/html, application/xhtml+xml, */*',
+        'Accept-Language': 'en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko'
+    }
+    res = requests.get(url, headers = headers, timeout = 10)
+    data = res.content
+    f = open(path, 'wb')
+    f.write(data)
+    f.close()
+
+def res(url):
+    res = requests.get(url)
+    res.raise_for_status()
+    soup = bs4.BeautifulSoup(res.text, "html.parser")
+    return soup
+
+try:
+    url = input('category url >')
+    c_re = '-(\d+).htm'
+    category = re.findall(c_re, url)[0]
+except:
+    print('Please input category url!')
+    exit(-2)
+
+soup = res(url)
+widgetid = soup.select('div[data-title="宝贝列表"]')[0].get('data-widgetid')
+domain = 'https:' + soup.select('.shop-name')[0].select('.J_TGoldlog')[0].get('href')
+pageUrl = '/i/asynSearch.htm?mid=w-%s-0&wid=%s&path=/category-%s.htm&pageNo=' % (widgetid, widgetid, category)
+pageUrl = domain + pageUrl
+pageUrls = []
+pageNum = input('Page number > ')
+for m in range(1, int(pageNum) + 1):
+    page = pageUrl + str(m)
+    pageUrls.append(page)
+
+f = 0
+for page_url in pageUrls:
+    f += 1
+    folder = 'Page' + str(f)
+    os.makedirs(folder, exist_ok=True)
+    Soup = res(page_url)
+    img = Soup.select('dt > a > img')
+    imgUrls = []
+    for im in img:
+        img_re = '(//.*?)_\d\d\d'
+        imgUrl = 'https:' + re.findall(img_re, im.get('src'))[0]
+        imgUrls.append(imgUrl)
+
+    dd = Soup.select('dd')
+    paths = []
+    n = 0
+    for cprice in dd:
+        n += 1
+        try:
+            price = cprice.select('div > div')[0].select('span')[1].getText()
+        except:
+            print("\nHi~Finished~~~")
+            exit(-2)
+        fname = str(n) + '_' + price + '.jpg'
+        path = os.path.join(folder, fname)
+        paths.append(path)
+
+    for url, path in zip(imgUrls, paths):
+        saveImg(url, folder, path)
+
+print("\nHi~Finished~~~")
+```
+
 ## Reference
 
 [简洁的python，简洁的urllib,保存图片](http://blog.csdn.net/wwaiym/article/details/5829471) 
