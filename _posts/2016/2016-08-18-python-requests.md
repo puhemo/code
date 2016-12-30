@@ -14,8 +14,11 @@ excerpt: |
 
 * TOC
 {:toc}
-
 This article is modified from [Requests: HTTP for Humans](http://docs.python-requests.org/en/master/) provided by [Kenneth Reitz](https://twitter.com/kennethreitz) and only for personal notes. 
+
+The `requests` module lets you easily download files from the Web without having to worry about complicated issues such as network errors, connection problems, and data compression.
+
+The `requests` module was written because Python’s `urllib2` module is too complicated to use. In fact, take a permanent marker and black out this entire paragraph. Forget I ever mentioned `urllib2`. If you need to download things from the Web, just use the `requests` module.
 
 ## Installation
 
@@ -54,6 +57,98 @@ Nice, right? What about the other HTTP request types: `PUT`, `DELETE`, `HEAD` an
 >>> r = requests.head('http://httpbin.org/get')
 >>> r = requests.options('http://httpbin.org/get')
 ```
+
+### The requests.get() Function
+
+The `requests.get()` function takes a string of a URL to download. By calling `type()` on `requests.get()`’s return value, you can see that it returns a `Response` object, which contains the response that the web server gave for your request.
+
+```
+   >>> import requests
+   >>> res = requests.get('https://automatetheboringstuff.com/files/rj.txt')
+   >>> type(res)
+   <class 'requests.models.Response'>
+   >>> res.status_code == requests.codes.ok
+   True
+   >>> len(res.text)
+   178981
+   >>> print(res.text[:250])
+   The Project Gutenberg EBook of Romeo and Juliet, by William Shakespeare
+
+   This eBook is for the use of anyone anywhere at no cost and with
+   almost no restrictions whatsoever. You may copy it, give it away or
+   re-use it under the terms of the Proje
+```
+
+You can tell that the request for this web page succeeded by checking the `status_code` attribute of the `Response` object. If it is equal to the value of `requests.codes.ok`, then everything went fine.
+
+If the request succeeded, the downloaded web page is stored as a string in the `Response` object’s `text` variable. This variable holds a large string of the entire play; the call to `len(res.text)` shows you that it is more than 178,000 characters long. Finally, calling `print(res.text[:250])` displays only the first 250 characters.
+
+### Checking for Errors
+
+As you’ve seen, the `Response` object has a `status_code` attribute that can be checked against `requests.codes.ok` to see whether the download succeeded. A simpler way to check for success is to call the `raise_for_status()` method on the `Response` object. This will raise an exception if there was an error downloading the file and will do nothing if the download succeeded. Enter the following into the interactive shell:
+
+```
+>>> res = requests.get('http://inventwithpython.com/page_that_does_not_exist')
+>>> res.raise_for_status()
+Traceback (most recent call last):
+  File "<pyshell#138>", line 1, in <module>
+    res.raise_for_status()
+  File "C:\Python34\lib\site-packages\requests\models.py", line 773, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found
+```
+
+The `raise_for_status()` method is a good way to ensure that a program halts if a bad download occurs. This is a good thing: You want your program to stop as soon as some unexpected error happens. If a failed download *isn’t* a deal breaker for your program, you can wrap the `raise_for_status()` line with `try` and `except` statements to handle this error case without crashing.
+
+```
+import requests
+res = requests.get('http://inventwithpython.com/page_that_does_not_exist')
+try:
+    res.raise_for_status()
+except Exception as exc:
+    print('There was a problem: %s' % (exc))
+```
+
+This `raise_for_status()` method call causes the program to output the following:
+
+```
+There was a problem: 404 Client Error: Not Found
+```
+
+**Always call `raise_for_status()` after calling `requests.get()`.** You want to be sure that the download has actually worked before your program continues.
+
+### Saving Downloaded Files to the Hard Drive
+
+From here, you can save the web page to a file on your hard drive with the standard `open()` function and `write()` method. There are some slight differences, though. First, you must open the file in *write binary* mode by passing the string `'wb'` as the second argument to `open()`. Even if the page is in plaintext (such as the *Romeo and Juliet* text you downloaded earlier), you need to write binary data instead of text data in order to maintain the *Unicode encoding* of the text.
+
+To write the web page to a file, you can use a `for` loop with the `Response` object’s `iter_content()` method.
+
+```
+>>> import requests
+>>> res = requests.get('https://automatetheboringstuff.com/files/rj.txt')
+>>> res.raise_for_status()
+>>> playFile = open('RomeoAndJuliet.txt', 'wb')
+>>> for chunk in res.iter_content(100000):
+        playFile.write(chunk)
+
+100000
+78981
+>>> playFile.close()
+```
+
+**The `iter_content()` method returns “chunks” of the content on each iteration through the loop**. Each chunk is of the *bytes* data type, and you get to specify how many bytes each chunk will contain. One hundred thousand bytes is generally a good size, so pass `100000` as the argument to `iter_content()`.
+
+The `write()` method returns the number of bytes written to the file. In the previous example, there were 100,000 bytes in the first chunk, and the remaining part of the file needed only 78,981 bytes.
+
+To review, here’s the complete process for downloading and saving a file:
+
+1. Call `requests.get()` to download the file.
+2. Call `open()` with `'wb'` to create a new file in write binary mode.
+3. Loop over the `Response` object’s `iter_content()` method.
+4. Call `write()` on each iteration to write the content to the file.
+5. Call `close()` to close the file.
+
+That’s all there is to the `requests` module! The `for` loop and `iter_content()` stuff may seem complicated compared to the `open()`/`write()`/`close()` workflow you’ve been using to write text files, but it’s to ensure that the `requests` module doesn’t eat up too much memory even if you download massive files. You can learn about the `requests` module’s other features from *http://requests.readthedocs.org/*.
 
 ## Passing Parameters In URLs
 
@@ -256,3 +351,5 @@ r = requests.get('https://github.com', timeout=None)
 [深入理解urllib、urllib2及requests](http://www.codefrom.com/paper/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3urllib%E3%80%81urllib2%E5%8F%8Arequests)
 
 [What are the differences between the urllib, urllib2, and requests module?](http://stackoverflow.com/questions/2018026/what-are-the-differences-between-the-urllib-urllib2-and-requests-module)
+
+[Chapter 11 – Web Scraping](https://automatetheboringstuff.com/chapter11/)
