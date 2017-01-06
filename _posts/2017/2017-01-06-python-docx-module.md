@@ -304,6 +304,48 @@ The first argument is a string of the image’s filename. The optional `width`�
 
 You’ll probably prefer to specify an image’s height and width in familiar units such as inches and centimeters, so you can use the `docx.shared.Inches()` and `docx.shared.Cm()` functions when you’re specifying the `width` and `height` keyword arguments.
 
+## Generalizations
+
+Compared to plaintext, *.docx* files have a lot of structure. 
+
+* Document[^1]: `docx.Document()`
+  * Paragraph[^1]: `Document.paragraphs`[^2]
+    * RUN[^1]: `Paragraph.add_run()` [^2]
+
+A `Run` object is a contiguous run of text with the same style.
+
+For Word documents, there are three types of styles:
+
+* Both:  *linked styles*
+* Paragraph[^1]: *Paragraph styles*
+* Run[^1]:  *character styles*
+
+You can give both `Paragraph` and `Run` objects styles by setting their `style` attribute to a string. 
+
+Runs can be further styled using `text` attributes. Each attribute can be set to one of three values: 
+
+* `True` (the attribute is always enabled, no matter what other styles are applied to the run)
+
+* `False` (the attribute is always disabled)
+
+* `None` (defaults to whatever the run’s style is set to)
+
+Writing Word Documents:
+
+* Document[^1]: `docx.Document()`
+  * Head: `Document.add_heading()`[^4]
+  - Paragraph[^1]:  `Document.add_paragraph()`[^3]
+    - Run[^1]: `Paragraph.runs` [^3]
+      * Line Break: `Run.add_break()`
+      * Page Break: `Run.add_break(docx.text.WD_BREAK.PAGE)`
+  * Picture: `Document.add_picture(filename,width=docx.shared.Inches(), height=docx.shared.Cm())`
+
 ## More Info
 
 [Chapter 13 – Working with PDF and Word Documents](https://automatetheboringstuff.com/chapter13/)
+
+[^1]: object
+[^2]: Each of these  objects(list) has a `text` attribute that contains a string of the text  (without the style information).
+[^3]: Accept an optional second argument that is a string of the object’s style. 
+[^4]: The arguments to `add_heading()` are a string of the heading text and an integer from `0` to `4`.
+
