@@ -12,6 +12,9 @@ excerpt: |
     Python can create and modify Word documents, which have the .docx file extension, with the python-docx module.
 ---
 
+* TOC
+{:toc}
+
 Python can create and modify Word documents, which have the *.docx* file extension, with the `python-docx` module. You can install the module by running `pip install python-docx`. 
 
 > *When using pip to first install Python-Docx, be sure to install python-docx, not docx. The installation name docx is for a different module t. However, when you are going to import the python-docx module, you’ll need to run import docx, not import python-docx.*
