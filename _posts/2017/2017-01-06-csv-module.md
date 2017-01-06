@@ -12,6 +12,9 @@ excerpt: |
     CSV stands for “comma-separated values,” and CSV files are simplified spreadsheets stored as plaintext files. Python’s csv module makes it easy to parse CSV files.
 ---
 
+* TOC
+{:toc}
+
 Each line in a CSV file represents a row in the spreadsheet, and commas separate the cells in the row. 
 
 4/5/2015 13:34,Apples,73
