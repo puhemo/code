@@ -50,3 +50,7 @@ The `json.dumps()` function (which means “dump string,” not “dumps”) w
 ```
 
 The value can only be one of the following basic Python data types: **dictionary, list, integer, float, string, Boolean, or `None`.**
+
+## More Info
+
+[Chapter 14 – Working with CSV Files and JSON Data](https://automatetheboringstuff.com/chapter14/)
