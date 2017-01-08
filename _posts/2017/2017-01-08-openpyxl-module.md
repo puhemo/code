@@ -14,6 +14,7 @@ excerpt: |
 
 * TOC
 {:toc}
+
 Excel is a popular and powerful spreadsheet application for Windows. The `openpyxl` module allows your Python programs to read and modify Excel spreadsheet files. 
 
 Although Excel is proprietary software from Microsoft, there are free alternatives that run on Windows, OS X, and Linux. Both LibreOffice Calc and OpenOffice Calc work with Excel’s *.xlsx* file format for spreadsheets, which means the `openpyxl` module can work on spreadsheets from these applications as well. 
