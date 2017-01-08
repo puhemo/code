@@ -567,7 +567,7 @@ We’ve created a bar chart by calling `openpyxl.chart.BarChart()`. You can als
 
 Unfortunately, in the current version of OpenPyXL (2.3.3), the `load_workbook()` function does not load charts in Excel files. Even if the Excel file has charts, the loaded `Workbook` object will not include them. If you load a `Workbook` object and immediately save it to the same *.xlsx* filename, you will effectively remove the charts from it.
 
-## Generalizations
+# Generalizations
 
 * Workbook[^1]: `openpyxl.load_workbook()`
   * Attributes:
@@ -612,7 +612,7 @@ Unfortunately, in the current version of OpenPyXL (2.3.3), the `load_workbook()
       * freezePanes:  `Worksheet.freeze_panes = cellName `[^9]
       * addChart: `Worksheet.add_chart(Chart, cellName)`
 
-## More Info
+# More Info
 
 [Chapter 12 – Working with Excel Spreadsheets](https://automatetheboringstuff.com/chapter12/)
 
